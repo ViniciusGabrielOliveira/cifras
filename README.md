@@ -16,15 +16,6 @@ Aplicação web de cifras musicais em **Angular 19**, estilo Cifra Club, com ren
 - 📋 Exportar/Copiar o JSON atualizado
 - 📱 Responsivo — quebra de linha automática no mobile
 
-## 🏗️ Arquitetura
-
-```
-Página → CifraService (negócio) → CifraRepository (dados)
-                                        ↓
-                               JSON asset (public/data/)
-                               + localStorage (edições)
-```
-
 ## 🚀 Deploy no GitHub Pages
 
 ### 1. Criar o repositório no GitHub
