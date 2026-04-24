@@ -1,0 +1,176 @@
+@if (loading()) {
+<div class="loading">
+    <div class="spinner"></div><span>Carregando...</span>
+</div>
+}
+
+@if (cifra(); as c) {
+<div class="editor-page">
+
+    <!-- Topbar -->
+    <header class="editor-topbar">
+        <button class="btn-back" (click)="voltarParaVisualizacao()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Ver cifra
+        </button>
+
+        <div class="topbar-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+            Editando: <strong>{{ c.titulo }}</strong>
+        </div>
+
+        <div class="topbar-actions">
+            <button class="btn-tool" (click)="resetarOriginal()" title="Restaurar original">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="1 4 1 10 7 10" />
+                    <path d="M3.51 15a9 9 0 1 0 .49-4.5" />
+                </svg>
+                Restaurar
+            </button>
+            <button class="btn-tool" (click)="toggleJSON()" title="Ver JSON">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                </svg>
+                JSON
+            </button>
+            <button class="btn-tool" (click)="exportarJSON()" title="Baixar JSON">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Baixar
+            </button>
+            <button class="btn-save" [class.saved]="saved()" [disabled]="saving()" (click)="salvar()">
+                @if (saving()) { <span class="spinner-sm"></span> }
+                @else if (saved()) {
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Salvo!
+                } @else {
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+                    <polyline points="17 21 17 13 7 13 7 21" />
+                    <polyline points="7 3 7 8 15 8" />
+                </svg>
+                Salvar
+                }
+            </button>
+        </div>
+    </header>
+
+    <div class="editor-body">
+
+        <!-- Painel de metadados -->
+        <section class="meta-panel">
+            <h2 class="section-title">Informações</h2>
+            <div class="meta-grid">
+                <div class="meta-field">
+                    <label>Título</label>
+                    <input [value]="c.titulo" (input)="updateMeta('titulo', $any($event.target).value)" />
+                </div>
+                <div class="meta-field">
+                    <label>Artista</label>
+                    <input [value]="c.artista" (input)="updateMeta('artista', $any($event.target).value)" />
+                </div>
+                <div class="meta-field">
+                    <label>Tom base</label>
+                    <input [value]="c.tom" (input)="updateMeta('tom', $any($event.target).value)"
+                        style="max-width:80px" />
+                </div>
+                <div class="meta-field">
+                    <label>Composição</label>
+                    <input [value]="c.composicao" (input)="updateMeta('composicao', $any($event.target).value)" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções e linhas -->
+        <section class="secoes-editor">
+            <div class="secoes-header">
+                <h2 class="section-title">Cifra</h2>
+                <div class="hint">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    Arraste os acordes para reposicioná-los
+                </div>
+            </div>
+
+            @for (secao of c.secoes; track secao.label; let si = $index) {
+            <div class="secao-edit-card">
+                <div class="secao-edit-header">
+                    <select [value]="secao.tipo" (change)="updateSecaoTipo(si, $any($event.target).value)"
+                        class="secao-tipo-sel">
+                        @for (t of tiposSecao; track t) {
+                        <option [value]="t">{{ t }}</option>
+                        }
+                    </select>
+                    <input class="secao-label-input" [value]="secao.label"
+                        (input)="updateSecaoLabel(si, $any($event.target).value)" placeholder="Nome da seção" />
+                    <button class="btn-remove-secao" (click)="removeSecao(si)" title="Remover seção">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="linhas-list">
+                    @for (linha of secao.linhas; track $index; let li = $index) {
+                    <app-linha-editor [linha]="linha" [linhaIndex]="li" (linhaChange)="updateLinha(si, li, $event)"
+                        (removerLinha)="removeLinha(si, li)" />
+                    }
+                </div>
+
+                <button class="btn-add-linha" (click)="addLinha(si)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                    Adicionar linha
+                </button>
+            </div>
+            }
+
+            <button class="btn-add-secao" (click)="addSecao()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                Adicionar seção
+            </button>
+        </section>
+
+    </div>
+
+    <!-- Painel JSON -->
+    @if (showJSON()) {
+    <div class="json-overlay" (click)="toggleJSON()">
+        <div class="json-panel" (click)="$event.stopPropagation()">
+            <div class="json-header">
+                <span>JSON atual (mock)</span>
+                <div style="display:flex;gap:8px">
+                    <button class="btn-tool" (click)="copiarJSON()">📋 Copiar</button>
+                    <button class="btn-tool" (click)="exportarJSON()">⬇ Baixar</button>
+                    <button class="btn-close-json" (click)="toggleJSON()">×</button>
+                </div>
+            </div>
+            <pre class="json-code">{{ jsonPreview() }}</pre>
+        </div>
+    </div>
+    }
+
+</div>
+}

@@ -1,0 +1,82 @@
+<div class="linha-editor-wrap">
+
+    <!-- Linha principal: acordes arrastáveis + texto -->
+    <div class="linha-stage">
+
+        <!-- Camada de acordes (drag) -->
+        <div class="acordes-drag-layer" #acordesLayer>
+            @for (ch of acordes(); track ch.posicao) {
+            <div class="chord-drag" [style.left.px]="getCharPx(ch.posicao)" (mousedown)="startDrag($event, ch)"
+                title="Arraste para mover · Clique × para remover">
+                <span class="chord-name">{{ ch.acorde }}</span>
+                <button class="remove-chord" (click)="removeChord(ch)" title="Remover acorde">×</button>
+            </div>
+            }
+        </div>
+
+        <!-- Span de referência para medir caracteres -->
+        <div class="letra-row">
+            <span #letraSpan class="letra-medida" aria-hidden="true">{{ texto() }}</span>
+
+            <!-- Input de edição -->
+            <input class="letra-input" [value]="texto()" (input)="onLetraChange($any($event.target).value)"
+                placeholder="Letra da linha..." autocomplete="off" />
+        </div>
+
+    </div>
+
+    <!-- Botões da linha -->
+    <div class="linha-actions">
+        <button class="btn-add-chord" (click)="openAddChord(0)" title="Adicionar acorde">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            Acorde
+        </button>
+        <button class="btn-remove-line" (click)="removerLinha.emit()" title="Remover linha">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6" />
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                <path d="M10 11v6" />
+                <path d="M14 11v6" />
+                <path d="M9 6V4h6v2" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Painel: adicionar acorde -->
+    @if (addingChord()) {
+    <div class="add-chord-panel">
+        <div class="panel-header">
+            <span>Escolha a posição e o nome do acorde</span>
+            <button class="btn-close" (click)="cancelAddChord()">×</button>
+        </div>
+
+        <!-- Seletor de posição: clique num caractere -->
+        <div class="position-picker">
+            <span class="pick-label">Posição:</span>
+            <div class="chars-row">
+                @for (char of letrasArr; track $index) {
+                <span class="char-pick" [class.selected]="newChordPos() === $index"
+                    [class.has-chord]="acordes().some(a => a.posicao === $index)" (click)="selectPosition($index)">{{
+                    char === ' ' ? '·' : char }}</span>
+                }
+                <!-- posição no final -->
+                <span class="char-pick char-end" [class.selected]="newChordPos() === letrasArr.length"
+                    (click)="selectPosition(letrasArr.length)">&#9166;</span>
+            </div>
+        </div>
+
+        <!-- Nome do acorde -->
+        <div class="chord-name-input">
+            <label>Acorde:</label>
+            <input [value]="newChordName()" (input)="newChordName.set($any($event.target).value)"
+                placeholder="Ex: Am7, D/F#" (keydown.enter)="confirmAddChord()" autofocus />
+            <button class="btn-confirm" (click)="confirmAddChord()">OK</button>
+            <button class="btn-cancel" (click)="cancelAddChord()">Cancelar</button>
+        </div>
+    </div>
+    }
+
+</div>

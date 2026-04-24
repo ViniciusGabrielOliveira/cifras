@@ -1,0 +1,63 @@
+@if (loading()) {
+<div class="loading">
+  <div class="spinner"></div>
+  <span>Carregando cifra...</span>
+</div>
+} @else if (cifra(); as c) {
+<div class="page">
+
+  <!-- Hero -->
+  <header class="cifra-hero">
+    <div class="hero-badge">Harpa Cristã · Nº 5455</div>
+    <h1 class="hero-titulo">{{ c.titulo }}</h1>
+    <p class="hero-artista">{{ c.artista }}</p>
+    <p class="hero-comp">Composição: {{ c.composicao }}</p>
+    <div class="hero-tags">
+      <span class="tag tag--dif">{{ c.dificuldade }}</span>
+      <span class="tag tag--inst">{{ c.instrumento }}</span>
+    </div>
+  </header>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-group">
+      <span class="toolbar-label">Tom</span>
+      <div class="tom-btns">
+        <button class="btn-ctrl" (click)="mudarTom(-1)" title="− ½ tom">−</button>
+        <span class="tom-value">{{ c.tom }}</span>
+        <button class="btn-ctrl" (click)="mudarTom(1)" title="+ ½ tom">+</button>
+      </div>
+      @if (delta() !== 0) {
+      <button class="btn-restaurar" (click)="restaurarTom()">Restaurar</button>
+      }
+    </div>
+
+    <div class="toolbar-group">
+      <span class="toolbar-label">Texto</span>
+      <div class="tom-btns">
+        <button class="btn-ctrl" (click)="mudarFonte(-1)">−</button>
+        <span class="tom-value" style="min-width:40px">{{ fonteSize() }}px</span>
+        <button class="btn-ctrl" (click)="mudarFonte(1)">+</button>
+      </div>
+    </div>
+
+    <div class="toolbar-spacer"></div>
+
+    <a class="btn-edit" [routerLink]="['/editor', c.id]">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+      </svg>
+      Editar cifra
+    </a>
+  </div>
+
+  <!-- Corpo -->
+  <main class="cifra-body" [style.font-size.px]="fonteSize()">
+    @for (secao of c.secoes; track secao.label) {
+    <app-secao-cifra [secao]="secao" />
+    }
+  </main>
+
+</div>
+}

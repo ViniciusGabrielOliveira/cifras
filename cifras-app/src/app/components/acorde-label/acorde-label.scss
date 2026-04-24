@@ -1,0 +1,36 @@
+/* O :host é inline dentro do .seg-acorde */
+:host {
+  display: inline-block;
+}
+
+.acorde-chip {
+  position: relative;
+  display: inline-block;
+  color: var(--color-acorde);
+  font-weight: 700;
+  font-size: 0.82em;
+  /* em → herda font-size do pai */
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0 1px;
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s;
+  user-select: none;
+
+  &:hover {
+    color: var(--color-acorde-hover);
+    background: var(--color-acorde-bg);
+  }
+}
+
+/* Popup flutua abaixo do chip via position:absolute relativo ao chip */
+.popup-wrapper {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 1000;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+  /* Evita que o popup saia da tela à direita */
+  max-width: calc(100vw - 32px);
+}

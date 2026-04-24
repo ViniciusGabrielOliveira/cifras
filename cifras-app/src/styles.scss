@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ─── Design Tokens ──────────────────────────────────────────── */
+:root {
+    --color-bg: #0f1117;
+    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-text: #e8eaf0;
+    --color-text-muted: #6b7280;
+    --color-acorde: #7c6afd;
+    --color-acorde-hover: #9b8bff;
+    --color-acorde-bg: rgba(124, 106, 253, 0.12);
+    --color-frets: rgba(255, 255, 255, 0.12);
+    --color-strings: rgba(255, 255, 255, 0.25);
+    --color-nut: #c9a14a;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+
+    /* Subtle grid background */
+    background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124, 106, 253, .15) 0%, transparent 70%),
+        linear-gradient(rgba(255, 255, 255, .02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    color: var(--color-acorde);
+    text-decoration: none;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Utilitários globais ─────────────────────────────────────── */
+.spinner {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-acorde);
+    border-radius: 50%;
+    animation: global-spin 0.7s linear infinite;
+}
+
+@keyframes global-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(124, 106, 253, 0.4);
+    background: rgba(124, 106, 253, 0.1);
+    color: var(--color-acorde);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+    white-space: nowrap;
+
+    &:hover {
+        background: rgba(124, 106, 253, 0.2);
+        border-color: var(--color-acorde);
+    }
+}

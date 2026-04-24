@@ -1,0 +1,52 @@
+:host {
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.linha-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    /* quebra de linha automática no mobile */
+    align-items: flex-end;
+    padding-bottom: 0.3em;
+    min-height: 2.6em;
+    max-width: 100%;
+}
+
+.linha-wrap.sem-acordes {
+    min-height: unset;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+/* ─── Segmento = coluna (acorde em cima, texto embaixo) ──── */
+.segmento {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+/* Linha do acorde — altura fixa para alinhar todos os textos */
+.seg-acorde {
+    display: block;
+    height: 1.5em;
+    line-height: 1.5em;
+    white-space: nowrap;
+}
+
+/* Texto da letra */
+.seg-texto {
+    display: inline-block;
+    /* pre-wrap: preserva espaços E permite quebra de linha em espaços */
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    line-height: 1.6;
+    font-family: inherit;
+    font-size: inherit;
+    /* herda do pai — não usa rem */
+    color: var(--color-text);
+}

@@ -1,0 +1,233 @@
+{
+    "id": "harpa-crista-porque-ele-vive",
+    "titulo": "Porque Ele Vive",
+    "artista": "Harpa Cristã",
+    "tom": "A",
+    "instrumento": "violao",
+    "dificuldade": "intermediario",
+    "composicao": "Bill Gaither / Gloria Gaither",
+    "secoes": [
+        {
+            "tipo": "intro",
+            "label": "Intro",
+            "linhas": [
+                {
+                    "letra": "A9  E  Bm  D  A9  E  Bm",
+                    "acordes": []
+                }
+            ]
+        },
+        {
+            "tipo": "refrao",
+            "label": "Refrão",
+            "linhas": [
+                {
+                    "letra": "Porque Ele vive",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        },
+                        {
+                            "posicao": 8,
+                            "acorde": "A9/C#"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Posso crer no amanhã",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Porque Ele vive",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Temor não há",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "E"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Mas eu bem sei, eu sei",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Que a minha vida",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Está nas mãos do meu Jesus",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        },
+                        {
+                            "posicao": 15,
+                            "acorde": "E"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Que vivo está",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "tipo": "verso",
+            "label": "Primeira Parte",
+            "linhas": [
+                {
+                    "letra": "Deus enviou seu Filho amado",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Pra perdoar, pra me salvar",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        },
+                        {
+                            "posicao": 12,
+                            "acorde": "Bm"
+                        },
+                        {
+                            "posicao": 17,
+                            "acorde": "E"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Na cruz morreu por meu pecado",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Mas ressurgiu e vivo com o Pai está",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "Bm"
+                        },
+                        {
+                            "posicao": 12,
+                            "acorde": "A9/C#"
+                        },
+                        {
+                            "posicao": 19,
+                            "acorde": "F#m"
+                        },
+                        {
+                            "posicao": 23,
+                            "acorde": "E/G#"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Porque Ele vive",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "tipo": "verso",
+            "label": "Segunda Parte",
+            "linhas": [
+                {
+                    "letra": "E quando enfim, chegar a hora",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Em que a morte enfrentarei",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        },
+                        {
+                            "posicao": 21,
+                            "acorde": "E"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Sem medo, então, terei vitória",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "A9"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Verei na Glória, ao meu Jesus",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                },
+                {
+                    "letra": "Que vivo está",
+                    "acordes": [
+                        {
+                            "posicao": 0,
+                            "acorde": "D"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

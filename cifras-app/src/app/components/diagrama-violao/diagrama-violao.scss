@@ -1,0 +1,98 @@
+.diagrama-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 148px;
+    backdrop-filter: blur(12px);
+}
+
+.diagrama-header {
+    margin-bottom: 8px;
+}
+
+.diagrama-nome {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-acorde);
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.diagrama-tabs {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    font-size: 0.65rem;
+    padding: 2px 7px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+
+    &.active {
+        background: var(--color-acorde);
+        color: #fff;
+        border-color: var(--color-acorde);
+    }
+
+    &:hover:not(.active) {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+    }
+}
+
+.svg-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.casa-base {
+    position: absolute;
+    left: 2px;
+    top: 24px;
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.sinais-topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 0;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.sinal {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    font-size: 0.7rem;
+    height: 12px;
+    line-height: 12px;
+
+    &.x {
+        color: #e55;
+    }
+
+    &.o {
+        color: var(--color-text-muted);
+    }
+}
+
+svg {
+    display: block;
+    margin-top: 0;
+}

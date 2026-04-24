@@ -1,0 +1,33 @@
+:host {
+    display: block;
+}
+
+.secao {
+    margin-bottom: 2rem;
+}
+
+.secao-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.secao-icon {
+    font-size: 0.9em;
+}
+
+.secao-label {
+    font-size: 0.72em;
+    /* em → herda */
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.secao-body {
+    padding-left: 2px;
+}

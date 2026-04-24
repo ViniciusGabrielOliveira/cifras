@@ -1,0 +1,332 @@
+:host {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.linha-editor-wrap {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px 8px;
+    transition: border-color 0.15s, background 0.15s;
+
+    &:hover {
+        border-color: var(--color-border);
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* ─── Stage: acordes + letra ─── */
+.linha-stage {
+    position: relative;
+    padding-top: 22px;
+    /* espaço para os acordes */
+    display: flex;
+    align-items: flex-start;
+}
+
+.acordes-drag-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    pointer-events: none;
+}
+
+/* ─── Chord drag chip ─── */
+.chord-drag {
+    position: absolute;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 1px 4px 1px 6px;
+    background: var(--color-acorde-bg);
+    border: 1px solid var(--color-acorde);
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+    pointer-events: all;
+    white-space: nowrap;
+    transition: box-shadow 0.1s;
+
+    &:hover {
+        box-shadow: 0 2px 8px rgba(124, 106, 253, 0.3);
+    }
+
+    &:active {
+        cursor: grabbing;
+        box-shadow: 0 4px 16px rgba(124, 106, 253, 0.5);
+    }
+}
+
+.chord-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-acorde);
+    line-height: 1;
+}
+
+.remove-chord {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.1s, color 0.1s;
+
+    &:hover {
+        background: #e55;
+        color: #fff;
+    }
+}
+
+/* ─── Linha de texto ─── */
+.letra-row {
+    position: relative;
+    width: 100%;
+}
+
+.letra-medida {
+    position: absolute;
+    visibility: hidden;
+    white-space: pre;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.letra-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed var(--color-border);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 2px 0;
+    outline: none;
+    line-height: 1.5;
+    white-space: pre;
+
+    &:focus {
+        border-bottom-color: var(--color-acorde);
+    }
+
+    &::placeholder {
+        color: var(--color-text-muted);
+        opacity: 0.5;
+        font-style: italic;
+    }
+}
+
+/* ─── Ações da linha ─── */
+.linha-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+    align-items: center;
+}
+
+.btn-add-chord {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px dashed var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+    }
+}
+
+.btn-remove-line {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(229, 85, 85, 0.15);
+        border-color: #e55;
+        color: #e55;
+    }
+}
+
+/* ─── Painel de adicionar acorde ─── */
+.add-chord-panel {
+    margin-top: 8px;
+    padding: 12px;
+    background: rgba(124, 106, 253, 0.08);
+    border: 1px solid rgba(124, 106, 253, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+
+    .btn-close {
+        border: none;
+        background: transparent;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 0;
+
+        &:hover {
+            color: var(--color-text);
+        }
+    }
+}
+
+.position-picker {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pick-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    padding-top: 4px;
+}
+
+.chars-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.char-pick {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 24px;
+    padding: 0 3px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-family: 'Inter', monospace;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+    }
+
+    &.selected {
+        background: var(--color-acorde);
+        border-color: var(--color-acorde);
+        color: #fff;
+    }
+
+    &.has-chord {
+        background: var(--color-acorde-bg);
+        border-color: var(--color-acorde);
+    }
+
+    &.char-end {
+        color: var(--color-text-muted);
+        font-size: 0.65rem;
+    }
+}
+
+.chord-name-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    label {
+        font-size: 0.7rem;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+    }
+
+    input {
+        flex: 1;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        color: var(--color-text);
+        font-size: 0.85rem;
+        padding: 5px 10px;
+        outline: none;
+        font-weight: 600;
+        transition: border-color 0.15s;
+
+        &:focus {
+            border-color: var(--color-acorde);
+        }
+    }
+}
+
+.btn-confirm {
+    padding: 5px 14px;
+    border-radius: 6px;
+    border: none;
+    background: var(--color-acorde);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.15s;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.btn-cancel {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-text);
+    }
+}
