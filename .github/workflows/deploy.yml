@@ -1,0 +1,76 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  # Permite rodar manualmente pela aba Actions
+  workflow_dispatch:
+
+# Permissões para publicar no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Garante que apenas um deploy rode por vez
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Angular App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: cifras-app/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: cifras-app
+
+      - name: Build
+        # --base-href: ajuste para o nome do seu repositório no GitHub
+        # Ex: se o repo for github.com/usuario/cifras → --base-href="/cifras/"
+        # Se for um GitHub Pages de usuário (usuario.github.io) → --base-href="/"
+        run: npx ng build --configuration=production --base-href="/${{ github.event.repository.name }}/"
+        working-directory: cifras-app
+
+      # Copia index.html como 404.html para que o roteamento SPA
+      # funcione ao acessar URLs diretamente (/cifra/xxx, /editor/xxx)
+      - name: Copy index.html → 404.html (SPA routing fix)
+        run: cp dist/cifras-app/browser/index.html dist/cifras-app/browser/404.html
+        working-directory: cifras-app
+
+      # Arquivo .nojekyll garante que arquivos com _ são servidos corretamente
+      - name: Add .nojekyll
+        run: touch dist/cifras-app/browser/.nojekyll
+        working-directory: cifras-app
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: cifras-app/dist/cifras-app/browser
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

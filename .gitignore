@@ -1,0 +1,30 @@
+# ─── Node ────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Angular build output ────────────────────────────────
+cifras-app/dist/
+cifras-app/.angular/cache/
+
+# ─── Ambiente / segredos ─────────────────────────────────
+.env
+.env.local
+*.env
+
+# ─── IDEs ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── OS ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Agent / AI ──────────────────────────────────────────
+.gemini/
