@@ -1,0 +1,341 @@
+{
+  "id": "em-procissao-vao-o-pao-e-o-vinho",
+  "titulo": "Em Procissão Vão O Pão E O Vinho",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "EM PROCISSÃO VÃO O PÃO E O VINHO.",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 41,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ACOMPANHADOS DE NOSSA DEVOÇÃO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SIMBOLIZAM AQUILO QUE OFERTAMOS:",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA E O NOSSO CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A NOSSA IGREJA QUE É MÃE DESEJA,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A CONSCIÊNCIA DO GESTO DE OFERTAR,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SE ATUALIZE DURANTE TODA A VIDA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "COMO O CRISTO SE IMOLA SOBRE O ALTAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            },
+            {
+              "posicao": 37,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "EUCARISTIA É SACRIFÍCIO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "AQUELE MESMO QUE CRISTO OFERECEU.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "O MUNDO E HOMEM SERÃO RECONDUZIDOS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A NOVA ALIANÇA COM SEU DEUS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO E O VINHO SERÃO EM BREVE",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O CORPO E O SANGUE DO CRISTO SALVADOR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "TAL ALIMENTO NOS UNE NUM SÓ CORPO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A GLÓRIA DE DEUS EM SEU LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

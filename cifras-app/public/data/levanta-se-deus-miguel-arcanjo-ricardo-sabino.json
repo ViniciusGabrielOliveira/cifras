@@ -1,0 +1,449 @@
+{
+  "id": "levanta-se-deus-miguel-arcanjo-ricardo-sabino",
+  "titulo": "Levanta-Se Deus",
+  "artista": "Oração São Miguel Arcanjo",
+  "tom": "G#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR PREVALECEU SOBRE",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TODO IMPÉRIO DAS TREVAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEJAM DISPERSOS OS SEUS INIMIGOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "E FUJAM DE SUA FACE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS OS QUE O ODEIAM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO PAI EM NOME DO FILHO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO ESPÍRITO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D#"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D#"
+            }
+          ]
+        },
+        {
+          "letra": "ORAÇÃO",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 1,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 1,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 1,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "SÃO MIGUEL ARCANJO, DEFENDEI-NOS NO COMBATE,",
+          "acordes": []
+        },
+        {
+          "letra": "SEDE NOSSO REFÚGIO CONTRA A MALDADE",
+          "acordes": []
+        },
+        {
+          "letra": "E AS CILADAS DO DEMÔNIO.",
+          "acordes": []
+        },
+        {
+          "letra": "ORDENE-LHE DEUS, INSTANTEMENTE O PEDIMOS;",
+          "acordes": []
+        },
+        {
+          "letra": "E VÓS, PRÍNCIPE DA MILÍCIA CELESTE,",
+          "acordes": []
+        },
+        {
+          "letra": "PELA VIRTUDE DIVINA,",
+          "acordes": []
+        },
+        {
+          "letra": "PRECIPITAI NO INFERNO A SATANÁS",
+          "acordes": []
+        },
+        {
+          "letra": "E A TODOS OS ESPÍRITOS MALIGNOS",
+          "acordes": []
+        },
+        {
+          "letra": "QUE ANDAM PELO MUNDO",
+          "acordes": []
+        },
+        {
+          "letra": "PARA PERDER AS ALMAS. AMÉM.",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR PREVALECEU SOBRE",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TODO IMPÉRIO DAS TREVAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEJAM DISPERSOS OS SEUS INIMIGOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "E FUJAM DE SUA FACE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS OS QUE O ODEIAM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO PAI EM NOME DO FILHO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO ESPÍRITO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G#"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "id": "gloria-2",
+  "titulo": "Glória A Deus Nos Altos Céus",
+  "artista": "IRMÃ MIRIA KOLLING (CORO PAULUS)",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "IRMÃ MIRIA KOLLING (CORO PAULUS)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS E PAI, NÓS VOS LOUVAMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ADORAMOS, BENDIZEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DAMOS GLÓRIA A VOSSO NOME",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSOS DONS AGRADECEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "AGRADECEMOS!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 1,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS, QUE ESTAIS JUNTO DO PAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COMO NOSSO INTERCESSOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI NOSSOS PEDIDOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDEI NOSSO CLAMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSO CLAMOR!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM! AMÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM!   AMÉM! A-MÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Gm/Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

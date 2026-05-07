@@ -1,0 +1,302 @@
+{
+  "id": "muitos-graos-de-trigo",
+  "titulo": "Muitos Grãos De Trigo",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D6"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. MUITOS GRÃOS DE TRIGO SE TORNARAM PÃO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE SÃO TEU CORPO, CEIA E COMUNHÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MUITOS GRÃOS DE TRIGO SE TORNARAM PÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. MUITOS CACHOS DE UVA SE TORNARAM VINHO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE SÃO TEU SANGUE, FORÇA NO CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MUITOS CACHOS DE UVA SE TORNARAM VINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. MUITAS SÃO AS VIDAS FEITAS VOCAÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE OFERECIDAS EM CONSAGRAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MUITAS SÃO AS VIDAS FEITAS VOCAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

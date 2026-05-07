@@ -1,0 +1,277 @@
+{
+  "id": "eu-e-minha-casa-serviremos-ao-senhor",
+  "titulo": "Eu E Minha Casa Serviremos Ao Senhor",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "EU E MINHA CASA SERVIREMOS AO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "EU E MINHA CASA SERVIREMOS AO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS NÃO QUER NOS CONDENAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUER DE NÓS UMA DECISÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "PARA O NOSSO BEM: PARA NOS SALVAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PERGUNTA HOJE ENTÃO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM VOCÊ QUER SERVIR?",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM VOCÊ QUER SERVIR? (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "O PECADO QUER NOS DOMINAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEUS QUER NOS SANTIFICAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "É PRECISO DECIDIR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "SER DE DEUS NÃO ME ENGANAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM VOCÊ QUER SERVIR?",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM VOCÊ QUER SERVIR? (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

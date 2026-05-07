@@ -1,0 +1,305 @@
+{
+  "id": "bendito-sejais-coral-palestrina",
+  "titulo": "Bendito Sejais",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "1. QUE MARAVILHA, SENHOR, ESTAR AQUI!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "SENTIR-SE IGREJA REUNIDA A CELEBRAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "APRESENTANDO OS FRUTOS DO CAMINHO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NO PÃO E VINHO, OFERTAS DESTE ALTAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. QUE GRANDE BÊNÇÃO SERVIR NESTA MISSÃO",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "MISSÃO DE CRISTO,TAREFA DO CRISTÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TORNAR-SE IGREJA, FORMAR COMUNIDADE",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SER SOLIDÁRIO,TORNAR-SE UM POVO IRMÃO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. QUE GRAÇA IMENSA VIVER A MESMA FÉ",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "TER ESPERANÇA A UM MUNDO BEM MELHOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA CARIDADE SENTIR-SE FAMILIARES",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "LUTANDO JUNTOS EM NOME DE SENHOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

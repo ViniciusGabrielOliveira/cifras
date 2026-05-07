@@ -1,0 +1,247 @@
+{
+  "id": "momento-novo",
+  "titulo": "Momento Novo",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "DEUS CHAMA A GENTE PRA UM MOMENTO NOVO",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DE CAMINHAR JUNTO COM O SEU POVO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É HORA DE TRANSFORMAR O QUE NÃO DÁ MAIS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SOZINHO, ISOLADO, NINGUÉM É CAPAZ.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POR ISSO VEM ENTRA NA RODA COM A GENTE TAMBÉM,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "VOCÊ É MUITO IMPORTANTE.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POR ISSO VEM ENTRA NA RODA COM A GENTE TAMBÉM,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "VOCÊ É MUITO IMPORTANTE. VEM!!!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO É POSSÍVEL CRER QUE TUDO É FÁCIL",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "HÁ MUITA FORÇA QUE PRODUZ A MORTE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "GERANDO DOR, TRISTEZA E DESOLAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É NECESSÁRIO UNIR O CORDÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "A FORÇA QUE HOJE FAZ BROTAR A VIDA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "HABITA EM NÓS PELA SUA GRAÇA.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É ELE QUEM NOS CONVIDA PRA TRABALHAR,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O AMOR REPARTIR E AS FORÇAS JUNTAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

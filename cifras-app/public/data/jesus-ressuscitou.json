@@ -1,0 +1,146 @@
+{
+  "id": "jesus-ressuscitou",
+  "titulo": "Por Sua Morte",
+  "artista": "VALDECI FARIAS",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "DOM CARLOS ALBERTO NAVARRO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "POR SUA MORTE, A MORTE VIU O FIM",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DO SANGUE DERRAMADO A VIDA RENASCEU.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SEU PÉ FERIDO NOVA ESTRADA ABRIU",
+          "acordes": [
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E NESTE HOMEM, O HOMEM ENFIM SE DESCOBRIU.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS ME AMOU E SE ENTREGOU POR MIM!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "OS HOMENS TODOS PODEM O MESMO REPETIR.",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO TEMEREMOS MAIS A MORTE E A DOR,",
+          "acordes": [
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O CORAÇÃO HUMANO EM CRISTO DESCANSOU.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "confesso-a-deus-ricardo-sabino",
+  "titulo": "Confesso A Deus",
+  "artista": "Ricardo Sabino",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO (NOVO MISSAL)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CONFESSO A DEUS TODO PODEROSO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE PEQUEI MUITAS VEZES POR PENSAMENTOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E PALAVRAS, ATOS E OMISSÕES,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POR MINHA CULPA, POR MINHA CULPA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MINHA TÃO GRANDE CULPA-A.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E PEÇO À VIRGEM MARIA, AOS ANJOS E SANTOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS, IRMÃOS E IRMÃS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ROGUEIS POR MIM A DEUS, NOSSO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "B4"
+            },
+            {
+              "posicao": 43,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "B/D#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "id": "jesus-o-crucificado-ressuscitou",
+  "titulo": "Jesus, O Crucificado, Ressuscitou",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "B"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "1. DESDOBRA-SE NO CÉU",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A RUTILANTE AURORA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGRE, EXULTA O MUNDO;",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "GEMENDO, O INFERNO CHORA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "2. POIS EIS QUE O REI, DESCIDO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "À REGIÃO DA MORTE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELES QUE O ESPERAVAM",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CONDUZ À NOVA SORTE.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "3. POR SOB A PEDRA POSTO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "POR GUARDAS VIGIADO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SEPULTA A PRÓPRIA MORTE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITADO.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "4. DA REGIÃO DA MORTE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "CESSE O CLAMOR INGENTE:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITOU! EXCLAMA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O ANJO REFULGENTE.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "5. JESUS, PERENE PÁSCOA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS ALEGRAI-NOS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NASCIDOS PARA A VIDA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DA MORTE LIBERTAI-NOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "6. LOUVOR AO QUE DA MORTE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITADO VEM,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "AO PAI E AO PARÁCLITO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNAMENTE. AMÉM.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "id": "salmo-117-118-aleluia-paulo-neto",
+  "titulo": "Salmo 117",
+  "artista": "Aleluia, Aleluia, Aleluia.",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LECIONÁRIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "ALELUIA, ALELUIA, ALE-LU-IA! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, PORQUE ELE É BOM!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "A CASA DE ISRAEL AGORA O DIGA:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "“ETERNA É A SUA MISERICÓRDIA!”",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA, ALE-LU-IA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. A MÃO DIREITA DO SENHOR FEZ MARAVILHAS,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU,",
+          "acordes": [
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR FEZ MARAVILHAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO MORREREI, MAS AO CONTRÁRIO, VIVEREI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA, ALE-LU-IA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. A PEDRA QUE OS PEDREIROS REJEITARAM",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TORNOU-SE AGORA A PEDRA ANGULAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "PELO SENHOR É QUE FOI FEITO TUDO ISSO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MARAVILHAS ELE FEZ A NOSSOS OLHOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA, ALE-LU-IA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

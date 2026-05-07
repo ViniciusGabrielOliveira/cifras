@@ -1,0 +1,422 @@
+{
+  "id": "senhor-tende-compaixão-wallison-rodrigues",
+  "titulo": "Senhor Tende Compaixão",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. TENDE PIEDADE, Ó MEU DEUS, MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NA IMENSIDÃO DE VOSSO AMOR, PURIFICAI-ME!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DO MEU PECADO, TODO INTEIRO, VEM LAVAR-ME",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E APAGAI COMPLETAMENTE A MINHA CULPA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F/C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. EU RECONHEÇO TODA A MINHA INIQUIDADE,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O MEU PECADO ESTÁ SEMPRE À MINHA FRENTE,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "FOI CONTRA VÓS, SÓ CONTRA VÓS QUE EU PEQUEI",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E PRATIQUEI O QUE É MAU AOS VOSSOS OLHOS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. CRIAI EM MIM UM CORAÇÃO QUE SEJA PURO,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-ME DE NOVO UM ESPÍRITO DECIDIDO.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, NÃO ME AFASTEIS DE VOSSA FACE",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "NEM RETIREIS DE MIM O VOSSO SANTO ESPÍRITO!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F/C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "4. DAI-ME DE NOVO A ALEGRIA DE SER SALVO",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E CONFIRMAI-ME COM ESPÍRITO GENEROSO!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ABRI MEUS LÁBIOS, Ó SENHOR, PARA CANTAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E MINHA BOCA ANUNCIARÁ VOSSO LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

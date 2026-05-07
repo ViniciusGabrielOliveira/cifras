@@ -1,0 +1,240 @@
+{
+  "id": "licao-de-amor",
+  "titulo": "Lição De Amor",
+  "artista": "PE. FABIO DE MELO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PE. FABIO DE MELO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. O TRIGO DEPOIS DE CRESCIDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "LOGO É COLHIDO E VAI TORNAR-SE PÃO",
+          "acordes": [
+            {
+              "posicao": 31,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "NAS MÃOS DA MÃE MULHER SE IMOLA",
+          "acordes": [
+            {
+              "posicao": 27,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SE ENTREGA HUMILDE PRA FERMENTAÇÃO",
+          "acordes": [
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "LIÇÃO DE AMOR ENSINA O TRIGO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COM SEU GESTO DE DOAÇÃO",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TAMBÉM QUERO SER DESPRENDIDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PRA TORNAR-ME PÃO NAS MÃOS DO MEU SENHOR",
+          "acordes": [
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. A UVA SEM FAZER GEMIDO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SE ENTREGA AO MILAGRE DA TRANSFORMAÇÃO",
+          "acordes": [
+            {
+              "posicao": 35,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "SOB OS PÉS DO LAVRADOR SOFRIDO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VAI TORNAR-SE VINHO DE NOBRE SABOR",
+          "acordes": [
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "LIÇÃO DE AMOR ENSINA A UVA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COM SEU GESTO DE OBLAÇÃO",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TAMBÉM QUERO SER DESPRENDIDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PRA TORNAR-ME VINHO NAS MÃOS DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 34,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

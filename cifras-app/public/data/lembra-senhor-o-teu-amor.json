@@ -1,0 +1,556 @@
+{
+  "id": "lembra-senhor-o-teu-amor",
+  "titulo": "Lembra Senhor, O Teu Amor",
+  "artista": "Desconhecido",
+  "tom": "Bb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, MEU DEUS, A TI ELEVO A MINHA ALMA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "EM TI CONFIO: QUE EU NÃO SEJA ENVERGONHADO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO SE ENVERGONHE QUEM EM TI PÕE SUA ESPERANÇA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MAS, SIM, QUEM NEGA POR UM NADA SUA FÉ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "MOSTRA-ME, SENHOR OS TEUS CAMINHOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E FAZ-ME CONHECER A TUA ESTRADA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TUA VERDADE ME ORIENTA E ME CONDUZA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE ÉS O DEUS DA MINHA SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "RECORDA, SENHOR MEU DEUS TUA TERNURA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E A TUA COMPAIXÃO QUE SÃO ETERNAS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO RECORDES MEUS PECADOS QUANDO JOVEM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NEM TE LEMBRES DE MINHAS FALTAS E DELITOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É PIEDADE E RETIDÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E RECONDUZ AO BOM CAMINHO OS PECADORES.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ELE DIRIGE OS HUMILDES NA JUSTIÇA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E AOS POBRES ELE ENSINA O SEU CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VERDADE E AMOR SÃO OS CAMINHOS DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA QUEM SEGUE SUA ALIANÇA E SEUS PRECEITOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, POR TEU NOME E TUA HONRA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOA OS MEUS PECADOS QUE SÃO TANTOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

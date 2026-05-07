@@ -1,0 +1,257 @@
+{
+  "id": "noite-excelsa-comunidade-recado",
+  "titulo": "Noite Excelsa",
+  "artista": "MARCELO OLIVEIRA (COMUNIDADE RECADO)",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARCELO OLIVEIRA (COMUNIDADE RECADO)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D4"
+            }
+          ]
+        },
+        {
+          "letra": "1. NOITE EXCELSA!   NOITE ILUMINADA!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A/G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE SANTA QUE NOS TROUXE O SALVADO-O--OR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "REIS E PASTORES O ADORAM, OS ANJOS CANTAM GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "O MENINO DEUS ESTÁ ENTRE NÓS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D4"
+            }
+          ]
+        },
+        {
+          "letra": "2. TE ENCONTRAMOS,   Ó FELIZ MANJEDOURA",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ACOLHE O DEUS MENINO, O SALVADO-O--OR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "\"GLÓRIA A DEUS NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A/G"
+            }
+          ]
+        },
+        {
+          "letra": "E PAZ, NA TERRA, AOS HOMENS!\"",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "O MENINO DEUS ESTÁ ENTRE NÓS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

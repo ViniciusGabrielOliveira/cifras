@@ -1,0 +1,411 @@
+{
+  "id": "nossa-oferta-apresentamos",
+  "titulo": "A Nossa Oferta Apresentamos",
+  "artista": "FREI JOEL POSTMA",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARIA DE FÁTIMA DE OLIVEIRA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "A CHUVA MOLHOU A TERRA, O HOMEM PLANTOU UM GRÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            },
+            {
+              "posicao": 43,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A PLANTA DEU FLOR E FRUTOS DO TRIGO SE FEZ O PÃO.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "O HOMEM PLANTOU VIDEIRAS, CERCOU-AS COM SEU CARINHO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            },
+            {
+              "posicao": 46,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DA VINHA BROTOU A U-VA, DA UVA SE FEZ O VINHO.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "OS FRUTOS DA NOSSA TERRA E AS LUTAS DOS FILHOS TEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            },
+            {
+              "posicao": 47,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SERÃO, PELA TUA GRAÇA PÃO VIVO QUE VEM DOS CÉUS.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBE, PAI, NOSSAS VIDAS UNIDAS AO PÃO E VINHO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E VEM CONDUZIR TEU POVO GUIANDO-O NO TEU CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

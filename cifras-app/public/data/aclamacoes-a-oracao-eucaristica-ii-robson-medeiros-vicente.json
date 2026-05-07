@@ -1,0 +1,215 @@
+{
+  "id": "aclamacoes-a-oracao-eucaristica-ii-robson-medeiros-vicente",
+  "titulo": "Aclamações À Oração Eucarística Ii",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SAN-TI-FI-CAI NOSSA OFERENDA Ó SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "RE-E-CE-BEI, Ó SENHOR, A NOSSA OFERTA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UM SÓ CORPO E UM SÓ ESPÍRITO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRA-AI-VOS, Ó PAI, DA VOSSA IGREJA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRA-AI-VOS, Ó PAI, DOS VOSSOS FILHOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CO-ON-CE-DEI-NOS O CONVÍVIO DOS ELEITOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C/D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "id": "faz-chover",
+  "titulo": "Faz Chover",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DERRAMA AQUI A TUA GLÓRIA A TUA UNÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SOBRE TEU POVO QUE TE CLAMA SEM CESSAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NESTE LUGAR DERRAMA SENHOR ÁGUAS VIVAS SOBRE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EMANA DA FONTE DO MANANCIAL DO TRONO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DERRAMA AQUI A TUA GLÓRIA A TUA UNÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SOBRE TEU POVO QUE TE CLAMA SEM CESSAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NESTE LUGAR DERRAMA SENHOR ÁGUAS VIVAS SOBRE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EMANA DA FONTE DO MANANCIAL DO TRONO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FAZ CHOVE-ER! FECUNDA EM NÓS O TEU  AMOR!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "FAZ JORRAR ÁGUAS VIVAS NESTE LUGAR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

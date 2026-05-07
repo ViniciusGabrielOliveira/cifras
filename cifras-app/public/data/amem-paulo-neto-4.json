@@ -1,0 +1,50 @@
+{
+  "id": "amem-paulo-neto-4",
+  "titulo": "Amém",
+  "artista": "Melodia 4",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A-AMÉM, A-A-A-AMÉM, A-A-A-AMÉM! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

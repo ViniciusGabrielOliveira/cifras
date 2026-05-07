@@ -1,0 +1,156 @@
+{
+  "id": "tende-compaixao-de-nos-marcus-lima",
+  "titulo": "Tende Compaixão",
+  "artista": "Marcus Lima",
+  "tom": "Bm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#4"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE COMPAIXÃO DE NÓS, SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SOMOS PECADO  -  RES",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "MANIFESTAI, SENHOR, A VOSSA   MISERICÓRDIA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "E DAI-NOS A VOSSA SALVAÇÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "SOMENTE O SACERDOTE",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

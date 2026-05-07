@@ -1,0 +1,367 @@
+{
+  "id": "bendito-seja-deus",
+  "titulo": "Bendito Seja Deus",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "1. BENDITO E LOUVADO SEJA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O PAI NOSSO CRIADOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO QUE NOS RECEBEMOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "É PROVA DO SEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO QUE NOS RECEBEMOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "É PROVA DO SEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É O FRUTO DE SUA TERRA,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DO POVO TRABALHADOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É O FRUTO DE SUA TERRA,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DO POVO TRABALHADOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NA MISSA É TRANSFORMADO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "NO CORPO DO SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "2. BENDITO E LOUVADO SEJA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O PAI NOSSO CRIADOR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O VINHO QUE RECEBEMOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "É PROVA DO SEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O VINHO QUE RECEBEMOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "É PROVA DO SEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É O FRUTO DE SUA TERRA,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DO POVO TRABALHADOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É O FRUTO DE SUA TERRA,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DO POVO TRABALHADOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NA MISSA É TRANSFORMADO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "NO SANGUE DO SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

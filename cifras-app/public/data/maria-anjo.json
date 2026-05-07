@@ -1,0 +1,391 @@
+{
+  "id": "maria-anjo",
+  "titulo": "Maria E O Anjo",
+  "artista": "ANJOS DE RESGATE",
+  "tom": "F#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANJOS DE RESGATE",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D/C#"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ FEMININA)",
+          "acordes": []
+        },
+        {
+          "letra": "QUEM SERÁS TU CRIATURA BELA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ENCHEU MEU QUARTO COM TUA LUZ",
+          "acordes": [
+            {
+              "posicao": 30,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "O TEU OLHAR ME TROUXE A PAZ",
+          "acordes": [
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "TUA PRESENÇA ME REFAZ.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E/D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D/E"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ MASCULINA)",
+          "acordes": []
+        },
+        {
+          "letra": "EU SOU O ANJO GABRIEL",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VENHO EM NOME DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DARÁS A LUZ AO SALVADOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D/E"
+            }
+          ]
+        },
+        {
+          "letra": "SERÁS A MÃE DO EMANUEL",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ FEMININA)",
+          "acordes": []
+        },
+        {
+          "letra": "PORQUE TEUS LÁBIOS TREMEM TANTO ASSIM",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E/D"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE NÃO TIRA OS SEUS OLHOS DE MIM",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ MASCULINA)",
+          "acordes": []
+        },
+        {
+          "letra": "HÁ TANTA GRAÇA ESTAR DIANTE DE TI",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E O CÉU INTEIRO ESPERA POR TEU SIM",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ FEMININA)",
+          "acordes": []
+        },
+        {
+          "letra": "NÃO TEMAS DOCE ANJO DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D/E"
+            }
+          ]
+        },
+        {
+          "letra": "ESCUTA O QUE AGORA EU VOU FALAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#4"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "SORRIA E VAI AO CÉU ANUNCIAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SIM EU SEREI A MÃE DO SALVADOR",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "D/E"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "(VOZ MASCULINA)",
+          "acordes": []
+        },
+        {
+          "letra": "AVE MARIA, QUANTA ALEGRIA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O CÉU SE ENCHEU DE LUZ",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D/E"
+            }
+          ]
+        },
+        {
+          "letra": "POIS VAI NASCER JESUS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/G"
+            }
+          ]
+        },
+        {
+          "letra": "SANTA MARIA, DEUS ESCOLHEU-TE BEM",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm/F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A/E"
+            }
+          ]
+        },
+        {
+          "letra": "E TODOS OS ANJOS CANTAM AMÉM!!!",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "D/E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

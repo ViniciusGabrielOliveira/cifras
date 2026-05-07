@@ -1,0 +1,279 @@
+{
+  "id": "nova-missao",
+  "titulo": "Nova Missão",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "DEMOS GRAÇAS AO BOM DEUS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DEMOS GRAÇAS AO SENHOR POR ESTA CELEBRAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "POR ESTE ENCONTRO DE LOUVOR E ORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POR ESTA CELEBRAÇÃO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POR ESTE ENCONTRO DE LOUVOR E ORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TEMOS UMA NOVA MISSÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DE LEVAR A PAZ POR ONDE FORMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DE ANUNCIAR, EVANGELIZAR DE VIVER A PALAVRA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 49,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DE ANUNCIAR, EVANGELIZAR DE VIVER A PALAVRA DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 50,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "(VOCAL) HÁ,HÁ,THÚ,THÚ,RÁ,HÁ,HÁ,THÚ,THÚ,RÁ,HÁ,HÁ,THÚ,THÚ,RÁ.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            },
+            {
+              "posicao": 42,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 56,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

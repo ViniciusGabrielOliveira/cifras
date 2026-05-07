@@ -1,0 +1,214 @@
+{
+  "id": "senhor-que-vindes-visitar-comunidade-recado",
+  "titulo": "Senhor Que Vindes Visitar",
+  "artista": "Marcelo Oliveira - Voz Feminina",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR QUE VINDES VISITAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSO POVO NA PAZ:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B#m7"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE VINDES SALVAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE ESTAVA PERDIDO:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B#m7"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE VINDES CRIAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "UM MUNDO NOVO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

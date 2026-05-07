@@ -1,0 +1,247 @@
+{
+  "id": "se-bendito-senhor",
+  "titulo": "Sê Bendito Senhor",
+  "artista": "Desconhecido",
+  "tom": "Cm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SÊ BENDITO, SENHOR PARA SEMPRE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "PELOS FRUTOS DAS NOSSAS JORNADAS!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "REPARTIDOS NA MESA DO REINO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "ANUNCIAM A PAZ ALMEJADA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR DA VIDA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A NOSSA SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "AO PREPARARMOS A TUA MESA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "EM TI BUSCAMOS RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "SÊ BENDITO, SENHOR PARA SEMPRE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "PELOS MARES, OS RIOS E AS FONTES!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NOS RECORDAM A TUA JUSTIÇA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE NOS LEVAM A UM NOVO HORIZONTE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SÊ BENDITO, SENHOR PARA SEMPRE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "PELAS BÊNÇÃOS QUAL CHUVA TORRENTE!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "TU FECUNDAS O CHÃO DESTA VIDA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ABRIGA UMA NOVA SEMENTE!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

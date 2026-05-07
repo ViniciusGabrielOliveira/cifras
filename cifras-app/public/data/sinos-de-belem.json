@@ -1,0 +1,194 @@
+{
+  "id": "sinos-de-belem",
+  "titulo": "Sinos De Belém",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SINOS DE BELÉM, ACORDAI QUEM ESTÁ DORMINDO/",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "VINDE ANUNCIAR QUE NASCEU O DEUS MENINO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É NATAL, É NATAL, É NATAL DO SAL-VA-DOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. NUMA MANJEDOURA, COM SUA MÃE MARIA/",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "VEIO TRAZER LUZ, TRAZER PAZ E HARMONIA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "É NATAL, É NATAL, É NATAL DO SAL-VA-DOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. INFINITO AMOR FAZ DE DEUS UMA CRIANÇA/",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "PARA ENCHER O MUNDO DE PAZ E ESPERANÇA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É NATAL, É NATAL, É NATAL DO SAL-VA-DOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

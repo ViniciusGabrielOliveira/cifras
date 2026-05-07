@@ -1,0 +1,46 @@
+{
+  "id": "amem-paulo-neto-2",
+  "titulo": "Amém",
+  "artista": "Melodia 2",
+  "tom": "F#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A-AMÉM, A-A-A-AMÉM, A-A-A---AMÉM! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

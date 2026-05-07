@@ -1,0 +1,176 @@
+{
+  "id": "chegou-a-hora-de-sonhar-de-novo",
+  "titulo": "Chegou A Hora De Sonhar De Novo",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. CHEGOU A HORA DE SONHAR DE NOVO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DE TORNAR-SE POVO E SE FAZER IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CHEGOU A HORA QUE LIGEIRO PASSA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DE GANHAR A GRAÇA PARA A CONVERSÃO.",
+          "acordes": [
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. CHEGOU A HORA DE VIVER O CRISTO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E ACREDITAR QUE ISTO É SE TORNAR MAIOR.",
+          "acordes": [
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CHEGOU A HORA DE PENSAR PROFUNDO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "E PERCEBER QUE O MUNDO PODE SER MELHOR.",
+          "acordes": [
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. SERÁ DIFÍCIL TANTAS MÃOS UNIDAS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO FAZER DA VIDA UM TEMPO SEM IGUAL.",
+          "acordes": [
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SERÁ DIFÍCIL, TANTO AMOR E AFETO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO TORNAR CONCRETO O GESTO DO NATAL.",
+          "acordes": [
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

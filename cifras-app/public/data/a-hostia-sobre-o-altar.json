@@ -1,0 +1,238 @@
+{
+  "id": "a-hostia-sobre-o-altar",
+  "titulo": "A Hóstia Sobre O Altar",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. A HÓSTIA SOBRE O ALTAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE APRESENTAMOS, Ó DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SURGIU DO NOSSO TRABALHO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em7"
+            }
+          ]
+        },
+        {
+          "letra": "TRABALHO DOS FILHOS TEUS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. TROUXEMOS VINHO E PÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE APRESENTAMOS, SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "PARA SER EUCARISTIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em7"
+            }
+          ]
+        },
+        {
+          "letra": "TEU CORPO, DOM DE AMOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. OS NOSSOS DONS QUE SÃO TEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E TRANSFORMADOS SERÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "REÚNEM TUA FAMÍLIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em7"
+            }
+          ]
+        },
+        {
+          "letra": "EM TI, NUM SÓ CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "id": "criai-em-nos-um-coracao-que-seja-puro",
+  "titulo": "Criai Em Nós Um Coração Que Seja Puro",
+  "artista": "Desconhecido",
+  "tom": "Bm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "01. ESCUTAI, Ó SENHOR DEUS, MINHA ORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDEI À MINHA PRECE, AO MEU CLAMOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SOIS O MEU ABRIGO E FORTALEZA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "SOIS A VIDA, SOIS AMPARO PROTETOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "02. A MINH’ALMA, Ó SENHOR, DE VÓS TEM SEDE,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "COMO A TERRA RESSECADA E SEM ÁGUA.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CONCEDEI-ME A ALEGRIA DE SER SALVO;",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOAI-ME TODA CULPA, TODA MÁGOA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "03. ESTA TERRA, Ó SENHOR, FAVORECESTES;",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOASTES O PECADO AO VOSSO POVO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS SOIS BOM, SOIS CLEMENTE, SOIS PERDÃO,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS SOIS, SENHOR, O DEUS DE AMOR A QUEM INVOCO.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

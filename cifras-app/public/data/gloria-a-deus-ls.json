@@ -1,0 +1,482 @@
+{
+  "id": "gloria-a-deus-ls",
+  "titulo": "Glória A Deus",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. GLÓRIA A DEUS NOS ALTOS CÉUS, PAZ NA TERRA A SEUS AMADOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "A VÓS LOUVAM, REI CELESTE, OS QUE FORAM LIBERTA..DOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 49,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. DEUS E PAI, NÓS VOS LOUVAMOS, ADORAMOS, BENDIZEMOS;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DAMOS GLÓRIA AO VOSSO NOME, VOSSOS DONS AGRADECE..MOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 50,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR NOSSO, JESUS CRISTO,  UNIGÊNITO DO PAI,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS DE DEUS, CORDEIRO SANTO, NOSSAS CULPAS PERDO..AI!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 50,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "4. VÓS QUE ESTAIS JUNTO DO PAI, COMO NOSSO INTERCESSOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI NOSSOS PEDIDOS, ATENDEI NOSSO CLAMO..oR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 45,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "5. VÓS SOMENTE SOIS O SANTO, O ALTÍSSIMO, O SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "COM O ESPÍRITO DIVINO, DE DEUS PAI NO ESPLENDO..oR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 48,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS LÁ NOS CÉUS, E PAZ NA TERRA AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "no-silencio-do-coracao-irma-miria",
+  "titulo": "No Silêncio Do Coração",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "NO SILÊNCIO DO CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR FAZ OUVIR A SUA VOZ.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE IREMOS, SENÃO A TI?",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SÓ TU TENS PALAVRAS DE AMOR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE IREMOS, SENÃO A TI?",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SÓ TU TENS PALAVRAS DE AMOR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

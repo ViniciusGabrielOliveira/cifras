@@ -1,0 +1,394 @@
+{
+  "id": "nao-procureis-dentre-os-mortos",
+  "titulo": "Não Procureis Dentre Os Mortos",
+  "artista": "PE. JOSÉ WEBER, SVD",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "Lc 24,5-6 (refrão) / Sl 117(118) (estrofes)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, PORQUE ELE É BOM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "“ETERNA É A SUA MISERICÓRDIA!”",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A CASA DE ISRAEL AGORA O DIGA:",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "“ETERNA É A SUA MISERICÓRDIA!”",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm6"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. É MELHOR BUSCAR REFÚGIO NO SENHOR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DO QUE PÔR NO SER HUMANO A ESPERANÇA;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É MELHOR BUSCAR REFÚGIO NO SENHOR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DO QUE CONTAR COM OS PODEROSOS DESTE MUNDO!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm6"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. O SENHOR É MINHA FORÇA E O MEU CANTO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E TORNOU-SE PARA MIM O SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "CLAMORES DE ALEGRIA E DE VITÓRIA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "RESSOEM PELAS TENDAS DOS FIÉIS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm6"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "4. A MÃO DIREITA DO SENHOR FEZ MARAVILHAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO MORREREI, MAS AO CONTRÁRIO, VIVEREI",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm6"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

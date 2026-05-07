@@ -1,0 +1,449 @@
+{
+  "id": "deixa-a-luz-do-ceu-entrar",
+  "titulo": "Deixa A Luz Do Céu Entrar",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "TU ANSEIAS EU BEM SEI A SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENS DESEJO DE BANIR A ESCURIDÃO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ABRE POIS DE PAR EM PAR TEU CORAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR. (DEIXA A LUZ DO CÉU ENTRAR)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ABRE BEM AS PORTAS DO TEU CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO A LUZ DO CÉU EM TI QUER HABITAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARA AS TREVAS DO PECADO DISSIPAR,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TEU CAMINHO E CORAÇÃO ILUMINAR",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR. (DEIXA A LUZ DO CÉU ENTRAR)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ABRE BEM AS PORTAS DO TEU CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ALEGRIA ANDAR AO BRILHO DESSA LUZ",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA ETERNA E PAZ NO CORAÇÃO PRODUZ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OH! ACEITA AGORA O SALVADOR JESUS",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR. (DEIXA A LUZ DO CÉU ENTRAR)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ABRE BEM AS PORTAS DO TEU CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXA A LUZ DO CÉU ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

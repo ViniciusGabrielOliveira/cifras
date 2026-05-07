@@ -1,0 +1,87 @@
+{
+  "id": "a-palavra-se-fez-carne",
+  "titulo": "A Palavra Se Fez Carne",
+  "artista": "ADENOR LEONARDO TERRA",
+  "tom": "Dm7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "DEIVID TAVARES",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A PALAVRA SE FEZ CARNE",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "E ENTRE NÓS HABITOU;",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "SUA LUZ E VERDADE",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "AO MUNDO HOJE REVELOU,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am/G"
+            }
+          ]
+        },
+        {
+          "letra": "AO MUNDO HOJE REVE-LOU. (BIS)",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

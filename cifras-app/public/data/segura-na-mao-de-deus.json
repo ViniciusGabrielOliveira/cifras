@@ -1,0 +1,297 @@
+{
+  "id": "segura-na-mao-de-deus",
+  "titulo": "Segura Na Mão De Deus",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. SE AS ÁGUAS DO MAR DA VIDA QUISEREM TE AFOGAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "SE AS TRISTEZAS DESTA VIDA QUISEREM TE SUFOCAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. SE A JORNADA É PESADA E TE CANSAS DA CAMINHADA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ORANDO, JEJUANDO, CONFIANDO E CONFESSANDO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. O ESPÍRITO DO SENHOR SEMPRE TE REVESTIRÁ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO PROMETEU QUE JAMAIS TE DEIXARÁ",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGURA NA MÃO DE DEUS E VAI",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

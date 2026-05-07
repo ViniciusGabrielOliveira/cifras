@@ -1,0 +1,308 @@
+{
+  "id": "pra-sempre-se-bendito",
+  "titulo": "Pra Sempre Sê Bendito",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. COLOCAMOS Ó SENHOR, EM TEU ALTAR,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ESTE PÃO QUE LOGO IRÁ SE TRANSFORMAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "EM TEU CORPO QUE SERÁ NOSSO ALIMENTO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O SUSTENTO DESSE NOSSO CAMINHAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. COLOCAMOS, Ó SENHOR, EM TEU ALTAR,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ESTE VINHO QUE IRÁ SE TRANSFORMAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "EM TEU SANGUE, QUE NOS DÁ ETERNA VIDA.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "VEM SENHOR NOS CONVERTER, NOS LIBERTAR!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. COLOCAMOS, Ó SENHOR, EM TEU ALTAR,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTAMENTE COM ESTA OFERTA SINGULAR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS VIDAS, NOSSAS LUTAS, NOSSOS DONS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO ISSO NÓS QUEREMOS TE ENTREGAR!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

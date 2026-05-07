@@ -1,0 +1,182 @@
+{
+  "id": "cristo-ressuscitou-aleluia",
+  "titulo": "Cristo Ressuscitou, Aleluia!",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. TENDO VENCIDO A MORTE, O SENHOR FICARÁ",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "PARA SEMPRE ENTRE NÓS",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "PARA MANTER VIVA A CHAMA DO AMOR QUE RESIDE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "EM CADA CRISTÃO A CAMINHO DO PAI.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. TENDO VENCIDO A MORTE, O SENHOR NOS ABRIU",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "O HORIZONTE FELIZ",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POIS NOSSO PEREGRINAR PELA FACE DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

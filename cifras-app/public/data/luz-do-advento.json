@@ -1,0 +1,186 @@
+{
+  "id": "luz-do-advento",
+  "titulo": "Luz Do Advento",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "ESTA LUZ ACENDE A ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DE UM NOVO TEMPO QUE TA PRA CHEGAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TEMPO DE MUDANÇA, DE RECONCILIAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TEMPO DE FRATERNIDADE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA LUZ É JESUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA NOVA ELE VEM PARA NOS DAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA LUZ É JESUS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ABRA SEU CORAÇÃO E DEIXE ELE ENTRAR.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

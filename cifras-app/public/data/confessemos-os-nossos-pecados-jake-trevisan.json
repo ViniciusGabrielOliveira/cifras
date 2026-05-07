@@ -1,0 +1,227 @@
+{
+  "id": "confessemos-os-nossos-pecados-jake-trevisan",
+  "titulo": "Confessemos Os Nossos Pecados",
+  "artista": "Jake Trevisan E Walmir Alencar",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D/C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CONFESSO A DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D/C#"
+            }
+          ]
+        },
+        {
+          "letra": "TODO PODEROSO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃOS E IRMÃS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE PEQUEI MUITAS VEZES",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/C#"
+            }
+          ]
+        },
+        {
+          "letra": "POR PENSAMENTOS E PALAVRAS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "ATOS E OMISSÕES",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "POR MINHA CULPA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "TÃO GRANDE CULPA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E PEÇO A VIRGEM MARIA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D/C#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "AOS ANJOS E SANTOS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃOS E IRMÃS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ROGUEIS POR MIM A DEUS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

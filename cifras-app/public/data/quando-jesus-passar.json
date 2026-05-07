@@ -1,0 +1,290 @@
+{
+  "id": "quando-jesus-passar",
+  "titulo": "Quando Jesus Passar",
+  "artista": "PE. ZEZINHO SCJ.",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PE. ZEZINHO SCJ.",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEU TELÔNIO OU JOGANDO A REDE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SOB A FIGUEIRA OU A CAMINHAR,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCANDO ÁGUA PRA MINHA SEDE.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUERENDO VER MEU SENHOR PASSAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEU TRABALHO E NA MINHA CASA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEU ESTUDO E NO MEU LAZER",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO COMPROMISSO E NO MEU DESCANSO,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEU DIREITO E NO MEU DEVER",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "NOS MEUS PROJETOS OLHANDO EM FRENTE,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEU SUCESSO E NA DECEPÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO SOFRIMENTO QUE FERE A GENTE,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SONHANDO O SONHO DE UM MUNDO IRMÃO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "COM MEUS AMIGOS, COM MINHA GENTE,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COM QUEM DA VIDA JÁ SE CANSOU",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A SEMEAR E A ESPALHAR SEMENTES",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NA TERRA ONDE MEU DEUS PASSO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

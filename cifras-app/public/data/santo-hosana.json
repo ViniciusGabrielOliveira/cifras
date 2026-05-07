@@ -1,0 +1,162 @@
+{
+  "id": "santo-hosana",
+  "titulo": "Santo",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM VOSSA GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA! HOSANA! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA! HOSANA! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM EM NOME DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA! HOSANA! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA! HOSANA! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

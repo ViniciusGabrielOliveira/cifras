@@ -1,0 +1,656 @@
+{
+  "id": "o-cristo-nossa-pascoa-foi-imolado",
+  "titulo": "O Cristo Nossa Páscoa Foi Imolado",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. BENDITO SEJA O SENHOR DEUS DE ISRAEL,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE A SEU POVO VISITOU E LIBERTOU;",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E FEZ SURGIR UM PODEROSO SALVADOR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA CASA DE DAVI, SEU SERVIDOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. COMO FALARA PELA BOCA DE SEUS SANTOS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OS PROFETAS DESDE OS TEMPOS MAIS ANTIGOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "PARA SALVAR-NOS DO PODER DOS INIMIGOS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E DA MÃO DE TODOS QUANTOS NOS ODEIAM.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. ASSIM MOSTROU MISERICÓRDIA A NOSSOS PAIS,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "RECORDANDO A SUA SANTA ALIANÇA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E O JURAMENTO A ABRAÃO, O NOSSO PAI,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DE CONCEDER-NOS QUE, LIBERTOS DO INIMIGO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "4. A ELE NÓS SIRVAMOS SEM TEMOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM SANTIDADE E EM JUSTIÇA DIANTE DELE,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ENQUANTO PERDURAREM NOSSOS DIAS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "5. SERÁS PROFETA DO ALTÍSSIMO, Ó MENINO,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POIS IRÁS ANDANDO À FRENTE DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "PARA APLAINAR E PREPARAR OS SEUS CAMINHOS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "6. ANUNCIANDO AO SEU POVO A SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ESTÁ NA REMISSÃO DE SEUS PECADOS;",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "PELA BONDADE E COMPAIXÃO DE NOSSO DEUS,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE SOBRE NÓS FARÁ BRILHAR O SOL NASCENTE,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "7. PRA ILUMINAR A QUANTOS JAZEM ENTRE AS TREVAS",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E NA SOMBRA DA MORTE ESTÃO SENTADOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E PARA DIRIGIR OS NOSSOS PASSOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "GUIANDO-OS NO CAMINHO DA PAZ.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

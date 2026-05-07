@@ -1,0 +1,350 @@
+{
+  "id": "cristo-nossa-pascoa-foi-imolado",
+  "titulo": "Cristo Nossa Páscoa, Foi Imolado",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "1. PÁSCOA SAGRADA! Ó FESTA DE LUZ!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PRECISAS DESPERTAR: CRISTO VAI TE ILUMINA--AR!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 43,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "2. PÁSCOA SAGRADA! Ó FESTA UNIVERSAL!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NO MUNDO RENOVADO É JESUS GLORIFICA--DO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "3. PÁSCOA SAGRADA! VITÓRIA SEM IGUAL!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A CRUZ FOI EXALTADA, FOI A MORTE DERROTA--DA!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 42,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "4. PÁSCOA SAGRADA! Ó NOITE BATISMAL!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DE TUAS ÁGUAS PURAS NASCEM NOVAS CRIATU--RAS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 41,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "5. PÁSCOA SAGRADA! BANQUETE DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZ A QUEM É DADO SER ÀS NÚPCIAS CONVIDA--DO!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 40,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 44,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

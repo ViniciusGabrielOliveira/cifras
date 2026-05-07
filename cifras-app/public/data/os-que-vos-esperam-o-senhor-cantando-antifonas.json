@@ -1,0 +1,212 @@
+{
+  "id": "os-que-vos-esperam-o-senhor-cantando-antifonas",
+  "titulo": "Os Que Vos Esperam, Ó Senhor",
+  "artista": "RUZYE (CANTANDO ANTÍFONAS)",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANTÍFONA DE COMUNHÃO DO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR MEU DEUS, A VÓS ELEVO A MINHA ALMA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EM VÓS CONFIO: QUE EU NÃO SEJA ENVERGONHADO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "2. RECORDAI, SENHOR MEU DEUS, VOSSA TERNURA",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E A VOSSA COMPAIXÃO QUE SÃO ETERNAS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "3. VERDADE E AMOR SÃO OS CAMINHOS DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PARA QUEM GUARDA A SUA ALIANÇA E SEUS PRECEITOS",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 41,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

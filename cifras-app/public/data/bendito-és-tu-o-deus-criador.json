@@ -1,0 +1,281 @@
+{
+  "id": "bendito-és-tu-o-deus-criador",
+  "titulo": "Bendito És Tu, Ó Deus Criador",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "BENDITO ÉS TU, Ó DEUS CRIADOR,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "REVESTES O MUNDO DA MAIS FINA FLOR;",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "RESTAURAS O FRACO QUE A TI SE CONFIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E JUNTO AOS IRMÃOS, EM PAZ, O ENVIAS.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO ÉS TU, Ó DEUS CRIADOR,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "POR QUEM APRENDEU O GESTO DE AMOR:",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "COLHER A FARTURA E TER A BELEZA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DE SER A PARTILHA DOS FRUTOS NA MESA!",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO ÉS TU, Ó DEUS CRIADOR,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "FECUNDAS A TERRA COM VIDA E AMOR!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM AGUARDAVA UM CANTO DE FESTA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A MESA PROMETE ETERNA SERESTA!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

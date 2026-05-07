@@ -1,0 +1,227 @@
+{
+  "id": "kyrie-banda-capella",
+  "titulo": "Kyrie",
+  "artista": "Banda Capella",
+  "tom": "F#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR QUE VIESTES AO MUNDO PARA NOS SALVAR,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "TEM PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "KYRI-E     KYRI-E    KYRIE ELEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. OH CRISTO QUE CONTINUAIS   A NOS VISITAR,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "TEM PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE    CHRISTE   CHRISTE ELEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR QUE VIREIS UM DIA   PARA NOS JULGAR,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "TEM PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "KYRI-E     KYRI-E    KYRIE ELEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

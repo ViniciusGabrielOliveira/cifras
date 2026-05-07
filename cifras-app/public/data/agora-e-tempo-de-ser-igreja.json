@@ -1,0 +1,216 @@
+{
+  "id": "agora-e-tempo-de-ser-igreja",
+  "titulo": "Tempo De Ser Igreja",
+  "artista": "CORO EDIPAUL",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "CORO EDIPAUL",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS POVO ESCOLHIDO NA FRONTE ASSINALADOS",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "COM O NOME DO SENHOR QUE CAMINHA AO NOSSO LADO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SOMOS POVO EM MISSÃO, JÁ É TEMPO DE PARTIR.",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "É O SENHOR QUE NOS ENVIA, EM SEU NOME A SERVIR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 43,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SOMOS POVO ESPERANÇA. VAMOS JUNTOS PLANEJAR:",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SE IGREJA A SERVIÇO E A FÉ TESTEMUNHAR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SOMOS POVO A CAMINHO, CONSTRUINDO EM MULTIRÃO.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 42,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOVA TERRA, NOVO REINO DE FRATERNA COMUNHÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

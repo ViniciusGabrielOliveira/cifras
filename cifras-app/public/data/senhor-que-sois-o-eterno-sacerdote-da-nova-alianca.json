@@ -1,0 +1,185 @@
+{
+  "id": "senhor-que-sois-o-eterno-sacerdote-da-nova-alianca",
+  "titulo": "Senhor, Que Sois O Eterno Sacerdote",
+  "artista": "Leandro Evaristo",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE SOIS O ETERNO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SACERDOTE DA NOVA ALIANÇA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS: SENHOR, TENDE PIEDADE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE NOS EDIFICAIS COMO PEDRAS VIVAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO TEMPLO SANTO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS: CRISTO, TENDE PIEDADE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE NOS TORNAIS CONCIDADÃOS DOS SANTOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO REINO DOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS: SENHOR, TENDE PIEDADE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

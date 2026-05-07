@@ -1,0 +1,131 @@
+{
+  "id": "olhem-para-o-senhor",
+  "titulo": "Olhem Para O Senhor",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O--LHEM  PARA O SENHOR,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "E FICARÃO FELIZES!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZ QUEM PROVA SUA BONDADE E SEU AMOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SUA BONDADE E SEU AMOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

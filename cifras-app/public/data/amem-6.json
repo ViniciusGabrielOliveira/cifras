@@ -1,0 +1,66 @@
+{
+  "id": "amem-6",
+  "titulo": "Amém 6",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A-MÉM! A-MÉM! (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "id": "nasceu-em-belem-casa-pao",
+  "titulo": "Nasceu Em Belém, A Casa Do Pão",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "AS NOSSAS MÃOS SE ABREM MESMO NA LUTA E NA DOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E TRAZEM PÃO E VINHO PARA ESPERAR O SENHOR.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 38,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "AS NOSSAS MÃOS SE ELEVAM PARA, NUM GESTO DE AMOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "RETRIBUIR A VIDA QUE VEM DAS MÃOS DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 39,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "AS NOSSAS MÃOS SE ENCONTRAM NA MAIS FRATERNA UNIÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 48,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "FAÇAMOS DESTE MUNDO A GRANDE “CASA DO PÃO”.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 38,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "AS NOSSAS MÃOS SOFRIDAS NEM SEMPRE TEM O QUE DAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "MAS VALE A PRÓPRIA VIDA DE QUEM PROSSEGUE A LUTAR.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 46,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

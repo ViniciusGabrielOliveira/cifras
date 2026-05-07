@@ -1,0 +1,622 @@
+{
+  "id": "cantai-ao-senhor-deus-um-canto-novo",
+  "titulo": "Cantai Ao Senhor Deus Um Canto Novo",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. DEMOS GRAÇAS A DEUS PAI ONIPOTENTE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "QUE NOS CHAMA A PARTILHAR, NA SUA LUZ,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DA HERANÇA A SEUS SANTOS RESERVADA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. DO IMPÉRIO DAS TREVAS ARRANCOU-NOS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E TRANSPORTOU-NOS PARA O REINO DE SEU FILHO,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARA O REINO DE SEU FILHO BEM-AMADO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NO QUAL NÓS ENCONTRAMOS REDENÇÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DOS PECADOS REMISSÃO PELO SEU SANGUE.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. DO DEUS, O INVISÍVEL, É A IMAGEM,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O PRIMOGÊNITO DE TODA CRIATURA;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE NELE É QUE TUDO FOI CRIADO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE HÁ NOS CÉUS E O QUE EXISTE SOBRE A TERRA,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O VISÍVEL E TAMBÉM O INVISÍVEL.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "4. SEJAM TRONOS E PODERES QUE HÁ NOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SEJAM ELES PRINCIPADOS, POTESTADES:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "POR ELE E PARA ELE FORAM FEITOS.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ANTES DE TODA CRIATURA ELE EXISTE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "5. ELE É A CABEÇA DA IGREJA, QUE É SEU CORPO,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "É O PRINCÍPIO, O PRIMOGÊNITO ENTRE OS MORTOS,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "A FIM DE TER EM TUDO A PRIMAZIA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POIS FOI DO AGRADO DE DEUS PAI QUE A PLENITUDE",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HABITASSE NO SEU CRISTO INTEIRAMENTE.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "6. APROUVE-LHE TAMBÉM, POR MEIO DELE,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "RECONCILIAR CONSIGO MESMO AS CRIATURAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PACIFICANDO PELO SANGUE DE SUA CRUZ",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO AQUILO QUE POR ELE FOI CRIADO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE HÁ NOS CÉUS E O QUE EXISTE SOBRE A TERRA.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

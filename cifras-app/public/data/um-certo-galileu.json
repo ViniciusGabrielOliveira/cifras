@@ -1,0 +1,543 @@
+{
+  "id": "um-certo-galileu",
+  "titulo": "Um Certo Galileu",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. UM CERTO DIA À BEIRA MAR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "APARECEU UM JOVEM GALILEU",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NINGUÉM PODIA IMAGINAR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ALGUÉM PUDESSE AMAR",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DO JEITO QUE ELE AMAVA",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SEU JEITO SIMPLES DE CONVERSAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TOCAVA O CORAÇÃO DE QUEM O ESCUTAVA",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. NAQUELAS PRAIAS, NAQUELE MAR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NAQUELE RIO, EM CASA DE ZAQUEU",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NAQUELA ESTRADA, NAQUELE SOL",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E O POVO A ESCUTAR HISTÓRIAS TÃO BONITAS",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SEU JEITO AMIGO DE SE EXPRESSAR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ENCHIA O CORAÇÃO DE PAZ TÃO INFINITA",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. EM PLENA RUA, NAQUELE CHÃO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NAQUELE POÇO E EM CASA DE SIMÃO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NAQUELA RELVA, NO ENTARDECER",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O MUNDO VIU NASCER A PAZ DE UMA ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SEU JEITO PURO DE PERDOAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "FAZIA O CORAÇÃO VOLTAR A SER CRIANÇA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#"
+            }
+          ]
+        },
+        {
+          "letra": "4. UM CERTO DIA, AO TRIBUNAL",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G#"
+            }
+          ]
+        },
+        {
+          "letra": "ALGUÉM LEVOU O JOVEM GALILEU",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#"
+            }
+          ]
+        },
+        {
+          "letra": "NINGUÉM SABIA QUAL FOI O MAL",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G#"
+            }
+          ]
+        },
+        {
+          "letra": "E O CRIME QUE ELE FEZ;",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "G#"
+            }
+          ]
+        },
+        {
+          "letra": "QUAIS FORAM SEUS PECADOS",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C#"
+            }
+          ]
+        },
+        {
+          "letra": "SEU JEITO HONESTO DE DENUNCIAR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G#"
+            }
+          ]
+        },
+        {
+          "letra": "MEXEU NA POSIÇÃO DE ALGUNS PRIVILEGIADOS",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "5. VITORIOSO, RESSUSCITOU",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "APÓS TRÊS DIAS A VIDA ELE VOLTOU",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITADO, NÃO MORRE MAIS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "ESTÁ JUNTO DO PAI,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "POIS ELE É O FILHO ETERNO",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MAS ELE VIVE EM CADA LAR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E ONDE SE ENCONTRAR UM CORAÇÃO FRATERNO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "id": "senhor-que-fazeis-passar-da-morte-leandro-evaristo",
+  "titulo": "Senhor, Que Fazeis Passar Da Morte Para A Vida",
+  "artista": "Pe. Jair Da Costa",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE FAZEIS PASSAR DA MORTE PARA A VIDA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM OUVE A VOSSA PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. Ó CRISTO, QUE QUISESTES SER LEVANTADO DA TERRA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA ATRAIR-NOS A VÓS,",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE NOS SUBMETEIS AO JULGAMENTO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DA VOSSA CRUZ,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

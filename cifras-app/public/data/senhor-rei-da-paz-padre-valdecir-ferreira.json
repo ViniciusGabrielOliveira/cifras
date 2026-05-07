@@ -1,0 +1,212 @@
+{
+  "id": "senhor-rei-da-paz-padre-valdecir-ferreira",
+  "titulo": "Senhor, Rei Da Paz",
+  "artista": "Pe. Valdecir Ferreira",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, REI DA PAZ. TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, SENHOR TENDE PIEDADE DE NÓS! (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, LUZ NAS TREVAS. TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, CRISTO TENDE PIEDADE DE NÓS! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, IMAGEM DO HOMEM NO-VO. TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "B"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 51,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, SENHOR TENDE PIEDADE DE NÓS! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

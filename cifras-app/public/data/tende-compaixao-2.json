@@ -1,0 +1,208 @@
+{
+  "id": "tende-compaixao-2",
+  "titulo": "Tende Compaixão",
+  "artista": "Daiana Máximo",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: PORQUE SOMOS PECADORES. (BIS)",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: E DAI-NOS A VOSSA SALVAÇÃO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SOMENTE O SACERDOTE:",
+          "acordes": []
+        },
+        {
+          "letra": "DEUS TODO-PODEROSO TENHA COMPAIXÃO DE NÓS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOE OS NOSSOS PECADOS E NOS CONDUZA À VIDA ETERNA.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 47,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS: A--A--MÉM! (BIS)",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: CRISTO, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: SENHOR, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

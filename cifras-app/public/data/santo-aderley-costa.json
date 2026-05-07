@@ -1,0 +1,195 @@
+{
+  "id": "santo-aderley-costa",
+  "titulo": "Santo É O Senhor",
+  "artista": "ADERLEY COSTA",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ADERLEY COSTA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A VOSSA GLÓRIA. HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO  O QUE VEM EM NOME DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

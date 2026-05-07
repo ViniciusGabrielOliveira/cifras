@@ -1,0 +1,209 @@
+{
+  "id": "sobe-a-jerusalem",
+  "titulo": "Sobe A Jerusalém",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SOBE A JERUSALÉM, VIRGEM OFERENTE SEM IGUAL.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VAI APRESENTA AO PAI TEU MENINO: LUZ QUE CHEGOU NO NATAL.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            },
+            {
+              "posicao": 53,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E, JUNTO À SUA CRUZ, QUANDO DEUS MORRER FICA DE PÉ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 48,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SIM, ELE TE SALVOU, MAS O OFERECESTE POR NÓS COM TODA A FÉ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 57,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VAMOS RENOVAR ESTE SACRIFÍCIO DE JESUS:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MORTE E RESSURREIÇÃO; VIDA QUE BROTOU DE SUA OFERTA NA CRUZ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            },
+            {
+              "posicao": 55,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "MÃE, VEM NOS ENSINAR A FAZER DA VIDA UMA OBLAÇÃO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CULTO AGRADÁVEL A DEUS É FAZER A OFERTA DO PRÓPRIO CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A"
+            },
+            {
+              "posicao": 55,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

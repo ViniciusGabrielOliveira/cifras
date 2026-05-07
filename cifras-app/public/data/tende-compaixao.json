@@ -1,0 +1,130 @@
+{
+  "id": "tende-compaixao",
+  "titulo": "Tende Compaixão",
+  "artista": "Leandro Evaristo",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: PORQUE SOMOS PECADORES.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "TODOS: E DAI-NOS A VOSSA SALVAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "SOMENTE O SACERDOTE (REZADO):",
+          "acordes": []
+        },
+        {
+          "letra": "DEUS TODO-PODEROSO TENHA COMPAIXÃO DE NÓS,",
+          "acordes": []
+        },
+        {
+          "letra": "PERDOE OS NOSSOS PECADOS E NOS CONDUZA À VIDA ETERNA.",
+          "acordes": []
+        },
+        {
+          "letra": "TODOS: AMÉM!",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "E"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

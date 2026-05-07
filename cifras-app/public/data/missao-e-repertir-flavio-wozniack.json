@@ -1,0 +1,276 @@
+{
+  "id": "missao-e-repertir-flavio-wozniack",
+  "titulo": "Missão É Repartir",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#/A#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. A FÉ É COMPROMISSO QUE É PRECISO REPARTIR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM TERRAS BEM DISTANTES OU EM NOSSO PRÓPRIO LAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS SOMOS MISSIONÁRIOS; EIS A NOSSA VOCAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CONVIDA A TODOS, AI DE MIM SE EU ME CALAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            },
+            {
+              "posicao": 49,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "2. HÁ MUITOS CONSAGRADOS ANUNCIANDO SEM TEMER,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E TANTOS PERSEGUIDOS DANDO A VIDA PELA FÉ.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MAS QUEM FAZ DE SUA VIDA UM SINAL DE COMUNHÃO,",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TAMBÉM DÁ TESTEMUNHO, NOS CONVIDA À CONVERSÃO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

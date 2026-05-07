@@ -1,0 +1,342 @@
+{
+  "id": "vamos-preparar-a-ceia-coral-palestrina",
+  "titulo": "Vamos Preparar A Ceia",
+  "artista": "CORAL PALESTRINA",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "CORAL PALESTRINA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. NOSSO DEUS FEZ UM MUNDO TÃO PERFEITO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "COLOCOU EM NOSSO PEITO A SEMENTE DO AMOR",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E, POR ISSO AQUI SOMOS SEUS CONVIVAS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E FORMAMOS HÓSTIAS VIVAS, NESTA CASA DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. NOSSO DEUS FEZ DE NÓS UMA FAMÍLIA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "NUMA IGREJA QUE PARTILHA E SE OFERTA EM OBLAÇÃO",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 44,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA QUE OFERTEMOS PÃO E VINHO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DÃO FORÇA NO CAMINHO E NOS LEVAM A DOAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. NOSSO DEUS SABE OUVIR NOSSO CLAMOR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "E COM TODO SOFREDOR, FAZ A NOVA ALIANÇA",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TAMBÉM NÓS, O QUE TEMOS PARTILHAMOS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE SOMOS OFERTAMOS, PRA GERAR MAIS ESPERANÇA.",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "4. NOSSO DEUS CHAMA TODA A HUMANIDADE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "A VIVER EM LIBERDADE, A OFERTA E A PAIXÃO",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO É DELE E NÓS SOMOS SEU REBANHO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NELE POMOS NOSSOS SONHOS: TODA A VIDA E VOCAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            },
+            {
+              "posicao": 44,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

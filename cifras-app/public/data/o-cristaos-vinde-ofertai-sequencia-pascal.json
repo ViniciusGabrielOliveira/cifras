@@ -1,0 +1,419 @@
+{
+  "id": "o-cristaos-vinde-ofertai-sequencia-pascal",
+  "titulo": "Ó Cristãos, Vinde, Ofertai",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "NARRADOR:",
+          "acordes": []
+        },
+        {
+          "letra": "Ó CRISTÃOS, VINDE, OFERTAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "OS LOUVORES PASCAIS!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "JÁ REMIU AS OVELHAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O INOCENTE, POR ELAS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "RECONCILIANDO CÉUS E TERRAS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA E MORTE, Ó DUELO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "Ó COMBATE MAIS BELO:",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DA VIDA O REI MORREU,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "MAS VENCEU!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE VISTE, Ó MARIA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO AO HORTO ENTÃO CORRIAS?",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solo",
+      "label": "Solo",
+      "linhas": [
+        {
+          "letra": "\"A TUMBA VI DO VIVENTE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DO CRISTO A GLÓRIA RESPLENDENTE!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "OS ANJOS EU OUVI-I",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E OS PANOS NO CHÃO EU VI!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MINHA ESPERANÇA CLAREIA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS VAI NOS VER NA GALILEIA!\"",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NARRADOR:",
+          "acordes": []
+        },
+        {
+          "letra": "CRISTO, EU SEI, RESSUSCITOU,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "EIS TODA VERDA-DE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "C       Am   Dm  Gm Dm",
+          "acordes": []
+        },
+        {
+          "letra": "E TU, DA VIDA, Ó REI, PIE-DA-DE!",
+          "acordes": []
+        },
+        {
+          "letra": "AMÉM!   ALELUIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "id": "nossos-dons-apresentamos",
+  "titulo": "Nossos Dons Apresentamos",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. NOSSOS DONS APRESENTAMOS",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "EM MEMÓRIA DO CORDEIRO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "REVIVEMOS OS SEUS PASSOS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS POVO CAMINHEIRO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. É FELIZ QUEM PERSEVERA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA JUSTIÇA E NA VERDADE",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ESPALHANDO O BOM PERFUME",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E O FRESCOR DA CARIDADE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. NOSSA TERRA, GRANDE VENTRE!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É O LUGAR DA ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS TODOS CULTIVADOS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO JARDIM DA ALIANÇA!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "senhor-nossa-paz-comunidade-recado",
+  "titulo": "Senhor, Nossa Paz",
+  "artista": "Comunidade Recado",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, NOSSA PAZ, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, NOSSA PÁSCOA, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, NOSSA VIDA, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

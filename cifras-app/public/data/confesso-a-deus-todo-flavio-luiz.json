@@ -1,0 +1,229 @@
+{
+  "id": "confesso-a-deus-todo-flavio-luiz",
+  "titulo": "Confesso A Deus",
+  "artista": "Flávio Luiz",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. CONFESSO A DEUS PAI TODO PODEROSO,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃOS, CONFESSO QUE PEQUEI",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "POR PENSAMENTOS, PALAVRAS, ATOS E OMISSÕES,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "POR MINHA CULPA, TÃO GRANDE CULPA!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. E PEÇO A VIRGEM MARIA, AOS SANTOS E ANJOS,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E VÓS A IRMÃOS EU PEÇO QUE ROGUEIS",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "AO DEUS QUE É PAI PODEROSO,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA PERDOAR A MINHA CULPA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "TÃO GRANDE CULPA.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

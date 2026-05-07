@@ -1,0 +1,353 @@
+{
+  "id": "recebe-deus-amigo",
+  "titulo": "Recebe, Deus Amigo",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. RECEBE, DEUS AMIGO, ESTES DONS QUE AQUI TRAZEMOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E FELIZES ENTRE TODOS, A PARTILHA NÓS FAREMOS",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "Ó DEUS PAI, A TI TRAZEMOS PÃO E VINHO UMA VEZ MAIS.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM SO CORPO NÓS SEREMOS COM JESUS E PELA PAZ!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. RECEBE, DEUS AMIGO, NOSSOS PÉS E NOSSOS BRAÇOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ENCONTRAM NA UNIDADE O ALENTO PRO CANSAÇO.",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "Ó DEUS PAI, A TI TRAZEMOS PÃO E VINHO UMA VEZ MAIS.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM SO CORPO NÓS SEREMOS COM JESUS E PELA PAZ!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. RECEBE, DEUS AMIGO, OS PROJETOS QUE ALIMENTAM",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O CONVÍVIO E O RESPEITO ENTRE OS POVOS QUE SE ENFRENTAM.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 49,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "Ó DEUS PAI, A TI TRAZEMOS PÃO E VINHO UMA VEZ MAIS.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM SO CORPO NÓS SEREMOS COM JESUS E PELA PAZ!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "4. RECEBE, DEUS AMIGO, OS ESFORÇOS DO TEU POVO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TRABALHA COM CARINHO PRA CRIAR UM MUNDO NOVO",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "Ó DEUS PAI, A TI TRAZEMOS PÃO E VINHO UMA VEZ MAIS.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM SO CORPO NÓS SEREMOS COM JESUS E PELA PAZ!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

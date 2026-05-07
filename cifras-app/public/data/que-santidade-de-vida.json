@@ -1,0 +1,248 @@
+{
+  "id": "que-santidade-de-vida",
+  "titulo": "Que Santidade De Vida",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "QUE SANTIDADE DE VIDA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE HOMENS DEVEMOS SER!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SE TUDO NO CÉU E NA TERRA",
+          "acordes": [
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR CHAMARÁ",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE RESPEITO PARA COM DEUS!",
+          "acordes": []
+        },
+        {
+          "letra": "QUE LUTA DEVEMOS TRAVAR!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO NOVO CÉU E NA NOVA TERRA",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "IREMOS MORAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS SENHOR TUA IGREJA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE AGUARDA E APRESSA TUA VINDA GLORIOSA",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE O SENHOR NOS ENCONTRE EM PAZ",
+          "acordes": [
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PUROS E SANTOS (BIS)",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE É FEITO DA SUA PROMESSA?",
+          "acordes": []
+        },
+        {
+          "letra": "PERGUNTAM E ZOMBAM DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MAS O SENHOR VIRÁ",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ELE NÃO TARDARÁ",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EU SEJA SANTO, SANTO, SANTO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "POIS DEUS É SANTO, SANTO, SANTO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A SANTIDADE DA MINHA VIDA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "APRESSE O SENHOR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E ELE LOGO VIRÁ",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

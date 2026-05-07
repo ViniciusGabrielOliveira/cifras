@@ -1,0 +1,570 @@
+{
+  "id": "parabens-pra-jesus",
+  "titulo": "Parabéns Pra Jesus",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "TUDO QUE NÓS JÁ VIVEMOS.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO QUE VAMOS VIVER.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É QUEM SABE O MOTIVO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm9"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É QUEM PODE DIZER.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É QUEM SABE A VERDADE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É QUEM MOSTRA O CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E QUEM PROCURA POR ELE, NÃO VIVE SOZINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O PÃO E O VINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O PRINCÍPIO E O FIM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O REI E O CORDEIRO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm9"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O NÃO E O SIM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE SÓ QUER ALEGRIA, RISOS E FELICIDADE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E PAZ NA TERRA AOS HOMENS DE BOA VONTADE.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS CANTAR PARABÉNS PRA JESUS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COMEMORAR PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NOS ABRAÇAR NESSA NOITE FELIZ.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "EM QUE O AMOR ASCENDEU SUA LUZ.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS CANTAR PARABÉNS PRA JESUS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COMEMORAR PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NOS ABRAÇAR NESSA NOITE FELIZ.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "A ESTRELA GUIA DO CÉU NOS CONDUZ.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O MELHOR AMIGO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O PAI E O FILHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É MAIOR DO QUE A MORTE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm9"
+            }
+          ]
+        },
+        {
+          "letra": "É O DESTINO E O TRILHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É CARINHO MAIS DOCE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É A FLOR E A SEMENTE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É QUEM SABE O QUE EXISTE AQUI DENTRO DA GENTE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            },
+            {
+              "posicao": 48,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É A ÁGUA MAIS PURA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O SOL E O LUAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ELE VENCEU O DESERTO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm9"
+            }
+          ]
+        },
+        {
+          "letra": "E ANDOU NAS ÁGUAS DO MAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O MESTRE DOS SÁBIOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O REI E O SENHOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ELE POR MIM DEU A VIDA, EM NOME DO AMOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS CANTAR PARABÉNS PRA JESUS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COMEMORAR PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NOS ABRAÇAR NESSA NOITE FELIZ.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "EM QUE O AMOR ASCENDEU SUA LUZ.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS CANTAR PARABÉNS PRA JESUS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COMEMORAR PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NOS ABRAÇAR NESSA NOITE FELIZ.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "A ESTRELA GUIA DO CÉU NOS CONDUZ.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARABÉNS PRA JESUS.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

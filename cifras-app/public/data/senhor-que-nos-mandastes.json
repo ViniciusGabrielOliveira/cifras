@@ -1,0 +1,214 @@
+{
+  "id": "senhor-que-nos-mandastes",
+  "titulo": "Senhor, Que Nos Mandastes Perdoar",
+  "artista": "Mauro Junior",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE NOS MANDASTES PERDOAR-NOS MUTUAMENTE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 43,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ANTES DE NOS APROXIMAR DO VOSSO ALTAR,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE NA CRUZ DESTES PERDÃO   AOS PECA-DORES,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, TENDE PIEDADE DE NÓS. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE CONFIASTES À VOSSA IGREJA O MINISTÉRIO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            },
+            {
+              "posicao": 50,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "DA RECONCILIAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "id": "senhor-que-oferecestes-o-vosso-comunidade-recado",
+  "titulo": "Vossa Misericórdia",
+  "artista": "Com. Recado",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE OFERECESTES O VOSSO PERDÃO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A PEDRO ARREPENDIDO,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE PROMETESTES O PARAÍSO AO BOM LADRÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE ACOLHEIS TODA PESSOA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUE CONFIA NA VOSSA MISERICÓRDIA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

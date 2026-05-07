@@ -1,0 +1,281 @@
+{
+  "id": "toquem-trombetas",
+  "titulo": "Toquem As Trombetas",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. TODAS AS NAÇÕES, VÃO SE LEVANTAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E LOUVAR O SENHOR QUE VIRÁ NOS SALVAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TODAS AS NAÇÕES VÃO SE LEVANTAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E LOUVAR O SENHOR QUE VIRÁ",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. HOJE ESTAMOS EM FESTA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VIBRANDO COM MUITO AMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZES NÓS CANTAMOS AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "AQUI NÓS SOMOS IRMÃOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "REUNIDOS NESTE ALTAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS TODOS JUNTOS CELEBRAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "UM NOVO AMANHÃ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE SÓ JESUS NOS DÁ",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ABRA TEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXE-O ENTRAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

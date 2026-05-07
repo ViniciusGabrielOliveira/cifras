@@ -1,0 +1,175 @@
+{
+  "id": "o-mae-do-redentor-oficina-da-musica-liturgica",
+  "titulo": "Ó Mãe Do Redentor",
+  "artista": "D. DOMINGOS SANCHIS, OSB.",
+  "tom": "Eb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "D. DOMINGOS SANCHIS, OSB.",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "Ó MÃE DO REDEN-TOR, DO CÉU Ó POR-TA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm/D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Ab6"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "AO POVO QUE CAIU SOCORRE E EXOR-TA;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "POIS BUSCA LEVANTAR-SE VIRGEM PURA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NASCENDO O CRIADOR DA CRIATURA.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "TEM PIEDADE DE NÓS, E OUVE, SUA-VE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "O ANJO TE SAUDANDO COM SEU \"A------VE!\"",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Fm6"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

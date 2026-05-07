@@ -1,0 +1,212 @@
+{
+  "id": "pai-nosso-1",
+  "titulo": "Pai Nosso 1",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "PAI NOSSO QUE ESTAIS NO CÉU",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICADO SEJA O VOSSO NOME",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "VÊM A NÓS O VOSSO REINO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SEJA FEITA A VOSSA VONTADE",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM NA TERRA COMO NO CÉU",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO NOSSO DE CADA DIA NÓS DAÍ HO-O-JE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOAI AS NOSSAS OFE-ENSAS",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM COMO NÓS PERDOAMOS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM NOS TEM OFENDIDO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "E NÃO OS DEIXEIS CAIR EM TENTAÇÃO, EM TENTAÇÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 43,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "MAS LIVRAI-NOS DO MAL",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

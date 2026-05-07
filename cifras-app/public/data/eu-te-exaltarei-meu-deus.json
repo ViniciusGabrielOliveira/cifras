@@ -1,0 +1,305 @@
+{
+  "id": "eu-te-exaltarei-meu-deus",
+  "titulo": "Eu Te Exaltarei Meu Deus",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. EU TE EXALTAREI MEU DEUS E REI",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POR TODAS AS GERAÇÕES",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ÉS O MEU SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PAI QUE ME QUER NO A--MOR!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "2. EU VOU REUNIR JERUSALÉM",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PRA TE LOUVAR, Ó SENHOR!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TE   GLORIFICAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "AO DAR-ME A TU-A  PAZ!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "3. AO ME REVELAR A TUA LEI,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "AS TUAS MÃOS EU SENTI",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SIM,  TE LOUVAREI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ENQUANTO EU E-XISTIR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

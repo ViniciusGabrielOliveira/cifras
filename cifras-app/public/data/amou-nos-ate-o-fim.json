@@ -1,0 +1,71 @@
+{
+  "id": "amou-nos-ate-o-fim",
+  "titulo": "Amou Nos Até O Fim",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

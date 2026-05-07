@@ -1,0 +1,427 @@
+{
+  "id": "escuta-senhor",
+  "titulo": "Escuta Senhor",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "CONDUZISTE À BOA TERRA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, CONDUZ A TUA IGREJA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "QUE CAMINHA E EM TI ESPERA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TUA ESPERANÇA NÓS VIVEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "POIS NÃO É UMA QUIMERA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. SE NOS FALTA TUA LUZ",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA PENUMBRA ANDAREMOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS VIDAS TRANSFORMADAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "POR TUA PÁSCOA NÓS QUEREMOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E A MORTE, O MAL E A DOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "PARA SEMPRE VENCEREMOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. À VERDADE QUE LIBERTA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, CONDUZ, Ó JUSTICEIRO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O ABISMO DO PECADO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "É O NOSSO CATIVEIRO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "MAS EU TUA PALAVRA TEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "O REFÚGIO VERDADEIRO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "4. EIS QUE ESTAMOS NESSES DIAS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DE PROVARMOS TEU PERDÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS CULPAS TU APAGAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E NOS TIRAS DA PRISÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TEU AMOR NÓS CANTAREMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "EM ETERNA GRATIDÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

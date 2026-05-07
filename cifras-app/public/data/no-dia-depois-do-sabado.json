@@ -1,0 +1,743 @@
+{
+  "id": "no-dia-depois-do-sabado",
+  "titulo": "No Dia Depois Do Sábado",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "Eb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "1. LOUVAI O SENHOR DEUS NOS ALTOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVAI-O NO EXCELSO FIRMAMENTO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVAI-O, ANJOS SEUS, TODOS LOUVAI-O,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVAI-O, LEGIÕES CELESTIAIS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "2. LOUVAI-O, SOL E LUA, E BENDIZEI-O,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVAI-O, VÓS ESTRELAS RELUZENTES!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVAI-O, CÉUS DOS CÉUS, E BENDIZEI-O,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E VÓS, ÁGUAS QUE ESTAIS POR SOBRE OS CÉUS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "3. LOUVEM TODOS E BENDIGAM O SEU NOME,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE MANDOU E LOGO TUDO FOI CRIADO.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "INSTITUIU TODAS AS COISAS PARA SEMPRE,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E DEU A TUDO UMA LEI QUE É IMUTÁVEL.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "4. LOUVAI O SENHOR DEUS POR TODA A TERRA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "GRANDES PEIXES E ABISMOS MAIS PROFUNDOS;",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FOGO E GRANIZO, E VÓS NEVES E NEBLINAS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "FURACÕES QUE EXECUTAIS AS SUAS ORDENS.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "5. MONTES TODOS E COLINAS, BENDIZEI-O,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "CEDROS TODOS E VÓS ÁRVORES FRUTÍFERAS;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FERAS DO MATO E VÓS MANSOS ANIMAIS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS OS RÉPTEIS E OS PÁSSAROS QUE VOAM.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "6. REIS DA TERRA, POVOS TODOS, BENDIZEI-O,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "E VÓS, PRÍNCIPES E TODOS OS JUÍZES;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E VÓS, JOVENS, E VÓS, MOÇAS E RAPAZES,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "ANCIÃOS E CRIANCINHAS, BENDIZEI-O!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "7. LOUVEM O NOME DO SENHOR, LOUVEM-NO TODOS,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SOMENTE O SEU NOME É EXCELSO!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A MAJESTADE E ESPLENDOR DE SUA GLÓRIA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "ULTRAPASSAM EM GRANDEZA O CÉU E A TERRA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "8. ELE EXALTOU SEU POVO ELEITO EM PODERIO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O MOTIVO DE LOUVOR PARA OS SEUS SANTOS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É UM HINO PARA OS FILHOS DE ISRAEL,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "ESTE POVO QUE ELE AMA E LHE PERTENCE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

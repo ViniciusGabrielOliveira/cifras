@@ -1,0 +1,247 @@
+{
+  "id": "cordeiro-de-deus-iii",
+  "titulo": "Cordeiro De Deus Iii",
+  "artista": "JOSÉ CANDIDO DA SILVA",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MU-UN--DO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 47,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE, TENDE PIEDADE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA--DE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MU-UN--DO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 47,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE, TENDE PIEDADE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA--DE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MU-UN--DO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 47,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A PAZ, DAÍ-NOS A PAZ, DAÍ-NOS A PAZ SENHOR...",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "A VOS-SA PAZ",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

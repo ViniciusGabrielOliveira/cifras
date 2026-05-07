@@ -1,0 +1,171 @@
+{
+  "id": "cordeiro-de-deus-douglas-freire",
+  "titulo": "Cordeiro",
+  "artista": "DOUGLAS FREIRE",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Am/G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS! TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F/D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Am/G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS! TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F/D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F/D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A  PAZ!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

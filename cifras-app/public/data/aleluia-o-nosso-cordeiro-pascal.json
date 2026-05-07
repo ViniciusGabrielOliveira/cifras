@@ -1,0 +1,378 @@
+{
+  "id": "aleluia-o-nosso-cordeiro-pascal",
+  "titulo": "Aleluia",
+  "artista": "O Nosso Cordeiro Pascal - Frei Fabreti",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LECIONÁRIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Domingo da Páscoa - Ano A, B e C (Missa do Dia):",
+          "acordes": []
+        },
+        {
+          "letra": "O NOSSO CORDEIRO PASCAL JESUS CRISTO JÁ FOI IMOLADO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "CELEBREMOS, ASSIM, ESTA FESTA NA SINCERIDADE E VERDADE.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "2º domingo da Páscoa - Ano A, B e C:",
+          "acordes": []
+        },
+        {
+          "letra": "ACREDITASTES, TOMÉ, PORQUE ME VISTE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZES OS QUE CRERAM SEM TER VISTO!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "3º domingo da Páscoa - Ano A, B e C:",
+          "acordes": []
+        },
+        {
+          "letra": "SENHOR JESUS REVELAI-NOS O SENTIDO DA ESCRITURA;",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI O NOSSO CORAÇÃO ARDER, QUANDO NOS FALARDES.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "4º domingo da Páscoa - Ano A, B e C:",
+          "acordes": []
+        },
+        {
+          "letra": "EU SOU O BOM PASTOR, DIZ O SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "EU CONHEÇO AS MINHAS OVELHAS E ELAS ME CONHECEM A MIM.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "5º domingo da Páscoa - Ano A, B e C:",
+          "acordes": []
+        },
+        {
+          "letra": "FICAI EM MIM E EU EM VÓS HEI DE FICAR, DIZ O SENHOR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM EM MIM PERMANECE, ESSE DÁ MUITO FRUTO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "6º domingo da Páscoa - Ano A, B e C:",
+          "acordes": []
+        },
+        {
+          "letra": "QUEM ME AMA REALMENTE GUARDARÁ MINHA PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "E MEU PAI O AMARÁ, E A ELE NÓS VIREMOS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "Domingo da Ascensão do Senhor:",
+          "acordes": []
+        },
+        {
+          "letra": "IDE AO MUNDO, ENSINAI AOS POVOS TODOS:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "CONVOSCO ESTAREI TODOS OS DIAS, ATÉ O FIM DOS SÉCULOS DIZ JESUS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 46,
+              "acorde": "G"
+            },
+            {
+              "posicao": 60,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "Domingo de Pentecostes - Ano A, B e C (Missa da Vigília e Missa do dia)",
+          "acordes": []
+        },
+        {
+          "letra": "VINDE ESPÍRITO DIVINO E ENCHEI COM VOSSOS DONS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "OS CORAÇÕES DOS FIÉIS E ACENDEI NELES O AMOR COMO FOGO ABRASADOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 61,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

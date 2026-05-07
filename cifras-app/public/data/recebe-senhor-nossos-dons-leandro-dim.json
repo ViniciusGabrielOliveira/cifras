@@ -1,0 +1,265 @@
+{
+  "id": "recebe-senhor-nossos-dons-leandro-dim",
+  "titulo": "Recebe Senhor Nossos Dons",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NOVO DIA A SURGIR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "NOVA VIDA A VIVER",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G#m7"
+            }
+          ]
+        },
+        {
+          "letra": "OFERTAR A DEUS CADA AMANHECER,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO ENTRE--GAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "NA TERRA A SEMENTE MORRERÁ,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DA MORTE A VIDA, BROTARÁ",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G#m7"
+            }
+          ]
+        },
+        {
+          "letra": "DO NOSSO TRABALHO SE COLHERÁ,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "DONS A OFER--TAR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

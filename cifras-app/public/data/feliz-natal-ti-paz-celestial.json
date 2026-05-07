@@ -1,0 +1,150 @@
+{
+  "id": "feliz-natal-ti-paz-celestial",
+  "titulo": "Feliz Natal Sobre Ti A Paz Celestial",
+  "artista": "JOSÉ ACÁCIO SANTANA",
+  "tom": "Bb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "JOSÉ ACÁCIO SANTANA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A LEMBRANÇA DO NATAL DO NOSSO DEUS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "SEJA A BÊNÇÃO PARA TI  E PARA OS TEUS (BIS).",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZ NATAL! FELIZ NATAL! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A FORÇA DO MENINO DE BELÉM",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "ORIENTE SUA VIDA PARA O BEM (BIS)",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "FELIZ NATAL! FELIZ NATAL! (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

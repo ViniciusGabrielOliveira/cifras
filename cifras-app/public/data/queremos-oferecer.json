@@ -1,0 +1,332 @@
+{
+  "id": "queremos-oferecer",
+  "titulo": "Queremos Oferecer",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. O ANSEIO DE LANÇAR AS REDES, QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            },
+            {
+              "posicao": 42,
+              "acorde": "E"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O MEDO DAS ÁGUAS PROFUNDAS, QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "O ESFORÇO DE NOSSAS LABUTAS, QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 43,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "OS PASSOS DE NOSSAS LUTAS, QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. A BARCA QUE FICOU NA PRAIA QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "E"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "AS REDES JOGADAS NO CHÃO QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "O NOSSO VACILANTE “SIM” QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "MESMO QUE PAREÇA EM VÃO QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. OS PEIXES QUE NÓS PESCAMOS QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "E"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "AS REDES DA TUA GRAÇA QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "A FORÇA QUE NÓS LANÇAMOS QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 39,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "OS FRUTOS QUE ALCANÇAMOS QUEREMOS OFERECER!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

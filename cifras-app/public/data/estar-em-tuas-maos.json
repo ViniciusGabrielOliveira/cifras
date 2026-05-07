@@ -1,0 +1,345 @@
+{
+  "id": "estar-em-tuas-maos",
+  "titulo": "Estar Em Tuas Mãos",
+  "artista": "COM. CATÓLICA SHALOM",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "COM. CATÓLICA SHALOM",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "1. MÃOS NA TERRA E O CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "ALÉM DESTE CÉU,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "E A SEMENTE QUE BROTA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "É UM GERME DE ETERNIDADE",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "VAI BROTANDO, CRESCENDO, ESPERANDO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "É A VIDA QUE VEM DESPONTAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E ESTE TRIGO MADURO,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "A COLHEITA O RECOLHERÁ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. DA VIDEIRA A FLOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO RESTARÁ, PASSARÁ",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "E O FRUTO DA TERRA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "SURGIRÁ, BROTARÁ",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PELA FORÇA DO VENTO, DA CHUVA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E DO SOL QUE TRAZ VIDA E CALOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CADA DIA, CRESCENDO E APRENDENDO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A RECOMEÇAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

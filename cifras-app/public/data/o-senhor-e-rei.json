@@ -1,0 +1,198 @@
+{
+  "id": "o-senhor-e-rei",
+  "titulo": "O Senhor É Rei",
+  "artista": "PE. MARCELO ROSSI",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PE. MARCELO ROSSI",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "1. O SENHOR É REI,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É MEU PASTOR E REI",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É REI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É MEU PASTOR E REI",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR ESTÁ NO CÉU",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR ESTÁ NO MAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA EXTENSÃO DO INFINITO (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. QUANDO EU VACILAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "EU NÃO TEMEREI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "POIS O SENHOR ESTÁ COMIGO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

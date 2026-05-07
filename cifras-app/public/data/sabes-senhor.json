@@ -1,0 +1,241 @@
+{
+  "id": "sabes-senhor",
+  "titulo": "Sabes Senhor",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "1. QUEREMOS NESTA HORA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "DIANTE DOS IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "COMPROMETER A VIDA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCANDO A UNIÃO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "2. SABEMOS QUE É DIFÍCIL,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "OS BENS COMPARTILHAR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "MAS COM A TUA GRAÇA,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUEREMOS DAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "3. OLHANDO O TEU EXEMPLO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, VAMOS SEGUIR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "FAZENDO O BEM A TODOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEM NADA EXIGIR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

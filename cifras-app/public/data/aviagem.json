@@ -1,0 +1,294 @@
+{
+  "id": "aviagem",
+  "titulo": "A Viagem",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. EU VIM DE LONGE PARA ENCONTRAR O MEU CAMINHO",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TINHA UM SORRISO E O SORRISO AINDA VALIA",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ACHEI DIFÍCIL A VIAGEM ATÉ AQUI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "MAS EU CHEGUEI, MAS EU CHEGUEI.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. EU VIM DEPRESSA EU NÃO VIM DE CAMINHÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EU VIM A JATO NESTE ASFALTO E NESTE CHÃO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ACHEI DIFÍCIL A VIAGEM ATÉ AQUI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "MAS EU CHEGUEI, MAS EU CHEGUEI",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. EU VIM POR CAUSA DAQUILO QUE NÃO SE VÊ",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VIM NU DESCALÇO SEM DINHEIRO E O PIOR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ACHEI DIFÍCIL A VIAGEM ATÉ AQUI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "MAS EU CHEGUEI, MAS EU CHEGUEI",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "4. EU TIVE AJUDA DE QUEM VOCÊ NÃO ACREDITA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TIVE A ESPERANÇA DE CHEGAR ATÉ AQUI",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VIM CAMINHANDO AQUI ESTOU ME DECIDI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EU VOU FICAR, EU VOU FICAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

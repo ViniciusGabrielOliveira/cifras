@@ -1,0 +1,106 @@
+{
+  "id": "santo-fatima-souza",
+  "titulo": "Santo",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM A VOSSA GLÓRIA (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A/B"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A/B"
+            },
+            {
+              "posicao": 47,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "2. BENDITO O QUE VEM, EM NOME DO SENHOR! (BIS)",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bm7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

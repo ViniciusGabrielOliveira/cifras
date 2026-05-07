@@ -1,0 +1,96 @@
+{
+  "id": "aleluia-o-nosso-cordeiro-pascal-cantos-liturgicos",
+  "titulo": "Aleluia",
+  "artista": "O Nosso Cordeiro Pascal",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "FABRETTI, OFM",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O NOSSO CORDEIRO PASCAL,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO, JÁ FOI IMOLADO.",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CELEBREMOS, ASSIM, ESTA FESTA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA SINCERIDADE E VERDADE.",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

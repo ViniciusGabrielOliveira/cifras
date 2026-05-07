@@ -1,0 +1,499 @@
+{
+  "id": "aceita-senhor-com-prazer",
+  "titulo": "Aceita Senhor Com Prazer",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. QUE TE OUÇA O ETERNO EM TUA AFLIÇÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PROTEJA-TE O NOME DO DEUS DA NAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DO SEU SANTUÁRIO TE MANDE UM AUXÍLIO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E, DESDE SIÃO, TE SEJA UM ARRIMO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. SIM, TUDO O QUE ESTÁS A LHE OFERECER",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBA ELE AGORA COM TODO PRAZER!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDA AOS DESEJOS DO TEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CONCEDA A TEUS SONHOS REALIZAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. POSSAMOS, ASSIM, CANTAR TUA VITÓRIA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E ALÇAR, EM SEU NOME, BANDEIRAS DE GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "AGORA EU SEI: O ETERNO LIBERTA!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E O SEU CONSAGRADO QUEM SALVA É SUA DESTRA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "4. CONFIAM NOS CARROS OU ENTÃO NOS CAVALOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "MAS NÓS NO ETERNO É QUE CONFIAMOS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ENQUANTO UNS FRACASSAM, NÓS FIRMES ESTAMOS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "AO CRISTO, A VITÓRIA! E OUVIDOS SEJAMOS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 46,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

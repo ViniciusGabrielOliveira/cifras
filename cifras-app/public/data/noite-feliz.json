@@ -1,0 +1,293 @@
+{
+  "id": "noite-feliz",
+  "titulo": "Noite Feliz",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "NOITE FELIZ, NOITE FELIZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, DEUS DE AMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POBREZINHO NASCEU EM BELÉM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EIS NA LAPA JESUS, NOSSO BEM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE FELIZ, NOITE FELIZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "Ó JESUS, DEUS DA LUZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "QUÃO AFÁVEL É TEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE QUISESTE NASCER NOSSO IRMÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE FELIZ, NOITE FELIZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EIS QUE NO AR VEM CANTAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "AOS PASTORES, OS ANJOS NO CÉU",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "ANUNCIANDO A CHEGADA DE DEUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE FELIZ, NOITE FELIZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, DEUS DE AMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "POBREZINHO NASCEU EM BELÉM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EIS NA LAPA JESUS, NOSSO BEM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

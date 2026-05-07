@@ -1,0 +1,375 @@
+{
+  "id": "da-cepa-brotou-rama",
+  "titulo": "Da Cepa Brotou A Rama",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "1. O ESPÍRITO DE DEUS SOBRE ELE POUSARÁ,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DE SABER, DE ENTENDIMENTO ESTE ESPÍRITO SERÁ.",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DE CONSELHO E FORTALEZA, DE CIÊNCIA E DE TEMOR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ACHARÁ SUA ALEGRIA NO TEMOR DO SEU SENHOR.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "2. NÃO SERÁ PELA ILUSÃO DO OLHAR, DO OUVIR FALAR,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ELE IRÁ JULGAR OS HOMENS, COMO É PRAXE ACONTECER...",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 48,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "MAS OS POBRES DESTA TERRA COM JUSTIÇA JULGARÁ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E DOS FRACOS O DIREITO ELE É QUEM DEFENDERÁ",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "3. A PALAVRA DE SUA BOCA FERIRÁ O VIOLENTO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E O SOPRO DE SEUS LÁBIOS MATARÁ O AVARENTO...",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "A JUSTIÇA É O CINTO QUE CIRCUNDA A SUA CINTURA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E O MANTO DA LEALDADE É A SUA VESTIDURA",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "4. NESTE DIA, NESTE DIA, O INCRÍVEL,VERDADEIRO,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COISA QUE NUNCA SE VIU, MORAR LOBO COM CORDEIRO...",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "A COMER DO MESMO PASTO, TIGRE, BOI, BURRO E LEÃO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 46,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "POR UM MENINO GUIADOS, SE CONFRATERNIZARÃO.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

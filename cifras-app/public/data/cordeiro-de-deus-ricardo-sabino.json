@@ -1,0 +1,196 @@
+{
+  "id": "cordeiro-de-deus-ricardo-sabino",
+  "titulo": "Cordeiro De Deus",
+  "artista": "RICARDO SABINO",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D4"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "F#º Aº Cº",
+          "acordes": []
+        },
+        {
+          "letra": "DAI-NOS A PA-----AZ,",
+          "acordes": []
+        },
+        {
+          "letra": "A VOSSA PAZ,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A VOSSA PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

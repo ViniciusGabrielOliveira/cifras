@@ -1,0 +1,220 @@
+{
+  "id": "aleluia-ao-deus-santo",
+  "titulo": "Aleluia Ao Deus Santo",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO ARDOR DIVINO, O DEUS MENINO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TÃO PEQUENINO, VINDE ACLAMAR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E O NOSSO CANTO, DE PURO ENCANTO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AO DEUS TÃO SANTO, VEM EXALTAR.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A DEUS TÃO TERNO, O DEUS MENINO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVOR ETERNO, CANTAI Ó CÉUS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E O MUNDO ALCANÇA, TODA A ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NO DEUS CRIANÇA, EMANUEL.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

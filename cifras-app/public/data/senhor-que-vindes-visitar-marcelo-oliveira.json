@@ -1,0 +1,222 @@
+{
+  "id": "senhor-que-vindes-visitar-marcelo-oliveira",
+  "titulo": "Senhor, Que Vindes Visitar",
+  "artista": "Marcelo Oliveira - Voz Masculina",
+  "tom": "E9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VINDES VISITAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E9"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSO POVO NA PAZ,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VINDES SALVAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E9"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE ESTAVA PERDIDO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VINDES CRIAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E9"
+            }
+          ]
+        },
+        {
+          "letra": "UM MUNDO NOVO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "id": "teu-povo-senhor",
+  "titulo": "Teu Povo, Senhor",
+  "artista": "RICARDO SABINO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARIA DE FÁTIMA DE OLIVEIRA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/A"
+            }
+          ]
+        },
+        {
+          "letra": "1. PRESENTE NO VINHO E NO PÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TEU CORPO TODO ESTARÁ",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, SENHOR, NÃO TARDES MAIS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "TUA IGREJA ESTÁ A TE ESPERAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/A"
+            }
+          ]
+        },
+        {
+          "letra": "2. VEM SENHOR, MARANATA!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TUA VINDA ESPERAMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TUA FORÇA NOS RENOVA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "VIVENDO ESTE MEMORIAL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/A"
+            }
+          ]
+        },
+        {
+          "letra": "3. VEM SENHOR, EMANUEL!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NO SEIO DA VIRGEM MARIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O VERBO MENINO SE FEZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "E HOJE SE FAZ PÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/A"
+            }
+          ]
+        },
+        {
+          "letra": "4. BELÉM AQUI HOJE SE FAZ",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E O NOSSO CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "É O LUGAR QUE O MENINO DEUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "DESEJA ENTÃO NASCER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

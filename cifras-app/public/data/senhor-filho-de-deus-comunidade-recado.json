@@ -1,0 +1,235 @@
+{
+  "id": "senhor-filho-de-deus-comunidade-recado",
+  "titulo": "Senhor Filho De Deus",
+  "artista": "Comunidade Recado",
+  "tom": "A7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am9"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, FILHO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "QUE, NASCENDO DA VIRGEM MARIA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm/D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "VOS  FIZESTES NOSSO IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m7/E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, FILHO DO HOMEM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "QUE CONHECEIS E COMPREENDEIS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm/D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "TODA A NOSSA  FRAQUEZA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F#m7/E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, FILHO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "PRIMOGÊNITO DO PAI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm/D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE FAZEIS DE NÓS UMA SÓ FAMÍLIA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#m7/E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B/D#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

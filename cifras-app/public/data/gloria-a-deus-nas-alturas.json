@@ -1,0 +1,223 @@
+{
+  "id": "gloria-a-deus-nas-alturas",
+  "titulo": "Gloria A Deus Nas Alturas",
+  "artista": "ELIANA RIBEIRO",
+  "tom": "D9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ELIANA RIBEIRO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/C"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA A DEUS NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "E PAZ NA TERRA AOS HOMENS POR ELE AMADOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR DEUS, REI DOS CÉUS, DEUS PAI TODO PODEROSO",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR JESUS CRISTO, FILHO UNIGÊNITO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR DEUS, CORDEIRO DE DEUS, FILHO DE DEUS PAI",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI A NOSSA SÚPLICA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE ESTAIS À DIREITA DO PAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D9"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

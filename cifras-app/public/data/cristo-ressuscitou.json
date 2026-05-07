@@ -1,0 +1,303 @@
+{
+  "id": "cristo-ressuscitou",
+  "titulo": "Cristo Ressuscitou",
+  "artista": "SÉCULO XII",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "REGINALDO VELOSO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO RESSUS-CI-TOU,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "O SERTÃO SE ABRIU EM FLOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DA PEDRA ÁGUA SA-IU,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ERA NOITE E O SOL SURGIU,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA AO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "1. VOCÊS QUE TRISTES ESTÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "QUE GEMEM SOB A  DOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA DOR DE SUA PAIXÃO,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS SE IRMANOU.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. VOCÊS QUE POBRES SÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TEMEM O  OPRESSOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "POR SUA RESSURREIÇÃO,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS NOS LIVROU.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

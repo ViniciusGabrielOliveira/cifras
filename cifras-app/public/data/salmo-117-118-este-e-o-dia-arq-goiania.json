@@ -1,0 +1,257 @@
+{
+  "id": "salmo-117-118-este-e-o-dia-arq-goiania",
+  "titulo": "Salmo 117",
+  "artista": "Este É O Dia Que O Senhor Fez Para Nós: Alegremo-Nos E Nele Exultemos!",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "IR. MIRIA T. KOLLING",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, PORQUE ELE É BOM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "A CASA DE ISRAEL AGORA O DIGA:",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "“ETERNA É A SUA MISERICÓRDIA!”",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. A MÃO DIREITA DO SENHOR FEZ MARAVILHAS,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO MORREREI, MAS AO CONTRÁRIO, VIVEREI",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. A PEDRA QUE OS PEDREIROS REJEITARAM,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "TORNOU-SE AGORA A PEDRA ANGULAR.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PELO SENHOR É QUE FOI FEITO TUDO ISSO:",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MARAVILHAS ELE FEZ A NOSSOS OLHOS!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

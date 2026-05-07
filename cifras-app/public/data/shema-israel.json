@@ -1,0 +1,182 @@
+{
+  "id": "shema-israel",
+  "titulo": "Shemá Israel",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SHEMÁ ISRAEL",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ADONAI ELOHENU",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ADONAI EHA (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SHEMÁ ISRAEL",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ADONAI ELOHENU",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ADONAI EHA (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ESCUTA ISRAEL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É NOSSO DEUS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM É O SENHOR (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ESCUTA ISRAEL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR É NOSSO DEUS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "UM É O SENHOR (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 5,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

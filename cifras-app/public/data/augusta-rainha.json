@@ -1,0 +1,408 @@
+{
+  "id": "augusta-rainha",
+  "titulo": "Augusta Rainha",
+  "artista": "ALINE BRASIL",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ALINE BRASIL",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "Ó AUGUSTA RAINHA DO CÉU,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SOBERANA DOS ANJOS",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBESTES DE DEUS O PODER",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E A MISSÃO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DE PISAR A CABEÇA DO MAL",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO ROGAMOS A VÓS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ENVIEIS O EXÉRCITO CELESTE",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARA NOS AJUDAR.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "Ó AUGUSTA RAINHA DO CÉU,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SOBERANA DOS ANJOS",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBESTES DE DEUS O PODER",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E A MISSÃO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DE PISAR A CABEÇA DO MAL",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO ROGAMOS A VÓS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ENVIEIS O EXÉRCITO CELESTE",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "PARA NOS AJUDAR.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PERSEGUINDO OS DEMÔNIOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "COMBATENDO TODOS ELES",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "REPRIMINDO SUA AUDÁCIA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "PRECIPITANDO NO ABISMO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

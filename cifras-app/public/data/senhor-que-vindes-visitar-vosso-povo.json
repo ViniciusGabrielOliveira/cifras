@@ -1,0 +1,281 @@
+{
+  "id": "senhor-que-vindes-visitar-vosso-povo",
+  "titulo": "Senhor, Que Vindes Visitar Vosso Povo",
+  "artista": "Edson Lopes",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE VINDES VISITAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSO POVO NA PAZ,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE  ELEISON! KYRIE ELE--E---I--SON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VINDES SALVAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE ESTAVA PERDIDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE ELEISON! CHRISTE ELE--E---I--SON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VINDES CRIAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "UM MUNDO NOVO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE  ELEISON! KYRIE ELE--E---I--SON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

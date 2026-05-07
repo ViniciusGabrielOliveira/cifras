@@ -1,0 +1,278 @@
+{
+  "id": "cordeiro-de-deus-leandro-dim",
+  "titulo": "Cordeiro De Deus",
+  "artista": "LEANDRO DIM",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LEANDRO DIM",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A     PAZ, DAI-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A9/C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A VOSSA, A  VOSSA PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A     PAZ, DAI-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A9/C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A VOSSA, A VOSSA PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

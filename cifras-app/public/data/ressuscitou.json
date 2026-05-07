@@ -1,0 +1,178 @@
+{
+  "id": "ressuscitou",
+  "titulo": "Ressuscitou, Ressuscitou, Ressuscitou! Aleluia!",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. Ó MORTE, ONDE ESTÁS, Ó MORTE?",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM ÉS TU Ó MORTE?",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUAL A TUA VITÓRIA?",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. ALEGRIA, IRMÃOS ALEGRIA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS HOJE CANTAMOS:",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR RESSURGIU!",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. COM CRISTO, NÓS RESSUSCITAMOS,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTOS PROCLAMAMOS:",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR NOS SALVOU!",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

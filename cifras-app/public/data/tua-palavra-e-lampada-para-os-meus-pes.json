@@ -1,0 +1,143 @@
+{
+  "id": "tua-palavra-e-lampada-para-os-meus-pes",
+  "titulo": "Tua Palavra É Lâmpada Para Os Meus Pés",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TUA PALAVRA É LÂMPADA PARA MEUS PÉS SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "LÂMPADA PARA MEUS PÉS, SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A/G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "LUZ PARA O MEU CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "LÂMPADA PARA OS MEUS PÉS, SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A/G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "LUZ PARA O MEU CAMINHO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

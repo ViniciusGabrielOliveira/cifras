@@ -1,0 +1,143 @@
+{
+  "id": "eis-que-faco-todas-as-coisas",
+  "titulo": "Eis Que Faço Novas Todas As Coisas",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "É VIDA QUE BROTA DA VIDA, É FRUTO QUE CRESCE DO AMOR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "É VIDA QUE VENCE A MORTE, É VIDA QUE VEM DO SENHOR.(BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXEI O SEPULCRO VAZIO, A MORTE NÃO ME SEGUROU.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "A  PEDRA QUE ENTÃO ME PRENDIA NO TERCEIRO DIA ROLOU.(BIS)",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "EU HOJE LHE DOU VIDA NOVA, RENOVO EM TI O AMOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "LHE DOU UMA NOVA ESPERANÇA, TUDO O QUE ERA VELHO PASSOU.(BIS)",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C9"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

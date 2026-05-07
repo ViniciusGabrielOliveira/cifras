@@ -1,0 +1,208 @@
+{
+  "id": "alma-de-cristo-marcelo-oliveira",
+  "titulo": "Alma De Cristo",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARCELO OLIVEIRA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ALMA DE CRISTO, SANTIFICAI-ME",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "CORPO DE CRISTO, SALVAI-ME",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SANGUE DE CRISTO, INEBRIAI-ME",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ÁGUA DO LADO DE CRISTO, LAVAI-ME",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PAIXÃO DE CRISTO, CONFORTAI-ME",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "Ó BOM JESUS, OUVI-ME.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DENTRO DE VOSSAS CHAGAS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ESCONDEI--ME",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO PERMITAIS QUE EU ME SEPARE DE VÓS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DO ESPÍRITO MALIGNO, DEFENDEI-ME",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA HORA DA MORTE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CHAMAI--ME",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E MANDAI-ME IR PARA VÓS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

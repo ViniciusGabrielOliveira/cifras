@@ -1,0 +1,155 @@
+{
+  "id": "senhor-nossa-paz-tende",
+  "titulo": "Senhor Nossa Paz",
+  "artista": "Leandro Evaristo",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR,    NOSSA PAZ, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO,    NOSSA PÁSCOA, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR,     NOSSA VIDA, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

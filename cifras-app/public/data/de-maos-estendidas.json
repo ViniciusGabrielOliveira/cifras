@@ -1,0 +1,269 @@
+{
+  "id": "de-maos-estendidas",
+  "titulo": "De Mãos Estendidas",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "IRMÃ SALETE",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "DE MÃOS ESTENDIDAS, OFERTAMOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE DE GRAÇA RECEBEMOS. (BIS)",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A NATUREZA TÃO BELA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE É LOUVOR, QUE É SERVIÇO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O SOL QUE ILUMINA AS TREVAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "TRANSFORMANDO-AS EM LUZ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O DIA QUE NOS TRAZ O PÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E A NOITE QUE NOS DÁ REPOUSO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "OFERTAMOS AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O LOUVOR DA CRIAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "NOSSA VIDA TODA INTEIRA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "OFERTAMOS AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "COMO PROVA DE AMIZADE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "COMO PROVA DE AMOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "COM O VINHO E COM O PÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "OFERTAMOS AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA TODA INTEIRA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O LOUVOR DA CRIAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

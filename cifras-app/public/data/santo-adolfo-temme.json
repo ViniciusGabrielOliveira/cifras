@@ -1,0 +1,175 @@
+{
+  "id": "santo-adolfo-temme",
+  "titulo": "Santo",
+  "artista": "FREI ADOLFO TEMME",
+  "tom": "Bm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "SANTO, SANTO, SANTO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM A VOSSA GLÓRIA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HO---SANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "BEN--DITO O QUE VEM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HO---SANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "HO-SANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

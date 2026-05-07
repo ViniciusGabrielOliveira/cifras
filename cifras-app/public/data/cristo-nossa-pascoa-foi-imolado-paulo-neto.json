@@ -1,0 +1,309 @@
+{
+  "id": "cristo-nossa-pascoa-foi-imolado-paulo-neto",
+  "titulo": "Cristo Nossa Páscoa, Foi Imolado",
+  "artista": "Paulo Neto",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANTÍFONA DE COMUNHÃO - MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. LOUVAI O SENHOR DEUS, PORQUE ELE É BOM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "CANTAI AO NOSSO DEUS, PORQUE É SUAVE:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É DIGNO DE LOUVOR, ELE O MERECE!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. O SENHOR RECONSTRUIU JERUSALÉM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E OS DISPERSOS DE ISRAEL JUNTOU DE NOVO;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ELE CONFORTA OS CORAÇÕES DESPEDAÇADOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ELE ENFAIXA SUAS FERIDAS E AS CURA;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "FIXA O NÚMERO DE TODAS AS ESTRELAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E CHAMA A CADA UMA POR SEU NOME.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. É GRANDE E ONIPOTENTE O NOSSO DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SEU SABER NÃO TEM MEDIDA NEM LIMITES.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR DEUS É O AMPARO DOS HUMILDES,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MAS DOBRA ATÉ O CHÃO OS QUE SÃO ÍMPIOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ENTOAI, CANTAI A DEUS AÇÃO DE GRAÇAS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TOCAI PARA O SENHOR EM VOSSAS HARPAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "4. ELE REVESTE TODO O CÉU COM DENSAS NUVENS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E A CHUVA PARA A TERRA ELE PREPARA;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "FAZ CRESCER A VERDE RELVA SOBRE OS MONTES",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E AS PLANTAS QUE SÃO ÚTEIS PARA O HOMEM;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

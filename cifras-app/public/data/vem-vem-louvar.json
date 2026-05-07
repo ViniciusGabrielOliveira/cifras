@@ -1,0 +1,458 @@
+{
+  "id": "vem-vem-louvar",
+  "titulo": "Vem, Vem Louvar",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "VEM, VEM LOUVAR, ENCHER ESSE LUGAR DE GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ENCHER ESSE LUGAR DE GLÓRIA, COM A GLÓRIA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 48,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, VEM LOUVAR, ENCHER ESSE LUGAR DE GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ENCHER ESSE LUGAR DE GLÓRIA, COM A GLÓRIA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "G"
+            },
+            {
+              "posicao": 49,
+              "acorde": "C"
+            },
+            {
+              "posicao": 54,
+              "acorde": "F"
+            },
+            {
+              "posicao": 58,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO DEUS ENVIA O SEU ESPÍRITO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NOS CONDUZ À FÉ E NOS FAZ CANTAR O SEU LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SEU AMOR EM CADA CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NOS GARANTE A PAZ E NOS FAZ CANTAR O SEU LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            },
+            {
+              "posicao": 45,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "(CANTE FORTE AO SENHOR)",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "É TÃO BOM ESTAR NESTE LUGAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "DE ALEGRIA E PAZ QUE NOS FAZ CANTAR O SEU LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            },
+            {
+              "posicao": 46,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "EU TAMBÉM SOU TEMPLO DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E O MEU CORAÇÃO VAI CANTAR PRA SEMPRE O SEU LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 41,
+              "acorde": "G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "(CANTE A GLÓRIA DO SENHOR)",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, VEM LOUVAR, ENCHER ESSE LUGAR DE GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ENCHER ESSE LUGAR DE GLÓRIA, COM A GLÓRIA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 48,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, VEM LOUVAR, ENCHER ESSE LUGAR DE GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ENCHER ESSE LUGAR DE GLÓRIA, COM A GLÓRIA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "G"
+            },
+            {
+              "posicao": 49,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COM A GLÓRIA DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

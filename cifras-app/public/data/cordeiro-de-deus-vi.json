@@ -1,0 +1,160 @@
+{
+  "id": "cordeiro-de-deus-vi",
+  "titulo": "Cordeiro De Deus Vi",
+  "artista": "GERALDO LEITE BASTOS",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 46,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am6"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A PAZ! DAÍ-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am9"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

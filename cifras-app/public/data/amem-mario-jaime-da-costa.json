@@ -1,0 +1,113 @@
+{
+  "id": "amem-mario-jaime-da-costa",
+  "titulo": "Amém",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "AMÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "A - A- MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A - A -    A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bbm/Db"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F/C"
+            }
+          ]
+        },
+        {
+          "letra": "A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

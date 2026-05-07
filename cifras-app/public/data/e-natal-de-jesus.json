@@ -1,0 +1,229 @@
+{
+  "id": "e-natal-de-jesus",
+  "titulo": "É Natal De Jesus",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. TODA TERRA CANTA UM HINO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "BENDIZENDO O SALVADOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EM BELÉM SE FEZ MENINO",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "DANDO EXEMPLOS DE AMOR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. UMA ESTRELA DIFERENTE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "TODA TERRA ILUMINOU",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "FOI JESUS QUE HUMANAMENTE",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A NÓS TODOS SE IGUALOU",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. NASCEU POBRE SEM PALÁCIO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ESTE REI QUE O TROUXE O BEM",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUIS APENAS ENSINAR-NOS",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A MENSAGEM DE BELÉM.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

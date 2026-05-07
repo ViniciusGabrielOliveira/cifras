@@ -1,0 +1,387 @@
+{
+  "id": "es-razao-jornada",
+  "titulo": "Tu És A Razão Da Jornada",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "UM DIA ESCUTEI TEU CHAMADO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DIVINO RECADO BATENDO NO CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DEIXEI DESTE MUNDO AS PROMESSAS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E FUI BEM DEPRESSA NO RUMO DA TUA MÃO.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A RAZÃO DA JORNADA,",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS MINHA ESTRADA, MEU GUIA, MEU FIM.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO GRITO QUE VEM DO TEU POVO,",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TE ESCUTO DE NOVO, CHAMANDO POR MIM.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "OS ANOS PASSARAM LIGEIRO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ME FIZ UM OBREIRO DO REINO DE PAZ E AMOR.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NOS MARES DO MUNDO NAVEGO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E ÀS REDES ME ENTREGO,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TORNEI-ME TEU PESCADOR.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A RAZÃO DA JORNADA,",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS MINHA ESTRADA, MEU GUIA, MEU FIM.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO GRITO QUE VEM DO TEU POVO,",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TE ESCUTO DE NOVO, CHAMANDO POR MIM.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EMBORA TÃO FRACO E PEQUENO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CAMINHO SERENO COM A FORÇA QUE VEM DE TI.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "A CADA MOMENTO QUE PASSA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "REVIVO ESTA GRAÇA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DE SER TEU SINAL AQUI.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A RAZÃO DA JORNADA,",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS MINHA ESTRADA, MEU GUIA, MEU FIM.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NO GRITO QUE VEM DO TEU POVO,",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TE ESCUTO DE NOVO, CHAMANDO POR MIM.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

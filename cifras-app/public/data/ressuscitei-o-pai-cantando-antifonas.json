@@ -1,0 +1,120 @@
+{
+  "id": "ressuscitei-o-pai-cantando-antifonas",
+  "titulo": "Ressuscitei, Ó Pai!",
+  "artista": "Ruzye",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "RUZYE (CANTANDO ANTÍFONAS)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, VÓS ME SONDAIS E CONHECEIS,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, VÓS ME SONDAIS E CONHECEIS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. SABEIS QUANDO ME SENTO OU ME LEVANTO;",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DE LONGE PENETRAIS MEUS PENSAMENTOS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

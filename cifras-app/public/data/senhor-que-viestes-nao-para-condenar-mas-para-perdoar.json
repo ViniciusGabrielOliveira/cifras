@@ -1,0 +1,218 @@
+{
+  "id": "senhor-que-viestes-nao-para-condenar-mas-para-perdoar",
+  "titulo": "Senhor, Que Viestes Não Para Condenar",
+  "artista": "Leandro Evaristo",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE VIESTES NÃO PARA CONDENAR, MAS PARA PERDOAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            },
+            {
+              "posicao": 51,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "KYRI-E   ELE-EISON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VOS ALEGRAIS PELO PECADOR ARREPENDIDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            },
+            {
+              "posicao": 45,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CHRIS-TE  ELE-EISON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE MUITO PERDOAIS A QUEM MUITO AMA (A QUEM MUITO AMA),",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            },
+            {
+              "posicao": 58,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "KYRI-E   ELE-EISON!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "id": "somos-todos-convidados",
+  "titulo": "Somos Todos Convidados",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "1. SOMOS TODOS CONVIDADOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A CEIA DO CORDEIRO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NESTE MUNDO IMOLADO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DOS VIVENTES É O PRIMEIRO!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO SEJAMOS SEPARADOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DO AMOR QUE AO MUNDO VEIO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "2. EXALTADO NO CALVÁRIO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR ABRIU CAMINHO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ELEGENDO A SANTUÁRIO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O HUMANO PEREGRINO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O SEU REINO É CONTRÁRIO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM NEGA O PEQUENINO!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "3. O SENHOR A CADA DIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "VEM ABRIR-NOS OS OUVIDOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "COM A PALAVRA QUE NOS GUIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E DÁ FORÇA AO ABATIDO:",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "É CONVITE DE OUSADIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "FRENTE À MORTE E AO PERIGO.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "4. O SENHOR É A NOSSA ESTRADA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "SALVAÇÃO AO MUNDO INTEIRO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "COMUNHÃO QUE NOS ABRAÇA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSO FIM E PARADEIRO!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "É O AMOR QUE NUNCA PASSA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "LUZ QUE BRILHA AO CAMINHEIRO!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "5. DO DEUS VIVO E VERDADEIRO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBEMOS PLENA VIDA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PRA VIVERMOS, PIONEIROS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "LIBERDADE, A MAIS QUERIDA:",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EIS O SONHO QUE É PRIMEIRO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DESDE A HISTÓRIA MAIS ANTIGA.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "6. DO TRIUNFO SOBRE A MORTE",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS FAZEMOS A MEMÓRIA:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MAIS QUE A CRUZ, O CRISTO É FORTE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E CONQUISTA A VITÓRIA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DO SEU POVO É O NORTE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR DE TODA A HISTÓRIA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

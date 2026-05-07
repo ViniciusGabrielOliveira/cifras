@@ -1,0 +1,197 @@
+{
+  "id": "kyrie-eleison-senhor-que-sois-a-plenitude",
+  "titulo": "Senhor Que Sois A Plenitude",
+  "artista": "Adario Cangiani",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE SOIS A PLENITUDE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DA VERDADE E DA GRAÇA,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE, KYRIE, KYRIE ELEI--SON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VOS TORNASTES",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "POBRE PARA NOS ENRIQUECER,",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE, CHRISTE, CHRISTE ELEI--SON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VIESTES PARA FAZER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DE NÓS O VOSSO POVO SANTO,",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE, KYRIE, KYRIE ELEI--SON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

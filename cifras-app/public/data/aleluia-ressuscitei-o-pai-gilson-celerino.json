@@ -1,0 +1,605 @@
+{
+  "id": "aleluia-ressuscitei-o-pai-gilson-celerino",
+  "titulo": "Aleluia, Ressuscitei, Ó Pai",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "1. ÀS NÚPCIAS DO CORDEIRO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "EM BRANCAS VESTES VAMOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "TRANSPOSTO O MAR VERMELHO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "AO CRISTO REI CANTAMOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "2. POR NÓS NO ALTAR DA CRUZ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "SEU CORPO  OFERECEU.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "BEBENDO DESTE SANGUE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NASCEMOS PARA DEUS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "3. SEU SANGUE EM NOSSAS PORTAS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "AFASTA ANJO O IRADO.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "DAS MÃOS DUM REI INJUSTO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SEU POVO É LIBERTADO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "4. Ó VÍTIMA VERDADEIRA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "DO INFERNO A PORTA ABRIS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "LIVRAIS O POVO ESCRAVO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DAIS VIDA  AO INFELIZ.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "5. DA MORTE O CRISTO VOLTA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "A VIDA É  SEU TROFÉU.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O INFERNO TRAZ CATIVO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E A TODOS ABRE O CÉU.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "6. JESUS, PASCAL CORDEIRO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "EM VÓS SE ALEGRA O POVO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE, LIVRE PELA GRAÇA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "EM VÓS  NASCEU DE NOVO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "7. A GLÓRIA SEJA AO CRISTO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "DA MORTE   VENCEDOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "AO PAI E AO SANTO ESPÍRITO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "O NOSSO IGUAL LOUVOR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm/A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

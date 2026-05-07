@@ -1,0 +1,282 @@
+{
+  "id": "em-resgate-de-muitos-marcelo-oliveira",
+  "titulo": "Em Resgate De Muitos",
+  "artista": "Marcelo Oliveira",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VIESTES PROCURAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM ESTAVA PERDIDO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE ELEISON, ELEISON, ELEISON.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VIESTE DAR A VIDA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "EM RESGATE DE MUITOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE ELEISON, ELEISON, ELEISON.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE CONGREGAIS NA UNIDADE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "OS VOSSOS FILHOS DISPERSOS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE ELEISON, ELEISON, ELEISON.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

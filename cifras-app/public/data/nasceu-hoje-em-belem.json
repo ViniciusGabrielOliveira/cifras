@@ -1,0 +1,296 @@
+{
+  "id": "nasceu-hoje-em-belem",
+  "titulo": "Nasceu Hoje Em Belém",
+  "artista": "DANIEL DE ANGELES",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "FREI TELLES RAMON",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "1. NESTA NOITE DESPONTOU A GRANDE ESTRELA:",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O CRISTO VERBO ETERNO ENCARNADO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 45,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "2. DE MARIA NOS VEM HOJE A ALEGRIA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TANTO ESPERAMOS COM AMOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "POIS HOJE NOS NASCEU O SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "A"
+            },
+            {
+              "posicao": 50,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "id": "sequencia-pascal-cantai-cristaos-afinal",
+  "titulo": "Cantai Cristãos, Afinal",
+  "artista": "PE JOSÉ WEBER",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LECIONÁRIO",
+  "secoes": [
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "\"SALVE Ó VÍTIMA PASCAL!\"",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO INOCENTE, O CRISTO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ABRIU-NOS DO PAI O APRISCO.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. POR TODA OVELHA IMOLADO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DO MUNDO LAVA O PECADO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DUELAM FORTE E MAIS FORTE:",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "É A VIDA QUE VENCE A MORTE.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. O REI DA VIDA, CATIVO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "FOI MORTO, MAS REINA VIVO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "RESPONDE, POIS, Ó MARIA:",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NO CAMINHO O QUE HAVIA?",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "4. \"VI CRISTO RESSUSCITADO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O TÚMULO ABANDONADO.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OS ANJOS DA COR DO SOL,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DOBRADO NO CHÃO O LENÇOL.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "5. O CRISTO QUE LEVA AOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CAMINHA À FRENTE DOS SEUS!\"",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITOU, DE VERDADE:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "Ó REI, Ó CRISTO, PIEDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

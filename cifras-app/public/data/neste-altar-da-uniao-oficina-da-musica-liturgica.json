@@ -1,0 +1,236 @@
+{
+  "id": "neste-altar-da-uniao-oficina-da-musica-liturgica",
+  "titulo": "Neste Altar Da União",
+  "artista": "FR. WANDERSON LUIZ FREITAS, OCARM.",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "FR. JOSÉ MOACYR CADENASSI, OFMCAP.",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. NESTE ALTAR DA UNIÃO,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "O AMOR EM PROFUSÃO:",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "EIS O DOM UNIVERSAL",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "EM SOLENE TOM PASCAL!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. PELO ÊXODO PASCAL,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A VITÓRIA SOBRE O MAL:",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "É O SENHOR QUE NOS SUSTÉM",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "NO COMBATE PARA O BEM!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. TRIUNFANTE É JESUS,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "O VIVENTE PELA CRUZ:",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA E SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A FELIZ RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

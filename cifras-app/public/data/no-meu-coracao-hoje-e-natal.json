@@ -1,0 +1,493 @@
+{
+  "id": "no-meu-coracao-hoje-e-natal",
+  "titulo": "No Meu Coração Já É Natal",
+  "artista": "ELIANA RIBEIRO",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ELIANA RIBEIRO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "A ESTRELA CRUZA O CÉU PRA NOS ORIENTAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CHEGOU A NOSSA SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA GRUTA DE BELÉM E NO MEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS MENINO VAI NASCER!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "ENFEITES COLORIDOS LUZES DE NATAL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "REFLETEM O AMOR DE DEUS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DEU SEU FILHO ÚNICO PRA NOS SALVAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "MENI-NO JESUS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 1,
+              "acorde": "E"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "A ESTRELA CRUZA O CÉU PRA NOS ORIENTAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CHEGOU A NOSSA SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA GRUTA DE BELÉM E NO MEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS MENINO VAI NASCER!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "ENFEITES COLORIDOS LUZES DE NATAL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "REFLETEM O AMOR DE DEUS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DEU SEU FILHO ÚNICO PRA NOS SALVAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "MENI-NO JESUS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

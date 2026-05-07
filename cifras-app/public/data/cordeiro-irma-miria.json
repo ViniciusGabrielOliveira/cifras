@@ -1,0 +1,241 @@
+{
+  "id": "cordeiro-irma-miria",
+  "titulo": "Cordeiro",
+  "artista": "IRMÃ MIRIA KOLLING",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "Ó TEN-DE, PIEDA-DE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA--DE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "Ó TEN-DE, PIEDA-DE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "Ó DAI-NOS A PA-AZ,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, A VOSSA PA--AZ!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F/C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

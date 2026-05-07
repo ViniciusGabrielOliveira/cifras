@@ -1,0 +1,347 @@
+{
+  "id": "o-vosso-coracao-de-pedra-paulus",
+  "titulo": "O Vosso Coração De Pedra",
+  "artista": "Desconhecido",
+  "tom": "Bm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm/A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. TIRAREI DE VOSSO PEITO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSO CORAÇÃO DE PEDRA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "NO LUGAR COLOCAREI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NOVO CORAÇÃO DE CARNE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. DENTRO EM VÓS EU PLANTAREI,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PLANTAREI O MEU ESPÍRITO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "AMAREIS OS MEUS PRECEITOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEGUIREIS O MEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. DENTRE TODAS AS NAÇÕES,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COM AMOR VOS TIRAREI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUAL PASTOR VOS GUIAREI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A TERRA, A VOSSA PÁTRIA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "4. ESTA TERRA HABITAREIS:",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FOI PRESENTE A VOSSOS PAIS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E SEREIS SEMPRE O MEU POVO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "EU SEREI O VOSSO DEUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

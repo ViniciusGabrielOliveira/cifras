@@ -1,0 +1,95 @@
+{
+  "id": "palavras-que-nao-passam",
+  "titulo": "Palavras Que Não Passam",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "PALAVRAS QUE NÃO PASSAM",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "PALAVRAS QUE LIBERTAM",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PALAVRA PODEROSA TEM TEU CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PALAVRA POR PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "REVELAS O INFINITO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "COMO É BONITO OUVIR TEU CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "id": "noite-linda",
+  "titulo": "Noite Linda",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. NOITE LINDA, NOITE BELA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE TÃO CHEIA DE LUZ",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA NA ...",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. NOITE FEITA DE ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE FEITA SÓ DE AMOR",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA NA ...",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. NOITE FEITA DE BONDADE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOITE DE CLARO ESPLENDOR",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA",
+          "acordes": []
+        },
+        {
+          "letra": "NA NA NA NA ...",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NA NA NA NA NA NA NA NA...",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

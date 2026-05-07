@@ -1,0 +1,338 @@
+{
+  "id": "a-alegria-esta-coracao",
+  "titulo": "A Alegria Está No Coração",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A ALEGRIA ESTÁ NO CORAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "DE QUEM JÁ CONHECE A JESUS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A VERDADEIRA PAZ SÓ TEM AQUELE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "QUE JÁ CONHECE A JESUS.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "O SENTIMENTO MAIS PRECIOSO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE VEM DE NOSSO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "É O AMOR QUE SÓ TEM",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM JÁ CONHECE A JESUS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "POSSO PISAR NUMA TROPA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E SALTAR AS MURALHAS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "POSSO PISAR NUMA TROPA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E SALTAR AS MURALHAS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É A ROCHA DA MINHA SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "COM ELE NÃO HÁ MAIS CONDENAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "POSSO PISAR NUMA TROPA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E SALTAR AS MURALHAS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA, ALELUIA!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "ALALUIA, ALELUIA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA,  ALELUIA.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "O SENTIMENTO MAIS PRECIOSO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE VEM DE NOSSO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "É O AMOR QUE SÓ TEM",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM JÁ CONHECE A JESUS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

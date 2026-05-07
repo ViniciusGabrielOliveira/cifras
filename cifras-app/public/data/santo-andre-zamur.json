@@ -1,0 +1,159 @@
+{
+  "id": "santo-andre-zamur",
+  "titulo": "Santo",
+  "artista": "ANDRÉ ZAMUR",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANDRÉ ZAMUR",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SANTO, SANTO, SANTO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSA GLÓRIA, Ó SENHOR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO AQUELE QUE VEM",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "a-palavra-de-deus-que-gera-a-vida",
+  "titulo": "A Palavra De Deus Que Gera A Vida",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

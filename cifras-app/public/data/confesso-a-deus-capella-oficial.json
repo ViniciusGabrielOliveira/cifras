@@ -1,0 +1,195 @@
+{
+  "id": "confesso-a-deus-capella-oficial",
+  "titulo": "Confesso A Deus",
+  "artista": "Capella Oficial",
+  "tom": "Ab",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO (NOVO MISSAL)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS TODO PODEROSO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "TENHA COMPAIXÃO DE NÓS",
+          "acordes": []
+        },
+        {
+          "letra": "PERDOE OS NOSSO PECADOS",
+          "acordes": []
+        },
+        {
+          "letra": "E NOS CONDUZA A VIDA ETE-ER-NA AMÉM",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDA-DE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDA-DE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

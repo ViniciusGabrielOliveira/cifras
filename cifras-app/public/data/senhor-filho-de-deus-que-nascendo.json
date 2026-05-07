@@ -1,0 +1,187 @@
+{
+  "id": "senhor-filho-de-deus-que-nascendo",
+  "titulo": "Senhor Filho De Deus",
+  "artista": "Leandro Evaristo",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, FILHO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUE NASCENDO DA VIRGEM MARIA,",
+          "acordes": [
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "VOS FIZESTES NOSSO IRMÃO,",
+          "acordes": []
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR      PIEDADE, PIEDADE     DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, FILHO DO HOMEM QUE CONHECEIS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E COMPREENDEIS NOSSA FRAQUEZA,",
+          "acordes": []
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO   PIEDADE, PIEDADE     DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, FILHO PRIMOGÊNITO DO PAI,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE FAZEIS DE NÓS UMA SÓ FAMÍLIA,",
+          "acordes": []
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR      PIEDADE, PIEDADE     DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

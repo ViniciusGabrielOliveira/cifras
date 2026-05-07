@@ -1,0 +1,539 @@
+{
+  "id": "mestre-onde-moras",
+  "titulo": "Mestre, Onde Moras",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "1. NO MEU CORAÇÃO SINTO O CHAMADO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FICO INQUIETO: PRECISO RESPONDER",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ENTÃO PERGUNTO: \"MESTRE, ONDE MORAS?\"",
+          "acordes": [
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E ME RESPONDES QUE PRECISO CAMINHAR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGUINDO TEUS PASSOS, FAZENDO A HISTÓRIA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CONSTRUINDO O NOVO NO MEIO DO POVO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEGUINDO TEUS PASSOS, FAZENDO A HISTÓRIA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CONSTRUINDO O NOVO NO MEIO DO POVO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. TE VEJO EM CADA ROSTO DAS PESSOAS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TUA IMAGEM ME ANIMA E FAZ VIVER.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO CORAÇÃO AMIGO QUE SE DOA,",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NO SONHO DO TEU REINO ACONTECER.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TEU REINO É JUSTIÇA, É PAZ, É MISSÃO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "É A BOA NOVA DA LIBERTAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TEU REINO É JUSTIÇA, É PAZ, É MISSÃO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "É A BOA NOVA DA LIBERTAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. TUA PALAVRA ABRE NOVOS HORIZONTES,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "É CONVITE DE SERVIÇO AOS IRMÃOS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ME CONSAGRA, ME ENVIA A ASSUMIR",
+          "acordes": [
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TEU PROJETO NESTA VIDA, NESTE CHÃO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MEU \"SIM\" É RESPOSTA, É MEU JEITO DE AMAR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ESTAR COM TEU POVO, CONTIGO MORAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MEU \"SIM\" É RESPOSTA, É MEU JEITO DE AMAR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ESTAR COM TEU POVO, CONTIGO MORAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "rainha-do-ceu-alegrai-vos-aleluia",
+  "titulo": "Rainha Do Céu, Alegrai-Vos, Aleluia",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "RAINHA DO CÉU, ALEGRAI-VOS, ALELUIA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "POIS O SENHOR QUE MERECESTES",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "TRAZER EM VOSSO SEI-O, ALELU--IA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITOU, COMO DISSE, ALELUIA;",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ROGAI A DEUS POR NÓS, ALELUIA.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

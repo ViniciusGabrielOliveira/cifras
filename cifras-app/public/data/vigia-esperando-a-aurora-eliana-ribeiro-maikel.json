@@ -1,0 +1,326 @@
+{
+  "id": "vigia-esperando-a-aurora-eliana-ribeiro-maikel",
+  "titulo": "Vigia Esperando A Aurora",
+  "artista": "Desconhecido",
+  "tom": "C#m7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. AO LONGE, UM GALO VAI CANTAR SEU CANTO",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O SOL NO CÉU VAI ESTENDER SEU MANTO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "NA MADRUGADA EU ESTAREI DESPERTO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE JÁ VEM PERTO O DIA DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. A MINHA VOZ VAI ACORDAR MEU POVO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVANDO A DEUS QUE FAZ UM MUNDO NOVO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO VOU LIGAR SE A MADRUGADA É FRIA",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE UM NOVO DIA LOGO VAI CHEGAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. SE É NOITE ESCURA, ACENDO A MINHA TOCHA",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DENTRO DO PEITO O SOL JÁ DE...SABROCHA",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "FILHO DA LUZ, NÃO VOU DORMIR, VIGIO:",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "AO MUNDO FRIO VOU LEVAR O AMOR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 36,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

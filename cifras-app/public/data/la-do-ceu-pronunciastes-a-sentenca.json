@@ -1,0 +1,468 @@
+{
+  "id": "la-do-ceu-pronunciastes-a-sentenca",
+  "titulo": "Lá Do Céu Pronunciastes A Sentença",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "Ab",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "1. EM JUDÁ O SENHOR DEUS É CONHECIDO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "E SEU NOME É GRANDIOSO EM ISRAEL.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "EM SALÉM ELE FIXOU A SUA TENDA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "EM SIÃO EDIFICOU SUA MORADA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "2. E ALI QUEBROU OS ARCOS E AS FLECHAS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "OS ESCUDOS, AS ESPADAS E OUTRAS ARMAS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "RESPLENDENTE E MAJESTOSO APARECEIS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "SOBRE MONTES DE DESPOJOS CONQUISTADOS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "3. DESPOJASTES OS GUERREIROS VALOROSOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE JÁ DORMEM O SEU SONO DERRADEIRO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "INCAPAZES DE APELAR PARA OS SEUS BRAÇOS.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "ANTE AS VOSSAS AMEAÇAS, Ó SENHOR,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "ESTARRECERAM-SE OS CARROS E OS CAVALOS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "4. SOIS TERRÍVEL, REALMENTE, SENHOR DEUS!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "E QUEM PODE RESISTIR À VOSSA IRA?",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "LÁ DO CÉU PRONUNCIASTES A SENTENÇA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "E A TERRA APAVOROU-SE E EMUDECEU,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO DEUS SE LEVANTOU PARA JULGAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "E LIBERTAR OS OPRIMIDOS DESTA TERRA.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "5. MESMO A REVOLTA DOS MORTAIS VOS DARÁ GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "E OS QUE SOBRARAM DO FUROR VOS LOUVARÃO.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "AO VOSSO DEUS FAZEI PROMESSAS E AS CUMPRI;",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE O CERCAIS, TRAZEI OFERTAS AO TERRÍVEL;",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "ELE ESMAGA OS REIS DA TERRA EM SEU ORGULHO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Db"
+            }
+          ]
+        },
+        {
+          "letra": "E FAZ TREMER OS PODEROSOS DESTE MUNDO!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Db"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

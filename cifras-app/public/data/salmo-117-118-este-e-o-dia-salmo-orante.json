@@ -1,0 +1,398 @@
+{
+  "id": "salmo-117-118-este-e-o-dia-salmo-orante",
+  "titulo": "Salmo 117",
+  "artista": "Este É O Dia Que O Senhor Fez Para Nós: Alegremo-Nos E Nele Exultemos!",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LECIONÁRIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, PORQUE ELE É BO----OM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A CASA DE ISRAEL AGORA O DI----GA:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "“ETERNA É A SUA MISERICÓRDIA!”",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. A MÃO DIREITA DO SENHOR FEZ MARAVI----LHAS,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO MORREREI, MAS AO CONTRÁRIO, VIVE--REI",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "3. A PEDRA QUE OS PEDREIROS REJEITA----RAM,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "TORNOU-SE AGORA A PEDRA ANGULAR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "PELO SENHOR É QUE FOI FEITO TUDO  ISSO:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MARAVILHAS ELE FEZ A NOSSOS OLHOS!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

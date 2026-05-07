@@ -1,0 +1,459 @@
+{
+  "id": "fica-conosco-senhor",
+  "titulo": "Fica Conosco, Senhor",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. BENDITO E LOUVADO SEJA DEUS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O PAI DE JESUS CRISTO, SENHOR NOSSO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DO ALTO CÉU NOS ABENÇOOU EM JESUS CRISTO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COM BÊNÇÃO ESPIRITUAL DE TODA SORTE!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. FOI EM CRISTO QUE DEUS PAI NOS ESCOLHEU,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "JÁ BEM ANTES DE O MUNDO SER CRIADO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA QUE FÔSSEMOS, PERANTE A SUA FACE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SEM MÁCULA E SANTOS PELO AMOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. POR LIVRE DECISÃO DE SUA VONTADE,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PREDESTINOU-NOS, ATRAVÉS DE JESUS CRISTO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A SERMOS NELE OS SEUS FILHOS ADOTIVOS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA O LOUVOR E PARA A GLÓRIA DE SUA GRAÇA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EM SEU FILHO BEM-AMADO NOS DOOU.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "4. É NELE QUE NÓS TEMOS REDENÇÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "DOS PECADOS REMISSÃO PELO SEU SANGUE.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SUA GRAÇA TRANSBORDANTE E INESGOTÁVEL",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS DERRAMA SOBRE NÓS COM ABUNDÂNCIA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DE SABER E INTELIGÊNCIA NOS DOTANDO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "5. E ASSIM, ELE NOS DEU A CONHECER",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O MISTÉRIO DE SEU PLANO E SUA VONTADE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE PROPUSERA EM SEU QUERER BENEVOLENTE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NA PLENITUDE DOS TEMPOS REALIZAR:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O DESÍGNIO DE, EM CRISTO, REUNIR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TODAS AS COISAS: AS DA TERRA E AS DO CÉU.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "vou-levar-ronaldo-pelaquim",
+  "titulo": "Vou Levar",
+  "artista": "Desconhecido",
+  "tom": "Bb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "1. SOBRE O ALTAR OFERECEMOS PÃO E O VINHO AO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 48,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "COMO O CRISTO RECEBEU COISAS SIMPLES DO PASTOR!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "2. OS REIS MAGOS LHE TROUXERAM SEUS PRESENTES DE VALOR:",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 51,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENDO IGUAL O CORAÇÃO VALE O REI, VALE O PASTOR!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 48,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

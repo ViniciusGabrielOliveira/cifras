@@ -1,0 +1,200 @@
+{
+  "id": "senhor-que-oferecestes-o-vosso",
+  "titulo": "Senhor Que Oferecestes O Vosso Perdão",
+  "artista": "Leandro Evaristo",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO,",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE OFERECESTE O VOSSO PERDÃO A PEDRO ARREPENDIDO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 56,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE E-LEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE PROMETESTES O PARAÍSO AO BOM LADRÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CHRI-IS-TE E-LEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE ACOLHEIS TODA PESSOA QUE CONFIA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 43,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NA VOSSA MISERICÓRDIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE E-LEI-SON (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

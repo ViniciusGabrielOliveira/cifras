@@ -1,0 +1,445 @@
+{
+  "id": "espera-o-povo-um-menino-grupo-opa",
+  "titulo": "Espera O Povo Um Menino",
+  "artista": "PE. IRALA · LUISINHO VIEIRA",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PE. IRALA · LUISINHO VIEIRA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NO CÉU UMA LUZ ILUMINA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E O POVO PERDIDO A PROCURA DE DEUS",
+          "acordes": []
+        },
+        {
+          "letra": "NO PEITO A SAUDADE SOFRIDA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "DE QUEM LEVA A VIDA",
+          "acordes": []
+        },
+        {
+          "letra": "SEM RUMO E AO LÉU",
+          "acordes": []
+        },
+        {
+          "letra": "O CHÃO E DE ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O CÉU É DE ORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "O MUNDO É UMA CRIANÇA",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "EM BUSCA DE PERDÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SERIA NECESSÁRIO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BEM MAIS QUE UMA CANÇÃO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PRA MOSTRAR O CAMINHO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O RUMO, A DIREÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "POR ISSO O MENINO QUE CHEGA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VEM MARCANDO O NORTE",
+          "acordes": []
+        },
+        {
+          "letra": "VEM PREGANDO A PAZ",
+          "acordes": []
+        },
+        {
+          "letra": "NAS MÃOS DE JOSÉ E MARIA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A ESTRELA GUIA PRA NOS LIBERTAR",
+          "acordes": []
+        },
+        {
+          "letra": "MEU POVO ESQUEÇA O PRANTO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ESQUEÇA A SOLIDÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "UM DEUS SE FAZ AMIGO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM DEUS SE FAZ IRMÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E ILUMINANDO A ESTRADA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "AS FLORES SE ABRIRÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E A PAZ TÃO ESPERADA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AQUECE O CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "POR ISSO O MENINO QUE CHEGA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VEM MARCANDO O NORTE",
+          "acordes": []
+        },
+        {
+          "letra": "VEM PREGANDO A PAZ",
+          "acordes": []
+        },
+        {
+          "letra": "NAS MÃOS DE JOSÉ E MARIA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A ESTRELA GUIA PRA NOS LIBERTAR",
+          "acordes": []
+        },
+        {
+          "letra": "MEU POVO ESQUEÇA O PRANTO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ESQUEÇA A SOLIDÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "UM DEUS SE FAZ AMIGO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM DEUS SE FAZ IRMÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E ILUMINANDO A ESTRADA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "AS FLORES SE ABRIRÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E A PAZ TÃO ESPERADA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AQUECE O CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

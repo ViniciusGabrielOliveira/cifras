@@ -1,0 +1,157 @@
+{
+  "id": "deus-e-bom-e-fiel",
+  "titulo": "Deus É Bom E Fiel",
+  "artista": "Desconhecido",
+  "tom": "G7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CAMINHAREI, CAMINHAREI",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO ME CANSAREI, NÃO ME CANSAREI",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "E SEGUIREI E SEGUIREI",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "RUMO AO REI DOS REIS",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "RUMO AO REI DOS REIS (BIS)",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 4,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "EU CORREREI, EU CORREREI",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO ME CANSAREI, NÃO ME CANSAREI",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "E SEGUIREI, E SEGUIREI",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "RUMO AO REI DOS REIS,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "RUMO AO REI DOS REIS (BIS)",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

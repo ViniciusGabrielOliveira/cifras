@@ -1,0 +1,285 @@
+{
+  "id": "gloria-a-deus-grupo-mensagem",
+  "titulo": "Glória A Deus",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "FORAM AS PALAVRAS DO ANJO AO DESCER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE NASCEU EM BELÉM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "EMANUEL, O MESSIAS, JESUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O SALVADOR DE VOCÊS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "GRANDE ALEGRIA INUNDOU NOSSO SER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "POIS NOSSOS OLHOS O VIRAM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E SE CUMPRIU A PROMESSA DE DEUS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AQUI NA TERRA DESCEU",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FORAM AS PALAVRAS DO ANJO AO DESCER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE NASCEU EM BELÉM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM GRANDE EU SOU SIM O DEUS DE ISRAEL",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "O NOSSO SALVADOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "COM SUAS VOZES CANTAI... LOUVEM... ADORAI...",
+          "acordes": [
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 45,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

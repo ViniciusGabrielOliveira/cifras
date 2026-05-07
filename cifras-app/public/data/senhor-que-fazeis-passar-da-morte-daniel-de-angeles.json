@@ -1,0 +1,161 @@
+{
+  "id": "senhor-que-fazeis-passar-da-morte-daniel-de-angeles",
+  "titulo": "Senhor, Que Fazeis Passar Da Morte",
+  "artista": "Daniel De Angeles",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE FAZEIS PASSAR DA MORTE PARA A VIDA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM OUVE A VOSSA PALAVRA;",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. Ó CRISTO, QUE QUISESTES SER LEVANTADO DA TERRA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA ATRAIR-NOS A VÓS;",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, TENDE PIEDADE DE NÓS (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE NOS SUBMETESTES AO JULGAMENTO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DA VOSSA CRUZ;",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

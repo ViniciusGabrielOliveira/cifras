@@ -1,0 +1,157 @@
+{
+  "id": "os-dons-que-trago-aqui",
+  "titulo": "Os Dons Que Trago Aqui",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "OS DONS QUE TRAGO AQUI",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "SÃO O QUE FIZ, O QUE VIVI.",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO QUE OFERTAREI,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "POUCO DEPOIS COMUNGAREI.",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM, TUDO O QUE É MEU,",
+          "acordes": []
+        },
+        {
+          "letra": "SINTO TAMBÉM QUE É DE DEUS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS NOS QUIS CHAMAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA SEGUIR E AJUDAR",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E AQUI NOS VAI DIZER,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "COMO SERVIR E OFERECER",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS PÕE NAS MINHAS MÃOS,",
+          "acordes": []
+        },
+        {
+          "letra": "PARA EU PARTIR COM MEUS IRMÃOS.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

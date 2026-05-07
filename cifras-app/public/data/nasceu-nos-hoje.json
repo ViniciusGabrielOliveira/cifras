@@ -1,0 +1,729 @@
+{
+  "id": "nasceu-nos-hoje",
+  "titulo": "Nasceu-Nos Hoje",
+  "artista": "Desconhecido",
+  "tom": "Bm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "1. CANTAI, CANTAI AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "POR MARAVILHA TÃO GRANDE,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "POR TAL VITÓRIA E PODER,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "POR UM AMOR TÃO FIEL,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "2. A SALVAÇÃO RESPLENDEU,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "JUSTIÇA, APARECEU,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "TODA A TERRA CONTEMPLOU,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "COM ALEGRIA APLAUDI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO. UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 1,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "3. CLARINS, VIOLÕES TOCAI,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "AO REI SENHOR ACLAMAI,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "NA PRESENÇA DO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "4. AO JUSTO JUIZ QUE VEM,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "POR TODO SEMPRE AMÉM,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "Em                    Bm",
+          "acordes": []
+        },
+        {
+          "letra": "GLÓRIA AO PAI POR SEU FILHO,",
+          "acordes": []
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM NO ESPÍRITO VEM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO, UM LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

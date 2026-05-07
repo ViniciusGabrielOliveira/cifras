@@ -1,0 +1,225 @@
+{
+  "id": "o-que-direi-padre-zezinho",
+  "titulo": "O Que Direi?",
+  "artista": "PADRE ZEZINHO",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PADRE ZEZINHO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. MOISÉS NÃO ESTAVA PRONTO PARA ANUNCIAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E DISSE QUE NÃO SABERIA O QUE DIZER AO POVO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "DISSESTE QUE O AJUDARIAS E MOISÉS FOI LÁ",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "MOISÉS ENTÃO TE ANUNCIOU, DE UM JEITO MAIS QUE NOVO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 47,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. NINGUÉM DE NÓS SE SENTE PRONTO PARA ANUNCIAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 45,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A GENTE AINDA NÃO APRENDEU O QUE DIZER AO POVO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "MAS CREMOS QUE TU NOS INSPIRAS QUANDO A GENTE VAI",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUEREMOS EVANGELIZAR, ENTÃO DE UM JEITO NOVO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

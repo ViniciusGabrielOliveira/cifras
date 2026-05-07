@@ -1,0 +1,171 @@
+{
+  "id": "cordeiro-de-deus-gilson-celerino",
+  "titulo": "Cordeiro De Deus",
+  "artista": "GILSON CELERINO",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm6"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm6/D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A#4"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D"
+            },
+            {
+              "posicao": 51,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm6"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm6/D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, TENDE PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A#4"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D"
+            },
+            {
+              "posicao": 51,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E7/D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E7/D"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A PAZ, A VOSSA PAZ, DAI-NOS A VOSSA PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A#4"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G/A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,768 @@
+{
+  "id": "peregrinos-de-esperanca",
+  "titulo": "Peregrinos De Esperança",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CIFRA SIMPLIFICADA",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "1. TODA A LÍNGUA, POVO E NAÇÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "TUA LUZ ENCONTRA NA PALAVRA.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "OS TEUS FILHOS, FRÁGEIS E DISPERSOS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "SE REÚNEM NO TEU FILHO AMADO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. DEUS NOS OLHA, TERNO E PACIENTE:",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A AURORA DE UM FUTURO NOVO.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NOVOS CÉUS, TERRA FEITA NOVA:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "PASSA OS MUROS, ‘SPIRITO DE VIDA.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. ERGUE OS OLHOS, MOVE-TE COM O VENTO,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO TE ATRASES: CHEGA DEUS, NO TEMPO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO POR TI SE FEZ HOMEM:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "AOS MILHARES SEGUEM O CAMINHO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "-------------------------------",
+          "acordes": []
+        },
+        {
+          "letra": "CIFRA COMPLETA",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "1. TODA A LÍNGUA, POVO E NAÇÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "TUA LUZ ENCONTRA NA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "OS TEUS FILHOS, FRÁGEIS E DISPERSOS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "SE REÚNEM NO TEU FILHO AMADO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "2. DEUS NOS OLHA, TERNO E PACIENTE",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A AURORA DE UM FUTURO NO-VO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NOVOS CÉUS, TERRA FEITA NOVA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "PASSA OS MUROS, “SPIRITO” DE VIDA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "3. ERGUE OS OLHOS, MOVE-TE COM O VENTO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Dm/C"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO TE ATRASES: CHEGA DEUS, NO TEMPO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO POR TI SE FEZ HO-MEM",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "AOS MILHARES SEGUEM O CAMINHO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Dm/C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

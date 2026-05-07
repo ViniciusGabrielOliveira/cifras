@@ -1,0 +1,34 @@
+{
+  "id": "ficai-atentos-e-orai-paulo-neto",
+  "titulo": "Ficai Atentos E Orai",
+  "artista": "Paulo Neto",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO NETO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

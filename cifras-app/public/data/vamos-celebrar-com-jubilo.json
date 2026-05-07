@@ -1,0 +1,294 @@
+{
+  "id": "vamos-celebrar-com-jubilo",
+  "titulo": "Vamos Celebrar Com Júbilo",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS TODOS NOS AMAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE SUA GLÓRIA VAI BRILHAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM CADA FACE, EM CADA CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA É A FESTA DO REI SENHOR JESUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O PERDÃO IRÁ FLUIR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O AMOR VAI NOS UNIR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM UM SÓ CORPO, EM UM SÓ CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA É A FESTA DO REI SENHOR JESUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "OS SEUS ANJOS VÃO CANTAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COM AS TROMBETAS PROCLAMAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "A SUA GLÓRIA E A NOSSA SALVAÇÃO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA É A FESTA DO REI SENHOR JESUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

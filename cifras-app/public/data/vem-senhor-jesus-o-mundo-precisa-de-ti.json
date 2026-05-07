@@ -1,0 +1,331 @@
+{
+  "id": "vem-senhor-jesus-o-mundo-precisa-de-ti",
+  "titulo": "Vem, Senhor Jesus, O Mundo Precisa De Ti!",
+  "artista": "FR. ARI TOGNON",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "FR. ARI TOGNON",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "1. AO MUNDO FALTA A VIDA.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A VIDA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, SENHOR JESUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "2. AO MUNDO FALTA A PAZ.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, SENHOR JESUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "3. AO MUNDO FALTA A LUZ.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS A LUZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VEM,SENHOR JESUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "4. AO MUNDO FALTA O AMOR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TU ÉS O AMOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, SENHOR JESUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "5. O MUNDO CAMINHA EM SONHOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCANDO ALGO MAIS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCANDO ALGO DE TI.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

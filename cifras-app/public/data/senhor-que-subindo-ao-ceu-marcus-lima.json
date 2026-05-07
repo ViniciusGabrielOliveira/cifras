@@ -1,0 +1,263 @@
+{
+  "id": "senhor-que-subindo-ao-ceu-marcus-lima",
+  "titulo": "Senhor Que Subindo Ao Céu",
+  "artista": "Marcus Lima",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE, SUBINDO AO CÉU,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOS PRESENTEASTES",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "COM O DOM DO ESPÍRITO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE,  ELEISON! KYRIE,    ELEISON!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE DAIS VIDA A TODAS AS COISAS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "COM O PODER DA VOSSA PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE,  ELEISON! CHRISTE,  ELEISON!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "E SENHOR DOS SÉCULOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE,  ELEISON! KYRIE,    ELEISON!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+  "id": "eu-vim-para-que-todos-tenha-vida",
+  "titulo": "Eu Vim Para Que Todos Tenham Vida",
+  "artista": "REGINALDO VELOSO",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "REGINALDO VELOSO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "1. RECONSTRÓI A TUA VIDA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EM COMUNHÃO COM TEU SENHOR;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "RECONSTRÓI A TUA VIDA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "EM COMUNHÃO COM TEU IRMÃO:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE ESTÁ O TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "EU ESTOU PRESENTE NELE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "2. EU PASSEI FAZENDO O BEM,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EU CUREI TODOS OS MALES\"",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE ÉS MINHA PRESENÇA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTO A TODO SOFREDOR:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE SOFRE O TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "EU ESTOU SOFRENDO NELE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "3. ENTREGUEI A MINHA VIDA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PELA SALVAÇÃO DE TODOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "RECONSTRÓI, PROTEGE A VIDA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "DE INDEFESOS E INOCENTES:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE MORRE O TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "EU ESTOU MORRENDO NELE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "4. VIM BUSCAR E VIM SALVAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE ESTAVA JÁ PERDIDO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCA, SALVA E RECONDUZE",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM PERDEU TODA A ESPERANÇA:",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE SALVAS TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "TU ME ESTÁS SALVANDO NELE.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "5. ESTE PÃO, MEU CORPO E VIDA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A SALVAÇÃO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "É PRESENÇA E ALIMENTO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NESTA SANTA COMUNHÃO:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE ESTÁ O TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "EU ESTOU, TAMBÉM, COM ELE.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "6. SALVARÁ A SUA VIDA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM A PERDE, QUEM A DOA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "EU NÃO DEIXO PERECER",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "NENHUM DAQUELES QUE SÃO MEUS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE SALVAS TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "TU ME ESTÁS SALVANDO NELE.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "7. DA OVELHA DESGARRADA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EU ME FIZ O BOM PASTOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "RECONDUZE, ACOLHE E GUIA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A QUE DE MIM SE EXTRAVIOU:",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE ACOLHES TEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "TU ME ACOLHES, TAMBÉM, NELE.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

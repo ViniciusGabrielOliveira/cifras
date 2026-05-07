@@ -1,0 +1,266 @@
+{
+  "id": "somos-guardados-para-a-salvacao-marcus-lima",
+  "titulo": "Somos Guardados Para A Salvação",
+  "artista": "MARCUS VINÍCIUS LIMA",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "Inspirada em Catecismo da Igreja",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "1. BENDITO SEJA DEUS PELO DOM DA CRIAÇÃO",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PRESENTE PARA O HOMEM,",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "HERANÇA A ELE DESTINADA E CONFIADA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ELE DESEJA QUE PARTICIPEMOS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DE SUA VERDADE E BELEZA!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "PELO SEU PODER, LUTAMOS CONTRA O MAL,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS GUARDADOS PARA A SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "2. BENDITO SEJA DEUS, O PAI DE JESUS CRISTO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "EM SUA MISERICÓRDIA, QUIS MANIFESTAR",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "A SUA GLÓRIA ATRAVÉS DE SEU FILHO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "POR ELE, PODEMOS RENASCER PRA A SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PRA UMA VIVA ESPERANÇA,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA A HERANÇA RESERVADA NO CÉU,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE NÃO HÁ MAIS PECADO,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "SEREMOS ALVEJADOS PELO SANGUE DO CORDEIRO!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

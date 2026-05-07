@@ -1,0 +1,214 @@
+{
+  "id": "oferta-das-bencaos",
+  "titulo": "Oferta Das Bênçãos",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO O TRIGO AMADURECE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E DO SOL RECEBE A COR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO A UVA SE TORNA PRECE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NA OFERTA  DO NOSSO AMOR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OS PRESENTES DA NATUREZA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "O AMOR DO CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "O TEU POVO CANTA A CERTEZA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TRAZ A VIDA   EM PROCISSÃO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

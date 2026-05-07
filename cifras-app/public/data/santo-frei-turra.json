@@ -1,0 +1,163 @@
+{
+  "id": "santo-frei-turra",
+  "titulo": "Santo",
+  "artista": "FREI LUIZ TURRA",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "SANTO, SANTO, SAN..TO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#M"
+            }
+          ]
+        },
+        {
+          "letra": "A VOSSA GLÓRIA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "id": "daqui-do-meu-lugar",
+  "titulo": "Daqui Do Meu Lugar",
+  "artista": "Desconhecido",
+  "tom": "Bb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb/D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb/D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "DAQUI DO MEU LUGAR, EU OLHO TEU ALTAR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E FICO A IMAGINAR AQUELE PÃO, AQUELA REFEIÇÃO.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "PARTISTE AQUELE PÃO E O DESTE AOS TEUS IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "CRIASTE A RELIGIÃO DO PÃO DO CÉU, DO PÃO QUE VEM DO CÉU.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 52,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS A IGREJA DO PÃO, DO PÃO REPARTIDO E DO ABRAÇO E DA PAZ. (BIS)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 57,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "DAQUI DO MEU LUGAR, EU OLHO TEU ALTAR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "E FICO A IMAGINAR AQUELA PAZ, AQUELA COMUNHÃO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "VIVESTE AQUELA PAZ E A DESTE AOS TEUS IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "CRIASTE A RELIGIÃO DO PÃO DA PAZ, DA PAZ QUE VEM DO CÉU.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            },
+            {
+              "posicao": 52,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS A IGREJA DA PAZ, DA PAZ PARTILHADA E DO ABRAÇO E DO PÃO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 47,
+              "acorde": "F/A"
+            },
+            {
+              "posicao": 58,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

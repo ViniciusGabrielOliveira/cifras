@@ -1,0 +1,184 @@
+{
+  "id": "o-grande-rei",
+  "titulo": "O Grande Rei",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NASCEU O GRANDE REI, NASCEU A ESPERANÇA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E/G#"
+            }
+          ]
+        },
+        {
+          "letra": "NASCEU A ALEGRIA, NASCEU O SALVADOR (BIS)",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "OS REIS O ENCONTRARAM, PRESENTES O OFERTARAM",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E TODOS OS ANJOS DO CÉU O ADORARAM,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO A ELE...E ENTOA-RAM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

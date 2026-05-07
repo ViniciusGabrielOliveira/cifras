@@ -1,0 +1,267 @@
+{
+  "id": "bendigamos-ao-senhor-marcelo-oliveira",
+  "titulo": "Bendigamos Ao Senhor",
+  "artista": "Desconhecido",
+  "tom": "C#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "intro",
+      "label": "Intro",
+      "linhas": [
+        {
+          "letra": "SÊ BENDITO, Ó SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "PELO TRIGO FEITO PÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE AQUI APRESENTAMOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "NESTE ALTAR DE COMUNHÃO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DESTA TERRA, EIS O FRUTO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DO SUOR DA NOSSA LIDA;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA NÓS SE VAI TORNAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ALIMENTO, PÃO DA VIDA!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "SÊ BENDITO, Ó SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "PELA UVA FEITA VINHO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE AQUI APRESENTAMOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "NESTE ALTAR DO DOM DIVINO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DA VIDEIRA, EIS O FRUTO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DO SUOR DE NOSSAS MÃOS;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA NÓS SE VAI TORNAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "VINHO NOVO, SALVAÇÃO!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B/D#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

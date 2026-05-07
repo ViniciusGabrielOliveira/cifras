@@ -1,0 +1,239 @@
+{
+  "id": "senhor-nossa-paz-frei-turra",
+  "titulo": "Senhor, Nossa Paz",
+  "artista": "Frei Turra",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, NOSSA PAZ,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDA.DE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, NOSSA PÁSCOA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, NOSSA VIDA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR TENDE PIEDA.DE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

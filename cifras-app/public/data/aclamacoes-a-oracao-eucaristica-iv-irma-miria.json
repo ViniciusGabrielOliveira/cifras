@@ -1,0 +1,248 @@
+{
+  "id": "aclamacoes-a-oracao-eucaristica-iv-irma-miria",
+  "titulo": "Aclamações À Oração Eucarística Iv",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "ALEGRAI-NOS, Ó PAI, COM A VOSSA LUZ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SOCORREI, COM BONDADE, OS QUE VOS BUSCAM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "POR AMOR NOS ENVIASTES VOSSO FILHO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO DEU-NOS VIDA POR SUA MORTE!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICAI-NOS PELO DOM DO VOSSO ESPÍRITO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICAI NOSSA OFERENDA PELO ESPÍRITO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBEI, Ó SENHOR, A NOSSA OFERTA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UM SACRIFÍCIO DE LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRAI-VOS, Ó PAI, DOS VOSSOS FILHOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS SACIAI COM VOSSA GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "CONCEDEI-NOS O CONVÍVIO DOS ELEITOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "santo-ministerio-amor-e-adoracao",
+  "titulo": "Santo",
+  "artista": "MINISTÉRIO AMOR E ADORAÇÃO",
+  "tom": "Em7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CÉUS E TERRA PROCLAMAM A VOSSA GLÓRIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM EM NOME DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

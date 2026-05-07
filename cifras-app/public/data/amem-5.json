@@ -1,0 +1,113 @@
+{
+  "id": "amem-5",
+  "titulo": "Amém 5",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "A - A - A - MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "A-MÉM!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

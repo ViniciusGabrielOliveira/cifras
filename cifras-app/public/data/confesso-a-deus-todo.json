@@ -1,0 +1,51 @@
+{
+  "id": "confesso-a-deus-todo",
+  "titulo": "Confesso A Deus",
+  "artista": "Daiana Máximo",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

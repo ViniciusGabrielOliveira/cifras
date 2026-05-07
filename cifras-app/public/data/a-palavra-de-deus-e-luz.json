@@ -1,0 +1,120 @@
+{
+  "id": "a-palavra-de-deus-e-luz",
+  "titulo": "A Palavra De Deus É Luz",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A TUA PALAVRA, SENHOR,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "RENOVE O NOSSO CORAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FORTIFIQUE A NOSSA ESPERANÇA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E NOS FAÇA VIVERCOMO IRMÃOS!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Gm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "id": "hino-da-campanha-da-fraternidade-2026",
+  "titulo": "Hino Oficial Da Campanha Da Fraternidade 2026",
+  "artista": "Desconhecido",
+  "tom": "Cm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "1. NO CAMINHO DA VIDA SOFRIDA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "HÁ IRMÃOS SEM ABRIGO, SEM CHÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NA CALÇADA, NO BAIRRO, NA ESPERA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "BROTA O GRITO, O CLAMOR DO IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "MAS O VERBO SE FEZ MORADIA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "NO PRESÉPIO DA SIMPLICIDADE:",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "VEM MORAR COM O POBRE SOFRIDO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "TRANSFORMANDO A DOR EM BONDADE!",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "2. ONDE FALTA DIREITO E CUIDADO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "SOBRA MEDO, ABANDONO E DOR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "MAS A FÉ, QUE SE FAZ COMPROMISSO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "ERGUE A VOZ COM FIRMEZA E ARDOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO O AMOR FOR TIJOLO E TELHADO,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "E A JUSTIÇA A  NOSSA MISSÃO,",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "CADA CASA SERÁ TESTEMUNHO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "DO EVANGELHO DE CRISTO EM AÇÃO!",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "3. SE O PROFETA LEVANTA SUA VOZ,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "É O CRISTO QUE CLAMA TAMBÉM:",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "“DAI MORADA AO PEQUENO E AO FRACO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "SEDE OS BRAÇOS QUE ACOLHEM O BEM!”.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA FÉ NÃO SE FINDA NO ALTAR:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Eb"
+            }
+          ]
+        },
+        {
+          "letra": "PARTILHAR BROTA EM NÓS COMUNHÃO.",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "ESPALHANDO AS SEMENTES DO AMOR,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Ab"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA FÉ FAZ DE NÓS MAIS IRMÃOS!",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Cm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

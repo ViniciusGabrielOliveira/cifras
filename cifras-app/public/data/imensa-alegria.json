@@ -1,0 +1,181 @@
+{
+  "id": "imensa-alegria",
+  "titulo": "Imensa Alegria",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "intro",
+      "label": "Intro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 2,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGRIA! RELUZ NOS TEUS OLHOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "TODO AMOR QUE SONHAMOS UM DIA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DISSIPANDO AS TREVAS DO MEDO QUE HAVIA EM   NÓS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            },
+            {
+              "posicao": 41,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 48,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "O TEU SOPRO INVADINDO O PEITO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "RECRIANDO EM NÓS TODA VIDA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DE TUAS MÃOS E DE TEU LADO ABERTO A PAZ VEM, ENFIM",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

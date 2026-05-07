@@ -1,0 +1,458 @@
+{
+  "id": "recebe-senhor-nossa-vida",
+  "titulo": "Recebe Senhor Nossa Vida",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "1. É TEU O QUE SOMOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E TUDO QUE TEMOS, Ó SENHOR",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "PRA RECONHECER",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE SÓ TU ÉS O SALVADOR",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "PRA RETRIBUIR E OFERTAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "COM O PÃO E O VINHO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA EM TEU ALTAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. NÓS SOMOS TEUS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS MILHÕES DE MIL LUGARES",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "JOVENS NA IGREJA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "UMA SÓ FÉ NOS CORAÇÕES",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBE NOSSO SIM",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E COMPROMISSO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "DE FAZER DISCÍPULOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "ENTRE TODAS AS NAÇÕES",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. A ALEGRIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NOS NOSSOS SONHOS E ATITUDES",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "TODA ENERGIA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "DO NOSSO SER E NOSSO AMOR",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBE NOSSA FÉ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E JUVENTUDE",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "OFERENDAS VIVAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "DO TEU ALTAR SENHOR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "4. NESSA JORNADA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCANDO A TUA VONTADE",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "NO SANTUÁRIO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "DO NOSSO CRISTO REDENTOR",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBE A TUA IGREJA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EM UNIDADE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "CULTURAS TÃO DIVERSAS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "UMA SÓ IDENTIDADE",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "5. TODOS OS FRUTOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DE NOSSO ESFORÇO E TRABALHO",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "OFERECEMOS COM O VINHO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "E COM O PÃO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTOS DE MÃOS DADAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COM A IGREJA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "PLANTAMOS SEMENTE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "PRA EVANGELIZAÇÃO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

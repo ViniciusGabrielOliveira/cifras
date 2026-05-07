@@ -1,0 +1,468 @@
+{
+  "id": "gloria-capella",
+  "titulo": "Glória",
+  "artista": "SIRO PONTES",
+  "tom": "C#9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "SIRO PONTES",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#9"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "1. GLORIA À DEUS LÁ NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "PAZ NA TERRA A SEUS AMADOS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "À VÓS LOUVAM REI CELESTE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "OS QUE FORAM LIBERTADOS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "2. DEUS E PAI NÓS VOS LOUVAMOS",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "ADORAMOS BENDIZEMOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DAMOS GLÓRIA AO VOSSO NOME",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSOS DONS AGRADECEMOS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR NOSSO JESUS CRISTO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "UNIGÊNITO DO PAI",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS DE DEUS CORDEIRO SANTO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS CULPAS PERDOAI",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "4. VÓS QUE ESTAIS JUNTO DO PAI",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "COMO NOSSO INTERCESSOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI NOSSOS PEDIDOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDEI NOSSO CLAMOR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "5. VÓS SOMENTE SOIS O SANTO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "O ALTÍSSIMO SENHOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "COM ESPÍRITO DIVINO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "DE DEUS PAI NO ESPLENDOR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B9"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

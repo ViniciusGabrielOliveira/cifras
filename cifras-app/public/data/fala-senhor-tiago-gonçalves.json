@@ -1,0 +1,38 @@
+{
+  "id": "fala-senhor-tiago-gonçalves",
+  "titulo": "Fala Senhor!",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

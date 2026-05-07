@@ -1,0 +1,270 @@
+{
+  "id": "eis-aqui-senhor",
+  "titulo": "Eis-Me Aqui Senhor",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "1. O SENHOR É O PASTOR QUE ME CONDUZ",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "POR CAMINHOS NUNCA VISTOS ME ENVIOU",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "SOU CHAMADO A SER FERMENTO  SAL E LUZ",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO RESPONDI: AQUI ESTOU!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "2. ELE PÔS EM MINHA BOCA UMA CANÇÃO",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "ME UNGIU COMO PROFETA E TROVADOR",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "DA HISTÓRIA E DA VIDA DO MEU POVO",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO RESPONDI: AQUI ESTOU!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "3. PONHO A MINHA CONFIANÇA NO SENHOR",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "DA ESPERANÇA SOU CHAMADO A SER SINAL",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G#7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEU OUVIDO SE INCLINOU AO MEU CLAMOR",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO RESPONDI: AQUI ESTOU!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

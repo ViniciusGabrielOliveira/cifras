@@ -1,0 +1,218 @@
+{
+  "id": "cordeiro-com-shalom",
+  "titulo": "Cordeiro De Deus",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D4"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A PA-AZ, DAÍ-NOS A PAZ,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A VOSSA PAZ,  DAÍ-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A PA-AZ, DAÍ-NOS A PAZ,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS A VOSSA PAZ,  DAÍ-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

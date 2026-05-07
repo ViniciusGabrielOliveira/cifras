@@ -1,0 +1,136 @@
+{
+  "id": "aclamacoes-a-oracao-eucaristica-v-irma-miria",
+  "titulo": "Aclamações À Oração Eucarística V",
+  "artista": "Desconhecido",
+  "tom": "Gm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "MANDAI VOSSO ESPÍRITO SANTO!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBEI, Ó SENHOR, A NOSSA OFERTA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "O ESPÍRITO NOS UNA NUM SÓ CORPO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "CAMINHAMOS NA ESTRADA DE JESUS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "CAMINHAMOS NA ESTRADA DE JESUS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "ESPERAMOS ENTRAR NA VIDA ETERNA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS DAI A LUZ QUE NÃO SE APAGA!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

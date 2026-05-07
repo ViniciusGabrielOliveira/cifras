@@ -1,0 +1,259 @@
+{
+  "id": "prova-de-amor-maior-nao-ha",
+  "titulo": "Prova De Amor Maior Não Há",
+  "artista": "Desconhecido",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "EIS QUE EU VOS DOU UM NOVO MANDAMENTO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS SEREIS OS MEUS AMIGOS SE SEGUIRDES MEU PRECEITO:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PERMANECEI EM MEU AMOR E SEGUI MEU MANDAMENTO:",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E CHEGANDO A MINHA PÁSCOA, VOS AMEI ATÉ O FIM:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NISTO TODOS SABERÃO QUE VÓS SOIS OS MEUS DISCÍPULOS:",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

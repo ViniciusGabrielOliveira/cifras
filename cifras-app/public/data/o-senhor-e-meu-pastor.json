@@ -1,0 +1,281 @@
+{
+  "id": "o-senhor-e-meu-pastor",
+  "titulo": "O Senhor É Meu Pastor",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. AOS PRADOS BEM VERDES ME LEVA A DESCANSAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E ME CONDUZ PARA AS FONTES CRISTALINAS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. ME GUIA E ME MOSTRA CAMINHOS DE JUSTIÇA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "COM SEU CAJADO ME CONDUZ E ME SUSTENTA.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. AINDA QUE EU PASSE POR VALES TENEBROSOS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO TEMEREI POR QUE ELE ME PROTEGE.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

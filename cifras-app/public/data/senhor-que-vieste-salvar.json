@@ -1,0 +1,370 @@
+{
+  "id": "senhor-que-vieste-salvar",
+  "titulo": "Senhor Que Vieste Salvar",
+  "artista": "Pe. José Cândido Da Silva",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR QUE VIES-TE SALVAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "OS CORAÇÕES ARREPENDIDOS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, QUE VIESTE CHAMAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "OS PECADORES HUMILHADOS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR QUE INTERCEDEI  POR NÓS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bm/A"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTO A DEUS PAI, QUE NOS PERDO-A.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PIEDA-DE, PIEDA-DE, PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

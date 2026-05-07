@@ -1,0 +1,208 @@
+{
+  "id": "senhor-rei-da-paz-zilmar",
+  "titulo": "Senhor Rei Da Paz",
+  "artista": "Frei Zilmar Augusto",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, REI DA PAZ, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, LUZ NAS TREVAS, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, HOMEM NOVO, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR PIEDADE, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "id": "celebremos-nossa-pascoa",
+  "titulo": "Celebremos Nossa Páscoa",
+  "artista": "Desconhecido",
+  "tom": "Cm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, POIS ELE É BOM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "2. A MÃO DIREITA DO SENHOR FEZ MARAVILHAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU!",
+          "acordes": [
+            {
+              "posicao": 32,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "3. NÃO MORREREI, MAS, AO CONTRÁRIO, VIVEREI",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 34,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "4. A PEDRA QUE OS PEDREIROS REJEITARAM",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "TORNOU-SE AGORA A PEDRA ANGULAR.",
+          "acordes": [
+            {
+              "posicao": 28,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "5. ESTE É O DIA QUE O SENHOR FEZ PARA NÓS",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGREMO-NOS E NELE EXULTEMOS.",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

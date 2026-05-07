@@ -1,0 +1,267 @@
+{
+  "id": "glorias-ao-rei-jesus",
+  "titulo": "Glórias Ao Rei Jesus",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "UM GRITO PELA PAZ ECOA PELO AR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "(GLÓRIAS AO REI JESUS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ENSINANDO CORAÇÕES O MILAGRE DE AMAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "(GLÓRIAS AO REI JESUS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ATÉ AS NUVENS QUE PASSAM NO AR IRÃO SE ALEGRAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            },
+            {
+              "posicao": 43,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SOBRE ELAS JESUS NOSSO REI EM SUA GLÓRIA VIRÁ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "(ASSIM SERÁ)",
+          "acordes": []
+        },
+        {
+          "letra": "OH! ALELUIA DEUS É NOSSO REI",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OH! ALELUIA GLÓRIA AO NOSSO DEUS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIAS AO REI JESUS SANTO DOS SANTOS",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "O SEU AMOR (SOBRE NÓS) REINARÁ",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "É TEMPO DE ORAR E JUNTOS VAMOS DAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "(GLÓRIAS AO REI JESUS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DESCE SOBRE NÓS COM JÚBILO E PAZ",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A/D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "(GLÓRIAS AO REI JESUS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

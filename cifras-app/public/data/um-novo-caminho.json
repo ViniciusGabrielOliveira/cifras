@@ -1,0 +1,239 @@
+{
+  "id": "um-novo-caminho",
+  "titulo": "Um Novo Caminho",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "HOJE O MUNDO OFERECE CAMINHOS DEMAIS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VOCÊ CHORA, VOCÊ RI.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#M"
+            }
+          ]
+        },
+        {
+          "letra": "NEM SEMPRE É FELIZ, É FELIZ",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "O MUNDO NÃO TE SATISFAZ",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "POIS SUA ALMA É GRANDE DEMAIS. SÓ DEEEUS PODE ENCHÊ-LA.PODE ENCHÊ-LA.",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C#M"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            },
+            {
+              "posicao": 50,
+              "acorde": "E"
+            },
+            {
+              "posicao": 62,
+              "acorde": "A"
+            },
+            {
+              "posicao": 67,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "POIS ELE QUER TRANSFORMAR SUA VIDA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGRIA E PAZ ENCONTRARÁS, QUANDO NELE SE APOIAR.SE APOIAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C#M"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            },
+            {
+              "posicao": 44,
+              "acorde": "E"
+            },
+            {
+              "posicao": 52,
+              "acorde": "A"
+            },
+            {
+              "posicao": 58,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

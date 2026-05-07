@@ -1,0 +1,127 @@
+{
+  "id": "senhor-que-fazeis-passar-da-morte-andre-zamur",
+  "titulo": "Senhor, Que Fazeis Passar Da Morte",
+  "artista": "André Zamur",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR,  QUE  FAZEIS  PASSAR  DA  MORTE",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PARA  A  VIDA QUEM OUVE A VOSSA PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 38,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO,   QUE   QUISESTES   SER   LEVANTADO",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DA TERRA PARA ATRAIR-NOS A VÓS,",
+          "acordes": [
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE NOS SUBMETEIS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "AO JULGAMENTO DA VOSSA CRUZ,",
+          "acordes": [
+            {
+              "posicao": 26,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A/G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

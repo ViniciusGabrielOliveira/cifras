@@ -1,0 +1,268 @@
+{
+  "id": "muito-perdoais",
+  "titulo": "Muito Perdoais",
+  "artista": "Com. Shalom",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A4"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR QUE VIESTES NÃO PARA CONDENAR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "MAS PARA PERDOAR,  TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 41,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 45,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO QUE VOS ALEGRAIS PELO PECADOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ARREPENDIDO, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR QUE MUITO PERDOAIS A TODO AQUELE",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MUITO AMA, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 2,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 2,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G/D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

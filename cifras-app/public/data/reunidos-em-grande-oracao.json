@@ -1,0 +1,115 @@
+{
+  "id": "reunidos-em-grande-oracao",
+  "titulo": "Reunidos Em Grande Oração",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ESCUTAREMOS O DIZ O SENHOR DEUS",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DE LIBERDADE E DE JUSTIÇA VAI FALAR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "A SALVAÇÃO ESTA CHEGANDO AOS FILHOS SEUS",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "FELICIDADE, AMOR E PAZ VÃO SE ABRAÇAR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "id": "brilha-uma-luz",
+  "titulo": "Brilha Uma Luz",
+  "artista": "IRMÃ MIRIA KOLLING",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "IRMÃ MIRIA KOLLING",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ PRA MIM SENHOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ   TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ EM MIM SENHOR!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ  PRA MIM SENHOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bbm"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ EM MIM SENHOR!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            }
+          ]
+        },
+        {
+          "letra": "É UMA LUZ   PRA MIM SENHOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ   TUA PALAVRA",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bbm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ   EM MIM SENHOR!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "BRILHA ESSA LUZ   EM MIM SENHOR!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

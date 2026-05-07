@@ -1,0 +1,441 @@
+{
+  "id": "mesa-tao-grande",
+  "titulo": "A Mesa Tão Grande",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A MESA TÃO GRANDE E VAZIA DE AMOR E DE PAZ! DE PAZ!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "G"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D"
+            },
+            {
+              "posicao": 51,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AONDE HÁ O LUXO DE ALGUNS, ALEGRIA NÃO HÁ, JAMAIS!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            },
+            {
+              "posicao": 45,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A MESA DA EUCARISTIA NOS QUER ENSINAR, Ah Ah",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE A ORDEM DE DEUS, NOSSO PAI, É O PÃO PARTILHAR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "PÃO EM TODAS AS MESAS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DA PÁSCOA NOVA CERTEZA.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "A FESTA HAVERÁ E O POVO A CANTAR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ALELUIA!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "AS FORÇAS DA MORTE: A INJUSTIÇA E A GANÂNCIA DE TER, DE TER,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 48,
+              "acorde": "G"
+            },
+            {
+              "posicao": 56,
+              "acorde": "D"
+            },
+            {
+              "posicao": 60,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AGINDO NAQUELES QUE IMPEDEM AO POBRE VIVER - VIVER,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            },
+            {
+              "posicao": 45,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEM TERRA, TRABALHO E COMIDA, A VIDA NÃO HÁ, NÃO HÁ",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            },
+            {
+              "posicao": 49,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM DEIXA ASSIM E NÃO AGE, A FESTA NÃO VAI CELEBRAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 52,
+              "acorde": "D"
+            },
+            {
+              "posicao": 55,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "IRMÃOS, COMPANHEIROS NA LUTA, NOS DEMOS AS MÃOS, AS MÃOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "G"
+            },
+            {
+              "posicao": 53,
+              "acorde": "D"
+            },
+            {
+              "posicao": 57,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NA GRANDE CORRENTE DO AMOR, NA FELIZ COMUNHÃO! IRMÃOS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            },
+            {
+              "posicao": 48,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "UNINDO A PELEJA E A CERTEZA, VAMOS CONSTRUIR AQUI,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NA TERRA O PROJETO DE DEUS: TODO POVO A SORRIR!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "QUE EM TODAS AS MESAS DOS POBRES HAJA FESTA DE PÃO, DE PÃO!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            },
+            {
+              "posicao": 48,
+              "acorde": "G"
+            },
+            {
+              "posicao": 56,
+              "acorde": "D"
+            },
+            {
+              "posicao": 60,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "E AS MESAS DOS RICOS NÃO MAIS CONCENTRANDO O PÃO, O PÃO!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "D"
+            },
+            {
+              "posicao": 51,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "BUSQUEMOS AQUI, NESTA MESA DO PÃO REDENTOR DO CÉU,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A FORÇA E A ESPERANÇA QUE FAZ TODO POVO SER DEUS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

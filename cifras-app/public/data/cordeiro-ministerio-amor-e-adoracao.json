@@ -1,0 +1,152 @@
+{
+  "id": "cordeiro-ministerio-amor-e-adoracao",
+  "titulo": "Cordeiro",
+  "artista": "Desconhecido",
+  "tom": "C/E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS OS PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS OS PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS OS PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 41,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-NOS A PAZ, A VOSSA PAZ!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

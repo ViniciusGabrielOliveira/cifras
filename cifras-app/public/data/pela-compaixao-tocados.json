@@ -1,0 +1,407 @@
+{
+  "id": "pela-compaixao-tocados",
+  "titulo": "Pela Compaixão Tocados",
+  "artista": "Fr. Wanderson Luiz Freitas, O.Carm.",
+  "tom": "Gm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "Fr. José Moacyr Cadenassi, OFMCap.",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. PELA COMPAIXÃO TO-CA--DOS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Cm4"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "COMPAIXÃO DO DEUS VIVEN-TE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SIM, A ELE APRE-SEN-TEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G6"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA EM SA--CRI-FÍCIO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Cm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm6"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "2. EIS O CULTO AGRADÁ--VEL,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm4"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "CONSONANTE COM A VI--DA:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb4"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA QUE SE FAZ VONTADE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G6"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "DO ETERNO PAI DE TODOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Cm7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm6"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "3. FRENTE AO MUNDO NÃO QUEDE--MOS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Cm4"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "EM VIVERMOS CONFORMA--DOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb4"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "MAS SEJAMOS TRANSFORMADOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G6"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "NO PENSAR E ENTEN-DI-MENTO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Cm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Cm6"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

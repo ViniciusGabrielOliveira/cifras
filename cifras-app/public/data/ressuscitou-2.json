@@ -1,0 +1,285 @@
+{
+  "id": "ressuscitou-2",
+  "titulo": "Ressuscitou",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "NOVO DIA SURGIU",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "E O POVO QUE ANDAVA NAS TREVAS VIU",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "UMA INTENSA LUZ, TEU CLARÃO,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D/G"
+            }
+          ]
+        },
+        {
+          "letra": "TUA GLÓRIA     A RESPLANDECER,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOVO POVO A TRILHAR",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "UM CAMINHO ABERTO POR TUAS MÃOS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "OBRA NOVA ENFIM JÁ PODEMOS VER, NOVA CRIAÇÃO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            },
+            {
+              "posicao": 41,
+              "acorde": "G/C"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS NÓS ESTE POVO ALCANÇADO POR TUA LUZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FRUTO DA TUA OBRA NA CRUZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "UM SÓ POVO, UM SÓ CORPO, UM SÓ CANTO PRA TEU LOUVOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 41,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 52,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TUA IGREJA, TUA ESPOSA CELEBRA O TEU AMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SOBERANO, MAJESTOSO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "GLORIOSO, VENCE--DOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS JUNTOS, POVO EM FESTA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "NUM BANQUETE QUE NÃO FINDARÁ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

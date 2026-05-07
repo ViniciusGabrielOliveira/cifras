@@ -1,0 +1,71 @@
+{
+  "id": "procurais-a-jesus-de-nazare-paulo-neto",
+  "titulo": "Procurais A Jesus De Nazaré?",
+  "artista": "PAULO NETO",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "PROCURAIS A JESUS DE NAZARÉ-E?",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ELE NÃO ESTÁ AQUI. ELE RESSUSCITOU! (BIS)",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

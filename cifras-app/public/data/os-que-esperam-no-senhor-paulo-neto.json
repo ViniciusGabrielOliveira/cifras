@@ -1,0 +1,211 @@
+{
+  "id": "os-que-esperam-no-senhor-paulo-neto",
+  "titulo": "Os Que Esperam No Senhor",
+  "artista": "PAULO NETO",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO NETO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. O SENHOR É PIEDADE E RETI-DA-ÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E RECONDUZ AO BOM CAMINHO OS PECADORE-ES.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. ELE DIRIGE OS HUMILDES NA JUSTI-ÇA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "E AOS POBRES ELE ENSINA O SEU CAMI-NHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. VERDADE E AMOR SÃO OS CAMINHOS DO SENHO-OR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            },
+            {
+              "posicao": 43,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA QUEM GUARDA SUA ALIANÇA E SEUS PRECEITOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 39,
+              "acorde": "C"
+            },
+            {
+              "posicao": 42,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

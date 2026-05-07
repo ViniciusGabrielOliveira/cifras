@@ -1,0 +1,337 @@
+{
+  "id": "gloria-a-deus-coral-de-nossa-senhora-das-dores",
+  "titulo": "Gloria A Deus Nas Alturas",
+  "artista": "CORAL DE NOSSA SENHORA DAS DORES",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "CORAL DE NOSSA SENHORA DAS DORES",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS E PAI NOS VOS LOUVAMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ADORAMOS BENDIZEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DAMOS GLORIA VOSSO NOME",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSOS DONS AGRADECEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR NOSSO JESUS CRISTO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "UNIGÊNITO DO PAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "VOS DE DEUS CORDEIRO SANTO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS CULPAS PERDOAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "VOS QUE ESTAIS JUNTO DO PAI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "COMO NOSSO INTERCESSOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI NOSSOS PEDIDOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDEI NOSSO CLAMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "VOS SOMENTE SOIS O SANTO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "O ALTÍSSIMO SENHOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "COM O ESPIRITO DIVINO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DE DEUS PAI NO ESPLENDOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

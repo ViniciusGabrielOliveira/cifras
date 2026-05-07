@@ -1,0 +1,170 @@
+{
+  "id": "pao-e-vinho",
+  "titulo": "Pão E Vinho",
+  "artista": "Desconhecido",
+  "tom": "D9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E/D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PÃO E VINHO TE APRESENTAMOS NESSE ALTAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "COMO SINAL QUE TU RECOLHES NOSSA OFERTA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO O QUE SOMOS DEIXAMOS AQUI. (BIS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "PÃO E VINHO TE APRESENTAMOS NESSE ALTAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "COMO SINAL QUE TU RECOLHES NOSSA OFERTA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "TUDO O QUE SOMOS DEIXAMOS AQUI. (BIS)",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

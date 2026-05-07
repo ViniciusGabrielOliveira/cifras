@@ -1,0 +1,305 @@
+{
+  "id": "o-senhor-ressurgiu",
+  "titulo": "O Senhor Ressurgiu",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. O CRISTO, SENHOR RESSUSCITOU,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em6"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A NOSSA ESPERANÇA REALIZOU:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VENCIDA A MORTE PARA SEMPRE,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TRIUNFA A VIDA ETERNAMENTE!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E6/B"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. O CRISTO REMIU A SEUS IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em6"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "AO PAI OS CONDUZIU POR SUA MÃO;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NO ESPÍRITO SANTO UNIDA ESTEJA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A FAMÍLIA DE DEUS, QUE É A IGREJA!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E6/B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. O CRISTO, NOSSA PÁSCOA SE IMOLOU,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em6"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SEU SANGUE DA MORTE NOS LIVROU:",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "INCÓLUMES O MAR ATRAVESSAMOS,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "E À TERRA PROMETIDA CAMINHAMOS!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E6/B"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

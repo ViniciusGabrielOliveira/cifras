@@ -1,0 +1,534 @@
+{
+  "id": "gloria-a-deus-nas-alturas-comunidade-recado",
+  "titulo": "Glória A Deus Nas Alturas!",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "intro",
+      "label": "Intro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR DEUS, REI DOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DEUS PAI TODO-PODERO-SO:",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS  LOUVA-MOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS BENDIZE-MOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS ADO--RA-MOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS GLORIFICA-MOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS DAMOS GRAÇAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POR VOSSA IMENSA GLÓRIA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR JESUS CRISTO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 2,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FILHO UNIGÊNITO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "FILHO DE DEUS PAI.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE TIRAIS O PECADO DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI A NOSSA SÚPLICA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS QUE ESTAIS À DIREITA DO PAI,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am/G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SÓ VÓS SOIS O SANTO, SÓ VÓS, O SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SÓ VÓS, O ALTÍSSIMO, JE----SUS CRISTO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "COM O ESPÍRITO SAN-TO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C/B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NA GLÓRIA DE  DEUS PAI. AMÉM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am/G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D/F#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

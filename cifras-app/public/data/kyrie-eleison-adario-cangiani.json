@@ -1,0 +1,182 @@
+{
+  "id": "kyrie-eleison-adario-cangiani",
+  "titulo": "Kyrie Eleison",
+  "artista": "Adario Cangiani",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE SOIS A PLENITUDE DA VERDADE E DA GRAÇA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE,  KYRIE, KYRIE  ELEISON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE VOS TORNASTES POBRE PARA NOS ENRIQUECER,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CHRISTE, CHRISTE, CHRISTE  ELEISON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE VIESTES PARA FAZER DE NÓS O VOSSO POVO SANTO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE,  KYRIE, KYRIE  ELEISON!(BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

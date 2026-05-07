@@ -1,0 +1,51 @@
+{
+  "id": "confessemos",
+  "titulo": "Confessemos",
+  "artista": "Fr. Luiz Turra",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "PRESIDENTE:  CONFESSEMOS OS NOSSOS PECADOS!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

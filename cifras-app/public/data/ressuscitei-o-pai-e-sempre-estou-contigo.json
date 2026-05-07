@@ -1,0 +1,544 @@
+{
+  "id": "ressuscitei-o-pai-e-sempre-estou-contigo",
+  "titulo": "Ressuscitei, Ó Pai, E Sempre Estou Contigo",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "Bb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, VÓS ME SONDAIS E CONHECEIS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SABEIS QUANDO ME SENTO OU ME LEVANTO;",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "DE LONGE PENETRAIS MEUS PENSAMENTOS,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PERCEBEIS QUANDO ME DEITO E QUANDO EU ANDO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "OS MEUS CAMINHOS VOS SÃO TODOS CONHECIDOS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "2. A PALAVRA NEM CHEGOU À MINHA LÍNGUA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E JÁ, SENHOR, A CONHECEIS INTEIRAMENTE.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "POR DETRÁS E PELA FRENTE ME ENVOLVEIS;",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PUSESTES SOBRE MIM A VOSSA MÃO.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA VERDADE É POR DEMAIS MARAVILHOSA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É TÃO SUBLIME QUE NÃO POSSO COMPREENDÊ-LA.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "3. EM QUE LUGAR ME OCULTAREI DE VOSSO ESPÍRITO?",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E PARA ONDE FUGIREI DE VOSSA FACE?",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SE EU SUBIR ATÉ OS CÉUS, ALI ESTAIS;",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SE EU DESCER ATÉ O ABISMO, ESTAIS PRESENTE.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "4. SE A AURORA ME EMPRESTAR AS SUAS ASAS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PARA EU VOAR E HABITAR NO FIM DOS MARES;",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MESMO LÁ VAI ME GUIAR A VOSSA MÃO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E SEGURAR-ME COM FIRMEZA A VOSSA DESTRA.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "5. SE EU PENSASSE: A ESCURIDÃO VENHA ESCONDER-ME",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E QUE A LUZ AO MEU REDOR SE FAÇA NOITE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MESMO AS TREVAS PARA VÓS NÃO SÃO ESCURAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A PRÓPRIA NOITE RESPLANDECE COMO O DIA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E A ESCURIDÃO É TÃO BRILHANTE COMO A LUZ.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

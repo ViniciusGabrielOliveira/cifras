@@ -1,0 +1,294 @@
+{
+  "id": "senhor-que-fazeis-passar-da-morte-david-brunorio",
+  "titulo": "Senhor, Que Fazeis Passar Da Morte Para A Vida",
+  "artista": "David Brunório",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "OBS: CAPOTRASTE NA 1ª CASA",
+          "acordes": []
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, QUE FAZEIS PASSAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DA MORTE PARA A VIDA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM OUVE A VOSSA PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am/G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE QUISESTES SER",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "LEVANTADO DA TERRA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C9"
+            }
+          ]
+        },
+        {
+          "letra": "Am7     Am/G  D/F#",
+          "acordes": []
+        },
+        {
+          "letra": "PARA QUE TENHA A VIDA ETERNA",
+          "acordes": []
+        },
+        {
+          "letra": "TODA AQUELE QUE CRE EM VOS",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE NOS SUBMETEIS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "AO JULGAMENTO DA VOSSA CRUZ,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PARA LEVARMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "A GLÓRIA DA RESSURREIÇÃO",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

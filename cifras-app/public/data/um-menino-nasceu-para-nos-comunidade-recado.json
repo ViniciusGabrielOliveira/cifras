@@ -1,0 +1,556 @@
+{
+  "id": "um-menino-nasceu-para-nos-comunidade-recado",
+  "titulo": "Um Menino Nasceu Para Nós",
+  "artista": "MARCELO OLIVEIRA (COMUNIDADE RECADO)",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARCELO OLIVEIRA (COMUNIDADE RECADO)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "1. Ó REDENTOR DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "DO ETERNO PAI GERADO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "QUAL FILHO BEM AMADO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "DO PAI LUZ E ESPLENDOR,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA ESPERANÇA ETERNA,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "OUVI DOS VOSSOS SER--VOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "A PRECE HUMILDE E TER--NA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "2. LEMBRAI, AUTOR DA VIDA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "NASCIDO DE MARIA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE NOSSA FORMA HUMA-NA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TOMASTES, NESTE DIA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "A GLÓRIA DESTE DIA",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ATESTA UM FATO NOVO,",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "QUE VÓS, DO PAI DESCENDO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SALVASTES VOSSO PO---VO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "3. SAÚDAM VOSSA VINDA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "O CÉU, A TERRA, O MAR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "E TODO SER QUE VIVE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "ENTOA O SEU CANTAR.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "E NÓS, POR VOSSO SANGUE",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "REMIDOS COMO POVO,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "VOS CELEBRAMOS HOJE,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CANTANDO UM CANTO NO---VO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

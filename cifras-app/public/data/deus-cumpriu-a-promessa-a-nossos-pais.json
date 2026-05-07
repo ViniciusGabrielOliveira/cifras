@@ -1,0 +1,540 @@
+{
+  "id": "deus-cumpriu-a-promessa-a-nossos-pais",
+  "titulo": "Deus Cumpriu A Promessa A Nossos Pais",
+  "artista": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PAULO KEMP E THAYSSA GODÊNCIO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. Ó SENHOR NOSSO DEUS, COMO É GRANDE",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G#m"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "DESDOBRASTES NOS CÉUS VOSSA GLÓRIA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "COM GRANDEZA, ESPLENDOR, MAJESTADE.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. O PERFEITO LOUVOR VOS É DADO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "PELOS LÁBIOS DOS MAIS PEQUENINOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "DE CRIANÇAS QUE A MÃE AMAMENTA.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. EIS A FORÇA QUE OPONDES AOS MAUS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "REDUZINDO O INIMIGO AO SILÊNCIO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CONTEMPLANDO ESTES CÉUS QUE PLASMASTES",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "E FORMASTES COM DEDOS DE ARTISTA;",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "4. VENDO A LUA E ESTRELAS BRILHANTES,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "PERGUNTAMOS: SENHOR, QUE É O HOMEM,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PARA DELE ASSIM VOS LEMBRARDES",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "E O TRATARDES COM TANTO CARINHO?",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "5. POUCO ABAIXO DE DEUS O FIZESTES,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "E"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "COROANDO-O DE GLÓRIA E ESPLENDOR;",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS LHE DESTES PODER SOBRE TUDO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSAS OBRAS AOS PÉS LHE PUSESTES:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "6. AS OVELHAS, OS BOIS, OS REBANHOS,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TODO O GADO E AS FERAS DA MATA;",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PASSARINHOS E PEIXES DOS MARES,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TODO SER QUE SE MOVE NAS ÁGUAS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

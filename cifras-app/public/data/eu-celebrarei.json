@@ -1,0 +1,261 @@
+{
+  "id": "eu-celebrarei",
+  "titulo": "Eu Celebrarei",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "EU CELEBRAREI",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "CANTANDO AO SENHOR",
+          "acordes": []
+        },
+        {
+          "letra": "E SÓ NELE ME ALEGRAREI (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "EU O LOUVO E ADORO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE TENS TRIUNFADO (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "PORQUE SANTO É!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SANTO É!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO É BENDITO O QUE VEM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO É BENDITO O QUE VEM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO É BENDITO O QUE VEM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DE DEUS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SANTO É!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE SANTO É!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

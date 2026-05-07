@@ -1,0 +1,295 @@
+{
+  "id": "vinde-cristaos-vinde-porfia",
+  "titulo": "Vinde Cristãos, Vinde À Porfia",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. VINDE CRISTÃOS, VINDE À PORFIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "HINOS CANTEMOS DE LOUVOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "HINOS DE PAZ E DE ALEGRIA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE OS ANJOS CANTAM AO SENHOR:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. FOI NESTA NOITE VENTUROSA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "EM QUE NASCEU O SALVADOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ANJOS  COM VOZ HARMONIOSA,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DERAM A DEUS O SEU LOUVOR:",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. VINDE JUNTAR-VOS AOS PASTORES,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VINDE COM ELES A BELÉM!",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VINDE, CORRENDO PRESSUROSOS;",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O SALVADOR, ENFIM, NOS VEM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

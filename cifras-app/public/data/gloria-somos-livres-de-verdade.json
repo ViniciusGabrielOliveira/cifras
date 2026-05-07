@@ -1,0 +1,306 @@
+{
+  "id": "gloria-somos-livres-de-verdade",
+  "titulo": "Glória! Somos Livres De Verdade!",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "PRISIONEIROS DA TREVAS JÁ NÃO SOMOS NUNCA MAIS",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POIS AGORA NÓS ESTAMOS NOVAMENTE COM O PAI.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Ô, Ô, Ô, Ô  GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "OS GRILHÕES DA OPRESSÃO ROMPEM-SE COM O SENHOR",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POIS CRISTO É FORÇA VIVA QUE NOS TRAZ LIBERTAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 47,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Ô, Ô, Ô, Ô  GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NA CERTEZA QUE A MORTE JÁ NÃO É MAIS SOLIDÃO",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS JUNTOS, TODOS FORTES EM BUSCA DA RESSURREIÇÃO",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 48,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Ô, Ô, Ô, Ô  GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SOMOS LIVRES DE VERDADE!",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITOU NOSSA VERDADE!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

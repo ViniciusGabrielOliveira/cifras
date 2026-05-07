@@ -1,0 +1,270 @@
+{
+  "id": "este-sacrificio-de-louvor",
+  "titulo": "Este Sacrifício De Louvor",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "1. QUE PODEREI RETRIBUIR AO SENHOR DEUS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "POR TUDO AQUILO QUE ELE FEZ EM MEU FAVOR?",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "2. ELEVO O CÁLICE DA MINHA SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "INVOCANDO O NOME SANTO DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "3. VOU CUMPRIR MINHAS PROMESSAS AO SENHOR",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NA PRESENÇA DE SEU POVO REU-NIDO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        },
+        {
+          "letra": "4. POR ISSO OFERTO UM SACRIFÍCIO DE LOUVOR",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "INVOCANDO O NOME SANTO DO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

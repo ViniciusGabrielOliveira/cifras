@@ -1,0 +1,314 @@
+{
+  "id": "pai-nosso-marcelo-oliveira",
+  "titulo": "Pai Nosso",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "F#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MARCELO OLIVEIRA",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "PAI NOSSO QUE ESTAIS NOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICADO SEJA O VOSSO NOME;",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "VENHA A NÓS O VOSSO REINO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 14,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E SEJA FEITA VOSSA VONTADE,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM NA TERRA COMO NO CÉU;",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO NOSSO DE CADA DIA NOS DAI HO----JE;",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 36,
+              "acorde": "E"
+            },
+            {
+              "posicao": 38,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOAI-NOS AS NOSSAS OFENSAS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM COMO NÓS PERDOAMOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "A QUEM NOS TEM OFENDIDO;",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "E NÃO NOS DEIXEIS   CAIR EM TENTAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "MAS LIVRAI---NOS,        LIVRAI-----NOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B/C#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C#7"
+            }
+          ]
+        },
+        {
+          "letra": "MAS LIVRAI---NOS DO   MAL.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

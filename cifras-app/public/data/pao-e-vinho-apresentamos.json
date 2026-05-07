@@ -1,0 +1,325 @@
+{
+  "id": "pao-e-vinho-apresentamos",
+  "titulo": "Pão E Vinho Apresentamos",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "1. PÃO E VINHO, REPARTIDOS ENTRE IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "SÃO O LAÇO DA UNIDADE DO TEU POVO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS VIDAS SÃO TAMBÉM PEQUENOS GRÃOS,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 39,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE CONTIGO VÃO FORMAR O HOMEM NOVO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "2. EIS AQUI A NOSSA LUTA, DIA-A-DIA,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "PRA GANHAR COM O TRABALHO NOSSO PÃO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "MAS TU ÉS O ALIMENTO DA ALEGRIA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DOS POBRES FORTALECE O CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "3. VEM, SENHOR, VEM CAMINHAR À NOSSA FRENTE.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "VEM CONOSCO TODA A TERRA TRANSFORMAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "E NO MUNDO LIBERTADO E TRANSPARENTE,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "OS IRMÃOS À MESMA MESA VÃO SENTAR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

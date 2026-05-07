@@ -1,0 +1,347 @@
+{
+  "id": "ja-e-tempo-de-amar",
+  "titulo": "Já É Tempo De Amar",
+  "artista": "Desconhecido",
+  "tom": "A/B",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "intro",
+      "label": "Intro",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "1. JÁ É TEMPO DE AMAR,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "DE VER A FÉ CRESCER",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "E DEIXAR BROTAR A PAZ NO CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS QUEREM TER AMOR,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "MAS PRECISAM DESCOBRIR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "QUE O AMOR ESTÁ PRESENTE EM CADA IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "2. OLHA BEM AO TEU REDOR,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "A TERNURA DE UMA FLOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "QUE DESABROCHOU EM MEIO A CRIAÇÃO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "GRANDE PROVA DE AMOR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "DE UM DEUS QUE TUDO FEZ",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "PRA TE VER FELIZ VIVENDO EM COMUNHÃO.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "3. VOLTA O TEU OLHAR AO CÉU",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "E VÊ QUÃO GRANDE AMOR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "HÁ NA IMENSIDÃO A VIDA É UMA LIÇÃO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "VEM, QUE O SOL JÁ FEZ BRILHAR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "A LUZ DO AMANHECER",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#m7/B"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A9"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS DESPERTAR UNIDOS COMO IRMÃOS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B/A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "a-mesa-santa-que-preparamos",
+  "titulo": "A Mesa Santa Que Preparamos",
+  "artista": "Desconhecido",
+  "tom": "Gm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "1. A MESA SANTA QUE PREPARAMOS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "MÃOS QUE SE ELEVAM A TI, Ó SENHOR",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "O PÃO E O VINHO, FRUTOS DA TERRA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DURO TRABALHO, CARINHO E AMOR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. FLORES, ESPINHOS, DOR E ALEGRIA,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PAIS, MÃES E FILHOS DIANTE DO ALTAR.",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "A NOSSA OFERTA EM NOVA FESTA,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A NOSSA DOR, VEM SENHOR TRANSFORMAR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3.  A VIDA NOVA, NOVA FAMÍLIA,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "QUE CELEBRAMOS AQUI TEM LUGAR.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TUA BONDADE VEM COM FARTURA",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "É SÓ SABER REUNIR, PARTILHAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

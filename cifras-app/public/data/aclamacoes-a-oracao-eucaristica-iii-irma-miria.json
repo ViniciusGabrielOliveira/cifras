@@ -1,0 +1,353 @@
+{
+  "id": "aclamacoes-a-oracao-eucaristica-iii-irma-miria",
+  "titulo": "Aclamações À Oração Eucarística Iii",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SANTIFICAI E REUNI O VOSSO POVO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICAI E REUNI O VOSSO POVO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICAI NOSSA OFERENDA, Ó SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SANTIFICAI NOSSA OFERENDA, Ó SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBEI, Ó SENHOR, A NOSSA OFERTA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "RECEBEI, Ó SENHOR, A NOSSA OFERTA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UM SÓ CORPO E UM SÓ ESPÍRITO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UM SÓ CORPO E UM SÓ ESPÍRITO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UMA PERFEITA OFERENDA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FAZEI DE NÓS UMA PERFEITA OFERENDA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRAI-VOS, Ó PAI, DA VOSSA IGREJA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRAI-VOS, Ó PAI, DA VOSSA IGREJA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRAI-VOS, Ó PAI, DOS VOSSOS FILHOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "LEMBRAI-VOS, Ó PAI, DOS VOSSOS FILHOS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS SACIAI COM VOSSA GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS SACIAI COM VOSSA GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

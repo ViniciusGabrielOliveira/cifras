@@ -1,0 +1,94 @@
+{
+  "id": "reunidos-aqui",
+  "titulo": "Reunidos Aqui",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "REUNIDOS AQUI SÓ PRA LOUVAR AO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NOVAMENTE AQUI, EM UNIÃO.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "ALGO BOM VAI ACONTECER,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ALGO BOM DEUS TEM PRA NÓS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "REUNIDOS AQUI SÓ PRA LOUVAR O SENHOR.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            },
+            {
+              "posicao": 34,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

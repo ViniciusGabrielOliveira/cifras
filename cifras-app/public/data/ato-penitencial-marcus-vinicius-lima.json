@@ -1,0 +1,206 @@
+{
+  "id": "ato-penitencial-marcus-vinicius-lima",
+  "titulo": "Senhor, Nossa Paz",
+  "artista": "Marcus Lima",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, NOSSA PAZ,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE, KYRIE,  KYRIE, ELEISON.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 4,
+              "acorde": "B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, NOSSA PÁSCOA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, NOSSA VIDA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 8,
+              "acorde": "B"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "KYRIE, KYRIE,  KYRIE, ELEISON.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 4,
+              "acorde": "B"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

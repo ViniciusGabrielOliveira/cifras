@@ -1,0 +1,342 @@
+{
+  "id": "perene-pascoa-marcelo-oliveira",
+  "titulo": "Perene Páscoa",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANTÍFONA DE ENTRADA DO DOMINGO DE",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "1. DESDOBRA-SE NO CÉU",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "RESPLANDECENTE AURORA.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGRE, EXULTA O MUNDO;",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "GEMENDO, O INFERNO CHORA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "POIS EIS QUE O REI, DESCIDO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "À REGIÃO DA MORTE,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELES QUE O ESPERAVAM",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "CONDUZ À NOVA SORTE.",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. POR SOB A PEDRA POSTO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "POR GUARDAS VIGIADO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SEPULTA A PRÓPRIA MORTE",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS RESSUSCITADO.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DA REGIÃO DA MORTE",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ENCERRE O APELO INGENTE:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITOU! EXCLAMA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "O ANJO REFULGENTE.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "3. JESUS, PERENE PÁSCOA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "A TODOS ALEGRAI-NOS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NASCIDOS PARA A VIDA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D/F#"
+            }
+          ]
+        },
+        {
+          "letra": "DA MORTE LIBERTAI-NOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "LOUVOR AO QUE DA MORTE",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "RESSUSCITADO VEM,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "AO PAI E AO PARÁCLITO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNAMENTE. AMÉM.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

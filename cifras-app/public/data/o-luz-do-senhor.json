@@ -1,0 +1,69 @@
+{
+  "id": "o-luz-do-senhor",
+  "titulo": "Ó Luz Do Senhor",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "Ó LUZ DO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE VEM SOBRE A TERRA,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "INUNDA MEU SER,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "PERMANECE EM NÓS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

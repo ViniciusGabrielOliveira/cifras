@@ -1,0 +1,301 @@
+{
+  "id": "ou-santos-ou-nada",
+  "titulo": "Ou Santos Ou Nada",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "EM MEU PENSAR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "EM MEU SENTIR",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO EU FALAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "NA HORA DE DECIDIR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "EM TODO O MEU PROCEDER",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "ACIMA DE TUDO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "VIVENDO A DOR E O SOFRER",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "OU SANTOS OU NADA",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO EU AMAR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO ME VESTIR",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "NA HORA DE TRABALHAR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m7"
+            }
+          ]
+        },
+        {
+          "letra": "SE DEUS CONTAS ME PEDIR",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NA TRIBULAÇÃO",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO ME DESPREZAREM",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "E MENTIDO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DISSERAM O MAL CONTRA MIM",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D9"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

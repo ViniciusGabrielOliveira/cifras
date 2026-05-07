@@ -1,0 +1,84 @@
+{
+  "id": "senhor-nos-te-esperamos",
+  "titulo": "Senhor Nós Te Esperamos",
+  "artista": "Desconhecido",
+  "tom": "G#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR NÓS TE ESPERAMOS, SENHOR NÃO TARDES MAIS.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 43,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR NÓS TE ESPERAMOS, VEM LOGO, VEM NOS SALVAR. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            },
+            {
+              "posicao": 46,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

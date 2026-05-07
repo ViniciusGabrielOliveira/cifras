@@ -1,0 +1,99 @@
+{
+  "id": "cordeiro-de-deus-vii",
+  "titulo": "Cordeiro De Deus Vii",
+  "artista": "JOSÉ ACÁCIO SANTANA",
+  "tom": "C#m",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "CORDEIRO DE DEUS QUE TIRAIS O PECADO DO MUNDO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 40,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "DAÍ-NOS, DAÍ-NOS A PAZ!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

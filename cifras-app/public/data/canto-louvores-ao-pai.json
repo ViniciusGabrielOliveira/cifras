@@ -1,0 +1,142 @@
+{
+  "id": "canto-louvores-ao-pai",
+  "titulo": "Canto Louvores Ao Pai",
+  "artista": "Desconhecido",
+  "tom": "G7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "CANTO LOUVORES AO PAI.  (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A ELE LOUVORES E GLÓRIA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CANTO LOUVORES AO FILHO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A ELE LOUVORES E GLÓRIA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CANTO LOUVORES AO ESPÍRITO. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A ELE LOUVORES E GLÓRIA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "CANTO LOUVORES A TRINDADE. (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A ELA LOUVORES E GLÓRIA. (BIS)",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

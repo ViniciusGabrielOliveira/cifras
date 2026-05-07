@@ -1,0 +1,155 @@
+{
+  "id": "santo-ministerio-servos-do-senhor",
+  "titulo": "Santo",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O  CEU E A TERRA PROCLAMAM VOSSA GLORIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "HOSA--NA  NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C4"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM EM NOME DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "HOSA--NA NAS ALTURAS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Ab"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G4"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

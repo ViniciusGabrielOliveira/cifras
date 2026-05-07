@@ -1,0 +1,262 @@
+{
+  "id": "longe-distante-de-casa",
+  "titulo": "Longe Distante De Casa",
+  "artista": "FREI FABRETTI",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "J. THOMAZ FILHO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "1. ENTÃO CHEGARAM PASTORES,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TRAZENDO O SUOR DO TRABALHO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SIMPLES NA POBREZA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NUM SORRISO O MAIS NOBRE AGASALHO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. ENTÃO OS SABIOS PARTIRAM:",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "HUMILDE, INSISTENTE PROCURA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "LONGE DOS PALACIOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MANJEDOURA FOI BERÇO E TERNURA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. E NÓS TAMBÉM ACORREMOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM PODE ESQUECER O MENINO?",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUIS MORAR CONOSCO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "DESVELOU-NOS O NOSSO DESTINO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

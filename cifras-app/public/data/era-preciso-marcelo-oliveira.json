@@ -1,0 +1,596 @@
+{
+  "id": "era-preciso-marcelo-oliveira",
+  "titulo": "Era Preciso",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "ANTÍFONA DE COMUNHÃO DO 3º DOMINGO DA PÁSCOA - ANO B -",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "1. CANTAI AO SENHOR DEUS UM CANTO NOVO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CANTAI AO SENHOR DEUS, Ó TERRA INTEIRA!",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "CANTAI E BENDIZEI SEU SANTO NOME!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "CANTAI E BENDIZEI SEU SANTO NOME!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. DIA APÓS DIA ANUNCIAI SUA SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "MANIFESTAI A SUA GLÓRIA ENTRE AS NAÇÕES,",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. POIS DEUS É GRANDE E MUITO DIGNO DE LOUVOR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "PORQUE UM NADA SÃO OS DEUSES DOS PAGÃOS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "PORQUE UM NADA SÃO OS DEUSES DOS PAGÃOS.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "4. FOI O SENHOR E NOSSO DEUS QUEM FEZ OS CÉUS:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A"
+            },
+            {
+              "posicao": 46,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DIANTE DELE VÃO A GLÓRIA E A MAJESTADE,",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "E O SEU TEMPLO, QUE BELEZA E ESPLENDOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E O SEU TEMPLO, QUE BELEZA  E ESPLENDOR!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "5. Ó FAMÍLIA DAS NAÇÕES, DAI AO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "Ó NAÇÕES, DAI AO SENHOR PODER E GLÓRIA,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-LHE A GLÓRIA QUE É DEVIDA AO SEU NOME!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DAI-LHE A GLÓRIA QUE É DEVIDA  AO SEU NOME!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "6. OFERECEI UM SACRIFÍCIO NOS SEUS ÁTRIOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "A"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "ADORAI-O NO ESPLENDOR DA SANTIDADE,",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TERRA INTEIRA, ESTREMECEI DIANTE DELE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "TERRA INTEIRA, ESTREMECEI DIANTE DELE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "7. PUBLICAI ENTRE AS NAÇÕES: REINA O SENHOR!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            },
+            {
+              "posicao": 39,
+              "acorde": "A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "E OS POVOS ELE JULGA COM JUSTIÇA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E OS POVOS ELE JULGA  COM JUSTIÇA.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

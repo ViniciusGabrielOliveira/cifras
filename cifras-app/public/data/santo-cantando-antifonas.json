@@ -1,0 +1,167 @@
+{
+  "id": "santo-cantando-antifonas",
+  "titulo": "Santo",
+  "artista": "Ruzye",
+  "tom": "Fm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Fm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "A VOSSA GLÓRIA",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA, HOSANA, NAS ALTU-RAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Cm"
+            }
+          ]
+        },
+        {
+          "letra": "EM NOME DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA, NAS ALTU-RAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Fm"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Db"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Fm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

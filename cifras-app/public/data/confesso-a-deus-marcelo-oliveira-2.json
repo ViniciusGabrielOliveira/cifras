@@ -1,0 +1,200 @@
+{
+  "id": "confesso-a-deus-marcelo-oliveira-2",
+  "titulo": "Confesso A Deus Todo Poderoso",
+  "artista": "Marcelo Oliveira",
+  "tom": "Gm7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D#m"
+            }
+          ]
+        },
+        {
+          "letra": "CONFESSO A DEUS TODO-PODEROSO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Bb9"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F/A"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS, IRMÃOS E IRMÃS,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE PEQUEI MUITAS VEZES POR PENSAMENTOS,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D#9"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Bb/D"
+            }
+          ]
+        },
+        {
+          "letra": "PALAVRAS, ATOS E OMISSÕES,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Cm/A#"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "POR MINHA CULPA, TÃO GRANDE CULPA.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D#"
+            }
+          ]
+        },
+        {
+          "letra": "E PEÇO À VIRGEM MARIA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D#9"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb/D"
+            }
+          ]
+        },
+        {
+          "letra": "AOS ANJOS E SANTOS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Cm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb/D"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS, IRMÃOS F IRMÃS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D#9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb/D"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ROGUEIS POR MIM A DEUS, NOSSO SENHOR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Cm7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 41,
+              "acorde": "F"
+            },
+            {
+              "posicao": 43,
+              "acorde": "D#/G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "F/A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F/A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

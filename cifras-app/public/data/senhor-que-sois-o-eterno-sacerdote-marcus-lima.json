@@ -1,0 +1,197 @@
+{
+  "id": "senhor-que-sois-o-eterno-sacerdote-marcus-lima",
+  "titulo": "Senhor, Que Sois O Eterno Sacerdote",
+  "artista": "Marcus Lima",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE SOIS O ETERNO SACERDOTE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DA NOVA ALIANÇA, TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "E"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE NOS EDIFICAIS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "COMO PEDRAS VIVAS",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "NO TEMPLO SANTO DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE NOS TORNAIS CONCIDADÃOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "DOS SANTOS NOS CÉUS,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

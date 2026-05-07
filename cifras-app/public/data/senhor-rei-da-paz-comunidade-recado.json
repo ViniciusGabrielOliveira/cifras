@@ -1,0 +1,147 @@
+{
+  "id": "senhor-rei-da-paz-comunidade-recado",
+  "titulo": "Senhor Rei Da Paz",
+  "artista": "Comunidade Recado",
+  "tom": "E9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am/E"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, REI DA PAZ.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, LUZ NAS TREVAS.",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, IMAGEM DO HOMEM NOVO.",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE, PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G#m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

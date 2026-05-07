@@ -1,0 +1,269 @@
+{
+  "id": "senhor-que-sois-o-defensor-dos-pobres-alessandro",
+  "titulo": "Senhor Que Sois O Defensor Dos Pobres",
+  "artista": "Alessandro Carvalho",
+  "tom": "Gm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE SOIS O DEFENSOR DOS POBRES,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, QUE SOIS O REFÚGIO DOS FRACOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE SOIS A ESPERANÇA DOS PECADORES,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Cm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

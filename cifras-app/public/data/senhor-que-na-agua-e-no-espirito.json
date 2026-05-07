@@ -1,0 +1,242 @@
+{
+  "id": "senhor-que-na-agua-e-no-espirito",
+  "titulo": "Senhor Que Na Água E No Espírito",
+  "artista": "Daniel De Angeles",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE NA ÁGUA E NO ESPÍRITO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NOS REGENERASTES À VOSSA IMAGEM,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE   DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#7/A#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE ENVIAIS O VOSSO ESPÍRITO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CRIAR EM NÓS UM CORAÇÃO NOVO,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE   DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#7/A#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B4"
+            }
+          ]
+        },
+        {
+          "letra": "TODOS: CRISTO,  TENDE PIEDA--DE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 29,
+              "acorde": "B"
+            },
+            {
+              "posicao": 35,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO,  TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 4,
+              "acorde": "E/G#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE NOS TORNASTES PARTICIPANTES",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DO VOSSO CORPO E DO VOSSO SANGUE,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 26,
+              "acorde": "G#m"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE   DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#7/A#"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B4"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G#m"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

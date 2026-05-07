@@ -1,0 +1,215 @@
+{
+  "id": "coracao-contrito",
+  "titulo": "Coração Contrito",
+  "artista": "Flavinho",
+  "tom": "D9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G6"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G6"
+            }
+          ]
+        },
+        {
+          "letra": "1. SENHOR, QUE VIESTES",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm/D"
+            }
+          ]
+        },
+        {
+          "letra": "SALVAR OS CORA-ÇÕES ARREPENDI--DOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. OH! CRISTO, QUE VIESTES CHAMAR",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Gm6/D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "OS PECADORES DE CORAÇÃO CONTRI-TO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE INTERCEDEIS POR NÓS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm6/D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTO DO PAI DAS MISERICÓR-DIAS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

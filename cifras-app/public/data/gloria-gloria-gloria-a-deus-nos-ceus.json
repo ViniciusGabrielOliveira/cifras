@@ -1,0 +1,555 @@
+{
+  "id": "gloria-gloria-gloria-a-deus-nos-ceus",
+  "titulo": "Glória Glória Glória A Deus Nos Céus",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "1. DEUS E PAI, NÓS VOS LOUVAMOS, ADORAMOS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS VOS BENDIZEMOS POR VOSSO AMOR;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DAMOS GLÓRIA ETERNA AO VOSSO SANTO NOME.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSOS DONS VOS AGRADECEMOS, Ó PAI!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "2. SENHOR NOSSO, JESUS CRISTO, SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "FILHO UNIGÊNITO DE DEUS PAI.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS DE DEUS CORDEIRO, VÓS, CORDEIRO SANTO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSAS MUITAS CULPAS, SENHOR, PERDOAI!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "3. VÓS QUE ESTAIS SENTADO JUNTO DE DEUS PAI.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "COMO NOSSO IRMÃO, NOSSO INTERCESSOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ACOLHEI, BENIGNO, OS NOSSOS PEDIDOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ATENDEI, SENHOR, ESTE NOSSO CLAMOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "4. VÓS, SENHOR JESUS, SOMENTE SOIS O SANTO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DE DEUS O ALTÍSSIMO, O SENHOR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "COM O SANTO AMOR, ESPÍRITO DIVINO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "DE DEUS PAI NA GLÓRIA E NO PURO ESPLENDOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 38,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

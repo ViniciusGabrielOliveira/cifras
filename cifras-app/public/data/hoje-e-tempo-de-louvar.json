@@ -1,0 +1,277 @@
+{
+  "id": "hoje-e-tempo-de-louvar",
+  "titulo": "Hoje É Tempo De Louvar",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "HOJE É TEMPO DE LOUVAR A DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            },
+            {
+              "posicao": 32,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "EM NÓS AGORA HABITA O SEU ESPÍRITO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ENTÃO É SÓ CANTAR E A CRISTO EXALTAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E SUA GLÓRIA ENCHERÁ ESTE LUGAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VEM LOUVAR, VEM LOUVAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VEM LOUVAR, VEM LOUVAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "NO MEIO DOS LOUVORES DEUS HABITA.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "É SEU PRAZER CUMPRIR O QUE NOS DIZ.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "ENTÃO É SÓ CANTAR E A CRISTO EXALTAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E SUA GLÓRIA ENCHERÁ ESTE LUGAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VEM LOUVAR, VEM LOUVAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VEM LOUVAR, VEM LOUVAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

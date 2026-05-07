@@ -1,0 +1,252 @@
+{
+  "id": "tomado-pela-mao",
+  "titulo": "Tomado Pela Mão",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E4"
+            }
+          ]
+        },
+        {
+          "letra": "1. SE JESUS ME DIZ: AMIGO, DEIXA TUDO E VEM COMIGO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 46,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE TUDO É MAIS FORMOSO E MAIS FELIZ",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "SE JESUS ME DIZ: AMIGO, DEIXA TUDO E VEM COMIGO",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 43,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "EU, MINHA MÃO POREI NA SUA E IREI COM ELE",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 38,
+              "acorde": "A"
+            },
+            {
+              "posicao": 41,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 44,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E4"
+            }
+          ]
+        },
+        {
+          "letra": "2. EU TE LEVAREI, AMIGO, A UM LUGAR COMIGO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE O SOL E AS ESTRELAS BRILHAM MAIS",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EU TE LEVAREI AMIGO A UM LUGAR COMIGO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE TUDO É MAIS FORMOSO E MAIS FELIZ",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "E4"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 37,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 40,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

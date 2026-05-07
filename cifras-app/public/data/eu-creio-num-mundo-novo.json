@@ -1,0 +1,276 @@
+{
+  "id": "eu-creio-num-mundo-novo",
+  "titulo": "Eu Creio Num Mundo Novo",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "EU CREIO NUM MUNDO NOVO POIS, CRISTO RESSUSCITOU!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EU VEJO SUA LUZ NO POVO, POR ISSO ALEGRE SOU.",
+          "acordes": [
+            {
+              "posicao": 30,
+              "acorde": "A"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EM TODA PEQUENA OFERTA, NA FORÇA DA UNIÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NO POBRE QUE SE LIBERTA, EU VEJO RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "NA MÃO QUE FOI ESTENDIDA, NO DOM DA LIBERTAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            },
+            {
+              "posicao": 49,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NASCENDO UMA NOVA VIDA, EU VEJO RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "NAS FLORES OFERECIDAS E QUANDO SE DÁ PERDÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A"
+            },
+            {
+              "posicao": 41,
+              "acorde": "D"
+            },
+            {
+              "posicao": 46,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NAS DORES COMPADECIDAS, EU VEJO RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "outro",
+      "label": "Outro",
+      "linhas": [
+        {
+          "letra": "NOS FRACOS FORTALECIDOS, EU VEJO RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "NA FÉ DOS QUE ESTÃO SOFRENDO, NO RISO DO MEU IRMÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 48,
+              "acorde": "D"
+            },
+            {
+              "posicao": 53,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "NA HORA EM QUE ESTÁ MORRENDO, EU VEJO RESSURREIÇÃO!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            },
+            {
+              "posicao": 47,
+              "acorde": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

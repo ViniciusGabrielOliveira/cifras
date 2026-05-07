@@ -1,0 +1,242 @@
+{
+  "id": "senhor-que-sois-o-caminho-que",
+  "titulo": "Senhor Que Sois O Caminho",
+  "artista": "Daniel De Angeles",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "SENHOR, QUE SOIS O CAMINHO QUE NOS LE-VA AO PAI,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 38,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, QUE SOIS A VERDADE QUE ILUMI-NA OS POVOS,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 39,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G/B"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE SOIS A VIDA QUE RENO-VA O MUNDO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 33,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D/C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G/B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

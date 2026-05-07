@@ -1,0 +1,573 @@
+{
+  "id": "o-senhor-ressuscitou-comunidade-recado",
+  "titulo": "O Senhor Ressuscitou",
+  "artista": "ANDRÉ ZAMUR",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LITURGIA DAS HORAS, DOMINGO DE PÁSCOA, LAUDES,",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. SOIS VÓS, Ó SENHOR, O MEU DEUS!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DESDE A AURORA ANSIOSO VOS BUSCO!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "A MINH'ALMA TEM SEDE DE VÓS,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "MINHA CARNE TAMBÉM VOS DESEJA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COMO TERRA SEDENTA E SEM ÁGUA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. VENHO, ASSIM, CONTEMPLAR-VOS NO TEMPLO,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PARA VER VOSSA GLÓRIA E PODER.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "VOSSO AMOR VALE MAIS DO QUE A VIDA:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E POR ISSO MEUS LÁBIOS VOS LOUVAM.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. QUERO, POIS, VOS LOUVAR PELA VIDA,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E ELEVAR PARA VÓS MINHAS MÃOS!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "A MINH'ALMA SERÁ SACIADA,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COMO EM GRANDE BANQUETE DE FESTA;",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CANTARÁ A ALEGRIA EM MEUS LÁBIOS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "AO CANTAR PARA VÓS MEU LOUVOR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "4. PENSO EM VÓS NO MEU LEITO, DE NOITE,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NAS VIGÍLIAS SUSPIRO POR VÓS!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "PARA MIM FOSTES SEMPRE UM SOCORRO;",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DE VOSSAS ASAS À SOMBRA EU EXULTO!",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "MINHA ALMA SE AGARRA EM VÓS;",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "COM PODER VOSSA MÃO ME SUSTENTA.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "5. DEMOS GLÓRIA A DEUS PAI ONIPOTENTE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E A SEU FILHO, JESUS CRISTO, SENHOR NOSSO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "E AO ESPÍRITO QUE HABITA EM NOSSO PEITO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "PELOS SÉCULOS DOS SÉCULOS. AMÉM.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "id": "bendito-sejais-senhor-comunidade-recado",
+  "titulo": "Bendito Sejais Senhor",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "PELO VERBO QUE SE FEZ CARNE E HABITOU ENTRE NÓS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "C"
+            },
+            {
+              "posicao": 50,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "POIS NESTE RECÉM NASCIDO RESPLANDECEM HOMEM E DEUS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G"
+            },
+            {
+              "posicao": 46,
+              "acorde": "C"
+            },
+            {
+              "posicao": 51,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "POR ABRIRMOS POR  VOCÊ GRAÇA A PORTA DA SALVAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 48,
+              "acorde": "C"
+            },
+            {
+              "posicao": 50,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "POIS ACOLHESTES NOSSA HUMANIDADE EM VOSSA DIVINDADE.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 41,
+              "acorde": "G"
+            },
+            {
+              "posicao": 52,
+              "acorde": "C"
+            },
+            {
+              "posicao": 54,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "POR RADIANTE LUZ DIVINA A BRILHAR SOBRE A TERRA.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G"
+            },
+            {
+              "posicao": 47,
+              "acorde": "C"
+            },
+            {
+              "posicao": 49,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G/F"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

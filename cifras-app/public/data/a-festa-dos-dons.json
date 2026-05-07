@@ -1,0 +1,285 @@
+{
+  "id": "a-festa-dos-dons",
+  "titulo": "A Festa Dos Dons",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. NO TEMPLO SANTO, A TE OFERTAR,",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "UM DOM SUBLIME, Ó DEUS DE AMOR",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "TEU FILHO INFANTE A NOS SALVAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DA VIDA ESCRAVA, LIBERTADOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. REPICA O SINO LÁ EM BELÉM,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "G"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "E GENTE SIMPLES VEM ADORAR",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "É O DEUS MENINO, SALVAR-NOS VEM,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "DO MAL, DA MORTE, VEM NOS LIVRAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. MÃE OFERENTE, MÃE TÃO FELIZ,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "G"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUE TUDO GUARDA NO CORAÇÃO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ASSIM, POR TODOS O CÉU BENDIZ,",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "F"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "E DÁ SEU FILHO EM OBLAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

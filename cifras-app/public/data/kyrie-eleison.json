@@ -1,0 +1,220 @@
+{
+  "id": "kyrie-eleison",
+  "titulo": "Kyrie Eleison",
+  "artista": "Cd Morada Da Jornada",
+  "tom": "Bm7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR QUE VIESTE SALVAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "OS CORAÇÕES ARREPENDIDOS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#4"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D"
+            },
+            {
+              "posicao": 12,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "O CRISTO QUE VIESTE CHAMAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "OS PECADORES HUMILHADOS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F#4"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D4"
+            },
+            {
+              "posicao": 12,
+              "acorde": "D"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G#m7"
+            },
+            {
+              "posicao": 5,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 0,
+              "acorde": "A/B"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR QUE INTERCEDEIS POR NÓS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E6"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTOS A DEUS PAI QUE NOS PERDO-O--- A.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C#"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E/F#"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F#"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "B"
+            },
+            {
+              "posicao": 3,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B/D#"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

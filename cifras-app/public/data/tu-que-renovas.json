@@ -1,0 +1,184 @@
+{
+  "id": "tu-que-renovas",
+  "titulo": "Tu Que Renovas",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "TU QUE RENOVAS TODAS AS COISAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TU QUE NOS PROVAS NO AMOR. (BIS)",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D#"
+            },
+            {
+              "posicao": 23,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "EU TE ENTREGO MINHAS MÃOS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "MEU TRABALHO, MEU VIVER",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E TE PEÇO QUE RENOVES O MEU SER.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "EU TE ENTREGO MINHA VOZ,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O MEU CANTO DE LOUVOR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E TE PEÇO QUE RENOVES MEU AMOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "EU ME ENTREGO TODO A TI",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E TE DOU MEU CORAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E TE PEÇO QUE RENOVES MINHA AÇÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

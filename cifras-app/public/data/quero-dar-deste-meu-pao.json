@@ -1,0 +1,449 @@
+{
+  "id": "quero-dar-deste-meu-pao",
+  "titulo": "Quero Dar Deste Meu Pão",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. QUERO DAR DESTE MEU PÃO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE QUE TEM FOME,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE ALIMENTAR, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. QUERO DAR UM COPO D’ÁGUA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE QUE TEM SEDE,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE SACIAR, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "3. QUERO DAR ALGUMA VESTE",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE QUE TEM FRIO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE AQUECER, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "4. QUERO DAR A MINHA CASA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE PEREGRINO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 11,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE ACOLHER, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "5. QUERO DAR MINHA VISITA",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE PRISIONEIRO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE VISITAR, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "6. QUERO DAR CONSOLAÇÃO",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "ÀQUELE QUE PADECE,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA TE CONSOLAR, SENHOR!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "amem-3",
+  "titulo": "Amém 3",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "A-A-A-A-MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A-A-MÉM!",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A AMÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 4,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A-A-A AMÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A-MÉM! A-MÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

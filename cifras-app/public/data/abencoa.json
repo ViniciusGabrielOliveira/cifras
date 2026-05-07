@@ -1,0 +1,225 @@
+{
+  "id": "abencoa",
+  "titulo": "Abençoa",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. NOITE E DIA, LONGAS MADRUGADAS",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "E A SEMENTE ESPERA.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E O MILAGRE, ANTIGO E SEMPRE NOVO",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "FECUNDA TODA A TERRA.",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "A#"
+            }
+          ]
+        },
+        {
+          "letra": "DO GRÃO MORTO E PISADO,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "A VIDA NASCERÁ:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA MESA EIS O PÃO.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 10,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "2. NOSSAS VINHAS, COM O SOL ABERTO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "JÁ ESTÃO FLORINDO.",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E O ORVALHO NO SILÊNCIO TOCA",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "OS PRIMEIROS FRUTOS",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "A#"
+            }
+          ]
+        },
+        {
+          "letra": "E AS CORES SÃO MAIS VIVAS.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ASCENDEM OS GRÃOS MADUROS:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA MESA EIS O VINHO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A"
+            },
+            {
+              "posicao": 14,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

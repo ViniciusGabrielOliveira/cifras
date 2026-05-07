@@ -1,0 +1,293 @@
+{
+  "id": "o-senhor-ressuscitou-aleluia",
+  "titulo": "O Senhor Ressuscitou Aleluia",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "O SENHOR RESSUSCITOU, ALELU.....IA!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO HÁ TRISTEZA E NEM TEMOR, ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Dm7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 37,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 42,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O CAMINHO QUE ELE TRAÇOU, ALELU...IA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NOS CONVIDA A CAMINHAR, ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SUA PALAVRA É DE PAZ, ALELU...IA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VEM A TODOS CONFORTAR, ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "SUA VOZ ME ACALMOU, ALELU...IA!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "DA INCERTEZA ME LIVROU, ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "O SENHOR NOS VISITOU, ALELU...IA!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA CASA ILUMINOU, ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 29,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "AS TORMENTAS SOBRE O MAR, ALELU...IA!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS COM ELE PASSAR. ALELU...U...IA!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "C/G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

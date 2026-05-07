@@ -1,0 +1,247 @@
+{
+  "id": "quando-o-dia-da-paz-renascer",
+  "titulo": "Quando O Dia Da Paz Renascer",
+  "artista": "Desconhecido",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "QUANDO O DIA DA PAZ RENASCER,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO O SOL DA ESPERANÇA BRILHAR, EU VOU CANTAR.",
+          "acordes": [
+            {
+              "posicao": 45,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO O POVO NAS RUAS SORRIR,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "E A ROSEIRA DE NOVO FLORIR, EU VOU CANTAR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO AS CERCAS CAÍREM NO CHÃO,",
+          "acordes": []
+        },
+        {
+          "letra": "QUANDO AS MESAS SE ENCHEREM DE PÃO, EU VOU CANTAR.",
+          "acordes": [
+            {
+              "posicao": 46,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO OS MUROS QUE CERCAM OS JARDINS,",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "DESTRUÍDOS ENTÃO OS JASMINS, VÃO PERFUMAR.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "VAI SER TÃO BONITO SE OUVIR A CANÇÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 24,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "CANTADA, DE NOVO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "NO OLHAR DO HOMEM A CERTEZA DO IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "A"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C#m"
+            }
+          ]
+        },
+        {
+          "letra": "REINADO, DO POVO.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO AS ARMAS DA DESTRUIÇÃO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "DESTRUÍDAS EM CADA NAÇÃO, EU VOU SONHAR.",
+          "acordes": [
+            {
+              "posicao": 35,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "E O DECRETO QUE ENCERRA A OPRESSÃO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "ASSINADO SÓ NO CORAÇÃO, VAI TRIUNFAR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "QUANDO A VOZ DA VERDADE SE OUVIR,",
+          "acordes": []
+        },
+        {
+          "letra": "E A MENTIRA NÃO MAIS EXISTIR, SERÁ ENFIM,",
+          "acordes": [
+            {
+              "posicao": 37,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "TEMPO NOVO DE ETERNA JUSTIÇA,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "SEM MAIS ÓDIO, SEM SANGUE OU COBIÇA, VAI SER ASSIM.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 31,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 47,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

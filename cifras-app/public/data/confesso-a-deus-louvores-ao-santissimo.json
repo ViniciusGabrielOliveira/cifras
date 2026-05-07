@@ -1,0 +1,224 @@
+{
+  "id": "confesso-a-deus-louvores-ao-santissimo",
+  "titulo": "Confesso A Deus",
+  "artista": "Louvores Ao Santíssmo",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "D"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "CONFESSO A DEUS, PAI TODO-PODEROSO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃOS, CONFESSO QUE PEQUEI",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 35,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "POR PENSAMENTOS, PALAVRAS, ATOS E OMISSÕES",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "POR MINHA CULPA,  TÃO GRANDE CULPA",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A"
+            },
+            {
+              "posicao": 34,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E PEÇO À VIRGEM MARIA, AOS SANTOS E ANJOS",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS, IRMÃOS, EU PEÇO QUE ROGUEIS",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "D"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "A DEUS, QUE É PAI PODEROSO, PARA PERDOAR",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "D"
+            },
+            {
+              "posicao": 33,
+              "acorde": "A"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "A MINHA CULPA,  TÃO GRANDE CULPA.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "A"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "senhor-que-a-tua-palavra",
+  "titulo": "Senhor Que A Tua Palavra",
+  "artista": "Desconhecido",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR QUE A TUA PALAVRA, TRANSFORME A NOSSA VIDA.",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 45,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 34,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 42,
+              "acorde": "D7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

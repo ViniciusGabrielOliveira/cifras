@@ -1,0 +1,244 @@
+{
+  "id": "preciosas-sao-as-horas",
+  "titulo": "Presença De Deus / Preciosas São As Horas",
+  "artista": "Desconhecido",
+  "tom": "A",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PRECIOSAS SÃO AS HORAS",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NA PRESENÇA DE JESUS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "COMUNHÃO DELICIOSA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "DA MINH'ALMA COM A LUZ.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "OS CUIDADOS DESTE MUNDO",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NUNCA PODEM ME ABALAR,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Fm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "POIS É ELE O MEU ABRIGO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "NELE POSSO CONFIAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "DESCANSA Ó MINH'ALMA,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "EM JESUS VEM REPOUSAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "VITALIZA, REANIMA",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MINHAS FORÇAS PARA LUTAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É O VENCEDOR,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A VITÓRIA QUER ME DAR.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "SÓ ME PEDE CRÊ SOMENTE.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "C#m7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE EM SOCORRO ELE VIRÁ!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "D"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 17,
+              "acorde": "F#m7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

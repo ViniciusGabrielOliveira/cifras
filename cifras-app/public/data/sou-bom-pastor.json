@@ -1,0 +1,220 @@
+{
+  "id": "sou-bom-pastor",
+  "titulo": "Sou Bom Pastor",
+  "artista": "4º Domingo",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "D CARLOS ALBERTO NAVARRO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "1. MAUS PASTORES NUM DIA DE SOMBRA,",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO CUIDARAM E O REBANHO SE PERDEU.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 31,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "VOU SAIR PELO CAMPO, REUNIR O QUE É MEU,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "CONDUZIR E SALVAR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. VERDES PRADOS E BELAS MONTANHAS",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "HÃO DE VER O PASTOR REBANHO ATRÁS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "JUNTO A MIM AS OVELHAS TERÃO MUITA PAZ,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PODERÃO DESCANSAR!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 8,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "id": "por-vosso-nome-oficina-da-musica-liturgica",
+  "titulo": "Por Vosso Nome",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. POR VOSSO NOME SALVAI-ME, SENHOR;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "POR VOSSA FOR-ÇA, FAZEIME JUSTIÇA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. Ó Ó  MEU DEUS, ATENDEI MINHA PRECE",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 5,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "E  ESCUTAI  AS  PALAVRAS QUE EU DIGO!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "3. QUERO OFERTAR-VOS O MEU SACRIFÍCIO",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "DE CORAÇÃO  E COM MUITA ALEGRIA.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "4. QUERO  LOUVAR, Ó SENHOR, VOSSO NOME,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            },
+            {
+              "posicao": 6,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Bm7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE-RO CANTAR  VOSSO NOME QUE É BOM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 4,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 28,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "senhor-que-nos-mandastes-com-recado",
+  "titulo": "Senhor, Que Nos Mandastes Perdoar",
+  "artista": "Com.Recado",
+  "tom": "E",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE NOS MANDASTES PERDOAR-NOS MUTUAMENTE",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ANTES DE NOS APROXIMAR DE VOSSO ALTAR,",
+          "acordes": [
+            {
+              "posicao": 34,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "E                                           B",
+          "acordes": []
+        },
+        {
+          "letra": "2. CRISTO, QUE NA CRUZ DESTES O PERDÃO AOS PECADORES,",
+          "acordes": []
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE CONFIASTES À VOSSA IGREJA",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "O MINISTÉRIO DA RECONCILIAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 26,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "C#m"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B4"
+            },
+            {
+              "posicao": 24,
+              "acorde": "B"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

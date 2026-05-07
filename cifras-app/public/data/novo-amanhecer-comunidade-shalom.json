@@ -1,0 +1,287 @@
+{
+  "id": "novo-amanhecer-comunidade-shalom",
+  "titulo": "Novo Amanhecer",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C"
+            },
+            {
+              "posicao": 8,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "VEJO UMA ESTRELA A BRILHAR NO CÉU",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F/C"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MANIFESTA O SEU AMOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SIM, NASCERÁ TODA A LUZ DE DEUS ENTRE NÓS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F/C"
+            }
+          ]
+        },
+        {
+          "letra": "E SURGIRÁ NOVA VIDA, NOVO AMANHECE-ER (BIS)",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            },
+            {
+              "posicao": 40,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 45,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VEM MUDAR A HISTÓRIA DA HUMANIDADE",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "A4"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E TRAZER SALVAÇÃO E PAZ AOS SEUS!",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 28,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "VEM TRAÇAR UM CAMINHO DE LUZ, DE VERDADE",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 36,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 42,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ONDE NADA É IMPOSSÍVEL A QUEM CRÊÊÊÊ  ÊÊÊ",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O EMANUEL",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O EMANUEL",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "O EMANUEL",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

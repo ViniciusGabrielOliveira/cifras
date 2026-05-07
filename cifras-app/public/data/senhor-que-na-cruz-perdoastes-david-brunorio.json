@@ -1,0 +1,281 @@
+{
+  "id": "senhor-que-na-cruz-perdoastes-david-brunorio",
+  "titulo": "Senhor Que Na Cruz Perdoastes",
+  "artista": "David Brunório",
+  "tom": "Am7",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "intro",
+      "label": "Intro",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE NA CRUZ",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOASTES O LADRÃO ARREPENDIDO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. CRISTO, QUE NOS MANDASTES",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "PERDOAR-NOS MUTUAMENTE",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ANTES DE NOS APROXIMAR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DO VOSSO ALTAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE CONFIASTES",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "Am7"
+            }
+          ]
+        },
+        {
+          "letra": "À  VOSSA IGREJA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 3,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "O MINISTÉRIO",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "DA RECONCILIAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C9"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

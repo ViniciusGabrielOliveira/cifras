@@ -1,0 +1,406 @@
+{
+  "id": "antes-da-morte-e-ressurreicao-de-jesus",
+  "titulo": "Antes Da Morte E Ressurreição De Jesus",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "ANTES DA MORTE E RESSURREIÇÃO DE JESUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ELE, NA CEIA, QUIS SE ENTREGAR:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "DEU-SE EM COMIDA E BEBIDA PRA NOS SALVAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "E"
+            },
+            {
+              "posicao": 41,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "E QUANDO AMANHECER",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O DIA ETERNO, A PLENA VISÃO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 16,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "RESSURGIREMOS POR CRER,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "NESTA VIDA ESCONDIDA NO PÃO.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 16,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "PARA LEMBRARMOS A MORTE, A CRUZ DO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 37,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "NÓS REPETIMOS, COMO ELE FEZ:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "GESTOS, PALAVRAS, ATÉ QUE VOLTE OUTRA VEZ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "E"
+            },
+            {
+              "posicao": 42,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "ESTE BANQUETE ALIMENTA O AMOR DOS IRMÃOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "E NOS PREPARA A GLÓRIA DO CÉU:",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 16,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "ELE É A FORÇA NA CAMINHADA PRA DEUS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "EIS O PÃO VIVO MANDADO A NÓS POR DEUS PAI!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "QUEM O RECEBE, NÃO MORRERÁ:",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NO ÚLTIMO DIA VAI RESSURGIR, VIVERÁ.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            },
+            {
+              "posicao": 37,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "refrao",
+      "label": "Refrão",
+      "linhas": [
+        {
+          "letra": "CRISTO ESTÁ VIVO, RESSUSCITOU PARA NÓS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "ESTA VERDADE VAI ANUNCIAR,",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "A TODA TERRA, COM ALEGRIA A CANTAR.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            },
+            {
+              "posicao": 35,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

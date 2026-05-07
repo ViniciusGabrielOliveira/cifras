@@ -1,0 +1,197 @@
+{
+  "id": "guarda-a-palavra",
+  "titulo": "Guarda A Palavra",
+  "artista": "IRMÃ MIRIA KOLLING",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "IRMÃ MIRIA KOLLING",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 26,
+              "acorde": "D"
+            },
+            {
+              "posicao": 28,
+              "acorde": "G9"
+            },
+            {
+              "posicao": 7,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 12,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "GUARDA A PALAVRA, GUARDA-A NO CORAÇÃO.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 30,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G"
+            },
+            {
+              "posicao": 38,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ELA ENTRE EM SUA ALMA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 8,
+              "acorde": "A7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "E PENETRE OS SENTIMENTOS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            },
+            {
+              "posicao": 18,
+              "acorde": "A"
+            },
+            {
+              "posicao": 21,
+              "acorde": "A7"
+            }
+          ]
+        },
+        {
+          "letra": "BUSCA, NOITE E DI--A,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 19,
+              "acorde": "A"
+            }
+          ]
+        },
+        {
+          "letra": "A LUZ, O AMOR DE DEUS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 10,
+              "acorde": "D7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "SE GUARDARES A PALAVRA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Bm"
+            }
+          ]
+        },
+        {
+          "letra": "ELA TE GUARDARÁ!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            },
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

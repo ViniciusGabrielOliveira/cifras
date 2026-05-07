@@ -1,0 +1,96 @@
+{
+  "id": "santo-marcelo-oliveira-cr",
+  "titulo": "Santo",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "B7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM A VOSSA GLÓRIA!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 16,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 13,
+              "acorde": "B"
+            },
+            {
+              "posicao": 19,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM EM NOME DO SENHOR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

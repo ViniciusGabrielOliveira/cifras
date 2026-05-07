@@ -1,0 +1,213 @@
+{
+  "id": "senhor-deus-do-universo-marcelo-oliveira",
+  "titulo": "Senhor, Deus Do Universo",
+  "artista": "Desconhecido",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM A VOSSA GLÓ-RIA.",
+          "acordes": [
+            {
+              "posicao": 10,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 34,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 38,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 42,
+              "acorde": "Am/G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "BENDITO O QUE VEM EM NOME  DO SENH--OR!",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 27,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 36,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Am/G"
+            }
+          ]
+        },
+        {
+          "letra": "HOSANA NAS ALTURAS! HOSANA NAS ALTURAS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 22,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

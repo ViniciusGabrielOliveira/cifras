@@ -1,0 +1,132 @@
+{
+  "id": "desde-o-nascer-ao-por-do-sol",
+  "titulo": "Desde O Nascer Ao Por Do Sol",
+  "artista": "Desconhecido",
+  "tom": "Eb",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 7,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "PROCLAMAI A TODOS OS POVOS",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A SALVAÇÃO QUE ELE NOS TROUXE",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "RENDEI-LHE HINOS DE GLÓRIA E LOUVOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "A JESUS SALVADOR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Eb"
+            },
+            {
+              "posicao": 15,
+              "acorde": "F7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

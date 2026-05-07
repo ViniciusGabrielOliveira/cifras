@@ -1,0 +1,346 @@
+{
+  "id": "a-abstinencia-quaresmal",
+  "titulo": "A Abstinência Quaresmal",
+  "artista": "FREI JOAQUIM FONSECA, OFM",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LITURGIA DAS HORAS",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "01. A ABSTINÊNCIA QUARESMAL",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS CONSAGRASTES, Ó JESUS;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PELO JEJUM E PELA  PRECE,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NOS CONDUZIS DA TREVA À LUZ.",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "02. FICAI PRESENTE AGORA À IGREJA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "FICAI PRESENTE À PENITÊNCIA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PELA QUAL NÓS VOS SUPLICAMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA OS PECADOS INDULGÊNCIA.",
+          "acordes": [
+            {
+              "posicao": 15,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "03. POR VOSSA GRAÇA, PERDOAI",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AS NOSSAS CULPAS DO PASSADO;",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CONTRA AS FUTURAS, PROTEGEI-NOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "MANSO JESUS, PASTOR AMADO.",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "04. PARA QUE NÓS, PURIFICADOS",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "POR ESSES RITOS ANUAIS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NOS PREPAREMOS, REVERENTES,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "PARA GOZAR OS DONS PASCAIS.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "TRINDADE SANTA, SUMO BEM.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 21,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "NOVOS, POR GRAÇA, VOS CANTEMOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C/E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "UM CANTO NOVO E BELO. AMÉM.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

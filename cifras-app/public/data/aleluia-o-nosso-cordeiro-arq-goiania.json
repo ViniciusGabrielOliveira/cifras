@@ -1,0 +1,160 @@
+{
+  "id": "aleluia-o-nosso-cordeiro-arq-goiania",
+  "titulo": "Aleluia",
+  "artista": "O Nosso Cordeiro Pascal",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "LECIONÁRIO (1Cor 5,7b-8a)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 15,
+              "acorde": "G#"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "F"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "F"
+            },
+            {
+              "posicao": 15,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "ALE--LUIA,   ALE--LU--IA! (BIS)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "O NOSSO CORDEIRO PASCAL,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "JESUS CRISTO, JÁ FOI IMOLADO.",
+          "acordes": [
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "CELEBREMOS, ASSIM, ESTA FESTA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "NA SINCERIDADE E VERDADE.",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "G7"
+            }
+          ]
+        },
+        {
+          "letra": "ALE--LUIA,   ALE--LU--IA! (BIS)",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 3,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Fm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "C"
+            },
+            {
+              "posicao": 18,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

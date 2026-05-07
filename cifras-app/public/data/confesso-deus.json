@@ -1,0 +1,204 @@
+{
+  "id": "confesso-deus",
+  "titulo": "Confesso À Deus",
+  "artista": "Raquel Carpejani",
+  "tom": "Am",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO (ADAPTADA)",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "CONFESSO À DEUS TODO PODEROSO",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃO E IRMÃS QUE PEQUEI",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "MUITAS VEZES POR PENSAMENTOS, PALAVRAS,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "ATOS E OMISSÕES POR MINHA CULPA,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "E7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "MINHA CULPA, MINHA TÃO GRANDE CULPA.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "E PEÇO A VIRGEM MARIA,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "AOS ANJOS E SANTOS.",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "E A VÓS IRMÃO E IRMÃS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "F"
+            },
+            {
+              "posicao": 18,
+              "acorde": "E7"
+            }
+          ]
+        },
+        {
+          "letra": "QUE ROGUEIS POR MIM",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A DEUS NOSSO SENHOR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 20,
+              "acorde": "F"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

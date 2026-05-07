@@ -1,0 +1,622 @@
+{
+  "id": "celebremos-a-festa-comunidade-recado",
+  "titulo": "Celebremos A Festa",
+  "artista": "MARCELO OLIVEIRA",
+  "tom": "A9",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO - ANTÍFONA DE COMUNHÃO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "1. DAI GRAÇAS AO SENHOR, PORQUE ELE É BOM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A CASA DE ISRAEL AGORA O DIGA:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "E"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ETERNA É A SUA MISERICÓRDIA!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "2. NA MINHA ANGÚSTIA EU CLAMEI PELO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 14,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "E O SENHOR ME ATENDEU E LIBERTOU!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O SENHOR ESTÁ COMIGO, NADA TEMO;",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE PODE CONTRA MIM UM SER HUMANO?",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "3. O SENHOR É MINHA FORÇA E O MEU CANTO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "E TORNOU-SE PARA MIM O SALVADOR.",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "CLAMORES DE ALEGRIA E DE VITÓRIA",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "E"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "RESSOEM PELAS TENDAS DOS FIÉS.",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "4. A MÃO DIREITA DO SENHOR FEZ MARAVILHAS,",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "A MÃO DIREITA DO SENHOR ME LEVANTOU.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "NÃO MORREREI, MAS, AO CONTRÁRIO, VIVEREI",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "E"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CANTAR AS GRANDES OBRAS DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 34,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "5. A PEDRA QUE OS PEDREIROS REJEITARAM,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "TORNOU-SE AGORA A PEDRA ANGULAR.",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "PELO SENHOR É QUE FOI FEITO TUDO ISSO:",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "E"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE MARAVILHAS ELE A NOSSOS OLHOS!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "6. ESTE É O DIA QUE O SENHOR FEZ PARA NÓS,",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "ALEGREMO-NOS E NELE EXALTEMOS!",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, DAI-NOS A VOSSA SALVAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "E"
+            },
+            {
+              "posicao": 31,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "Ó SENHOR, DAI-NOS TAMBÉM PROSPERIDADE!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "7. BENDITO SEJA, EM NOME DO SENHOR,",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "AQUELE QUE EM SEUS ÁTRIOS VAI ENTRANDO!",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "DESTA CASA DO SENHOR VOS BENDIZEMOS.",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "E"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "QUE O SENHOR E NOSSO DEUS NOS ILUMINE!",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 33,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "8. EMPUNHAI RAMOS NAS MÃOS, FORMAI CORTEJO,",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 38,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "APROXIMAI-VOS DO ALTAR, ATÉ BEM PERTO!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "C#7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS SOIS MEU DEUS, EU VOS BENDIGO E AGRADEÇO!",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "E"
+            },
+            {
+              "posicao": 40,
+              "acorde": "F#m"
+            }
+          ]
+        },
+        {
+          "letra": "VÓS SOIS MEU DEUS, EU VOS EXALTO COM LOUVORES!",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 40,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bm7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

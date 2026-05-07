@@ -1,0 +1,348 @@
+{
+  "id": "na-danca-da-vida",
+  "titulo": "Na Dança Da Vida",
+  "artista": "Desconhecido",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 6,
+              "acorde": "G"
+            },
+            {
+              "posicao": 9,
+              "acorde": "A"
+            },
+            {
+              "posicao": 12,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "CRESCE TUDO O QUE SE PLANTA",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "SOB A LUZ DO ETERNO  SO________OL",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 21,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CRESCE O TRIGO, CRESCE O HOMEM",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 25,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "A OFERTA EM NOSSAS  MÃOS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "MÃOS UNI__DAS   PELA  DOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em/D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "MÃOS UNI_DAS  PARA O  AMOR",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 13,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "C"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "A COLHEITA VAI BUSCAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 18,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D9"
+            }
+          ]
+        },
+        {
+          "letra": "O QUE A TERRA VEM NOS DA_______AR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 22,
+              "acorde": "D"
+            },
+            {
+              "posicao": 25,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 31,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A UVA, FAZ-SE O VINHO",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "A/C#"
+            }
+          ]
+        },
+        {
+          "letra": "NASCE A VIDA EM TUAS MÃOS",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "D9"
+            },
+            {
+              "posicao": 16,
+              "acorde": "F#7"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA NO__-VA    VEM DE TI",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Em/D"
+            },
+            {
+              "posicao": 16,
+              "acorde": "A/C#"
+            },
+            {
+              "posicao": 24,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "D/F#"
+            },
+            {
+              "posicao": 33,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "VIDA NO___VA  PARA  TI",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Em7"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 14,
+              "acorde": "A9"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "G"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F"
+            },
+            {
+              "posicao": 34,
+              "acorde": "C"
+            },
+            {
+              "posicao": 47,
+              "acorde": "Bb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

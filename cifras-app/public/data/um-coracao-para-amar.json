@@ -1,0 +1,198 @@
+{
+  "id": "um-coracao-para-amar",
+  "titulo": "Um Coração Para Amar",
+  "artista": "PE. ZEZINHO, SCJ",
+  "tom": "G",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "PE. ZEZINHO, SCJ",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. UM CORAÇÃO PARA AMAR,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "PRA PERDOAR E SENTIR",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA CHORAR E SORRIR",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AO ME CRIAR TU ME DESTES",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "UM CORAÇÃO PRA SONHAR,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "INQUIETO E SEMPRE A BATER",
+          "acordes": [
+            {
+              "posicao": 22,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "ANSIOSO POR ENTENDER",
+          "acordes": [
+            {
+              "posicao": 17,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AS COISAS QUE TU DISSESTES",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "2. QUERO QUE O MEU CORAÇÃO,",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SEJA TÃO CHEIO DE PAZ",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUE NÃO SE SINTA CAPAZ,",
+          "acordes": [
+            {
+              "posicao": 19,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "DE SENTIR ÓDIO OU RANCOR",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "QUERO QUE A MINHA ORAÇÃO,",
+          "acordes": []
+        },
+        {
+          "letra": "POSSA ME AMADURECER",
+          "acordes": [
+            {
+              "posicao": 16,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "LEVE-ME A COMPREENDER",
+          "acordes": [
+            {
+              "posicao": 18,
+              "acorde": "D7"
+            }
+          ]
+        },
+        {
+          "letra": "AS CONSEQUÊNCIAS DO AMO-OR",
+          "acordes": [
+            {
+              "posicao": 21,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

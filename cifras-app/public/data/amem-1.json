@@ -1,0 +1,65 @@
+{
+  "id": "amem-1",
+  "titulo": "Amém 1",
+  "artista": "Desconhecido",
+  "tom": "D",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "AMÉM! AMÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "D"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM! AMÉM! AMÉM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "A"
+            },
+            {
+              "posicao": 13,
+              "acorde": "D"
+            },
+            {
+              "posicao": 18,
+              "acorde": "B7"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM! AMÉM!",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "E"
+            }
+          ]
+        },
+        {
+          "letra": "AMÉM! AMÉM! AMÉM!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "B7"
+            },
+            {
+              "posicao": 13,
+              "acorde": "E"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "santo-rodolfo-mota-bernardes",
+  "titulo": "Santo",
+  "artista": "Desconhecido",
+  "tom": "Em",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso",
+      "linhas": [
+        {
+          "letra": "O CÉU E A TERRA PROCLAMAM A VOSSA GLÓRIA:",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 37,
+              "acorde": "B"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "2. BENDITO AQUELE QUE VEM, EM NOME DO SENHOR!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "D"
+            },
+            {
+              "posicao": 22,
+              "acorde": "G"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 40,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 5,
+              "acorde": "D"
+            },
+            {
+              "posicao": 11,
+              "acorde": "G"
+            },
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 19,
+              "acorde": "F#m"
+            },
+            {
+              "posicao": 23,
+              "acorde": "B"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Em"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

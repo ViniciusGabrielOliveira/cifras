@@ -1,0 +1,204 @@
+{
+  "id": "senhor-que-viestes-procurar-quem-estava-perdido",
+  "titulo": "Senhor, Que Viestes Procurar Quem Estava Perdido",
+  "artista": "Valdeci Ferreira",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 13,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE VIESTES PROCURAR QUEM ESTAVA PERDIDO,",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 36,
+              "acorde": "D"
+            },
+            {
+              "posicao": 44,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "CRISTO, QUE VIESTES DAR A VIDA EM RESGATE DE MUITOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 14,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 37,
+              "acorde": "D"
+            },
+            {
+              "posicao": 45,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, QUE CONGREGAIS NA UNIDADE OS VOSSOS FILHOS DISPERSOS,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "G"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Em"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bm"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 44,
+              "acorde": "D"
+            },
+            {
+              "posicao": 54,
+              "acorde": "Em"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 5,
+              "acorde": "G/B"
+            },
+            {
+              "posicao": 11,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 19,
+              "acorde": "D"
+            },
+            {
+              "posicao": 27,
+              "acorde": "G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

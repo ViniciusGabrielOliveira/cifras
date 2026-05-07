@@ -1,0 +1,277 @@
+{
+  "id": "gente-passa-o-ano-inteiro-assim",
+  "titulo": "A Gente Passa O Ano Inteiro Assim",
+  "artista": "Desconhecido",
+  "tom": "C",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 12,
+              "acorde": "F"
+            },
+            {
+              "posicao": 7,
+              "acorde": "C"
+            },
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 11,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "1. A GENTE PASSA O ANO INTEIRO ASSIM",
+          "acordes": [
+            {
+              "posicao": 11,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "ANDANDO SEMPRE DO COMEÇO AO FIM",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SERÁ QUE CRISTO ESTEVE CADA DIA",
+          "acordes": [
+            {
+              "posicao": 23,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AO NOSSO LADO, EM NOSSA COMPANHIA.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            },
+            {
+              "posicao": 33,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "2. POR TODA PARTE VEMOS TANTAS LUZES",
+          "acordes": [
+            {
+              "posicao": 13,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "POR TODA PARTE VEMOS TANTAS CRUZES",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "G"
+            },
+            {
+              "posicao": 21,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 29,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "NATAL É TEMPO DE PARTIR O PÃO",
+          "acordes": [
+            {
+              "posicao": 20,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 26,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NATAL É TEMPO DE SALVAR O IRMÃO.",
+          "acordes": [
+            {
+              "posicao": 9,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            },
+            {
+              "posicao": 32,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "3. EM NOSSA FESTA É BOM LEMBRAR TAMBÉM",
+          "acordes": [
+            {
+              "posicao": 12,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Am7"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "DAQUELA GENTE QUE NATAL NÃO TEM",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "G"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TEM MAIS SENTIDO TODA A NOSSA VIDA",
+          "acordes": [
+            {
+              "posicao": 24,
+              "acorde": "C7"
+            },
+            {
+              "posicao": 30,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AO REPARTIR A GRAÇA RECEBIDA.",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "C"
+            },
+            {
+              "posicao": 20,
+              "acorde": "G7"
+            },
+            {
+              "posicao": 24,
+              "acorde": "C"
+            },
+            {
+              "posicao": 28,
+              "acorde": "C7"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "id": "luz-do-mundo",
+  "titulo": "Luz Do Mundo",
+  "artista": "Desconhecido",
+  "tom": "F",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. AQUELE QUE NOSSOS OLHOS PUDERAM VER,",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 35,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "AQUELE QUE NOSSAS MÃOS PUDERAM ABRAÇAR",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 25,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "AQUELE A QUEM PUDEMOS TAMBÉM OUVIR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 31,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "AQUELE QUE O CORAÇÃO CONSEGUE ENCONTRAR",
+          "acordes": [
+            {
+              "posicao": 1,
+              "acorde": "C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "F"
+            },
+            {
+              "posicao": 30,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É ESTE QUE QUEREMOS ANUNCIAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "RESPLANDECE COMO O SOL",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "LUZ DO MUNDO É O SALVADOR!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "SÃO TANTOS OS QUE VIVEM NA ESCURIDÃO",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "TANTOS NESSE MUNDO QUE NÃO TÊM ONDE MORAR",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "VAMOS ESTENDER AS NOSSAS MÃOS",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "LIVRAR O IRMÃO DA DOR, NO AMOR ACREDITAR",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "C"
+            },
+            {
+              "posicao": 27,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 37,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "É POSSÍVEL ENFRENTAR O TEMPORAL",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "PARA AS TREVAS GRITAREMOS:",
+          "acordes": [
+            {
+              "posicao": 8,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSO DEUS É O DEUS DA LUZ!",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 23,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. HÁ TANTOS QUE SE PERDEM A BUSCAR",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "F"
+            },
+            {
+              "posicao": 32,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENTIDO PRA VIVER, RAZÕES PARA AMAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 21,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "SE NÓS PUDÉSSEMOS ACOMPANHAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "F"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SENTIR A SUA DOR, A JESUS APRESENTAR",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "C"
+            },
+            {
+              "posicao": 22,
+              "acorde": "F"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 33,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "TALVEZ ELES PUDESSEM COMPREENDER",
+          "acordes": [
+            {
+              "posicao": 3,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 29,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "QUE AO REPARTIR O PÃO",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "É POSSÍVEL RENASCER!",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. DE NADA SERVE O SAL SEM SEU SABOR",
+          "acordes": [
+            {
+              "posicao": 6,
+              "acorde": "F"
+            },
+            {
+              "posicao": 33,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "E A LUZ SÓ VALERÁ SE ALGUÉM ILUMINAR",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 23,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "A GRAÇA ENCHE OS NOSSOS CORAÇÕES",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "F"
+            },
+            {
+              "posicao": 28,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "O ESPÍRITO DE DEUS AQUECE COM SEUS DONS",
+          "acordes": [
+            {
+              "posicao": 4,
+              "acorde": "C"
+            },
+            {
+              "posicao": 14,
+              "acorde": "F"
+            },
+            {
+              "posicao": 20,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 35,
+              "acorde": "F"
+            }
+          ]
+        },
+        {
+          "letra": "NOSSA VIDA É SER SAL E LUZ",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 23,
+              "acorde": "Am"
+            }
+          ]
+        },
+        {
+          "letra": "SAL DA TERRA E LUZ DO MUNDO,",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 22,
+              "acorde": "Bb"
+            }
+          ]
+        },
+        {
+          "letra": "SER PRESENÇA DE JESUS!",
+          "acordes": [
+            {
+              "posicao": 7,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 19,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "F"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

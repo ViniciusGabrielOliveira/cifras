@@ -1,0 +1,170 @@
+{
+  "id": "senhor-que-viestes-ao-mundo-adenor-terra",
+  "titulo": "Senhor Que Viestes Ao Mundo",
+  "artista": "Adenor L. Terra",
+  "tom": "Dm",
+  "instrumento": "violao",
+  "dificuldade": "basico",
+  "composicao": "MISSAL ROMANO",
+  "secoes": [
+    {
+      "tipo": "verso",
+      "label": "Verso 1",
+      "linhas": [
+        {
+          "letra": "1. SENHOR, QUE VIESTES AO MUNDO PARA NOS SALVAR,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 15,
+              "acorde": "Dm/C"
+            },
+            {
+              "posicao": 26,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 44,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "2. Ó CRISTO QUE CONTINUAMENTE NOS VISITAIS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 16,
+              "acorde": "Dm/C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 38,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "Ó CRISTO, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 10,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 27,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "3. SENHOR, QUE UM DIA VIREIS A JULGAR NOSSAS OBRAS,",
+          "acordes": [
+            {
+              "posicao": 5,
+              "acorde": "Dm"
+            },
+            {
+              "posicao": 18,
+              "acorde": "Dm/C"
+            },
+            {
+              "posicao": 24,
+              "acorde": "Bb"
+            },
+            {
+              "posicao": 45,
+              "acorde": "C"
+            }
+          ]
+        },
+        {
+          "letra": "TENDE PIEDADE DE NÓS.",
+          "acordes": [
+            {
+              "posicao": 0,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 17,
+              "acorde": "Dm"
+            }
+          ]
+        },
+        {
+          "letra": "SENHOR, TENDE PIEDADE DE NÓS!",
+          "acordes": [
+            {
+              "posicao": 2,
+              "acorde": "Gm"
+            },
+            {
+              "posicao": 8,
+              "acorde": "Am"
+            },
+            {
+              "posicao": 25,
+              "acorde": "Dm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
