@@ -117,8 +117,9 @@ export class PainelComponent implements OnInit {
 
   // ── Auth ─────────────────────────────────────────────────────────
   sair() {
-    this.auth.logout();
-    this.router.navigate(['/admin']);
+    this.auth.logout().subscribe(() => {
+      this.router.navigate(['/admin']);
+    });
   }
 
   // ── Dashboard ─────────────────────────────────────────────────────

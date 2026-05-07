@@ -122,18 +122,61 @@
     }
 }
 
-.login-hint {
-    margin-top: 1.5rem;
-    padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.03);
+// ── Botão Google ─────────────────────────────────────────────────────
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    color: var(--color-text);
     border: 1px solid var(--color-border);
-    border-radius: 8px;
-    font-size: 0.78rem;
-    color: var(--color-text-muted);
-    line-height: 1.5;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
 
-    code {
-        color: var(--color-acorde);
-        font-family: monospace;
+    svg {
+        flex-shrink: 0;
+    }
+
+    &:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// ── Divider ──────────────────────────────────────────────────────────
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 1.5rem 0;
+
+    &::before,
+    &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--color-border);
+    }
+
+    span {
+        font-size: 0.78rem;
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 500;
     }
 }

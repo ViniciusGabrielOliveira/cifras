@@ -1,0 +1,33 @@
+@use '../../admin/login/login.scss';
+
+// ── Extras do cadastro ───────────────────────────────────────────────
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.opcional {
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+
+    a {
+        color: var(--color-acorde);
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,13 +1,13 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
     selector: 'app-login',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, RouterLink],
     templateUrl: './login.html',
     styleUrl: './login.scss',
 })
@@ -23,14 +23,30 @@ export class LoginComponent {
     entrar() {
         this.erro.set('');
         this.carregando.set(true);
-        setTimeout(() => {
-            const ok = this.auth.login(this.email(), this.senha());
-            this.carregando.set(false);
-            if (ok) {
+        this.auth.login(this.email(), this.senha()).subscribe({
+            next: () => {
+                this.carregando.set(false);
                 this.router.navigate(['/admin/painel']);
-            } else {
-                this.erro.set('Email ou senha incorretos.');
-            }
-        }, 600);
+            },
+            error: (err) => {
+                this.carregando.set(false);
+                this.erro.set(err.message || 'Email ou senha incorretos.');
+            },
+        });
+    }
+
+    loginGoogle() {
+        this.erro.set('');
+        this.carregando.set(true);
+        this.auth.loginSocial('google').subscribe({
+            next: () => {
+                this.carregando.set(false);
+                this.router.navigate(['/admin/painel']);
+            },
+            error: (err) => {
+                this.carregando.set(false);
+                this.erro.set(err.message || 'Erro no login social.');
+            },
+        });
     }
 }

@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
+import { roleGuard } from './guards/role.guard';
 
 export const routes: Routes = [
     // ── Home ─────────────────────────────────────────────────────────
@@ -25,17 +27,25 @@ export const routes: Routes = [
             import('./pages/admin/login/login').then(m => m.LoginComponent),
     },
     {
+        path: 'admin/cadastro',
+        loadComponent: () =>
+            import('./pages/admin/cadastro/cadastro').then(m => m.CadastroComponent),
+    },
+    {
         path: 'admin/painel',
+        canActivate: [authGuard, roleGuard('membro')],
         loadComponent: () =>
             import('./pages/admin/painel/painel').then(m => m.PainelComponent),
     },
     {
         path: 'admin/nova-cifra',
+        canActivate: [authGuard, roleGuard('editor')],
         loadComponent: () =>
             import('./pages/admin/nova-cifra/nova-cifra').then(m => m.NovaCifraComponent),
     },
     {
         path: 'admin/editar-cifra/:id',
+        canActivate: [authGuard, roleGuard('editor')],
         loadComponent: () =>
             import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
     },
