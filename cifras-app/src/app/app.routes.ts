@@ -18,13 +18,6 @@ export const routes: Routes = [
             import('./pages/cifra-detail/cifra-detail').then(m => m.CifraDetailComponent),
     },
 
-    // ── Editor de Cifra ────────────────────────────────────────────
-    {
-        path: 'editor/:id',
-        loadComponent: () =>
-            import('./pages/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
-    },
-
     // ── Admin ──────────────────────────────────────────────────────
     {
         path: 'admin',
@@ -40,6 +33,11 @@ export const routes: Routes = [
         path: 'admin/nova-cifra',
         loadComponent: () =>
             import('./pages/admin/nova-cifra/nova-cifra').then(m => m.NovaCifraComponent),
+    },
+    {
+        path: 'admin/editar-cifra/:id',
+        loadComponent: () =>
+            import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
     },
 
     // ── Fallback ───────────────────────────────────────────────────

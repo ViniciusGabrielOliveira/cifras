@@ -2,9 +2,9 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Cifra, Secao, LinhaCifra, TipoSecao } from '../../models/cifra.model';
-import { CifraService } from '../../services/cifra';
-import { LinhaEditorComponent } from '../../components/linha-editor/linha-editor';
+import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
+import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
+import { CifraService } from '../../../services/cifra';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo'];
 
