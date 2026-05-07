@@ -24,28 +24,28 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 })
 export class PainelComponent implements OnInit {
   private listaService = inject(ListaService);
-  private auth         = inject(AuthService);
-  private router       = inject(Router);
+  private auth = inject(AuthService);
+  private router = inject(Router);
 
   // ── Labels para template ─────────────────────────────────────────
   readonly PARTES_MISSA_LABELS = PARTES_MISSA_LABELS;
-  readonly PARTES_MISSA_ORDER  = PARTES_MISSA_ORDER;
-  readonly CATEGORIAS_LABELS   = CATEGORIAS_LABELS;
+  readonly PARTES_MISSA_ORDER = PARTES_MISSA_ORDER;
+  readonly CATEGORIAS_LABELS = CATEGORIAS_LABELS;
   readonly categorias: CategoriaLiturgica[] = [
     'tempo-comum', 'advento', 'quaresma', 'pascoa', 'festas-liturgicas', 'sem-categoria',
   ];
 
   // ── Estado ───────────────────────────────────────────────────────
-  vista       = signal<VistaAdmin>('dashboard');
-  listas      = signal<Lista[]>([]);
-  listaEdit   = signal<Lista | null>(null);
-  salvando    = signal(false);
+  vista = signal<VistaAdmin>('dashboard');
+  listas = signal<Lista[]>([]);
+  listaEdit = signal<Lista | null>(null);
+  salvando = signal(false);
   confirmando = signal<string | null>(null);
 
   // ── Busca de música ───────────────────────────────────────────────
   /** Parte pré-selecionada ao abrir o modal de adição de música */
   parteParaAdicionar = signal<PartesMissa>('entrada');
-  modalBuscaAberto   = signal(false);
+  modalBuscaAberto = signal(false);
 
   // Filtro no dashboard
   filtroTexto = signal('');
@@ -72,7 +72,7 @@ export class PainelComponent implements OnInit {
     const nomeCifra = this.route.snapshot.queryParamMap.get('nomeCifra');
     const cifraAdicionada = this.route.snapshot.queryParamMap.get('cifraAdicionada');
     const edicaoCifra = this.route.snapshot.queryParamMap.get('edicaoCifra');
-    
+
     if (nomeCifra) {
       this.notificacao.set(`✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!`);
       setTimeout(() => this.notificacao.set(null), 4000);
@@ -80,7 +80,7 @@ export class PainelComponent implements OnInit {
       // Se havia um rascunho salvo, restaura a lista
       if (this.listaService.listaDraft && cifraAdicionada) {
         const draft = this.listaService.listaDraft;
-        
+
         if (!edicaoCifra) {
           const parte = (this.listaService.parteParaAdicionarDraft as PartesMissa) || 'entrada';
           const novaMusica: MusicaLista = {
@@ -93,13 +93,13 @@ export class PainelComponent implements OnInit {
           };
           draft.musicas.push(novaMusica);
         }
-        
+
         // Restaura a view
         this.listaEdit.set(draft);
         if (this.listaService.vistaDraft) {
           this.vista.set(this.listaService.vistaDraft as VistaAdmin);
         }
-        
+
         // Limpa o rascunho do service
         this.listaService.listaDraft = null;
         this.listaService.vistaDraft = null;
@@ -142,7 +142,7 @@ export class PainelComponent implements OnInit {
   }
 
   confirmarExcluir(id: string) { this.confirmando.set(id); }
-  cancelarExcluir()            { this.confirmando.set(null); }
+  cancelarExcluir() { this.confirmando.set(null); }
 
   excluirLista(id: string) {
     this.listaService.excluirLista(id).subscribe(() => {
@@ -207,7 +207,7 @@ export class PainelComponent implements OnInit {
 
   onCadastrarNova(nomeBuscado: string) {
     this.fecharModalBusca();
-    
+
     // Salva o rascunho da lista atual para não perder após cadastrar a cifra
     const lista = this.listaEdit();
     if (lista) {
@@ -226,13 +226,13 @@ export class PainelComponent implements OnInit {
     if (!lista) return;
 
     const novaMusica: MusicaLista = {
-      id:      newId('m'),
+      id: newId('m'),
       cifraId: selecionada.cifraId,
-      nome:    selecionada.nome,
-      autor:   selecionada.autor,
-      trecho:  selecionada.trecho,
-      parte:   this.parteParaAdicionar(),
-      ordem:   lista.musicas.filter(m => m.parte === this.parteParaAdicionar()).length,
+      nome: selecionada.nome,
+      autor: selecionada.autor,
+      trecho: selecionada.trecho,
+      parte: this.parteParaAdicionar(),
+      ordem: lista.musicas.filter(m => m.parte === this.parteParaAdicionar()).length,
     };
 
     this.listaEdit.set({ ...lista, musicas: [...lista.musicas, novaMusica] });
@@ -269,7 +269,7 @@ export class PainelComponent implements OnInit {
       this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
       this.listaService.vistaDraft = this.vista() as any;
     }
-    this.router.navigate(['/editor', musica.cifraId], { queryParams: { retorno: 'painel', edicaoCifra: 'true' } });
+    this.router.navigate(['/admin/editar-cifra', musica.cifraId], { queryParams: { retorno: 'painel', edicaoCifra: 'true' } });
   }
 
   moverMusica(musicaId: string, dir: -1 | 1) {
