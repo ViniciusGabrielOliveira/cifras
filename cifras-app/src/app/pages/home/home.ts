@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -21,6 +21,8 @@ type SeletorAba = 'dia' | 'categoria';
 export class HomeComponent implements OnInit {
     private listaService = inject(ListaService);
     private cifraService = inject(CifraService);
+
+    @ViewChild('inputData') inputData!: ElementRef<HTMLInputElement>;
 
     // ── Seletor de lista ─────────────────────────────────────────────
     seletorAberta = signal(false);
@@ -80,6 +82,18 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
         // Carrega listas do dia de hoje
         this.carregarListasPorData(this.dataSelecionada());
+    }
+
+    abrirCalendario() {
+        this.mudarAba('dia');
+
+        const input = this.inputData.nativeElement;
+
+        if (input.showPicker) {
+            input.showPicker();
+        } else {
+            input.click();
+        }
     }
 
     // ─── Seletor ──────────────────────────────────────────────────────

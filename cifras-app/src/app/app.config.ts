@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, LOCALE_ID, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
@@ -12,6 +12,10 @@ import { AcordeMockRepository } from './repositories/acorde-mock.repository';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    },
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(),
