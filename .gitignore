@@ -12,6 +12,7 @@ cifras-app/.angular/cache/
 .env
 .env.local
 *.env
+mock/
 
 # ─── IDEs ────────────────────────────────────────────────
 .vscode/

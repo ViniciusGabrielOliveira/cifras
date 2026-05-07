@@ -1,0 +1,200 @@
+<div class="nova-cifra-page">
+
+  <!-- ── Topbar ─────────────────────────────────────────────────── -->
+  <header class="editor-topbar">
+    <button class="btn-back" (click)="cancelar()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Cancelar
+    </button>
+
+    <div class="topbar-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      Nova música
+    </div>
+
+    <div class="topbar-actions">
+      <button class="btn-tool" (click)="showJSON.update(v => !v)" title="Ver JSON gerado">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        </svg>
+        JSON
+      </button>
+
+      <button class="btn-save" [class.saved]="saved()" [disabled]="saving()" (click)="salvar()">
+        @if (saving()) {
+          <span class="spinner-sm"></span>
+        } @else if (saved()) {
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Salvo!
+        } @else {
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Salvar e voltar ao painel
+        }
+      </button>
+    </div>
+  </header>
+
+  <div class="editor-body">
+
+    <!-- ── Metadados ────────────────────────────────────────────── -->
+    <section class="meta-panel">
+      <h2 class="section-title">Informações da Música</h2>
+      <div class="meta-grid">
+
+        <div class="meta-field" [class.erro]="erroTitulo()">
+          <label>
+            Título *
+            @if (erroTitulo()) {
+              <span class="campo-erro">Campo obrigatório</span>
+            }
+          </label>
+          <input
+            type="text"
+            [value]="cifra().titulo"
+            placeholder="Ex: Aleluia Festivo"
+            (input)="updateMeta('titulo', $any($event.target).value)"
+          />
+          <span class="id-preview">
+            <code>ID: {{ idGerado }}</code>
+          </span>
+        </div>
+
+        <div class="meta-field">
+          <label>Artista / Intérprete</label>
+          <input
+            type="text"
+            [value]="cifra().artista"
+            placeholder="Ex: Padre Zezinho"
+            (input)="updateMeta('artista', $any($event.target).value)"
+          />
+        </div>
+
+        <div class="meta-field">
+          <label>Tom</label>
+          <select [value]="cifra().tom" (change)="updateMeta('tom', $any($event.target).value)">
+            @for (t of tons; track t) {
+              <option [value]="t">{{ t }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="meta-field">
+          <label>Composição / Letra</label>
+          <input
+            type="text"
+            [value]="cifra().composicao"
+            placeholder="Ex: Frei Seraphim"
+            (input)="updateMeta('composicao', $any($event.target).value)"
+          />
+        </div>
+
+        <div class="meta-field">
+          <label>Instrumento</label>
+          <select [value]="cifra().instrumento" (change)="updateMeta('instrumento', $any($event.target).value)">
+            <option value="violao">Violão</option>
+            <option value="guitarra">Guitarra</option>
+            <option value="cavaco">Cavaquinho</option>
+            <option value="ukulele">Ukulele</option>
+          </select>
+        </div>
+
+        <div class="meta-field">
+          <label>Dificuldade</label>
+          <select [value]="cifra().dificuldade" (change)="updateMeta('dificuldade', $any($event.target).value)">
+            <option value="iniciante">Iniciante</option>
+            <option value="basico">Básico</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Seções / Cifra ────────────────────────────────────────── -->
+    <section class="secoes-editor">
+      <div class="secoes-header">
+        <h2 class="section-title">Cifra</h2>
+        <div class="hint">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Adicione seções (versos, refrões) e depois as linhas com letra e acordes
+        </div>
+      </div>
+
+      @for (secao of cifra().secoes; track secao.label; let si = $index) {
+        <div class="secao-edit-card">
+          <div class="secao-edit-header">
+            <select [value]="secao.tipo"
+              (change)="updateSecaoTipo(si, $any($event.target).value)"
+              class="secao-tipo-sel">
+              @for (t of tiposSecao; track t) {
+                <option [value]="t">{{ t }}</option>
+              }
+            </select>
+            <input class="secao-label-input" [value]="secao.label"
+              (input)="updateSecaoLabel(si, $any($event.target).value)"
+              placeholder="Nome da seção" />
+            <button class="btn-remove-secao" (click)="removeSecao(si)" title="Remover seção">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="linhas-list">
+            @for (linha of secao.linhas; track $index; let li = $index) {
+              <app-linha-editor
+                [linha]="linha"
+                [linhaIndex]="li"
+                (linhaChange)="updateLinha(si, li, $event)"
+                (removerLinha)="removeLinha(si, li)"
+              />
+            }
+          </div>
+
+          <button class="btn-add-linha" (click)="addLinha(si)">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            Adicionar linha
+          </button>
+        </div>
+      }
+
+      <button class="btn-add-secao" (click)="addSecao()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Adicionar seção
+      </button>
+    </section>
+
+  </div><!-- /editor-body -->
+
+  <!-- ── JSON Preview ──────────────────────────────────────────── -->
+  @if (showJSON()) {
+    <div class="json-overlay" (click)="showJSON.set(false)">
+      <div class="json-panel" (click)="$event.stopPropagation()">
+        <div class="json-header">
+          <span>JSON gerado</span>
+          <button class="btn-close-json" (click)="showJSON.set(false)">×</button>
+        </div>
+        <pre class="json-code">{{ jsonPreview }}</pre>
+      </div>
+    </div>
+  }
+
+</div>

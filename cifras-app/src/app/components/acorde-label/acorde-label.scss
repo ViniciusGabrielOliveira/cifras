@@ -24,13 +24,31 @@
   }
 }
 
-/* Popup flutua abaixo do chip via position:absolute relativo ao chip */
 .popup-wrapper {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  z-index: 1000;
+  position: fixed;
+  z-index: 9999;
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
-  /* Evita que o popup saia da tela à direita */
   max-width: calc(100vw - 32px);
+}
+
+.diagrama-loading {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 148px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+.spinner-mini {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-acorde);
+  border-radius: 50%;
+  animation: global-spin 0.7s linear infinite;
 }

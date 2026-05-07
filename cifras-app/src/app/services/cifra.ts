@@ -3,6 +3,7 @@ import { Observable, tap } from 'rxjs';
 import { Cifra } from '../models/cifra.model';
 import { CifraRepository } from '../repositories/cifra.repository';
 import { CifraMockRepository } from '../repositories/cifra-mock.repository';
+import { AcordesService } from './acordes';
 
 /**
  * Camada de serviço — regras de negócio sobre cifras.
@@ -13,9 +14,25 @@ import { CifraMockRepository } from '../repositories/cifra-mock.repository';
 export class CifraService {
   private repo = inject(CifraRepository);
   private mockRepo = inject(CifraMockRepository);
+  private acordesService = inject(AcordesService);
 
   getCifra(id: string): Observable<Cifra | undefined> {
-    return this.repo.getCifra(id);
+    return this.repo.getCifra(id).pipe(
+      tap(cifra => {
+        if (!cifra) return;
+        const acordesSet = new Set<string>();
+        for (const s of cifra.secoes) {
+          for (const l of s.linhas) {
+            for (const a of l.acordes) {
+              acordesSet.add(a.acorde);
+            }
+          }
+        }
+        const acordesUnicos = Array.from(acordesSet);
+        // Dispara o pré-carregamento sem bloquear o fluxo principal (fire and forget)
+        this.acordesService.preCarregarAcordes(acordesUnicos).subscribe();
+      })
+    );
   }
 
   getAllCifras(): Observable<Cifra[]> {

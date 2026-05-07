@@ -1,10 +1,12 @@
-.editor-page {
+/* Herda todo o estilo do editor base e adiciona elementos exclusivos da nova cifra */
+
+.nova-cifra-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* ─── Topbar ─── */
+/* ─── Topbar (idêntica ao editor) ─── */
 .editor-topbar {
     position: relative;
     z-index: 200;
@@ -12,7 +14,7 @@
     align-items: center;
     gap: 12px;
     padding: 10px 1.5rem;
-    background: rgba(15, 17, 23, 0.92);
+    background: rgba(15, 17, 23, 0.95);
     border-bottom: 1px solid var(--color-border);
     backdrop-filter: blur(16px);
     flex-wrap: wrap;
@@ -30,12 +32,9 @@
     color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.15s;
+    font-family: inherit;
     white-space: nowrap;
-
-    &:hover {
-        background: var(--color-surface);
-        color: var(--color-text);
-    }
+    &:hover { background: var(--color-surface); color: var(--color-text); }
 }
 
 .topbar-title {
@@ -43,15 +42,9 @@
     align-items: center;
     gap: 6px;
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: var(--color-acorde);
+    font-weight: 700;
     flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    strong {
-        color: var(--color-text);
-    }
 }
 
 .topbar-actions {
@@ -59,6 +52,7 @@
     align-items: center;
     gap: 8px;
     margin-left: auto;
+    flex-wrap: wrap;
 }
 
 .btn-tool {
@@ -73,13 +67,9 @@
     color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.15s;
+    font-family: inherit;
     white-space: nowrap;
-
-    &:hover {
-        border-color: var(--color-acorde);
-        color: var(--color-acorde);
-        background: var(--color-acorde-bg);
-    }
+    &:hover { border-color: var(--color-acorde); color: var(--color-acorde); background: var(--color-acorde-bg); }
 }
 
 .btn-save {
@@ -88,43 +78,30 @@
     gap: 6px;
     font-size: 0.78rem;
     font-weight: 700;
-    padding: 6px 18px;
+    padding: 8px 20px;
     border-radius: 8px;
     border: none;
     background: var(--color-acorde);
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
+    font-family: inherit;
     white-space: nowrap;
-
-    &:hover:not(:disabled) {
-        opacity: 0.85;
-    }
-
-    &:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-    }
-
-    &.saved {
-        background: #22c55e;
-    }
+    &:hover:not(:disabled) { background: var(--color-acorde-hover); transform: translateY(-1px); }
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+    &.saved { background: #22c55e; }
 }
 
 .spinner-sm {
     width: 12px;
     height: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255,255,255,0.4);
     border-top-color: #fff;
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ─── Body ─── */
 .editor-body {
@@ -147,30 +124,34 @@
     margin-bottom: 1rem;
 }
 
-/* ─── Metadados ─── */
+/* ─── Meta panel ─── */
 .meta-panel {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 14px;
+    padding: 1.5rem;
 }
 
 .meta-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
-
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
+    gap: 14px;
+    @media (max-width: 600px) { grid-template-columns: 1fr; }
 }
 
 .meta-field {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
+
+    &.erro {
+        input, select { border-color: #ef4444 !important; }
+    }
 
     label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         font-size: 0.68rem;
         font-weight: 600;
         letter-spacing: 0.08em;
@@ -178,20 +159,41 @@
         color: var(--color-text-muted);
     }
 
-    input {
+    input, select {
         background: var(--color-bg);
         border: 1px solid var(--color-border);
         border-radius: 8px;
         color: var(--color-text);
-        font-family: 'Inter', sans-serif;
+        font-family: inherit;
         font-size: 0.9rem;
-        padding: 8px 12px;
+        padding: 9px 12px;
         outline: none;
         transition: border-color 0.15s;
+        &:focus { border-color: var(--color-acorde); }
+    }
 
-        &:focus {
-            border-color: var(--color-acorde);
-        }
+    select { cursor: pointer; appearance: auto; }
+}
+
+.campo-erro {
+    font-size: 0.65rem;
+    color: #f87171;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Preview do ID gerado */
+.id-preview {
+    margin-top: 2px;
+    code {
+        font-size: 0.68rem;
+        font-family: 'Fira Code', monospace;
+        color: var(--color-acorde);
+        opacity: 0.6;
+        background: rgba(124,106,253,0.08);
+        padding: 2px 6px;
+        border-radius: 4px;
     }
 }
 
@@ -207,10 +209,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.25rem;
-
-    .section-title {
-        margin-bottom: 0;
-    }
+    .section-title { margin-bottom: 0; }
 }
 
 .hint {
@@ -228,10 +227,7 @@
     border-radius: 12px;
     padding: 1rem;
     transition: border-color 0.15s;
-
-    &:hover {
-        border-color: rgba(124, 106, 253, 0.25);
-    }
+    &:hover { border-color: rgba(124,106,253,0.25); }
 }
 
 .secao-edit-header {
@@ -252,11 +248,8 @@
     padding: 4px 8px;
     outline: none;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
-
-    &:focus {
-        border-color: var(--color-acorde);
-    }
+    font-family: inherit;
+    &:focus { border-color: var(--color-acorde); }
 }
 
 .secao-label-input {
@@ -265,17 +258,14 @@
     border: none;
     border-bottom: 1px dashed var(--color-border);
     color: var(--color-text);
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 4px 4px;
     outline: none;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
-    &:focus {
-        border-bottom-color: var(--color-acorde);
-    }
+    &:focus { border-bottom-color: var(--color-acorde); }
 }
 
 .btn-remove-secao {
@@ -290,12 +280,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.15s;
-
-    &:hover {
-        background: rgba(229, 85, 85, 0.15);
-        border-color: #e55;
-        color: #e55;
-    }
+    &:hover { background: rgba(229,85,85,0.15); border-color: #e55; color: #e55; }
 }
 
 .linhas-list {
@@ -319,12 +304,8 @@
     transition: all 0.15s;
     width: 100%;
     justify-content: center;
-
-    &:hover {
-        border-color: var(--color-acorde);
-        color: var(--color-acorde);
-        background: var(--color-acorde-bg);
-    }
+    font-family: inherit;
+    &:hover { border-color: var(--color-acorde); color: var(--color-acorde); background: var(--color-acorde-bg); }
 }
 
 .btn-add-secao {
@@ -333,7 +314,7 @@
     gap: 8px;
     font-size: 0.78rem;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 10px;
     border: 2px dashed var(--color-border);
     background: transparent;
@@ -341,38 +322,15 @@
     cursor: pointer;
     transition: all 0.15s;
     justify-content: center;
-
-    &:hover {
-        border-color: var(--color-acorde);
-        color: var(--color-acorde);
-        background: var(--color-acorde-bg);
-    }
-}
-
-/* ─── Loading ─── */
-.loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    min-height: 60vh;
-    color: var(--color-text-muted);
-
-    .spinner {
-        width: 24px;
-        height: 24px;
-        border: 2px solid var(--color-border);
-        border-top-color: var(--color-acorde);
-        border-radius: 50%;
-        animation: spin 0.7s linear infinite;
-    }
+    font-family: inherit;
+    &:hover { border-color: var(--color-acorde); color: var(--color-acorde); background: var(--color-acorde-bg); }
 }
 
 /* ─── JSON overlay ─── */
 .json-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0,0,0,0.7);
     z-index: 500;
     display: flex;
     align-items: center;
@@ -391,7 +349,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
 }
 
 .json-header {
@@ -412,17 +370,14 @@
     cursor: pointer;
     line-height: 1;
     padding: 0 4px;
-
-    &:hover {
-        color: var(--color-text);
-    }
+    &:hover { color: var(--color-text); }
 }
 
 .json-code {
     flex: 1;
     overflow: auto;
     padding: 1rem 1.25rem;
-    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.78rem;
     color: #a8b8c8;
     line-height: 1.6;

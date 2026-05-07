@@ -5,6 +5,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LinhaCifra, AcordeLinha } from '../../models/cifra.model';
+import { REGEX_ACORDE } from '../../core/transposicao';
 
 interface DragState {
   acorde: AcordeLinha;
@@ -44,6 +45,7 @@ export class LinhaEditorComponent implements OnChanges {
   newChordName = signal('');
   newChordPos = signal(0);
   hoveredPos = signal<number | null>(null);
+  chordError = signal(false);
 
   // Confirma se alguma mudança foi feita
   dirty = signal(false);
@@ -158,6 +160,7 @@ export class LinhaEditorComponent implements OnChanges {
   openAddChord(posicao = 0) {
     this.newChordPos.set(posicao);
     this.newChordName.set('');
+    this.chordError.set(false);
     this.addingChord.set(true);
   }
 
@@ -168,6 +171,12 @@ export class LinhaEditorComponent implements OnChanges {
   confirmAddChord() {
     const nome = this.newChordName().trim();
     if (!nome) return;
+
+    if (!REGEX_ACORDE.test(nome)) {
+      this.chordError.set(true);
+      return;
+    }
+    this.chordError.set(false);
 
     const posicao = this.newChordPos();
     // Remove acorde que já ocupa a mesma posição

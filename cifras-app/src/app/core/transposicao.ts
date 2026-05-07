@@ -20,7 +20,7 @@ export function transporNota(nota: string, delta: number): string {
     return NOTAS[novoIdx];
 }
 
-const REGEX_ACORDE = /^([A-G](?:#|b)?)([^/]*)(\/([A-G](?:#|b)?))?$/;
+export const REGEX_ACORDE = /^([A-G](?:#|b)?)([^/]*)(\/([A-G](?:#|b)?))?$/;
 
 export function transporAcorde(acorde: string, delta: number): string {
     const m = acorde.match(REGEX_ACORDE);

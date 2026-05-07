@@ -1,0 +1,861 @@
+/* ── Toast de notificação ───────────────────────────────────────── */
+.toast-notificacao {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.35);
+    z-index: 1000;
+    white-space: nowrap;
+    animation: toastIn 0.3s cubic-bezier(0.34, 1.5, 0.64, 1);
+
+    @media (max-width: 500px) {
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        transform: none;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@keyframes toastIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── Header Admin ──────────────────────────────────────────────── */
+.admin-header {
+    position: relative;
+    z-index: 200;
+    background: rgba(15, 17, 23, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.admin-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-link {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover {
+        color: var(--color-acorde);
+    }
+}
+
+.admin-titulo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text);
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-border);
+}
+
+.btn-sair {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: #ef4444;
+        color: #f87171;
+    }
+}
+
+/* ── Página Admin ─────────────────────────────────────────────────── */
+.admin-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Dashboard ───────────────────────────────────────────────────── */
+.dash-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dash-titulo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.btn-nova-lista {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--color-acorde);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: var(--color-acorde-hover);
+        transform: translateY(-1px);
+    }
+}
+
+.filtro-bar {
+    margin-bottom: 1.5rem;
+}
+
+.filtro-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+
+    &:focus {
+        border-color: var(--color-acorde);
+    }
+
+    &::placeholder {
+        color: var(--color-text-muted);
+    }
+}
+
+.empty-dash {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--color-text-muted);
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ── Grid de Listas ──────────────────────────────────────────────── */
+.listas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.lista-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.lista-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.lista-cat-pill {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    border: 1px solid rgba(124, 106, 253, 0.3);
+}
+
+.lista-card-data {
+    font-size: 0.74rem;
+    color: var(--color-text-muted);
+}
+
+.lista-card-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.lista-card-qtd {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.lista-card-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.btn-editar {
+    flex: 1;
+    padding: 8px 0;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+    }
+}
+
+.btn-excluir {
+    padding: 8px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: #ef4444;
+        color: #f87171;
+    }
+}
+
+.confirm-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.confirm-label {
+    font-size: 0.8rem;
+    color: #f87171;
+}
+
+.btn-confirm-sim {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+
+    &:hover {
+        background: #dc2626;
+    }
+}
+
+.btn-confirm-nao {
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ── Editor de Lista ──────────────────────────────────────────────── */
+.editor-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-voltar {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 7px 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+
+    &:hover {
+        color: var(--color-acorde);
+        border-color: var(--color-acorde);
+    }
+}
+
+.editor-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.editor-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.section-titulo {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin: 0 0 1.25rem;
+}
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn-add-musica {
+    padding: 7px 16px;
+    border: 1px solid var(--color-acorde);
+    border-radius: 8px;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    font-size: 0.82rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(124, 106, 253, 0.2);
+    }
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+}
+
+.form-input {
+    padding: 10px 14px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+
+    &:focus {
+        border-color: var(--color-acorde);
+    }
+
+    &::placeholder {
+        color: var(--color-text-muted);
+    }
+
+    &.sm {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
+
+select.form-input {
+    cursor: pointer;
+    appearance: auto;
+}
+
+/* ── Partes ──────────────────────────────────────────────────────── */
+.parte-bloco {
+    margin-bottom: 1.25rem;
+}
+
+.parte-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-acorde);
+    margin-bottom: 0.6rem;
+    padding-left: 4px;
+}
+
+.musica-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.musica-reorder {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.btn-move {
+    width: 26px;
+    height: 26px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+
+    &:hover {
+        color: var(--color-acorde);
+        border-color: var(--color-acorde);
+    }
+}
+
+.musica-campos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campos-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-remover-musica {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    margin-top: 2px;
+
+    &:hover {
+        border-color: #ef4444;
+        color: #f87171;
+        background: rgba(239, 68, 68, 0.08);
+    }
+}
+
+.sem-musicas {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+/* ── Ações ───────────────────────────────────────────────────────── */
+.editor-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.btn-cancelar {
+    padding: 11px 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        color: var(--color-text);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.btn-salvar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 28px;
+    background: var(--color-acorde);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+        background: var(--color-acorde-hover);
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+/* ── Parte: header com botão por parte ──────────────────────────── */
+.parte-bloco {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+
+    &:last-child { border-bottom: none; margin-bottom: 0; }
+}
+
+.parte-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.btn-add-nesta-parte {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border: 1px solid rgba(124, 106, 253, 0.4);
+    border-radius: 7px;
+    background: rgba(124, 106, 253, 0.08);
+    color: var(--color-acorde);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(124, 106, 253, 0.2);
+        border-color: var(--color-acorde);
+    }
+}
+
+.parte-vazia {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.18);
+    font-style: italic;
+    padding: 6px 4px;
+}
+
+/* ── Card info de música ─────────────────────────────────────────── */
+.musica-info-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.musica-nome-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.musica-nome-badge {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.musica-autor-badge {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.musica-id-row {
+    margin-bottom: 4px;
+}
+
+.musica-cifra-id {
+    font-size: 0.7rem;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    color: var(--color-acorde);
+    opacity: 0.7;
+    background: rgba(124, 106, 253, 0.08);
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.musica-trecho-row {
+    margin-top: 4px;
+}
+.musica-trecho {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-editar-cifra {
+    padding: 4px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-right: 6px;
+    margin-top: 2px;
+    height: 30px;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+    }
+}
+
+.musica-campos-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ── Modal de Busca ─────────────────────────────────────────────── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(6px);
+    z-index: 500;
+    animation: fadeIn 0.18s ease;
+}
+
+.modal-busca {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(620px, calc(100vw - 2rem));
+    height: min(90vh, 780px);
+    background: #161821;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow:
+        0 32px 80px rgba(0,0,0,0.8),
+        0 0 0 1px rgba(124,106,253,0.08);
+    z-index: 501;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.22s cubic-bezier(0.34, 1.4, 0.64, 1);
+
+    /* Mobile: bottom sheet */
+    @media (max-width: 600px) {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: none;
+        width: 100%;
+        height: 92dvh;
+        border-radius: 20px 20px 0 0;
+        animation: slideUpMobile 0.28s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translate(-50%, calc(-50% + 28px)); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes slideUpMobile {
+    from { opacity: 0; transform: translateY(48px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(124,106,253,0.07) 0%, transparent 100%);
+}
+
+.modal-titulo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.modal-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.modal-parte-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    border: 1px solid rgba(124, 106, 253, 0.35);
+}
+
+.modal-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+
+    &:hover { background: rgba(255,255,255,0.1); color: var(--color-text); }
+}
+
+/* modal-body ocupa todo o espaço restante e repassa ao search-wrapper */
+.modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.5rem 1.5rem;
+    overflow: hidden;
+    gap: 0.5rem;
+
+    /* Faz o app-musica-search preencher o restante */
+    app-musica-search {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 0;
+    }
+}
+
+.modal-hint {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    flex-shrink: 0;
+}

@@ -1,0 +1,152 @@
+<div class="search-wrapper" [class.embutido]="modoEmbutido()" (focusout)="fecharDropdown()">
+
+  <!-- ── Input ─────────────────────────────────────────────────── -->
+  <div class="search-input-row">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+
+    <input
+      #inputEl
+      class="search-input"
+      type="text"
+      [placeholder]="placeholder()"
+      [value]="query()"
+      (input)="onInput($event)"
+      (focus)="!modoEmbutido() && resultados().length > 0 && aberto.set(true)"
+      autocomplete="off"
+      spellcheck="false"
+    />
+
+    @if (carregando()) {
+      <div class="spinner search-spinner"></div>
+    }
+
+    @if (query() && !carregando()) {
+      <button class="btn-limpar" (mousedown)="limpar()" title="Limpar">✕</button>
+    }
+  </div>
+
+  <!-- ── Filtros de Busca ──────────────────────────────────────── -->
+  <div class="search-filters-row">
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'tudo'" (click)="setFiltro('tudo')" tabindex="-1">Tudo</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'titulo'" (click)="setFiltro('titulo')" tabindex="-1">Título</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'autor'" (click)="setFiltro('autor')" tabindex="-1">Autor</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'letra'" (click)="setFiltro('letra')" tabindex="-1">Letra</button>
+  </div>
+
+  <!-- ── Resultados (modo embutido — direto na página) ──────────── -->
+  @if (modoEmbutido()) {
+
+    @if (buscou() && resultados().length === 0 && !carregando()) {
+      <!-- Estado vazio com opção de cadastro -->
+      <div class="vazio-embutido">
+        <div class="vazio-icon">🎵</div>
+        <p class="vazio-texto">
+          Nenhuma música encontrada para <strong>"{{ query() }}"</strong>
+        </p>
+        <p class="vazio-sub">Deseja adicionar essa música ao catálogo?</p>
+        <button class="btn-cadastrar-nova" (mousedown)="onCadastrarNova()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+               width="16" height="16">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Cadastrar "{{ query() }}"
+        </button>
+      </div>
+    }
+
+    @if (!buscou() && query().length < 2) {
+      <div class="dica-embutida">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+             width="32" height="32" style="opacity:0.2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <span>Digite ao menos 2 caracteres para buscar</span>
+      </div>
+    }
+
+    @if (resultados().length > 0) {
+      <div class="resultados-embutidos" role="listbox">
+        @for (item of resultados(); track item.id; let idx = $index) {
+          <div
+            class="dropdown-item"
+            [class.focado]="itemFocado() === idx"
+            role="option"
+            [attr.aria-selected]="itemFocado() === idx"
+            (mousedown)="selecionar(item)"
+            (mouseover)="itemFocado.set(idx)"
+          >
+            <div class="item-main">
+              <span class="item-titulo">{{ item.titulo }}</span>
+              @if (item.autor) {
+                <span class="item-autor">{{ item.autor }}</span>
+              }
+            </div>
+            <div class="item-meta">
+              @if (item.trechoMatch) {
+                <span class="item-trecho">{{ item.trechoMatch }}</span>
+              }
+              @if (badgeLabel(item.matchTipo)) {
+                <span class="item-badge" [attr.data-tipo]="item.matchTipo">
+                  {{ badgeLabel(item.matchTipo) }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+
+        <div class="resultados-footer">
+          {{ resultados().length }} resultado(s) encontrado(s) · ↑↓ Enter para selecionar
+        </div>
+      </div>
+    }
+  }
+
+  <!-- ── Dropdown flutuante (modo padrão) ──────────────────────── -->
+  @if (!modoEmbutido() && aberto()) {
+    <div class="dropdown" role="listbox">
+
+      @if (resultados().length === 0 && !carregando()) {
+        <div class="dropdown-vazio">
+          Nenhuma música encontrada para "<strong>{{ query() }}</strong>"
+          <button class="btn-cadastrar-inline" (mousedown)="onCadastrarNova()">
+            + Cadastrar nova
+          </button>
+        </div>
+      }
+
+      @for (item of resultados(); track item.id; let idx = $index) {
+        <div
+          class="dropdown-item"
+          [class.focado]="itemFocado() === idx"
+          role="option"
+          (mousedown)="selecionar(item)"
+          (mouseover)="itemFocado.set(idx)"
+        >
+          <div class="item-main">
+            <span class="item-titulo">{{ item.titulo }}</span>
+            @if (item.autor) {
+              <span class="item-autor">{{ item.autor }}</span>
+            }
+          </div>
+          <div class="item-meta">
+            @if (item.trechoMatch) {
+              <span class="item-trecho">{{ item.trechoMatch }}</span>
+            }
+            @if (badgeLabel(item.matchTipo)) {
+              <span class="item-badge" [attr.data-tipo]="item.matchTipo">
+                {{ badgeLabel(item.matchTipo) }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+
+      <div class="dropdown-footer">
+        {{ resultados().length }} resultado(s) · ↑↓ + Enter para selecionar
+      </div>
+    </div>
+  }
+
+</div>

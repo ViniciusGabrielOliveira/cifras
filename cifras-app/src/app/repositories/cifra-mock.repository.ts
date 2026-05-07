@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, from, switchMap, tap, map } from 'rxjs';
+import { Observable, of, tap, map, shareReplay, BehaviorSubject } from 'rxjs';
 import { Cifra } from '../models/cifra.model';
-import { CifraRepository } from './cifra.repository';
+import { CifraRepository, CifraIndiceItem } from './cifra.repository';
 
 const LS_PREFIX = 'cifras_mock_';
 
@@ -12,6 +12,9 @@ export class CifraMockRepository extends CifraRepository {
 
     /** Cache em memória para esta sessão */
     private cache = new Map<string, Cifra>();
+    
+    private indiceLoaded = false;
+    private indiceSubject = new BehaviorSubject<CifraIndiceItem[]>([]);
 
     override getCifra(id: string): Observable<Cifra | undefined> {
         // 1. Verifica cache em memória
@@ -46,6 +49,24 @@ export class CifraMockRepository extends CifraRepository {
         const lsKey = LS_PREFIX + cifra.id;
         localStorage.setItem(lsKey, JSON.stringify(cifra, null, 2));
 
+        // Atualiza o índice de busca
+        if (this.indiceLoaded) {
+            const current = this.indiceSubject.value;
+            const newItem: CifraIndiceItem = {
+                id: cifra.id,
+                titulo: cifra.titulo,
+                autor: cifra.artista,
+                letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' ')
+            };
+            const idx = current.findIndex(x => x.id === cifra.id);
+            if (idx >= 0) {
+                current[idx] = newItem;
+            } else {
+                current.push(newItem);
+            }
+            this.indiceSubject.next([...current]);
+        }
+
         return of(cifra);
     }
 
@@ -53,6 +74,44 @@ export class CifraMockRepository extends CifraRepository {
         return this.getCifra('harpa-crista-porque-ele-vive').pipe(
             map(c => (c ? [c] : [])),
         );
+    }
+
+    override getIndice(): Observable<CifraIndiceItem[]> {
+        if (!this.indiceLoaded) {
+            this.indiceLoaded = true;
+            this.http.get<CifraIndiceItem[]>('data/indice.json').subscribe({
+                next: (baseIndex) => {
+                    const localIndex = this.carregarIndiceLocal();
+                    const indexMap = new Map<string, CifraIndiceItem>();
+                    baseIndex.forEach(item => indexMap.set(item.id, item));
+                    localIndex.forEach(item => indexMap.set(item.id, item));
+                    this.indiceSubject.next(Array.from(indexMap.values()));
+                },
+                error: () => {
+                    this.indiceSubject.next(this.carregarIndiceLocal());
+                }
+            });
+        }
+        return this.indiceSubject.asObservable();
+    }
+
+    private carregarIndiceLocal(): CifraIndiceItem[] {
+        const items: CifraIndiceItem[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith(LS_PREFIX)) {
+                try {
+                    const cifra: Cifra = JSON.parse(localStorage.getItem(key)!);
+                    items.push({
+                        id: cifra.id,
+                        titulo: cifra.titulo,
+                        autor: cifra.artista,
+                        letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' ')
+                    });
+                } catch {}
+            }
+        }
+        return items;
     }
 
     /** Exporta o JSON atual para download */

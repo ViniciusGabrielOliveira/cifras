@@ -1,0 +1,228 @@
+<header class="app-header">
+    <div class="header-inner">
+        <div class="header-brand">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+            </svg>
+            <span class="brand-name">Cifras da Missa</span>
+        </div>
+        <a class="header-admin-link" routerLink="/admin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
+            </svg>
+            Admin
+        </a>
+    </div>
+</header>
+
+@if (loading()) {
+<div class="loading-state">
+    <div class="spinner"></div>
+    <span>Carregando lista do dia...</span>
+</div>
+} @else {
+
+<!-- ── Seletor de Lista ──────────────────────────────────────── -->
+<div class="seletor-bar">
+    <button class="seletor-trigger" (click)="abrirSeletor()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+        @if (listaAtual()) {
+        <span>{{ listaAtual()!.titulo }}</span>
+        @if (listaAtual()!.data) {
+        <span class="seletor-data">{{ formatarData(listaAtual()!.data) }}</span>
+        }
+        } @else {
+        <span>Selecionar lista</span>
+        }
+        <svg class="seletor-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14"
+            height="14">
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    </button>
+</div>
+
+<!-- ── Drawer Seletor ────────────────────────────────────────── -->
+@if (seletorAberta()) {
+<div class="drawer-overlay" (click)="fecharSeletor()"></div>
+<div class="drawer">
+    <div class="drawer-header">
+        <span class="drawer-titulo">Escolher Lista</span>
+        <button class="drawer-close" (click)="fecharSeletor()">✕</button>
+    </div>
+
+    <!-- Abas Dia / Categoria -->
+    <div class="drawer-abas">
+        <button [class.ativo]="abaAtiva() === 'dia'" (click)="mudarAba('dia')">
+            📅 Por Dia
+        </button>
+        <button [class.ativo]="abaAtiva() === 'categoria'" (click)="mudarAba('categoria')">
+            🏷️ Por Categoria
+        </button>
+    </div>
+
+    <!-- Aba: Dia -->
+    @if (abaAtiva() === 'dia') {
+    <div class="drawer-filtro">
+        <input type="date" class="input-data" [value]="dataSelecionada()" [max]="dataHoje()"
+            (change)="onDataInputChange($event)" />
+    </div>
+    <div class="drawer-listas">
+        @if (listasDoFiltro().length === 0) {
+        <div class="drawer-vazio">Nenhuma lista para este dia</div>
+        }
+        @for (lista of listasDoFiltro(); track lista.id) {
+        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
+            <span class="lista-item-titulo">{{ lista.titulo }}</span>
+            <span class="lista-item-qtd">{{ lista.musicas.length }} músicas</span>
+        </button>
+        }
+    </div>
+    }
+
+    <!-- Aba: Categoria -->
+    @if (abaAtiva() === 'categoria') {
+    <div class="drawer-cats">
+        @for (cat of categories; track cat) {
+        <button class="cat-btn" [class.ativo]="catSelecionada() === cat" (click)="onCatChange(cat)">
+            {{ CATEGORIAS_LABELS[cat] }}
+        </button>
+        }
+    </div>
+    <div class="drawer-listas">
+        @if (listasDoFiltro().length === 0) {
+        <div class="drawer-vazio">Nenhuma lista nesta categoria</div>
+        }
+        @for (lista of listasDoFiltro(); track lista.id) {
+        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
+            <span class="lista-item-titulo">{{ lista.titulo }}</span>
+            @if (lista.data) {
+            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
+            }
+        </button>
+        }
+    </div>
+    }
+</div>
+}
+
+<!-- ── Conteúdo Principal ─────────────────────────────────────── -->
+@if (listaAtual(); as lista) {
+<main class="main-content">
+
+    <!-- Titulo da Lista -->
+    <div class="lista-header">
+        <div class="lista-cat-badge">{{ CATEGORIAS_LABELS[lista.categoria] }}</div>
+        <h1 class="lista-titulo">{{ lista.titulo }}</h1>
+        @if (lista.data) {
+        <p class="lista-data">{{ formatarData(lista.data) }}</p>
+        }
+    </div>
+
+    <!-- Tabs Partes da Missa -->
+    <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+            @for (parte of partesDisponiveis(); track parte) {
+            <button class="tab" role="tab" [class.ativo]="parteAtiva() === parte" (click)="selecionarParte(parte)"
+                [attr.aria-selected]="parteAtiva() === parte">
+                {{ PARTES_MISSA_LABELS[parte] }}
+            </button>
+            }
+        </div>
+    </div>
+
+    <!-- Músicas da Parte Selecionada -->
+    <div class="musicas-lista" role="tabpanel">
+        @for (musica of musicasDaParte(); track musica.id; let idx = $index) {
+        <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id">
+
+            <!-- Cabeçalho clicável -->
+            <button class="musica-header" (click)="toggleMusicaFromBtn(musica, $any($event.currentTarget))"
+                [attr.aria-expanded]="acordeonAberto() === musica.id">
+                <span class="musica-index">{{ idx + 1 }}</span>
+                <div class="musica-info">
+                    <span class="musica-nome">{{ musica.nome }}</span>
+                    <span class="musica-autor">{{ musica.autor }}</span>
+                </div>
+                <svg class="musica-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </button>
+
+            <!-- Corpo expandido: Cifra -->
+            @if (acordeonAberto() === musica.id) {
+            <div class="musica-corpo">
+                @if (isCarregandoCifra(musica.cifraId)) {
+                <div class="cifra-loading">
+                    <div class="spinner"></div>
+                    <span>Carregando cifra...</span>
+                </div>
+                } @else if (getCifraDoCache(musica.cifraId); as cifra) {
+                <!-- Toolbar da cifra -->
+                <div class="cifra-toolbar">
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Tom</span>
+                        <div class="tom-btns">
+                            <button class="btn-ctrl" (click)="mudarTom(cifra.id, -1)">−</button>
+                            <span class="tom-value">{{ getCifraTransposta(cifra).tom }}</span>
+                            <button class="btn-ctrl" (click)="mudarTom(cifra.id, +1)">+</button>
+                        </div>
+                        @if (getDelta(cifra.id) !== 0) {
+                        <button class="btn-restaurar" (click)="restaurarTom(cifra.id)">Restaurar</button>
+                        }
+                    </div>
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Texto</span>
+                        <div class="tom-btns">
+                            <button class="btn-ctrl" (click)="mudarFonte(cifra.id, -1)">−</button>
+                            <span class="tom-value" style="min-width:40px">{{ getFonteSize(cifra.id) }}px</span>
+                            <button class="btn-ctrl" (click)="mudarFonte(cifra.id, 1)">+</button>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1"></div>
+
+                    <a class="btn-edit" [routerLink]="['/editor', cifra.id]">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 4px; vertical-align: text-bottom;">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                        Editar cifra
+                    </a>
+                </div>
+
+                <!-- Seções da cifra -->
+                <div class="cifra-secoes" [style.font-size.px]="getFonteSize(cifra.id)">
+                    @for (secao of getCifraTransposta(cifra).secoes; track secao.label) {
+                    <app-secao-cifra [secao]="secao" />
+                    }
+                </div>
+                } @else {
+                <div class="cifra-nao-encontrada">
+                    Cifra não encontrada para "{{ musica.nome }}"
+                </div>
+                }
+            </div>
+            }
+        </div>
+        }
+    </div>
+</main>
+
+} @else {
+<div class="empty-state">
+    <div class="empty-icon">🎵</div>
+    <h2>Nenhuma lista encontrada</h2>
+    <p>Não há lista de músicas para hoje.<br>Use o seletor acima para encontrar listas por data ou categoria.</p>
+    <button class="btn-abrir-seletor" (click)="abrirSeletor()">Escolher lista</button>
+</div>
+}
+
+}<!-- end @else loading -->

@@ -71,11 +71,14 @@
         <!-- Nome do acorde -->
         <div class="chord-name-input">
             <label>Acorde:</label>
-            <input [value]="newChordName()" (input)="newChordName.set($any($event.target).value)"
-                placeholder="Ex: Am7, D/F#" (keydown.enter)="confirmAddChord()" autofocus />
+            <input [value]="newChordName()" (input)="newChordName.set($any($event.target).value); chordError.set(false)"
+                placeholder="Ex: Am7, D/F#" (keydown.enter)="confirmAddChord()" autofocus [class.invalid]="chordError()" />
             <button class="btn-confirm" (click)="confirmAddChord()">OK</button>
             <button class="btn-cancel" (click)="cancelAddChord()">Cancelar</button>
         </div>
+        @if (chordError()) {
+        <div class="chord-error-msg">Acorde inválido. Formatos: C, Am7, D/F#</div>
+        }
     </div>
     }
 

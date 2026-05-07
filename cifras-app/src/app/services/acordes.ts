@@ -1,131 +1,37 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { Observable, of, tap, map } from 'rxjs';
 import { DiagramaAcorde } from '../models/diagrama.model';
+import { AcordeRepository } from '../repositories/acorde.repository';
 
 @Injectable({ providedIn: 'root' })
 export class AcordesService {
-  private DB: Record<string, DiagramaAcorde[]> = {
-    'A9': [
-      {
-        nome: 'A9', variacao: 'Posição 1', casaBase: 1,
-        dedos: [
-          { corda: 2, casa: 2 },
-          { corda: 3, casa: 2 },
-          { corda: 4, casa: 2 },
-        ],
-        cordasMutadas: [], cordasSoltas: [1, 5, 6],
-      },
-      {
-        nome: 'A9', variacao: 'Posição 2', casaBase: 4,
-        pestana: 4,
-        dedos: [
-          { corda: 1, casa: 4 }, { corda: 2, casa: 4 },
-          { corda: 3, casa: 4 }, { corda: 4, casa: 4 },
-          { corda: 5, casa: 4 }, { corda: 6, casa: 4 },
-          { corda: 3, casa: 6 },
-        ],
-        cordasMutadas: [], cordasSoltas: [],
-      },
-    ],
-    'A9/C#': [
-      {
-        nome: 'A9/C#', variacao: 'Posição 1', casaBase: 1,
-        dedos: [
-          { corda: 5, casa: 4 },
-          { corda: 2, casa: 2 },
-          { corda: 3, casa: 2 },
-          { corda: 4, casa: 2 },
-        ],
-        cordasMutadas: [6], cordasSoltas: [1],
-      },
-    ],
-    'D': [
-      {
-        nome: 'D', variacao: 'Aberta', casaBase: 1,
-        dedos: [
-          { corda: 3, casa: 2 },
-          { corda: 2, casa: 3 },
-          { corda: 1, casa: 2 },
-        ],
-        cordasMutadas: [5, 6], cordasSoltas: [4],
-      },
-    ],
-    'E': [
-      {
-        nome: 'E', variacao: 'Aberta', casaBase: 1,
-        dedos: [
-          { corda: 3, casa: 1 },
-          { corda: 5, casa: 2 },
-          { corda: 4, casa: 2 },
-        ],
-        cordasMutadas: [], cordasSoltas: [1, 2, 6],
-      },
-    ],
-    'Bm': [
-      {
-        nome: 'Bm', variacao: 'Pestana 2ª', casaBase: 2,
-        pestana: 2,
-        dedos: [
-          { corda: 1, casa: 2 }, { corda: 2, casa: 2 },
-          { corda: 3, casa: 2 }, { corda: 4, casa: 2 },
-          { corda: 5, casa: 2 }, { corda: 6, casa: 2 },
-          { corda: 4, casa: 4 },
-          { corda: 3, casa: 4 },
-          { corda: 2, casa: 3 },
-        ],
-        cordasMutadas: [], cordasSoltas: [],
-      },
-    ],
-    'F#m': [
-      {
-        nome: 'F#m', variacao: 'Pestana 2ª', casaBase: 2,
-        pestana: 2,
-        dedos: [
-          { corda: 1, casa: 2 }, { corda: 2, casa: 2 },
-          { corda: 3, casa: 2 }, { corda: 4, casa: 2 },
-          { corda: 5, casa: 2 }, { corda: 6, casa: 2 },
-          { corda: 4, casa: 4 },
-          { corda: 3, casa: 4 },
-        ],
-        cordasMutadas: [], cordasSoltas: [],
-      },
-    ],
-    'G': [
-      {
-        nome: 'G', variacao: 'Aberta', casaBase: 1,
-        dedos: [
-          { corda: 6, casa: 3 },
-          { corda: 5, casa: 2 },
-          { corda: 1, casa: 3 },
-        ],
-        cordasMutadas: [], cordasSoltas: [2, 3, 4],
-      },
-    ],
-    'A': [
-      {
-        nome: 'A', variacao: 'Aberta', casaBase: 1,
-        dedos: [
-          { corda: 4, casa: 2 },
-          { corda: 3, casa: 2 },
-          { corda: 2, casa: 2 },
-        ],
-        cordasMutadas: [6], cordasSoltas: [1, 5],
-      },
-    ],
-    'E/G#': [
-      {
-        nome: 'E/G#', variacao: 'Posição 1', casaBase: 1,
-        dedos: [
-          { corda: 6, casa: 4 },
-          { corda: 3, casa: 1 },
-          { corda: 5, casa: 2 },
-          { corda: 4, casa: 2 },
-        ],
-        cordasMutadas: [], cordasSoltas: [1, 2],
-      },
-    ],
-  };
+  private repo = inject(AcordeRepository);
+  private cache = new Map<string, DiagramaAcorde[]>();
 
+  /**
+   * Pré-carrega os acordes solicitados e os salva no cache em memória.
+   * Acordes que já estão no cache são ignorados.
+   */
+  preCarregarAcordes(nomes: string[]): Observable<void> {
+    const faltantes = nomes.filter(n => !this.cache.has(n));
+    if (faltantes.length === 0) {
+      return of(undefined);
+    }
+    
+    return this.repo.getAcordes(faltantes).pipe(
+      tap(acordesMap => {
+        Object.entries(acordesMap).forEach(([nome, diags]) => {
+          this.cache.set(nome, diags);
+        });
+      }),
+      map(() => undefined)
+    );
+  }
+
+  /**
+   * Retorna as variações de um acorde de forma síncrona, a partir do cache.
+   */
   getVariacoes(acorde: string): DiagramaAcorde[] {
-    return this.DB[acorde] ?? [];
+    return this.cache.get(acorde) ?? [];
   }
 }

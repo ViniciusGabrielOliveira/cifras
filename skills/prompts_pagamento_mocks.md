@@ -1,0 +1,20 @@
+Prompt 01: Elabore um fluxo completo de onboarding identificando usuario via device_id no backend, definindo estados (trial_ativo, trial_expirado, pago, pendente), e descreva um diagrama de sequencia textual que mostre as transicoes entre telas do front e endpoints mockados.
+Prompt 02: Escreva especificacao tecnica da API mockada para registrar device_id, incluindo rotas REST, payloads JSON, codigos HTTP esperados, regras de expiracao do trial de 30 dias e mensagens de erro padronizadas.
+Prompt 03: Defina modelo de dados temporario (DTOs) para usuario anonimo e usuario cadastrado, explicando campos obrigatorios (nome, telefone, email, device_id, status_assinatura, data_expiracao) e como serao validados antes de enviar ao backend real.
+Prompt 04: Construa plano de testes unitarios para a camada de mocks garantindo cobranca do fluxo trial->cadastro->pagamento, incluindo cenarios de expiracao, reativacao e tentativa de reutilizar device_id ja associado.
+Prompt 05: Redija roteiro BDD com Given/When/Then que cubra interacoes do usuario desde primeiro acesso ate redirecionamento para tela de pagamento Pix, contemplando caminhos felizes e alternativos.
+Prompt 06: Descreva como implementar middleware no front para interceptar cada request e anexar o device_id nos headers; detalhe formato, politicas de retry e como lidar com erros de rede simulados.
+Prompt 07: Planeje estrutura de armazenamento local (LocalStorage/IndexedDB) para conservar device_id, timestamp do ultimo status e token do trial, incluindo estrategias de sincronizacao e limpeza ao trocar de usuario.
+Prompt 08: Defina contrato tipado (TypeScript types/interfaces) entre front e mocks para todos endpoints de assinatura, garantindo compatibilidade futura com backend real.
+Prompt 09: Especifique componente de UI responsavel por mostrar contador regressivo dos dias restantes do trial, com estados para trial ativo, a vencer em 3 dias e expirado, incluindo acessibilidade e internacionalizacao.
+Prompt 10: Instrua a gerar tela de cadastramento coletando nome, telefone, email, validando campos em tempo real, mascarando telefone e exibindo feedback de API conforme respostas dos mocks.
+Prompt 11: Solicite implementacao de tela de pagamento via Pix exibindo QR Code mockado, codigo copia-e-cola, instrucoes para diferentes bancos e botao de confirmar pagamento apos validacao do backend falso.
+Prompt 12: Defina logica de polling para verificar status do pagamento no backend mockado a cada X segundos, com limites de tentativas, tratamento de timeouts e exibicao de mensagens de progresso.
+Prompt 13: Descreva mecanismo de feature flags para habilitar/desabilitar o paywall, permitindo testar o front sem bloqueios durante desenvolvimento, armazenando configuracoes em mocks configuraveis.
+Prompt 14: Instrua a criar camada de servicos isolada (PaymentService, TrialService) que encapsule chamadas HTTP aos mocks, permitindo futura substituicao pelo backend real sem mudar a UI.
+Prompt 15: Solicite a criacao de suite de testes e2e simulando usuario em trial que expira e e redirecionado para cadastro, usando dados mockados e validando rotas protegidas.
+Prompt 16: Especifique monitoramento front-end (logs/metrics) para registrar eventos criticos: inicio trial, expiracao, cadastro concluido, tentativa de pagamento, confirmacao Pix, erros de rede.
+Prompt 17: Instrua a gerar documentos de UX copy para mensagens exibidas em cada etapa (trial ativado, trial quase acabando, trial expirado, cadastro necessario, pagamento confirmado, pagamento pendente).
+Prompt 18: Solicite plano de migracao do usuario anonimo para usuario autenticado apos pagamento, detalhando como vincular device_id ao usuario logado e atualizar status no front sem recarregar a pagina.
+Prompt 19: Descreva como simular ambiente offline e reconexao para garantir que o front mantenha estado local do trial e retente sincronizacao com o backend mockado quando a conexao voltar.
+Prompt 20: Instrua a documentar manual de integracao futuro com o backend real, listando pontos de troca (URLs, autenticacao, validacao Pix), pre-requisitos e checklist para transicao livre de regressao.

@@ -47,7 +47,7 @@ function computarSegmentos(letra: string, acordes: AcordeLinha[]): Segmento[] {
 
       } @else {
         <!-- Segmentos: cada um tem acorde + texto alinhados em coluna -->
-        @for (seg of segmentos(); track $index) {
+        @for (seg of segmentos; track $index) {
           <span class="segmento">
             <span class="seg-acorde">
               @if (seg.acorde) {
@@ -66,7 +66,7 @@ function computarSegmentos(letra: string, acordes: AcordeLinha[]): Segmento[] {
 export class LinhaCifraComponent {
   @Input() linha!: LinhaCifra;
 
-  segmentos = computed(() =>
-    computarSegmentos(this.linha?.letra ?? '', this.linha?.acordes ?? [])
-  );
+  get segmentos() {
+    return computarSegmentos(this.linha?.letra ?? '', this.linha?.acordes ?? []);
+  }
 }

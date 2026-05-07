@@ -1,0 +1,214 @@
+<!-- Toast de notificação pós-cadastro -->
+@if (notificacao()) {
+  <div class="toast-notificacao">
+    {{ notificacao() }}
+  </div>
+}
+
+<!-- ── Header Admin ──────────────────────────────────────────────── -->
+<header class="admin-header">
+  <div class="admin-header-inner">
+    <div class="header-left">
+      <a routerLink="/" class="back-link">← Voltar ao site</a>
+      <span class="admin-titulo">Painel Admin</span>
+    </div>
+    <button class="btn-sair" (click)="sair()">Sair</button>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--  DASHBOARD                                                     -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+@if (vista() === 'dashboard') {
+  <div class="admin-page">
+    <div class="dash-top">
+      <h1 class="dash-titulo">Listas Cadastradas</h1>
+      <button class="btn-nova-lista" (click)="novaLista()">+ Nova Lista</button>
+    </div>
+
+    <div class="filtro-bar">
+      <input
+        class="filtro-input"
+        type="text"
+        placeholder="Filtrar listas..."
+        [ngModel]="filtroTexto()"
+        (ngModelChange)="filtroTexto.set($event)"
+      />
+    </div>
+
+    @if (listasFiltradas().length === 0) {
+      <div class="empty-dash">
+        <p>Nenhuma lista encontrada.</p>
+        <button class="btn-nova-lista" (click)="novaLista()">Criar primeira lista</button>
+      </div>
+    }
+
+    <div class="listas-grid">
+      @for (lista of listasFiltradas(); track lista.id) {
+        <div class="lista-card">
+          <div class="lista-card-header">
+            <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
+            @if (lista.data) {
+              <span class="lista-card-data">📅 {{ formatarData(lista.data) }}</span>
+            }
+          </div>
+          <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
+          <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
+
+          <div class="lista-card-acoes">
+            <button class="btn-editar" (click)="editarLista(lista)">Editar</button>
+            @if (confirmando() === lista.id) {
+              <div class="confirm-row">
+                <span class="confirm-label">Excluir?</span>
+                <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
+                <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>
+              </div>
+            } @else {
+              <button class="btn-excluir" (click)="confirmarExcluir(lista.id)">Excluir</button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--  EDITOR DE LISTA                                              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+@if ((vista() === 'nova-lista' || vista() === 'editar-lista') && listaEdit(); as lista) {
+  <div class="admin-page">
+    <div class="editor-top">
+      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
+      <h1 class="editor-titulo">
+        {{ vista() === 'nova-lista' ? 'Nova Lista' : 'Editar Lista' }}
+      </h1>
+    </div>
+
+    <!-- Dados Gerais -->
+    <section class="editor-section">
+      <h2 class="section-titulo">Dados Gerais</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Título da Lista *</label>
+          <input id="campo-titulo" class="form-input" type="text"
+            placeholder="Ex: Domingo do Tempo Comum"
+            [value]="lista.titulo"
+            (input)="onInputCampo('titulo', $event)" />
+        </div>
+        <div class="form-group">
+          <label>Data (opcional)</label>
+          <input id="campo-data" class="form-input" type="date"
+            [value]="lista.data ?? ''"
+            (change)="onDataChange($event)" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Categoria Litúrgica</label>
+        <select id="campo-categoria" class="form-input"
+          [value]="lista.categoria"
+          (change)="onCategoriaChange($event)">
+          @for (cat of categorias; track cat) {
+            <option [value]="cat">{{ CATEGORIAS_LABELS[cat] }}</option>
+          }
+        </select>
+      </div>
+    </section>
+
+    <!-- Músicas por Parte -->
+    <section class="editor-section">
+      <h2 class="section-titulo">Músicas por Parte da Missa</h2>
+
+      @if (lista.musicas.length === 0) {
+        <div class="sem-musicas">
+          Nenhuma música adicionada ainda. Clique em "+ Adicionar" em uma das partes abaixo.
+        </div>
+      }
+
+      @for (parte of PARTES_MISSA_ORDER; track parte) {
+        <div class="parte-bloco">
+          <div class="parte-header-row">
+            <div class="parte-label">{{ PARTES_MISSA_LABELS[parte] }}</div>
+            <button class="btn-add-nesta-parte" (click)="abrirModalBusca(parte)">
+              + Adicionar
+            </button>
+          </div>
+
+          @if (musicasDaParte(parte).length === 0) {
+            <div class="parte-vazia">Nenhuma música nesta parte</div>
+          }
+
+          @for (musica of musicasDaParte(parte); track musica.id) {
+            <div class="musica-row">
+              <div class="musica-reorder">
+                <button class="btn-move" title="Subir"  (click)="moverMusica(musica.id, -1)">↑</button>
+                <button class="btn-move" title="Descer" (click)="moverMusica(musica.id, +1)">↓</button>
+              </div>
+
+              <div class="musica-info-card">
+                <div class="musica-nome-row">
+                  <span class="musica-nome-badge">{{ musica.nome }}</span>
+                  @if (musica.autor) {
+                    <span class="musica-autor-badge">{{ musica.autor }}</span>
+                  }
+                </div>
+                <div class="musica-trecho-row">
+                  <p class="musica-trecho">"{{ musica.trecho }}"</p>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start;">
+                <button class="btn-editar-cifra" (click)="editarCifra(musica)">Editar</button>
+                <button class="btn-remover-musica" title="Remover" (click)="removerMusica(musica.id)">✕</button>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </section>
+
+    <!-- Ações -->
+    <div class="editor-acoes">
+      <button class="btn-cancelar" (click)="cancelarEdicao()">Cancelar</button>
+      <button class="btn-salvar"
+        [disabled]="salvando() || !lista.titulo.trim()"
+        (click)="salvarLista()">
+        @if (salvando()) {
+          <div class="spinner" style="width:16px;height:16px;border-width:2px"></div>
+          Salvando...
+        } @else {
+          Salvar Lista
+        }
+      </button>
+    </div>
+  </div>
+}
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--  MODAL DE BUSCA DE MÚSICA                                      -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+@if (modalBuscaAberto()) {
+  <div class="modal-overlay" (click)="fecharModalBusca()"></div>
+  <div class="modal-busca" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <div class="modal-titulo-group">
+        <span class="modal-titulo">Adicionar música</span>
+        <span class="modal-parte-badge">{{ PARTES_MISSA_LABELS[parteParaAdicionar()] }}</span>
+      </div>
+      <button class="modal-close" (click)="fecharModalBusca()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-hint">
+        Busque por título, trecho da letra ou autor. Resultados são ordenados por relevância.
+      </p>
+
+      <app-musica-search
+        placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
+        [modoEmbutido]="true"
+        (musicaSelecionada)="onMusicaSelecionada($event)"
+        (cadastrarNova)="onCadastrarNova($event)"
+      />
+    </div>
+  </div>
+}
