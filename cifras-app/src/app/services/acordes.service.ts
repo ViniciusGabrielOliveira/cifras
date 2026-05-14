@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, tap, map } from 'rxjs';
 import { DiagramaAcorde } from '../models/diagrama.model';
-import { AcordeRepository } from '../repositories/acorde.repository';
+import { AcordeRepository } from '../repositories/acorde.repository.interface';
 
 @Injectable({ providedIn: 'root' })
 export class AcordesService {

@@ -1,6 +1,6 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Observable, tap, map } from 'rxjs';
-import { AuthRepository } from '../repositories/auth.repository';
+import { AuthRepository } from '../repositories/auth.repository.interface';
 import { AppUser, AuthProvider, AuthState, ConviteGrupo, Grupo, UserRole, ROLE_HIERARCHY } from '../models/user.model';
 
 @Injectable({ providedIn: 'root' })
@@ -60,6 +60,18 @@ export class AuthService {
   logout(): Observable<void> {
     return this.repo.logout().pipe(
       tap(() => this.patchState({ user: null, loading: false, error: null })),
+    );
+  }
+
+  atualizarPerfil(dados: Partial<AppUser>): Observable<AppUser> {
+    const uid = this.user()?.uid;
+    if (!uid) throw new Error('Usuário não autenticado');
+    this.patchState({ loading: true, error: null });
+    return this.repo.atualizarPerfil(uid, dados).pipe(
+      tap({
+        next: user => this.patchState({ user, loading: false }),
+        error: err => this.patchState({ loading: false, error: err.message }),
+      }),
     );
   }
 

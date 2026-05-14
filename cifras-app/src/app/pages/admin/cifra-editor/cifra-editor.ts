@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
-import { CifraService } from '../../../services/cifra';
+import { CifraService } from '../../../services/cifra.service';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo'];
 
@@ -124,22 +124,27 @@ export class CifraEditorComponent implements OnInit {
   toggleJSON() {
     const c = this.cifra();
     if (!c) return;
-    this.jsonPreview.set(this.cifraService.getJSONString(c.id) || JSON.stringify(c, null, 2));
+    this.jsonPreview.set(JSON.stringify(c, null, 2));
     this.showJSON.update(v => !v);
   }
 
   exportarJSON() {
     const c = this.cifra();
     if (!c) return;
-    this.cifraService.salvarCifra(c).subscribe(() => {
-      this.cifraService.exportarJSON(c.id);
-    });
+    const json = JSON.stringify(c, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${c.id}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   copiarJSON() {
     const c = this.cifra();
     if (!c) return;
-    const json = this.cifraService.getJSONString(c.id) || JSON.stringify(c, null, 2);
+    const json = JSON.stringify(c, null, 2);
     navigator.clipboard.writeText(json).then(() => {
       this.saved.set(true);
       setTimeout(() => this.saved.set(false), 1500);
@@ -149,8 +154,8 @@ export class CifraEditorComponent implements OnInit {
   resetarOriginal() {
     const c = this.cifra();
     if (!c) return;
-    if (!confirm('Descartar todas as edições e voltar ao JSON original?')) return;
-    this.cifraService.resetarOriginal(c.id).subscribe(original => {
+    if (!confirm('Descartar todas as edições e recarregar do servidor?')) return;
+    this.cifraService.getCifra(c.id).subscribe(original => {
       if (original) this.cifra.set(JSON.parse(JSON.stringify(original)));
     });
   }

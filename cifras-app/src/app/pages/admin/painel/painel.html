@@ -23,7 +23,10 @@
   <div class="admin-page">
     <div class="dash-top">
       <h1 class="dash-titulo">Listas Cadastradas</h1>
-      <button class="btn-nova-lista" (click)="novaLista()">+ Nova Lista</button>
+      <div class="dash-actions">
+        <button class="btn-config" (click)="abrirConfiguracoes()">Configurações</button>
+        <button class="btn-nova-lista" (click)="novaLista()">+ Nova Lista</button>
+      </div>
     </div>
 
     <div class="filtro-bar">
@@ -178,6 +181,72 @@
           Salvando...
         } @else {
           Salvar Lista
+        }
+      </button>
+    </div>
+  </div>
+}
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--  CONFIGURAÇÕES                                                  -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+@if (vista() === 'configuracoes') {
+  <div class="admin-page">
+    <div class="editor-top">
+      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
+      <h1 class="editor-titulo">Configurações Gerais</h1>
+    </div>
+
+    <!-- Categorias Litúrgicas -->
+    <section class="editor-section">
+      <div class="parte-header-row" style="margin-bottom: 1rem;">
+        <h2 class="section-titulo" style="margin: 0;">Categorias Litúrgicas</h2>
+        <button class="btn-add-nesta-parte" (click)="addConfigItem('cat')">+ Adicionar</button>
+      </div>
+
+      @for (cat of configCatsEdit(); track $index; let idx = $index) {
+        <div class="musica-row" style="align-items: center;">
+          <div class="musica-reorder">
+            <button class="btn-move" title="Subir" (click)="moveConfigItem('cat', idx, -1)">↑</button>
+            <button class="btn-move" title="Descer" (click)="moveConfigItem('cat', idx, +1)">↓</button>
+          </div>
+          <div class="form-group" style="margin: 0 1rem; flex: 1;">
+            <input class="form-input" style="padding: 4px 8px;" type="text" [value]="cat.label" (input)="updateConfigLabel('cat', idx, $any($event.target).value)">
+          </div>
+          <button class="btn-remover-musica" title="Remover" (click)="removeConfigItem('cat', idx)">✕</button>
+        </div>
+      }
+    </section>
+
+    <!-- Partes da Missa -->
+    <section class="editor-section">
+      <div class="parte-header-row" style="margin-bottom: 1rem;">
+        <h2 class="section-titulo" style="margin: 0;">Partes da Missa</h2>
+        <button class="btn-add-nesta-parte" (click)="addConfigItem('parte')">+ Adicionar</button>
+      </div>
+
+      @for (parte of configPartesEdit(); track $index; let idx = $index) {
+        <div class="musica-row" style="align-items: center;">
+          <div class="musica-reorder">
+            <button class="btn-move" title="Subir" (click)="moveConfigItem('parte', idx, -1)">↑</button>
+            <button class="btn-move" title="Descer" (click)="moveConfigItem('parte', idx, +1)">↓</button>
+          </div>
+          <div class="form-group" style="margin: 0 1rem; flex: 1;">
+            <input class="form-input" style="padding: 4px 8px;" type="text" [value]="parte.label" (input)="updateConfigLabel('parte', idx, $any($event.target).value)">
+          </div>
+          <button class="btn-remover-musica" title="Remover" (click)="removeConfigItem('parte', idx)">✕</button>
+        </div>
+      }
+    </section>
+
+    <div class="editor-acoes">
+      <button class="btn-cancelar" (click)="cancelarEdicao()">Cancelar</button>
+      <button class="btn-salvar" [disabled]="salvandoConfig()" (click)="salvarConfiguracoes()">
+        @if (salvandoConfig()) {
+          <div class="spinner" style="width:16px;height:16px;border-width:2px"></div>
+          Salvando...
+        } @else {
+          Salvar Configurações
         }
       </button>
     </div>

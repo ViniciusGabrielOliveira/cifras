@@ -2,19 +2,19 @@ import { ApplicationConfig, LOCALE_ID, provideBrowserGlobalErrorListeners } from
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideFirebase } from './firebase.providers';
 
 import { routes } from './app.routes';
-import { CifraRepository } from './repositories/cifra.repository';
-import { CifraMockRepository } from './repositories/cifra-mock.repository';
-import { ListaRepository } from './repositories/lista.repository';
-import { ListaMockRepository } from './repositories/lista-mock.repository';
-import { AcordeRepository } from './repositories/acorde.repository';
-import { AcordeMockRepository } from './repositories/acorde-mock.repository';
-import { AuthRepository } from './repositories/auth.repository';
+import { CifraRepository } from './repositories/cifra.repository.interface';
+import { CifraFirebaseRepository } from './repositories/cifra-firebase.repository';
+import { ListaRepository } from './repositories/lista.repository.interface';
+import { ListaFirebaseRepository } from './repositories/lista-firebase.repository';
+import { AcordeRepository } from './repositories/acorde.repository.interface';
+import { AcordeFirebaseRepository } from './repositories/acorde-firebase.repository';
+import { AuthRepository } from './repositories/auth.repository.interface';
 import { AuthFirebaseRepository } from './repositories/auth-firebase.repository';
+import { ConfigRepository } from './repositories/config.repository.interface';
+import { ConfigFirebaseRepository } from './repositories/config-firebase.repository';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDihm0_8iGOEY7QL0V145K-U1eOU-6XXcE',
@@ -37,14 +37,13 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
 
     // ── Firebase ────────────────────────────────────────────────────
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
+    provideFirebase(firebaseConfig),
 
     // ── Repositories ───────────────────────────────────────────────
-    { provide: CifraRepository, useClass: CifraMockRepository },
-    { provide: ListaRepository, useClass: ListaMockRepository },
-    { provide: AcordeRepository, useClass: AcordeMockRepository },
+    { provide: CifraRepository, useClass: CifraFirebaseRepository },
+    { provide: ListaRepository, useClass: ListaFirebaseRepository },
+    { provide: AcordeRepository, useClass: AcordeFirebaseRepository },
     { provide: AuthRepository, useClass: AuthFirebaseRepository },
+    { provide: ConfigRepository, useClass: ConfigFirebaseRepository },
   ],
 };

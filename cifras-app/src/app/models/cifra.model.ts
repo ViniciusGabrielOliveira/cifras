@@ -26,5 +26,8 @@ export interface Cifra {
   instrumento: Instrumento;
   dificuldade: Dificuldade;
   composicao: string;
+  videoLink?: string;
+  categorias?: string[];      // IDs de categorias litúrgicas (ex: ['advento', 'tempo-comum'])
+  partesMissa?: string[];     // IDs de partes da missa (ex: ['entrada', 'comunhao'])
   secoes: Secao[];
 }

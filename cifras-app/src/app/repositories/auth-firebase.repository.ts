@@ -1,8 +1,9 @@
 import { Injectable, inject, NgZone } from '@angular/core';
 import { Observable, from, of, throwError, BehaviorSubject, switchMap, map, catchError } from 'rxjs';
+import { FIREBASE_APP, fromFirebaseListener } from '../firebase.providers';
 import {
-  Auth,
-  authState as firebaseAuthState$,
+  getAuth,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   updateProfile,
@@ -11,9 +12,9 @@ import {
   GoogleAuthProvider,
   OAuthProvider,
   User as FirebaseUser,
-} from '@angular/fire/auth';
+} from 'firebase/auth';
 import {
-  Firestore,
+  getFirestore,
   doc,
   getDoc,
   setDoc,
@@ -23,8 +24,8 @@ import {
   where,
   getDocs,
   addDoc,
-} from '@angular/fire/firestore';
-import { AuthRepository } from './auth.repository';
+} from 'firebase/firestore';
+import { AuthRepository } from './auth.repository.interface';
 import {
   AppUser, AuthProvider as AppAuthProvider, ConviteGrupo, Grupo, GrupoMembro, UserRole,
 } from '../models/user.model';
@@ -52,15 +53,17 @@ function firebaseUserToAppUser(fbUser: FirebaseUser, role: UserRole = 'membro', 
 
 @Injectable()
 export class AuthFirebaseRepository extends AuthRepository {
-  private auth = inject(Auth);
-  private firestore = inject(Firestore);
+  private app = inject(FIREBASE_APP);
+  private auth = getAuth(this.app);
+  private firestore = getFirestore(this.app);
   private zone = inject(NgZone);
   private authState$ = new BehaviorSubject<AppUser | null>(null);
 
   constructor() {
     super();
-    // Usa o Observable do @angular/fire (zone-safe) em vez do raw onAuthStateChanged
-    firebaseAuthState$(this.auth).subscribe(async (fbUser) => {
+    
+    fromFirebaseListener<FirebaseUser | null>((next, error) => onAuthStateChanged(this.auth, next, error))
+      .subscribe(async (fbUser) => {
       if (fbUser) {
         try {
           const appUser = await this.getOrCreateUserDoc(fbUser);

@@ -2,7 +2,7 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Cifra } from '../../models/cifra.model';
-import { CifraService } from '../../services/cifra';
+import { CifraService } from '../../services/cifra.service';
 import { transporCifra } from '../../core/transposicao';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 

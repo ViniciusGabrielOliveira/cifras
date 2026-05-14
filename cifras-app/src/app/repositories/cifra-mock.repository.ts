@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, tap, map, shareReplay, BehaviorSubject } from 'rxjs';
 import { Cifra } from '../models/cifra.model';
-import { CifraRepository, CifraIndiceItem } from './cifra.repository';
+import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 const LS_PREFIX = 'cifras_mock_';
 
@@ -138,5 +138,17 @@ export class CifraMockRepository extends CifraRepository {
         localStorage.removeItem(LS_PREFIX + id);
         this.cache.delete(id);
         return this.getCifra(id);
+    }
+
+    override getCifrasPorCategoria(categoria: string): Observable<Cifra[]> {
+        return this.getAllCifras().pipe(
+            map(cifras => cifras.filter(c => c.categorias?.includes(categoria))),
+        );
+    }
+
+    override getCifrasPorParte(parte: string): Observable<Cifra[]> {
+        return this.getAllCifras().pipe(
+            map(cifras => cifras.filter(c => c.partesMissa?.includes(parte))),
+        );
     }
 }

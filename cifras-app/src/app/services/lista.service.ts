@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
 import { Lista, CategoriaLiturgica } from '../models/lista.model';
-import { ListaRepository } from '../repositories/lista.repository';
+import { ListaRepository } from '../repositories/lista.repository.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ListaService {

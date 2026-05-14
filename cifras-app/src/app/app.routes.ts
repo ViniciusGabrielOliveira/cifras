@@ -32,6 +32,12 @@ export const routes: Routes = [
             import('./pages/admin/cadastro/cadastro').then(m => m.CadastroComponent),
     },
     {
+        path: 'admin/completar-cadastro',
+        canActivate: [authGuard],
+        loadComponent: () =>
+            import('./pages/admin/completar-cadastro/completar-cadastro').then(m => m.CompletarCadastroComponent),
+    },
+    {
         path: 'admin/painel',
         canActivate: [authGuard, roleGuard('membro')],
         loadComponent: () =>

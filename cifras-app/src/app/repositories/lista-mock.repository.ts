@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, map } from 'rxjs';
 import { Lista, CategoriaLiturgica, ListasDoDiaResponse } from '../models/lista.model';
-import { ListaRepository } from './lista.repository';
-import { CifraRepository, CifraIndiceItem } from './cifra.repository';
+import { ListaRepository } from './lista.repository.interface';
+import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 const LS_ALL_KEY = 'listas_mock_all';
 

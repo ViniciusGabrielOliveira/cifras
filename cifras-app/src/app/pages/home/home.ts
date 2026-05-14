@@ -2,9 +2,10 @@ import { Component, inject, signal, computed, OnInit, ViewChild, ElementRef } fr
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { Lista, CategoriaLiturgica, CATEGORIAS_LABELS, PARTES_MISSA_LABELS, PARTES_MISSA_ORDER, PartesMissa, MusicaLista } from '../../models/lista.model';
+import { Lista, MusicaLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
-import { CifraService } from '../../services/cifra';
+import { CifraService } from '../../services/cifra.service';
+import { ConfigService } from '../../services/config.service';
 import { Cifra } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 import { transporCifra } from '../../core/transposicao';
@@ -21,6 +22,7 @@ type SeletorAba = 'dia' | 'categoria';
 export class HomeComponent implements OnInit {
     private listaService = inject(ListaService);
     private cifraService = inject(CifraService);
+    readonly config = inject(ConfigService);
 
     @ViewChild('inputData') inputData!: ElementRef<HTMLInputElement>;
 
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit {
     seletorAberta = signal(false);
     abaAtiva = signal<SeletorAba>('dia');
     dataSelecionada = signal(new Date().toISOString().split('T')[0]);
-    catSelecionada = signal<CategoriaLiturgica>('tempo-comum');
+    catSelecionada = signal('tempo-comum');
     listasDoFiltro = signal<Lista[]>([]);
 
     // ── Lista atual ──────────────────────────────────────────────────
@@ -36,13 +38,13 @@ export class HomeComponent implements OnInit {
     loading = signal(true);
 
     // ── Tabs partes da missa ─────────────────────────────────────────
-    partesDisponiveis = computed<PartesMissa[]>(() => {
+    partesDisponiveis = computed<string[]>(() => {
         const l = this.listaAtual();
         if (!l) return [];
         const usadas = new Set(l.musicas.map(m => m.parte));
-        return PARTES_MISSA_ORDER.filter(p => usadas.has(p));
+        return this.config.partesIds().filter(p => usadas.has(p));
     });
-    parteAtiva = signal<PartesMissa | null>(null);
+    parteAtiva = signal<string | null>(null);
 
     musicasDaParte = computed<MusicaLista[]>(() => {
         const l = this.listaAtual();
@@ -72,12 +74,9 @@ export class HomeComponent implements OnInit {
     });
 
     // ── Labels (template) ────────────────────────────────────────────
-    readonly CATEGORIAS_LABELS = CATEGORIAS_LABELS;
-    readonly PARTES_MISSA_LABELS = PARTES_MISSA_LABELS;
-    readonly PARTES_MISSA_ORDER = PARTES_MISSA_ORDER;
-    readonly categories: CategoriaLiturgica[] = [
-        'tempo-comum', 'advento', 'quaresma', 'pascoa', 'festas-liturgicas',
-    ];
+    get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
+    get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
+    get categories() { return this.config.categoriasIds().filter(id => id !== 'sem-categoria'); }
 
     ngOnInit(): void {
         // Carrega listas do dia de hoje
@@ -121,7 +120,7 @@ export class HomeComponent implements OnInit {
         this.carregarListasPorData(val);
     }
 
-    onCatChange(cat: CategoriaLiturgica) {
+    onCatChange(cat: string) {
         this.catSelecionada.set(cat);
         this.carregarListasPorCategoria(cat);
     }
@@ -137,7 +136,7 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    private carregarListasPorCategoria(cat: CategoriaLiturgica) {
+    private carregarListasPorCategoria(cat: string) {
         this.listaService.getListasPorCategoria(cat).subscribe(listas => {
             this.listasDoFiltro.set(listas);
         });
@@ -146,15 +145,14 @@ export class HomeComponent implements OnInit {
     selecionarLista(lista: Lista) {
         this.listaAtual.set(lista);
         this.acordeonAberto.set(null);
-        // Selecionar primeira parte disponível
-        const partes = PARTES_MISSA_ORDER.filter(p => lista.musicas.some(m => m.parte === p));
+        const partes = this.config.partesIds().filter(p => lista.musicas.some(m => m.parte === p));
         this.parteAtiva.set(partes[0] ?? null);
         this.fecharSeletor();
     }
 
     // ─── Tabs ─────────────────────────────────────────────────────────
 
-    selecionarParte(parte: PartesMissa) {
+    selecionarParte(parte: string) {
         this.parteAtiva.set(parte);
         this.acordeonAberto.set(null);
     }

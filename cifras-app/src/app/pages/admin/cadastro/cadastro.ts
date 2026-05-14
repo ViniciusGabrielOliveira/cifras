@@ -62,9 +62,13 @@ export class CadastroComponent {
         this.erro.set('');
         this.carregando.set(true);
         this.auth.loginSocial('google').subscribe({
-            next: () => {
+            next: (user) => {
                 this.carregando.set(false);
-                this.router.navigate(['/admin/painel']);
+                if (!user.telefone) {
+                    this.router.navigate(['/admin/completar-cadastro']);
+                } else {
+                    this.router.navigate(['/admin/painel']);
+                }
             },
             error: (err) => {
                 this.carregando.set(false);

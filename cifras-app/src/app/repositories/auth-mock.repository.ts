@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, throwError, delay, tap } from 'rxjs';
-import { AuthRepository } from './auth.repository';
+import { AuthRepository } from './auth.repository.interface';
 import { AppUser, AuthProvider, ConviteGrupo, ConviteStatus, Grupo, GrupoMembro, UserRole } from '../models/user.model';
 
 // ── Dados mock ───────────────────────────────────────────────────────

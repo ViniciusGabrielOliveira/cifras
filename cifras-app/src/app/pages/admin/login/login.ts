@@ -1,4 +1,4 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, signal, inject, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -20,6 +20,14 @@ export class LoginComponent {
     erro = signal('');
     carregando = signal(false);
 
+    constructor() {
+        effect(() => {
+            if (!this.auth.loading() && this.auth.isLogado()) {
+                this.router.navigate(['/admin/painel']);
+            }
+        });
+    }
+
     entrar() {
         this.erro.set('');
         this.carregando.set(true);
@@ -39,9 +47,13 @@ export class LoginComponent {
         this.erro.set('');
         this.carregando.set(true);
         this.auth.loginSocial('google').subscribe({
-            next: () => {
+            next: (user) => {
                 this.carregando.set(false);
-                this.router.navigate(['/admin/painel']);
+                if (!user.telefone) {
+                    this.router.navigate(['/admin/completar-cadastro']);
+                } else {
+                    this.router.navigate(['/admin/painel']);
+                }
             },
             error: (err) => {
                 this.carregando.set(false);

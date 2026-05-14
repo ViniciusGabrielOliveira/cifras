@@ -2,15 +2,24 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import {
-  Lista, MusicaLista, PartesMissa, CategoriaLiturgica,
-  PARTES_MISSA_LABELS, PARTES_MISSA_ORDER, CATEGORIAS_LABELS,
-} from '../../../models/lista.model';
+import { Lista, MusicaLista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
+import { ConfigService } from '../../../services/config.service';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
 
-type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista';
+type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista' | 'configuracoes';
+
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -26,14 +35,13 @@ export class PainelComponent implements OnInit {
   private listaService = inject(ListaService);
   private auth = inject(AuthService);
   private router = inject(Router);
+  readonly config = inject(ConfigService);
 
   // ── Labels para template ─────────────────────────────────────────
-  readonly PARTES_MISSA_LABELS = PARTES_MISSA_LABELS;
-  readonly PARTES_MISSA_ORDER = PARTES_MISSA_ORDER;
-  readonly CATEGORIAS_LABELS = CATEGORIAS_LABELS;
-  readonly categorias: CategoriaLiturgica[] = [
-    'tempo-comum', 'advento', 'quaresma', 'pascoa', 'festas-liturgicas', 'sem-categoria',
-  ];
+  get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
+  get PARTES_MISSA_ORDER() { return this.config.partesIds(); }
+  get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
+  get categorias() { return this.config.categoriasIds(); }
 
   // ── Estado ───────────────────────────────────────────────────────
   vista = signal<VistaAdmin>('dashboard');
@@ -42,9 +50,14 @@ export class PainelComponent implements OnInit {
   salvando = signal(false);
   confirmando = signal<string | null>(null);
 
+  // ── Configurações Edit ───────────────────────────────────────────
+  configCatsEdit = signal<import('../../../models/config.model').ConfigItem[]>([]);
+  configPartesEdit = signal<import('../../../models/config.model').ConfigItem[]>([]);
+  salvandoConfig = signal(false);
+
   // ── Busca de música ───────────────────────────────────────────────
   /** Parte pré-selecionada ao abrir o modal de adição de música */
-  parteParaAdicionar = signal<PartesMissa>('entrada');
+  parteParaAdicionar = signal('entrada');
   modalBuscaAberto = signal(false);
 
   // Filtro no dashboard
@@ -62,10 +75,6 @@ export class PainelComponent implements OnInit {
   private route = inject(ActivatedRoute);
 
   ngOnInit() {
-    if (!this.auth.isLogado()) {
-      this.router.navigate(['/admin']);
-      return;
-    }
     this.carregarListas();
 
     // Detecta retorno da tela de nova cifra
@@ -82,7 +91,7 @@ export class PainelComponent implements OnInit {
         const draft = this.listaService.listaDraft;
 
         if (!edicaoCifra) {
-          const parte = (this.listaService.parteParaAdicionarDraft as PartesMissa) || 'entrada';
+          const parte = (this.listaService.parteParaAdicionarDraft as string) || 'entrada';
           const novaMusica: MusicaLista = {
             id: newId('m'),
             cifraId: cifraAdicionada,
@@ -152,6 +161,57 @@ export class PainelComponent implements OnInit {
     });
   }
 
+  // ── Configurações ─────────────────────────────────────────────────
+  abrirConfiguracoes() {
+    this.configCatsEdit.set(JSON.parse(JSON.stringify(this.config.categorias())));
+    this.configPartesEdit.set(JSON.parse(JSON.stringify(this.config.partesMissa())));
+    this.vista.set('configuracoes');
+  }
+
+  addConfigItem(tipo: 'cat' | 'parte') {
+    const list = tipo === 'cat' ? this.configCatsEdit() : this.configPartesEdit();
+    const nova = { id: slugify('Nova Opção'), label: 'Nova Opção', ordem: list.length };
+    if (tipo === 'cat') this.configCatsEdit.set([...list, nova]);
+    else this.configPartesEdit.set([...list, nova]);
+  }
+
+  removeConfigItem(tipo: 'cat' | 'parte', idx: number) {
+    const list = tipo === 'cat' ? [...this.configCatsEdit()] : [...this.configPartesEdit()];
+    list.splice(idx, 1);
+    list.forEach((item, i) => item.ordem = i);
+    if (tipo === 'cat') this.configCatsEdit.set(list);
+    else this.configPartesEdit.set(list);
+  }
+
+  moveConfigItem(tipo: 'cat' | 'parte', idx: number, dir: -1 | 1) {
+    const list = tipo === 'cat' ? [...this.configCatsEdit()] : [...this.configPartesEdit()];
+    const newIdx = idx + dir;
+    if (newIdx < 0 || newIdx >= list.length) return;
+    [list[idx], list[newIdx]] = [list[newIdx], list[idx]];
+    list.forEach((item, i) => item.ordem = i);
+    if (tipo === 'cat') this.configCatsEdit.set(list);
+    else this.configPartesEdit.set(list);
+  }
+
+  updateConfigLabel(tipo: 'cat' | 'parte', idx: number, label: string) {
+    const list = tipo === 'cat' ? [...this.configCatsEdit()] : [...this.configPartesEdit()];
+    list[idx] = { ...list[idx], label, id: slugify(label) };
+    if (tipo === 'cat') this.configCatsEdit.set(list);
+    else this.configPartesEdit.set(list);
+  }
+
+  async salvarConfiguracoes() {
+    this.salvandoConfig.set(true);
+    await Promise.all([
+      this.config.salvarCategorias(this.configCatsEdit()),
+      this.config.salvarPartesMissa(this.configPartesEdit()),
+    ]);
+    this.salvandoConfig.set(false);
+    this.notificacao.set('✓ Configurações salvas!');
+    setTimeout(() => this.notificacao.set(null), 3000);
+    this.vista.set('dashboard');
+  }
+
   // ── Editor ───────────────────────────────────────────────────────
 
   onInputCampo(campo: keyof Lista, event: Event) {
@@ -164,7 +224,7 @@ export class PainelComponent implements OnInit {
   }
 
   onCategoriaChange(event: Event) {
-    const val = (event.target as HTMLSelectElement).value as CategoriaLiturgica;
+    const val = (event.target as HTMLSelectElement).value;
     this.definirCampo('categoria', val);
   }
 
@@ -197,7 +257,7 @@ export class PainelComponent implements OnInit {
 
   // ── Modal de Busca ────────────────────────────────────────────────
 
-  abrirModalBusca(parte: PartesMissa) {
+  abrirModalBusca(parte: string) {
     this.parteParaAdicionar.set(parte);
     this.modalBuscaAberto.set(true);
   }
@@ -284,7 +344,7 @@ export class PainelComponent implements OnInit {
     this.listaEdit.set({ ...lista, musicas: musicas.map((m, i) => ({ ...m, ordem: i })) });
   }
 
-  musicasDaParte(parte: PartesMissa): MusicaLista[] {
+  musicasDaParte(parte: string): MusicaLista[] {
     return (this.listaEdit()?.musicas ?? [])
       .filter(m => m.parte === parte)
       .sort((a, b) => a.ordem - b.ordem);

@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DiagramaViolaoComponent } from '../diagrama-violao/diagrama-violao';
-import { AcordesService } from '../../services/acordes';
+import { AcordesService } from '../../services/acordes.service';
 import { DiagramaAcorde } from '../../models/diagrama.model';
 
 @Component({

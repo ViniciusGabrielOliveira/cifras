@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository';
+import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
 
 export interface ResultadoBusca extends CifraIndiceItem {
   score: number;

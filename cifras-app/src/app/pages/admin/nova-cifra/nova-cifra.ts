@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Cifra, Secao, LinhaCifra, TipoSecao } from '../../../models/cifra.model';
-import { CifraService } from '../../../services/cifra';
+import { CifraService } from '../../../services/cifra.service';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo'];
