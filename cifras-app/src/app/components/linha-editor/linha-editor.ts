@@ -85,6 +85,11 @@ export class LinhaEditorComponent implements OnChanges {
 
   /** Posição em px de um índice de caractere */
   getCharPx(posicao: number): number {
+    if (!this.texto()) {
+      const sorted = [...this.acordes()].sort((a, b) => a.posicao - b.posicao);
+      const idx = sorted.findIndex(a => a.posicao === posicao);
+      return Math.max(0, idx) * 64;
+    }
     const offsets = this.charOffsets();
     return offsets[posicao] ?? posicao * 9;
   }
@@ -105,6 +110,7 @@ export class LinhaEditorComponent implements OnChanges {
   // ─── DRAG ───────────────────────────────────────────────────────────────────
 
   startDrag(event: MouseEvent, acorde: AcordeLinha) {
+    if (!this.texto()) return;
     event.preventDefault();
     event.stopPropagation();
     this.drag = {
@@ -178,8 +184,11 @@ export class LinhaEditorComponent implements OnChanges {
     }
     this.chordError.set(false);
 
-    const posicao = this.newChordPos();
-    // Remove acorde que já ocupa a mesma posição
+    // Linha sem letra: posiciona em sequência para não empilhar
+    const posicao = this.texto()
+      ? this.newChordPos()
+      : this.acordes().reduce((max, a) => Math.max(max, a.posicao), -1) + 1;
+
     const lista = this.acordes().filter(a => a.posicao !== posicao);
     lista.push({ posicao, acorde: nome });
     lista.sort((a, b) => a.posicao - b.posicao);

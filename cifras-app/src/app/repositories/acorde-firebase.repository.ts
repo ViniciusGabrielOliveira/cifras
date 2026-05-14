@@ -27,7 +27,8 @@ export class AcordeFirebaseRepository extends AcordeRepository {
 
     // Busca os que faltam no Firestore
     const fetches$ = uncached.map(nome => {
-      const acordeRef = doc(this.firestore, `acordes/${nome}`);
+      const docId = nome.replace(/\//g, '_');
+      const acordeRef = doc(this.firestore, `acordes/${docId}`);
       return from(getDoc(acordeRef)).pipe(
         map(snap => {
           if (snap.exists()) {

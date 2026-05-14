@@ -203,7 +203,7 @@
 
                 <!-- Seções da cifra -->
                 <div class="cifra-secoes" [style.font-size.px]="getFonteSize(cifra.id)">
-                    @for (secao of getCifraTransposta(cifra).secoes; track secao.label) {
+                    @for (secao of getCifraTransposta(cifra).secoes; track $index) {
                     <app-secao-cifra [secao]="secao" />
                     }
                 </div>

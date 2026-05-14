@@ -103,6 +103,170 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ─── Busca Cifra Club ─── */
+.import-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+}
+
+.spinner-import {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(124, 106, 253, 0.25);
+    border-top-color: var(--color-acorde);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+.busca-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.busca-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.busca-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--color-text-muted);
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.busca-input {
+    width: 100%;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 10px 36px 10px 36px;
+    outline: none;
+    transition: border-color 0.15s;
+
+    &:focus { border-color: var(--color-acorde); }
+    &::placeholder { color: var(--color-text-muted); opacity: 0.6; }
+}
+
+.busca-spinner {
+    position: absolute;
+    right: 12px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(124, 106, 253, 0.25);
+    border-top-color: var(--color-acorde);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+.sugestoes-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.sugestao-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.12s;
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-child { border-bottom: none; }
+
+    &:hover {
+        background: var(--color-acorde-bg);
+        .sugestao-nome { color: var(--color-acorde); }
+    }
+}
+
+.sugestao-nome {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: color 0.12s;
+}
+
+.sugestao-artista {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.busca-erro {
+    font-size: 0.78rem;
+    color: #f87171;
+    margin: 0;
+}
+
+.import-erro {
+    margin-top: 0.25rem;
+}
+
+.busca-hint {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    opacity: 0.5;
+    margin: 0;
+}
+
+.importado-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.btn-reimportar {
+    margin-left: auto;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    background: transparent;
+    color: #4ade80;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+
+    &:hover { background: rgba(34, 197, 94, 0.12); }
+}
+
 /* ─── Body ─── */
 .editor-body {
     flex: 1;

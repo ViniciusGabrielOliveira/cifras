@@ -17,6 +17,14 @@
     </div>
 
     <div class="topbar-actions">
+      <button class="btn-tool" (click)="colarMusica()" [disabled]="colando()" title="Colar cifra do clipboard">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+        </svg>
+        Colar cifra
+      </button>
+
       <button class="btn-tool" (click)="showJSON.update(v => !v)" title="Ver JSON gerado">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
@@ -45,6 +53,62 @@
   </header>
 
   <div class="editor-body">
+
+    <!-- ── Busca Cifra Club ──────────────────────────────────────── -->
+    @if (buscandoImport()) {
+      <div class="import-loading">
+        <span class="spinner-import"></span>
+        Importando música do Cifra Club...
+      </div>
+    } @else if (!importado()) {
+      <div class="busca-section">
+        <div class="busca-field">
+          <svg class="busca-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            class="busca-input"
+            type="text"
+            placeholder="Buscar música no Cifra Club..."
+            [value]="buscaTermo()"
+            (input)="onBuscaInput($any($event.target).value)"
+            autocomplete="off"
+          />
+          @if (buscandoSugestoes()) {
+            <span class="busca-spinner"></span>
+          }
+        </div>
+
+        @if (erroBusca()) {
+          <p class="busca-erro">{{ erroBusca() }}</p>
+        }
+
+        @if (sugestoes().length > 0) {
+          <ul class="sugestoes-lista">
+            @for (s of sugestoes(); track s.id) {
+              <li class="sugestao-item" (click)="importarSugestao(s)">
+                <span class="sugestao-nome">{{ s.nome }}</span>
+                <span class="sugestao-artista">{{ s.artista }}</span>
+              </li>
+            }
+          </ul>
+        }
+
+        @if (erroImport()) {
+          <p class="busca-erro import-erro">{{ erroImport() }}</p>
+        }
+
+        <p class="busca-hint">Ou preencha o formulário manualmente abaixo</p>
+      </div>
+    } @else {
+      <div class="importado-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Rascunho importado do Cifra Club
+        <button class="btn-reimportar" (click)="importado.set(false)">Buscar outra</button>
+      </div>
+    }
 
     <!-- ── Metadados ────────────────────────────────────────────── -->
     <section class="meta-panel">
@@ -134,7 +198,7 @@
         </div>
       </div>
 
-      @for (secao of cifra().secoes; track secao.label; let si = $index) {
+      @for (secao of cifra().secoes; track $index; let si = $index) {
         <div class="secao-edit-card">
           <div class="secao-edit-header">
             <select [value]="secao.tipo"

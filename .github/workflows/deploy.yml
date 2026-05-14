@@ -1,27 +1,22 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
     branches:
       - main
-  # Permite rodar manualmente pela aba Actions
   workflow_dispatch:
 
-# Permissões para publicar no GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Garante que apenas um deploy rode por vez
 concurrency:
-  group: "pages"
+  group: "deploy-${{ github.ref }}"
   cancel-in-progress: false
 
+# ── Job 1: Build do Angular ──────────────────────────────────────────
 jobs:
   build:
     name: Build Angular App
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
@@ -39,19 +34,13 @@ jobs:
         working-directory: cifras-app
 
       - name: Build
-        # --base-href: ajuste para o nome do seu repositório no GitHub
-        # Ex: se o repo for github.com/usuario/cifras → --base-href="/cifras/"
-        # Se for um GitHub Pages de usuário (usuario.github.io) → --base-href="/"
         run: npx ng build --configuration=production --base-href="/${{ github.event.repository.name }}/"
         working-directory: cifras-app
 
-      # Copia index.html como 404.html para que o roteamento SPA
-      # funcione ao acessar URLs diretamente (/cifra/xxx, /editor/xxx)
       - name: Copy index.html → 404.html (SPA routing fix)
         run: cp dist/cifras-app/browser/index.html dist/cifras-app/browser/404.html
         working-directory: cifras-app
 
-      # Arquivo .nojekyll garante que arquivos com _ são servidos corretamente
       - name: Add .nojekyll
         run: touch dist/cifras-app/browser/.nojekyll
         working-directory: cifras-app
@@ -61,10 +50,14 @@ jobs:
         with:
           path: cifras-app/dist/cifras-app/browser
 
-  deploy:
+# ── Job 2: Deploy GitHub Pages ───────────────────────────────────────
+  deploy-pages:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
@@ -74,3 +67,42 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+# ── Job 3: Deploy Cloud Functions ────────────────────────────────────
+  deploy-functions:
+    name: Deploy Cloud Functions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    # Roda no push manual, ou quando há alterações em functions/
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      contains(toJSON(github.event.commits.*.modified), 'functions/') ||
+      contains(toJSON(github.event.commits.*.added), 'functions/')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Install functions dependencies
+        run: npm install
+        working-directory: functions
+
+      - name: Build TypeScript
+        run: npm run build
+        working-directory: functions
+
+      - name: Deploy to Firebase
+        run: |
+          npm install -g firebase-tools
+          firebase deploy --only functions --project "$FIREBASE_PROJECT_ID"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}

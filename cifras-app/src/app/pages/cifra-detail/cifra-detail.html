@@ -54,7 +54,7 @@
 
   <!-- Corpo -->
   <main class="cifra-body" [style.font-size.px]="fonteSize()">
-    @for (secao of c.secoes; track secao.label) {
+    @for (secao of c.secoes; track $index) {
     <app-secao-cifra [secao]="secao" />
     }
   </main>

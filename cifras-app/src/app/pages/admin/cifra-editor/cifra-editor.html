@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            @for (secao of c.secoes; track secao.label; let si = $index) {
+            @for (secao of c.secoes; track $index; let si = $index) {
             <div class="secao-edit-card">
                 <div class="secao-edit-header">
                     <select [value]="secao.tipo" (change)="updateSecaoTipo(si, $any($event.target).value)"

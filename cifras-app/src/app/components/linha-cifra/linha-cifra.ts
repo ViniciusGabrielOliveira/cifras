@@ -39,7 +39,9 @@ function computarSegmentos(letra: string, acordes: AcordeLinha[]): Segmento[] {
   standalone: true,
   imports: [CommonModule, AcordeLabelComponent],
   template: `
-    <div class="linha-wrap" [class.sem-acordes]="!linha.acordes.length">
+    <div class="linha-wrap"
+      [class.sem-acordes]="!linha.acordes.length"
+      [class.so-acordes]="!linha.letra && linha.acordes.length > 0">
 
       @if (linha.acordes.length === 0) {
         <!-- Linha só de letra, sem acordes -->
