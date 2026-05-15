@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cifras-api
+    runtime: python
+    region: oregon          # plano free só suporta Oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: API_KEY
+        sync: false         # preencher manualmente no dashboard do Render
+      - key: ALLOWED_ORIGINS
+        value: https://viniciusgabriel.github.io  # ajustar para o domínio do app

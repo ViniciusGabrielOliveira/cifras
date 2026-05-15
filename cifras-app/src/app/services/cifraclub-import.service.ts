@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { getFunctions, httpsCallable } from 'firebase/functions';
-import { FIREBASE_APP } from '../firebase.providers';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface CifraClubSugestao {
   id: string;
@@ -20,30 +21,30 @@ export interface CifraClubImportResult {
 
 @Injectable({ providedIn: 'root' })
 export class CifraClubImportService {
-  private app = inject(FIREBASE_APP);
+  private http = inject(HttpClient);
+
+  private get headers(): HttpHeaders {
+    return new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey });
+  }
 
   async buscarSugestoes(termo: string): Promise<CifraClubSugestao[]> {
     if (!termo.trim()) return [];
-    const url = `https://solr.sscdn.co/cc/c7/?q=${encodeURIComponent(termo)}&limit=30&callback=suggest_callback`;
-    const response = await fetch(url);
-    const text = await response.text();
-    // Extrai o JSON do wrapper JSONP: suggest_callback({...})
-    const json = text.replace(/^[^(]+\(/, '').replace(/\)\s*;?\s*$/, '');
-    const data = JSON.parse(json);
-    return (data?.d?.items ?? []).map((item: Record<string, string>) => ({
-      id: item['id'],
-      nome: item['n'],
-      artista: item['a'],
-      dns: item['dns'],
-      url: item['url'],
-    }));
+    const url = `${environment.cifrasApiUrl}/buscar`;
+    return firstValueFrom(
+      this.http.get<CifraClubSugestao[]>(url, {
+        headers: this.headers,
+        params: { q: termo.trim() },
+      })
+    );
   }
 
   async importarMusica(sugestao: CifraClubSugestao): Promise<CifraClubImportResult> {
     const cifraUrl = `https://www.cifraclub.com.br/${sugestao.dns}/${sugestao.url}/`;
-    const fns = getFunctions(this.app, 'southamerica-east1');
-    const importar = httpsCallable<{ url: string }, CifraClubImportResult>(fns, 'importCifraClubSong');
-    const result = await importar({ url: cifraUrl });
-    return result.data;
+    return firstValueFrom(
+      this.http.get<CifraClubImportResult>(`${environment.cifrasApiUrl}/importar`, {
+        headers: this.headers,
+        params: { url: cifraUrl },
+      })
+    );
   }
 }
