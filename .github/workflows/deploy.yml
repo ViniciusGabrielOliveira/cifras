@@ -33,6 +33,17 @@ jobs:
         run: npm install
         working-directory: cifras-app
 
+      - name: Generate environment.prod.ts
+        run: |
+          cat > src/environments/environment.prod.ts << 'EOF'
+          export const environment = {
+            production: true,
+            cifrasApiUrl: '${{ secrets.CIFRAS_API_URL }}',
+            cifrasApiKey: '${{ secrets.CIFRAS_API_KEY }}',
+          };
+          EOF
+        working-directory: cifras-app
+
       - name: Build
         run: npx ng build --configuration=production --base-href="/${{ github.event.repository.name }}/"
         working-directory: cifras-app
