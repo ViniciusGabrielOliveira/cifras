@@ -6,9 +6,12 @@ import { Lista, MusicaLista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
+import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
+import { CifraService } from '../../../services/cifra.service';
+import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
 
-type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista' | 'configuracoes';
+type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista' | 'configuracoes' | 'gerenciar-cifras';
 
 function slugify(text: string): string {
   return text
@@ -55,10 +58,30 @@ export class PainelComponent implements OnInit {
   configPartesEdit = signal<import('../../../models/config.model').ConfigItem[]>([]);
   salvandoConfig = signal(false);
 
+  private cifraClubService = inject(CifraClubImportService);
+  private cifraService = inject(CifraService);
+
+  // ── Gerenciar Cifras ──────────────────────────────────────────────
+  todasCifras       = signal<CifraIndiceItem[]>([]);
+  filtroCifras      = signal('');
+  cifrasFiltradas   = computed(() => {
+    const q = this.filtroCifras().toLowerCase().trim();
+    return q
+      ? this.todasCifras().filter(c =>
+          c.titulo.toLowerCase().includes(q) ||
+          c.autor.toLowerCase().includes(q) ||
+          c.letra.toLowerCase().includes(q),
+        )
+      : this.todasCifras();
+  });
+  confirmandoRemocao = signal<string | null>(null);
+  removendoCifra     = signal(false);
+
   // ── Busca de música ───────────────────────────────────────────────
-  /** Parte pré-selecionada ao abrir o modal de adição de música */
-  parteParaAdicionar = signal('entrada');
-  modalBuscaAberto = signal(false);
+  parteParaAdicionar  = signal('entrada');
+  modalBuscaAberto    = signal(false);
+  importandoCifraClub = signal(false);
+  erroImportCC        = signal<string | null>(null);
 
   // Filtro no dashboard
   filtroTexto = signal('');
@@ -72,50 +95,55 @@ export class PainelComponent implements OnInit {
   // ── Notificação pós-cadastro ─────────────────────────────────────
   notificacao = signal<string | null>(null);
 
+  cifrasExistentes = signal<Set<string>>(new Set());
+
   private route = inject(ActivatedRoute);
 
   ngOnInit() {
     this.carregarListas();
+    this.cifraService.getIndice().subscribe(items => {
+      this.cifrasExistentes.set(new Set(items.map(i => i.id)));
+    });
 
-    // Detecta retorno da tela de nova cifra
-    const nomeCifra = this.route.snapshot.queryParamMap.get('nomeCifra');
-    const cifraAdicionada = this.route.snapshot.queryParamMap.get('cifraAdicionada');
-    const edicaoCifra = this.route.snapshot.queryParamMap.get('edicaoCifra');
+    // Detecta retorno da tela de nova cifra ou do editor
+    const nomeCifra        = this.route.snapshot.queryParamMap.get('nomeCifra');
+    const cifraAdicionada  = this.route.snapshot.queryParamMap.get('cifraAdicionada');
+    const edicaoCifra      = this.route.snapshot.queryParamMap.get('edicaoCifra');
+    const restaurarRascunho = this.route.snapshot.queryParamMap.get('restaurarRascunho');
 
     if (nomeCifra) {
       this.notificacao.set(`✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!`);
       setTimeout(() => this.notificacao.set(null), 4000);
+    }
 
-      // Se havia um rascunho salvo, restaura a lista
-      if (this.listaService.listaDraft && cifraAdicionada) {
-        const draft = this.listaService.listaDraft;
+    if ((nomeCifra || restaurarRascunho) && this.listaService.listaDraft) {
+      const draft = this.listaService.listaDraft;
 
-        if (!edicaoCifra) {
-          const parte = (this.listaService.parteParaAdicionarDraft as string) || 'entrada';
-          const novaMusica: MusicaLista = {
-            id: newId('m'),
-            cifraId: cifraAdicionada,
-            nome: nomeCifra,
-            autor: '',
-            parte: parte,
-            ordem: draft.musicas.filter(m => m.parte === parte).length,
-          };
-          draft.musicas.push(novaMusica);
-        }
-
-        // Restaura a view
-        this.listaEdit.set(draft);
-        if (this.listaService.vistaDraft) {
-          this.vista.set(this.listaService.vistaDraft as VistaAdmin);
-        }
-
-        // Limpa o rascunho do service
-        this.listaService.listaDraft = null;
-        this.listaService.vistaDraft = null;
-        this.listaService.parteParaAdicionarDraft = null;
+      // Só adiciona a música nova se veio de um cadastro (não de um cancelamento ou edição)
+      if (nomeCifra && cifraAdicionada && !edicaoCifra) {
+        const parte = (this.listaService.parteParaAdicionarDraft as string) || 'entrada';
+        const novaMusica: MusicaLista = {
+          id: newId('m'),
+          cifraId: cifraAdicionada,
+          nome: nomeCifra,
+          autor: '',
+          parte: parte,
+          ordem: draft.musicas.filter(m => m.parte === parte).length,
+        };
+        draft.musicas.push(novaMusica);
       }
 
-      // Remove os query params sem recarregar
+      this.listaEdit.set(draft);
+      if (this.listaService.vistaDraft) {
+        this.vista.set(this.listaService.vistaDraft as VistaAdmin);
+      }
+
+      this.listaService.listaDraft = null;
+      this.listaService.vistaDraft = null;
+      this.listaService.parteParaAdicionarDraft = null;
+    }
+
+    if (nomeCifra || restaurarRascunho) {
       this.router.navigate([], { queryParams: {}, replaceUrl: true });
     }
   }
@@ -212,6 +240,35 @@ export class PainelComponent implements OnInit {
     this.vista.set('dashboard');
   }
 
+  // ── Gerenciar Cifras ─────────────────────────────────────────────
+
+  abrirGerenciarCifras() {
+    this.filtroCifras.set('');
+    this.confirmandoRemocao.set(null);
+    this.cifraService.getIndice().subscribe(items => {
+      this.todasCifras.set(items.slice().sort((a, b) => a.titulo.localeCompare(b.titulo)));
+    });
+    this.vista.set('gerenciar-cifras');
+  }
+
+  confirmarRemoverCifra(id: string) { this.confirmandoRemocao.set(id); }
+  cancelarRemoverCifra() { this.confirmandoRemocao.set(null); }
+
+  removerCifra(id: string) {
+    this.removendoCifra.set(true);
+    this.cifraService.deleteCifra(id).subscribe(() => {
+      this.todasCifras.update(list => list.filter(c => c.id !== id));
+      this.confirmandoRemocao.set(null);
+      this.removendoCifra.set(false);
+    });
+  }
+
+  editarCifraGerenciar(id: string) {
+    this.router.navigate(['/admin/editar-cifra', id], {
+      queryParams: { retorno: 'painel', edicaoCifra: 'true' },
+    });
+  }
+
   // ── Editor ───────────────────────────────────────────────────────
 
   onInputCampo(campo: keyof Lista, event: Event) {
@@ -264,6 +321,7 @@ export class PainelComponent implements OnInit {
 
   fecharModalBusca() {
     this.modalBuscaAberto.set(false);
+    this.erroImportCC.set(null);
   }
 
   onCadastrarNova(nomeBuscado: string) {
@@ -280,6 +338,31 @@ export class PainelComponent implements OnInit {
     this.router.navigate(['/admin/nova-cifra'], {
       queryParams: { nome: nomeBuscado },
     });
+  }
+
+  async onCifraClubSelecionada(sugestao: CifraClubSugestao) {
+    this.erroImportCC.set(null);
+    this.importandoCifraClub.set(true);
+    try {
+      const result = await this.cifraClubService.importarMusica(sugestao);
+
+      // Guarda o resultado para nova-cifra consumir ao abrir
+      this.cifraClubService.pendingImport = result;
+
+      // Salva o rascunho da lista igual ao onCadastrarNova
+      const lista = this.listaEdit();
+      if (lista) {
+        this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
+        this.listaService.vistaDraft = this.vista() as any;
+        this.listaService.parteParaAdicionarDraft = this.parteParaAdicionar();
+      }
+
+      this.fecharModalBusca();
+      this.router.navigate(['/admin/nova-cifra']);
+    } catch {
+      this.erroImportCC.set('Não foi possível importar do Cifra Club. Tente novamente.');
+      this.importandoCifraClub.set(false);
+    }
   }
 
   onMusicaSelecionada(selecionada: MusicaSelecionada) {
@@ -322,6 +405,10 @@ export class PainelComponent implements OnInit {
         m.id === musicaId ? { ...m, [campo]: valor } : m,
       ),
     });
+  }
+
+  cifraExiste(cifraId: string): boolean {
+    return this.cifrasExistentes().has(cifraId);
   }
 
   editarCifra(musica: MusicaLista) {

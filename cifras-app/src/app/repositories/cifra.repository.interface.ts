@@ -11,6 +11,7 @@ export interface CifraIndiceItem {
 export abstract class CifraRepository {
   abstract getCifra(id: string): Observable<Cifra | undefined>;
   abstract updateCifra(cifra: Cifra): Observable<Cifra>;
+  abstract deleteCifra(id: string): Observable<void>;
   abstract getAllCifras(): Observable<Cifra[]>;
   abstract getIndice(): Observable<CifraIndiceItem[]>;
   abstract getCifrasPorCategoria(categoria: string): Observable<Cifra[]>;

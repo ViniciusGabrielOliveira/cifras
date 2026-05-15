@@ -6,7 +6,7 @@ import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { CifraService } from '../../../services/cifra.service';
 
-const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo'];
+const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
 
 @Component({
   selector: 'app-cifra-editor',
@@ -22,19 +22,45 @@ export class CifraEditorComponent implements OnInit {
 
   cifra = signal<Cifra | null>(null);
   loading = signal(true);
+  notFound = signal(false);
   saving = signal(false);
   saved = signal(false);
   showJSON = signal(false);
   jsonPreview = signal('');
+  private _salvouNestaSessao = false;
 
   readonly tiposSecao = TIPOS;
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id') ?? 'harpa-crista-porque-ele-vive';
+    const id = this.route.snapshot.paramMap.get('id') ?? '';
+    if (!id) { this.voltar(); return; }
     this.cifraService.getCifra(id).subscribe(c => {
-      if (c) this.cifra.set(JSON.parse(JSON.stringify(c))); // deep clone
+      if (c) {
+        this.cifra.set(JSON.parse(JSON.stringify(c)));
+      } else {
+        this.notFound.set(true);
+        setTimeout(() => this.voltar(), 3000);
+      }
       this.loading.set(false);
     });
+  }
+
+  voltar() {
+    const retorno = this.route.snapshot.queryParamMap.get('retorno');
+    if (retorno === 'painel') {
+      const c = this.cifra();
+      const queryParams: Record<string, string> = { restaurarRascunho: 'true' };
+      if (this._salvouNestaSessao && c) {
+        queryParams['nomeCifra'] = c.titulo;
+        queryParams['cifraAdicionada'] = c.id;
+        queryParams['edicaoCifra'] = 'true';
+      }
+      this.router.navigate(['/admin/painel'], { queryParams });
+    } else {
+      const c = this.cifra();
+      if (c) this.router.navigate(['/cifra', c.id]);
+      else this.router.navigate(['/admin/painel']);
+    }
   }
 
   // ─── Seções ─────────────────────────────────────────────────────────────────
@@ -61,7 +87,25 @@ export class CifraEditorComponent implements OnInit {
     this.cifra.update(c => {
       if (!c) return c;
       const secoes = [...c.secoes];
-      secoes[idx] = { ...secoes[idx], tipo };
+      const secao = secoes[idx];
+      if (tipo === 'tab') {
+        const tabText = secao.linhas.map(l => l.letra).join('\n');
+        secoes[idx] = { ...secao, tipo, linhas: [], tabText };
+      } else if (secao.tipo === 'tab') {
+        const linhas = (secao.tabText ?? '').split('\n').map(l => ({ letra: l, acordes: [] }));
+        secoes[idx] = { ...secao, tipo, linhas, tabText: undefined };
+      } else {
+        secoes[idx] = { ...secao, tipo };
+      }
+      return { ...c, secoes };
+    });
+  }
+
+  updateTabText(idx: number, tabText: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const secoes = [...c.secoes];
+      secoes[idx] = { ...secoes[idx], tabText };
       return { ...c, secoes };
     });
   }
@@ -117,6 +161,7 @@ export class CifraEditorComponent implements OnInit {
     this.cifraService.salvarCifra(c).subscribe(() => {
       this.saving.set(false);
       this.saved.set(true);
+      this._salvouNestaSessao = true;
       setTimeout(() => this.saved.set(false), 2500);
     });
   }
@@ -161,7 +206,6 @@ export class CifraEditorComponent implements OnInit {
   }
 
   voltarParaVisualizacao() {
-    const c = this.cifra();
-    if (c) this.router.navigate(['/cifra', c.id]);
+    this.voltar();
   }
 }

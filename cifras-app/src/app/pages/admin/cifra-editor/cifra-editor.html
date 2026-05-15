@@ -4,6 +4,20 @@
 </div>
 }
 
+@if (notFound()) {
+<div class="loading">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p style="color:#f87171;font-weight:600;margin:0">Música não encontrada</p>
+        <p style="color:var(--color-text-muted);font-size:0.82rem;margin:0">Esta música foi removida. Redirecionando...</p>
+    </div>
+</div>
+}
+
 @if (cifra(); as c) {
 <div class="editor-page">
 
@@ -126,21 +140,32 @@
                     </button>
                 </div>
 
-                <div class="linhas-list">
-                    @for (linha of secao.linhas; track $index; let li = $index) {
-                    <app-linha-editor [linha]="linha" [linhaIndex]="li" (linhaChange)="updateLinha(si, li, $event)"
-                        (removerLinha)="removeLinha(si, li)" />
-                    }
-                </div>
+                @if (secao.tipo === 'tab') {
+                    <textarea
+                        class="tab-editor"
+                        [value]="secao.tabText ?? ''"
+                        (input)="updateTabText(si, $any($event.target).value)"
+                        placeholder="Cole aqui a tablatura..."
+                        rows="10"
+                        spellcheck="false"
+                    ></textarea>
+                } @else {
+                    <div class="linhas-list">
+                        @for (linha of secao.linhas; track $index; let li = $index) {
+                        <app-linha-editor [linha]="linha" [linhaIndex]="li" (linhaChange)="updateLinha(si, li, $event)"
+                            (removerLinha)="removeLinha(si, li)" />
+                        }
+                    </div>
 
-                <button class="btn-add-linha" (click)="addLinha(si)">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5">
-                        <line x1="12" y1="5" x2="12" y2="19" />
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                    Adicionar linha
-                </button>
+                    <button class="btn-add-linha" (click)="addLinha(si)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Adicionar linha
+                    </button>
+                }
             </div>
             }
 

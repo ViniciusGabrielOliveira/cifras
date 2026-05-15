@@ -34,15 +34,18 @@ export function transporCifra(cifra: Cifra, delta: number): Cifra {
     return {
         ...cifra,
         tom: transporAcorde(cifra.tom, delta),
-        secoes: cifra.secoes.map(secao => ({
-            ...secao,
-            linhas: secao.linhas.map(linha => ({
-                ...linha,
-                acordes: linha.acordes.map(({ posicao, acorde }) => ({
-                    posicao,
-                    acorde: transporAcorde(acorde, delta),
+        secoes: cifra.secoes.map(secao => {
+            if (secao.tipo === 'tab') return secao;
+            return {
+                ...secao,
+                linhas: secao.linhas.map(linha => ({
+                    ...linha,
+                    acordes: linha.acordes.map(({ posicao, acorde }) => ({
+                        posicao,
+                        acorde: transporAcorde(acorde, delta),
+                    })),
                 })),
-            })),
-        })),
+            };
+        }),
     };
 }

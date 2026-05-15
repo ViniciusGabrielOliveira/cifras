@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { Cifra } from '../models/cifra.model';
-import { CifraRepository } from '../repositories/cifra.repository.interface';
+import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
 import { AcordesService } from './acordes.service';
 
 /**
@@ -43,5 +43,13 @@ export class CifraService {
    */
   salvarCifra(cifra: Cifra): Observable<Cifra> {
     return this.repo.updateCifra(cifra);
+  }
+
+  deleteCifra(id: string): Observable<void> {
+    return this.repo.deleteCifra(id);
+  }
+
+  getIndice(): Observable<CifraIndiceItem[]> {
+    return this.repo.getIndice();
   }
 }

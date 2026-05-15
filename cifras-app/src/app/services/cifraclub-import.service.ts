@@ -23,6 +23,9 @@ export interface CifraClubImportResult {
 export class CifraClubImportService {
   private http = inject(HttpClient);
 
+  /** Resultado de um import pendente — consumido por nova-cifra ao abrir */
+  pendingImport: CifraClubImportResult | null = null;
+
   private get headers(): HttpHeaders {
     return new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey });
   }

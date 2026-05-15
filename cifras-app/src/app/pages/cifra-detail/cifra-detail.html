@@ -3,6 +3,19 @@
   <div class="spinner"></div>
   <span>Carregando cifra...</span>
 </div>
+} @else if (notFound()) {
+<div class="loading">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.5">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="8" x2="12" y2="12"/>
+      <line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+    <p style="color:#f87171;font-weight:700;font-size:1.1rem;margin:0">Música não encontrada</p>
+    <p style="color:var(--color-text-muted);font-size:0.85rem;margin:0">Esta música foi removida ou não existe.</p>
+    <a routerLink="/" style="font-size:0.85rem;color:var(--color-acorde);text-decoration:none">← Voltar ao início</a>
+  </div>
+</div>
 } @else if (cifra(); as c) {
 <div class="page">
 

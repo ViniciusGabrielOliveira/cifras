@@ -1,6 +1,6 @@
 export type Instrumento = 'violao' | 'guitarra' | 'cavaco' | 'ukulele';
 export type Dificuldade = 'iniciante' | 'basico' | 'intermediario' | 'avancado';
-export type TipoSecao = 'intro' | 'verso' | 'pre-refrao' | 'refrao' | 'ponte' | 'outro' | 'solo';
+export type TipoSecao = 'intro' | 'verso' | 'pre-refrao' | 'refrao' | 'ponte' | 'outro' | 'solo' | 'tab';
 
 export interface AcordeLinha {
   posicao: number;
@@ -16,6 +16,7 @@ export interface Secao {
   tipo: TipoSecao;
   label: string;
   linhas: LinhaCifra[];
+  tabText?: string;  // preenchido quando tipo === 'tab'
 }
 
 export interface Cifra {

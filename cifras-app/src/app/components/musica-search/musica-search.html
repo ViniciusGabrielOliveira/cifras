@@ -5,7 +5,6 @@
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-
     <input
       #inputEl
       class="search-input"
@@ -17,46 +16,29 @@
       autocomplete="off"
       spellcheck="false"
     />
-
-    @if (carregando()) {
+    @if (estaCarregandoQualquer) {
       <div class="spinner search-spinner"></div>
     }
-
-    @if (query() && !carregando()) {
+    @if (query() && !estaCarregandoQualquer) {
       <button class="btn-limpar" (mousedown)="limpar()" title="Limpar">✕</button>
     }
   </div>
 
   <!-- ── Filtros de Busca ──────────────────────────────────────── -->
   <div class="search-filters-row">
-    <button class="filter-btn" [class.ativo]="filtroTipo() === 'tudo'" (click)="setFiltro('tudo')" tabindex="-1">Tudo</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'tudo'"   (click)="setFiltro('tudo')"   tabindex="-1">Tudo</button>
     <button class="filter-btn" [class.ativo]="filtroTipo() === 'titulo'" (click)="setFiltro('titulo')" tabindex="-1">Título</button>
-    <button class="filter-btn" [class.ativo]="filtroTipo() === 'autor'" (click)="setFiltro('autor')" tabindex="-1">Autor</button>
-    <button class="filter-btn" [class.ativo]="filtroTipo() === 'letra'" (click)="setFiltro('letra')" tabindex="-1">Letra</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'autor'"  (click)="setFiltro('autor')"  tabindex="-1">Autor</button>
+    <button class="filter-btn" [class.ativo]="filtroTipo() === 'letra'"  (click)="setFiltro('letra')"  tabindex="-1">Letra</button>
   </div>
 
-  <!-- ── Resultados (modo embutido — direto na página) ──────────── -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  MODO EMBUTIDO                                             -->
+  <!-- ══════════════════════════════════════════════════════════ -->
   @if (modoEmbutido()) {
 
-    @if (buscou() && resultados().length === 0 && !carregando()) {
-      <!-- Estado vazio com opção de cadastro -->
-      <div class="vazio-embutido">
-        <div class="vazio-icon">🎵</div>
-        <p class="vazio-texto">
-          Nenhuma música encontrada para <strong>"{{ query() }}"</strong>
-        </p>
-        <p class="vazio-sub">Deseja adicionar essa música ao catálogo?</p>
-        <button class="btn-cadastrar-nova" (mousedown)="onCadastrarNova()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-               width="16" height="16">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Cadastrar "{{ query() }}"
-        </button>
-      </div>
-    }
-
-    @if (!buscou() && query().length < 2) {
+    <!-- Dica inicial -->
+    @if (!buscou() && query().length < 2 && !buscandoCifraClub()) {
       <div class="dica-embutida">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
              width="32" height="32" style="opacity:0.2">
@@ -66,7 +48,29 @@
       </div>
     }
 
+    <!-- Estado vazio (nada local E nada no CC) -->
+    @if (buscou() && !temResultados && !estaCarregandoQualquer) {
+      <div class="vazio-embutido">
+        <div class="vazio-icon">🎵</div>
+        <p class="vazio-texto">
+          Nenhuma música encontrada para <strong>"{{ query() }}"</strong>
+        </p>
+        <p class="vazio-sub">Deseja cadastrar manualmente?</p>
+        <button class="btn-cadastrar-nova" (mousedown)="onCadastrarNova()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Cadastrar "{{ query() }}"
+        </button>
+      </div>
+    }
+
+    <!-- Resultados locais -->
     @if (resultados().length > 0) {
+      <div class="section-header">
+        <span class="section-label">Músicas cadastradas</span>
+        <span class="section-count">{{ resultados().length }}</span>
+      </div>
       <div class="resultados-embutidos" role="listbox">
         @for (item of resultados(); track item.id; let idx = $index) {
           <div
@@ -95,15 +99,50 @@
             </div>
           </div>
         }
-
         <div class="resultados-footer">
-          {{ resultados().length }} resultado(s) encontrado(s) · ↑↓ Enter para selecionar
+          {{ resultados().length }} resultado(s) · ↑↓ Enter para selecionar
         </div>
       </div>
     }
+
+    <!-- Seção Cifra Club -->
+    @if (mostrarCifraClub() && (sugestoesCifraClub().length > 0 || buscandoCifraClub()) && query().length >= 2) {
+      <div class="section-header cc-section-header">
+        <span class="section-label cc-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Importar do Cifra Club
+        </span>
+        @if (buscandoCifraClub()) {
+          <div class="spinner cc-spinner"></div>
+        }
+      </div>
+
+      @if (sugestoesCifraClub().length > 0) {
+        <div class="resultados-embutidos cc-resultados" role="listbox">
+          @for (s of sugestoesCifraClub(); track s.id) {
+            <div class="dropdown-item cc-item" role="option" (mousedown)="selecionarCifraClub(s)">
+              <div class="item-main">
+                <span class="item-titulo">{{ s.nome }}</span>
+                @if (s.artista) {
+                  <span class="item-autor">{{ s.artista }}</span>
+                }
+              </div>
+              <span class="badge-cc">importar</span>
+            </div>
+          }
+        </div>
+      }
+    }
+
   }
 
-  <!-- ── Dropdown flutuante (modo padrão) ──────────────────────── -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  DROPDOWN FLUTUANTE (modo padrão)                          -->
+  <!-- ══════════════════════════════════════════════════════════ -->
   @if (!modoEmbutido() && aberto()) {
     <div class="dropdown" role="listbox">
 
@@ -141,6 +180,26 @@
             }
           </div>
         </div>
+      }
+
+      @if (mostrarCifraClub() && sugestoesCifraClub().length > 0) {
+        <div class="dropdown-cc-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Importar do Cifra Club
+        </div>
+        @for (s of sugestoesCifraClub(); track s.id) {
+          <div class="dropdown-item cc-item" role="option" (mousedown)="selecionarCifraClub(s)">
+            <div class="item-main">
+              <span class="item-titulo">{{ s.nome }}</span>
+              @if (s.artista) { <span class="item-autor">{{ s.artista }}</span> }
+            </div>
+            <span class="badge-cc">importar</span>
+          </div>
+        }
       }
 
       <div class="dropdown-footer">

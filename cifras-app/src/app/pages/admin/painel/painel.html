@@ -25,6 +25,7 @@
       <h1 class="dash-titulo">Listas Cadastradas</h1>
       <div class="dash-actions">
         <button class="btn-config" (click)="abrirConfiguracoes()">Configurações</button>
+        <button class="btn-config" (click)="abrirGerenciarCifras()">Gerenciar Músicas</button>
         <button class="btn-nova-lista" (click)="novaLista()">+ Nova Lista</button>
       </div>
     </div>
@@ -150,9 +151,12 @@
 
               <div class="musica-info-card">
                 <div class="musica-nome-row">
-                  <span class="musica-nome-badge">{{ musica.nome }}</span>
+                  <span class="musica-nome-badge" [class.musica-removida]="!cifraExiste(musica.cifraId)">{{ musica.nome }}</span>
                   @if (musica.autor) {
                     <span class="musica-autor-badge">{{ musica.autor }}</span>
+                  }
+                  @if (!cifraExiste(musica.cifraId)) {
+                    <span class="badge-removida">cifra removida</span>
                   }
                 </div>
                 <div class="musica-trecho-row">
@@ -161,7 +165,7 @@
               </div>
 
               <div style="display:flex; align-items:flex-start;">
-                <button class="btn-editar-cifra" (click)="editarCifra(musica)">Editar</button>
+                <button class="btn-editar-cifra" [disabled]="!cifraExiste(musica.cifraId)" (click)="editarCifra(musica)">Editar</button>
                 <button class="btn-remover-musica" title="Remover" (click)="removerMusica(musica.id)">✕</button>
               </div>
             </div>
@@ -254,6 +258,63 @@
 }
 
 <!-- ══════════════════════════════════════════════════════════════ -->
+<!--  GERENCIAR CIFRAS                                              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+@if (vista() === 'gerenciar-cifras') {
+  <div class="admin-page">
+    <div class="editor-top">
+      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
+      <h1 class="editor-titulo">Gerenciar Músicas</h1>
+    </div>
+
+    <div class="filtro-bar">
+      <input
+        class="filtro-input"
+        type="text"
+        placeholder="Buscar por título, artista ou trecho..."
+        [ngModel]="filtroCifras()"
+        (ngModelChange)="filtroCifras.set($event)"
+        autofocus
+      />
+    </div>
+
+    @if (cifrasFiltradas().length === 0) {
+      <div class="empty-dash">
+        <p>Nenhuma música encontrada.</p>
+      </div>
+    }
+
+    <div class="cifras-lista">
+      @for (cifra of cifrasFiltradas(); track cifra.id) {
+        <div class="cifra-gerenciar-row">
+          <div class="cifra-gerenciar-info">
+            <span class="cifra-gerenciar-titulo">{{ cifra.titulo }}</span>
+            @if (cifra.autor) {
+              <span class="cifra-gerenciar-autor">{{ cifra.autor }}</span>
+            }
+          </div>
+
+          <div class="cifra-gerenciar-acoes">
+            @if (confirmandoRemocao() === cifra.id) {
+              <div class="confirm-row">
+                <span class="confirm-label">Remover?</span>
+                <button class="btn-confirm-sim" [disabled]="removendoCifra()" (click)="removerCifra(cifra.id)">
+                  @if (removendoCifra()) { ... } @else { Sim }
+                </button>
+                <button class="btn-confirm-nao" (click)="cancelarRemoverCifra()">Não</button>
+              </div>
+            } @else {
+              <button class="btn-editar" (click)="editarCifraGerenciar(cifra.id)">Editar</button>
+              <button class="btn-excluir" (click)="confirmarRemoverCifra(cifra.id)">Remover</button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}
+
+<!-- ══════════════════════════════════════════════════════════════ -->
 <!--  MODAL DE BUSCA DE MÚSICA                                      -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 @if (modalBuscaAberto()) {
@@ -268,16 +329,31 @@
     </div>
 
     <div class="modal-body">
-      <p class="modal-hint">
-        Busque por título, trecho da letra ou autor. Resultados são ordenados por relevância.
-      </p>
-
-      <app-musica-search
-        placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
-        [modoEmbutido]="true"
-        (musicaSelecionada)="onMusicaSelecionada($event)"
-        (cadastrarNova)="onCadastrarNova($event)"
-      />
+      @if (importandoCifraClub()) {
+        <div class="modal-importando">
+          <div class="spinner"></div>
+          <span>Importando do Cifra Club...</span>
+        </div>
+      } @else {
+        @if (erroImportCC()) {
+          <div class="modal-erro-cc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            {{ erroImportCC() }}
+            <button class="btn-erro-fechar" (click)="erroImportCC.set(null)">✕</button>
+          </div>
+        }
+        <app-musica-search
+          placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
+          [modoEmbutido]="true"
+          [mostrarCifraClub]="true"
+          (musicaSelecionada)="onMusicaSelecionada($event)"
+          (cadastrarNova)="onCadastrarNova($event)"
+          (cifraClubSelecionada)="onCifraClubSelecionada($event)"
+        />
+      }
     </div>
   </div>
 }

@@ -1,1 +1,34 @@
-<p>secao-cifra works!</p>
+<div class="secao">
+  <div class="secao-header">
+    <span class="secao-icon">{{ icon }}</span>
+    <span class="secao-label">{{ secao.label }}</span>
+  </div>
+
+  @if (secao.tipo === 'tab') {
+    <!-- ── Tablatura ──────────────────────────────────────────────── -->
+    <div class="secao-tab">
+      @for (linha of tabLinhas; track $index) {
+        @if (linha.isTab) {
+          <div class="tab-linha">{{ linha.segmentos[0].text }}</div>
+        } @else {
+          <div class="tab-acordes">
+            @for (seg of linha.segmentos; track $index) {
+              @if (seg.isAcorde) {
+                <span class="tab-acorde">{{ seg.text }}</span>
+              } @else {
+                <span class="tab-espaco">{{ seg.text }}</span>
+              }
+            }
+          </div>
+        }
+      }
+    </div>
+  } @else {
+    <!-- ── Seção normal ───────────────────────────────────────────── -->
+    <div class="secao-body">
+      @for (linha of secao.linhas; track $index) {
+        <app-linha-cifra [linha]="linha" />
+      }
+    </div>
+  }
+</div>

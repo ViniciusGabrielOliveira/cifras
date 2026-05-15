@@ -1,6 +1,6 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Cifra } from '../../models/cifra.model';
 import { CifraService } from '../../services/cifra.service';
 import { transporCifra } from '../../core/transposicao';
@@ -15,11 +15,14 @@ import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 })
 export class CifraDetailComponent implements OnInit {
   private cifraService = inject(CifraService);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
 
   cifraOriginal = signal<Cifra | null>(null);
   delta = signal(0);
   fonteSize = signal(16);
   loading = signal(true);
+  notFound = signal(false);
 
   cifra = computed(() => {
     const c = this.cifraOriginal();
@@ -28,8 +31,14 @@ export class CifraDetailComponent implements OnInit {
   });
 
   ngOnInit() {
-    this.cifraService.getCifra('harpa-crista-porque-ele-vive').subscribe(c => {
-      if (c) this.cifraOriginal.set(c);
+    const id = this.route.snapshot.paramMap.get('id') ?? '';
+    if (!id) { this.router.navigate(['/']); return; }
+    this.cifraService.getCifra(id).subscribe(c => {
+      if (c) {
+        this.cifraOriginal.set(c);
+      } else {
+        this.notFound.set(true);
+      }
       this.loading.set(false);
     });
   }

@@ -327,6 +327,30 @@
     }
 }
 
+.tab-editor {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding: 12px;
+    resize: vertical;
+    outline: none;
+    white-space: pre;
+    overflow-x: auto;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: var(--color-acorde);
+        box-shadow: 0 0 0 2px rgba(124, 106, 253, 0.15);
+    }
+
+    &::placeholder { color: var(--color-text-muted); }
+}
+
 .btn-add-secao {
     display: flex;
     align-items: center;

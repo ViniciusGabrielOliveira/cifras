@@ -218,23 +218,35 @@
             </button>
           </div>
 
-          <div class="linhas-list">
-            @for (linha of secao.linhas; track $index; let li = $index) {
-              <app-linha-editor
-                [linha]="linha"
-                [linhaIndex]="li"
-                (linhaChange)="updateLinha(si, li, $event)"
-                (removerLinha)="removeLinha(si, li)"
-              />
-            }
-          </div>
+          @if (secao.tipo === 'tab') {
+            <!-- Editor de tablatura: textarea monospace -->
+            <textarea
+              class="tab-editor"
+              [value]="secao.tabText ?? ''"
+              (input)="updateTabText(si, $any($event.target).value)"
+              placeholder="Cole aqui a tablatura..."
+              rows="10"
+              spellcheck="false"
+            ></textarea>
+          } @else {
+            <div class="linhas-list">
+              @for (linha of secao.linhas; track $index; let li = $index) {
+                <app-linha-editor
+                  [linha]="linha"
+                  [linhaIndex]="li"
+                  (linhaChange)="updateLinha(si, li, $event)"
+                  (removerLinha)="removeLinha(si, li)"
+                />
+              }
+            </div>
 
-          <button class="btn-add-linha" (click)="addLinha(si)">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-            </svg>
-            Adicionar linha
-          </button>
+            <button class="btn-add-linha" (click)="addLinha(si)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              Adicionar linha
+            </button>
+          }
         </div>
       }
 

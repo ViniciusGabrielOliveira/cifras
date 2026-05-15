@@ -70,6 +70,16 @@ export class CifraMockRepository extends CifraRepository {
         return of(cifra);
     }
 
+    override deleteCifra(id: string): Observable<void> {
+        this.cache.delete(id);
+        localStorage.removeItem(LS_PREFIX + id);
+        if (this.indiceLoaded) {
+            const updated = this.indiceSubject.value.filter(x => x.id !== id);
+            this.indiceSubject.next(updated);
+        }
+        return of(undefined);
+    }
+
     override getAllCifras(): Observable<Cifra[]> {
         return this.getCifra('harpa-crista-porque-ele-vive').pipe(
             map(c => (c ? [c] : [])),

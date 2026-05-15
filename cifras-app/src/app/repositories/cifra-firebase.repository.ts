@@ -6,6 +6,7 @@ import {
   doc,
   getDoc,
   setDoc,
+  deleteDoc,
   getDocs,
   collection,
   query,
@@ -69,6 +70,14 @@ export class CifraFirebaseRepository extends CifraRepository {
         setDoc(indiceRef, indiceItem),
       ])
     ).pipe(map(() => cifra));
+  }
+
+  override deleteCifra(id: string): Observable<void> {
+    const cifraRef = doc(this.firestore, `cifras/${id}`);
+    const indiceRef = doc(this.firestore, `cifras_indice/${id}`);
+    return from(Promise.all([deleteDoc(cifraRef), deleteDoc(indiceRef)])).pipe(
+      map(() => undefined),
+    );
   }
 
   // ── Busca por categoria / parte ─────────────────────────────────
