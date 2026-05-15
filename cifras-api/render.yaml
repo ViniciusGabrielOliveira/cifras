@@ -12,3 +12,5 @@ services:
         sync: false         # preencher manualmente no dashboard do Render
       - key: ALLOWED_ORIGINS
         value: https://viniciusgabriel.github.io  # ajustar para o domínio do app
+      - key: FIREBASE_CREDENTIALS_B64
+        sync: false  # preencher manualmente: base64 do service-account.json

@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { CifraService } from '../../../services/cifra.service';
+import { AcordesService } from '../../../services/acordes.service';
+import { ConfigService } from '../../../services/config.service';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
 
@@ -19,6 +21,11 @@ export class CifraEditorComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private cifraService = inject(CifraService);
+  private acordesService = inject(AcordesService);
+  private config = inject(ConfigService);
+
+  readonly categorias = this.config.categorias;
+  readonly partesMissa = this.config.partesMissa;
 
   cifra = signal<Cifra | null>(null);
   loading = signal(true);
@@ -152,6 +159,22 @@ export class CifraEditorComponent implements OnInit {
     this.cifra.update(c => c ? { ...c, [field]: value } : c);
   }
 
+  toggleCategoria(id: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const cats = c.categorias ?? [];
+      return { ...c, categorias: cats.includes(id) ? cats.filter(x => x !== id) : [...cats, id] };
+    });
+  }
+
+  toggleParte(id: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const partes = c.partesMissa ?? [];
+      return { ...c, partesMissa: partes.includes(id) ? partes.filter(x => x !== id) : [...partes, id] };
+    });
+  }
+
   // ─── Salvar ─────────────────────────────────────────────────────────────────
 
   salvar() {
@@ -159,6 +182,7 @@ export class CifraEditorComponent implements OnInit {
     if (!c) return;
     this.saving.set(true);
     this.cifraService.salvarCifra(c).subscribe(() => {
+      this.acordesService.syncAcordes(c);
       this.saving.set(false);
       this.saved.set(true);
       this._salvouNestaSessao = true;

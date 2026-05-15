@@ -13,6 +13,8 @@ cifras-app/.angular/cache/
 .env.local
 *.env
 mock/
+service-account.json
+*-firebase-adminsdk-*.json
 
 # ─── Python ──────────────────────────────────────────────
 __pycache__/

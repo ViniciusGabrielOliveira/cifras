@@ -25,13 +25,6 @@
         Colar cifra
       </button>
 
-      <button class="btn-tool" (click)="showJSON.update(v => !v)" title="Ver JSON gerado">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-        </svg>
-        JSON
-      </button>
-
       <button class="btn-save" [class.saved]="saved()" [disabled]="saving()" (click)="salvar()">
         @if (saving()) {
           <span class="spinner-sm"></span>
@@ -182,6 +175,32 @@
           </select>
         </div>
 
+        <div class="meta-field full-width">
+          <label>Categorias Litúrgicas</label>
+          <div class="pills-selector">
+            @for (cat of categorias(); track cat.id) {
+              <button type="button" class="pill-toggle"
+                [class.active]="cifra().categorias?.includes(cat.id)"
+                (click)="toggleCategoria(cat.id)">
+                {{ cat.label }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="meta-field full-width">
+          <label>Partes da Missa</label>
+          <div class="pills-selector">
+            @for (parte of partesMissa(); track parte.id) {
+              <button type="button" class="pill-toggle"
+                [class.active]="cifra().partesMissa?.includes(parte.id)"
+                (click)="toggleParte(parte.id)">
+                {{ parte.label }}
+              </button>
+            }
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -260,17 +279,5 @@
 
   </div><!-- /editor-body -->
 
-  <!-- ── JSON Preview ──────────────────────────────────────────── -->
-  @if (showJSON()) {
-    <div class="json-overlay" (click)="showJSON.set(false)">
-      <div class="json-panel" (click)="$event.stopPropagation()">
-        <div class="json-header">
-          <span>JSON gerado</span>
-          <button class="btn-close-json" (click)="showJSON.set(false)">×</button>
-        </div>
-        <pre class="json-code">{{ jsonPreview }}</pre>
-      </div>
-    </div>
-  }
 
 </div>

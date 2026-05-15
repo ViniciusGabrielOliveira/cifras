@@ -32,6 +32,8 @@ import { DiagramaAcorde } from '../../models/diagrama.model';
             </div>
           } @else if (variacoes().length > 0) {
             <app-diagrama-violao [variacoes]="variacoes()" [nome]="acorde" />
+          } @else {
+            <div class="diagrama-indisponivel">{{ acorde }}</div>
           }
         </div>
       }

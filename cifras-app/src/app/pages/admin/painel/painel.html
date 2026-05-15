@@ -24,9 +24,23 @@
     <div class="dash-top">
       <h1 class="dash-titulo">Listas Cadastradas</h1>
       <div class="dash-actions">
-        <button class="btn-config" (click)="abrirConfiguracoes()">Configurações</button>
-        <button class="btn-config" (click)="abrirGerenciarCifras()">Gerenciar Músicas</button>
-        <button class="btn-nova-lista" (click)="novaLista()">+ Nova Lista</button>
+        <button class="btn-dash-icon" (click)="abrirConfiguracoes()" title="Configurações">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </button>
+        <button class="btn-dash-icon" (click)="abrirGerenciarCifras()" title="Gerenciar Músicas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </button>
+        <button class="btn-nova-lista" (click)="novaLista()" title="Nova Lista">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span class="btn-nova-lista-label">Nova Lista</span>
+        </button>
       </div>
     </div>
 
@@ -50,25 +64,35 @@
     <div class="listas-grid">
       @for (lista of listasFiltradas(); track lista.id) {
         <div class="lista-card">
-          <div class="lista-card-header">
+          <div class="lista-card-main">
             <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
             @if (lista.data) {
-              <span class="lista-card-data">📅 {{ formatarData(lista.data) }}</span>
+              <span class="lista-card-data">{{ formatarData(lista.data) }}</span>
             }
+            <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
+            <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
           </div>
-          <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
-          <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
 
-          <div class="lista-card-acoes">
-            <button class="btn-editar" (click)="editarLista(lista)">Editar</button>
+          <div class="lista-card-side">
             @if (confirmando() === lista.id) {
-              <div class="confirm-row">
+              <div class="card-confirm">
                 <span class="confirm-label">Excluir?</span>
                 <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
                 <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>
               </div>
             } @else {
-              <button class="btn-excluir" (click)="confirmarExcluir(lista.id)">Excluir</button>
+              <button class="btn-card-icon edit" (click)="editarLista(lista)" title="Editar">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+              </button>
+              <button class="btn-card-icon delete" (click)="confirmarExcluir(lista.id)" title="Excluir">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                </svg>
+              </button>
             }
           </div>
         </div>
@@ -209,15 +233,13 @@
       </div>
 
       @for (cat of configCatsEdit(); track $index; let idx = $index) {
-        <div class="musica-row" style="align-items: center;">
-          <div class="musica-reorder">
-            <button class="btn-move" title="Subir" (click)="moveConfigItem('cat', idx, -1)">↑</button>
-            <button class="btn-move" title="Descer" (click)="moveConfigItem('cat', idx, +1)">↓</button>
-          </div>
-          <div class="form-group" style="margin: 0 1rem; flex: 1;">
-            <input class="form-input" style="padding: 4px 8px;" type="text" [value]="cat.label" (input)="updateConfigLabel('cat', idx, $any($event.target).value)">
-          </div>
-          <button class="btn-remover-musica" title="Remover" (click)="removeConfigItem('cat', idx)">✕</button>
+        <div class="config-row">
+          <input class="form-input" type="text" [value]="cat.label" (input)="updateConfigLabel('cat', idx, $any($event.target).value)">
+          <button class="btn-config-remover" title="Remover" (click)="removeConfigItem('cat', idx)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
         </div>
       }
     </section>
@@ -230,15 +252,13 @@
       </div>
 
       @for (parte of configPartesEdit(); track $index; let idx = $index) {
-        <div class="musica-row" style="align-items: center;">
-          <div class="musica-reorder">
-            <button class="btn-move" title="Subir" (click)="moveConfigItem('parte', idx, -1)">↑</button>
-            <button class="btn-move" title="Descer" (click)="moveConfigItem('parte', idx, +1)">↓</button>
-          </div>
-          <div class="form-group" style="margin: 0 1rem; flex: 1;">
-            <input class="form-input" style="padding: 4px 8px;" type="text" [value]="parte.label" (input)="updateConfigLabel('parte', idx, $any($event.target).value)">
-          </div>
-          <button class="btn-remover-musica" title="Remover" (click)="removeConfigItem('parte', idx)">✕</button>
+        <div class="config-row">
+          <input class="form-input" type="text" [value]="parte.label" (input)="updateConfigLabel('parte', idx, $any($event.target).value)">
+          <button class="btn-config-remover" title="Remover" (click)="removeConfigItem('parte', idx)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
         </div>
       }
     </section>
@@ -304,8 +324,18 @@
                 <button class="btn-confirm-nao" (click)="cancelarRemoverCifra()">Não</button>
               </div>
             } @else {
-              <button class="btn-editar" (click)="editarCifraGerenciar(cifra.id)">Editar</button>
-              <button class="btn-excluir" (click)="confirmarRemoverCifra(cifra.id)">Remover</button>
+              <button class="btn-card-icon edit" (click)="editarCifraGerenciar(cifra.id)" title="Editar">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+              </button>
+              <button class="btn-card-icon delete" (click)="confirmarRemoverCifra(cifra.id)" title="Remover">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                </svg>
+              </button>
             }
           </div>
         </div>

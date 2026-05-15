@@ -3,103 +3,70 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // ── Helpers ──────────────────────────────────────────────────────
-    function isAuth() {
+    // Helpers
+    function isAuthenticated() {
       return request.auth != null;
-    }
-
-    function isOwner(uid) {
-      return isAuth() && request.auth.uid == uid;
     }
 
     function getUserRole() {
       return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
     }
 
+    function isNotBlocked() {
+      return isAuthenticated() && getUserRole() != 'blocked';
+    }
+
+    function isAdminOrEditor() {
+      return isAuthenticated() && getUserRole() in ['admin', 'editor'];
+    }
+
     function isAdmin() {
-      return isAuth() && getUserRole() == 'admin';
+      return isAuthenticated() && getUserRole() in ['admin'];
     }
 
-    function isEditorOrAbove() {
-      return isAuth() && getUserRole() in ['admin', 'editor'];
+    // Cifras + Índice — leitura aberta (exceto blocked), escrita admin/editor
+    match /cifras/{docId} {
+      allow read: if !isAuthenticated() || isNotBlocked();
+      allow write: if isAdminOrEditor();
+    }
+    match /cifras_indice/{docId} {
+      allow read: if !isAuthenticated() || isNotBlocked();
+      allow write: if isAdminOrEditor();
     }
 
-    function isGrupoAdmin(grupoId) {
-      return isAuth()
-        && request.auth.uid in get(/databases/$(database)/documents/grupos/$(grupoId)).data.admins;
+    // Config
+    match /config/{document=**} {
+      allow read, write: if isAdmin();
     }
 
-    // ── Users ────────────────────────────────────────────────────────
+    // Listas
+    match /listas/{docId} {
+      allow read: if !isAuthenticated() || isNotBlocked();
+      allow write: if isAdminOrEditor();
+    }
+
+    // Acordes
+    match /acordes/{docId} {
+      allow read: if !isAuthenticated() || isNotBlocked();
+      allow write: if isAdminOrEditor();
+    }
+
+    // Users
     match /users/{uid} {
-      // Qualquer autenticado pode ler seu próprio perfil
-      allow read: if isOwner(uid);
-
-      // Admin pode ler qualquer perfil
-      allow read: if isAdmin();
-
-      // Criação automática no primeiro login (só o próprio)
-      allow create: if isOwner(uid)
-        && request.resource.data.keys().hasAll(['email', 'displayName', 'role', 'grupoIds'])
-        && request.resource.data.role == 'membro';
-
-      // Usuário pode atualizar displayName, photoURL e ultimoLogin
-      allow update: if isOwner(uid)
-        && request.resource.data.diff(resource.data).affectedKeys()
-            .hasOnly(['displayName', 'photoURL', 'ultimoLogin']);
-
-      // Admin pode alterar qualquer campo (incluindo role)
-      allow update: if isAdmin();
-
-      allow delete: if isAdmin();
+      allow read: if isAuthenticated();
+      allow write: if request.auth.uid == uid || isAdminOrEditor();
     }
 
-    // ── Grupos ───────────────────────────────────────────────────────
-    match /grupos/{grupoId} {
-      // Membros do grupo podem ler
-      allow read: if isAuth()
-        && request.auth.uid in resource.data.admins
-        || (resource.data.membros != null
-            && request.auth.uid in resource.data.membros.map(m, m.uid));
-
-      // Qualquer autenticado pode criar (torna-se admin do grupo)
-      allow create: if isAuth()
-        && request.auth.uid in request.resource.data.admins;
-
-      // Admins do grupo podem atualizar
-      allow update: if isGrupoAdmin(grupoId);
-
-      // Só admin do grupo pode excluir
-      allow delete: if isGrupoAdmin(grupoId);
+    // Grupos
+    match /grupos/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
     }
 
-    // ── Convites ─────────────────────────────────────────────────────
-    match /convites/{conviteId} {
-      // Qualquer autenticado pode ler convite (precisa buscar por código)
-      allow read: if isAuth();
-
-      // Só admin do grupo pode criar convite
-      allow create: if isAuth()
-        && isGrupoAdmin(request.resource.data.grupoId);
-
-      // Atualizar status (aceitar/revogar)
-      allow update: if isAuth()
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']);
-
-      allow delete: if isAdmin();
-    }
-
-    // ── Cifras ───────────────────────────────────────────────────────
-    match /cifras/{cifraId} {
-      allow read: if true;
-      allow create, update: if isEditorOrAbove();
-      allow delete: if isAdmin();
-    }
-
-    // ── Listas ───────────────────────────────────────────────────────
-    match /listas/{listaId} {
-      allow read: if true;
-      allow create, update: if isAuth();
-      allow delete: if isAuth() && (isAdmin() || resource.data.criadoPorUid == request.auth.uid);
+    // Convites
+    match /convites/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
     }
   }
 }

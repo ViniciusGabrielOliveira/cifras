@@ -4,8 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Cifra, Secao, LinhaCifra, TipoSecao } from '../../../models/cifra.model';
 import { CifraService } from '../../../services/cifra.service';
+import { ConfigService } from '../../../services/config.service';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
+import { AcordesService } from '../../../services/acordes.service';
 import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
@@ -22,9 +24,13 @@ export class NovaCifraComponent implements OnInit {
   private router = inject(Router);
   private cifraService = inject(CifraService);
   private cifraClub = inject(CifraClubImportService);
+  private acordesService = inject(AcordesService);
+  private config = inject(ConfigService);
 
   readonly tiposSecao = TIPOS;
   readonly tons = TONS;
+  readonly categorias = this.config.categorias;
+  readonly partesMissa = this.config.partesMissa;
 
   cifra = signal<Cifra>({
     id:          '',
@@ -34,6 +40,8 @@ export class NovaCifraComponent implements OnInit {
     instrumento: 'violao',
     dificuldade: 'basico',
     composicao:  '',
+    categorias:  [],
+    partesMissa: [],
     secoes: [{
       tipo:  'verso',
       label: 'Verso 1',
@@ -41,10 +49,9 @@ export class NovaCifraComponent implements OnInit {
     }],
   });
 
-  saving   = signal(false);
-  saved    = signal(false);
-  showJSON = signal(false);
-  colando  = signal(false);
+  saving  = signal(false);
+  saved   = signal(false);
+  colando = signal(false);
 
   // ── Busca Cifra Club ─────────────────────────────────────────────
   buscaTermo       = signal('');
@@ -154,6 +161,20 @@ export class NovaCifraComponent implements OnInit {
     if (field === 'titulo') this.erroTitulo.set(false);
   }
 
+  toggleCategoria(id: string) {
+    this.cifra.update(c => {
+      const cats = c.categorias ?? [];
+      return { ...c, categorias: cats.includes(id) ? cats.filter(x => x !== id) : [...cats, id] };
+    });
+  }
+
+  toggleParte(id: string) {
+    this.cifra.update(c => {
+      const partes = c.partesMissa ?? [];
+      return { ...c, partesMissa: partes.includes(id) ? partes.filter(x => x !== id) : [...partes, id] };
+    });
+  }
+
   // ── Seções ────────────────────────────────────────────────────────
 
   addSecao() {
@@ -242,6 +263,7 @@ export class NovaCifraComponent implements OnInit {
     }
     this.saving.set(true);
     this.cifraService.salvarCifra(cifra).subscribe(() => {
+      this.acordesService.syncAcordes(cifra);
       this.saving.set(false);
       this.saved.set(true);
       setTimeout(() => this.router.navigate(['/admin/painel'], {
@@ -266,10 +288,6 @@ export class NovaCifraComponent implements OnInit {
         queryParams: { restaurarRascunho: 'true' },
       });
     }
-  }
-
-  get jsonPreview(): string {
-    return JSON.stringify(this.cifra(), null, 2);
   }
 
   get idGerado(): string {

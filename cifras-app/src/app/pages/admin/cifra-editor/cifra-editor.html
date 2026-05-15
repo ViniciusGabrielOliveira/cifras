@@ -103,6 +103,32 @@
                     <label>Composição</label>
                     <input [value]="c.composicao" (input)="updateMeta('composicao', $any($event.target).value)" />
                 </div>
+
+                <div class="meta-field full-width">
+                    <label>Categorias Litúrgicas</label>
+                    <div class="pills-selector">
+                        @for (cat of categorias(); track cat.id) {
+                            <button type="button" class="pill-toggle"
+                                [class.active]="c.categorias?.includes(cat.id)"
+                                (click)="toggleCategoria(cat.id)">
+                                {{ cat.label }}
+                            </button>
+                        }
+                    </div>
+                </div>
+
+                <div class="meta-field full-width">
+                    <label>Partes da Missa</label>
+                    <div class="pills-selector">
+                        @for (parte of partesMissa(); track parte.id) {
+                            <button type="button" class="pill-toggle"
+                                [class.active]="c.partesMissa?.includes(parte.id)"
+                                (click)="toggleParte(parte.id)">
+                                {{ parte.label }}
+                            </button>
+                        }
+                    </div>
+                </div>
             </div>
         </section>
 

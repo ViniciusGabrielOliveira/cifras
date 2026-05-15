@@ -191,31 +191,26 @@ export class PainelComponent implements OnInit {
 
   // ── Configurações ─────────────────────────────────────────────────
   abrirConfiguracoes() {
-    this.configCatsEdit.set(JSON.parse(JSON.stringify(this.config.categorias())));
-    this.configPartesEdit.set(JSON.parse(JSON.stringify(this.config.partesMissa())));
+    const sortAZ = (items: import('../../../models/config.model').ConfigItem[]) =>
+      [...items].sort((a, b) => a.label.localeCompare(b.label, 'pt'))
+        .map((item, i) => ({ ...item, ordem: i }));
+    this.configCatsEdit.set(sortAZ(JSON.parse(JSON.stringify(this.config.categorias()))));
+    this.configPartesEdit.set(sortAZ(JSON.parse(JSON.stringify(this.config.partesMissa()))));
     this.vista.set('configuracoes');
   }
 
   addConfigItem(tipo: 'cat' | 'parte') {
     const list = tipo === 'cat' ? this.configCatsEdit() : this.configPartesEdit();
     const nova = { id: slugify('Nova Opção'), label: 'Nova Opção', ordem: list.length };
-    if (tipo === 'cat') this.configCatsEdit.set([...list, nova]);
-    else this.configPartesEdit.set([...list, nova]);
+    const sorted = [...list, nova].sort((a, b) => a.label.localeCompare(b.label, 'pt'))
+      .map((item, i) => ({ ...item, ordem: i }));
+    if (tipo === 'cat') this.configCatsEdit.set(sorted);
+    else this.configPartesEdit.set(sorted);
   }
 
   removeConfigItem(tipo: 'cat' | 'parte', idx: number) {
     const list = tipo === 'cat' ? [...this.configCatsEdit()] : [...this.configPartesEdit()];
     list.splice(idx, 1);
-    list.forEach((item, i) => item.ordem = i);
-    if (tipo === 'cat') this.configCatsEdit.set(list);
-    else this.configPartesEdit.set(list);
-  }
-
-  moveConfigItem(tipo: 'cat' | 'parte', idx: number, dir: -1 | 1) {
-    const list = tipo === 'cat' ? [...this.configCatsEdit()] : [...this.configPartesEdit()];
-    const newIdx = idx + dir;
-    if (newIdx < 0 || newIdx >= list.length) return;
-    [list[idx], list[newIdx]] = [list[newIdx], list[idx]];
     list.forEach((item, i) => item.ordem = i);
     if (tipo === 'cat') this.configCatsEdit.set(list);
     else this.configPartesEdit.set(list);

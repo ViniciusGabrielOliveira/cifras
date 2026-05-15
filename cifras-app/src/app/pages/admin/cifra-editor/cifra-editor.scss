@@ -163,6 +163,39 @@
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
+
+    .full-width { grid-column: 1 / -1; }
+}
+
+.pills-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+.pill-toggle {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: rgba(124, 106, 253, 0.4);
+        color: var(--color-text);
+    }
+
+    &.active {
+        background: var(--color-acorde-bg);
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        font-weight: 600;
+    }
 }
 
 .meta-field {
