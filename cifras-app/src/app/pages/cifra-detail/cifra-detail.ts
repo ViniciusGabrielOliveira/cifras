@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Cifra } from '../../models/cifra.model';
 import { CifraService } from '../../services/cifra.service';
-import { transporCifra } from '../../core/transposicao';
+import { transporCifra, calcularDelta } from '../../core/transposicao';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 
 @Component({
@@ -23,6 +23,7 @@ export class CifraDetailComponent implements OnInit {
   fonteSize = signal(16);
   loading = signal(true);
   notFound = signal(false);
+  observacao = signal<string | null>(null);
 
   cifra = computed(() => {
     const c = this.cifraOriginal();
@@ -33,9 +34,15 @@ export class CifraDetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id') ?? '';
     if (!id) { this.router.navigate(['/']); return; }
+
+    const tomAlvo   = this.route.snapshot.queryParamMap.get('tom');
+    const observacao = this.route.snapshot.queryParamMap.get('observacao');
+    if (observacao) this.observacao.set(observacao);
+
     this.cifraService.getCifra(id).subscribe(c => {
       if (c) {
         this.cifraOriginal.set(c);
+        if (tomAlvo) this.delta.set(calcularDelta(c.tom, tomAlvo));
       } else {
         this.notFound.set(true);
       }

@@ -297,7 +297,8 @@ export class PainelComponent implements OnInit {
   }
 
   onMusicaInput(musicaId: string, campo: keyof MusicaLista, event: Event) {
-    this.atualizarMusica(musicaId, campo, (event.target as HTMLInputElement).value);
+    const val = (event.target as HTMLInputElement).value;
+    this.atualizarMusica(musicaId, campo, val || undefined as any);
   }
 
   onMusicaParteChange(musicaId: string, event: Event) {
@@ -414,7 +415,7 @@ export class PainelComponent implements OnInit {
     });
   }
 
-  atualizarMusica(musicaId: string, campo: keyof MusicaLista, valor: string | number) {
+  atualizarMusica(musicaId: string, campo: keyof MusicaLista, valor: string | number | undefined) {
     const lista = this.listaEdit();
     if (!lista) return;
     this.listaEdit.set({

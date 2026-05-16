@@ -18,6 +18,8 @@ export interface MusicaLista {
     ordem: number;
     trecho?: string;
     privada?: boolean;   // true se a cifra é privada do dono da lista
+    tom?: string;        // tom personalizado para esta música nesta lista
+    observacao?: string; // ex: "capotraste na 1ª casa"
 }
 
 export interface Lista {

@@ -13,6 +13,13 @@ function indexNota(nota: string): number {
     return idx;
 }
 
+export function calcularDelta(tomOriginal: string, tomAlvo: string): number {
+    const origem = indexNota(tomOriginal.replace(/m$/, ''));
+    const alvo   = indexNota(tomAlvo.replace(/m$/, ''));
+    if (origem === -1 || alvo === -1) return 0;
+    return ((alvo - origem + 12) % 12);
+}
+
 export function transporNota(nota: string, delta: number): string {
     const idx = indexNota(nota);
     if (idx === -1) return nota;

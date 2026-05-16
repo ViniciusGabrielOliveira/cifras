@@ -252,8 +252,11 @@ export class MinhaListaComponent implements OnInit {
         });
     }
 
-    verCifra(cifraId: string) {
-        this.router.navigate(['/cifra', cifraId]);
+    verCifra(musica: MusicaLista) {
+        const queryParams: Record<string, string> = {};
+        if (musica.tom) queryParams['tom'] = musica.tom;
+        if (musica.observacao) queryParams['observacao'] = musica.observacao;
+        this.router.navigate(['/cifra', musica.cifraId], { queryParams });
     }
 
     private salvarLista(lista: Lista) {

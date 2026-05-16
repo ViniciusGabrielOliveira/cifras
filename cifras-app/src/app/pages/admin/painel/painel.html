@@ -187,6 +187,22 @@
                 <div class="musica-trecho-row">
                   <p class="musica-trecho">"{{ musica.trecho }}"</p>
                 </div>
+                <div class="musica-extra-row">
+                  <input
+                    class="input-tom-musica"
+                    type="text"
+                    placeholder="Tom (ex: G, C#)"
+                    [value]="musica.tom ?? ''"
+                    (input)="onMusicaInput(musica.id, 'tom', $event)"
+                  />
+                  <input
+                    class="input-obs-musica"
+                    type="text"
+                    placeholder="Observação (ex: capotraste na 1ª casa)"
+                    [value]="musica.observacao ?? ''"
+                    (input)="onMusicaInput(musica.id, 'observacao', $event)"
+                  />
+                </div>
               </div>
 
               <div style="display:flex; align-items:flex-start;">
