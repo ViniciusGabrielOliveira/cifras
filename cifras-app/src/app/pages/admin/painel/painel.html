@@ -348,42 +348,15 @@
 <!--  MODAL DE BUSCA DE MÚSICA                                      -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 @if (modalBuscaAberto()) {
-  <div class="modal-overlay" (click)="fecharModalBusca()"></div>
-  <div class="modal-busca" role="dialog" aria-modal="true">
-    <div class="modal-header">
-      <div class="modal-titulo-group">
-        <span class="modal-titulo">Adicionar música</span>
-        <span class="modal-parte-badge">{{ PARTES_MISSA_LABELS[parteParaAdicionar()] }}</span>
-      </div>
-      <button class="modal-close" (click)="fecharModalBusca()">✕</button>
-    </div>
-
-    <div class="modal-body">
-      @if (importandoCifraClub()) {
-        <div class="modal-importando">
-          <div class="spinner"></div>
-          <span>Importando do Cifra Club...</span>
-        </div>
-      } @else {
-        @if (erroImportCC()) {
-          <div class="modal-erro-cc">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
-              <line x1="12" y1="16" x2="12.01" y2="16"/>
-            </svg>
-            {{ erroImportCC() }}
-            <button class="btn-erro-fechar" (click)="erroImportCC.set(null)">✕</button>
-          </div>
-        }
-        <app-musica-search
-          placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
-          [modoEmbutido]="true"
-          [mostrarCifraClub]="true"
-          (musicaSelecionada)="onMusicaSelecionada($event)"
-          (cadastrarNova)="onCadastrarNova($event)"
-          (cifraClubSelecionada)="onCifraClubSelecionada($event)"
-        />
-      }
-    </div>
-  </div>
+  <app-painel-modal-busca
+    [parte]="parteParaAdicionar()"
+    [partesLabels]="PARTES_MISSA_LABELS"
+    [importando]="importandoCifraClub()"
+    [erro]="erroImportCC()"
+    (fechar)="fecharModalBusca()"
+    (musicaSelecionada)="onMusicaSelecionada($event)"
+    (cadastrarNova)="onCadastrarNova($event)"
+    (cifraClubSelecionada)="onCifraClubSelecionada($event)"
+    (limparErro)="erroImportCC.set(null)"
+  />
 }

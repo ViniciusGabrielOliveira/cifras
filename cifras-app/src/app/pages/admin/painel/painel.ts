@@ -9,7 +9,8 @@ import { ConfigService } from '../../../services/config.service';
 import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
 import { CifraService } from '../../../services/cifra.service';
 import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
-import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
+import { MusicaSelecionada } from '../../../components/musica-search/musica-search';
+import { PainelModalBuscaComponent } from './painel-modal-busca';
 
 type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista' | 'configuracoes' | 'gerenciar-cifras';
 
@@ -30,7 +31,7 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
   selector: 'app-painel',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, MusicaSearchComponent],
+  imports: [CommonModule, FormsModule, RouterLink, PainelModalBuscaComponent],
   templateUrl: './painel.html',
   styleUrl: './painel.scss',
 })
