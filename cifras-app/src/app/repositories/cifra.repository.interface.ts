@@ -16,4 +16,7 @@ export abstract class CifraRepository {
   abstract getIndice(): Observable<CifraIndiceItem[]>;
   abstract getCifrasPorCategoria(categoria: string): Observable<Cifra[]>;
   abstract getCifrasPorParte(parte: string): Observable<Cifra[]>;
+  // Cifras privadas do usuário
+  abstract getCifrasDoUser(uid: string): Observable<Cifra[]>;
+  abstract countCifrasDoUser(uid: string): Observable<number>;
 }

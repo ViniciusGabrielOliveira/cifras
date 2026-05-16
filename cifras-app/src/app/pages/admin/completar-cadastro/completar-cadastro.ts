@@ -19,12 +19,16 @@ export class CompletarCadastroComponent implements OnInit {
     erro = signal('');
     carregando = signal(false);
 
+    private rotaPosLogin(): string {
+        return this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area';
+    }
+
     ngOnInit() {
         const user = this.auth.user();
         if (!user) {
             this.router.navigate(['/admin']);
         } else if (user.telefone) {
-            this.router.navigate(['/admin/painel']);
+            this.router.navigate([this.rotaPosLogin()]);
         }
     }
 
@@ -40,7 +44,7 @@ export class CompletarCadastroComponent implements OnInit {
         this.auth.atualizarPerfil({ telefone: tel || undefined }).subscribe({
             next: () => {
                 this.carregando.set(false);
-                this.router.navigate(['/admin/painel']);
+                this.router.navigate([this.rotaPosLogin()]);
             },
             error: (err) => {
                 this.carregando.set(false);

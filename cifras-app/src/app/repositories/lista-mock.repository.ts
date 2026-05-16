@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, map } from 'rxjs';
-import { Lista, CategoriaLiturgica, ListasDoDiaResponse } from '../models/lista.model';
+import { Lista, CategoriaLiturgica, ListasDoDiaResponse, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from './lista.repository.interface';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
@@ -1500,6 +1500,41 @@ export class ListaMockRepository extends ListaRepository {
   override excluirLista(id: string): Observable<void> {
     this.listas = this.listas.filter(l => l.id !== id);
     this.salvarLocal();
+    return of(undefined);
+  }
+
+  override getMinhasListas(uid: string): Observable<Lista[]> {
+    return of(this.listas.filter(l => l.tipo === 'privada' && l.donoUid === uid));
+  }
+
+  override getListaPorToken(token: string): Observable<Lista | undefined> {
+    return of(this.listas.find(l => l.tokenConvite === token));
+  }
+
+  override adicionarParticipante(listaId: string, participante: Participante): Observable<void> {
+    const lista = this.listas.find(l => l.id === listaId);
+    if (lista) {
+      lista.participantes = [...(lista.participantes ?? []), participante];
+      this.salvarLocal();
+    }
+    return of(undefined);
+  }
+
+  override removerParticipante(listaId: string, uid: string): Observable<void> {
+    const lista = this.listas.find(l => l.id === listaId);
+    if (lista) {
+      lista.participantes = (lista.participantes ?? []).filter(p => p.uid !== uid);
+      this.salvarLocal();
+    }
+    return of(undefined);
+  }
+
+  override atualizarRoleParticipante(listaId: string, uid: string, role: RoleParticipante): Observable<void> {
+    const lista = this.listas.find(l => l.id === listaId);
+    if (lista) {
+      lista.participantes = (lista.participantes ?? []).map(p => p.uid === uid ? { ...p, role } : p);
+      this.salvarLocal();
+    }
     return of(undefined);
   }
 

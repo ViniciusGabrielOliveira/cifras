@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, from, of, map } from 'rxjs';
+import { Observable, from, of, map, catchError, throwError } from 'rxjs';
 import { FIREBASE_APP } from '../firebase.providers';
 import {
   getFirestore,
@@ -27,6 +27,7 @@ export class CifraFirebaseRepository extends CifraRepository {
     const cifraRef = doc(this.firestore, `cifras/${id}`);
     return from(getDoc(cifraRef)).pipe(
       map(snap => snap.exists() ? { ...snap.data(), id: snap.id } as Cifra : undefined),
+      catchError(() => of(undefined)),
     );
   }
 
@@ -34,6 +35,7 @@ export class CifraFirebaseRepository extends CifraRepository {
     const cifrasCol = collection(this.firestore, 'cifras');
     return from(getDocs(cifrasCol)).pipe(
       map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Cifra)),
+      catchError(() => of([])),
     );
   }
 
@@ -55,21 +57,20 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   override updateCifra(cifra: Cifra): Observable<Cifra> {
     const cifraRef = doc(this.firestore, `cifras/${cifra.id}`);
-    const indiceRef = doc(this.firestore, `cifras_indice/${cifra.id}`);
-
     const indiceItem: CifraIndiceItem = {
       id: cifra.id,
       titulo: cifra.titulo,
       autor: cifra.artista,
       letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
     };
-
-    return from(
-      Promise.all([
-        setDoc(cifraRef, cifra),
-        setDoc(indiceRef, indiceItem),
-      ])
-    ).pipe(map(() => cifra));
+    const ops: Promise<any>[] = [setDoc(cifraRef, cifra)];
+    if (!cifra.status || cifra.status === 'publica') {
+      ops.push(setDoc(doc(this.firestore, `cifras_indice/${cifra.id}`), indiceItem));
+    }
+    return from(Promise.all(ops)).pipe(
+      map(() => cifra),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar cifra'))),
+    );
   }
 
   override deleteCifra(id: string): Observable<void> {
@@ -77,6 +78,7 @@ export class CifraFirebaseRepository extends CifraRepository {
     const indiceRef = doc(this.firestore, `cifras_indice/${id}`);
     return from(Promise.all([deleteDoc(cifraRef), deleteDoc(indiceRef)])).pipe(
       map(() => undefined),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao remover cifra'))),
     );
   }
 
@@ -87,6 +89,7 @@ export class CifraFirebaseRepository extends CifraRepository {
     const q = query(cifrasCol, where('categorias', 'array-contains', categoria));
     return from(getDocs(q)).pipe(
       map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Cifra)),
+      catchError(() => of([])),
     );
   }
 
@@ -95,6 +98,30 @@ export class CifraFirebaseRepository extends CifraRepository {
     const q = query(cifrasCol, where('partesMissa', 'array-contains', parte));
     return from(getDocs(q)).pipe(
       map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Cifra)),
+      catchError(() => of([])),
     );
+  }
+
+  override getCifrasDoUser(uid: string): Observable<Cifra[]> {
+    const q = query(
+      collection(this.firestore, 'cifras'),
+      where('donoUid', '==', uid),
+      where('status', '==', 'privada'),
+    );
+    return from(getDocs(q)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Cifra)),
+      catchError(() => of([])),
+    );
+  }
+
+  private tratarErro(err: unknown, fallback: string): Error {
+    const code = (err as any)?.code ?? '';
+    if (code === 'permission-denied') return new Error('Sem permissão para realizar esta operação.');
+    if (code === 'unavailable') return new Error('Sem conexão com o servidor. Verifique sua internet.');
+    return new Error(fallback + '. Tente novamente.');
+  }
+
+  override countCifrasDoUser(uid: string): Observable<number> {
+    return this.getCifrasDoUser(uid).pipe(map(list => list.length));
   }
 }

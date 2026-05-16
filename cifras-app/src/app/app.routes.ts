@@ -56,6 +56,40 @@ export const routes: Routes = [
             import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
     },
 
+    // ── Área do Usuário ────────────────────────────────────────────
+    {
+        path: 'minha-area',
+        canActivate: [authGuard, roleGuard('membro')],
+        loadComponent: () =>
+            import('./pages/usuario/minha-area/minha-area').then(m => m.MinhaAreaComponent),
+    },
+    {
+        path: 'minha-area/lista/:id',
+        canActivate: [authGuard, roleGuard('membro')],
+        loadComponent: () =>
+            import('./pages/usuario/minha-lista/minha-lista').then(m => m.MinhaListaComponent),
+    },
+    {
+        path: 'minha-area/nova-musica',
+        canActivate: [authGuard, roleGuard('membro')],
+        data: { userMode: true },
+        loadComponent: () =>
+            import('./pages/admin/nova-cifra/nova-cifra').then(m => m.NovaCifraComponent),
+    },
+    {
+        path: 'minha-area/editar-musica/:id',
+        canActivate: [authGuard, roleGuard('membro')],
+        data: { userMode: true },
+        loadComponent: () =>
+            import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
+    },
+    {
+        path: 'join/:listaId',
+        canActivate: [authGuard],
+        loadComponent: () =>
+            import('./pages/usuario/join/join').then(m => m.JoinComponent),
+    },
+
     // ── Fallback ───────────────────────────────────────────────────
     { path: '**', redirectTo: '' },
 ];

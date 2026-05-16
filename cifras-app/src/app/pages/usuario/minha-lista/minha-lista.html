@@ -1,0 +1,209 @@
+@if (notificacao()) {
+  <div class="toast-notificacao">{{ notificacao() }}</div>
+}
+@if (erroMsg()) {
+  <div class="toast-erro">{{ erroMsg() }}</div>
+}
+
+<header class="area-header">
+  <div class="area-header-inner">
+    <button class="btn-back" (click)="voltar()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Minhas Listas
+    </button>
+    @if (lista()) {
+      <span class="lista-titulo-header">{{ lista()!.titulo }}</span>
+    }
+    <div class="header-actions">
+      @if (salvando()) {
+        <span class="salvando-badge">salvando...</span>
+      }
+      @if (isDono()) {
+        <button class="btn-participantes" (click)="abrirPainelParticipantes()" title="Gerenciar participantes">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Participantes
+        </button>
+      }
+    </div>
+  </div>
+</header>
+
+@if (carregando()) {
+  <div class="loading-page">
+    <span class="spinner"></span>
+  </div>
+} @else if (notFound()) {
+  <div class="not-found">
+    <p>Lista não encontrada. Redirecionando...</p>
+  </div>
+} @else if (lista()) {
+
+  <div class="lista-page">
+
+    <!-- ── Cabeçalho da lista ─────────────────────────────────────── -->
+    <div class="lista-info">
+      <h1 class="lista-titulo">{{ lista()!.titulo }}</h1>
+      @if (!podeAdicionarMusica()) {
+        <span class="aviso-limite">Limite de {{ LIMITE_MUSICAS }} músicas personalizadas atingido</span>
+      }
+    </div>
+
+    <!-- ── Seções por parte da missa ──────────────────────────────── -->
+    @for (parte of PARTES_ORDER; track parte) {
+      <div class="parte-section">
+        <div class="parte-header">
+          <h2 class="parte-titulo">{{ PARTES_LABELS[parte] ?? parte }}</h2>
+          @if (isEditor()) {
+            <button class="btn-add-musica" (click)="abrirModalBusca(parte)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              Adicionar
+            </button>
+          }
+        </div>
+
+        @if (musicasDaParte(parte).length === 0) {
+          <p class="parte-empty">Nenhuma música</p>
+        } @else {
+          <div class="musicas-lista">
+            @for (musica of musicasDaParte(parte); track musica.id) {
+              <div class="musica-item">
+                <div class="musica-info" (click)="verCifra(musica.cifraId)">
+                  <span class="musica-nome">{{ musica.nome }}</span>
+                  <span class="musica-autor">{{ musica.autor }}</span>
+                  @if (musica.privada) {
+                    <span class="musica-privada-badge">privada</span>
+                  }
+                </div>
+                @if (isEditor()) {
+                  <div class="musica-actions">
+                    <button class="btn-action" title="Mover para cima" (click)="moverMusica(musica.id, -1)">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="18 15 12 9 6 15"/>
+                      </svg>
+                    </button>
+                    <button class="btn-action" title="Mover para baixo" (click)="moverMusica(musica.id, 1)">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </button>
+                    <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                      </svg>
+                    </button>
+                    @if (confirmandoRemoverMusica() === musica.id) {
+                      <div class="confirm-inline">
+                        <span>Remover?</span>
+                        <button class="btn-sim" (click)="removerMusica(musica.id)">Sim</button>
+                        <button class="btn-nao" (click)="confirmandoRemoverMusica.set(null)">Não</button>
+                      </div>
+                    } @else {
+                      <button class="btn-action btn-danger" title="Remover da lista"
+                        (click)="confirmandoRemoverMusica.set(musica.id)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                      </button>
+                    }
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+
+  </div>
+
+  <!-- ── Modal busca de música ──────────────────────────────────── -->
+  @if (modalBuscaAberto()) {
+    <div class="modal-backdrop" (click)="fecharModalBusca()"></div>
+    <div class="modal-busca" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-titulo-group">
+          <span class="modal-titulo">Adicionar música</span>
+          <span class="modal-parte-badge">{{ PARTES_LABELS[parteParaAdicionar()] ?? parteParaAdicionar() }}</span>
+        </div>
+        <button class="modal-close" (click)="fecharModalBusca()">✕</button>
+      </div>
+      <div class="modal-body">
+        <app-musica-search
+          [modoEmbutido]="true"
+          (musicaSelecionada)="onMusicaSelecionada($event)"
+          (cadastrarNova)="onCadastrarNova($event)"
+        />
+      </div>
+    </div>
+  }
+
+  <!-- ── Painel participantes ──────────────────────────────────── -->
+  @if (painelParticipantes()) {
+    <div class="modal-overlay" (click)="fecharPainelParticipantes()">
+      <div class="modal-content modal-participantes" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h3>Participantes</h3>
+          <button class="btn-fechar-modal" (click)="fecharPainelParticipantes()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="invite-section">
+          <label class="invite-label">Link de convite</label>
+          <div class="invite-row">
+            <input class="invite-input" type="text" readonly [value]="linkConvite()" />
+            <button class="btn-copiar" (click)="copiarLink()">
+              @if (linkCopiado()) { Copiado! } @else { Copiar }
+            </button>
+          </div>
+          <p class="invite-hint">Qualquer pessoa com este link pode entrar como visualizador.</p>
+        </div>
+
+        @if ((lista()!.participantes ?? []).length === 0) {
+          <p class="participantes-empty">Nenhum participante ainda.</p>
+        } @else {
+          <div class="participantes-lista">
+            @for (p of lista()!.participantes; track p.uid) {
+              <div class="participante-item">
+                <span class="participante-nome">{{ p.nome }}</span>
+                <div class="participante-actions">
+                  <select class="role-select"
+                    [value]="p.role"
+                    (change)="alterarRole(p.uid, $any($event.target).value)">
+                    <option value="visualizador">Visualizador</option>
+                    <option value="editor">Editor</option>
+                  </select>
+                  @if (confirmandoRemover() === p.uid) {
+                    <div class="confirm-inline">
+                      <button class="btn-sim" (click)="removerParticipante(p.uid)">Remover</button>
+                      <button class="btn-nao" (click)="cancelarRemoverParticipante()">Cancelar</button>
+                    </div>
+                  } @else {
+                    <button class="btn-action btn-danger" (click)="confirmarRemoverParticipante(p.uid)" title="Remover">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                      </svg>
+                    </button>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }
+
+}

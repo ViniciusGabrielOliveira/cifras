@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -7,6 +7,7 @@ import { LinhaEditorComponent } from '../../../components/linha-editor/linha-edi
 import { CifraService } from '../../../services/cifra.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { ConfigService } from '../../../services/config.service';
+import { AuthService } from '../../../services/auth.service';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
 
@@ -23,6 +24,9 @@ export class CifraEditorComponent implements OnInit {
   private cifraService = inject(CifraService);
   private acordesService = inject(AcordesService);
   private config = inject(ConfigService);
+  private auth = inject(AuthService);
+
+  readonly userMode = computed(() => !!this.route.snapshot.data['userMode']);
 
   readonly categorias = this.config.categorias;
   readonly partesMissa = this.config.partesMissa;
@@ -32,9 +36,11 @@ export class CifraEditorComponent implements OnInit {
   notFound = signal(false);
   saving = signal(false);
   saved = signal(false);
+  erroSalvar = signal<string | null>(null);
   showJSON = signal(false);
   jsonPreview = signal('');
   private _salvouNestaSessao = false;
+  private _oldCifraId: string | null = null;
 
   readonly tiposSecao = TIPOS;
 
@@ -53,6 +59,22 @@ export class CifraEditorComponent implements OnInit {
   }
 
   voltar() {
+    if (this.userMode()) {
+      const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
+      if (retornoLista) {
+        const queryParams: Record<string, string> = {};
+        if (this._oldCifraId && this.cifra()?.id !== this._oldCifraId) {
+          queryParams['replaceCifraId'] = this._oldCifraId;
+          queryParams['newCifraId']     = this.cifra()!.id;
+        }
+        this.router.navigate(['/minha-area/lista', retornoLista], {
+          queryParams: Object.keys(queryParams).length ? queryParams : undefined,
+        });
+      } else {
+        this.router.navigate(['/minha-area']);
+      }
+      return;
+    }
     const retorno = this.route.snapshot.queryParamMap.get('retorno');
     if (retorno === 'painel') {
       const c = this.cifra();
@@ -180,13 +202,31 @@ export class CifraEditorComponent implements OnInit {
   salvar() {
     const c = this.cifra();
     if (!c) return;
+    const uid = this.auth.user()?.uid ?? '';
+
+    let cifraParaSalvar = c;
+    if (this.userMode() && (c.status !== 'privada' || c.donoUid !== uid)) {
+      // Cria cópia privada com novo ID para não sobrescrever a música pública
+      this._oldCifraId = c.id;
+      const novoId = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+      cifraParaSalvar = { ...c, id: novoId, status: 'privada', donoUid: uid };
+      this.cifra.set(cifraParaSalvar);
+    }
+
     this.saving.set(true);
-    this.cifraService.salvarCifra(c).subscribe(() => {
-      this.acordesService.syncAcordes(c);
-      this.saving.set(false);
-      this.saved.set(true);
-      this._salvouNestaSessao = true;
-      setTimeout(() => this.saved.set(false), 2500);
+    this.cifraService.salvarCifra(cifraParaSalvar).subscribe({
+      next: () => {
+        this.acordesService.syncAcordes(cifraParaSalvar);
+        this.saving.set(false);
+        this.saved.set(true);
+        this._salvouNestaSessao = true;
+        setTimeout(() => this.saved.set(false), 2500);
+      },
+      error: (err: Error) => {
+        this.saving.set(false);
+        this.erroSalvar.set(err.message || 'Erro ao salvar. Tente novamente.');
+        setTimeout(() => this.erroSalvar.set(null), 5000);
+      },
     });
   }
 

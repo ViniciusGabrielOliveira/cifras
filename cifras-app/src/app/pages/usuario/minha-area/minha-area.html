@@ -1,0 +1,125 @@
+@if (notificacao()) {
+  <div class="toast-notificacao">{{ notificacao() }}</div>
+}
+@if (erroMsg()) {
+  <div class="toast-erro">{{ erroMsg() }}</div>
+}
+
+<header class="area-header">
+  <div class="area-header-inner">
+    <div class="header-left">
+      <a routerLink="/" class="back-link">← Voltar ao site</a>
+      <span class="area-titulo">Minha Área</span>
+    </div>
+    <div class="header-right">
+      <span class="user-name">{{ auth.displayName() }}</span>
+      <button class="btn-sair" (click)="sair()">Sair</button>
+    </div>
+  </div>
+</header>
+
+<div class="area-page">
+
+  <!-- ── Contador de músicas ──────────────────────────────────────── -->
+  <div class="musicas-counter">
+    <span class="counter-label">Músicas personalizadas:</span>
+    <span class="counter-value" [class.limite]="!podeAdicionarMusica()">
+      {{ totalMusicasCustom() }} / {{ LIMITE_MUSICAS }}
+    </span>
+    @if (!podeAdicionarMusica()) {
+      <span class="counter-aviso">Limite atingido</span>
+    }
+  </div>
+
+  <!-- ── Topo com ação ───────────────────────────────────────────── -->
+  <div class="dash-top">
+    <h1 class="dash-titulo">Minhas Listas</h1>
+    <button class="btn-nova-lista" (click)="iniciarCriacaoLista()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      Nova Lista
+    </button>
+  </div>
+
+  <!-- ── Formulário nova lista ───────────────────────────────────── -->
+  @if (criandoLista()) {
+    <div class="nova-lista-form">
+      <h3 class="form-titulo">Nova Lista</h3>
+      <div class="form-campo">
+        <label>Título</label>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="Ex: Missa de domingo"
+          [ngModel]="novaListaTitulo()"
+          (ngModelChange)="novaListaTitulo.set($event)"
+          (keyup.enter)="criarLista()"
+          autofocus
+        />
+      </div>
+      <div class="form-campo">
+        <label>Categoria</label>
+        <select
+          class="form-select"
+          [ngModel]="novaListaCategoria()"
+          (ngModelChange)="novaListaCategoria.set($event)"
+        >
+          @for (cat of categorias; track cat) {
+            <option [value]="cat">{{ categoriasLabels[cat] ?? cat }}</option>
+          }
+        </select>
+      </div>
+      <div class="form-actions">
+        <button class="btn-cancelar" (click)="cancelarCriacaoLista()">Cancelar</button>
+        <button class="btn-salvar" [disabled]="!novaListaTitulo().trim() || salvandoLista()" (click)="criarLista()">
+          @if (salvandoLista()) { <span class="spinner-sm"></span> }
+          Criar Lista
+        </button>
+      </div>
+    </div>
+  }
+
+  <!-- ── Loading ──────────────────────────────────────────────────── -->
+  @if (carregando()) {
+    <div class="loading-state">
+      <span class="spinner"></span>
+      Carregando suas listas...
+    </div>
+  } @else if (minhasListas().length === 0) {
+    <div class="empty-state">
+      <p>Você ainda não tem listas privadas.</p>
+      <button class="btn-nova-lista" (click)="iniciarCriacaoLista()">Criar primeira lista</button>
+    </div>
+  } @else {
+    <div class="listas-grid">
+      @for (lista of minhasListas(); track lista.id) {
+        <div class="lista-card" (click)="abrirLista(lista.id)">
+          <div class="lista-card-main">
+            <span class="lista-cat-pill">{{ categoriasLabels[lista.categoria] ?? lista.categoria }}</span>
+            <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
+            <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
+          </div>
+          <div class="lista-card-side">
+            @if (confirmandoExclusao() === lista.id) {
+              <div class="card-confirm" (click)="$event.stopPropagation()">
+                <span class="confirm-label">Excluir?</span>
+                <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
+                <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>
+              </div>
+            } @else {
+              <button class="btn-icon-danger" title="Excluir lista"
+                (click)="$event.stopPropagation(); confirmarExcluir(lista.id)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
+                  <path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+                </svg>
+              </button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+</div>

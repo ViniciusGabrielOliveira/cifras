@@ -49,7 +49,7 @@ export class CadastroComponent {
         this.auth.registrar(this.email(), this.senha(), this.nome(), tel).subscribe({
             next: () => {
                 this.carregando.set(false);
-                this.router.navigate(['/admin/painel']);
+                this.router.navigate([this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area']);
             },
             error: (err) => {
                 this.carregando.set(false);
@@ -67,7 +67,7 @@ export class CadastroComponent {
                 if (!user.telefone) {
                     this.router.navigate(['/admin/completar-cadastro']);
                 } else {
-                    this.router.navigate(['/admin/painel']);
+                    this.router.navigate([this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area']);
                 }
             },
             error: (err) => {

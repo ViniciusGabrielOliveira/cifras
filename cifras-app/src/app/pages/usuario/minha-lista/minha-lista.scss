@@ -1,0 +1,563 @@
+.toast-notificacao {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.35);
+    z-index: 1000;
+    white-space: nowrap;
+    animation: toastIn 0.3s cubic-bezier(0.34, 1.5, 0.64, 1);
+}
+@keyframes toastIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.toast-erro {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.35);
+    z-index: 1001;
+    max-width: 90vw;
+    text-align: center;
+    animation: toastIn 0.3s cubic-bezier(0.34, 1.5, 0.64, 1);
+}
+
+.area-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: rgba(15, 17, 23, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.area-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    cursor: pointer;
+    padding: 4px;
+    &:hover { color: var(--color-text); }
+}
+
+.lista-titulo-header {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.salvando-badge {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.btn-participantes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    &:hover { border-color: var(--color-accent); color: var(--color-accent); }
+}
+
+.loading-page,
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    color: var(--color-text-muted);
+}
+
+.spinner {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.lista-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.lista-info {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.lista-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.aviso-limite {
+    font-size: 0.78rem;
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+.parte-section {
+    margin-bottom: 2rem;
+}
+
+.parte-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.parte-titulo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.btn-add-musica {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    &:hover { border-color: var(--color-accent); color: var(--color-accent); }
+}
+
+.parte-empty {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 0.25rem 0;
+}
+
+.musicas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.musica-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: border-color 0.15s;
+    &:hover { border-color: rgba(var(--color-accent-rgb, 99, 102, 241), 0.4); }
+}
+
+.musica-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.musica-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.musica-autor {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.musica-privada-badge {
+    font-size: 0.68rem;
+    background: rgba(251, 191, 36, 0.15);
+    color: #f59e0b;
+    border-radius: 4px;
+    padding: 2px 6px;
+    flex-shrink: 0;
+}
+
+.musica-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    &:hover { color: var(--color-text); background: var(--color-bg); }
+    &.btn-danger:hover { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+}
+
+.confirm-inline {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+}
+
+.btn-sim {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    &:hover { opacity: 0.85; }
+}
+
+.btn-nao {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* ── Modal busca de música ─────────────────────────────────────── */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(6px);
+    z-index: 500;
+    animation: fadeIn 0.18s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modal-busca {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(620px, calc(100vw - 2rem));
+    height: min(90vh, 780px);
+    background: #161821;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow:
+        0 32px 80px rgba(0,0,0,0.8),
+        0 0 0 1px rgba(124,106,253,0.08);
+    z-index: 501;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.22s cubic-bezier(0.34, 1.4, 0.64, 1);
+
+    @media (max-width: 600px) {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: none;
+        width: 100%;
+        height: 92dvh;
+        border-radius: 20px 20px 0 0;
+        animation: slideUpMobile 0.28s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        flex-shrink: 0;
+        background: linear-gradient(180deg, rgba(124,106,253,0.07) 0%, transparent 100%);
+    }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translate(-50%, calc(-50% + 28px)); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes slideUpMobile {
+    from { opacity: 0; transform: translateY(48px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-titulo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.modal-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.modal-parte-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    border: 1px solid rgba(124, 106, 253, 0.35);
+}
+
+.modal-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+    &:hover { background: rgba(255,255,255,0.1); color: var(--color-text); }
+}
+
+.modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.5rem 1.5rem;
+    overflow: hidden;
+
+    app-musica-search {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 0;
+    }
+}
+
+/* ── Modal participantes ────────────────────────────────────────── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+
+    .modal-header {
+        margin-bottom: 1.25rem;
+        h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin: 0;
+        }
+    }
+}
+
+.btn-fechar-modal {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    &:hover { color: var(--color-text); }
+}
+
+/* ── Participantes ────────────────────────────────────────────── */
+.invite-section {
+    margin-bottom: 1.25rem;
+}
+
+.invite-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+}
+
+.invite-row {
+    display: flex;
+    gap: 6px;
+}
+
+.invite-input {
+    flex: 1;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    min-width: 0;
+}
+
+.btn-copiar {
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover { opacity: 0.9; }
+}
+
+.invite-hint {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin: 6px 0 0;
+}
+
+.participantes-empty {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.participantes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.participante-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border);
+    &:last-child { border-bottom: none; }
+}
+
+.participante-nome {
+    font-size: 0.88rem;
+    color: var(--color-text);
+    flex: 1;
+}
+
+.participante-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.role-select {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: 0.78rem;
+    color: var(--color-text);
+    cursor: pointer;
+}

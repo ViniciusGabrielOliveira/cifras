@@ -23,9 +23,13 @@ export class LoginComponent {
     constructor() {
         effect(() => {
             if (!this.auth.loading() && this.auth.isLogado()) {
-                this.router.navigate(['/admin/painel']);
+                this.router.navigate([this.rotaPosLogin()]);
             }
         });
+    }
+
+    private rotaPosLogin(): string {
+        return this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area';
     }
 
     entrar() {
@@ -34,7 +38,7 @@ export class LoginComponent {
         this.auth.login(this.email(), this.senha()).subscribe({
             next: () => {
                 this.carregando.set(false);
-                this.router.navigate(['/admin/painel']);
+                this.router.navigate([this.rotaPosLogin()]);
             },
             error: (err) => {
                 this.carregando.set(false);
@@ -52,7 +56,7 @@ export class LoginComponent {
                 if (!user.telefone) {
                     this.router.navigate(['/admin/completar-cadastro']);
                 } else {
-                    this.router.navigate(['/admin/painel']);
+                    this.router.navigate([this.rotaPosLogin()]);
                 }
             },
             error: (err) => {

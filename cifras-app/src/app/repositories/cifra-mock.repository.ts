@@ -161,4 +161,14 @@ export class CifraMockRepository extends CifraRepository {
             map(cifras => cifras.filter(c => c.partesMissa?.includes(parte))),
         );
     }
+
+    override getCifrasDoUser(uid: string): Observable<Cifra[]> {
+        return this.getAllCifras().pipe(
+            map(cifras => cifras.filter(c => c.donoUid === uid && c.status === 'privada')),
+        );
+    }
+
+    override countCifrasDoUser(uid: string): Observable<number> {
+        return this.getCifrasDoUser(uid).pipe(map(list => list.length));
+    }
 }

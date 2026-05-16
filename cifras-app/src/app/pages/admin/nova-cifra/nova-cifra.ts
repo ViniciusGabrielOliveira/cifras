@@ -1,10 +1,11 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Cifra, Secao, LinhaCifra, TipoSecao } from '../../../models/cifra.model';
 import { CifraService } from '../../../services/cifra.service';
 import { ConfigService } from '../../../services/config.service';
+import { AuthService } from '../../../services/auth.service';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
 import { AcordesService } from '../../../services/acordes.service';
@@ -26,6 +27,9 @@ export class NovaCifraComponent implements OnInit {
   private cifraClub = inject(CifraClubImportService);
   private acordesService = inject(AcordesService);
   private config = inject(ConfigService);
+  private auth = inject(AuthService);
+
+  readonly userMode = computed(() => !!this.route.snapshot.data['userMode']);
 
   readonly tiposSecao = TIPOS;
   readonly tons = TONS;
@@ -256,19 +260,36 @@ export class NovaCifraComponent implements OnInit {
   // ── Salvar ────────────────────────────────────────────────────────
 
   salvar() {
-    const cifra = this.cifra();
-    if (!cifra.titulo.trim()) {
+    const cifraBase = this.cifra();
+    if (!cifraBase.titulo.trim()) {
       this.erroTitulo.set(true);
       return;
     }
+
+    const cifra: Cifra = this.userMode()
+      ? { ...cifraBase, status: 'privada', donoUid: this.auth.user()?.uid }
+      : cifraBase;
+
     this.saving.set(true);
     this.cifraService.salvarCifra(cifra).subscribe(() => {
       this.acordesService.syncAcordes(cifra);
       this.saving.set(false);
       this.saved.set(true);
-      setTimeout(() => this.router.navigate(['/admin/painel'], {
-        queryParams: { cifraAdicionada: cifra.id, nomeCifra: cifra.titulo },
-      }), 800);
+      if (this.userMode()) {
+        const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
+        const parte = this.route.snapshot.queryParamMap.get('parte') ?? 'entrada';
+        if (retornoLista) {
+          setTimeout(() => this.router.navigate(['/minha-area/lista', retornoLista], {
+            queryParams: { cifraAdicionada: cifra.id, nomeCifra: cifra.titulo, parte },
+          }), 800);
+        } else {
+          setTimeout(() => this.router.navigate(['/minha-area']), 800);
+        }
+      } else {
+        setTimeout(() => this.router.navigate(['/admin/painel'], {
+          queryParams: { cifraAdicionada: cifra.id, nomeCifra: cifra.titulo },
+        }), 800);
+      }
     });
   }
 
@@ -284,9 +305,18 @@ export class NovaCifraComponent implements OnInit {
 
   cancelar() {
     if (confirm('Descartar a nova música?')) {
-      this.router.navigate(['/admin/painel'], {
-        queryParams: { restaurarRascunho: 'true' },
-      });
+      if (this.userMode()) {
+        const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
+        if (retornoLista) {
+          this.router.navigate(['/minha-area/lista', retornoLista]);
+        } else {
+          this.router.navigate(['/minha-area']);
+        }
+      } else {
+        this.router.navigate(['/admin/painel'], {
+          queryParams: { restaurarRascunho: 'true' },
+        });
+      }
     }
   }
 

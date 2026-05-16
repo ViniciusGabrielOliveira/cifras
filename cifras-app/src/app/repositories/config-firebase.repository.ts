@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, from, map } from 'rxjs';
+import { Observable, from, map, catchError, throwError, of } from 'rxjs';
 import { FIREBASE_APP } from '../firebase.providers';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 import { ConfigItem } from '../models/config.model';
@@ -17,6 +17,7 @@ export class ConfigFirebaseRepository extends ConfigRepository {
         const data = snap.data() as { items: ConfigItem[] };
         return data.items?.length ? data.items : [];
       }),
+      catchError(() => of([])),
     );
   }
 
@@ -27,14 +28,19 @@ export class ConfigFirebaseRepository extends ConfigRepository {
         const data = snap.data() as { items: ConfigItem[] };
         return data.items?.length ? data.items : [];
       }),
+      catchError(() => of([])),
     );
   }
 
   override saveCategorias(items: ConfigItem[]): Observable<void> {
-    return from(setDoc(doc(this.firestore, 'config/categorias_liturgicas'), { items }));
+    return from(setDoc(doc(this.firestore, 'config/categorias_liturgicas'), { items })).pipe(
+      catchError(err => throwError(() => new Error('Erro ao salvar categorias. Tente novamente.'))),
+    );
   }
 
   override savePartesMissa(items: ConfigItem[]): Observable<void> {
-    return from(setDoc(doc(this.firestore, 'config/partes_missa'), { items }));
+    return from(setDoc(doc(this.firestore, 'config/partes_missa'), { items })).pipe(
+      catchError(err => throwError(() => new Error('Erro ao salvar partes da missa. Tente novamente.'))),
+    );
   }
 }

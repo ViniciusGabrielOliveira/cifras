@@ -36,13 +36,13 @@ export class ConfigService {
   readonly loaded = this._loaded.asReadonly();
 
   readonly categoriasLabels = computed(() => {
-    const map: Record<string, string> = {};
+    const map: Record<string, string | undefined> = {};
     for (const c of this._categorias()) map[c.id] = c.label;
     return map;
   });
 
   readonly partesLabels = computed(() => {
-    const map: Record<string, string> = {};
+    const map: Record<string, string | undefined> = {};
     for (const p of this._partes()) map[p.id] = p.label;
     return map;
   });

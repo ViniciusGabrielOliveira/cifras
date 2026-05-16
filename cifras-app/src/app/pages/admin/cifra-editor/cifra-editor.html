@@ -1,3 +1,7 @@
+@if (erroSalvar()) {
+  <div class="toast-erro">{{ erroSalvar() }}</div>
+}
+
 @if (loading()) {
 <div class="loading">
     <div class="spinner"></div><span>Carregando...</span>

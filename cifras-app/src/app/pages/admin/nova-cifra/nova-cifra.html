@@ -39,7 +39,7 @@
             <polyline points="17 21 17 13 7 13 7 21"/>
             <polyline points="7 3 7 8 15 8"/>
           </svg>
-          Salvar e voltar ao painel
+          {{ userMode() ? 'Salvar música' : 'Salvar e voltar ao painel' }}
         }
       </button>
     </div>
@@ -48,6 +48,7 @@
   <div class="editor-body">
 
     <!-- ── Busca Cifra Club ──────────────────────────────────────── -->
+    @if (!userMode()) {
     @if (buscandoImport()) {
       <div class="import-loading">
         <span class="spinner-import"></span>
@@ -101,6 +102,7 @@
         Rascunho importado do Cifra Club
         <button class="btn-reimportar" (click)="importado.set(false)">Buscar outra</button>
       </div>
+    }
     }
 
     <!-- ── Metadados ────────────────────────────────────────────── -->

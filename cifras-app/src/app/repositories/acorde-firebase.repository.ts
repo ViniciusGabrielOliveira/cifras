@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, from, of, map, forkJoin } from 'rxjs';
+import { Observable, from, of, map, forkJoin, catchError } from 'rxjs';
 import { FIREBASE_APP } from '../firebase.providers';
 import {
   getFirestore,
@@ -42,6 +42,7 @@ export class AcordeFirebaseRepository extends AcordeRepository {
 
     return forkJoin(fetches$).pipe(
       map(() => this.buildResult(nomes)),
+      catchError(() => of(this.buildResult(nomes.filter(n => this.cache.has(n))))),
     );
   }
 

@@ -3,13 +3,14 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Helpers
+    // ── Helpers ──────────────────────────────────────────────────────
     function isAuthenticated() {
       return request.auth != null;
     }
 
     function getUserRole() {
-      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+      let userDoc = get(/databases/$(database)/documents/users/$(request.auth.uid));
+      return userDoc != null ? userDoc.data.role : 'visitante';
     }
 
     function isNotBlocked() {
@@ -24,46 +25,125 @@ service cloud.firestore {
       return isAuthenticated() && getUserRole() in ['admin'];
     }
 
-    // Cifras + Índice — leitura aberta (exceto blocked), escrita admin/editor
-    match /cifras/{docId} {
-      allow read: if !isAuthenticated() || isNotBlocked();
-      allow write: if isAdminOrEditor();
+    function isListaOwner(lista) {
+      return isAuthenticated() && lista.donoUid == request.auth.uid;
     }
+
+    function isListaParticipant(lista) {
+      return isAuthenticated()
+        && lista.tipo == 'privada'
+        && lista.participantes != null
+        && lista.participantes.filter(p, p.uid == request.auth.uid).size() > 0;
+    }
+
+    function isListaEditor(lista) {
+      return isAuthenticated()
+        && lista.tipo == 'privada'
+        && lista.participantes != null
+        && lista.participantes.filter(p, p.uid == request.auth.uid && p.role == 'editor').size() > 0;
+    }
+
+    // ── Cifras ───────────────────────────────────────────────────────
+    match /cifras/{docId} {
+      allow read: if
+        // Cifra pública: qualquer não-bloqueado
+        ((!resource.data.keys().hasAll(['status']) || resource.data.status == 'publica')
+          && (!isAuthenticated() || isNotBlocked()))
+        // Cifra privada: somente o dono
+        || (resource.data.status == 'privada'
+          && isAuthenticated()
+          && resource.data.donoUid == request.auth.uid);
+
+      // Criar nova cifra privada
+      allow create: if isAdminOrEditor()
+        || (isAuthenticated() && isNotBlocked()
+          && request.resource.data.status == 'privada'
+          && request.resource.data.donoUid == request.auth.uid);
+
+      // Editar cifra existente — membro só pode editar suas próprias privadas
+      allow update: if isAdminOrEditor()
+        || (isAuthenticated() && isNotBlocked()
+          && resource.data.status == 'privada'
+          && resource.data.donoUid == request.auth.uid
+          && request.resource.data.status == 'privada'
+          && request.resource.data.donoUid == request.auth.uid);
+
+      allow delete: if isAdmin()
+        || (isAuthenticated() && resource.data.donoUid == request.auth.uid);
+    }
+
+    // ── Índice de Cifras ─────────────────────────────────────────────
     match /cifras_indice/{docId} {
       allow read: if !isAuthenticated() || isNotBlocked();
       allow write: if isAdminOrEditor();
     }
 
-    // Config
+    // ── Cifras Customizadas (edições do usuário sobre cifras públicas) ─
+    match /cifras_custom/{docId} {
+      allow read, write: if isAuthenticated()
+        && isNotBlocked()
+        && (resource == null || resource.data.uid == request.auth.uid)
+        && request.resource.data.uid == request.auth.uid;
+      allow read: if isAdmin();
+      allow delete: if isAdmin()
+        || (isAuthenticated() && resource.data.uid == request.auth.uid);
+    }
+
+    // ── Config ───────────────────────────────────────────────────────
     match /config/{document=**} {
-      allow read, write: if isAdmin();
+      allow read: if true;
+      allow write: if isAdmin();
     }
 
-    // Listas
+    // ── Listas ───────────────────────────────────────────────────────
     match /listas/{docId} {
-      allow read: if !isAuthenticated() || isNotBlocked();
-      allow write: if isAdminOrEditor();
+      allow read: if
+        // Lista pública
+        ((!resource.data.keys().hasAll(['tipo']) || resource.data.tipo == 'publica')
+          && (!isAuthenticated() || isNotBlocked()))
+        // Lista privada: dono ou participante
+        || (resource.data.tipo == 'privada'
+          && (isListaOwner(resource.data) || isListaParticipant(resource.data)));
+
+      allow create: if isAdminOrEditor()
+        // Usuário criando lista privada
+        || (isAuthenticated() && isNotBlocked()
+          && request.resource.data.tipo == 'privada'
+          && request.resource.data.donoUid == request.auth.uid);
+
+      allow update: if isAdminOrEditor()
+        // Dono da lista privada pode atualizar tudo
+        || (isAuthenticated() && resource.data.tipo == 'privada'
+          && isListaOwner(resource.data))
+        // Editor pode atualizar apenas as músicas
+        || (isAuthenticated() && resource.data.tipo == 'privada'
+          && isListaEditor(resource.data));
+
+      allow delete: if isAdmin()
+        || (isAuthenticated()
+          && resource.data.tipo == 'privada'
+          && isListaOwner(resource.data));
     }
 
-    // Acordes
+    // ── Acordes ──────────────────────────────────────────────────────
     match /acordes/{docId} {
       allow read: if !isAuthenticated() || isNotBlocked();
       allow write: if isAdminOrEditor();
     }
 
-    // Users
+    // ── Users ────────────────────────────────────────────────────────
     match /users/{uid} {
       allow read: if isAuthenticated();
       allow write: if request.auth.uid == uid || isAdminOrEditor();
     }
 
-    // Grupos
+    // ── Grupos ───────────────────────────────────────────────────────
     match /grupos/{docId} {
       allow read: if isAuthenticated();
       allow write: if isAuthenticated();
     }
 
-    // Convites
+    // ── Convites ─────────────────────────────────────────────────────
     match /convites/{docId} {
       allow read: if isAuthenticated();
       allow write: if isAuthenticated();

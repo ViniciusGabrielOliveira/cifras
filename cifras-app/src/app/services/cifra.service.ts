@@ -52,4 +52,12 @@ export class CifraService {
   getIndice(): Observable<CifraIndiceItem[]> {
     return this.repo.getIndice();
   }
+
+  getCifrasDoUser(uid: string): Observable<Cifra[]> {
+    return this.repo.getCifrasDoUser(uid);
+  }
+
+  countCifrasDoUser(uid: string): Observable<number> {
+    return this.repo.countCifrasDoUser(uid);
+  }
 }

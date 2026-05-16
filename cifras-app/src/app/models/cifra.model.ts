@@ -19,6 +19,8 @@ export interface Secao {
   tabText?: string;  // preenchido quando tipo === 'tab'
 }
 
+export type StatusCifra = 'publica' | 'privada' | 'pendente_revisao';
+
 export interface Cifra {
   id: string;
   titulo: string;
@@ -29,7 +31,20 @@ export interface Cifra {
   composicao: string;
   videoLink?: string;
   sourceUrl?: string;
-  categorias?: string[];      // IDs de categorias litúrgicas (ex: ['advento', 'tempo-comum'])
-  partesMissa?: string[];     // IDs de partes da missa (ex: ['entrada', 'comunhao'])
+  categorias?: string[];
+  partesMissa?: string[];
   secoes: Secao[];
+  // Campos de propriedade (undefined = pública, retrocompatível)
+  status?: StatusCifra;
+  donoUid?: string;
+}
+
+export interface CifraCustom {
+  id: string;           // `${uid}_${cifraId}`
+  uid: string;
+  cifraId: string;
+  secoes: Secao[];
+  pendente_revisao: boolean;
+  criadoEm: string;
+  atualizadoEm: string;
 }

@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
-import { Lista, CategoriaLiturgica } from '../models/lista.model';
+import { Lista, CategoriaLiturgica, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from '../repositories/lista.repository.interface';
 
 @Injectable({ providedIn: 'root' })
@@ -9,12 +9,8 @@ export class ListaService {
 
     readonly assinaturaExpirada = signal(false);
 
-    // ── Estado temporário de rascunho ────────────────────────────────
-    /** Rascunho da lista atual sendo editada, para manter o estado ao navegar para cadastrar cifra */
     listaDraft: Lista | null = null;
-    /** Qual era a vista ('nova-lista' ou 'editar-lista') */
     vistaDraft: 'nova-lista' | 'editar-lista' | null = null;
-    /** Em qual parte o usuário tinha clicado em "Adicionar" */
     parteParaAdicionarDraft: string | null = null;
 
     getListas(): Observable<Lista[]> {
@@ -42,5 +38,27 @@ export class ListaService {
 
     excluirLista(id: string): Observable<void> {
         return this.repo.excluirLista(id);
+    }
+
+    // ── Listas privadas ──────────────────────────────────────────────
+
+    getMinhasListas(uid: string): Observable<Lista[]> {
+        return this.repo.getMinhasListas(uid);
+    }
+
+    getListaPorToken(token: string): Observable<Lista | undefined> {
+        return this.repo.getListaPorToken(token);
+    }
+
+    adicionarParticipante(listaId: string, participante: Participante): Observable<void> {
+        return this.repo.adicionarParticipante(listaId, participante);
+    }
+
+    removerParticipante(listaId: string, uid: string): Observable<void> {
+        return this.repo.removerParticipante(listaId, uid);
+    }
+
+    atualizarRoleParticipante(listaId: string, uid: string, role: RoleParticipante): Observable<void> {
+        return this.repo.atualizarRoleParticipante(listaId, uid, role);
     }
 }

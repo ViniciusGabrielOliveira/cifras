@@ -1,0 +1,46 @@
+<div class="join-page">
+  <div class="join-card">
+
+    @switch (estado()) {
+      @case ('carregando') {
+        <div class="join-state">
+          <span class="spinner"></span>
+          <p>Verificando convite...</p>
+        </div>
+      }
+      @case ('entrando') {
+        <div class="join-state">
+          <span class="spinner"></span>
+          <p>Entrando na lista <strong>{{ nomeLista() }}</strong>...</p>
+        </div>
+      }
+      @case ('sucesso') {
+        <div class="join-state sucesso">
+          <svg class="icon-check" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          <p>Você entrou na lista <strong>{{ nomeLista() }}</strong>!</p>
+          <p class="redirect-hint">Redirecionando...</p>
+        </div>
+      }
+      @case ('ja-membro') {
+        <div class="join-state">
+          <p>Você já é membro desta lista. Redirecionando...</p>
+        </div>
+      }
+      @case ('erro') {
+        <div class="join-state erro">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <p>{{ erro() }}</p>
+          <a class="btn-voltar" routerLink="/minha-area">Ir para Minha Área</a>
+        </div>
+      }
+    }
+
+  </div>
+</div>
