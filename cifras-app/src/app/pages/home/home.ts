@@ -6,6 +6,7 @@ import { Lista, MusicaLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { CifraService } from '../../services/cifra.service';
 import { ConfigService } from '../../services/config.service';
+import { AuthService } from '../../services/auth.service';
 import { Cifra } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 import { transporCifra } from '../../core/transposicao';
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
     private listaService = inject(ListaService);
     private cifraService = inject(CifraService);
     readonly config = inject(ConfigService);
+    readonly auth = inject(AuthService);
 
     @ViewChild('inputData') inputData!: ElementRef<HTMLInputElement>;
 
