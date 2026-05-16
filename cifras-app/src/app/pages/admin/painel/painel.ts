@@ -96,7 +96,7 @@ export class PainelComponent implements OnInit {
   });
 
   // ── Notificação pós-cadastro ─────────────────────────────────────
-  notificacao = signal<string | null>(null);
+  notificacao = signal<{ msg: string; erro?: boolean } | null>(null);
 
   cifrasExistentes = signal<Set<string>>(new Set());
 
@@ -115,7 +115,7 @@ export class PainelComponent implements OnInit {
     const restaurarRascunho = this.route.snapshot.queryParamMap.get('restaurarRascunho');
 
     if (nomeCifra) {
-      this.notificacao.set(`✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!`);
+      this.notificacao.set({ msg: `✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!` });
       setTimeout(() => this.notificacao.set(null), 4000);
     }
 
@@ -246,7 +246,7 @@ export class PainelComponent implements OnInit {
       this.config.salvarPartesMissa(this.configPartesEdit()),
     ]);
     this.salvandoConfig.set(false);
-    this.notificacao.set('✓ Configurações salvas!');
+    this.notificacao.set({ msg: '✓ Configurações salvas!' });
     setTimeout(() => this.notificacao.set(null), 3000);
     this.vista.set('dashboard');
   }
@@ -314,10 +314,17 @@ export class PainelComponent implements OnInit {
     const lista = this.listaEdit();
     if (!lista || !lista.titulo.trim()) return;
     this.salvando.set(true);
-    this.listaService.salvarLista(lista).subscribe(() => {
-      this.salvando.set(false);
-      this.carregarListas();
-      this.vista.set('dashboard');
+    this.listaService.salvarLista(lista).subscribe({
+      next: () => {
+        this.salvando.set(false);
+        this.carregarListas();
+        this.vista.set('dashboard');
+      },
+      error: (err: Error) => {
+        this.salvando.set(false);
+        this.notificacao.set({ msg: err.message || 'Erro ao salvar lista. Tente novamente.', erro: true });
+        setTimeout(() => this.notificacao.set(null), 5000);
+      },
     });
   }
 

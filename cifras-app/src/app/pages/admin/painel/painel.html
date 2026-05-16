@@ -1,7 +1,7 @@
 <!-- Toast de notificação pós-cadastro -->
-@if (notificacao()) {
-  <div class="toast-notificacao">
-    {{ notificacao() }}
+@if (notificacao(); as n) {
+  <div class="toast-notificacao" [class.toast-erro]="n.erro">
+    {{ n.msg }}
   </div>
 }
 

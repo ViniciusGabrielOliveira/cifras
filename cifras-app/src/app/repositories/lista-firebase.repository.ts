@@ -65,7 +65,7 @@ export class ListaFirebaseRepository extends ListaRepository {
     if (lista.id) {
       const listaRef = doc(this.firestore, `listas/${lista.id}`);
       const now = new Date().toISOString();
-      const data = { ...lista, atualizadaEm: now };
+      const data = this.omitirUndefined({ ...lista, atualizadaEm: now });
       return from(setDoc(listaRef, data)).pipe(
         map(() => data),
         catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar lista'))),
@@ -75,11 +75,17 @@ export class ListaFirebaseRepository extends ListaRepository {
     const listasCol = collection(this.firestore, 'listas');
     const now = new Date().toISOString();
     const { id: _id, ...rest } = lista;
-    const data = { ...rest, criadaEm: now, atualizadaEm: now };
+    const data = this.omitirUndefined({ ...rest, criadaEm: now, atualizadaEm: now });
     return from(addDoc(listasCol, data)).pipe(
       map(ref => ({ ...data, id: ref.id } as Lista)),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao criar lista'))),
     );
+  }
+
+  private omitirUndefined<T extends object>(obj: T): T {
+    return Object.fromEntries(
+      Object.entries(obj).filter(([, v]) => v !== undefined),
+    ) as T;
   }
 
   override excluirLista(id: string): Observable<void> {

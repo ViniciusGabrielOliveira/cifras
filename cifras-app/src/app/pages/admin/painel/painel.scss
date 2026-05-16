@@ -30,6 +30,11 @@
     to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
+.toast-notificacao.toast-erro {
+    background: #ef4444;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.35);
+}
+
 /* ── Header Admin ──────────────────────────────────────────────── */
 .admin-header {
     position: relative;
