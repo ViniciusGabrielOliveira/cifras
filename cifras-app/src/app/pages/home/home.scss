@@ -193,18 +193,23 @@
     gap: 8px;
     padding: 12px 20px;
     flex-shrink: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
 
     button {
         flex: 1;
-        padding: 8px 12px;
+        min-width: fit-content;
+        padding: 8px 10px;
         border-radius: 8px;
         border: 1px solid var(--color-border);
         background: transparent;
         color: var(--color-text-muted);
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.2s;
+        white-space: nowrap;
 
         &.ativo {
             background: var(--color-acorde-bg);
@@ -286,6 +291,18 @@
     color: var(--color-text-muted);
     font-size: 0.9rem;
     padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-sm {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-acorde);
+    border-radius: 50%;
+    animation: global-spin 0.7s linear infinite;
 }
 
 .lista-item {
@@ -324,6 +341,31 @@
         color: var(--color-text-muted);
         margin-top: 2px;
     }
+}
+
+.lista-item-privada {
+    border-color: rgba(124, 106, 253, 0.2);
+    background: rgba(124, 106, 253, 0.03);
+}
+
+.lista-item-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.lista-participando-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 7px;
+    border-radius: 20px;
+    background: rgba(124, 106, 253, 0.12);
+    color: var(--color-acorde);
+    border: 1px solid rgba(124, 106, 253, 0.3);
+    flex-shrink: 0;
 }
 
 /* ── Main Content ─────────────────────────────────────────────────── */
@@ -389,6 +431,41 @@
     gap: 6px;
     min-width: max-content;
     padding: 2px 0;
+}
+
+/* ── FAB Adicionar música ────────────────────────────────────────── */
+.fab-add-musica {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--color-acorde);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(124, 106, 253, 0.5);
+    z-index: 100;
+    transition: transform 0.15s, box-shadow 0.15s;
+
+    &:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 28px rgba(124, 106, 253, 0.65);
+    }
+    &:active { transform: scale(0.95); }
+}
+
+.fab-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: global-spin 0.7s linear infinite;
 }
 
 .tab {
@@ -641,6 +718,115 @@
     line-height: 1.6;
 }
 
+/* ── Live Bar ────────────────────────────────────────────────────── */
+.live-bar {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(124, 106, 253, 0.04);
+}
+
+.live-toggles {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
+
+    input[type="checkbox"] { display: none; }
+
+    .toggle-track {
+        width: 36px;
+        height: 20px;
+        background: rgba(255,255,255,0.12);
+        border-radius: 10px;
+        position: relative;
+        transition: background 0.2s;
+        flex-shrink: 0;
+        border: 1px solid rgba(255,255,255,0.08);
+
+        .toggle-thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 14px;
+            height: 14px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+    }
+
+    input[type="checkbox"]:checked + .toggle-track {
+        background: var(--color-accent);
+        border-color: transparent;
+        .toggle-thumb { transform: translateX(16px); }
+    }
+
+    .toggle-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+    }
+
+    &.toggle-ctrl input[type="checkbox"]:checked + .toggle-track {
+        background: #ff6b35;
+    }
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #ef4444;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ef4444;
+    animation: livePulse 1.1s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.65); }
+}
+
+.musica-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #ef4444;
+    flex-shrink: 0;
+    padding: 2px 7px;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+}
+
 /* ── Empty State ─────────────────────────────────────────────────── */
 .empty-state {
     text-align: center;
@@ -685,5 +871,154 @@
     &:hover {
         background: var(--color-acorde-hover);
         transform: translateY(-1px);
+    }
+}
+
+/* ── Toast home ──────────────────────────────────────────────────── */
+.toast-home-erro {
+    background: #ef4444 !important;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.35) !important;
+    white-space: normal !important;
+    max-width: min(400px, 90vw) !important;
+    text-align: center !important;
+}
+
+.toast-home {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.35);
+    z-index: 1100;
+    white-space: nowrap;
+    animation: toastInHome 0.3s cubic-bezier(0.34, 1.5, 0.64, 1);
+}
+@keyframes toastInHome {
+    from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── Modal adicionar música ──────────────────────────────────────── */
+.modal-backdrop-home {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(6px);
+    z-index: 500;
+    animation: fadeInHome 0.18s ease;
+}
+@keyframes fadeInHome {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modal-busca-home {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(620px, calc(100vw - 2rem));
+    height: min(90vh, 780px);
+    background: #161821;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(124, 106, 253, 0.08);
+    z-index: 501;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUpHome 0.22s cubic-bezier(0.34, 1.4, 0.64, 1);
+
+    @media (max-width: 600px) {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: none;
+        width: 100%;
+        height: 92dvh;
+        border-radius: 20px 20px 0 0;
+        animation: slideUpMobileHome 0.28s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+}
+@keyframes slideUpHome {
+    from { opacity: 0; transform: translate(-50%, calc(-50% + 28px)); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes slideUpMobileHome {
+    from { opacity: 0; transform: translateY(48px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header-home {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(124, 106, 253, 0.07) 0%, transparent 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-titulo-group-home {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.modal-titulo-home {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.modal-parte-badge-home {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    border: 1px solid rgba(124, 106, 253, 0.35);
+}
+
+.modal-close-home {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    &:hover { background: rgba(255, 255, 255, 0.1); color: var(--color-text); }
+}
+
+.modal-body-home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.5rem 1.5rem;
+    overflow: hidden;
+
+    app-musica-search {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 0;
     }
 }

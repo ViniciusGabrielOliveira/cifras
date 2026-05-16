@@ -1,7 +1,7 @@
 import { Component, signal, inject, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -13,6 +13,7 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class LoginComponent {
     private router = inject(Router);
+    private route = inject(ActivatedRoute);
     private auth = inject(AuthService);
 
     email = signal('admin@cifras.missa');
@@ -20,10 +21,14 @@ export class LoginComponent {
     erro = signal('');
     carregando = signal(false);
 
+    private get returnUrl(): string {
+        return this.route.snapshot.queryParamMap.get('returnUrl') ?? '';
+    }
+
     constructor() {
         effect(() => {
             if (!this.auth.loading() && this.auth.isLogado()) {
-                this.router.navigate([this.rotaPosLogin()]);
+                this.router.navigateByUrl(this.returnUrl || this.rotaPosLogin());
             }
         });
     }
@@ -38,7 +43,7 @@ export class LoginComponent {
         this.auth.login(this.email(), this.senha()).subscribe({
             next: () => {
                 this.carregando.set(false);
-                this.router.navigate([this.rotaPosLogin()]);
+                this.router.navigateByUrl(this.returnUrl || this.rotaPosLogin());
             },
             error: (err) => {
                 this.carregando.set(false);
@@ -54,9 +59,11 @@ export class LoginComponent {
             next: (user) => {
                 this.carregando.set(false);
                 if (!user.telefone) {
-                    this.router.navigate(['/admin/completar-cadastro']);
+                    this.router.navigate(['/admin/completar-cadastro'], {
+                        queryParams: this.returnUrl ? { returnUrl: this.returnUrl } : {},
+                    });
                 } else {
-                    this.router.navigate([this.rotaPosLogin()]);
+                    this.router.navigateByUrl(this.returnUrl || this.rotaPosLogin());
                 }
             },
             error: (err) => {

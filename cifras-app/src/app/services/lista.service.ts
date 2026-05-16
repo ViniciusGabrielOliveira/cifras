@@ -1,5 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, forkJoin, map, tap } from 'rxjs';
 import { Lista, CategoriaLiturgica, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from '../repositories/lista.repository.interface';
 
@@ -46,6 +46,17 @@ export class ListaService {
         return this.repo.getMinhasListas(uid);
     }
 
+    getListasComoParticipante(uid: string): Observable<Lista[]> {
+        return this.repo.getListasComoParticipante(uid);
+    }
+
+    getTodasMinhasListas(uid: string): Observable<Lista[]> {
+        return forkJoin([
+            this.repo.getMinhasListas(uid),
+            this.repo.getListasComoParticipante(uid),
+        ]).pipe(map(([proprias, participando]) => [...proprias, ...participando]));
+    }
+
     getListaPorToken(token: string): Observable<Lista | undefined> {
         return this.repo.getListaPorToken(token);
     }
@@ -60,5 +71,9 @@ export class ListaService {
 
     atualizarRoleParticipante(listaId: string, uid: string, role: RoleParticipante): Observable<void> {
         return this.repo.atualizarRoleParticipante(listaId, uid, role);
+    }
+
+    atualizarControladoresUids(listaId: string, uids: string[]): Observable<void> {
+        return this.repo.atualizarControladoresUids(listaId, uids);
     }
 }

@@ -85,7 +85,6 @@ export const routes: Routes = [
     },
     {
         path: 'join/:listaId',
-        canActivate: [authGuard],
         loadComponent: () =>
             import('./pages/usuario/join/join').then(m => m.JoinComponent),
     },

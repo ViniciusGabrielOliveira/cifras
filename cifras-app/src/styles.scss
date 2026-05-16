@@ -86,6 +86,19 @@ a {
     }
 }
 
+/* ─── CDK Drag & Drop ─────────────────────────────────────────── */
+.cdk-drag-preview {
+    border-radius: 8px;
+    background: #1e2030;
+    border: 1px solid rgba(124, 106, 253, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    opacity: 0.92;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 4px 2px 8px;
+}
+
 .btn-edit {
     display: inline-flex;
     align-items: center;

@@ -31,8 +31,18 @@ export interface Lista {
     // Campos de lista privada (undefined = pública, retrocompatível)
     tipo?: TipoLista;
     donoUid?: string;
+    donoNome?: string;
     participantes?: Participante[];
+    participantesUids?: string[]; // espelho de participantes[].uid para queries array-contains
+    controladoresUids?: string[]; // UIDs que podem controlar o modo live
     tokenConvite?: string;
+    // Ordem, seleção e labels customizados de partes; se ausente usa ordem global do ConfigService
+    partes?: ParteLista[];
+}
+
+export interface ParteLista {
+    id: string;
+    label?: string; // sobrescreve o label global apenas nesta lista
 }
 
 export interface ListasDoDiaResponse {

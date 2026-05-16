@@ -1,7 +1,7 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -13,14 +13,19 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class CompletarCadastroComponent implements OnInit {
     private router = inject(Router);
+    private route = inject(ActivatedRoute);
     private auth = inject(AuthService);
 
     telefone = signal('');
     erro = signal('');
     carregando = signal(false);
 
+    private get returnUrl(): string {
+        return this.route.snapshot.queryParamMap.get('returnUrl') ?? '';
+    }
+
     private rotaPosLogin(): string {
-        return this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area';
+        return this.returnUrl || (this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area');
     }
 
     ngOnInit() {

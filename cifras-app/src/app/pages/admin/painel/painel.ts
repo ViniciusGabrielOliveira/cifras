@@ -11,6 +11,8 @@ import { CifraService } from '../../../services/cifra.service';
 import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
 import { MusicaSelecionada } from '../../../components/musica-search/musica-search';
 import { PainelModalBuscaComponent } from './painel-modal-busca';
+import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
+import { ConfigItem } from '../../../models/config.model';
 
 type VistaAdmin = 'dashboard' | 'nova-lista' | 'editar-lista' | 'configuracoes' | 'gerenciar-cifras';
 
@@ -31,7 +33,7 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
   selector: 'app-painel',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, PainelModalBuscaComponent],
+  imports: [CommonModule, FormsModule, RouterLink, PainelModalBuscaComponent, DragDropModule],
   templateUrl: './painel.html',
   styleUrl: './painel.scss',
 })
@@ -55,8 +57,8 @@ export class PainelComponent implements OnInit {
   confirmando = signal<string | null>(null);
 
   // ── Configurações Edit ───────────────────────────────────────────
-  configCatsEdit = signal<import('../../../models/config.model').ConfigItem[]>([]);
-  configPartesEdit = signal<import('../../../models/config.model').ConfigItem[]>([]);
+  configCatsEdit = signal<ConfigItem[]>([]);
+  configPartesEdit = signal<ConfigItem[]>([]);
   salvandoConfig = signal(false);
 
   private cifraClubService = inject(CifraClubImportService);
@@ -192,21 +194,34 @@ export class PainelComponent implements OnInit {
 
   // ── Configurações ─────────────────────────────────────────────────
   abrirConfiguracoes() {
-    const sortAZ = (items: import('../../../models/config.model').ConfigItem[]) =>
+    const sortAZ = (items: ConfigItem[]) =>
       [...items].sort((a, b) => a.label.localeCompare(b.label, 'pt'))
         .map((item, i) => ({ ...item, ordem: i }));
+    const sortByOrdem = (items: ConfigItem[]) =>
+      [...items].sort((a, b) => a.ordem - b.ordem)
+        .map((item, i) => ({ ...item, ordem: i }));
     this.configCatsEdit.set(sortAZ(JSON.parse(JSON.stringify(this.config.categorias()))));
-    this.configPartesEdit.set(sortAZ(JSON.parse(JSON.stringify(this.config.partesMissa()))));
+    this.configPartesEdit.set(sortByOrdem(JSON.parse(JSON.stringify(this.config.partesMissa()))));
     this.vista.set('configuracoes');
   }
 
   addConfigItem(tipo: 'cat' | 'parte') {
     const list = tipo === 'cat' ? this.configCatsEdit() : this.configPartesEdit();
     const nova = { id: slugify('Nova Opção'), label: 'Nova Opção', ordem: list.length };
-    const sorted = [...list, nova].sort((a, b) => a.label.localeCompare(b.label, 'pt'))
-      .map((item, i) => ({ ...item, ordem: i }));
-    if (tipo === 'cat') this.configCatsEdit.set(sorted);
-    else this.configPartesEdit.set(sorted);
+    if (tipo === 'cat') {
+      const sorted = [...list, nova].sort((a, b) => a.label.localeCompare(b.label, 'pt'))
+        .map((item, i) => ({ ...item, ordem: i }));
+      this.configCatsEdit.set(sorted);
+    } else {
+      this.configPartesEdit.set([...list, nova].map((p, i) => ({ ...p, ordem: i })));
+    }
+  }
+
+  onParteDrop(event: CdkDragDrop<ConfigItem[]>) {
+    if (event.previousIndex === event.currentIndex) return;
+    const partes = [...this.configPartesEdit()];
+    moveItemInArray(partes, event.previousIndex, event.currentIndex);
+    this.configPartesEdit.set(partes.map((p, i) => ({ ...p, ordem: i })));
   }
 
   removeConfigItem(tipo: 'cat' | 'parte', idx: number) {

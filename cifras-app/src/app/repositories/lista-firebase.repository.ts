@@ -101,6 +101,17 @@ export class ListaFirebaseRepository extends ListaRepository {
     );
   }
 
+  override getListasComoParticipante(uid: string): Observable<Lista[]> {
+    const q = query(
+      collection(this.firestore, 'listas'),
+      where('participantesUids', 'array-contains', uid),
+    );
+    return from(getDocs(q)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista)),
+      catchError(() => of([])),
+    );
+  }
+
   override getListaPorToken(token: string): Observable<Lista | undefined> {
     const q = query(
       collection(this.firestore, 'listas'),
@@ -115,7 +126,10 @@ export class ListaFirebaseRepository extends ListaRepository {
 
   override adicionarParticipante(listaId: string, participante: Participante): Observable<void> {
     const ref = doc(this.firestore, `listas/${listaId}`);
-    return from(updateDoc(ref, { participantes: arrayUnion(participante) })).pipe(
+    return from(updateDoc(ref, {
+      participantes: arrayUnion(participante),
+      participantesUids: arrayUnion(participante.uid),
+    })).pipe(
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao adicionar participante'))),
     );
   }
@@ -126,7 +140,10 @@ export class ListaFirebaseRepository extends ListaRepository {
       switchMap(snap => {
         if (!snap.exists()) return of(undefined as void);
         const participantes = ((snap.data() as Lista).participantes ?? []).filter(p => p.uid !== uid);
-        return from(updateDoc(ref, { participantes })).pipe(map(() => undefined as void));
+        return from(updateDoc(ref, {
+          participantes,
+          participantesUids: arrayRemove(uid),
+        })).pipe(map(() => undefined as void));
       }),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao remover participante'))),
     );
@@ -143,6 +160,14 @@ export class ListaFirebaseRepository extends ListaRepository {
         return from(updateDoc(ref, { participantes })).pipe(map(() => undefined as void));
       }),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao atualizar participante'))),
+    );
+  }
+
+  override atualizarControladoresUids(listaId: string, uids: string[]): Observable<void> {
+    const ref = doc(this.firestore, `listas/${listaId}`);
+    return from(updateDoc(ref, { controladoresUids: uids })).pipe(
+      map(() => undefined as void),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao atualizar controladores'))),
     );
   }
 

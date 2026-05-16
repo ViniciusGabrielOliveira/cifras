@@ -1,7 +1,7 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -13,7 +13,16 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class CadastroComponent {
     private router = inject(Router);
+    private route = inject(ActivatedRoute);
     private auth = inject(AuthService);
+
+    private get returnUrl(): string {
+        return this.route.snapshot.queryParamMap.get('returnUrl') ?? '';
+    }
+
+    private rotaPosLogin(): string {
+        return this.returnUrl || (this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area');
+    }
 
     nome = signal('');
     email = signal('');
@@ -49,7 +58,7 @@ export class CadastroComponent {
         this.auth.registrar(this.email(), this.senha(), this.nome(), tel).subscribe({
             next: () => {
                 this.carregando.set(false);
-                this.router.navigate([this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area']);
+                this.router.navigateByUrl(this.rotaPosLogin());
             },
             error: (err) => {
                 this.carregando.set(false);
@@ -65,9 +74,11 @@ export class CadastroComponent {
             next: (user) => {
                 this.carregando.set(false);
                 if (!user.telefone) {
-                    this.router.navigate(['/admin/completar-cadastro']);
+                    this.router.navigate(['/admin/completar-cadastro'], {
+                        queryParams: this.returnUrl ? { returnUrl: this.returnUrl } : {},
+                    });
                 } else {
-                    this.router.navigate([this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area']);
+                    this.router.navigateByUrl(this.rotaPosLogin());
                 }
             },
             error: (err) => {

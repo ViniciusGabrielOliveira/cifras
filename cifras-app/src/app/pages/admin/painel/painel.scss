@@ -608,6 +608,42 @@ select.form-input {
     .form-input { flex: 1; padding: 8px 12px; }
 }
 
+.config-row-draggable {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 2px 4px 2px 0;
+
+    &.cdk-drag-placeholder {
+        border: 1px dashed rgba(124, 106, 253, 0.4);
+        background: rgba(124, 106, 253, 0.06);
+        opacity: 0.6;
+        * { visibility: hidden; }
+    }
+}
+
+.cdk-drop-list-dragging .config-row-draggable:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-animating {
+    transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.drag-handle {
+    color: var(--color-text-muted);
+    cursor: grab;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    opacity: 0.5;
+    user-select: none;
+    transition: opacity 0.15s;
+
+    &:hover { opacity: 1; color: var(--color-acorde); }
+    &:active { cursor: grabbing; }
+}
+
 .btn-config-remover {
     width: 34px;
     height: 34px;

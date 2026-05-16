@@ -10,13 +10,14 @@
 .join-card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 2.5rem 2rem;
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     text-align: center;
 }
 
+/* ── Estado genérico (carregando / sucesso / erro) ─────────────── */
 .join-state {
     display: flex;
     flex-direction: column;
@@ -27,20 +28,17 @@
         font-size: 0.95rem;
         color: var(--color-text);
         margin: 0;
+        line-height: 1.5;
     }
 
-    strong {
-        color: var(--color-accent);
-    }
+    strong { color: var(--color-acorde); }
 
-    &.sucesso {
-        .icon-check { color: #22c55e; }
-    }
+    &.sucesso .icon-check { color: #22c55e; }
 
-    &.erro {
-        svg { color: #ef4444; }
-        p { color: var(--color-text-muted); }
-    }
+    &.erro svg { color: #ef4444; }
+    &.erro p { color: var(--color-text-muted); }
+
+    .icon-info { color: var(--color-text-muted); }
 }
 
 .redirect-hint {
@@ -48,25 +46,117 @@
     color: var(--color-text-muted) !important;
 }
 
+/* ── Estado convite ─────────────────────────────────────────────── */
+.join-convite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.join-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-acorde-bg);
+    border: 1px solid rgba(124, 106, 253, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-acorde);
+    margin-bottom: 0.25rem;
+}
+
+.join-convite-texto {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+
+    strong { color: var(--color-text); font-weight: 700; }
+}
+
+.join-lista-nome {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    width: 100%;
+    line-height: 1.4;
+}
+
+.join-usuario-hint {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin: 0;
+
+    strong { color: var(--color-text); }
+}
+
+.join-login-hint {
+    font-size: 0.84rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.join-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+/* ── Botões ─────────────────────────────────────────────────────── */
+.btn-join-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    background: var(--color-acorde);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.12s;
+    text-decoration: none;
+    &:hover { opacity: 0.9; }
+    &:active { transform: scale(0.98); }
+}
+
+.btn-join-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 11px 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-decoration: none;
+    &:hover { border-color: var(--color-text-muted); color: var(--color-text); }
+}
+
+/* ── Spinner ────────────────────────────────────────────────────── */
 .spinner {
     width: 32px;
     height: 32px;
     border: 2px solid var(--color-border);
-    border-top-color: var(--color-accent);
+    border-top-color: var(--color-acorde);
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
-.btn-voltar {
-    display: inline-block;
-    margin-top: 0.5rem;
-    background: var(--color-accent);
-    color: #fff;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    &:hover { opacity: 0.9; }
-}

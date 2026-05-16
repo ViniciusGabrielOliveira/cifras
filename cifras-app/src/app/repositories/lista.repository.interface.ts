@@ -10,8 +10,10 @@ export abstract class ListaRepository {
     abstract excluirLista(id: string): Observable<void>;
     // Listas privadas do usuário
     abstract getMinhasListas(uid: string): Observable<Lista[]>;
+    abstract getListasComoParticipante(uid: string): Observable<Lista[]>;
     abstract getListaPorToken(token: string): Observable<Lista | undefined>;
     abstract adicionarParticipante(listaId: string, participante: Participante): Observable<void>;
     abstract removerParticipante(listaId: string, uid: string): Observable<void>;
     abstract atualizarRoleParticipante(listaId: string, uid: string, role: RoleParticipante): Observable<void>;
+    abstract atualizarControladoresUids(listaId: string, uids: string[]): Observable<void>;
 }

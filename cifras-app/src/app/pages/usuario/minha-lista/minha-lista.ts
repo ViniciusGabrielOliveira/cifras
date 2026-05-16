@@ -2,7 +2,8 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Lista, MusicaLista, Participante, RoleParticipante } from '../../../models/lista.model';
+import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Lista, MusicaLista, ParteLista, RoleParticipante } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
@@ -15,7 +16,7 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
     selector: 'app-minha-lista',
     standalone: true,
-    imports: [CommonModule, FormsModule, MusicaSearchComponent],
+    imports: [CommonModule, FormsModule, MusicaSearchComponent, DragDropModule],
     templateUrl: './minha-lista.html',
     styleUrl: './minha-lista.scss',
 })
@@ -50,6 +51,13 @@ export class MinhaListaComponent implements OnInit {
         return participantes.some(p => p.uid === uid && p.role === 'editor');
     });
 
+    readonly isControlador = computed(() => {
+        const uid = this.auth.user()?.uid;
+        if (!uid) return false;
+        if (this.isDono()) return true;
+        return this.lista()?.controladoresUids?.includes(uid) ?? false;
+    });
+
     // Contagem de músicas personalizadas do usuário (para limite)
     totalMusicasCustom = signal(0);
     readonly LIMITE_MUSICAS = 25;
@@ -58,6 +66,27 @@ export class MinhaListaComponent implements OnInit {
     // Modal busca música
     modalBuscaAberto = signal(false);
     parteParaAdicionar = signal('entrada');
+
+    // Gerenciar partes (inline)
+    editandoParteId = signal<string | null>(null);
+    editandoParteLabel = signal('');
+
+    readonly partesOrdem = computed((): ParteLista[] => {
+        const lista = this.lista();
+        if (!lista) return [];
+        return lista.partes ?? this.PARTES_ORDER.map(id => ({ id }));
+    });
+
+    readonly partesDisponiveis = computed(() => {
+        const lista = this.lista();
+        if (!lista?.partes) return [];
+        const emUso = new Set(lista.partes.map(p => p.id));
+        return this.PARTES_ORDER.filter(p => !emUso.has(p));
+    });
+
+    parteLabel(parte: ParteLista): string {
+        return parte.label ?? this.PARTES_LABELS[parte.id] ?? parte.id;
+    }
 
     // Gerenciar participantes
     painelParticipantes = signal(false);
@@ -197,15 +226,17 @@ export class MinhaListaComponent implements OnInit {
         this.confirmandoRemoverMusica.set(null);
     }
 
-    moverMusica(musicaId: string, dir: -1 | 1) {
+    onMusicasReorder(event: CdkDragDrop<MusicaLista[]>, parteId: string) {
+        if (event.previousIndex === event.currentIndex) return;
         const lista = this.lista();
         if (!lista) return;
-        const musicas = [...lista.musicas];
-        const idx = musicas.findIndex(m => m.id === musicaId);
-        const novoIdx = idx + dir;
-        if (novoIdx < 0 || novoIdx >= musicas.length) return;
-        [musicas[idx], musicas[novoIdx]] = [musicas[novoIdx], musicas[idx]];
-        const atualizada = { ...lista, musicas: musicas.map((m, i) => ({ ...m, ordem: i })) };
+        const daParte = [...this.musicasDaParte(parteId)];
+        moveItemInArray(daParte, event.previousIndex, event.currentIndex);
+        const outras = lista.musicas.filter(m => m.parte !== parteId);
+        const atualizada = {
+            ...lista,
+            musicas: [...outras, ...daParte.map((m, i) => ({ ...m, ordem: i }))],
+        };
         this.lista.set(atualizada);
         this.salvarLista(atualizada);
     }
@@ -234,6 +265,61 @@ export class MinhaListaComponent implements OnInit {
                 this.mostrarErro(err.message || 'Erro ao salvar lista.');
             },
         });
+    }
+
+    // ── Partes (CRUD inline) ──────────────────────────────────────────
+
+    iniciarEdicaoParte(parte: ParteLista) {
+        this.editandoParteId.set(parte.id);
+        this.editandoParteLabel.set(this.parteLabel(parte));
+    }
+
+    salvarLabelParte(parteId: string) {
+        const lista = this.lista();
+        if (!lista) return;
+        const novoLabel = this.editandoParteLabel().trim();
+        if (!novoLabel) { this.cancelarEdicaoParte(); return; }
+        const partesAtuais = lista.partes ?? this.PARTES_ORDER.map(id => ({ id }));
+        const atualizada = {
+            ...lista,
+            partes: partesAtuais.map(p => p.id === parteId ? { ...p, label: novoLabel } : p),
+        };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
+        this.editandoParteId.set(null);
+    }
+
+    cancelarEdicaoParte() { this.editandoParteId.set(null); }
+
+    addParte(parteId: string) {
+        const lista = this.lista();
+        if (!lista) return;
+        const partesAtuais = lista.partes ?? this.PARTES_ORDER.map(id => ({ id }));
+        if (partesAtuais.some(p => p.id === parteId)) return;
+        const atualizada = { ...lista, partes: [...partesAtuais, { id: parteId }] };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
+    }
+
+    removeParte(parteId: string) {
+        const lista = this.lista();
+        if (!lista) return;
+        if (lista.musicas.some(m => m.parte === parteId)) return;
+        const partesAtuais = lista.partes ?? this.PARTES_ORDER.map(id => ({ id }));
+        const atualizada = { ...lista, partes: partesAtuais.filter(p => p.id !== parteId) };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
+    }
+
+    onPartesReorder(event: CdkDragDrop<ParteLista[]>) {
+        if (event.previousIndex === event.currentIndex) return;
+        const lista = this.lista();
+        if (!lista) return;
+        const partes = [...(lista.partes ?? this.PARTES_ORDER.map(id => ({ id })))];
+        moveItemInArray(partes, event.previousIndex, event.currentIndex);
+        const atualizada = { ...lista, partes };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
     }
 
     // ── Participantes ─────────────────────────────────────────────────
@@ -286,6 +372,18 @@ export class MinhaListaComponent implements OnInit {
                 this.confirmandoRemover.set(null);
                 this.mostrarErro(err.message || 'Erro ao remover participante.');
             },
+        });
+    }
+
+    // Dono pode conceder/revogar acesso de controlador live por participante
+    toggleControladoresUid(uid: string) {
+        const lista = this.lista();
+        if (!lista || !this.isDono()) return;
+        const atuais = lista.controladoresUids ?? [];
+        const novos = atuais.includes(uid) ? atuais.filter(u => u !== uid) : [...atuais, uid];
+        this.listaService.atualizarControladoresUids(lista.id, novos).subscribe({
+            next: () => this.lista.update(l => l ? { ...l, controladoresUids: novos } : l),
+            error: (err: Error) => this.mostrarErro(err.message || 'Erro ao atualizar controladores.'),
         });
     }
 

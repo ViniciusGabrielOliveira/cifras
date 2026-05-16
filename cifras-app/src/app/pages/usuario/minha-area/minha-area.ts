@@ -93,6 +93,7 @@ export class MinhaAreaComponent implements OnInit {
             musicas: [],
             tipo: 'privada' as TipoLista,
             donoUid: uid,
+            donoNome: this.auth.displayName() || undefined,
             participantes: [],
             tokenConvite: token,
             criadaEm: new Date().toISOString(),

@@ -65,6 +65,8 @@
 
 ## Segurança e Boas Práticas
 
+- **R43** — Lista pode ter campo `partes?: string[]` que define a ordem e seleção das partes da missa para aquela lista; se ausente, usa a ordem global do `ConfigService`; editor ou dono pode adicionar (a partir das partes do config global), remover (apenas partes sem música) e reordenar partes via drag-and-drop na tela `minha-lista`
+
 - **R40** — `environment.prod.ts` nunca deve ser commitado (contém API key)
 - **R41** — `service-account.json` e `*-firebase-adminsdk-*.json` estão no `.gitignore` e nunca devem ser commitados
 - **R42** — Nunca rodar `npm run build`, `ng build` ou `npm test` automaticamente — deixar para o usuário executar

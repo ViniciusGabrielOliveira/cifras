@@ -1,9 +1,11 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
+import { Lista, Participante } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
-import { Participante } from '../../../models/lista.model';
+
+type Estado = 'carregando' | 'convite' | 'entrando' | 'sucesso' | 'ja-membro' | 'erro';
 
 @Component({
     selector: 'app-join',
@@ -18,60 +20,83 @@ export class JoinComponent implements OnInit {
     private listaService = inject(ListaService);
     readonly auth = inject(AuthService);
 
-    estado = signal<'carregando' | 'entrando' | 'sucesso' | 'ja-membro' | 'erro'>('carregando');
-    nomeLista = signal('');
+    estado = signal<Estado>('carregando');
+    lista = signal<Lista | null>(null);
     erro = signal('');
+
+    readonly nomeLista = computed(() => this.lista()?.titulo ?? '');
+    readonly nomeConvidador = computed(() => this.lista()?.donoNome ?? '');
+    readonly token = signal('');
+
+    readonly returnUrl = computed(() => `/join/${this.token()}`);
 
     ngOnInit() {
         const token = this.route.snapshot.paramMap.get('listaId') ?? '';
         if (!token) {
-            this.estado.set('erro');
             this.erro.set('Link inválido.');
+            this.estado.set('erro');
             return;
         }
+        this.token.set(token);
 
         this.listaService.getListaPorToken(token).subscribe({
             next: lista => {
                 if (!lista) {
-                    this.estado.set('erro');
                     this.erro.set('Convite não encontrado ou expirado.');
+                    this.estado.set('erro');
                     return;
                 }
+                this.lista.set(lista);
 
-                this.nomeLista.set(lista.titulo);
-
-                const uid = this.auth.user()?.uid!;
-                const jaMembro = lista.participantes?.some(p => p.uid === uid)
-                    || lista.donoUid === uid;
-
-                if (jaMembro) {
-                    this.estado.set('ja-membro');
-                    setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1500);
-                    return;
+                const uid = this.auth.user()?.uid;
+                if (uid) {
+                    const jaMembro = lista.participantes?.some(p => p.uid === uid)
+                        || lista.donoUid === uid;
+                    if (jaMembro) {
+                        this.estado.set('ja-membro');
+                        setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1500);
+                        return;
+                    }
                 }
 
-                this.estado.set('entrando');
-                const participante: Participante = {
-                    uid,
-                    nome: this.auth.displayName() || uid,
-                    role: 'visualizador',
-                };
-
-                this.listaService.adicionarParticipante(lista.id, participante).subscribe({
-                    next: () => {
-                        this.estado.set('sucesso');
-                        setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1800);
-                    },
-                    error: () => {
-                        this.estado.set('erro');
-                        this.erro.set('Não foi possível entrar na lista. Tente novamente.');
-                    },
-                });
+                this.estado.set('convite');
             },
             error: () => {
-                this.estado.set('erro');
                 this.erro.set('Não foi possível processar o convite. Tente novamente.');
+                this.estado.set('erro');
             },
         });
+    }
+
+    continuar() {
+        const lista = this.lista();
+        const uid = this.auth.user()?.uid;
+        if (!lista || !uid) return;
+
+        this.estado.set('entrando');
+        const participante: Participante = {
+            uid,
+            nome: this.auth.displayName() || uid,
+            role: 'visualizador',
+        };
+
+        this.listaService.adicionarParticipante(lista.id, participante).subscribe({
+            next: () => {
+                this.estado.set('sucesso');
+                setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1800);
+            },
+            error: () => {
+                this.erro.set('Não foi possível entrar na lista. Tente novamente.');
+                this.estado.set('erro');
+            },
+        });
+    }
+
+    irParaLogin() {
+        this.router.navigate(['/admin'], { queryParams: { returnUrl: this.returnUrl() } });
+    }
+
+    irParaCadastro() {
+        this.router.navigate(['/admin/cadastro'], { queryParams: { returnUrl: this.returnUrl() } });
     }
 }

@@ -1507,6 +1507,12 @@ export class ListaMockRepository extends ListaRepository {
     return of(this.listas.filter(l => l.tipo === 'privada' && l.donoUid === uid));
   }
 
+  override getListasComoParticipante(uid: string): Observable<Lista[]> {
+    return of(this.listas.filter(l =>
+      l.tipo === 'privada' && (l.participantesUids ?? []).includes(uid),
+    ));
+  }
+
   override getListaPorToken(token: string): Observable<Lista | undefined> {
     return of(this.listas.find(l => l.tokenConvite === token));
   }
@@ -1535,6 +1541,12 @@ export class ListaMockRepository extends ListaRepository {
       lista.participantes = (lista.participantes ?? []).map(p => p.uid === uid ? { ...p, role } : p);
       this.salvarLocal();
     }
+    return of(undefined);
+  }
+
+  override atualizarControladoresUids(listaId: string, uids: string[]): Observable<void> {
+    const lista = this.listas.find(l => l.id === listaId);
+    if (lista) lista.controladoresUids = uids;
     return of(undefined);
   }
 

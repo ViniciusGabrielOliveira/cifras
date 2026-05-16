@@ -103,7 +103,11 @@ service cloud.firestore {
           && (!isAuthenticated() || isNotBlocked()))
         // Lista privada: dono ou participante
         || (resource.data.tipo == 'privada'
-          && (isListaOwner(resource.data) || isListaParticipant(resource.data)));
+          && (isListaOwner(resource.data) || isListaParticipant(resource.data)))
+        // Lista privada com token de convite: leitura pública para exibir a tela de convite
+        || (resource.data.tipo == 'privada'
+          && resource.data.keys().hasAll(['tokenConvite'])
+          && resource.data.tokenConvite != null);
 
       allow create: if isAdminOrEditor()
         // Usuário criando lista privada
@@ -115,14 +119,40 @@ service cloud.firestore {
         // Dono da lista privada pode atualizar tudo
         || (isAuthenticated() && resource.data.tipo == 'privada'
           && isListaOwner(resource.data))
-        // Editor pode atualizar apenas as músicas
+        // Editor pode atualizar a lista
         || (isAuthenticated() && resource.data.tipo == 'privada'
-          && isListaEditor(resource.data));
+          && isListaEditor(resource.data))
+        // Auto-join via token: qualquer autenticado pode se adicionar como participante
+        // desde que só altere os campos participantes/participantesUids
+        || (isAuthenticated()
+          && resource.data.tipo == 'privada'
+          && resource.data.tokenConvite != null
+          && request.resource.data.diff(resource.data).affectedKeys()
+              .hasOnly(['participantes', 'participantesUids']));
 
       allow delete: if isAdmin()
         || (isAuthenticated()
           && resource.data.tipo == 'privada'
           && isListaOwner(resource.data));
+    }
+
+    // ── Live state (subcoleção de listas) ────────────────────────────
+    match /listas/{listaId}/live/{docId} {
+      allow read: if isAuthenticated()
+        && exists(/databases/$(database)/documents/listas/$(listaId))
+        && (
+          get(/databases/$(database)/documents/listas/$(listaId)).data.donoUid == request.auth.uid
+          || get(/databases/$(database)/documents/listas/$(listaId)).data
+               .get('participantesUids', []).hasAny([request.auth.uid])
+        );
+
+      allow write: if isAuthenticated()
+        && exists(/databases/$(database)/documents/listas/$(listaId))
+        && (
+          get(/databases/$(database)/documents/listas/$(listaId)).data.donoUid == request.auth.uid
+          || get(/databases/$(database)/documents/listas/$(listaId)).data
+               .get('controladoresUids', []).hasAny([request.auth.uid])
+        );
     }
 
     // ── Acordes ──────────────────────────────────────────────────────

@@ -56,70 +56,119 @@
     </div>
 
     <!-- ── Seções por parte da missa ──────────────────────────────── -->
-    @for (parte of PARTES_ORDER; track parte) {
-      <div class="parte-section">
-        <div class="parte-header">
-          <h2 class="parte-titulo">{{ PARTES_LABELS[parte] ?? parte }}</h2>
-          @if (isEditor()) {
-            <button class="btn-add-musica" (click)="abrirModalBusca(parte)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
-              Adicionar
-            </button>
-          }
-        </div>
+    <div cdkDropList [cdkDropListDisabled]="!isEditor()" (cdkDropListDropped)="onPartesReorder($event)">
+      @for (parte of partesOrdem(); track parte.id) {
+        <div class="parte-section" cdkDrag [cdkDragDisabled]="!isEditor()">
 
-        @if (musicasDaParte(parte).length === 0) {
-          <p class="parte-empty">Nenhuma música</p>
-        } @else {
-          <div class="musicas-lista">
-            @for (musica of musicasDaParte(parte); track musica.id) {
-              <div class="musica-item">
-                <div class="musica-info" (click)="verCifra(musica.cifraId)">
-                  <span class="musica-nome">{{ musica.nome }}</span>
-                  <span class="musica-autor">{{ musica.autor }}</span>
-                  @if (musica.privada) {
-                    <span class="musica-privada-badge">privada</span>
+          <div class="parte-header">
+            @if (isEditor()) {
+              <span class="drag-handle-parte" cdkDragHandle>
+                <svg width="10" height="14" viewBox="0 0 10 14" fill="currentColor">
+                  <circle cx="3" cy="2.5" r="1.3"/><circle cx="7" cy="2.5" r="1.3"/>
+                  <circle cx="3" cy="7" r="1.3"/><circle cx="7" cy="7" r="1.3"/>
+                  <circle cx="3" cy="11.5" r="1.3"/><circle cx="7" cy="11.5" r="1.3"/>
+                </svg>
+              </span>
+            }
+
+            @if (isEditor() && editandoParteId() === parte.id) {
+              <input class="parte-label-input"
+                     [value]="editandoParteLabel()"
+                     (input)="editandoParteLabel.set($any($event.target).value)"
+                     (keydown.enter)="salvarLabelParte(parte.id)"
+                     (keydown.escape)="cancelarEdicaoParte()"
+                     (blur)="salvarLabelParte(parte.id)" />
+            } @else {
+              <h2 class="parte-titulo">{{ parteLabel(parte) }}</h2>
+            }
+
+            <div class="parte-acoes">
+              @if (isEditor()) {
+                <button class="btn-parte-acao" title="Renomear" (click)="iniciarEdicaoParte(parte)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                  </svg>
+                </button>
+                @if (musicasDaParte(parte.id).length === 0) {
+                  <button class="btn-parte-acao btn-parte-remover" title="Remover parte" (click)="removeParte(parte.id)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="3 6 5 6 21 6"/>
+                      <path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/>
+                    </svg>
+                  </button>
+                }
+                <button class="btn-add-musica" (click)="abrirModalBusca(parte.id)">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                  Adicionar
+                </button>
+              }
+            </div>
+          </div>
+
+          @if (musicasDaParte(parte.id).length === 0) {
+            <p class="parte-empty">Nenhuma música</p>
+          } @else {
+            <div class="musicas-lista" cdkDropList [cdkDropListDisabled]="!isEditor()"
+                 (cdkDropListDropped)="onMusicasReorder($event, parte.id)">
+              @for (musica of musicasDaParte(parte.id); track musica.id) {
+                <div class="musica-item" cdkDrag [cdkDragDisabled]="!isEditor()">
+                  @if (isEditor()) {
+                    <span class="drag-handle-musica" cdkDragHandle>
+                      <svg width="8" height="12" viewBox="0 0 8 12" fill="currentColor">
+                        <circle cx="2" cy="2" r="1.2"/><circle cx="6" cy="2" r="1.2"/>
+                        <circle cx="2" cy="6" r="1.2"/><circle cx="6" cy="6" r="1.2"/>
+                        <circle cx="2" cy="10" r="1.2"/><circle cx="6" cy="10" r="1.2"/>
+                      </svg>
+                    </span>
                   }
-                </div>
-                @if (isEditor()) {
-                  <div class="musica-actions">
-                    <button class="btn-action" title="Mover para cima" (click)="moverMusica(musica.id, -1)">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <polyline points="18 15 12 9 6 15"/>
-                      </svg>
-                    </button>
-                    <button class="btn-action" title="Mover para baixo" (click)="moverMusica(musica.id, 1)">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <polyline points="6 9 12 15 18 9"/>
-                      </svg>
-                    </button>
-                    <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                      </svg>
-                    </button>
-                    @if (confirmandoRemoverMusica() === musica.id) {
-                      <div class="confirm-inline">
-                        <span>Remover?</span>
-                        <button class="btn-sim" (click)="removerMusica(musica.id)">Sim</button>
-                        <button class="btn-nao" (click)="confirmandoRemoverMusica.set(null)">Não</button>
-                      </div>
-                    } @else {
-                      <button class="btn-action btn-danger" title="Remover da lista"
-                        (click)="confirmandoRemoverMusica.set(musica.id)">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                        </svg>
-                      </button>
+                  <div class="musica-info" (click)="verCifra(musica.cifraId)">
+                    <span class="musica-nome">{{ musica.nome }}</span>
+                    <span class="musica-autor">{{ musica.autor }}</span>
+                    @if (musica.privada) {
+                      <span class="musica-privada-badge">privada</span>
                     }
                   </div>
-                }
-              </div>
-            }
-          </div>
+                  @if (isEditor()) {
+                    <div class="musica-actions">
+                      <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                      </button>
+                      @if (confirmandoRemoverMusica() === musica.id) {
+                        <div class="confirm-inline">
+                          <span>Remover?</span>
+                          <button class="btn-sim" (click)="removerMusica(musica.id)">Sim</button>
+                          <button class="btn-nao" (click)="confirmandoRemoverMusica.set(null)">Não</button>
+                        </div>
+                      } @else {
+                        <button class="btn-action btn-danger" title="Remover"
+                          (click)="confirmandoRemoverMusica.set(musica.id)">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                          </svg>
+                        </button>
+                      }
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    @if (isEditor() && partesDisponiveis().length > 0) {
+      <div class="adicionar-parte-bar">
+        @for (parteId of partesDisponiveis(); track parteId) {
+          <button class="chip-parte-add" (click)="addParte(parteId)">
+            + {{ PARTES_LABELS[parteId] ?? parteId }}
+          </button>
         }
       </div>
     }
@@ -185,6 +234,14 @@
                     <option value="visualizador">Visualizador</option>
                     <option value="editor">Editor</option>
                   </select>
+                  <label class="controlador-toggle" title="Pode controlar o modo live na visualização">
+                    <input type="checkbox"
+                      [checked]="(lista()!.controladoresUids ?? []).includes(p.uid)"
+                      (change)="toggleControladoresUid(p.uid)">
+                    <span class="ctrl-chip" [class.ctrl-chip-ativo]="(lista()!.controladoresUids ?? []).includes(p.uid)">
+                      ctrl
+                    </span>
+                  </label>
                   @if (confirmandoRemover() === p.uid) {
                     <div class="confirm-inline">
                       <button class="btn-sim" (click)="removerParticipante(p.uid)">Remover</button>

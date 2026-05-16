@@ -2,44 +2,97 @@
   <div class="join-card">
 
     @switch (estado()) {
+
       @case ('carregando') {
         <div class="join-state">
           <span class="spinner"></span>
           <p>Verificando convite...</p>
         </div>
       }
+
+      @case ('convite') {
+        <div class="join-convite">
+          <div class="join-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+
+          @if (nomeConvidador()) {
+            <p class="join-convite-texto">
+              <strong>{{ nomeConvidador() }}</strong> te convidou para participar de uma lista
+            </p>
+          } @else {
+            <p class="join-convite-texto">Você foi convidado para participar de uma lista</p>
+          }
+
+          <div class="join-lista-nome">{{ nomeLista() }}</div>
+
+          @if (auth.isLogado()) {
+            <p class="join-usuario-hint">
+              Entrando como <strong>{{ auth.displayName() }}</strong>
+            </p>
+            <button class="btn-join-primary" (click)="continuar()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+              Continuar
+            </button>
+          } @else {
+            <p class="join-login-hint">Para aceitar o convite, entre na sua conta ou crie uma nova.</p>
+            <div class="join-acoes">
+              <button class="btn-join-primary" (click)="irParaLogin()">Entrar</button>
+              <button class="btn-join-secondary" (click)="irParaCadastro()">Criar conta</button>
+            </div>
+          }
+        </div>
+      }
+
       @case ('entrando') {
         <div class="join-state">
           <span class="spinner"></span>
           <p>Entrando na lista <strong>{{ nomeLista() }}</strong>...</p>
         </div>
       }
+
       @case ('sucesso') {
         <div class="join-state sucesso">
-          <svg class="icon-check" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="icon-check" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <circle cx="12" cy="12" r="10"/>
             <polyline points="9 12 11 14 15 10"/>
           </svg>
-          <p>Você entrou na lista <strong>{{ nomeLista() }}</strong>!</p>
+          <p>Você entrou em <strong>{{ nomeLista() }}</strong>!</p>
           <p class="redirect-hint">Redirecionando...</p>
         </div>
       }
+
       @case ('ja-membro') {
         <div class="join-state">
-          <p>Você já é membro desta lista. Redirecionando...</p>
-        </div>
-      }
-      @case ('erro') {
-        <div class="join-state erro">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="icon-info">
             <circle cx="12" cy="12" r="10"/>
             <line x1="12" y1="8" x2="12" y2="12"/>
             <line x1="12" y1="16" x2="12.01" y2="16"/>
           </svg>
-          <p>{{ erro() }}</p>
-          <a class="btn-voltar" routerLink="/minha-area">Ir para Minha Área</a>
+          <p>Você já faz parte desta lista.</p>
+          <p class="redirect-hint">Redirecionando...</p>
         </div>
       }
+
+      @case ('erro') {
+        <div class="join-state erro">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+          <p>{{ erro() }}</p>
+          <a class="btn-join-secondary" routerLink="/">Ir para a home</a>
+        </div>
+      }
+
     }
 
   </div>

@@ -1,3 +1,10 @@
+@if (notificacaoHome()) {
+<div class="toast-home">{{ notificacaoHome() }}</div>
+}
+@if (erroHome()) {
+<div class="toast-home toast-home-erro">{{ erroHome() }}</div>
+}
+
 <header class="app-header">
     <div class="header-inner">
         <div class="header-brand">
@@ -68,7 +75,7 @@
         <button class="drawer-close" (click)="fecharSeletor()">✕</button>
     </div>
 
-    <!-- Abas Dia / Categoria -->
+    <!-- Abas Dia / Categoria / Minhas Listas -->
     <div class="drawer-abas">
         <button [class.ativo]="abaAtiva() === 'dia'" (click)="abrirCalendario()">
             @if (dataSelecionada()) {
@@ -82,6 +89,11 @@
         <button [class.ativo]="abaAtiva() === 'categoria'" (click)="mudarAba('categoria')">
             🏷️ Por Categoria
         </button>
+        @if (auth.isLogado()) {
+        <button [class.ativo]="abaAtiva() === 'minhas-listas'" (click)="mudarAba('minhas-listas')">
+            👤 Minhas Listas
+        </button>
+        }
     </div>
 
     <!-- Aba: Dia -->
@@ -122,6 +134,34 @@
         }
     </div>
     }
+
+    <!-- Aba: Minhas Listas -->
+    @if (abaAtiva() === 'minhas-listas') {
+    <div class="drawer-listas">
+        @if (carregandoMinhasListas()) {
+        <div class="drawer-vazio">
+            <span class="spinner-sm"></span>
+        </div>
+        } @else if (minhasListas().length === 0) {
+        <div class="drawer-vazio">Você não tem listas ainda.</div>
+        } @else {
+        @for (lista of minhasListas(); track lista.id) {
+        <button class="lista-item lista-item-privada" [class.ativo]="listaAtual()?.id === lista.id"
+            (click)="selecionarLista(lista)">
+            <div class="lista-item-row">
+                <span class="lista-item-titulo">{{ lista.titulo }}</span>
+                @if (lista.donoUid !== auth.user()?.uid) {
+                <span class="lista-participando-badge">participando</span>
+                }
+            </div>
+            @if (lista.data) {
+            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
+            }
+        </button>
+        }
+        }
+    </div>
+    }
 </div>
 }
 
@@ -138,13 +178,39 @@
         }
     </div>
 
+    <!-- Live Bar -->
+    @if (isParticipanteOuDonoListaAtual()) {
+    <div class="live-bar">
+        @if (modoLiveAtivo()) {
+        <span class="live-indicator">
+            <span class="live-dot"></span>
+            @if (modoControladorAtivo()) { Controlando } @else { Ao vivo }
+        </span>
+        }
+        <div class="live-toggles">
+            <label class="toggle-switch" title="Seguir o que o controlador está mostrando">
+                <input type="checkbox" [checked]="modoLiveAtivo()" (change)="toggleLive()">
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                <span class="toggle-label">Live</span>
+            </label>
+            @if (isControladorListaAtual()) {
+            <label class="toggle-switch toggle-ctrl" title="Controlar o que os outros veem">
+                <input type="checkbox" [checked]="modoControladorAtivo()" (change)="toggleControlador()">
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                <span class="toggle-label">Controlador</span>
+            </label>
+            }
+        </div>
+    </div>
+    }
+
     <!-- Tabs Partes da Missa -->
     <div class="tabs-wrapper">
         <div class="tabs" role="tablist">
             @for (parte of partesDisponiveis(); track parte) {
             <button class="tab" role="tab" [class.ativo]="parteAtiva() === parte" (click)="selecionarParte(parte)"
                 [attr.aria-selected]="parteAtiva() === parte">
-                {{ PARTES_MISSA_LABELS[parte] }}
+                {{ parteLabel(parte) }}
             </button>
             }
         </div>
@@ -153,7 +219,8 @@
     <!-- Músicas da Parte Selecionada -->
     <div class="musicas-lista" role="tabpanel">
         @for (musica of musicasDaParte(); track musica.id; let idx = $index) {
-        <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id">
+        <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id"
+             [attr.data-musica-id]="musica.id">
 
             <!-- Cabeçalho clicável -->
             <button class="musica-header" (click)="toggleMusicaFromBtn(musica, $any($event.currentTarget))"
@@ -163,6 +230,9 @@
                     <span class="musica-nome">{{ musica.nome }}</span>
                     <span class="musica-autor">{{ musica.autor }}</span>
                 </div>
+                @if (modoLiveAtivo() && liveEstado()?.musicaAbertaId === musica.id) {
+                <span class="musica-live-badge"><span class="live-dot"></span>ao vivo</span>
+                }
                 <svg class="musica-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="6 9 12 15 18 9" />
                 </svg>
@@ -235,6 +305,42 @@
     <h2>Nenhuma lista encontrada</h2>
     <p>Não há lista de músicas para hoje.<br>Use o seletor acima para encontrar listas por data ou categoria.</p>
     <button class="btn-abrir-seletor" (click)="abrirSeletor()">Escolher lista</button>
+</div>
+}
+
+<!-- ── FAB Adicionar música ──────────────────────────────────── -->
+@if (isEditorDaListaAtual() && !modalAdicionarAberto()) {
+<button class="fab-add-musica" (click)="abrirModalAdicionarMusica()" title="Adicionar música">
+    @if (salvandoMusica()) {
+    <span class="fab-spinner"></span>
+    } @else {
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+    }
+</button>
+}
+
+<!-- ── Modal adicionar música ─────────────────────────────────── -->
+@if (modalAdicionarAberto()) {
+<div class="modal-backdrop-home" (click)="fecharModalAdicionarMusica()"></div>
+<div class="modal-busca-home" role="dialog" aria-modal="true">
+    <div class="modal-header-home">
+        <div class="modal-titulo-group-home">
+            <span class="modal-titulo-home">Adicionar música</span>
+            @if (parteAtiva()) {
+            <span class="modal-parte-badge-home">{{ parteLabel(parteAtiva()!) }}</span>
+            }
+        </div>
+        <button class="modal-close-home" (click)="fecharModalAdicionarMusica()">✕</button>
+    </div>
+    <div class="modal-body-home">
+        <app-musica-search
+            [modoEmbutido]="true"
+            (musicaSelecionada)="onMusicaSelecionadaHome($event)"
+            (cadastrarNova)="onCadastrarNovaHome($event)"
+        />
+    </div>
 </div>
 }
 
