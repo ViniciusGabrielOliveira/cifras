@@ -1,4 +1,4 @@
-<!-- Toast de notificação pós-cadastro -->
+<!-- Toast de notificação -->
 @if (notificacao(); as n) {
   <div class="toast-notificacao" [class.toast-erro]="n.erro">
     {{ n.msg }}
@@ -65,8 +65,15 @@
     <div class="listas-grid">
       @for (lista of listasFiltradas(); track lista.id) {
         <div class="lista-card">
-          <div class="lista-card-main">
-            <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
+          <div class="lista-card-main" (click)="editarLista(lista)" style="cursor:pointer">
+            <div class="lista-card-badges">
+              <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
+              @if (lista.tipo === 'privada') {
+                <span class="lista-tipo-pill privada">privada</span>
+              } @else {
+                <span class="lista-tipo-pill publica">pública</span>
+              }
+            </div>
             @if (lista.data) {
               <span class="lista-card-data">{{ formatarData(lista.data) }}</span>
             }
@@ -103,142 +110,12 @@
 }
 
 <!-- ══════════════════════════════════════════════════════════════ -->
-<!--  EDITOR DE LISTA                                              -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-@if ((vista() === 'nova-lista' || vista() === 'editar-lista') && listaEdit(); as lista) {
-  <div class="admin-page">
-    <div class="editor-top">
-      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
-      <h1 class="editor-titulo">
-        {{ vista() === 'nova-lista' ? 'Nova Lista' : 'Editar Lista' }}
-      </h1>
-    </div>
-
-    <!-- Dados Gerais -->
-    <section class="editor-section">
-      <h2 class="section-titulo">Dados Gerais</h2>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Título da Lista *</label>
-          <input id="campo-titulo" class="form-input" type="text"
-            placeholder="Ex: Domingo do Tempo Comum"
-            [value]="lista.titulo"
-            (input)="onInputCampo('titulo', $event)" />
-        </div>
-        <div class="form-group">
-          <label>Data (opcional)</label>
-          <input id="campo-data" class="form-input" type="date"
-            [value]="lista.data ?? ''"
-            (change)="onDataChange($event)" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Categoria Litúrgica</label>
-        <select id="campo-categoria" class="form-input"
-          [value]="lista.categoria"
-          (change)="onCategoriaChange($event)">
-          @for (cat of categorias; track cat) {
-            <option [value]="cat">{{ CATEGORIAS_LABELS[cat] }}</option>
-          }
-        </select>
-      </div>
-    </section>
-
-    <!-- Músicas por Parte -->
-    <section class="editor-section">
-      <h2 class="section-titulo">Músicas por Parte da Missa</h2>
-
-      @if (lista.musicas.length === 0) {
-        <div class="sem-musicas">
-          Nenhuma música adicionada ainda. Clique em "+ Adicionar" em uma das partes abaixo.
-        </div>
-      }
-
-      @for (parte of PARTES_MISSA_ORDER; track parte) {
-        <div class="parte-bloco">
-          <div class="parte-header-row">
-            <div class="parte-label">{{ PARTES_MISSA_LABELS[parte] }}</div>
-            <button class="btn-add-nesta-parte" (click)="abrirModalBusca(parte)">
-              + Adicionar
-            </button>
-          </div>
-
-          @if (musicasDaParte(parte).length === 0) {
-            <div class="parte-vazia">Nenhuma música nesta parte</div>
-          }
-
-          @for (musica of musicasDaParte(parte); track musica.id) {
-            <div class="musica-row">
-              <div class="musica-reorder">
-                <button class="btn-move" title="Subir"  (click)="moverMusica(musica.id, -1)">↑</button>
-                <button class="btn-move" title="Descer" (click)="moverMusica(musica.id, +1)">↓</button>
-              </div>
-
-              <div class="musica-info-card">
-                <div class="musica-nome-row">
-                  <span class="musica-nome-badge" [class.musica-removida]="!cifraExiste(musica.cifraId)">{{ musica.nome }}</span>
-                  @if (musica.autor) {
-                    <span class="musica-autor-badge">{{ musica.autor }}</span>
-                  }
-                  @if (!cifraExiste(musica.cifraId)) {
-                    <span class="badge-removida">cifra removida</span>
-                  }
-                </div>
-                <div class="musica-trecho-row">
-                  <p class="musica-trecho">"{{ musica.trecho }}"</p>
-                </div>
-                <div class="musica-extra-row">
-                  <input
-                    class="input-tom-musica"
-                    type="text"
-                    placeholder="Tom (ex: G, C#)"
-                    [value]="musica.tom ?? ''"
-                    (input)="onMusicaInput(musica.id, 'tom', $event)"
-                  />
-                  <input
-                    class="input-obs-musica"
-                    type="text"
-                    placeholder="Observação (ex: capotraste na 1ª casa)"
-                    [value]="musica.observacao ?? ''"
-                    (input)="onMusicaInput(musica.id, 'observacao', $event)"
-                  />
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start;">
-                <button class="btn-editar-cifra" [disabled]="!cifraExiste(musica.cifraId)" (click)="editarCifra(musica)">Editar</button>
-                <button class="btn-remover-musica" title="Remover" (click)="removerMusica(musica.id)">✕</button>
-              </div>
-            </div>
-          }
-        </div>
-      }
-    </section>
-
-    <!-- Ações -->
-    <div class="editor-acoes">
-      <button class="btn-cancelar" (click)="cancelarEdicao()">Cancelar</button>
-      <button class="btn-salvar"
-        [disabled]="salvando() || !lista.titulo.trim()"
-        (click)="salvarLista()">
-        @if (salvando()) {
-          <div class="spinner" style="width:16px;height:16px;border-width:2px"></div>
-          Salvando...
-        } @else {
-          Salvar Lista
-        }
-      </button>
-    </div>
-  </div>
-}
-
-<!-- ══════════════════════════════════════════════════════════════ -->
 <!--  CONFIGURAÇÕES                                                  -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 @if (vista() === 'configuracoes') {
   <div class="admin-page">
     <div class="editor-top">
-      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
+      <button class="btn-voltar" (click)="vista.set('dashboard')">← Voltar</button>
       <h1 class="editor-titulo">Configurações Gerais</h1>
     </div>
 
@@ -290,7 +167,7 @@
     </section>
 
     <div class="editor-acoes">
-      <button class="btn-cancelar" (click)="cancelarEdicao()">Cancelar</button>
+      <button class="btn-cancelar" (click)="vista.set('dashboard')">Cancelar</button>
       <button class="btn-salvar" [disabled]="salvandoConfig()" (click)="salvarConfiguracoes()">
         @if (salvandoConfig()) {
           <div class="spinner" style="width:16px;height:16px;border-width:2px"></div>
@@ -309,7 +186,7 @@
 @if (vista() === 'gerenciar-cifras') {
   <div class="admin-page">
     <div class="editor-top">
-      <button class="btn-voltar" (click)="cancelarEdicao()">← Voltar</button>
+      <button class="btn-voltar" (click)="vista.set('dashboard')">← Voltar</button>
       <h1 class="editor-titulo">Gerenciar Músicas</h1>
     </div>
 
@@ -368,21 +245,4 @@
       }
     </div>
   </div>
-}
-
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!--  MODAL DE BUSCA DE MÚSICA                                      -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-@if (modalBuscaAberto()) {
-  <app-painel-modal-busca
-    [parte]="parteParaAdicionar()"
-    [partesLabels]="PARTES_MISSA_LABELS"
-    [importando]="importandoCifraClub()"
-    [erro]="erroImportCC()"
-    (fechar)="fecharModalBusca()"
-    (musicaSelecionada)="onMusicaSelecionada($event)"
-    (cadastrarNova)="onCadastrarNova($event)"
-    (cifraClubSelecionada)="onCifraClubSelecionada($event)"
-    (limparErro)="erroImportCC.set(null)"
-  />
 }

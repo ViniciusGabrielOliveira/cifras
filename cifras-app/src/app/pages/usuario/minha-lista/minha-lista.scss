@@ -1,3 +1,144 @@
+/* ── Metadados editáveis ──────────────────────────────────────── */
+.lista-metadados {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 0;
+}
+
+.metadados-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.form-group-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-label {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.meta-input {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.85rem;
+    &:focus { outline: none; border-color: var(--color-acorde); }
+}
+
+.meta-input-titulo { min-width: 220px; font-weight: 600; }
+
+/* ── Toggle tipo pública/privada ──────────────────────────────── */
+.tipo-toggle {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tipo-btn {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    background: transparent;
+    color: var(--color-text-muted);
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+    &.ativo { background: var(--color-acorde); color: #fff; font-weight: 600; }
+}
+
+/* ── Tom e observação no item de música ───────────────────────── */
+.musica-info-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.musica-extra-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+.input-tom-musica {
+    width: 90px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.78rem;
+}
+
+.input-obs-musica {
+    flex: 1;
+    min-width: 150px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.78rem;
+}
+
+.musica-tom-obs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.tom-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-acorde);
+    background: color-mix(in srgb, var(--color-acorde) 12%, transparent);
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.obs-text {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.musica-removida { text-decoration: line-through; opacity: 0.5; }
+
+.musica-removida-badge {
+    font-size: 0.68rem;
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.12);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ── Pills de tipo no painel admin ───────────────────────────── */
+.lista-card-badges { display: flex; gap: 6px; margin-bottom: 4px; }
+
+.lista-tipo-pill {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    &.privada { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+    &.publica  { background: rgba(34, 197, 94, 0.15);  color: #22c55e; }
+}
+
 .toast-notificacao {
     position: fixed;
     bottom: 2rem;

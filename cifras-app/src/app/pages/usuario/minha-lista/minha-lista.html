@@ -11,7 +11,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <polyline points="15 18 9 12 15 6"/>
       </svg>
-      Minhas Listas
+      {{ adminContext ? 'Painel Admin' : 'Minhas Listas' }}
     </button>
     @if (lista()) {
       <span class="lista-titulo-header">{{ lista()!.titulo }}</span>
@@ -20,7 +20,7 @@
       @if (salvando()) {
         <span class="salvando-badge">salvando...</span>
       }
-      @if (isDono()) {
+      @if (isDono() && lista()?.tipo === 'privada') {
         <button class="btn-participantes" (click)="abrirPainelParticipantes()" title="Gerenciar participantes">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -43,17 +43,54 @@
   <div class="not-found">
     <p>Lista não encontrada. Redirecionando...</p>
   </div>
-} @else if (lista()) {
+} @else if (lista(); as lista) {
 
   <div class="lista-page">
 
-    <!-- ── Cabeçalho da lista ─────────────────────────────────────── -->
-    <div class="lista-info">
-      <h1 class="lista-titulo">{{ lista()!.titulo }}</h1>
-      @if (!podeAdicionarMusica()) {
-        <span class="aviso-limite">Limite de {{ LIMITE_MUSICAS }} músicas personalizadas atingido</span>
-      }
-    </div>
+    <!-- ── Metadados da lista ──────────────────────────────────── -->
+    @if (isEditor()) {
+      <div class="lista-metadados">
+        <div class="metadados-row">
+          <div class="form-group-meta">
+            <label class="meta-label">Título</label>
+            <input class="meta-input meta-input-titulo"
+              type="text"
+              [value]="lista.titulo"
+              (blur)="onTituloBlur($event)"
+              placeholder="Título da lista" />
+          </div>
+
+          @if (isAdmin()) {
+            <div class="form-group-meta">
+              <label class="meta-label">Data (opcional)</label>
+              <input class="meta-input" type="date"
+                [value]="lista.data ?? ''"
+                (change)="onDataChange($event)" />
+            </div>
+            <div class="form-group-meta">
+              <label class="meta-label">Categoria</label>
+              <select class="meta-input" [value]="lista.categoria" (change)="onCategoriaChange($event)">
+                @for (cat of categorias; track cat) {
+                  <option [value]="cat">{{ CATEGORIAS_LABELS[cat] }}</option>
+                }
+              </select>
+            </div>
+            <div class="form-group-meta">
+              <label class="meta-label">Tipo</label>
+              <div class="tipo-toggle">
+                <button class="tipo-btn" [class.ativo]="lista.tipo !== 'publica'" (click)="onTipoChange('privada')">Privada</button>
+                <button class="tipo-btn" [class.ativo]="lista.tipo === 'publica'" (click)="onTipoChange('publica')">Pública</button>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- ── Aviso de limite ────────────────────────────────────────── -->
+    @if (!podeAdicionarMusica()) {
+      <span class="aviso-limite">Limite de {{ LIMITE_MUSICAS }} músicas personalizadas atingido</span>
+    }
 
     <!-- ── Seções por parte da missa ──────────────────────────────── -->
     <div cdkDropList [cdkDropListDisabled]="!isEditor()" (cdkDropListDropped)="onPartesReorder($event)">
@@ -98,7 +135,7 @@
                     </svg>
                   </button>
                 }
-                <button class="btn-add-musica" (click)="abrirModalBusca(parte.id)">
+                <button class="btn-add-musica" [disabled]="!podeAdicionarMusica()" (click)="abrirModalBusca(parte.id)">
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
                   </svg>
@@ -124,16 +161,45 @@
                       </svg>
                     </span>
                   }
-                  <div class="musica-info" (click)="verCifra(musica)">
-                    <span class="musica-nome">{{ musica.nome }}</span>
-                    <span class="musica-autor">{{ musica.autor }}</span>
-                    @if (musica.privada) {
-                      <span class="musica-privada-badge">privada</span>
+                  <div class="musica-info">
+                    <div class="musica-info-top">
+                      <span class="musica-nome" [class.musica-removida]="!cifraExiste(musica.cifraId)">{{ musica.nome }}</span>
+                      <span class="musica-autor">{{ musica.autor }}</span>
+                      @if (musica.privada) {
+                        <span class="musica-privada-badge">privada</span>
+                      }
+                      @if (!cifraExiste(musica.cifraId)) {
+                        <span class="musica-removida-badge">cifra removida</span>
+                      }
+                    </div>
+                    @if (isEditor()) {
+                      <div class="musica-extra-row">
+                        <input
+                          class="input-tom-musica"
+                          type="text"
+                          placeholder="Tom (ex: G, C#)"
+                          [value]="musica.tom ?? ''"
+                          (change)="atualizarMusicaCampo(musica.id, 'tom', $event)"
+                        />
+                        <input
+                          class="input-obs-musica"
+                          type="text"
+                          placeholder="Observação (ex: capotraste na 1ª casa)"
+                          [value]="musica.observacao ?? ''"
+                          (change)="atualizarMusicaCampo(musica.id, 'observacao', $event)"
+                        />
+                      </div>
+                    } @else if (musica.tom || musica.observacao) {
+                      <div class="musica-tom-obs">
+                        @if (musica.tom) { <span class="tom-badge">{{ musica.tom }}</span> }
+                        @if (musica.observacao) { <span class="obs-text">{{ musica.observacao }}</span> }
+                      </div>
                     }
                   </div>
                   @if (isEditor()) {
                     <div class="musica-actions">
-                      <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)">
+                      <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)"
+                        [disabled]="!cifraExiste(musica.cifraId)">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                           <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
@@ -220,11 +286,11 @@
           <p class="invite-hint">Qualquer pessoa com este link pode entrar como visualizador.</p>
         </div>
 
-        @if ((lista()!.participantes ?? []).length === 0) {
+        @if ((lista.participantes ?? []).length === 0) {
           <p class="participantes-empty">Nenhum participante ainda.</p>
         } @else {
           <div class="participantes-lista">
-            @for (p of lista()!.participantes; track p.uid) {
+            @for (p of lista.participantes; track p.uid) {
               <div class="participante-item">
                 <span class="participante-nome">{{ p.nome }}</span>
                 <div class="participante-actions">
@@ -236,9 +302,9 @@
                   </select>
                   <label class="controlador-toggle" title="Pode controlar o modo live na visualização">
                     <input type="checkbox"
-                      [checked]="(lista()!.controladoresUids ?? []).includes(p.uid)"
+                      [checked]="(lista.controladoresUids ?? []).includes(p.uid)"
                       (change)="toggleControladoresUid(p.uid)">
-                    <span class="ctrl-chip" [class.ctrl-chip-ativo]="(lista()!.controladoresUids ?? []).includes(p.uid)">
+                    <span class="ctrl-chip" [class.ctrl-chip-ativo]="(lista.controladoresUids ?? []).includes(p.uid)">
                       ctrl
                     </span>
                   </label>

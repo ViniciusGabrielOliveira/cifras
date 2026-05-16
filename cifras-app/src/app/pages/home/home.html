@@ -252,20 +252,23 @@
                     <div class="toolbar-group">
                         <span class="toolbar-label">Tom</span>
                         <div class="tom-btns">
-                            <button class="btn-ctrl" (click)="mudarTom(cifra.id, -1)">−</button>
-                            <span class="tom-value">{{ getCifraTransposta(cifra).tom }}</span>
-                            <button class="btn-ctrl" (click)="mudarTom(cifra.id, +1)">+</button>
+                            <button class="btn-ctrl" (click)="mudarTom(musica.id, -1)">−</button>
+                            <span class="tom-value">{{ getCifraTransposta(cifra, musica.id).tom }}</span>
+                            <button class="btn-ctrl" (click)="mudarTom(musica.id, +1)">+</button>
                         </div>
-                        @if (getDelta(cifra.id) !== 0) {
-                        <button class="btn-restaurar" (click)="restaurarTom(cifra.id)">Restaurar</button>
+                        @if (getDelta(musica.id) !== 0) {
+                        <button class="btn-restaurar" (click)="restaurarTom(musica.id)">Restaurar</button>
+                        }
+                        @if (musica.observacao) {
+                        <span class="observacao-lista">{{ musica.observacao }}</span>
                         }
                     </div>
                     <div class="toolbar-group">
                         <span class="toolbar-label">Texto</span>
                         <div class="tom-btns">
-                            <button class="btn-ctrl" (click)="mudarFonte(cifra.id, -1)">−</button>
-                            <span class="tom-value" style="min-width:40px">{{ getFonteSize(cifra.id) }}px</span>
-                            <button class="btn-ctrl" (click)="mudarFonte(cifra.id, 1)">+</button>
+                            <button class="btn-ctrl" (click)="mudarFonte(musica.id, -1)">−</button>
+                            <span class="tom-value" style="min-width:40px">{{ getFonteSize(musica.id) }}px</span>
+                            <button class="btn-ctrl" (click)="mudarFonte(musica.id, 1)">+</button>
                         </div>
                     </div>
 
@@ -282,8 +285,8 @@
                 </div>
 
                 <!-- Seções da cifra -->
-                <div class="cifra-secoes" [style.font-size.px]="getFonteSize(cifra.id)">
-                    @for (secao of getCifraTransposta(cifra).secoes; track $index) {
+                <div class="cifra-secoes" [style.font-size.px]="getFonteSize(musica.id)">
+                    @for (secao of getCifraTransposta(cifra, musica.id).secoes; track $index) {
                     <app-secao-cifra [secao]="secao" />
                     }
                 </div>

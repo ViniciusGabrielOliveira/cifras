@@ -13,7 +13,7 @@ import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
 import { LiveService } from '../../services/live.service';
 import { LiveEstado } from '../../models/live.model';
-import { transporCifra } from '../../core/transposicao';
+import { transporCifra, calcularDelta } from '../../core/transposicao';
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -120,20 +120,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     // ── Accordion / Cifra ────────────────────────────────────────────
     acordeonAberto = signal<string | null>(null);
     cifrasCache = signal<Record<string, Cifra | null>>({});
-    cifraExpandida = computed<Cifra | null>(() => {
-        const id = this.acordeonAberto();
-        const map = this.cifrasCache();
-        return id ? (map[id] ?? null) : null;
-    });
+    // keyed by musica.id (not cifraId) para suportar mesmo cifra com tons diferentes
     deltasTom = signal<Record<string, number>>({});
     fontesSize = signal<Record<string, number>>({});
-
-    cifraTransposta = computed<Cifra | null>(() => {
-        const c = this.cifraExpandida();
-        if (!c) return null;
-        const delta = this.deltasTom()[c.id] ?? 0;
-        return transporCifra(c, delta);
-    });
+    private deltasInicializados = new Set<string>();
 
     // ── Labels (template) ────────────────────────────────────────────
     get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
@@ -250,13 +240,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.acordeonAberto.set(jaAberta ? null : musica.id);
 
         if (!jaAberta) {
-            this.carregarCifra(musica.cifraId);
+            this.carregarCifra(musica);
             setTimeout(() => {
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 150);
         }
 
-        // Publicar no live se estiver no modo controlador
         if (this.modoControladorAtivo()) {
             const listaId = this.listaAtual()?.id;
             if (listaId) {
@@ -276,13 +265,25 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.toggleMusica(musica, cardEl ?? btn);
     }
 
-    private carregarCifra(cifraId: string) {
+    private carregarCifra(musica: MusicaLista) {
+        const { cifraId, id: musicaId, tom: tomAlvo } = musica;
         const cache = this.cifrasCache();
-        if (cifraId in cache) return;
+        if (cifraId in cache) {
+            if (tomAlvo && cache[cifraId]) this.inicializarDelta(musicaId, cache[cifraId]!.tom, tomAlvo);
+            return;
+        }
         this.cifrasCache.update(c => ({ ...c, [cifraId]: null }));
         this.cifraService.getCifra(cifraId).subscribe(cifra => {
             this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
+            if (cifra && tomAlvo) this.inicializarDelta(musicaId, cifra.tom, tomAlvo);
         });
+    }
+
+    private inicializarDelta(musicaId: string, tomOriginal: string, tomAlvo: string) {
+        if (this.deltasInicializados.has(musicaId)) return;
+        this.deltasInicializados.add(musicaId);
+        const delta = calcularDelta(tomOriginal, tomAlvo);
+        if (delta !== 0) this.deltasTom.update(m => ({ ...m, [musicaId]: delta }));
     }
 
     isCarregandoCifra(cifraId: string): boolean {
@@ -294,31 +295,31 @@ export class HomeComponent implements OnInit, OnDestroy {
         return this.cifrasCache()[cifraId] ?? null;
     }
 
-    getCifraTransposta(cifra: Cifra): Cifra {
-        const delta = this.deltasTom()[cifra.id] ?? 0;
+    getCifraTransposta(cifra: Cifra, musicaId: string): Cifra {
+        const delta = this.deltasTom()[musicaId] ?? 0;
         return transporCifra(cifra, delta);
     }
 
-    mudarTom(cifraId: string, delta: number) {
-        this.deltasTom.update(m => ({ ...m, [cifraId]: (m[cifraId] ?? 0) + delta }));
+    mudarTom(musicaId: string, delta: number) {
+        this.deltasTom.update(m => ({ ...m, [musicaId]: (m[musicaId] ?? 0) + delta }));
     }
 
-    getDelta(cifraId: string): number {
-        return this.deltasTom()[cifraId] ?? 0;
+    getDelta(musicaId: string): number {
+        return this.deltasTom()[musicaId] ?? 0;
     }
 
-    restaurarTom(cifraId: string) {
-        this.deltasTom.update(m => ({ ...m, [cifraId]: 0 }));
+    restaurarTom(musicaId: string) {
+        this.deltasTom.update(m => ({ ...m, [musicaId]: 0 }));
     }
 
-    getFonteSize(cifraId: string): number {
-        return this.fontesSize()[cifraId] ?? 15;
+    getFonteSize(musicaId: string): number {
+        return this.fontesSize()[musicaId] ?? 15;
     }
 
-    mudarFonte(cifraId: string, delta: number) {
+    mudarFonte(musicaId: string, delta: number) {
         this.fontesSize.update(m => {
-            const atual = m[cifraId] ?? 15;
-            return { ...m, [cifraId]: Math.min(24, Math.max(12, atual + delta)) };
+            const atual = m[musicaId] ?? 15;
+            return { ...m, [musicaId]: Math.min(24, Math.max(12, atual + delta)) };
         });
     }
 
@@ -359,7 +360,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                                 this.parteAtiva.set(musica.parte);
                             }
                             this.acordeonAberto.set(idAberto);
-                            this.carregarCifra(musica.cifraId);
+                            this.carregarCifra(musica);
                             setTimeout(() => {
                                 const el = document.querySelector(`[data-musica-id="${idAberto}"]`) as HTMLElement | null;
                                 if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });

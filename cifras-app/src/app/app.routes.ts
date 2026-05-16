@@ -13,13 +13,6 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home').then(m => m.HomeComponent),
     },
 
-    // ── Visualização de Cifra ──────────────────────────────────────
-    {
-        path: 'cifra/:id',
-        loadComponent: () =>
-            import('./pages/cifra-detail/cifra-detail').then(m => m.CifraDetailComponent),
-    },
-
     // ── Admin ──────────────────────────────────────────────────────
     {
         path: 'admin',
@@ -54,6 +47,13 @@ export const routes: Routes = [
         canActivate: [authGuard, roleGuard('editor')],
         loadComponent: () =>
             import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
+    },
+    {
+        path: 'admin/lista/:id',
+        canActivate: [authGuard, roleGuard('membro')],
+        data: { adminContext: true },
+        loadComponent: () =>
+            import('./pages/usuario/minha-lista/minha-lista').then(m => m.MinhaListaComponent),
     },
 
     // ── Área do Usuário ────────────────────────────────────────────

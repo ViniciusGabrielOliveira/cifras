@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Lista, MusicaLista, ParteLista, RoleParticipante } from '../../../models/lista.model';
+import { Lista, MusicaLista, ParteLista, RoleParticipante, TipoLista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
@@ -30,6 +30,12 @@ export class MinhaListaComponent implements OnInit {
 
     get PARTES_LABELS() { return this.config.partesLabels(); }
     get PARTES_ORDER() { return this.config.partesIds(); }
+    get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
+    get categorias() { return this.config.categoriasIds(); }
+
+    // Contexto de rota e permissões
+    adminContext = false; // true quando carregado via /admin/lista/:id
+    readonly isAdmin = computed(() => this.auth.hasRole('admin'));
 
     lista = signal<Lista | null>(null);
     carregando = signal(true);
@@ -38,9 +44,14 @@ export class MinhaListaComponent implements OnInit {
     notificacao = signal<string | null>(null);
     erroMsg = signal<string | null>(null);
 
+    // Cifras que existem (para badge "cifra removida")
+    cifrasExistentes = signal<Set<string>>(new Set());
+
     readonly isDono = computed(() => {
         const uid = this.auth.user()?.uid;
-        return uid && this.lista()?.donoUid === uid;
+        if (!uid) return false;
+        if (this.adminContext && this.isAdmin()) return true;
+        return uid === this.lista()?.donoUid;
     });
 
     readonly isEditor = computed(() => {
@@ -58,10 +69,12 @@ export class MinhaListaComponent implements OnInit {
         return this.lista()?.controladoresUids?.includes(uid) ?? false;
     });
 
-    // Contagem de músicas personalizadas do usuário (para limite)
+    // Contagem de músicas personalizadas (para limite em listas privadas de usuário)
     totalMusicasCustom = signal(0);
     readonly LIMITE_MUSICAS = 25;
-    readonly podeAdicionarMusica = computed(() => this.totalMusicasCustom() < this.LIMITE_MUSICAS);
+    readonly podeAdicionarMusica = computed(() =>
+        this.adminContext || this.totalMusicasCustom() < this.LIMITE_MUSICAS
+    );
 
     // Modal busca música
     modalBuscaAberto = signal(false);
@@ -98,8 +111,18 @@ export class MinhaListaComponent implements OnInit {
     confirmandoRemoverMusica = signal<string | null>(null);
 
     ngOnInit() {
+        this.adminContext = this.route.snapshot.data['adminContext'] === true;
+
         const id = this.route.snapshot.paramMap.get('id') ?? '';
-        if (!id) { this.router.navigate(['/minha-area']); return; }
+        if (!id) {
+            this.router.navigate([this.adminContext ? '/admin/painel' : '/minha-area']);
+            return;
+        }
+
+        // Carregar cifras existentes para badge "cifra removida"
+        this.cifraService.getIndice().subscribe(items => {
+            this.cifrasExistentes.set(new Set(items.map(i => i.id)));
+        });
 
         const replaceCifraId = this.route.snapshot.queryParamMap.get('replaceCifraId');
         const newCifraId     = this.route.snapshot.queryParamMap.get('newCifraId');
@@ -120,19 +143,21 @@ export class MinhaListaComponent implements OnInit {
                 this.gerarLinkConvite(lista.tokenConvite);
             } else {
                 this.notFound.set(true);
-                setTimeout(() => this.router.navigate(['/minha-area']), 2000);
+                setTimeout(() => this.router.navigate([this.adminContext ? '/admin/painel' : '/minha-area']), 2000);
             }
             this.carregando.set(false);
         });
 
-        const uid = this.auth.user()?.uid;
-        if (uid) {
-            this.cifraService.countCifrasDoUser(uid).subscribe(count => {
-                this.totalMusicasCustom.set(count);
-            });
+        if (!this.adminContext) {
+            const uid = this.auth.user()?.uid;
+            if (uid) {
+                this.cifraService.countCifrasDoUser(uid).subscribe(count => {
+                    this.totalMusicasCustom.set(count);
+                });
+            }
         }
 
-        // Retorno de nova-cifra
+        // Retorno de nova-cifra/nova-musica
         const nomeCifra = this.route.snapshot.queryParamMap.get('nomeCifra');
         const cifraAdicionada = this.route.snapshot.queryParamMap.get('cifraAdicionada');
         const parteRetorno = this.route.snapshot.queryParamMap.get('parte') ?? 'entrada';
@@ -149,7 +174,7 @@ export class MinhaListaComponent implements OnInit {
                         autor: '',
                         parte: parteRetorno,
                         ordem: l.musicas.filter(m => m.parte === parteRetorno).length,
-                        privada: true,
+                        privada: !this.adminContext,
                     };
                     const atualizada = { ...l, musicas: [...l.musicas, novaMusica] };
                     this.lista.set(atualizada);
@@ -162,6 +187,39 @@ export class MinhaListaComponent implements OnInit {
     private gerarLinkConvite(token?: string) {
         if (!token) return;
         this.linkConvite.set(`${window.location.origin}/join/${token}`);
+    }
+
+    cifraExiste(cifraId: string): boolean {
+        return this.cifrasExistentes().has(cifraId);
+    }
+
+    // ── Metadados da lista ────────────────────────────────────────────
+
+    atualizarCampo<K extends keyof Lista>(campo: K, valor: Lista[K]) {
+        const atual = this.lista();
+        if (!atual) return;
+        const atualizada = { ...atual, [campo]: valor };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
+    }
+
+    onTituloBlur(event: Event) {
+        const val = (event.target as HTMLInputElement).value.trim();
+        if (!val || val === this.lista()?.titulo) return;
+        this.atualizarCampo('titulo', val);
+    }
+
+    onDataChange(event: Event) {
+        const val = (event.target as HTMLInputElement).value;
+        this.atualizarCampo('data', val || undefined);
+    }
+
+    onCategoriaChange(event: Event) {
+        this.atualizarCampo('categoria', (event.target as HTMLSelectElement).value);
+    }
+
+    onTipoChange(tipo: TipoLista) {
+        this.atualizarCampo('tipo', tipo);
     }
 
     // ── Músicas ───────────────────────────────────────────────────────
@@ -205,13 +263,17 @@ export class MinhaListaComponent implements OnInit {
             this.listaService.vistaDraft = 'editar-lista';
             this.listaService.parteParaAdicionarDraft = this.parteParaAdicionar();
         }
-        this.router.navigate(['/minha-area/nova-musica'], {
-            queryParams: {
-                nome: nomeBuscado,
-                retornoLista: this.lista()?.id,
-                parte: this.parteParaAdicionar(),
-            },
-        });
+        if (this.adminContext) {
+            this.router.navigate(['/admin/nova-cifra'], { queryParams: { nome: nomeBuscado } });
+        } else {
+            this.router.navigate(['/minha-area/nova-musica'], {
+                queryParams: {
+                    nome: nomeBuscado,
+                    retornoLista: lista?.id,
+                    parte: this.parteParaAdicionar(),
+                },
+            });
+        }
     }
 
     removerMusica(musicaId: string) {
@@ -224,6 +286,20 @@ export class MinhaListaComponent implements OnInit {
         this.lista.set(atualizada);
         this.salvarLista(atualizada);
         this.confirmandoRemoverMusica.set(null);
+    }
+
+    atualizarMusicaCampo(musicaId: string, campo: keyof MusicaLista, event: Event) {
+        const val = (event.target as HTMLInputElement).value;
+        const lista = this.lista();
+        if (!lista) return;
+        const atualizada = {
+            ...lista,
+            musicas: lista.musicas.map(m =>
+                m.id === musicaId ? { ...m, [campo]: val || undefined } : m
+            ),
+        };
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
     }
 
     onMusicasReorder(event: CdkDragDrop<MusicaLista[]>, parteId: string) {
@@ -247,16 +323,15 @@ export class MinhaListaComponent implements OnInit {
             this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
             this.listaService.vistaDraft = 'editar-lista';
         }
-        this.router.navigate(['/minha-area/editar-musica', musica.cifraId], {
-            queryParams: { retornoLista: lista?.id },
-        });
-    }
-
-    verCifra(musica: MusicaLista) {
-        const queryParams: Record<string, string> = {};
-        if (musica.tom) queryParams['tom'] = musica.tom;
-        if (musica.observacao) queryParams['observacao'] = musica.observacao;
-        this.router.navigate(['/cifra', musica.cifraId], { queryParams });
+        if (this.adminContext) {
+            this.router.navigate(['/admin/editar-cifra', musica.cifraId], {
+                queryParams: { retorno: 'painel', edicaoCifra: 'true', retornoLista: lista?.id },
+            });
+        } else {
+            this.router.navigate(['/minha-area/editar-musica', musica.cifraId], {
+                queryParams: { retornoLista: lista?.id },
+            });
+        }
     }
 
     private salvarLista(lista: Lista) {
@@ -378,7 +453,6 @@ export class MinhaListaComponent implements OnInit {
         });
     }
 
-    // Dono pode conceder/revogar acesso de controlador live por participante
     toggleControladoresUid(uid: string) {
         const lista = this.lista();
         if (!lista || !this.isDono()) return;
@@ -402,7 +476,9 @@ export class MinhaListaComponent implements OnInit {
         setTimeout(() => this.erroMsg.set(null), 5000);
     }
 
-    voltar() { this.router.navigate(['/minha-area']); }
+    voltar() {
+        this.router.navigate([this.adminContext ? '/admin/painel' : '/minha-area']);
+    }
 
     trackById(_: number, item: { id: string }) { return item.id; }
 }
