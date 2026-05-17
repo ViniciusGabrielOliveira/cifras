@@ -186,7 +186,8 @@ export class MinhaListaComponent implements OnInit {
 
     private gerarLinkConvite(token?: string) {
         if (!token) return;
-        this.linkConvite.set(`${window.location.origin}/join/${token}`);
+        const base = document.baseURI.replace(/\/$/, '');
+        this.linkConvite.set(`${base}/join/${token}`);
     }
 
     cifraExiste(cifraId: string): boolean {
