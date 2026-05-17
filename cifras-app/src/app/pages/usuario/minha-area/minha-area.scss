@@ -368,3 +368,35 @@
     cursor: pointer;
     &:hover { border-color: var(--color-text-muted); }
 }
+
+/* ── Responsividade mobile ──────────────────────────────────────── */
+@media (max-width: 600px) {
+    .area-header-inner {
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    .user-name {
+        display: none;
+    }
+
+    .area-page {
+        padding: 1.5rem 1rem 4rem;
+    }
+
+    .dash-titulo {
+        font-size: 1.1rem;
+    }
+
+    .listas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-card {
+        padding: 0.875rem 1rem;
+    }
+
+    .nova-lista-form {
+        padding: 1rem;
+    }
+}
