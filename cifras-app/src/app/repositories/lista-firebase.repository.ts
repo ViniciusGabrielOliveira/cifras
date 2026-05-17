@@ -34,7 +34,7 @@ export class ListaFirebaseRepository extends ListaRepository {
 
   override getListasDodia(data: string): Observable<ListasDoDiaResponse> {
     const listasCol = collection(this.firestore, 'listas');
-    const q = query(listasCol, where('data', '==', data));
+    const q = query(listasCol, where('tipo', '==', 'publica'), where('data', '==', data));
     return from(getDocs(q)).pipe(
       map(snap => ({
         listas: snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista),
@@ -46,7 +46,7 @@ export class ListaFirebaseRepository extends ListaRepository {
 
   override getListasPorCategoria(cat: CategoriaLiturgica): Observable<Lista[]> {
     const listasCol = collection(this.firestore, 'listas');
-    const q = query(listasCol, where('categoria', '==', cat));
+    const q = query(listasCol, where('tipo', '==', 'publica'), where('categoria', '==', cat));
     return from(getDocs(q)).pipe(
       map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista)),
       catchError(() => of([])),

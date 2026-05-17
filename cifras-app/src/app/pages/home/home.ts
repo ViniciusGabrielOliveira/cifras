@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     listasDoFiltro = signal<Lista[]>([]);
     minhasListas = signal<Lista[]>([]);
     carregandoMinhasListas = signal(false);
+    carregandoFiltro = signal(false);
 
     // ── Lista atual ──────────────────────────────────────────────────
     listaAtual = signal<Lista | null>(null);
@@ -139,16 +140,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.removerScrollHandler();
     }
 
-    abrirCalendario() {
-        this.mudarAba('dia');
-        const input = this.inputData.nativeElement;
-        if (input.showPicker) {
-            input.showPicker();
-        } else {
-            input.click();
-        }
-    }
-
     // ─── Seletor ──────────────────────────────────────────────────────
 
     abrirSeletor() { this.seletorAberta.set(true); }
@@ -165,15 +156,17 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
     }
 
-    onDataChange(data: string) {
-        this.dataSelecionada.set(data);
-        this.carregarListasPorData(data);
-    }
-
-    onDataInputChange(event: Event) {
-        const val = (event.target as HTMLInputElement).value;
-        this.dataSelecionada.set(val);
-        this.carregarListasPorData(val);
+    onDataInputChange() {
+        const input = this.inputData.nativeElement;
+        input.addEventListener('change', (e: Event) => {
+            const val = (e.target as HTMLInputElement).value;
+            if (val) {
+                this.dataSelecionada.set(val);
+                this.abaAtiva.set('dia');
+                this.carregarListasPorData(val);
+            }
+        }, { once: true });
+        try { input.showPicker(); } catch { input.click(); }
     }
 
     onCatChange(cat: string) {
@@ -182,19 +175,22 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     private carregarListasPorData(data: string) {
-        this.loading.set(true);
+        this.carregandoFiltro.set(true);
         this.listaService.getListasDodia(data).subscribe(listas => {
             this.listasDoFiltro.set(listas);
             if (!this.listaAtual() && listas.length > 0) {
                 this.selecionarLista(listas[0]);
             }
             this.loading.set(false);
+            this.carregandoFiltro.set(false);
         });
     }
 
     private carregarListasPorCategoria(cat: string) {
+        this.carregandoFiltro.set(true);
         this.listaService.getListasPorCategoria(cat).subscribe(listas => {
             this.listasDoFiltro.set(listas);
+            this.carregandoFiltro.set(false);
         });
     }
 
@@ -255,7 +251,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     ativo: true,
                     atualizadoPor: this.auth.user()?.uid ?? null,
                     parteAtiva: musica.parte,
-                }).catch(() => {});
+                }).catch(() => { });
             }
         }
     }
@@ -332,47 +328,47 @@ export class HomeComponent implements OnInit, OnDestroy {
             const listaId = this.listaAtual()?.id;
             if (!listaId) return;
             this.liveSub = this.liveService.getEstado(listaId).subscribe({
-              error: (err: unknown) => {
-                console.error('[Live] erro ao conectar:', err);
-                this.modoLiveAtivo.set(false);
-                this.modoControladorAtivo.set(false);
-                this.liveEstado.set(null);
-                this.removerScrollHandler();
-                const msg = (err instanceof Error && err.message.includes('permission'))
-                    ? 'Sem permissão para acessar o live. Verifique se você é participante da lista.'
-                    : 'Não foi possível conectar ao modo live. Tente novamente.';
-                this.mostrarErroHome(msg);
-              },
-              next: (estado) => {
-                this.liveEstado.set(estado);
-                if (this.modoControladorAtivo()) return;
+                error: (err: unknown) => {
+                    console.error('[Live] erro ao conectar:', err);
+                    this.modoLiveAtivo.set(false);
+                    this.modoControladorAtivo.set(false);
+                    this.liveEstado.set(null);
+                    this.removerScrollHandler();
+                    const msg = (err instanceof Error && err.message.includes('permission'))
+                        ? 'Sem permissão para acessar o live. Verifique se você é participante da lista.'
+                        : 'Não foi possível conectar ao modo live. Tente novamente.';
+                    this.mostrarErroHome(msg);
+                },
+                next: (estado) => {
+                    this.liveEstado.set(estado);
+                    if (this.modoControladorAtivo()) return;
 
-                const idAberto = estado?.musicaAbertaId ?? null;
-                const musicaMudou = idAberto !== this.lastSyncedMusicaId;
-                this.lastSyncedMusicaId = idAberto;
+                    const idAberto = estado?.musicaAbertaId ?? null;
+                    const musicaMudou = idAberto !== this.lastSyncedMusicaId;
+                    this.lastSyncedMusicaId = idAberto;
 
-                if (musicaMudou) {
-                    if (idAberto) {
-                        const musica = this.listaAtual()?.musicas.find(m => m.id === idAberto);
-                        if (musica) {
-                            // Mudar parte se necessário
-                            if (this.parteAtiva() !== musica.parte) {
-                                this.parteAtiva.set(musica.parte);
+                    if (musicaMudou) {
+                        if (idAberto) {
+                            const musica = this.listaAtual()?.musicas.find(m => m.id === idAberto);
+                            if (musica) {
+                                // Mudar parte se necessário
+                                if (this.parteAtiva() !== musica.parte) {
+                                    this.parteAtiva.set(musica.parte);
+                                }
+                                this.acordeonAberto.set(idAberto);
+                                this.carregarCifra(musica);
+                                setTimeout(() => {
+                                    const el = document.querySelector(`[data-musica-id="${idAberto}"]`) as HTMLElement | null;
+                                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }, 150);
                             }
-                            this.acordeonAberto.set(idAberto);
-                            this.carregarCifra(musica);
-                            setTimeout(() => {
-                                const el = document.querySelector(`[data-musica-id="${idAberto}"]`) as HTMLElement | null;
-                                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }, 150);
+                        } else {
+                            this.acordeonAberto.set(null);
                         }
-                    } else {
-                        this.acordeonAberto.set(null);
+                    } else if (estado?.scrollY != null) {
+                        window.scrollTo({ top: estado.scrollY, behavior: 'smooth' });
                     }
-                } else if (estado?.scrollY != null) {
-                    window.scrollTo({ top: estado.scrollY, behavior: 'smooth' });
-                }
-              },
+                },
             });
         } else {
             this.liveSub?.unsubscribe();
@@ -400,7 +396,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     musicaAbertaId: this.acordeonAberto(),
                     scrollY: window.scrollY,
                     parteAtiva: this.parteAtiva(),
-                }).catch(() => {});
+                }).catch(() => { });
             }
         } else {
             this.removerScrollHandler();
@@ -415,7 +411,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.scrollHandler = () => {
             clearTimeout(t);
             t = setTimeout(() => {
-                this.liveService.atualizar(listaId, { scrollY: window.scrollY }).catch(() => {});
+                this.liveService.atualizar(listaId, { scrollY: window.scrollY }).catch(() => { });
             }, 200);
         };
         window.addEventListener('scroll', this.scrollHandler, { passive: true });

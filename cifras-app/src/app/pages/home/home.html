@@ -16,21 +16,23 @@
             <span class="brand-name">Cifras da Missa</span>
         </div>
         @if (!auth.loading()) {
-            @if (auth.isLogado()) {
-                <a class="header-admin-link" [routerLink]="auth.isAdmin() ? '/admin/painel' : '/minha-area'">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
-                    </svg>
-                    {{ auth.isAdmin() ? 'Painel' : 'Minha Área' }}
-                </a>
-            } @else {
-                <a class="header-admin-link" routerLink="/admin">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
-                    </svg>
-                    Entrar
-                </a>
-            }
+        @if (auth.isLogado()) {
+        <a class="header-admin-link" [routerLink]="auth.isAdmin() ? '/admin/painel' : '/minha-area'">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
+            </svg>
+            {{ auth.isAdmin() ? 'Painel' : 'Minha Área' }}
+        </a>
+        } @else {
+        <a class="header-admin-link" routerLink="/admin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
+            </svg>
+            Entrar
+        </a>
+        }
         }
     </div>
 </header>
@@ -77,15 +79,16 @@
 
     <!-- Abas Dia / Categoria / Minhas Listas -->
     <div class="drawer-abas">
-        <button [class.ativo]="abaAtiva() === 'dia'" (click)="abrirCalendario()">
-            @if (dataSelecionada()) {
-            📅 {{ formatarData(dataSelecionada()) }}
-            } @else {
-            📅 Por Dia
-            }
-        </button>
-        <input #inputData type="date" lang="pt-BR" class="input-data-hidden" [value]="dataSelecionada()"
-            [max]="dataHoje()" (change)="onDataInputChange($event)" />
+        <div class="btn-dia-wrapper">
+            <button [class.ativo]="abaAtiva() === 'dia'" (click)="onDataInputChange()">
+                @if (dataSelecionada()) {
+                📅 {{ formatarData(dataSelecionada()) }}
+                } @else {
+                📅 Por Dia
+                }
+            </button>
+            <input #inputData type="date" lang="pt-BR" class="input-data-hidden" [value]="dataSelecionada()" />
+        </div>
         <button [class.ativo]="abaAtiva() === 'categoria'" (click)="mudarAba('categoria')">
             🏷️ Por Categoria
         </button>
@@ -99,14 +102,17 @@
     <!-- Aba: Dia -->
     @if (abaAtiva() === 'dia') {
     <div class="drawer-listas">
-        @if (listasDoFiltro().length === 0) {
+        @if (carregandoFiltro()) {
+        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
+        } @else if (listasDoFiltro().length === 0) {
         <div class="drawer-vazio">Nenhuma lista para este dia</div>
-        }
+        } @else {
         @for (lista of listasDoFiltro(); track lista.id) {
         <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
             <span class="lista-item-titulo">{{ lista.titulo }}</span>
             <span class="lista-item-qtd">{{ lista.musicas.length }} músicas</span>
         </button>
+        }
         }
     </div>
     }
@@ -121,9 +127,11 @@
         }
     </div>
     <div class="drawer-listas">
-        @if (listasDoFiltro().length === 0) {
+        @if (carregandoFiltro()) {
+        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
+        } @else if (listasDoFiltro().length === 0) {
         <div class="drawer-vazio">Nenhuma lista nesta categoria</div>
-        }
+        } @else {
         @for (lista of listasDoFiltro(); track lista.id) {
         <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
             <span class="lista-item-titulo">{{ lista.titulo }}</span>
@@ -131,6 +139,7 @@
             <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
             }
         </button>
+        }
         }
     </div>
     }
@@ -219,8 +228,7 @@
     <!-- Músicas da Parte Selecionada -->
     <div class="musicas-lista" role="tabpanel">
         @for (musica of musicasDaParte(); track musica.id; let idx = $index) {
-        <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id"
-             [attr.data-musica-id]="musica.id">
+        <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id" [attr.data-musica-id]="musica.id">
 
             <!-- Cabeçalho clicável -->
             <button class="musica-header" (click)="toggleMusicaFromBtn(musica, $any($event.currentTarget))"
@@ -318,7 +326,8 @@
     <span class="fab-spinner"></span>
     } @else {
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        <line x1="12" y1="5" x2="12" y2="19" />
+        <line x1="5" y1="12" x2="19" y2="12" />
     </svg>
     }
 </button>
@@ -338,11 +347,8 @@
         <button class="modal-close-home" (click)="fecharModalAdicionarMusica()">✕</button>
     </div>
     <div class="modal-body-home">
-        <app-musica-search
-            [modoEmbutido]="true"
-            (musicaSelecionada)="onMusicaSelecionadaHome($event)"
-            (cadastrarNova)="onCadastrarNovaHome($event)"
-        />
+        <app-musica-search [modoEmbutido]="true" (musicaSelecionada)="onMusicaSelecionadaHome($event)"
+            (cadastrarNova)="onCadastrarNovaHome($event)" />
     </div>
 </div>
 }
