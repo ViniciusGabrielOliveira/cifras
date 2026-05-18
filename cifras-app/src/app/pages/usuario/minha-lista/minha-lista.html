@@ -252,8 +252,18 @@
     <button class="modal-close" (click)="fecharModalBusca()">✕</button>
   </div>
   <div class="modal-body">
-    <app-musica-search [modoEmbutido]="true" (musicaSelecionada)="onMusicaSelecionada($event)"
-      (cadastrarNova)="onCadastrarNova($event)" />
+    @if (importandoCifraClub()) {
+      <div class="import-loading">
+        <span class="spinner"></span>
+        Importando do Cifra Club...
+      </div>
+    } @else {
+      <app-musica-search [modoEmbutido]="true"
+        [mostrarCifraClub]="podeBuscarCifraClub()"
+        (musicaSelecionada)="onMusicaSelecionada($event)"
+        (cifraClubSelecionada)="onCifraClubSelecionada($event)"
+        (cadastrarNova)="onCadastrarNova($event)" />
+    }
   </div>
 </div>
 }

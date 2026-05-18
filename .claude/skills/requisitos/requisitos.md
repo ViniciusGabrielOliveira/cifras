@@ -2,8 +2,8 @@
 
 ## Autenticação e Roles
 
-- **R01** — Roles disponíveis: `admin`, `editor`, `membro`, `visitante` (hierarquia: admin > editor > membro > visitante)
-- **R02** — Após login/cadastro, usuários `admin` e `editor` são redirecionados para `/admin/painel`; usuários `membro` são redirecionados para `/minha-area`
+- **R01** — Roles disponíveis: `admin`, `editor`, `convidado`, `membro`, `visitante` (hierarquia: admin > editor > convidado > membro > visitante)
+- **R02** — Após login/cadastro, usuários `admin` e `editor` são redirecionados para `/admin/painel`; usuários `convidado` e `membro` são redirecionados para `/minha-area`
 - **R03** — O guard `roleGuard('membro')` bloqueia visitantes não autenticados; `roleGuard('editor')` bloqueia membros comuns
 - **R04** — Usuários bloqueados (`role: 'blocked'`) não podem ler cifras nem listas públicas
 
@@ -25,7 +25,7 @@
 
 - **R13** — `nova-cifra` e `cifra-editor` são componentes compartilhados entre o fluxo admin e o fluxo do usuário (via `data: { userMode: true }` na rota)
 - **R14** — No modo admin: cifra salva sem `status` (pública por padrão); após salvar, redireciona para `/admin/painel`
-- **R15** — No modo `userMode`: cifra salva com `status: 'privada'` e `donoUid` do usuário; busca do Cifra Club é ocultada; após salvar, redireciona para a lista ou `/minha-area`
+- **R15** — No modo `userMode`: cifra salva com `status: 'privada'` e `donoUid` do usuário; busca do Cifra Club é sempre ocultada; após salvar, redireciona para a lista ou `/minha-area`
 - **R16** — Ao salvar uma cifra, o backend Python (`POST /acordes/sync`) é chamado para sincronizar acordes novos no Firestore (fire-and-forget)
 
 ## Área do Usuário (`/minha-area`)
@@ -37,7 +37,7 @@
 - **R21** — Dono pode gerenciar participantes: alterar role para `editor` ou `visualizador`, ou remover
 - **R22** — Participante `editor` tem acesso completo de CRUD nas músicas da lista; `visualizador` só lê
 - **R23** — Limite de **25 músicas personalizadas** por usuário (total entre todas as listas, não por lista)
-- **R24** — Usuário pode adicionar músicas às suas listas: buscar no índice público OU criar nova cifra privada
+- **R24** — Usuário pode adicionar músicas às suas listas: buscar no índice público OU criar nova cifra privada; usuários com role `convidado` ou superior também podem importar via Cifra Club diretamente no modal de adição
 - **R25** — Usuário pode editar cifras dentro do contexto de suas listas via `/minha-area/editar-musica/:id`
 - **R26** — Músicas privadas criadas pelo usuário são marcadas com `privada: true` no campo `MusicaLista`
 

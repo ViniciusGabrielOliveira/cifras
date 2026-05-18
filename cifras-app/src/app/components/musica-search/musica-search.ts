@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Subject, debounceTime, distinctUntilChanged, switchMap, of, from, map, catchError } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, of, map, catchError } from 'rxjs';
 import { CifraBuscaService, ResultadoBusca } from '../../services/cifra-busca.service';
 import { CifraClubImportService, CifraClubSugestao } from '../../services/cifraclub-import.service';
 
@@ -91,7 +91,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
           return of([]);
         }
         this.buscandoCifraClub.set(true);
-        return from(this.cifraClub.buscarSugestoes(q)).pipe(
+        return this.cifraClub.buscarSugestoes(q).pipe(
           map(res => res.slice(0, 6)),
           catchError(() => of([])),
         );

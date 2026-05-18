@@ -47,63 +47,7 @@
 
   <div class="editor-body">
 
-    <!-- ── Busca Cifra Club ──────────────────────────────────────── -->
-    @if (!userMode()) {
-    @if (buscandoImport()) {
-      <div class="import-loading">
-        <span class="spinner-import"></span>
-        Importando música do Cifra Club...
-      </div>
-    } @else if (!importado()) {
-      <div class="busca-section">
-        <div class="busca-field">
-          <svg class="busca-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-          <input
-            class="busca-input"
-            type="text"
-            placeholder="Buscar música no Cifra Club..."
-            [value]="buscaTermo()"
-            (input)="onBuscaInput($any($event.target).value)"
-            autocomplete="off"
-          />
-          @if (buscandoSugestoes()) {
-            <span class="busca-spinner"></span>
-          }
-        </div>
 
-        @if (erroBusca()) {
-          <p class="busca-erro">{{ erroBusca() }}</p>
-        }
-
-        @if (sugestoes().length > 0) {
-          <ul class="sugestoes-lista">
-            @for (s of sugestoes(); track s.id) {
-              <li class="sugestao-item" (click)="importarSugestao(s)">
-                <span class="sugestao-nome">{{ s.nome }}</span>
-                <span class="sugestao-artista">{{ s.artista }}</span>
-              </li>
-            }
-          </ul>
-        }
-
-        @if (erroImport()) {
-          <p class="busca-erro import-erro">{{ erroImport() }}</p>
-        }
-
-        <p class="busca-hint">Ou preencha o formulário manualmente abaixo</p>
-      </div>
-    } @else {
-      <div class="importado-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
-        Rascunho importado do Cifra Club
-        <button class="btn-reimportar" (click)="importado.set(false)">Buscar outra</button>
-      </div>
-    }
-    }
 
     <!-- ── Metadados ────────────────────────────────────────────── -->
     <section class="meta-panel">

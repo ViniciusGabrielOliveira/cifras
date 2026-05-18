@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  cifrasApiUrl: 'http://localhost:8000',
-  cifrasApiKey: 'dev',
+  cifrasApiUrl: 'https://cifras-h8ac.onrender.com',
+  cifrasApiKey: 'bbd5ae61a8a28f196783248b61d2570c',
 };

@@ -8,7 +8,7 @@ import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
-import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
+import { CifraClubImportService } from '../../../services/cifraclub-import.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
 
@@ -73,16 +73,6 @@ export class NovaCifraComponent implements OnInit {
   saved   = signal(false);
   colando = signal(false);
 
-  // ── Busca Cifra Club ─────────────────────────────────────────────
-  buscaTermo       = signal('');
-  sugestoes        = signal<CifraClubSugestao[]>([]);
-  buscandoSugestoes = signal(false);
-  buscandoImport   = signal(false);
-  erroBusca        = signal<string | null>(null);
-  erroImport       = signal<string | null>(null);
-  importado        = signal(false);
-  private _buscaTimer: ReturnType<typeof setTimeout> | null = null;
-
   // Validação
   erroTitulo = signal(false);
 
@@ -103,7 +93,6 @@ export class NovaCifraComponent implements OnInit {
         composicao:  '',
         secoes,
       });
-      this.importado.set(true);
       return;
     }
 
@@ -114,57 +103,6 @@ export class NovaCifraComponent implements OnInit {
         titulo: nome,
         id:     slugify(nome),
       }));
-    }
-  }
-
-  // ── Busca Cifra Club ─────────────────────────────────────────────
-
-  onBuscaInput(termo: string) {
-    this.buscaTermo.set(termo);
-    this.sugestoes.set([]);
-    this.erroBusca.set(null);
-    if (this._buscaTimer) clearTimeout(this._buscaTimer);
-    if (!termo.trim()) { this.buscandoSugestoes.set(false); return; }
-    this.buscandoSugestoes.set(true);
-    this._buscaTimer = setTimeout(() => this._executarBusca(termo), 400);
-  }
-
-  private async _executarBusca(termo: string) {
-    try {
-      const lista = await this.cifraClub.buscarSugestoes(termo);
-      this.sugestoes.set(lista);
-    } catch {
-      this.erroBusca.set('Não foi possível buscar sugestões. Verifique sua conexão.');
-    } finally {
-      this.buscandoSugestoes.set(false);
-    }
-  }
-
-  async importarSugestao(s: CifraClubSugestao) {
-    this.sugestoes.set([]);
-    this.buscaTermo.set('');
-    this.erroImport.set(null);
-    this.buscandoImport.set(true);
-    try {
-      const result = await this.cifraClub.importarMusica(s);
-      const secoes = parseCifraTexto(result.lyricsWithChords);
-      const tomValido = TONS.includes(result.tom) ? result.tom : 'C';
-      this.cifra.update(c => ({
-        ...c,
-        titulo:    result.title   || c.titulo,
-        artista:   result.artist  || c.artista,
-        tom:       tomValido,
-        sourceUrl: result.sourceUrl,
-        id:        result.title ? slugify(result.title) : c.id,
-        secoes,
-      }));
-      this.importado.set(true);
-      this.erroTitulo.set(false);
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : String(err);
-      this.erroImport.set(msg || 'Não foi possível importar a música. Tente novamente.');
-    } finally {
-      this.buscandoImport.set(false);
     }
   }
 

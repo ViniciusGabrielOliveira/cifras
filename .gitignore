@@ -8,6 +8,11 @@ yarn-error.log*
 cifras-app/dist/
 cifras-app/.angular/cache/
 
+# ─── Secrets / Environments ──────────────────────────────
+cifras-app/.env
+cifras-app/src/environments/environment.ts
+cifras-app/src/environments/environment.prod.ts
+
 # ─── Ambiente / segredos ─────────────────────────────────
 .env
 .env.local

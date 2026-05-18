@@ -1,9 +1,10 @@
 // ── Roles ────────────────────────────────────────────────────────────
-export type UserRole = 'admin' | 'editor' | 'membro' | 'visitante';
+export type UserRole = 'admin' | 'editor' | 'convidado' | 'membro' | 'visitante';
 
 export const ROLE_HIERARCHY: Record<UserRole, number> = {
   admin: 100,
   editor: 50,
+  convidado: 30,
   membro: 20,
   visitante: 0,
 };

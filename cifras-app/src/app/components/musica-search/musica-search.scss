@@ -234,6 +234,17 @@
   opacity: 0.5;
 }
 
+.hint-cifraclub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
 /* ── Dropdown flutuante ────────────────────────────────────────── */
 .dropdown {
   position: absolute;

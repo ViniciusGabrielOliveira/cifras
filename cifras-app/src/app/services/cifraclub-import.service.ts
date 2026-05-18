@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
+import { Observable, firstValueFrom } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 export interface CifraClubSugestao {
@@ -30,15 +30,12 @@ export class CifraClubImportService {
     return new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey });
   }
 
-  async buscarSugestoes(termo: string): Promise<CifraClubSugestao[]> {
-    if (!termo.trim()) return [];
+  buscarSugestoes(termo: string): Observable<CifraClubSugestao[]> {
     const url = `${environment.cifrasApiUrl}/buscar`;
-    return firstValueFrom(
-      this.http.get<CifraClubSugestao[]>(url, {
-        headers: this.headers,
-        params: { q: termo.trim() },
-      })
-    );
+    return this.http.get<CifraClubSugestao[]>(url, {
+      headers: this.headers,
+      params: { q: termo.trim() },
+    });
   }
 
   async importarMusica(sugestao: CifraClubSugestao): Promise<CifraClubImportResult> {

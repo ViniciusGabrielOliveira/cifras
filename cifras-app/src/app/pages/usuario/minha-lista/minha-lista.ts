@@ -11,6 +11,7 @@ import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
+import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -29,6 +30,7 @@ export class MinhaListaComponent implements OnInit {
     private cifraService = inject(CifraService);
     readonly auth = inject(AuthService);
     private config = inject(ConfigService);
+    private cifraClub = inject(CifraClubImportService);
 
     get PARTES_LABELS() { return this.config.partesLabels(); }
     get PARTES_ORDER() { return this.config.partesIds(); }
@@ -38,6 +40,7 @@ export class MinhaListaComponent implements OnInit {
     // Contexto de rota e permissões
     adminContext = false; // true quando carregado via /admin/lista/:id
     readonly isAdmin = computed(() => this.auth.hasRole('admin'));
+    readonly podeBuscarCifraClub = computed(() => this.adminContext || this.auth.hasRole('convidado'));
 
     lista = signal<Lista | null>(null);
     carregando = signal(true);
@@ -90,6 +93,7 @@ export class MinhaListaComponent implements OnInit {
     // Modal busca música
     modalBuscaAberto = signal(false);
     parteParaAdicionar = signal('entrada');
+    importandoCifraClub = signal(false);
 
     // Gerenciar partes (inline)
     editandoParteId = signal<string | null>(null);
@@ -285,6 +289,29 @@ export class MinhaListaComponent implements OnInit {
                     parte: this.parteParaAdicionar(),
                 },
             });
+        }
+    }
+
+    async onCifraClubSelecionada(sugestao: CifraClubSugestao) {
+        this.fecharModalBusca();
+        const lista = this.lista();
+        if (!lista) return;
+
+        this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
+        this.listaService.vistaDraft = 'editar-lista';
+        this.listaService.parteParaAdicionarDraft = this.parteParaAdicionar();
+
+        this.importandoCifraClub.set(true);
+        try {
+            const result = await this.cifraClub.importarMusica(sugestao);
+            this.cifraClub.pendingImport = result;
+            this.router.navigate(['/minha-area/nova-musica'], {
+                queryParams: { retornoLista: lista.id, parte: this.parteParaAdicionar() },
+            });
+        } catch {
+            this.mostrarErro('Não foi possível importar a música do Cifra Club. Tente novamente.');
+        } finally {
+            this.importandoCifraClub.set(false);
         }
     }
 
