@@ -2,7 +2,7 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import { Lista, MusicaLista } from '../../../models/lista.model';
+import { Lista, MusicaLista, TipoLista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
@@ -10,6 +10,7 @@ import { CifraService } from '../../../services/cifra.service';
 import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ConfigItem } from '../../../models/config.model';
+import { AppSelectComponent } from '../../../components/app-select/app-select';
 
 type VistaAdmin = 'dashboard' | 'configuracoes' | 'gerenciar-cifras';
 
@@ -30,13 +31,13 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
   selector: 'app-painel',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, DragDropModule],
+  imports: [CommonModule, FormsModule, RouterLink, DragDropModule, AppSelectComponent],
   templateUrl: './painel.html',
   styleUrl: './painel.scss',
 })
 export class PainelComponent implements OnInit {
   private listaService = inject(ListaService);
-  private auth = inject(AuthService);
+  readonly auth = inject(AuthService);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   readonly config = inject(ConfigService);
@@ -45,10 +46,25 @@ export class PainelComponent implements OnInit {
   get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
   get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
   get categorias() { return this.config.categoriasIds(); }
+  readonly categoriasOptions = computed(() =>
+    this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
+  );
 
   vista = signal<VistaAdmin>('dashboard');
   listas = signal<Lista[]>([]);
   confirmando = signal<string | null>(null);
+  carregando = signal(true);
+
+  criandoLista = signal(false);
+  novaListaTitulo = signal('');
+  novaListaCategoria = signal('tempo-comum');
+  salvandoLista = signal(false);
+
+  totalMusicasCustom = signal(0);
+  readonly LIMITE_MUSICAS = 25;
+  readonly podeAdicionarMusica = computed(() => this.totalMusicasCustom() < this.LIMITE_MUSICAS);
+
+  erroMsg = signal<string | null>(null);
 
   configCatsEdit = signal<ConfigItem[]>([]);
   configPartesEdit = signal<ConfigItem[]>([]);
@@ -133,7 +149,21 @@ export class PainelComponent implements OnInit {
   }
 
   carregarListas() {
-    this.listaService.getListas().subscribe(ls => this.listas.set(ls));
+    const uid = this.auth.user()?.uid;
+    if (this.auth.isAdmin()) {
+      this.listaService.getListas().subscribe(ls => {
+        this.listas.set(ls);
+        this.carregando.set(false);
+      });
+    } else if (uid) {
+      this.listaService.getTodasMinhasListas(uid).subscribe(ls => {
+        this.listas.set(ls);
+        this.carregando.set(false);
+      });
+      this.cifraService.countCifrasDoUser(uid).subscribe(count => {
+        this.totalMusicasCustom.set(count);
+      });
+    }
   }
 
   sair() {
@@ -143,26 +173,73 @@ export class PainelComponent implements OnInit {
   // ── Dashboard ─────────────────────────────────────────────────────
 
   novaLista() {
-    const agora = new Date().toISOString();
-    const novaLista: Lista = {
-      id: newId('lista'),
-      titulo: 'Nova Lista',
-      categoria: 'tempo-comum',
+    if (this.auth.isAdmin()) {
+      const agora = new Date().toISOString();
+      const nova: Lista = {
+        id: newId('lista'),
+        titulo: 'Nova Lista',
+        categoria: 'tempo-comum',
+        musicas: [],
+        criadaEm: agora,
+        atualizadaEm: agora,
+      };
+      this.listaService.salvarLista(nova).subscribe({
+        next: lista => this.router.navigate(['/admin/lista', lista.id]),
+        error: () => {
+          this.notificacao.set({ msg: 'Erro ao criar lista. Tente novamente.', erro: true });
+          setTimeout(() => this.notificacao.set(null), 4000);
+        },
+      });
+    } else {
+      this.novaListaTitulo.set('');
+      this.novaListaCategoria.set('tempo-comum');
+      this.criandoLista.set(true);
+    }
+  }
+
+  cancelarCriacaoLista() {
+    this.criandoLista.set(false);
+  }
+
+  criarLista() {
+    const titulo = this.novaListaTitulo().trim();
+    if (!titulo) return;
+    const uid = this.auth.user()?.uid!;
+    const token = newId('tok');
+    const lista: Lista = {
+      id: '',
+      titulo,
+      categoria: this.novaListaCategoria(),
       musicas: [],
-      criadaEm: agora,
-      atualizadaEm: agora,
+      tipo: 'privada' as TipoLista,
+      donoUid: uid,
+      donoNome: this.auth.displayName() || undefined,
+      participantes: [],
+      tokenConvite: token,
+      criadaEm: new Date().toISOString(),
+      atualizadaEm: new Date().toISOString(),
     };
-    this.listaService.salvarLista(novaLista).subscribe({
-      next: lista => this.router.navigate(['/admin/lista', lista.id]),
-      error: () => {
-        this.notificacao.set({ msg: 'Erro ao criar lista. Tente novamente.', erro: true });
-        setTimeout(() => this.notificacao.set(null), 4000);
+    this.salvandoLista.set(true);
+    this.listaService.salvarLista(lista).subscribe({
+      next: salva => {
+        this.salvandoLista.set(false);
+        this.criandoLista.set(false);
+        this.listas.update(ls => [...ls, salva]);
+        this.router.navigate(['/minha-area/lista', salva.id]);
+      },
+      error: (err: Error) => {
+        this.salvandoLista.set(false);
+        this.mostrarErro(err.message || 'Erro ao criar lista.');
       },
     });
   }
 
   editarLista(lista: Lista) {
-    this.router.navigate(['/admin/lista', lista.id]);
+    if (this.auth.isAdmin()) {
+      this.router.navigate(['/admin/lista', lista.id]);
+    } else {
+      this.router.navigate(['/minha-area/lista', lista.id]);
+    }
   }
 
   confirmarExcluir(id: string) { this.confirmando.set(id); }
@@ -171,8 +248,13 @@ export class PainelComponent implements OnInit {
   excluirLista(id: string) {
     this.listaService.excluirLista(id).subscribe(() => {
       this.confirmando.set(null);
-      this.carregarListas();
+      this.listas.update(ls => ls.filter(l => l.id !== id));
     });
+  }
+
+  mostrarErro(msg: string) {
+    this.erroMsg.set(msg);
+    setTimeout(() => this.erroMsg.set(null), 5000);
   }
 
   // ── Configurações ─────────────────────────────────────────────────

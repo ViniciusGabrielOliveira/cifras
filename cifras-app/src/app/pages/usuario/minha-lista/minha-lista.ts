@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Lista, MusicaLista, ParteLista, RoleParticipante, TipoLista } from '../../../models/lista.model';
+import { TONS } from '../../../core/cifra-parser';
 import { ListaService } from '../../../services/lista.service';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
+import { AppSelectComponent } from '../../../components/app-select/app-select';
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -16,7 +18,7 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
     selector: 'app-minha-lista',
     standalone: true,
-    imports: [CommonModule, FormsModule, MusicaSearchComponent, DragDropModule],
+    imports: [CommonModule, FormsModule, MusicaSearchComponent, DragDropModule, AppSelectComponent],
     templateUrl: './minha-lista.html',
     styleUrl: './minha-lista.scss',
 })
@@ -72,6 +74,15 @@ export class MinhaListaComponent implements OnInit {
     // Contagem de músicas personalizadas (para limite em listas privadas de usuário)
     totalMusicasCustom = signal(0);
     readonly LIMITE_MUSICAS = 25;
+    readonly tons = TONS;
+    readonly tonsOptions = TONS;
+    readonly roleOptions = [
+        { value: 'visualizador', label: 'Visualizador' },
+        { value: 'editor', label: 'Editor' },
+    ];
+    readonly categoriasOptions = computed(() =>
+        this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
+    );
     readonly podeAdicionarMusica = computed(() =>
         this.adminContext || this.totalMusicasCustom() < this.LIMITE_MUSICAS
     );
@@ -215,8 +226,8 @@ export class MinhaListaComponent implements OnInit {
         this.atualizarCampo('data', val || undefined);
     }
 
-    onCategoriaChange(event: Event) {
-        this.atualizarCampo('categoria', (event.target as HTMLSelectElement).value);
+    onCategoriaChange(categoria: string) {
+        this.atualizarCampo('categoria', categoria);
     }
 
     onTipoChange(tipo: TipoLista) {
@@ -289,8 +300,7 @@ export class MinhaListaComponent implements OnInit {
         this.confirmandoRemoverMusica.set(null);
     }
 
-    atualizarMusicaCampo(musicaId: string, campo: keyof MusicaLista, event: Event) {
-        const val = (event.target as HTMLInputElement).value;
+    atualizarMusicaCampo(musicaId: string, campo: keyof MusicaLista, val: string) {
         const lista = this.lista();
         if (!lista) return;
         const atualizada = {
@@ -411,6 +421,10 @@ export class MinhaListaComponent implements OnInit {
             this.linkCopiado.set(true);
             setTimeout(() => this.linkCopiado.set(false), 2000);
         });
+    }
+
+    onRoleChange(uid: string, value: string) {
+        this.alterarRole(uid, value as RoleParticipante);
     }
 
     alterarRole(uid: string, role: RoleParticipante) {

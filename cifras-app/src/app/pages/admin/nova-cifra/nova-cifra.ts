@@ -7,6 +7,7 @@ import { CifraService } from '../../../services/cifra.service';
 import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
+import { AppSelectComponent } from '../../../components/app-select/app-select';
 import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
@@ -16,7 +17,7 @@ const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', '
 @Component({
   selector: 'app-nova-cifra',
   standalone: true,
-  imports: [CommonModule, FormsModule, LinhaEditorComponent],
+  imports: [CommonModule, FormsModule, LinhaEditorComponent, AppSelectComponent],
   templateUrl: './nova-cifra.html',
   styleUrl: './nova-cifra.scss',
 })
@@ -35,6 +36,21 @@ export class NovaCifraComponent implements OnInit {
   readonly tons = TONS;
   readonly categorias = this.config.categorias;
   readonly partesMissa = this.config.partesMissa;
+
+  readonly tonsOptions = TONS;
+  readonly tiposSecaoOptions = TIPOS;
+  readonly instrumentoOptions = [
+    { value: 'violao', label: 'Violão' },
+    { value: 'guitarra', label: 'Guitarra' },
+    { value: 'cavaco', label: 'Cavaquinho' },
+    { value: 'ukulele', label: 'Ukulele' },
+  ];
+  readonly dificuldadeOptions = [
+    { value: 'iniciante', label: 'Iniciante' },
+    { value: 'basico', label: 'Básico' },
+    { value: 'intermediario', label: 'Intermediário' },
+    { value: 'avancado', label: 'Avançado' },
+  ];
 
   cifra = signal<Cifra>({
     id:          '',
@@ -196,6 +212,10 @@ export class NovaCifraComponent implements OnInit {
       secoes[idx] = { ...secoes[idx], label };
       return { ...c, secoes };
     });
+  }
+
+  onSecaoTipoChange(idx: number, value: string) {
+    this.updateSecaoTipo(idx, value as TipoSecao);
   }
 
   updateSecaoTipo(idx: number, tipo: TipoSecao) {

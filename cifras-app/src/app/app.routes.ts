@@ -59,9 +59,8 @@ export const routes: Routes = [
     // ── Área do Usuário ────────────────────────────────────────────
     {
         path: 'minha-area',
-        canActivate: [authGuard, roleGuard('membro')],
-        loadComponent: () =>
-            import('./pages/usuario/minha-area/minha-area').then(m => m.MinhaAreaComponent),
+        redirectTo: 'admin/painel',
+        pathMatch: 'full',
     },
     {
         path: 'minha-area/lista/:id',

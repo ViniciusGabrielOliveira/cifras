@@ -60,15 +60,10 @@
       </div>
       <div class="form-campo">
         <label>Categoria</label>
-        <select
-          class="form-select"
-          [ngModel]="novaListaCategoria()"
-          (ngModelChange)="novaListaCategoria.set($event)"
-        >
-          @for (cat of categorias; track cat) {
-            <option [value]="cat">{{ categoriasLabels[cat] ?? cat }}</option>
-          }
-        </select>
+        <app-select class="form-select"
+          [options]="categoriasOptions()"
+          [value]="novaListaCategoria()"
+          (valueChange)="novaListaCategoria.set($event)" />
       </div>
       <div class="form-actions">
         <button class="btn-cancelar" (click)="cancelarCriacaoLista()">Cancelar</button>

@@ -3,7 +3,7 @@ import { Cifra } from '../models/cifra.model';
 const NOTAS = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
 
 const ENHARMONICOS: Record<string, string> = {
-    'Bb': 'A#', 'Db': 'C#', 'Eb': 'D#', 'Gb': 'F#', 'Ab': 'G#',
+    'Bb': 'A#', 'Db': 'C#', 'Eb': 'D#', 'Gb': 'F#', 'Ab': 'G#', 'Cb': 'B',
 };
 
 function indexNota(nota: string): number {

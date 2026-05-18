@@ -4,16 +4,25 @@
     {{ n.msg }}
   </div>
 }
+@if (erroMsg(); as e) {
+  <div class="toast-notificacao toast-erro">{{ e }}</div>
+}
 
-<!-- ── Header Admin ──────────────────────────────────────────────── -->
+<!-- ── Header ──────────────────────────────────────────────── -->
 <header class="admin-header">
   <div class="admin-header-inner">
     <div class="header-left">
       <a routerLink="/" class="back-link">← Voltar ao site</a>
-      <a routerLink="/minha-area" class="back-link">Minha Área</a>
-      <span class="admin-titulo">Painel Admin</span>
+      @if (auth.isAdmin()) {
+        <span class="admin-titulo">Painel Admin</span>
+      } @else {
+        <span class="admin-titulo">Minha Área</span>
+      }
     </div>
-    <button class="btn-sair" (click)="sair()">Sair</button>
+    <div class="header-right">
+      <span class="user-name">{{ auth.displayName() }}</span>
+      <button class="btn-sair" (click)="sair()">Sair</button>
+    </div>
   </div>
 </header>
 
@@ -23,19 +32,21 @@
 @if (vista() === 'dashboard') {
   <div class="admin-page">
     <div class="dash-top">
-      <h1 class="dash-titulo">Listas Cadastradas</h1>
+      <h1 class="dash-titulo">@if (auth.isAdmin()) { Listas Cadastradas } @else { Minhas Listas }</h1>
       <div class="dash-actions">
-        <button class="btn-dash-icon" (click)="abrirConfiguracoes()" title="Configurações">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-          </svg>
-        </button>
-        <button class="btn-dash-icon" (click)="abrirGerenciarCifras()" title="Gerenciar Músicas">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-          </svg>
-        </button>
+        @if (auth.isAdmin()) {
+          <button class="btn-dash-icon" (click)="abrirConfiguracoes()" title="Configurações">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+          <button class="btn-dash-icon" (click)="abrirGerenciarCifras()" title="Gerenciar Músicas">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
+          </button>
+        }
         <button class="btn-nova-lista" (click)="novaLista()" title="Nova Lista">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
@@ -44,6 +55,50 @@
         </button>
       </div>
     </div>
+
+    @if (!auth.isAdmin()) {
+      <div class="musicas-counter">
+        <span class="counter-label">Músicas personalizadas:</span>
+        <span class="counter-value" [class.limite]="!podeAdicionarMusica()">
+          {{ totalMusicasCustom() }} / {{ LIMITE_MUSICAS }}
+        </span>
+        @if (!podeAdicionarMusica()) {
+          <span class="counter-aviso">Limite atingido</span>
+        }
+      </div>
+    }
+
+    @if (criandoLista()) {
+      <div class="nova-lista-form">
+        <h3 class="form-titulo">Nova Lista</h3>
+        <div class="form-campo">
+          <label>Título</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Ex: Missa de domingo"
+            [ngModel]="novaListaTitulo()"
+            (ngModelChange)="novaListaTitulo.set($event)"
+            (keyup.enter)="criarLista()"
+            autofocus
+          />
+        </div>
+        <div class="form-campo">
+          <label>Categoria</label>
+          <app-select class="form-select"
+            [options]="categoriasOptions()"
+            [value]="novaListaCategoria()"
+            (valueChange)="novaListaCategoria.set($event)" />
+        </div>
+        <div class="form-actions">
+          <button class="btn-cancelar" (click)="cancelarCriacaoLista()">Cancelar</button>
+          <button class="btn-salvar" [disabled]="!novaListaTitulo().trim() || salvandoLista()" (click)="criarLista()">
+            @if (salvandoLista()) { <span class="spinner-sm"></span> }
+            Criar Lista
+          </button>
+        </div>
+      </div>
+    }
 
     <div class="filtro-bar">
       <input
@@ -55,57 +110,67 @@
       />
     </div>
 
-    @if (listasFiltradas().length === 0) {
+    @if (carregando()) {
+      <div class="loading-state">
+        <span class="spinner"></span>
+        Carregando listas...
+      </div>
+    } @else if (listasFiltradas().length === 0) {
       <div class="empty-dash">
         <p>Nenhuma lista encontrada.</p>
         <button class="btn-nova-lista" (click)="novaLista()">Criar primeira lista</button>
       </div>
-    }
+    } @else {
+      <div class="listas-grid">
+        @for (lista of listasFiltradas(); track lista.id) {
+          <div class="lista-card">
+            <div class="lista-card-main" (click)="editarLista(lista)" style="cursor:pointer">
+              <div class="lista-card-badges">
+                <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
+                @if (lista.tipo === 'privada') {
+                  <span class="lista-tipo-pill privada">privada</span>
+                } @else {
+                  <span class="lista-tipo-pill publica">pública</span>
+                }
+                @if (!auth.isAdmin() && lista.donoUid && lista.donoUid !== auth.user()?.uid) {
+                  <span class="lista-tipo-pill participando">participando</span>
+                }
+              </div>
+              @if (lista.data) {
+                <span class="lista-card-data">{{ formatarData(lista.data) }}</span>
+              }
+              <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
+              <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
+            </div>
 
-    <div class="listas-grid">
-      @for (lista of listasFiltradas(); track lista.id) {
-        <div class="lista-card">
-          <div class="lista-card-main" (click)="editarLista(lista)" style="cursor:pointer">
-            <div class="lista-card-badges">
-              <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
-              @if (lista.tipo === 'privada') {
-                <span class="lista-tipo-pill privada">privada</span>
+            <div class="lista-card-side">
+              @if (confirmando() === lista.id) {
+                <div class="card-confirm">
+                  <span class="confirm-label">Excluir?</span>
+                  <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
+                  <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>
+                </div>
               } @else {
-                <span class="lista-tipo-pill publica">pública</span>
+                <button class="btn-card-icon edit" (click)="editarLista(lista)" title="Editar">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                  </svg>
+                </button>
+                @if (auth.isAdmin() || lista.donoUid === auth.user()?.uid) {
+                  <button class="btn-card-icon delete" (click)="confirmarExcluir(lista.id)" title="Excluir">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="3 6 5 6 21 6"/>
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                    </svg>
+                  </button>
+                }
               }
             </div>
-            @if (lista.data) {
-              <span class="lista-card-data">{{ formatarData(lista.data) }}</span>
-            }
-            <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
-            <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
           </div>
-
-          <div class="lista-card-side">
-            @if (confirmando() === lista.id) {
-              <div class="card-confirm">
-                <span class="confirm-label">Excluir?</span>
-                <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
-                <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>
-              </div>
-            } @else {
-              <button class="btn-card-icon edit" (click)="editarLista(lista)" title="Editar">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                </svg>
-              </button>
-              <button class="btn-card-icon delete" (click)="confirmarExcluir(lista.id)" title="Excluir">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="3 6 5 6 21 6"/>
-                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
-                </svg>
-              </button>
-            }
-          </div>
-        </div>
-      }
-    </div>
+        }
+      </div>
+    }
   </div>
 }
 

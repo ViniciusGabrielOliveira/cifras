@@ -132,10 +132,18 @@ export class ListaFirebaseRepository extends ListaRepository {
 
   override adicionarParticipante(listaId: string, participante: Participante): Observable<void> {
     const ref = doc(this.firestore, `listas/${listaId}`);
-    return from(updateDoc(ref, {
-      participantes: arrayUnion(participante),
-      participantesUids: arrayUnion(participante.uid),
-    })).pipe(
+    return from(getDoc(ref)).pipe(
+      switchMap(snap => {
+        if (!snap.exists()) return throwError(() => new Error('Lista não encontrada'));
+        const data = snap.data() as Lista;
+        const jaParticipante = (data.participantesUids ?? []).includes(participante.uid)
+          || data.donoUid === participante.uid;
+        if (jaParticipante) return of(undefined as void);
+        return from(updateDoc(ref, {
+          participantes: arrayUnion(participante),
+          participantesUids: arrayUnion(participante.uid),
+        }));
+      }),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao adicionar participante'))),
     );
   }

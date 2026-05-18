@@ -196,6 +196,10 @@
         &:focus { outline: none; border-color: var(--color-accent); }
     }
 
+    .form-select {
+        display: block;
+    }
+
     .form-actions {
         display: flex;
         gap: 8px;

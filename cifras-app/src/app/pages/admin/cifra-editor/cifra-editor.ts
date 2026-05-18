@@ -4,17 +4,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
+import { AppSelectComponent } from '../../../components/app-select/app-select';
 import { CifraService } from '../../../services/cifra.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
+import { TONS } from '../../../core/cifra-parser';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
 
 @Component({
   selector: 'app-cifra-editor',
   standalone: true,
-  imports: [CommonModule, FormsModule, LinhaEditorComponent],
+  imports: [CommonModule, FormsModule, LinhaEditorComponent, AppSelectComponent],
   templateUrl: './cifra-editor.html',
   styleUrl: './cifra-editor.scss',
 })
@@ -37,12 +39,13 @@ export class CifraEditorComponent implements OnInit {
   saving = signal(false);
   saved = signal(false);
   erroSalvar = signal<string | null>(null);
-  showJSON = signal(false);
-  jsonPreview = signal('');
   private _salvouNestaSessao = false;
   private _oldCifraId: string | null = null;
 
   readonly tiposSecao = TIPOS;
+  readonly tons = TONS;
+  readonly tonsOptions = TONS;
+  readonly tiposSecaoOptions = TIPOS;
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id') ?? '';
@@ -110,6 +113,10 @@ export class CifraEditorComponent implements OnInit {
       secoes[idx] = { ...secoes[idx], label };
       return { ...c, secoes };
     });
+  }
+
+  onSecaoTipoChange(idx: number, value: string) {
+    this.updateSecaoTipo(idx, value as TipoSecao);
   }
 
   updateSecaoTipo(idx: number, tipo: TipoSecao) {
@@ -230,37 +237,7 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-  toggleJSON() {
-    const c = this.cifra();
-    if (!c) return;
-    this.jsonPreview.set(JSON.stringify(c, null, 2));
-    this.showJSON.update(v => !v);
-  }
-
-  exportarJSON() {
-    const c = this.cifra();
-    if (!c) return;
-    const json = JSON.stringify(c, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${c.id}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  copiarJSON() {
-    const c = this.cifra();
-    if (!c) return;
-    const json = JSON.stringify(c, null, 2);
-    navigator.clipboard.writeText(json).then(() => {
-      this.saved.set(true);
-      setTimeout(() => this.saved.set(false), 1500);
-    });
-  }
-
-  resetarOriginal() {
+resetarOriginal() {
     const c = this.cifra();
     if (!c) return;
     if (!confirm('Descartar todas as edições e recarregar do servidor?')) return;

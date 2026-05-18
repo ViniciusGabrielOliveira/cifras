@@ -2,8 +2,8 @@ import { Secao, LinhaCifra, AcordeLinha, TipoSecao } from '../models/cifra.model
 import { REGEX_ACORDE } from './transposicao';
 
 export const TONS = [
-  'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B',
-  'Cm', 'C#m', 'Dm', 'D#m', 'Em', 'Fm', 'F#m', 'Gm', 'G#m', 'Am', 'A#m', 'Bm',
+  'C', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#',
+  'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb',
 ];
 
 export function slugify(titulo: string): string {

@@ -1,38 +1,62 @@
 /* ── Metadados editáveis ──────────────────────────────────────── */
 .lista-metadados {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem 2.5rem;
+    padding: 1rem 1.25rem 1.1rem;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .metadados-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px 14px;
     align-items: flex-end;
 }
 
 .form-group-meta {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
+}
+
+/* Título cresce para ocupar espaço disponível */
+.titulo-field {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Categoria cresce dentro do grupo inline */
+.cat-field {
+    flex: 1;
+    min-width: 130px;
+}
+
+/* Categoria + Tipo ficam juntos ao quebrar linha */
+.meta-group-inline {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: nowrap;
 }
 
 .meta-label {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--color-text-muted);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
 }
 
+/* Altura uniforme para todos os controles */
+$ctrl-h: 34px;
+
 .meta-input {
-    padding: 6px 10px;
+    height: $ctrl-h;
+    padding: 0 10px;
     border-radius: 8px;
     border: 1px solid var(--color-border);
     background: var(--color-surface);
     color: var(--color-text);
     font-size: 0.85rem;
+    box-sizing: border-box;
 
     &:focus {
         outline: none;
@@ -41,31 +65,56 @@
 }
 
 .meta-input-titulo {
-    min-width: 220px;
     font-weight: 600;
+    width: 100%;
 }
 
 /* ── Toggle tipo pública/privada ──────────────────────────────── */
 .tipo-toggle {
     display: flex;
+    height: $ctrl-h;
     border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .tipo-btn {
-    padding: 6px 14px;
+    padding: 0 14px;
     font-size: 0.82rem;
     background: transparent;
     color: var(--color-text-muted);
     border: none;
     cursor: pointer;
     transition: all 0.15s;
+    height: 100%;
 
     &.ativo {
         background: var(--color-acorde);
         color: #fff;
         font-weight: 600;
+    }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .lista-metadados {
+        padding: 0.875rem 1rem 1rem;
+    }
+
+    .titulo-field,
+    .meta-group-inline {
+        width: 100%;
+        flex: unset;
+    }
+
+    .meta-group-inline {
+        flex-wrap: wrap;
+
+        .form-group-meta {
+            flex: 1;
+            min-width: 120px;
+        }
     }
 }
 
@@ -75,6 +124,7 @@
     align-items: center;
     gap: 6px;
     flex-wrap: wrap;
+    flex: 0;
 }
 
 .musica-extra-row {
@@ -82,20 +132,16 @@
     gap: 8px;
     margin-top: 6px;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .input-tom-musica {
     width: 90px;
-    padding: 3px 8px;
-    border-radius: 6px;
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    color: var(--color-text);
-    font-size: 0.78rem;
 }
 
 .input-obs-musica {
     flex: 1;
+    width: 100%;
     min-width: 150px;
     padding: 3px 8px;
     border-radius: 6px;
@@ -1026,11 +1072,13 @@
 
     .musica-autor {
         white-space: normal;
+
     }
 
     .musica-extra-row {
         width: 100%;
         margin-top: 6px;
+        flex-direction: column;
     }
 
     .input-obs-musica {
@@ -1041,6 +1089,7 @@
     .musica-actions {
         flex-shrink: 0;
         align-self: flex-start;
+        flex-direction: column;
     }
 
     .parte-header {
@@ -1056,13 +1105,7 @@
 }
 
 .role-select {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 5px;
-    padding: 3px 6px;
-    font-size: 0.78rem;
-    color: var(--color-text);
-    cursor: pointer;
+    width: auto;
 }
 
 /* ── Controlador toggle in participants panel ───────────────────── */

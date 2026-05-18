@@ -1,6 +1,8 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, Injector } from '@angular/core';
+import { toObservable } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
+import { filter, take, switchMap } from 'rxjs';
 import { Lista, Participante } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
@@ -27,6 +29,7 @@ export class JoinComponent implements OnInit {
     readonly nomeLista = computed(() => this.lista()?.titulo ?? '');
     readonly nomeConvidador = computed(() => this.lista()?.donoNome ?? '');
     readonly token = signal('');
+    private injector = inject(Injector);
 
     readonly returnUrl = computed(() => `/join/${this.token()}`);
 
@@ -39,7 +42,11 @@ export class JoinComponent implements OnInit {
         }
         this.token.set(token);
 
-        this.listaService.getListaPorToken(token).subscribe({
+        toObservable(this.auth.loading, { injector: this.injector }).pipe(
+            filter(loading => !loading),
+            take(1),
+            switchMap(() => this.listaService.getListaPorToken(token)),
+        ).subscribe({
             next: lista => {
                 if (!lista) {
                     this.erro.set('Convite não encontrado ou expirado.');
@@ -53,8 +60,7 @@ export class JoinComponent implements OnInit {
                     const jaMembro = lista.participantes?.some(p => p.uid === uid)
                         || lista.donoUid === uid;
                     if (jaMembro) {
-                        this.estado.set('ja-membro');
-                        setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1500);
+                        this.router.navigate(['/'], { queryParams: { listaId: lista.id } });
                         return;
                     }
                 }
@@ -83,7 +89,7 @@ export class JoinComponent implements OnInit {
         this.listaService.adicionarParticipante(lista.id, participante).subscribe({
             next: () => {
                 this.estado.set('sucesso');
-                setTimeout(() => this.router.navigate(['/minha-area/lista', lista.id]), 1800);
+                setTimeout(() => this.router.navigate(['/'], { queryParams: { listaId: lista.id } }), 1800);
             },
             error: () => {
                 this.erro.set('Não foi possível entrar na lista. Tente novamente.');

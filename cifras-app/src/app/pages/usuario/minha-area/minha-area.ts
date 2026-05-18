@@ -7,6 +7,7 @@ import { ListaService } from '../../../services/lista.service';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
+import { AppSelectComponent } from '../../../components/app-select/app-select';
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -14,7 +15,7 @@ function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 @Component({
     selector: 'app-minha-area',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink],
+    imports: [CommonModule, FormsModule, RouterLink, AppSelectComponent],
     templateUrl: './minha-area.html',
     styleUrl: './minha-area.scss',
 })
@@ -27,6 +28,9 @@ export class MinhaAreaComponent implements OnInit {
 
     get categorias() { return this.config.categoriasIds(); }
     get categoriasLabels() { return this.config.categoriasLabels(); }
+    readonly categoriasOptions = computed(() =>
+        this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
+    );
 
     minhasListas = signal<Lista[]>([]);
     totalMusicasCustom = signal(0);

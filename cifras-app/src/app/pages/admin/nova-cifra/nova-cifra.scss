@@ -437,16 +437,7 @@
 }
 
 .secao-tipo-sel {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    color: var(--color-text-muted);
-    font-size: 0.7rem;
-    padding: 4px 8px;
-    outline: none;
-    cursor: pointer;
-    font-family: inherit;
-    &:focus { border-color: var(--color-acorde); }
+    width: auto;
 }
 
 .secao-label-input {

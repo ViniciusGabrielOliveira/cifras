@@ -1,7 +1,7 @@
 import { Component, inject, signal, computed, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Lista, MusicaLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private cifraService = inject(CifraService);
     private liveService = inject(LiveService);
     private router = inject(Router);
+    private route = inject(ActivatedRoute);
     readonly config = inject(ConfigService);
     readonly auth = inject(AuthService);
 
@@ -132,7 +133,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     get categories() { return this.config.categoriasIds().filter(id => id !== 'sem-categoria'); }
 
     ngOnInit(): void {
-        this.carregarListasPorData(this.dataSelecionada());
+        const listaId = this.route.snapshot.queryParamMap.get('listaId');
+        if (listaId) {
+            this.router.navigate([], { queryParams: {}, replaceUrl: true });
+            this.listaService.getLista(listaId).subscribe(lista => {
+                if (lista) {
+                    this.selecionarLista(lista);
+                    this.abaAtiva.set('minhas-listas');
+                }
+                this.loading.set(false);
+            });
+        } else {
+            this.carregarListasPorData(this.dataSelecionada());
+        }
     }
 
     ngOnDestroy() {

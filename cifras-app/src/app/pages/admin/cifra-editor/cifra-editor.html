@@ -50,22 +50,7 @@
                 </svg>
                 Restaurar
             </button>
-            <button class="btn-tool" (click)="toggleJSON()" title="Ver JSON">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                </svg>
-                JSON
-            </button>
-            <button class="btn-tool" (click)="exportarJSON()" title="Baixar JSON">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Baixar
-            </button>
-            <button class="btn-save" [class.saved]="saved()" [disabled]="saving()" (click)="salvar()">
+<button class="btn-save" [class.saved]="saved()" [disabled]="saving()" (click)="salvar()">
                 @if (saving()) { <span class="spinner-sm"></span> }
                 @else if (saved()) {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
@@ -100,8 +85,7 @@
                 </div>
                 <div class="meta-field">
                     <label>Tom base</label>
-                    <input [value]="c.tom" (input)="updateMeta('tom', $any($event.target).value)"
-                        style="max-width:80px" />
+                    <app-select [options]="tonsOptions" [value]="c.tom" (valueChange)="updateMeta('tom', $event)" />
                 </div>
                 <div class="meta-field">
                     <label>Composição</label>
@@ -153,12 +137,8 @@
             @for (secao of c.secoes; track $index; let si = $index) {
             <div class="secao-edit-card">
                 <div class="secao-edit-header">
-                    <select [value]="secao.tipo" (change)="updateSecaoTipo(si, $any($event.target).value)"
-                        class="secao-tipo-sel">
-                        @for (t of tiposSecao; track t) {
-                        <option [value]="t">{{ t }}</option>
-                        }
-                    </select>
+                    <app-select size="sm" [options]="tiposSecaoOptions" [value]="secao.tipo"
+                        (valueChange)="onSecaoTipoChange(si, $event)" class="secao-tipo-sel" />
                     <input class="secao-label-input" [value]="secao.label"
                         (input)="updateSecaoLabel(si, $any($event.target).value)" placeholder="Nome da seção" />
                     <button class="btn-remove-secao" (click)="removeSecao(si)" title="Remover seção">
@@ -210,22 +190,6 @@
 
     </div>
 
-    <!-- Painel JSON -->
-    @if (showJSON()) {
-    <div class="json-overlay" (click)="toggleJSON()">
-        <div class="json-panel" (click)="$event.stopPropagation()">
-            <div class="json-header">
-                <span>JSON atual (mock)</span>
-                <div style="display:flex;gap:8px">
-                    <button class="btn-tool" (click)="copiarJSON()">📋 Copiar</button>
-                    <button class="btn-tool" (click)="exportarJSON()">⬇ Baixar</button>
-                    <button class="btn-close-json" (click)="toggleJSON()">×</button>
-                </div>
-            </div>
-            <pre class="json-code">{{ jsonPreview() }}</pre>
-        </div>
-    </div>
-    }
 
 </div>
 }

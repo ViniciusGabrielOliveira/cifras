@@ -140,11 +140,7 @@
 
         <div class="meta-field">
           <label>Tom</label>
-          <select [value]="cifra().tom" (change)="updateMeta('tom', $any($event.target).value)">
-            @for (t of tons; track t) {
-              <option [value]="t">{{ t }}</option>
-            }
-          </select>
+          <app-select [options]="tonsOptions" [value]="cifra().tom" (valueChange)="updateMeta('tom', $event)" />
         </div>
 
         <div class="meta-field">
@@ -159,22 +155,12 @@
 
         <div class="meta-field">
           <label>Instrumento</label>
-          <select [value]="cifra().instrumento" (change)="updateMeta('instrumento', $any($event.target).value)">
-            <option value="violao">Violão</option>
-            <option value="guitarra">Guitarra</option>
-            <option value="cavaco">Cavaquinho</option>
-            <option value="ukulele">Ukulele</option>
-          </select>
+          <app-select [options]="instrumentoOptions" [value]="cifra().instrumento" (valueChange)="updateMeta('instrumento', $event)" />
         </div>
 
         <div class="meta-field">
           <label>Dificuldade</label>
-          <select [value]="cifra().dificuldade" (change)="updateMeta('dificuldade', $any($event.target).value)">
-            <option value="iniciante">Iniciante</option>
-            <option value="basico">Básico</option>
-            <option value="intermediario">Intermediário</option>
-            <option value="avancado">Avançado</option>
-          </select>
+          <app-select [options]="dificuldadeOptions" [value]="cifra().dificuldade" (valueChange)="updateMeta('dificuldade', $event)" />
         </div>
 
         <div class="meta-field full-width">
@@ -222,13 +208,8 @@
       @for (secao of cifra().secoes; track $index; let si = $index) {
         <div class="secao-edit-card">
           <div class="secao-edit-header">
-            <select [value]="secao.tipo"
-              (change)="updateSecaoTipo(si, $any($event.target).value)"
-              class="secao-tipo-sel">
-              @for (t of tiposSecao; track t) {
-                <option [value]="t">{{ t }}</option>
-              }
-            </select>
+            <app-select size="sm" [options]="tiposSecaoOptions" [value]="secao.tipo"
+              (valueChange)="onSecaoTipoChange(si, $event)" class="secao-tipo-sel" />
             <input class="secao-label-input" [value]="secao.label"
               (input)="updateSecaoLabel(si, $any($event.target).value)"
               placeholder="Nome da seção" />
