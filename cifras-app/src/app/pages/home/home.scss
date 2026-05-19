@@ -71,6 +71,8 @@
     max-width: 860px;
     margin: 1.25rem auto 0;
     padding: 0 1.5rem;
+    display: flex;
+    gap: 12px;
 }
 
 .seletor-trigger {
@@ -195,7 +197,10 @@
     flex-shrink: 0;
     overflow-x: auto;
     scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     button {
         flex: 1;
@@ -285,7 +290,9 @@
     flex-shrink: 0;
     transition: opacity 0.15s;
 
-    &:hover { opacity: 1; }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .btn-dia-wrapper {
@@ -293,7 +300,9 @@
     flex: 1;
     min-width: fit-content;
 
-    button { width: 100%; }
+    button {
+        width: 100%;
+    }
 }
 
 .input-data-hidden {
@@ -510,7 +519,10 @@
         transform: scale(1.08);
         box-shadow: 0 6px 28px rgba(124, 106, 253, 0.65);
     }
-    &:active { transform: scale(0.95); }
+
+    &:active {
+        transform: scale(0.95);
+    }
 }
 
 .fab-spinner {
@@ -804,17 +816,19 @@
     cursor: pointer;
     user-select: none;
 
-    input[type="checkbox"] { display: none; }
+    input[type="checkbox"] {
+        display: none;
+    }
 
     .toggle-track {
         width: 36px;
         height: 20px;
-        background: rgba(255,255,255,0.12);
+        background: rgba(255, 255, 255, 0.12);
         border-radius: 10px;
         position: relative;
         transition: background 0.2s;
         flex-shrink: 0;
-        border: 1px solid rgba(255,255,255,0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
 
         .toggle-thumb {
             position: absolute;
@@ -825,14 +839,17 @@
             background: #fff;
             border-radius: 50%;
             transition: transform 0.2s;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
     }
 
-    input[type="checkbox"]:checked + .toggle-track {
+    input[type="checkbox"]:checked+.toggle-track {
         background: var(--color-accent);
         border-color: transparent;
-        .toggle-thumb { transform: translateX(16px); }
+
+        .toggle-thumb {
+            transform: translateX(16px);
+        }
     }
 
     .toggle-label {
@@ -841,7 +858,7 @@
         color: var(--color-text-muted);
     }
 
-    &.toggle-ctrl input[type="checkbox"]:checked + .toggle-track {
+    &.toggle-ctrl input[type="checkbox"]:checked+.toggle-track {
         background: #ff6b35;
     }
 }
@@ -869,8 +886,17 @@
 }
 
 @keyframes livePulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.65); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.65);
+    }
 }
 
 .musica-live-badge {
@@ -927,6 +953,8 @@
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
 
     &:hover {
         background: var(--color-acorde-hover);
@@ -959,9 +987,17 @@
     white-space: nowrap;
     animation: toastInHome 0.3s cubic-bezier(0.34, 1.5, 0.64, 1);
 }
+
 @keyframes toastInHome {
-    from { opacity: 0; transform: translateX(-50%) translateY(16px); }
-    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* ── Modal adicionar música ──────────────────────────────────────── */
@@ -973,9 +1009,15 @@
     z-index: 500;
     animation: fadeInHome 0.18s ease;
 }
+
 @keyframes fadeInHome {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-busca-home {
@@ -1007,13 +1049,29 @@
         animation: slideUpMobileHome 0.28s cubic-bezier(0.34, 1.2, 0.64, 1);
     }
 }
+
 @keyframes slideUpHome {
-    from { opacity: 0; transform: translate(-50%, calc(-50% + 28px)); }
-    to   { opacity: 1; transform: translate(-50%, -50%); }
+    from {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 28px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
+
 @keyframes slideUpMobileHome {
-    from { opacity: 0; transform: translateY(48px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(48px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal-header-home {
@@ -1064,7 +1122,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    &:hover { background: rgba(255, 255, 255, 0.1); color: var(--color-text); }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-text);
+    }
 }
 
 .modal-body-home {

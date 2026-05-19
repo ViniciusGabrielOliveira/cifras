@@ -206,6 +206,7 @@ export class MinhaListaComponent implements OnInit {
     }
 
     cifraExiste(cifraId: string): boolean {
+        if (this.adminContext) return true;
         return this.cifrasExistentes().has(cifraId);
     }
 
@@ -293,7 +294,6 @@ export class MinhaListaComponent implements OnInit {
     }
 
     async onCifraClubSelecionada(sugestao: CifraClubSugestao) {
-        this.fecharModalBusca();
         const lista = this.lista();
         if (!lista) return;
 
@@ -305,13 +305,13 @@ export class MinhaListaComponent implements OnInit {
         try {
             const result = await this.cifraClub.importarMusica(sugestao);
             this.cifraClub.pendingImport = result;
+            this.fecharModalBusca();
             this.router.navigate(['/minha-area/nova-musica'], {
                 queryParams: { retornoLista: lista.id, parte: this.parteParaAdicionar() },
             });
         } catch {
-            this.mostrarErro('Não foi possível importar a música do Cifra Club. Tente novamente.');
-        } finally {
             this.importandoCifraClub.set(false);
+            this.mostrarErro('Não foi possível importar a música do Cifra Club. Tente novamente.');
         }
     }
 

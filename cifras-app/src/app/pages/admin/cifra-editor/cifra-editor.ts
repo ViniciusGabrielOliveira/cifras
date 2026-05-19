@@ -211,7 +211,8 @@ export class CifraEditorComponent implements OnInit {
     const uid = this.auth.user()?.uid ?? '';
 
     let cifraParaSalvar = c;
-    if (this.userMode() && (c.status !== 'privada' || c.donoUid !== uid)) {
+    const isAdmin = this.auth.hasRole('admin');
+    if (this.userMode() && !isAdmin && (c.status !== 'privada' || c.donoUid !== uid)) {
       // Cria cópia privada com novo ID para não sobrescrever a música pública
       this._oldCifraId = c.id;
       const novoId = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);

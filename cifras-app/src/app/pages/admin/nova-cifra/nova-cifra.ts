@@ -224,7 +224,7 @@ export class NovaCifraComponent implements OnInit {
       return;
     }
 
-    const cifra: Cifra = this.userMode()
+    const cifra: Cifra = (this.userMode() && !this.auth.hasRole('admin'))
       ? { ...cifraBase, status: 'privada', donoUid: this.auth.user()?.uid }
       : cifraBase;
 

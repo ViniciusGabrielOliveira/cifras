@@ -22,7 +22,7 @@
                 <path
                     d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
             </svg>
-            {{ auth.isAdmin() ? 'Painel' : 'Minha Área' }}
+            Minha Área
         </a>
         } @else {
         <a class="header-admin-link" routerLink="/admin">
@@ -66,6 +66,7 @@
             <polyline points="6 9 12 15 18 9" />
         </svg>
     </button>
+    <button class="btn-abrir-seletor" (click)="abrirSeletor()">Escolher lista</button>
 </div>
 
 <!-- ── Drawer Seletor ────────────────────────────────────────── -->
@@ -315,7 +316,6 @@
     <div class="empty-icon">🎵</div>
     <h2>Nenhuma lista encontrada</h2>
     <p>Não há lista de músicas para hoje.<br>Use o seletor acima para encontrar listas por data ou categoria.</p>
-    <button class="btn-abrir-seletor" (click)="abrirSeletor()">Escolher lista</button>
 </div>
 }
 

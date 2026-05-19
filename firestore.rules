@@ -98,8 +98,10 @@ service cloud.firestore {
     // ── Listas ───────────────────────────────────────────────────────
     match /listas/{docId} {
       allow read: if
+        // Admin lê tudo
+        isAdmin()
         // Lista pública
-        ((!resource.data.keys().hasAll(['tipo']) || resource.data.tipo == 'publica')
+        || ((!resource.data.keys().hasAll(['tipo']) || resource.data.tipo == 'publica')
           && (!isAuthenticated() || isNotBlocked()))
         // Lista privada: dono ou participante
         || (resource.data.tipo == 'privada'
