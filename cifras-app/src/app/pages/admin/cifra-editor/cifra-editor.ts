@@ -2,6 +2,7 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
 import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
@@ -16,7 +17,7 @@ const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', '
 @Component({
   selector: 'app-cifra-editor',
   standalone: true,
-  imports: [CommonModule, FormsModule, LinhaEditorComponent, AppSelectComponent],
+  imports: [CommonModule, FormsModule, DragDropModule, LinhaEditorComponent, AppSelectComponent],
   templateUrl: './cifra-editor.html',
   styleUrl: './cifra-editor.scss',
 })
@@ -248,5 +249,85 @@ export class CifraEditorComponent implements OnInit {
 
   voltarParaVisualizacao() {
     this.voltar();
+  }
+
+  // ─── Seleção / Copiar / Colar ────────────────────────────────────────────────
+
+  selecionadas = signal<Set<string>>(new Set());
+  clipboard    = signal<LinhaCifra[] | null>(null);
+  temSelecao   = computed(() => this.selecionadas().size > 0);
+
+  linhaKey(si: number, li: number) { return `${si}-${li}`; }
+
+  isSelected(si: number, li: number) {
+    return this.selecionadas().has(this.linhaKey(si, li));
+  }
+
+  toggleSelecao(si: number, li: number) {
+    this.selecionadas.update(s => {
+      const n = new Set(s);
+      const k = this.linhaKey(si, li);
+      n.has(k) ? n.delete(k) : n.add(k);
+      return n;
+    });
+  }
+
+  limparSelecao() { this.selecionadas.set(new Set()); }
+
+  private _linhasSelecionadas(): LinhaCifra[] {
+    const c = this.cifra();
+    if (!c) return [];
+    const keys = this.selecionadas();
+    const out: LinhaCifra[] = [];
+    c.secoes.forEach((s, si) => s.linhas.forEach((l, li) => {
+      if (keys.has(this.linhaKey(si, li))) out.push(JSON.parse(JSON.stringify(l)));
+    }));
+    return out;
+  }
+
+  copiarSelecionadas() {
+    this.clipboard.set(this._linhasSelecionadas());
+    this.selecionadas.set(new Set());
+  }
+
+  recortarSelecionadas() {
+    this.clipboard.set(this._linhasSelecionadas());
+    const keys = this.selecionadas();
+    this.cifra.update(c => {
+      if (!c) return c;
+      return { ...c, secoes: c.secoes.map((s, si) => ({
+        ...s, linhas: s.linhas.filter((_, li) => !keys.has(this.linhaKey(si, li))),
+      }))};
+    });
+    this.selecionadas.set(new Set());
+  }
+
+  colarEm(si: number, li: number) {
+    const linhas = this.clipboard();
+    if (!linhas?.length) return;
+    this.cifra.update(c => {
+      if (!c) return c;
+      const secoes = [...c.secoes];
+      const novas = [...secoes[si].linhas];
+      novas.splice(li, 0, ...linhas.map(l => JSON.parse(JSON.stringify(l))));
+      secoes[si] = { ...secoes[si], linhas: novas };
+      return { ...c, secoes };
+    });
+  }
+
+  // ─── Drag & Drop de linhas ───────────────────────────────────────────────────
+
+  onLinhasDrop(event: CdkDragDrop<number>) {
+    if (event.previousContainer === event.container && event.previousIndex === event.currentIndex) return;
+    const fromSi = event.previousContainer.data;
+    const toSi   = event.container.data;
+    this.cifra.update(c => {
+      if (!c) return c;
+      const secoes = c.secoes.map(s => ({ ...s, linhas: [...s.linhas] }));
+      const [linha] = secoes[fromSi].linhas.splice(event.previousIndex, 1);
+      secoes[toSi].linhas.splice(event.currentIndex, 0, linha);
+      return { ...c, secoes };
+    });
+    this.selecionadas.set(new Set());
   }
 }

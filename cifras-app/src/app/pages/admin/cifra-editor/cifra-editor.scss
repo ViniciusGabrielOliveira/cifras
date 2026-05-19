@@ -495,3 +495,174 @@
     line-height: 1.6;
     white-space: pre;
 }
+// ─── Seleção e drag de linhas ───────────────────────────────────────────────
+
+.linha-drag-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    border-radius: 8px;
+    transition: background 0.12s;
+    position: relative;
+
+    &.linha-selecionada {
+        background: rgba(124, 106, 253, 0.1);
+        outline: 1px solid rgba(124, 106, 253, 0.35);
+    }
+
+    .linha-drag-content {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+.sel-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    opacity: 0.35;
+
+    &:hover, &.ativa {
+        opacity: 1;
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+    }
+
+    @media (max-width: 640px) {
+        opacity: 0.7;
+    }
+}
+
+.drag-handle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    cursor: grab;
+    border-radius: 6px;
+    transition: all 0.15s;
+    opacity: 0.25;
+    touch-action: none;
+
+    &:hover {
+        opacity: 1;
+        background: rgba(255,255,255,0.06);
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    @media (max-width: 640px) {
+        opacity: 0.6;
+    }
+}
+
+.drag-placeholder {
+    height: 36px;
+    background: rgba(124, 106, 253, 0.12);
+    border: 1px dashed rgba(124, 106, 253, 0.4);
+    border-radius: 8px;
+}
+
+.cdk-drag-preview {
+    background: var(--color-surface);
+    border: 1px solid rgba(124, 106, 253, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    opacity: 0.92;
+}
+
+.cdk-drag-animating {
+    transition: transform 200ms ease;
+}
+
+.paste-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 3px 10px;
+    font-size: 0.68rem;
+    border: 1px dashed rgba(124, 106, 253, 0.4);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(124, 106, 253, 0.7);
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(124, 106, 253, 0.12);
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+    }
+}
+
+.selecao-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--color-surface);
+    border: 1px solid rgba(124, 106, 253, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    z-index: 100;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: calc(100vw - 32px);
+}
+
+.sel-count {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+}
+
+.sel-action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    font-size: 0.76rem;
+    border-radius: 7px;
+    border: 1px solid var(--color-border);
+    background: rgba(255,255,255,0.05);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(124, 106, 253, 0.15);
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+    }
+
+    &.sel-cancel {
+        color: var(--color-text-muted);
+        &:hover {
+            background: rgba(229, 85, 85, 0.12);
+            border-color: #e55;
+            color: #e55;
+        }
+    }
+}

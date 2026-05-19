@@ -137,7 +137,7 @@
     </section>
 
     <!-- ── Seções / Cifra ────────────────────────────────────────── -->
-    <section class="secoes-editor">
+    <section class="secoes-editor" cdkDropListGroup>
       <div class="secoes-header">
         <h2 class="section-title">Cifra</h2>
         <div class="hint">
@@ -145,7 +145,7 @@
             <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
             <line x1="12" y1="16" x2="12.01" y2="16"/>
           </svg>
-          Adicione seções (versos, refrões) e depois as linhas com letra e acordes
+          Selecione linhas para copiar/colar · Arraste pelo ⠿ para reordenar
         </div>
       </div>
 
@@ -155,8 +155,7 @@
             <app-select size="sm" [options]="tiposSecaoOptions" [value]="secao.tipo"
               (valueChange)="onSecaoTipoChange(si, $event)" class="secao-tipo-sel" />
             <input class="secao-label-input" [value]="secao.label"
-              (input)="updateSecaoLabel(si, $any($event.target).value)"
-              placeholder="Nome da seção" />
+              (input)="updateSecaoLabel(si, $any($event.target).value)" placeholder="Nome da seção" />
             <button class="btn-remove-secao" (click)="removeSecao(si)" title="Remover seção">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -165,24 +164,47 @@
           </div>
 
           @if (secao.tipo === 'tab') {
-            <!-- Editor de tablatura: textarea monospace -->
-            <textarea
-              class="tab-editor"
-              [value]="secao.tabText ?? ''"
+            <textarea class="tab-editor" [value]="secao.tabText ?? ''"
               (input)="updateTabText(si, $any($event.target).value)"
-              placeholder="Cole aqui a tablatura..."
-              rows="10"
-              spellcheck="false"
-            ></textarea>
+              placeholder="Cole aqui a tablatura..." rows="10" spellcheck="false"></textarea>
           } @else {
-            <div class="linhas-list">
+            <div class="linhas-list" cdkDropList [cdkDropListData]="si"
+                (cdkDropListDropped)="onLinhasDrop($event)">
+
+              @if (clipboard()) {
+              <button class="paste-btn" (click)="colarEm(si, 0)" title="Colar linhas aqui">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                Colar aqui
+              </button>
+              }
+
               @for (linha of secao.linhas; track $index; let li = $index) {
-                <app-linha-editor
-                  [linha]="linha"
-                  [linhaIndex]="li"
-                  (linhaChange)="updateLinha(si, li, $event)"
-                  (removerLinha)="removeLinha(si, li)"
-                />
+                <div class="linha-drag-wrap" [class.linha-selecionada]="isSelected(si, li)" cdkDrag>
+                  <button class="sel-btn" [class.ativa]="isSelected(si, li)"
+                      (click)="toggleSelecao(si, li)" type="button" title="Selecionar linha">
+                    @if (isSelected(si, li)) {
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    } @else {
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+                    }
+                  </button>
+                  <div class="linha-drag-content">
+                    <app-linha-editor [linha]="linha" [linhaIndex]="li"
+                      (linhaChange)="updateLinha(si, li, $event)"
+                      (removerLinha)="removeLinha(si, li)" />
+                  </div>
+                  <span class="drag-handle" cdkDragHandle title="Arrastar linha">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="5" r="1.2"/><circle cx="15" cy="5" r="1.2"/><circle cx="9" cy="12" r="1.2"/><circle cx="15" cy="12" r="1.2"/><circle cx="9" cy="19" r="1.2"/><circle cx="15" cy="19" r="1.2"/></svg>
+                  </span>
+                  <div *cdkDragPlaceholder class="drag-placeholder"></div>
+                </div>
+
+                @if (clipboard()) {
+                <button class="paste-btn" (click)="colarEm(si, li + 1)" title="Colar linhas aqui">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                  Colar aqui
+                </button>
+                }
               }
             </div>
 
@@ -203,6 +225,28 @@
         Adicionar seção
       </button>
     </section>
+
+    <!-- Barra de seleção flutuante -->
+    @if (temSelecao() || clipboard()) {
+    <div class="selecao-bar">
+      @if (temSelecao()) {
+      <span class="sel-count">{{ selecionadas().size }} linha(s)</span>
+      <button class="sel-action" (click)="copiarSelecionadas()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar
+      </button>
+      <button class="sel-action" (click)="recortarSelecionadas()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+        Recortar
+      </button>
+      <button class="sel-action sel-cancel" (click)="limparSelecao()">Cancelar</button>
+      } @else if (clipboard()) {
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <span class="sel-count">{{ clipboard()!.length }} linha(s) copiada(s) — clique em "Colar aqui"</span>
+      <button class="sel-action sel-cancel" (click)="clipboard.set(null)">Limpar</button>
+      }
+    </div>
+    }
 
   </div><!-- /editor-body -->
 
