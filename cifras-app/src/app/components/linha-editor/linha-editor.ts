@@ -11,6 +11,7 @@ interface DragState {
   acorde: AcordeLinha;
   startMouseX: number;
   startPosicao: number;
+  startPx: number;
 }
 
 @Component({
@@ -63,7 +64,7 @@ export class LinhaEditorComponent implements OnChanges {
   /** Mede a posição em px de cada caractere da linha */
   medirCharOffsets() {
     const el = this.letraSpan?.nativeElement;
-    if (!el || !el.firstChild) return;
+    if (!el || !el.firstChild || !this.texto()) return;
 
     const textNode = el.firstChild;
     const texto = this.texto();
@@ -85,19 +86,29 @@ export class LinhaEditorComponent implements OnChanges {
 
   /** Posição em px de um índice de caractere */
   getCharPx(posicao: number): number {
-    if (!this.texto()) {
-      const sorted = [...this.acordes()].sort((a, b) => a.posicao - b.posicao);
-      const idx = sorted.findIndex(a => a.posicao === posicao);
-      return Math.max(0, idx) * 64;
-    }
+    const texto = this.texto();
+    if (!texto) return posicao * 9;
     const offsets = this.charOffsets();
-    return offsets[posicao] ?? posicao * 9;
+    if (!offsets.length) return posicao * 9;
+    const textLen = texto.length;
+    if (posicao <= textLen) return offsets[posicao] ?? posicao * 9;
+    // Além do fim do texto: extrapola com largura média
+    const lastOffset = offsets[textLen];
+    const avgCharWidth = textLen > 0 ? lastOffset / textLen : 9;
+    return lastOffset + (posicao - textLen) * avgCharWidth;
   }
 
   /** Encontra o índice de caractere mais próximo de uma posição em px */
   findClosestChar(px: number): number {
+    if (!this.texto()) return Math.max(0, Math.round(px / 9));
     const offsets = this.charOffsets();
-    if (!offsets.length) return 0;
+    if (!offsets.length) return Math.max(0, Math.round(px / 9));
+    const textLen = this.texto().length;
+    const lastOffset = offsets[textLen] ?? 0;
+    if (px > lastOffset) {
+      const avgCharWidth = textLen > 0 ? lastOffset / textLen : 9;
+      return textLen + Math.max(1, Math.round((px - lastOffset) / avgCharWidth));
+    }
     let best = 0;
     let bestDist = Infinity;
     for (let i = 0; i < offsets.length; i++) {
@@ -110,14 +121,10 @@ export class LinhaEditorComponent implements OnChanges {
   // ─── DRAG ───────────────────────────────────────────────────────────────────
 
   startDrag(event: MouseEvent, acorde: AcordeLinha) {
-    if (!this.texto()) return;
     event.preventDefault();
     event.stopPropagation();
-    this.drag = {
-      acorde,
-      startMouseX: event.clientX,
-      startPosicao: acorde.posicao,
-    };
+    const startPx = this.getCharPx(acorde.posicao);
+    this.drag = { acorde, startMouseX: event.clientX, startPosicao: acorde.posicao, startPx };
   }
 
   @HostListener('document:mousemove', ['$event'])
@@ -126,20 +133,13 @@ export class LinhaEditorComponent implements OnChanges {
     event.preventDefault();
 
     const deltaMousePx = event.clientX - this.drag.startMouseX;
-    const startPx = this.getCharPx(this.drag.startPosicao);
-    const newPx = startPx + deltaMousePx;
-    const newPos = Math.max(0, Math.min(
-      this.texto().length - 1,
-      this.findClosestChar(newPx),
-    ));
+    const newPx = this.drag.startPx + deltaMousePx;
 
-    // Atualiza posição do acorde sem conflito com outros acordes
+    const newPos = Math.max(0, this.findClosestChar(newPx));
     const outros = this.acordes().filter(a => a !== this.drag!.acorde);
-    const conflito = outros.some(a => a.posicao === newPos);
-
-    if (!conflito) {
-      this.drag.acorde.posicao = newPos;
-      // Força detecção de mudança
+    // Sem texto: sem conflito — acorde pode ir para qualquer posição livremente
+    if (!this.texto() || !outros.some(a => a.posicao === newPos)) {
+      this.drag!.acorde.posicao = newPos;
       this.acordes.update(list => [...list]);
     }
   }

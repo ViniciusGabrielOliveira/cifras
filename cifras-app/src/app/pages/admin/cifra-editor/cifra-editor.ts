@@ -43,7 +43,6 @@ export class CifraEditorComponent implements OnInit {
   private _oldCifraId: string | null = null;
 
   readonly tiposSecao = TIPOS;
-  readonly tons = TONS;
   readonly tonsOptions = TONS;
   readonly tiposSecaoOptions = TIPOS;
 
@@ -68,7 +67,7 @@ export class CifraEditorComponent implements OnInit {
         const queryParams: Record<string, string> = {};
         if (this._oldCifraId && this.cifra()?.id !== this._oldCifraId) {
           queryParams['replaceCifraId'] = this._oldCifraId;
-          queryParams['newCifraId']     = this.cifra()!.id;
+          queryParams['newCifraId'] = this.cifra()!.id;
         }
         this.router.navigate(['/minha-area/lista', retornoLista], {
           queryParams: Object.keys(queryParams).length ? queryParams : undefined,
@@ -237,7 +236,7 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-resetarOriginal() {
+  resetarOriginal() {
     const c = this.cifra();
     if (!c) return;
     if (!confirm('Descartar todas as edições e recarregar do servidor?')) return;

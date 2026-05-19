@@ -5,7 +5,7 @@
 
         <!-- Camada de acordes (drag) -->
         <div class="acordes-drag-layer" #acordesLayer>
-            @for (ch of acordes(); track ch.posicao) {
+            @for (ch of acordes(); track $index) {
             <div class="chord-drag" [style.left.px]="getCharPx(ch.posicao)" (mousedown)="startDrag($event, ch)"
                 title="Arraste para mover · Clique × para remover">
                 <span class="chord-name">{{ ch.acorde }}</span>

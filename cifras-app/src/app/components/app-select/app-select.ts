@@ -12,12 +12,12 @@ export interface SelectOption {
     imports: [CommonModule],
     template: `
         <div class="wrap" [class.sm]="size === 'sm'">
-            <select [value]="value" (change)="emit($event)">
+            <select (change)="emit($event)">
                 @if (placeholder) {
-                    <option value="">{{ placeholder }}</option>
+                    <option value="" [selected]="!value">{{ placeholder }}</option>
                 }
                 @for (o of opts; track o.value) {
-                    <option [value]="o.value">{{ o.label }}</option>
+                    <option [value]="o.value" [selected]="o.value === value">{{ o.label }}</option>
                 }
             </select>
             <svg class="chevron" width="12" height="12" viewBox="0 0 24 24"
