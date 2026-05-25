@@ -28,7 +28,8 @@
 
 /* ─── Topbar ─── */
 .editor-topbar {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 200;
     display: flex;
     align-items: center;
@@ -286,10 +287,109 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 0.25rem;
 
     .section-title {
         margin-bottom: 0;
+    }
+}
+
+.secoes-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.modo-toggle {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modo-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+
+    & + & {
+        border-left: 1px solid var(--color-border);
+    }
+
+    &:hover {
+        color: var(--color-text);
+        background: rgba(255,255,255,0.04);
+    }
+
+    &.ativo {
+        background: var(--color-acorde-bg);
+        color: var(--color-acorde);
+    }
+}
+
+.texto-editor-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.texto-editor {
+    width: 100%;
+    min-height: 480px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    color: var(--color-text);
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding: 1rem 1.25rem;
+    resize: vertical;
+    outline: none;
+    white-space: pre;
+    overflow-x: auto;
+    box-sizing: border-box;
+    tab-size: 4;
+
+    &:focus {
+        border-color: var(--color-acorde);
+        box-shadow: 0 0 0 2px rgba(124, 106, 253, 0.15);
+    }
+
+    &::placeholder {
+        color: var(--color-text-muted);
+        opacity: 0.5;
+        white-space: pre-wrap;
+    }
+}
+
+.texto-editor-hint {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+    margin: 0;
+
+    code {
+        font-family: 'Fira Code', monospace;
+        background: rgba(255,255,255,0.06);
+        padding: 1px 5px;
+        border-radius: 4px;
+    }
+
+    strong {
+        color: var(--color-acorde);
     }
 }
 

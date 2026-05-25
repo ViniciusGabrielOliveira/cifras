@@ -11,7 +11,7 @@ import { AcordesService } from '../../../services/acordes.service';
 import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
 import { CifraClubImportService } from '../../../services/cifraclub-import.service';
-import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
+import { parseCifraTexto, cifraToTexto, slugify, TONS } from '../../../core/cifra-parser';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
 
@@ -45,14 +45,15 @@ export class CifraEditorComponent implements OnInit {
 
   // ─── Estado ──────────────────────────────────────────────────────────────────
 
-  cifra      = signal<Cifra | null>(null);
-  loading    = signal(false);
-  notFound   = signal(false);
-  saving     = signal(false);
-  saved      = signal(false);
-  colando    = signal(false);
-  erroTitulo = signal(false);
-  erroSalvar = signal<string | null>(null);
+  cifra       = signal<Cifra | null>(null);
+  loading     = signal(false);
+  notFound    = signal(false);
+  saving      = signal(false);
+  saved       = signal(false);
+  erroTitulo  = signal(false);
+  erroSalvar  = signal<string | null>(null);
+  modoTexto   = signal(false);
+  textoEditor = signal('');
 
   private _salvouNestaSessao = false;
   private _oldCifraId: string | null = null;
@@ -273,6 +274,13 @@ export class CifraEditorComponent implements OnInit {
   // ─── Salvar ──────────────────────────────────────────────────────────────────
 
   salvar() {
+    if (this.modoTexto()) {
+      const texto = this.textoEditor();
+      if (texto.trim()) {
+        this.cifra.update(c => c ? { ...c, secoes: parseCifraTexto(texto) } : c);
+      }
+    }
+
     const c = this.cifra();
     if (!c) return;
 
@@ -343,14 +351,20 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-  async colarMusica() {
-    try {
-      this.colando.set(true);
-      const texto = await navigator.clipboard.readText();
-      const secoes = parseCifraTexto(texto);
-      this.cifra.update(c => c ? { ...c, secoes } : c);
-    } catch { /* permissão negada ou clipboard vazio */ }
-    finally { this.colando.set(false); }
+  // ─── Modo texto / visual ─────────────────────────────────────────────────────
+
+  entrarModoTexto() {
+    const c = this.cifra();
+    if (c) this.textoEditor.set(cifraToTexto(c.secoes));
+    this.modoTexto.set(true);
+  }
+
+  entrarModoVisual() {
+    const texto = this.textoEditor();
+    if (texto.trim()) {
+      this.cifra.update(c => c ? { ...c, secoes: parseCifraTexto(texto) } : c);
+    }
+    this.modoTexto.set(false);
   }
 
   // ─── Seleção / Copiar / Colar ────────────────────────────────────────────────

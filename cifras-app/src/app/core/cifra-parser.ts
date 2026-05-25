@@ -2,8 +2,31 @@ import { Secao, LinhaCifra, AcordeLinha, TipoSecao } from '../models/cifra.model
 import { REGEX_ACORDE } from './transposicao';
 
 export const TONS = [
-  'C', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#',
-  'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb',
+  'C',
+  'Db',
+  'D',
+  'Eb',
+  'E',
+  'F',
+  'F#',
+  'G',
+  'Ab',
+  'A',
+  'Bb',
+  'B',
+
+  'Cm',
+  'C#m',
+  'Dm',
+  'Ebm',
+  'Em',
+  'Fm',
+  'F#m',
+  'Gm',
+  'G#m',
+  'Am',
+  'Bbm',
+  'Bm',
 ];
 
 export function slugify(titulo: string): string {
@@ -134,4 +157,31 @@ export function parseCifraTexto(texto: string): Secao[] {
   return secoes.length > 0
     ? secoes
     : [{ tipo: 'verso', label: 'Verso 1', linhas: [{ letra: '', acordes: [] }] }];
+}
+
+export function cifraToTexto(secoes: Secao[]): string {
+  const lines: string[] = [];
+  for (const secao of secoes) {
+    lines.push(`[${secao.label}]`);
+    if (secao.tipo === 'tab') {
+      lines.push(secao.tabText ?? '');
+    } else {
+      for (const linha of secao.linhas) {
+        if (linha.acordes.length > 0) {
+          const maxEnd = Math.max(...linha.acordes.map(a => a.posicao + a.acorde.length));
+          const buf = Array<string>(Math.max(maxEnd, 1)).fill(' ');
+          for (const a of linha.acordes) {
+            for (let i = 0; i < a.acorde.length; i++) {
+              buf[a.posicao + i] = a.acorde[i];
+            }
+          }
+          lines.push(buf.join('').trimEnd());
+        }
+        if (linha.letra) lines.push(linha.letra);
+        else if (linha.acordes.length === 0) lines.push('');
+      }
+    }
+    lines.push('');
+  }
+  return lines.join('\n').trimEnd();
 }
