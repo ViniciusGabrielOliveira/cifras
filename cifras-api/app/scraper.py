@@ -8,9 +8,12 @@ Lógica de fetch e parse do Cifra Club.
 
 import re
 import json
+import logging
 import httpx
 from curl_cffi.requests import AsyncSession
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 
 HEADERS_BROWSER = {
     "User-Agent": (
@@ -95,12 +98,13 @@ def _tom_from_next_data(html: str) -> Optional[str]:
     """Extrai o tom do __NEXT_DATA__ do Next.js navegando por caminhos específicos."""
     m = re.search(r'<script[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)</script>', html)
     if not m:
+        logger.info('[tom] __NEXT_DATA__ não encontrado no HTML')
         return None
     try:
         data = json.loads(m.group(1))
         page_props = data.get('props', {}).get('pageProps', {})
+        logger.info('[tom] pageProps keys: %s', list(page_props.keys()) if isinstance(page_props, dict) else type(page_props))
 
-        # Caminhos específicos conhecidos — evita pegar `key` de componentes React
         paths = [
             ['cifra', 'key'],
             ['cifra', 'tom'],
@@ -114,15 +118,17 @@ def _tom_from_next_data(html: str) -> Optional[str]:
             val = page_props
             for step in path:
                 val = val.get(step) if isinstance(val, dict) else None
+            logger.info('[tom] path %s → %r', path, val)
             if isinstance(val, str) and _TOM_RE.match(val):
+                logger.info('[tom] encontrado via path %s: %s', path, val)
                 return val
 
-        # Fallback seguro: busca cifraKey em pageProps (nome único, não colide com React)
         val = _find_specific_key(page_props, 'cifraKey')
+        logger.info('[tom] cifraKey via busca recursiva → %r', val)
         if isinstance(val, str) and _TOM_RE.match(val):
             return val
-    except Exception:
-        pass
+    except Exception as e:
+        logger.warning('[tom] erro ao parsear __NEXT_DATA__: %s', e)
     return None
 
 def _find_specific_key(obj, key: str):
@@ -156,18 +162,21 @@ def _parse_page(html: str, source_url: str) -> dict:
         or ""
     )
 
-    tom_raw = (
-        _tom_from_next_data(html)
-        or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
-        or _match(html, r'data-cifra-key="([A-G][b#]?m?)"')
-        or _match(html, r'data-key="([A-G][b#]?m?)"')
-        or _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')
-        or _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')
-        or _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')
-        or _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')
-        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')
-        or "C"
-    )
+    _candidates = [
+        ('next_data',     _tom_from_next_data(html)),
+        ('url_param',     _match(source_url, r"[?&]tom=([A-G][b#]?m?)")),
+        ('data-cifra-key',_match(html, r'data-cifra-key="([A-G][b#]?m?)"')),
+        ('data-key',      _match(html, r'data-key="([A-G][b#]?m?)"')),
+        ('json_cifraKey', _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')),
+        ('json_tom',      _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')),
+        ('html_tom_param',_match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')),
+        ('active_href1',  _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')),
+        ('active_href2',  _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')),
+    ]
+    logger.info('[tom] candidatos: %s', {k: v for k, v in _candidates})
+
+    tom_raw = next((v for _, v in _candidates if v), 'C')
+    logger.info('[tom] tom_raw selecionado: %r → normalizado: %r', tom_raw, _normalizar_tom(tom_raw))
     tom = _normalizar_tom(tom_raw)
 
     raw = (
