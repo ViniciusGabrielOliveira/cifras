@@ -10,9 +10,17 @@ import { CifraService } from '../../../services/cifra.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
-import { TONS } from '../../../core/cifra-parser';
+import { CifraClubImportService } from '../../../services/cifraclub-import.service';
+import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
 
 const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
+
+const CIFRA_VAZIA: Cifra = {
+  id: '', titulo: '', artista: '', tom: 'C',
+  instrumento: 'violao', dificuldade: 'basico', composicao: '',
+  categorias: [], partesMissa: [],
+  secoes: [{ tipo: 'verso', label: 'Verso 1', linhas: [{ letra: '', acordes: [] }] }],
+};
 
 @Component({
   selector: 'app-cifra-editor',
@@ -22,53 +30,106 @@ const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', '
   styleUrl: './cifra-editor.scss',
 })
 export class CifraEditorComponent implements OnInit {
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
+  private route        = inject(ActivatedRoute);
+  private router       = inject(Router);
   private cifraService = inject(CifraService);
   private acordesService = inject(AcordesService);
-  private config = inject(ConfigService);
-  private auth = inject(AuthService);
+  private config       = inject(ConfigService);
+  private auth         = inject(AuthService);
+  private cifraClub    = inject(CifraClubImportService);
 
-  readonly userMode = computed(() => !!this.route.snapshot.data['userMode']);
+  // ─── Modo ────────────────────────────────────────────────────────────────────
 
-  readonly categorias = this.config.categorias;
-  readonly partesMissa = this.config.partesMissa;
+  readonly userMode   = computed(() => !!this.route.snapshot.data['userMode']);
+  readonly modoEditar = computed(() => !!this.route.snapshot.paramMap.get('id'));
 
-  cifra = signal<Cifra | null>(null);
-  loading = signal(true);
-  notFound = signal(false);
-  saving = signal(false);
-  saved = signal(false);
+  // ─── Estado ──────────────────────────────────────────────────────────────────
+
+  cifra      = signal<Cifra | null>(null);
+  loading    = signal(false);
+  notFound   = signal(false);
+  saving     = signal(false);
+  saved      = signal(false);
+  colando    = signal(false);
+  erroTitulo = signal(false);
   erroSalvar = signal<string | null>(null);
+
   private _salvouNestaSessao = false;
   private _oldCifraId: string | null = null;
 
-  readonly tiposSecao = TIPOS;
-  readonly tonsOptions = TONS;
-  readonly tiposSecaoOptions = TIPOS;
+  // ─── Opções ──────────────────────────────────────────────────────────────────
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id') ?? '';
-    if (!id) { this.voltar(); return; }
-    this.cifraService.getCifra(id).subscribe(c => {
-      if (c) {
-        this.cifra.set(JSON.parse(JSON.stringify(c)));
-      } else {
-        this.notFound.set(true);
-        setTimeout(() => this.voltar(), 3000);
-      }
-      this.loading.set(false);
-    });
+  readonly categorias        = this.config.categorias;
+  readonly partesMissa       = this.config.partesMissa;
+  readonly tonsOptions       = TONS;
+  readonly tiposSecaoOptions = TIPOS;
+  readonly instrumentoOptions = [
+    { value: 'violao',   label: 'Violão' },
+    { value: 'guitarra', label: 'Guitarra' },
+    { value: 'cavaco',   label: 'Cavaquinho' },
+    { value: 'ukulele',  label: 'Ukulele' },
+  ];
+  readonly dificuldadeOptions = [
+    { value: 'iniciante',    label: 'Iniciante' },
+    { value: 'basico',       label: 'Básico' },
+    { value: 'intermediario', label: 'Intermediário' },
+    { value: 'avancado',     label: 'Avançado' },
+  ];
+
+  get idGerado(): string {
+    return this.cifra()?.id || '(preencha o título)';
   }
 
+  // ─── Inicialização ───────────────────────────────────────────────────────────
+
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    if (id) {
+      // Modo editar: carrega do servidor
+      this.loading.set(true);
+      this.cifraService.getCifra(id).subscribe(c => {
+        if (c) {
+          this.cifra.set(JSON.parse(JSON.stringify(c)));
+        } else {
+          this.notFound.set(true);
+          setTimeout(() => this.voltar(), 3000);
+        }
+        this.loading.set(false);
+      });
+    } else {
+      // Modo criar: verifica import pendente do CifraClub
+      const pending = this.cifraClub.pendingImport;
+      if (pending) {
+        this.cifraClub.pendingImport = null;
+        const tom = TONS.includes(pending.tom) ? pending.tom : 'C';
+        this.cifra.set({
+          ...CIFRA_VAZIA,
+          id:      slugify(pending.title || ''),
+          titulo:  pending.title  || '',
+          artista: pending.artist || '',
+          tom,
+          secoes: parseCifraTexto(pending.lyricsWithChords),
+        });
+        return;
+      }
+      const nome = this.route.snapshot.queryParamMap.get('nome') ?? '';
+      this.cifra.set({ ...CIFRA_VAZIA, titulo: nome, id: slugify(nome) });
+    }
+  }
+
+  // ─── Navegação ───────────────────────────────────────────────────────────────
+
   voltar() {
+    if (!this.modoEditar() && !confirm('Descartar a nova música?')) return;
+
     if (this.userMode()) {
       const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
       if (retornoLista) {
         const queryParams: Record<string, string> = {};
-        if (this._oldCifraId && this.cifra()?.id !== this._oldCifraId) {
+        if (this.modoEditar() && this._oldCifraId && this.cifra()?.id !== this._oldCifraId) {
           queryParams['replaceCifraId'] = this._oldCifraId;
-          queryParams['newCifraId'] = this.cifra()!.id;
+          queryParams['newCifraId']     = this.cifra()!.id;
         }
         this.router.navigate(['/minha-area/lista', retornoLista], {
           queryParams: Object.keys(queryParams).length ? queryParams : undefined,
@@ -78,14 +139,20 @@ export class CifraEditorComponent implements OnInit {
       }
       return;
     }
+
+    if (!this.modoEditar()) {
+      this.router.navigate(['/admin/painel'], { queryParams: { restaurarRascunho: 'true' } });
+      return;
+    }
+
     const retorno = this.route.snapshot.queryParamMap.get('retorno');
     if (retorno === 'painel') {
       const c = this.cifra();
       const queryParams: Record<string, string> = { restaurarRascunho: 'true' };
       if (this._salvouNestaSessao && c) {
-        queryParams['nomeCifra'] = c.titulo;
+        queryParams['nomeCifra']     = c.titulo;
         queryParams['cifraAdicionada'] = c.id;
-        queryParams['edicaoCifra'] = 'true';
+        queryParams['edicaoCifra']   = 'true';
       }
       this.router.navigate(['/admin/painel'], { queryParams });
     } else {
@@ -95,7 +162,35 @@ export class CifraEditorComponent implements OnInit {
     }
   }
 
-  // ─── Seções ─────────────────────────────────────────────────────────────────
+  // ─── Metadados ───────────────────────────────────────────────────────────────
+
+  updateMeta(field: keyof Cifra, value: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const updated = { ...c, [field]: value };
+      if (field === 'titulo' && !this.modoEditar()) updated.id = slugify(value);
+      return updated;
+    });
+    if (field === 'titulo') this.erroTitulo.set(false);
+  }
+
+  toggleCategoria(id: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const cats = c.categorias ?? [];
+      return { ...c, categorias: cats.includes(id) ? cats.filter(x => x !== id) : [...cats, id] };
+    });
+  }
+
+  toggleParte(id: string) {
+    this.cifra.update(c => {
+      if (!c) return c;
+      const partes = c.partesMissa ?? [];
+      return { ...c, partesMissa: partes.includes(id) ? partes.filter(x => x !== id) : [...partes, id] };
+    });
+  }
+
+  // ─── Seções ──────────────────────────────────────────────────────────────────
 
   addSecao() {
     const nova: Secao = { tipo: 'verso', label: 'Nova Seção', linhas: [{ letra: '', acordes: [] }] };
@@ -123,13 +218,11 @@ export class CifraEditorComponent implements OnInit {
     this.cifra.update(c => {
       if (!c) return c;
       const secoes = [...c.secoes];
-      const secao = secoes[idx];
+      const secao  = secoes[idx];
       if (tipo === 'tab') {
-        const tabText = secao.linhas.map(l => l.letra).join('\n');
-        secoes[idx] = { ...secao, tipo, linhas: [], tabText };
+        secoes[idx] = { ...secao, tipo, linhas: [], tabText: secao.linhas.map(l => l.letra).join('\n') };
       } else if (secao.tipo === 'tab') {
-        const linhas = (secao.tabText ?? '').split('\n').map(l => ({ letra: l, acordes: [] }));
-        secoes[idx] = { ...secao, tipo, linhas, tabText: undefined };
+        secoes[idx] = { ...secao, tipo, linhas: (secao.tabText ?? '').split('\n').map(l => ({ letra: l, acordes: [] })), tabText: undefined };
       } else {
         secoes[idx] = { ...secao, tipo };
       }
@@ -146,17 +239,13 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-  // ─── Linhas ─────────────────────────────────────────────────────────────────
+  // ─── Linhas ──────────────────────────────────────────────────────────────────
 
   addLinha(secaoIdx: number) {
-    const novaLinha: LinhaCifra = { letra: '', acordes: [] };
     this.cifra.update(c => {
       if (!c) return c;
       const secoes = [...c.secoes];
-      secoes[secaoIdx] = {
-        ...secoes[secaoIdx],
-        linhas: [...secoes[secaoIdx].linhas, novaLinha],
-      };
+      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas: [...secoes[secaoIdx].linhas, { letra: '', acordes: [] }] };
       return { ...c, secoes };
     });
   }
@@ -165,8 +254,7 @@ export class CifraEditorComponent implements OnInit {
     this.cifra.update(c => {
       if (!c) return c;
       const secoes = [...c.secoes];
-      const linhas = secoes[secaoIdx].linhas.filter((_, i) => i !== linhaIdx);
-      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas };
+      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas: secoes[secaoIdx].linhas.filter((_, i) => i !== linhaIdx) };
       return { ...c, secoes };
     });
   }
@@ -182,43 +270,32 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-  // ─── Metadados ──────────────────────────────────────────────────────────────
-
-  updateMeta(field: keyof Cifra, value: string) {
-    this.cifra.update(c => c ? { ...c, [field]: value } : c);
-  }
-
-  toggleCategoria(id: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const cats = c.categorias ?? [];
-      return { ...c, categorias: cats.includes(id) ? cats.filter(x => x !== id) : [...cats, id] };
-    });
-  }
-
-  toggleParte(id: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const partes = c.partesMissa ?? [];
-      return { ...c, partesMissa: partes.includes(id) ? partes.filter(x => x !== id) : [...partes, id] };
-    });
-  }
-
-  // ─── Salvar ─────────────────────────────────────────────────────────────────
+  // ─── Salvar ──────────────────────────────────────────────────────────────────
 
   salvar() {
     const c = this.cifra();
     if (!c) return;
-    const uid = this.auth.user()?.uid ?? '';
 
-    let cifraParaSalvar = c;
+    if (!this.modoEditar() && !c.titulo.trim()) {
+      this.erroTitulo.set(true);
+      return;
+    }
+
+    const uid     = this.auth.user()?.uid ?? '';
     const isAdmin = this.auth.hasRole('admin');
-    if (this.userMode() && !isAdmin && (c.status !== 'privada' || c.donoUid !== uid)) {
-      // Cria cópia privada com novo ID para não sobrescrever a música pública
-      this._oldCifraId = c.id;
-      const novoId = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-      cifraParaSalvar = { ...c, id: novoId, status: 'privada', donoUid: uid };
-      this.cifra.set(cifraParaSalvar);
+    let cifraParaSalvar = c;
+
+    if (this.modoEditar()) {
+      if (this.userMode() && !isAdmin && (c.status !== 'privada' || c.donoUid !== uid)) {
+        this._oldCifraId    = c.id;
+        const novoId        = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+        cifraParaSalvar     = { ...c, id: novoId, status: 'privada', donoUid: uid };
+        this.cifra.set(cifraParaSalvar);
+      }
+    } else {
+      if (this.userMode() && !isAdmin) {
+        cifraParaSalvar = { ...c, status: 'privada', donoUid: uid || undefined };
+      }
     }
 
     this.saving.set(true);
@@ -227,8 +304,27 @@ export class CifraEditorComponent implements OnInit {
         this.acordesService.syncAcordes(cifraParaSalvar);
         this.saving.set(false);
         this.saved.set(true);
-        this._salvouNestaSessao = true;
-        setTimeout(() => this.saved.set(false), 2500);
+
+        if (this.modoEditar()) {
+          this._salvouNestaSessao = true;
+          setTimeout(() => this.saved.set(false), 2500);
+        } else if (this.userMode()) {
+          const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
+          const parte        = this.route.snapshot.queryParamMap.get('parte') ?? 'entrada';
+          setTimeout(() => {
+            if (retornoLista) {
+              this.router.navigate(['/minha-area/lista', retornoLista], {
+                queryParams: { cifraAdicionada: cifraParaSalvar.id, nomeCifra: cifraParaSalvar.titulo, parte },
+              });
+            } else {
+              this.router.navigate(['/minha-area']);
+            }
+          }, 800);
+        } else {
+          setTimeout(() => this.router.navigate(['/admin/painel'], {
+            queryParams: { cifraAdicionada: cifraParaSalvar.id, nomeCifra: cifraParaSalvar.titulo },
+          }), 800);
+        }
       },
       error: (err: Error) => {
         this.saving.set(false);
@@ -247,8 +343,14 @@ export class CifraEditorComponent implements OnInit {
     });
   }
 
-  voltarParaVisualizacao() {
-    this.voltar();
+  async colarMusica() {
+    try {
+      this.colando.set(true);
+      const texto = await navigator.clipboard.readText();
+      const secoes = parseCifraTexto(texto);
+      this.cifra.update(c => c ? { ...c, secoes } : c);
+    } catch { /* permissão negada ou clipboard vazio */ }
+    finally { this.colando.set(false); }
   }
 
   // ─── Seleção / Copiar / Colar ────────────────────────────────────────────────
@@ -308,7 +410,7 @@ export class CifraEditorComponent implements OnInit {
     this.cifra.update(c => {
       if (!c) return c;
       const secoes = [...c.secoes];
-      const novas = [...secoes[si].linhas];
+      const novas  = [...secoes[si].linhas];
       novas.splice(li, 0, ...linhas.map(l => JSON.parse(JSON.stringify(l))));
       secoes[si] = { ...secoes[si], linhas: novas };
       return { ...c, secoes };

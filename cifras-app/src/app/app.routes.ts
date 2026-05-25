@@ -40,7 +40,7 @@ export const routes: Routes = [
         path: 'admin/nova-cifra',
         canActivate: [authGuard, roleGuard('editor')],
         loadComponent: () =>
-            import('./pages/admin/nova-cifra/nova-cifra').then(m => m.NovaCifraComponent),
+            import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
     },
     {
         path: 'admin/editar-cifra/:id',
@@ -73,7 +73,7 @@ export const routes: Routes = [
         canActivate: [authGuard, roleGuard('membro')],
         data: { userMode: true },
         loadComponent: () =>
-            import('./pages/admin/nova-cifra/nova-cifra').then(m => m.NovaCifraComponent),
+            import('./pages/admin/cifra-editor/cifra-editor').then(m => m.CifraEditorComponent),
     },
     {
         path: 'minha-area/editar-musica/:id',

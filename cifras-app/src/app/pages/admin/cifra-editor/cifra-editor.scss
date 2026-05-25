@@ -231,6 +231,9 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
 
     input {
@@ -247,6 +250,28 @@
         &:focus {
             border-color: var(--color-acorde);
         }
+    }
+
+    &.erro input {
+        border-color: #f87171;
+    }
+}
+
+.campo-erro {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #f87171;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.id-preview {
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+
+    code {
+        font-family: 'Fira Code', monospace;
     }
 }
 
