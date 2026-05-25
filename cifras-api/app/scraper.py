@@ -89,34 +89,54 @@ def _normalizar_tom(tom: str) -> str:
     tom = tom.strip()
     return tom if tom in _TONS_VALIDOS else 'C'
 
+_TOM_RE = re.compile(r'^[A-G][b#]?m?$')
+
 def _tom_from_next_data(html: str) -> Optional[str]:
-    """Tenta extrair o tom do __NEXT_DATA__ do Next.js."""
+    """Extrai o tom do __NEXT_DATA__ do Next.js navegando por caminhos específicos."""
     m = re.search(r'<script[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)</script>', html)
     if not m:
         return None
     try:
         data = json.loads(m.group(1))
-        # Procura recursivamente por chaves relacionadas ao tom
-        for key in ('cifraKey', 'key', 'tom', 'tone'):
-            val = _find_key(data, key)
-            if val and isinstance(val, str) and re.match(r'^[A-G][b#]?m?$', val):
+        page_props = data.get('props', {}).get('pageProps', {})
+
+        # Caminhos específicos conhecidos — evita pegar `key` de componentes React
+        paths = [
+            ['cifra', 'key'],
+            ['cifra', 'tom'],
+            ['cifra', 'cifraKey'],
+            ['data', 'cifra', 'key'],
+            ['data', 'key'],
+            ['song', 'key'],
+            ['song', 'tom'],
+        ]
+        for path in paths:
+            val = page_props
+            for step in path:
+                val = val.get(step) if isinstance(val, dict) else None
+            if isinstance(val, str) and _TOM_RE.match(val):
                 return val
+
+        # Fallback seguro: busca cifraKey em pageProps (nome único, não colide com React)
+        val = _find_specific_key(page_props, 'cifraKey')
+        if isinstance(val, str) and _TOM_RE.match(val):
+            return val
     except Exception:
         pass
     return None
 
-def _find_key(obj, key: str):
-    """Busca recursiva de uma chave em dicionário/lista aninhada."""
+def _find_specific_key(obj, key: str):
+    """Busca recursiva por uma chave específica (use apenas para nomes únicos)."""
     if isinstance(obj, dict):
         if key in obj:
             return obj[key]
         for v in obj.values():
-            result = _find_key(v, key)
+            result = _find_specific_key(v, key)
             if result is not None:
                 return result
     elif isinstance(obj, list):
         for item in obj:
-            result = _find_key(item, key)
+            result = _find_specific_key(item, key)
             if result is not None:
                 return result
     return None
@@ -139,10 +159,13 @@ def _parse_page(html: str, source_url: str) -> dict:
     tom_raw = (
         _tom_from_next_data(html)
         or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
-        or _match(html, r'data-cifra-key="([^"]+)"')
+        or _match(html, r'data-cifra-key="([A-G][b#]?m?)"')
         or _match(html, r'data-key="([A-G][b#]?m?)"')
-        or _match(html, r'"cifraKey"\s*:\s*"([^"]+)"')
-        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)[^"]*"')
+        or _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')
+        or _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')
+        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')
         or "C"
     )
     tom = _normalizar_tom(tom_raw)
