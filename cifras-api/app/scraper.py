@@ -79,6 +79,49 @@ async def importar_cifra(url: str) -> dict:
     return _parse_page(response.text, str(response.url))
 
 
+_TONS_VALIDOS = {
+    'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B',
+    'Cm', 'C#m', 'Dm', 'Ebm', 'Em', 'Fm', 'F#m', 'Gm', 'G#m', 'Am', 'Bbm', 'Bm',
+}
+
+def _normalizar_tom(tom: str) -> str:
+    """Valida o tom contra os tons suportados pelo sistema."""
+    tom = tom.strip()
+    return tom if tom in _TONS_VALIDOS else 'C'
+
+def _tom_from_next_data(html: str) -> Optional[str]:
+    """Tenta extrair o tom do __NEXT_DATA__ do Next.js."""
+    m = re.search(r'<script[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)</script>', html)
+    if not m:
+        return None
+    try:
+        data = json.loads(m.group(1))
+        # Procura recursivamente por chaves relacionadas ao tom
+        for key in ('cifraKey', 'key', 'tom', 'tone'):
+            val = _find_key(data, key)
+            if val and isinstance(val, str) and re.match(r'^[A-G][b#]?m?$', val):
+                return val
+    except Exception:
+        pass
+    return None
+
+def _find_key(obj, key: str):
+    """Busca recursiva de uma chave em dicionário/lista aninhada."""
+    if isinstance(obj, dict):
+        if key in obj:
+            return obj[key]
+        for v in obj.values():
+            result = _find_key(v, key)
+            if result is not None:
+                return result
+    elif isinstance(obj, list):
+        for item in obj:
+            result = _find_key(item, key)
+            if result is not None:
+                return result
+    return None
+
+
 def _parse_page(html: str, source_url: str) -> dict:
     title = (
         _match(html, r'<h1[^>]*itemprop="name"[^>]*>([^<]+)</h1>')
@@ -93,12 +136,16 @@ def _parse_page(html: str, source_url: str) -> dict:
         or ""
     )
 
-    tom = (
-        _match(source_url, r"[?&]tom=([A-G][^&]*)")
-        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*>\s*([A-G][^<]*?)\s*</a>')
+    tom_raw = (
+        _tom_from_next_data(html)
+        or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
         or _match(html, r'data-cifra-key="([^"]+)"')
+        or _match(html, r'data-key="([A-G][b#]?m?)"')
+        or _match(html, r'"cifraKey"\s*:\s*"([^"]+)"')
+        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)[^"]*"')
         or "C"
     )
+    tom = _normalizar_tom(tom_raw)
 
     raw = (
         _match(html, r'<pre[^>]*id="pre_cifra"[^>]*>([\s\S]*?)</pre>')
