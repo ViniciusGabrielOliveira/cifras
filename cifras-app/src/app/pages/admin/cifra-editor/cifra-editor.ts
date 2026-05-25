@@ -295,10 +295,20 @@ export class CifraEditorComponent implements OnInit {
 
     if (this.modoEditar()) {
       if (this.userMode() && !isAdmin && (c.status !== 'privada' || c.donoUid !== uid)) {
-        this._oldCifraId    = c.id;
-        const novoId        = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-        cifraParaSalvar     = { ...c, id: novoId, status: 'privada', donoUid: uid };
-        this.cifra.set(cifraParaSalvar);
+        // Cria cópia privada — verifica limite antes
+        this.cifraService.countCifrasDoUser(uid).subscribe(count => {
+          if (count >= 25) {
+            this.erroSalvar.set('Limite de 25 músicas editadas atingido. Remova uma antes de editar outra.');
+            setTimeout(() => this.erroSalvar.set(null), 5000);
+            return;
+          }
+          this._oldCifraId = c.id;
+          const novoId     = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+          const privada    = { ...c, id: novoId, status: 'privada' as const, donoUid: uid };
+          this.cifra.set(privada);
+          this._executarSalvar(privada);
+        });
+        return;
       }
     } else {
       if (this.userMode() && !isAdmin) {
@@ -306,6 +316,10 @@ export class CifraEditorComponent implements OnInit {
       }
     }
 
+    this._executarSalvar(cifraParaSalvar);
+  }
+
+  private _executarSalvar(cifraParaSalvar: Cifra) {
     this.saving.set(true);
     this.cifraService.salvarCifra(cifraParaSalvar).subscribe({
       next: () => {

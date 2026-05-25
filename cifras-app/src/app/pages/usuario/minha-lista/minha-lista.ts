@@ -205,8 +205,9 @@ export class MinhaListaComponent implements OnInit {
         this.linkConvite.set(`${base}/join/${token}`);
     }
 
-    cifraExiste(cifraId: string): boolean {
+    cifraExiste(cifraId: string, privada?: boolean): boolean {
         if (this.adminContext) return true;
+        if (privada) return true; // cópia privada do usuário — sempre existe
         return this.cifrasExistentes().has(cifraId);
     }
 
