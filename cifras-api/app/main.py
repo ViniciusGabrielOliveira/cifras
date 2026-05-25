@@ -13,11 +13,8 @@ Rate limit:   10 req/min por IP
 import asyncio
 import base64
 import json
-import logging
 import os
 from contextlib import asynccontextmanager
-
-logging.basicConfig(level=logging.INFO)
 
 from fastapi import FastAPI, HTTPException, Request, Security
 from fastapi.middleware.cors import CORSMiddleware

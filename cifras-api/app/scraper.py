@@ -8,12 +8,9 @@ Lógica de fetch e parse do Cifra Club.
 
 import re
 import json
-import logging
 import httpx
 from curl_cffi.requests import AsyncSession
 from typing import Optional
-
-logger = logging.getLogger(__name__)
 
 HEADERS_BROWSER = {
     "User-Agent": (
@@ -79,10 +76,7 @@ async def importar_cifra(url: str) -> dict:
         )
         response.raise_for_status()
 
-    html = response.text
-    logger.info('[scraper] url final: %s | status: %s | html[:300]: %s',
-                str(response.url), response.status_code, html[:300].replace('\n', ' '))
-    return _parse_page(html, str(response.url))
+    return _parse_page(response.text, str(response.url))
 
 
 _TONS_VALIDOS = {
@@ -90,23 +84,23 @@ _TONS_VALIDOS = {
     'Cm', 'C#m', 'Dm', 'Ebm', 'Em', 'Fm', 'F#m', 'Gm', 'G#m', 'Am', 'Bbm', 'Bm',
 }
 
+_TOM_RE = re.compile(r'^[A-G][b#]?m?$')
+
+
 def _normalizar_tom(tom: str) -> str:
     """Valida o tom contra os tons suportados pelo sistema."""
     tom = tom.strip()
     return tom if tom in _TONS_VALIDOS else 'C'
 
-_TOM_RE = re.compile(r'^[A-G][b#]?m?$')
 
 def _tom_from_next_data(html: str) -> Optional[str]:
     """Extrai o tom do __NEXT_DATA__ do Next.js navegando por caminhos específicos."""
     m = re.search(r'<script[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)</script>', html)
     if not m:
-        logger.info('[tom] __NEXT_DATA__ não encontrado no HTML')
         return None
     try:
         data = json.loads(m.group(1))
         page_props = data.get('props', {}).get('pageProps', {})
-        logger.info('[tom] pageProps keys: %s', list(page_props.keys()) if isinstance(page_props, dict) else type(page_props))
 
         paths = [
             ['cifra', 'key'],
@@ -121,18 +115,16 @@ def _tom_from_next_data(html: str) -> Optional[str]:
             val = page_props
             for step in path:
                 val = val.get(step) if isinstance(val, dict) else None
-            logger.info('[tom] path %s → %r', path, val)
             if isinstance(val, str) and _TOM_RE.match(val):
-                logger.info('[tom] encontrado via path %s: %s', path, val)
                 return val
 
         val = _find_specific_key(page_props, 'cifraKey')
-        logger.info('[tom] cifraKey via busca recursiva → %r', val)
         if isinstance(val, str) and _TOM_RE.match(val):
             return val
-    except Exception as e:
-        logger.warning('[tom] erro ao parsear __NEXT_DATA__: %s', e)
+    except Exception:
+        pass
     return None
+
 
 def _find_specific_key(obj, key: str):
     """Busca recursiva por uma chave específica (use apenas para nomes únicos)."""
@@ -165,22 +157,19 @@ def _parse_page(html: str, source_url: str) -> dict:
         or ""
     )
 
-    _candidates = [
-        ('cifra_tom_span', _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')),
-        ('next_data',      _tom_from_next_data(html)),
-        ('url_param',      _match(source_url, r"[?&]tom=([A-G][b#]?m?)")),
-        ('data-cifra-key', _match(html, r'data-cifra-key="([A-G][b#]?m?)"')),
-        ('data-key',       _match(html, r'data-key="([A-G][b#]?m?)"')),
-        ('json_cifraKey',  _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')),
-        ('json_tom',       _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')),
-        ('html_tom_param', _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')),
-        ('active_href1',   _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')),
-        ('active_href2',   _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')),
-    ]
-    logger.info('[tom] candidatos: %s', {k: v for k, v in _candidates})
-
-    tom_raw = next((v for _, v in _candidates if v), 'C')
-    logger.info('[tom] tom_raw selecionado: %r → normalizado: %r', tom_raw, _normalizar_tom(tom_raw))
+    tom_raw = (
+        _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')
+        or _tom_from_next_data(html)
+        or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
+        or _match(html, r'data-cifra-key="([A-G][b#]?m?)"')
+        or _match(html, r'data-key="([A-G][b#]?m?)"')
+        or _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')
+        or _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')
+        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')
+        or "C"
+    )
     tom = _normalizar_tom(tom_raw)
 
     raw = (
