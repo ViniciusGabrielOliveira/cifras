@@ -79,7 +79,10 @@ async def importar_cifra(url: str) -> dict:
         )
         response.raise_for_status()
 
-    return _parse_page(response.text, str(response.url))
+    html = response.text
+    logger.info('[scraper] url final: %s | status: %s | html[:300]: %s',
+                str(response.url), response.status_code, html[:300].replace('\n', ' '))
+    return _parse_page(html, str(response.url))
 
 
 _TONS_VALIDOS = {
@@ -163,15 +166,16 @@ def _parse_page(html: str, source_url: str) -> dict:
     )
 
     _candidates = [
-        ('next_data',     _tom_from_next_data(html)),
-        ('url_param',     _match(source_url, r"[?&]tom=([A-G][b#]?m?)")),
-        ('data-cifra-key',_match(html, r'data-cifra-key="([A-G][b#]?m?)"')),
-        ('data-key',      _match(html, r'data-key="([A-G][b#]?m?)"')),
-        ('json_cifraKey', _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')),
-        ('json_tom',      _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')),
-        ('html_tom_param',_match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')),
-        ('active_href1',  _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')),
-        ('active_href2',  _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')),
+        ('cifra_tom_span', _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')),
+        ('next_data',      _tom_from_next_data(html)),
+        ('url_param',      _match(source_url, r"[?&]tom=([A-G][b#]?m?)")),
+        ('data-cifra-key', _match(html, r'data-cifra-key="([A-G][b#]?m?)"')),
+        ('data-key',       _match(html, r'data-key="([A-G][b#]?m?)"')),
+        ('json_cifraKey',  _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')),
+        ('json_tom',       _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')),
+        ('html_tom_param', _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')),
+        ('active_href1',   _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')),
+        ('active_href2',   _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')),
     ]
     logger.info('[tom] candidatos: %s', {k: v for k, v in _candidates})
 
