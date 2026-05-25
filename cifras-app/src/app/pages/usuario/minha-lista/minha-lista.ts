@@ -51,6 +51,7 @@ export class MinhaListaComponent implements OnInit {
 
     // Cifras que existem (para badge "cifra removida")
     cifrasExistentes = signal<Set<string>>(new Set());
+    cifrasAutorMap   = signal<Map<string, string>>(new Map());
 
     readonly isDono = computed(() => {
         const uid = this.auth.user()?.uid;
@@ -137,6 +138,7 @@ export class MinhaListaComponent implements OnInit {
         // Carregar cifras existentes para badge "cifra removida"
         this.cifraService.getIndice().subscribe(items => {
             this.cifrasExistentes.set(new Set(items.map(i => i.id)));
+            this.cifrasAutorMap.set(new Map(items.map(i => [i.id, i.autor])));
         });
 
         const replaceCifraId = this.route.snapshot.queryParamMap.get('replaceCifraId');
@@ -203,6 +205,10 @@ export class MinhaListaComponent implements OnInit {
         if (!token) return;
         const base = document.baseURI.replace(/\/$/, '');
         this.linkConvite.set(`${base}/join/${token}`);
+    }
+
+    autorDaCifra(musica: MusicaLista): string {
+        return musica.autor || this.cifrasAutorMap().get(musica.cifraId) || '';
     }
 
     cifraExiste(cifraId: string, privada?: boolean): boolean {

@@ -438,6 +438,17 @@
     padding: 1.5rem 1.5rem 5rem;
 }
 
+@media (max-width: 500px) {
+    .main-content {
+        padding: 0;
+    }
+
+    .tabs {
+        padding-left: 1rem !important;
+        ;
+    }
+}
+
 /* ── Lista Header ─────────────────────────────────────────────────── */
 .lista-header {
     text-align: center;

@@ -172,7 +172,9 @@
           <div class="musica-info">
             <div class="musica-info-top">
               <span class="musica-nome" [class.musica-removida]="!cifraExiste(musica.cifraId, musica.privada)">{{ musica.nome }}</span>
-              <span class="musica-autor">{{ musica.autor }}</span>
+              @if (autorDaCifra(musica)) {
+                <span class="musica-autor">{{ autorDaCifra(musica) }}</span>
+              }
               @if (musica.privada) {
               <span class="musica-privada-badge">privada</span>
               }
