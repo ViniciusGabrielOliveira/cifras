@@ -61,22 +61,33 @@ async def buscar_sugestoes(termo: str) -> list[dict]:
 
 # ── Scraper ──────────────────────────────────────────────────────────────────
 
+_IMPERSONATE_VERSIONS = ["chrome131", "chrome124", "chrome120"]
+
 async def importar_cifra(url: str) -> dict:
     """
     Faz o fetch e parse de uma página do Cifra Club.
     Usa curl_cffi para imitar o TLS fingerprint do Chrome e passar pelo Akamai.
+    Tenta versões progressivamente mais antigas se a mais nova for bloqueada.
     """
-    async with AsyncSession() as session:
-        response = await session.get(
-            url,
-            impersonate="chrome120",
-            headers={"Accept-Language": "pt-BR,pt;q=0.9"},
-            timeout=15,
-            allow_redirects=True,
-        )
-        response.raise_for_status()
+    last_exc: Exception = RuntimeError("Nenhuma tentativa realizada")
 
-    return _parse_page(response.text, str(response.url))
+    for version in _IMPERSONATE_VERSIONS:
+        try:
+            async with AsyncSession() as session:
+                response = await session.get(
+                    url,
+                    impersonate=version,
+                    headers={"Accept-Language": "pt-BR,pt;q=0.9"},
+                    timeout=15,
+                    allow_redirects=True,
+                )
+                response.raise_for_status()
+            return _parse_page(response.text, str(response.url))
+        except Exception as exc:
+            last_exc = exc
+            continue
+
+    raise last_exc
 
 
 _TONS_VALIDOS = {
