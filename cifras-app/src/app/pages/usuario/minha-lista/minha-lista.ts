@@ -276,6 +276,7 @@ export class MinhaListaComponent implements OnInit {
         const atualizada = { ...lista, musicas: [...lista.musicas, novaMusica] };
         this.lista.set(atualizada);
         this.salvarLista(atualizada);
+        this.cifraService.atualizarListasIds(selecionada.cifraId, lista.id, 'add').subscribe();
         this.fecharModalBusca();
     }
 
@@ -325,12 +326,16 @@ export class MinhaListaComponent implements OnInit {
     removerMusica(musicaId: string) {
         const lista = this.lista();
         if (!lista) return;
+        const musicaRemovida = lista.musicas.find(m => m.id === musicaId);
         const atualizada = {
             ...lista,
             musicas: lista.musicas.filter(m => m.id !== musicaId).map((m, i) => ({ ...m, ordem: i })),
         };
         this.lista.set(atualizada);
         this.salvarLista(atualizada);
+        if (musicaRemovida) {
+            this.cifraService.atualizarListasIds(musicaRemovida.cifraId, lista.id, 'remove').subscribe();
+        }
         this.confirmandoRemoverMusica.set(null);
     }
 

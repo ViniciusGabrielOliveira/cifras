@@ -1,0 +1,83 @@
+<div class="pr-modal-backdrop" (click)="cancelar()"></div>
+
+<div class="pr-modal">
+
+  <!-- ── FLUXO: cifra nova ── -->
+  @if (fluxo() === 'nova_cifra') {
+    <h2 class="pr-modal__titulo">Tornar cifra pública?</h2>
+    <p class="pr-modal__descricao">
+      Sua cifra <strong>"{{ tituloCifra() }}"</strong> será enviada para revisão.
+      Quando aprovada pelo admin ela ficará visível para todos.
+      Por enquanto ela fica só com você.
+    </p>
+    <div class="pr-modal__acoes">
+      <button class="btn btn--secondary" (click)="salvarPrivada()" [disabled]="submitting()">
+        Salvar só para mim
+      </button>
+      <button class="btn btn--primary" (click)="confirmarNovaPublica()" [disabled]="submitting()">
+        @if (submitting()) { Enviando... } @else { Enviar para revisão }
+      </button>
+    </div>
+  }
+
+  <!-- ── FLUXO: nova versão ── -->
+  @if (fluxo() === 'nova_versao') {
+
+    <!-- Passo: inicio -->
+    @if (passo() === 'inicio') {
+      <h2 class="pr-modal__titulo">Cifra já existe</h2>
+      <p class="pr-modal__descricao">
+        Detectamos que já existe uma versão pública de
+        <strong>"{{ tituloCifra() }}"</strong>.
+        Deseja criar uma nova versão para revisão?
+      </p>
+      <div class="pr-modal__acoes">
+        <button class="btn btn--ghost" (click)="cancelar()">Cancelar</button>
+        <button class="btn btn--primary" (click)="irParaMotivo()">
+          Criar nova versão
+        </button>
+      </div>
+    }
+
+    <!-- Passo: motivo -->
+    @if (passo() === 'motivo') {
+      <h2 class="pr-modal__titulo">Qual o motivo?</h2>
+      <p class="pr-modal__descricao">Isso ajuda o admin a entender a mudança.</p>
+
+      <div class="pr-modal__motivos">
+        @for (item of motivos; track item[0]) {
+          <button
+            class="pr-modal__motivo-btn"
+            [class.pr-modal__motivo-btn--ativo]="motivoSelecionado() === item[0]"
+            (click)="selecionarMotivo(item[0])"
+          >
+            {{ item[1] }}
+          </button>
+        }
+      </div>
+
+      @if (motivoSelecionado() === 'outros') {
+        <textarea
+          class="pr-modal__motivo-texto"
+          placeholder="Descreva o motivo..."
+          rows="3"
+          [value]="motivoCustom()"
+          (input)="motivoCustom.set($any($event.target).value)"
+        ></textarea>
+      }
+
+      <div class="pr-modal__acoes">
+        <button class="btn btn--ghost" (click)="voltar()">Voltar</button>
+        <button
+          class="btn btn--primary"
+          (click)="confirmarNovaVersao()"
+          [disabled]="!motivoValido() || submitting()"
+        >
+          @if (submitting()) { Enviando... } @else { Enviar para revisão }
+        </button>
+      </div>
+    }
+
+  }
+
+</div>

@@ -1,7 +1,8 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, tap } from 'rxjs';
-import { Cifra } from '../models/cifra.model';
+import { Observable, switchMap, tap, of } from 'rxjs';
+import { Cifra, CifraPR, CifraVersao, MotivoVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
+import { CifraFirebaseRepository } from '../repositories/cifra-firebase.repository';
 import { AcordesService } from './acordes.service';
 
 /**
@@ -59,5 +60,119 @@ export class CifraService {
 
   countCifrasDoUser(uid: string): Observable<number> {
     return this.repo.countCifrasDoUser(uid);
+  }
+
+  // ── Controle de visibilidade via listas ──────────────────────────
+
+  atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void> {
+    return this.repo.atualizarListasIds(cifraId, listaId, operacao);
+  }
+
+  // ── Pull Requests ────────────────────────────────────────────────
+
+  submeterPR(
+    cifra: Omit<Cifra, 'id' | 'listasIds'>,
+    cifraId: string | null,
+    autorUid: string,
+    autorNome: string,
+    motivo?: MotivoVersao,
+    motivoCustom?: string,
+  ): Observable<CifraPR> {
+    const pr: Omit<CifraPR, 'id'> = {
+      cifraId,
+      tipo: cifraId ? 'nova_versao' : 'nova_cifra',
+      dados: cifra,
+      autorUid,
+      autorNome,
+      motivo,
+      motivoCustom,
+      status: 'pendente',
+      criadoEm: new Date().toISOString(),
+    };
+    return this.repo.criarPR(pr);
+  }
+
+  getPRsPendentes(): Observable<CifraPR[]> {
+    return this.repo.getPRsPendentes();
+  }
+
+  getPRsDoUser(uid: string): Observable<CifraPR[]> {
+    return this.repo.getPRsDoUser(uid);
+  }
+
+  getPR(id: string): Observable<CifraPR | undefined> {
+    return this.repo.getPR(id);
+  }
+
+  /**
+   * Aprova uma PR:
+   * - nova_cifra: cria a cifra com status 'publica'
+   * - nova_versao: arquiva versão atual em subcoleção e atualiza a cifra
+   */
+  aprovarPR(pr: CifraPR, reviewerUid: string, nota?: string): Observable<void> {
+    if (pr.tipo === 'nova_cifra') {
+      const novaCifra: Cifra = {
+        ...pr.dados,
+        id: this.gerarSlug(pr.dados.titulo, pr.dados.artista),
+        status: 'publica',
+      };
+      return this.repo.updateCifra(novaCifra).pipe(
+        switchMap(() => this.repo.resolverPR(pr.id, 'aprovado', reviewerUid, nota)),
+      );
+    }
+
+    // nova_versao: busca cifra atual, arquiva e aplica nova versão
+    return this.repo.getCifra(pr.cifraId!).pipe(
+      switchMap(cifraAtual => {
+        if (!cifraAtual) throw new Error('Cifra original não encontrada');
+        const versaoArquivada: CifraVersao = {
+          id: '',
+          titulo: cifraAtual.titulo,
+          artista: cifraAtual.artista,
+          tom: cifraAtual.tom,
+          instrumento: cifraAtual.instrumento,
+          dificuldade: cifraAtual.dificuldade,
+          composicao: cifraAtual.composicao,
+          secoes: cifraAtual.secoes,
+          aprovadoEm: new Date().toISOString(),
+          autorUid: cifraAtual.donoUid ?? '',
+          autorNome: '',
+          motivo: pr.motivo,
+          motivoCustom: pr.motivoCustom,
+        };
+        const cifraAtualizada: Cifra = {
+          ...cifraAtual,
+          ...pr.dados,
+          id: cifraAtual.id,
+          status: 'publica',
+        };
+        return this.repo.updateCifra(cifraAtualizada).pipe(
+          switchMap(() => this.salvarVersaoArquivada(cifraAtual.id, versaoArquivada)),
+          switchMap(() => this.repo.resolverPR(pr.id, 'aprovado', reviewerUid, nota)),
+        );
+      }),
+    );
+  }
+
+  rejeitarPR(prId: string, reviewerUid: string, nota?: string): Observable<void> {
+    return this.repo.resolverPR(prId, 'rejeitado', reviewerUid, nota);
+  }
+
+  getVersoes(cifraId: string): Observable<CifraVersao[]> {
+    return this.repo.getVersoes(cifraId);
+  }
+
+  private salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
+    if (this.repo instanceof CifraFirebaseRepository) {
+      return this.repo.salvarVersaoArquivada(cifraId, versao);
+    }
+    return of(undefined);
+  }
+
+  private gerarSlug(titulo: string, artista: string): string {
+    const slugify = (s: string) => s.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
+    return `${slugify(artista)}-${slugify(titulo)}`;
   }
 }

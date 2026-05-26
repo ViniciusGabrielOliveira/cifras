@@ -1,0 +1,99 @@
+@if (notificacao()) {
+  <div class="toast-ok">{{ notificacao() }}</div>
+}
+@if (erroMsg()) {
+  <div class="toast-erro">{{ erroMsg() }}</div>
+}
+
+<div class="prs-page">
+
+  <!-- ── Lista de PRs ──────────────────────────────────────── -->
+  <div class="prs-lista" [class.prs-lista--oculta]="!!prSelecionada()">
+    <h2 class="prs-titulo">Solicitações pendentes</h2>
+
+    @if (carregando()) {
+      <p class="prs-empty">Carregando...</p>
+    } @else if (prs().length === 0) {
+      <p class="prs-empty">Nenhuma solicitação pendente.</p>
+    } @else {
+      <ul class="prs-items">
+        @for (pr of prs(); track pr.id) {
+          <li class="prs-item" (click)="abrirPR(pr)">
+            <div class="prs-item__badge prs-item__badge--{{ pr.tipo }}">
+              {{ pr.tipo === 'nova_cifra' ? 'Nova' : 'Versão' }}
+            </div>
+            <div class="prs-item__info">
+              <strong>{{ pr.dados.titulo }}</strong> — {{ pr.dados.artista }}
+              <span class="prs-item__meta">{{ pr.autorNome }} · {{ formatarData(pr.criadoEm) }}</span>
+            </div>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+
+  <!-- ── Detalhe da PR ──────────────────────────────────────── -->
+  @if (prSelecionada(); as pr) {
+    <div class="pr-detalhe">
+      <div class="pr-detalhe__header">
+        <button class="btn btn--ghost btn--sm" (click)="fecharPR()">← Voltar</button>
+        <div class="pr-detalhe__badges">
+          <span class="prs-item__badge prs-item__badge--{{ pr.tipo }}">
+            {{ pr.tipo === 'nova_cifra' ? 'Nova cifra' : 'Nova versão' }}
+          </span>
+        </div>
+      </div>
+
+      <h2 class="pr-detalhe__titulo">{{ pr.dados.titulo }} — {{ pr.dados.artista }}</h2>
+      <p class="pr-detalhe__meta">
+        Enviado por <strong>{{ pr.autorNome }}</strong> em {{ formatarData(pr.criadoEm) }}
+      </p>
+
+      @if (motivoLabel()) {
+        <p class="pr-detalhe__motivo">
+          Motivo: <strong>{{ motivoLabel() }}</strong>
+        </p>
+      }
+
+      <!-- Diff -->
+      <div class="pr-diff">
+        @if (pr.tipo === 'nova_versao' && !cifraOriginal()) {
+          <p class="pr-diff__loading">Carregando versão original...</p>
+        } @else {
+          @for (linha of diff(); track $index) {
+            <div class="pr-diff__linha pr-diff__linha--{{ linha.tipo }}">
+              <span class="pr-diff__sinal">
+                @if (linha.tipo === 'adicionada') { + }
+                @else if (linha.tipo === 'removida') { - }
+                @else { &nbsp; }
+              </span>
+              <span class="pr-diff__texto">{{ linha.texto || '&nbsp;' }}</span>
+            </div>
+          }
+        }
+      </div>
+
+      <!-- Ações -->
+      <div class="pr-detalhe__acoes">
+        <div class="pr-detalhe__nota">
+          <label>Nota (opcional):</label>
+          <input
+            type="text"
+            placeholder="Comentário ao autor..."
+            [value]="notaRejeicao()"
+            (input)="notaRejeicao.set($any($event.target).value)"
+          />
+        </div>
+        <div class="pr-detalhe__botoes">
+          <button class="btn btn--danger" (click)="rejeitar()" [disabled]="resolvendo()">
+            @if (resolvendo()) { Processando... } @else { Rejeitar }
+          </button>
+          <button class="btn btn--success" (click)="aprovar()" [disabled]="resolvendo()">
+            @if (resolvendo()) { Processando... } @else { Aprovar e publicar }
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+
+</div>

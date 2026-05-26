@@ -6,14 +6,18 @@ import {
   doc,
   getDoc,
   setDoc,
+  updateDoc,
   deleteDoc,
   getDocs,
+  addDoc,
   collection,
   query,
   where,
   onSnapshot,
+  arrayUnion,
+  arrayRemove,
 } from 'firebase/firestore';
-import { Cifra } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 @Injectable()
@@ -62,6 +66,8 @@ export class CifraFirebaseRepository extends CifraRepository {
       titulo: cifra.titulo,
       autor: cifra.artista,
       letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
+      categorias: cifra.categorias ?? [],
+      partesMissa: cifra.partesMissa ?? [],
     };
     const ops: Promise<any>[] = [setDoc(cifraRef, cifra)];
     if (!cifra.status || cifra.status === 'publica') {
@@ -102,6 +108,12 @@ export class CifraFirebaseRepository extends CifraRepository {
     );
   }
 
+  override getCifrasPorParteOrdenadas(parte: string): Observable<Cifra[]> {
+    return this.getCifrasPorParte(parte).pipe(
+      map(cifras => cifras.sort((a, b) => (b.nota ?? 0) - (a.nota ?? 0))),
+    );
+  }
+
   override getCifrasDoUser(uid: string): Observable<Cifra[]> {
     const q = query(
       collection(this.firestore, 'cifras'),
@@ -123,5 +135,82 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   override countCifrasDoUser(uid: string): Observable<number> {
     return this.getCifrasDoUser(uid).pipe(map(list => list.length));
+  }
+
+  // ── Controle de visibilidade via listas ─────────────────────────
+
+  override atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void> {
+    const cifraRef = doc(this.firestore, `cifras/${cifraId}`);
+    const op = operacao === 'add' ? arrayUnion(listaId) : arrayRemove(listaId);
+    return from(updateDoc(cifraRef, { listasIds: op })).pipe(
+      map(() => undefined),
+      catchError(() => of(undefined)), // fire-and-forget — não bloqueia fluxo principal
+    );
+  }
+
+  // ── Pull Requests ────────────────────────────────────────────────
+
+  override criarPR(pr: Omit<CifraPR, 'id'>): Observable<CifraPR> {
+    const col = collection(this.firestore, 'cifras_pr');
+    return from(addDoc(col, pr)).pipe(
+      map(ref => ({ ...pr, id: ref.id })),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao criar solicitação'))),
+    );
+  }
+
+  override getPRsPendentes(): Observable<CifraPR[]> {
+    const q = query(collection(this.firestore, 'cifras_pr'), where('status', '==', 'pendente'));
+    return from(getDocs(q)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as CifraPR)),
+      catchError(() => of([])),
+    );
+  }
+
+  override getPRsDoUser(uid: string): Observable<CifraPR[]> {
+    const q = query(collection(this.firestore, 'cifras_pr'), where('autorUid', '==', uid));
+    return from(getDocs(q)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as CifraPR)),
+      catchError(() => of([])),
+    );
+  }
+
+  override getPR(id: string): Observable<CifraPR | undefined> {
+    const ref = doc(this.firestore, `cifras_pr/${id}`);
+    return from(getDoc(ref)).pipe(
+      map(snap => snap.exists() ? { ...snap.data(), id: snap.id } as CifraPR : undefined),
+      catchError(() => of(undefined)),
+    );
+  }
+
+  override resolverPR(prId: string, status: 'aprovado' | 'rejeitado', reviewerUid: string, nota?: string): Observable<void> {
+    const ref = doc(this.firestore, `cifras_pr/${prId}`);
+    const update: Record<string, unknown> = {
+      status,
+      reviewerUid,
+      resolvidoEm: new Date().toISOString(),
+    };
+    if (nota) update['reviewerNota'] = nota;
+    return from(updateDoc(ref, update)).pipe(
+      map(() => undefined),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao resolver PR'))),
+    );
+  }
+
+  // ── Versões aprovadas ────────────────────────────────────────────
+
+  override getVersoes(cifraId: string): Observable<CifraVersao[]> {
+    const col = collection(this.firestore, `cifras/${cifraId}/versoes`);
+    return from(getDocs(col)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as CifraVersao)),
+      catchError(() => of([])),
+    );
+  }
+
+  salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
+    const col = collection(this.firestore, `cifras/${cifraId}/versoes`);
+    return from(addDoc(col, versao)).pipe(
+      map(() => undefined),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao arquivar versão'))),
+    );
   }
 }

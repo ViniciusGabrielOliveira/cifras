@@ -260,7 +260,7 @@
         Importando do Cifra Club...
       </div>
     } @else {
-      <app-musica-search [modoEmbutido]="true"
+      <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true"
         [mostrarCifraClub]="podeBuscarCifraClub()"
         (musicaSelecionada)="onMusicaSelecionada($event)"
         (cifraClubSelecionada)="onCifraClubSelecionada($event)"

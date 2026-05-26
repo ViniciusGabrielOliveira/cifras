@@ -1,0 +1,220 @@
+.prs-page {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.prs-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+}
+
+// ── Lista ────────────────────────────────────────────────────────
+
+.prs-lista {
+  flex: 0 0 340px;
+
+  &--oculta {
+    display: none;
+    @media (min-width: 900px) { display: block; }
+  }
+}
+
+.prs-empty {
+  color: var(--text-secondary, #666);
+  font-size: 0.9rem;
+}
+
+.prs-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prs-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border, #e0e0e0);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+
+  &:hover {
+    border-color: var(--primary, #1a73e8);
+    background: var(--surface-hover, #f5f8ff);
+  }
+
+  &__badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    &--nova_cifra {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    &--nova_versao {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.9rem;
+    min-width: 0;
+
+    strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  }
+
+  &__meta {
+    font-size: 0.78rem;
+    color: var(--text-secondary, #666);
+  }
+}
+
+// ── Detalhe ──────────────────────────────────────────────────────
+
+.pr-detalhe {
+  flex: 1;
+  min-width: 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__badges {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+  }
+
+  &__meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #666);
+    margin: 0 0 0.5rem;
+  }
+
+  &__motivo {
+    font-size: 0.9rem;
+    margin: 0 0 1rem;
+    color: var(--text-secondary, #555);
+  }
+
+  &__acoes {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__nota {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    label { font-size: 0.85rem; font-weight: 500; }
+
+    input {
+      padding: 0.5rem 0.75rem;
+      border: 1.5px solid var(--border, #ddd);
+      border-radius: 6px;
+      font-size: 0.9rem;
+
+      &:focus { outline: none; border-color: var(--primary, #1a73e8); }
+    }
+  }
+
+  &__botoes {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+  }
+}
+
+// ── Diff ─────────────────────────────────────────────────────────
+
+.pr-diff {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  border: 1px solid var(--border, #e0e0e0);
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  &__loading {
+    padding: 1rem;
+    color: var(--text-secondary, #666);
+    font-size: 0.85rem;
+    font-family: inherit;
+  }
+
+  &__linha {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1px 0.75rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    &--adicionada { background: #e6ffec; color: #1a7f37; }
+    &--removida   { background: #ffebe9; color: #cf222e; text-decoration: line-through; }
+    &--igual      { background: transparent; color: var(--text-primary, #333); }
+  }
+
+  &__sinal {
+    flex-shrink: 0;
+    width: 1ch;
+    font-weight: 700;
+  }
+}
+
+.toast-ok {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  background: #2e7d32;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.toast-erro {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  background: #c62828;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

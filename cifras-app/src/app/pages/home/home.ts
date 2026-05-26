@@ -8,7 +8,7 @@ import { ListaService } from '../../services/lista.service';
 import { CifraService } from '../../services/cifra.service';
 import { ConfigService } from '../../services/config.service';
 import { AuthService } from '../../services/auth.service';
-import { Cifra } from '../../models/cifra.model';
+import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
 import { LiveService } from '../../services/live.service';
@@ -126,6 +126,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     deltasTom = signal<Record<string, number>>({});
     fontesSize = signal<Record<string, number>>({});
     private deltasInicializados = new Set<string>();
+
+    // ── Versões ──────────────────────────────────────────────────────
+    // keyed by cifraId
+    versoesCache = signal<Record<string, CifraVersao[]>>({});
+    versoesSelecionadas = signal<Record<string, string | null>>({});
 
     // ── Labels (template) ────────────────────────────────────────────
     get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
@@ -286,6 +291,14 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
             if (cifra && tomAlvo) this.inicializarDelta(musicaId, cifra.tom, tomAlvo);
         });
+        // Carrega versões arquivadas (fire-and-forget)
+        if (!(cifraId in this.versoesCache())) {
+            this.cifraService.getVersoes(cifraId).subscribe(versoes => {
+                if (versoes.length > 0) {
+                    this.versoesCache.update(v => ({ ...v, [cifraId]: versoes }));
+                }
+            });
+        }
     }
 
     private inicializarDelta(musicaId: string, tomOriginal: string, tomAlvo: string) {
@@ -306,7 +319,33 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     getCifraTransposta(cifra: Cifra, musicaId: string): Cifra {
         const delta = this.deltasTom()[musicaId] ?? 0;
-        return transporCifra(cifra, delta);
+        return transporCifra(this.aplicarVersao(cifra), delta);
+    }
+
+    private aplicarVersao(cifra: Cifra): Cifra {
+        const versaoId = this.versoesSelecionadas()[cifra.id];
+        if (!versaoId) return cifra;
+        const versao = (this.versoesCache()[cifra.id] ?? []).find(v => v.id === versaoId);
+        return versao ? { ...cifra, secoes: versao.secoes, tom: versao.tom } : cifra;
+    }
+
+    getVersoes(cifraId: string): CifraVersao[] {
+        return this.versoesCache()[cifraId] ?? [];
+    }
+
+    getVersaoSelecionada(cifraId: string): string | null {
+        return this.versoesSelecionadas()[cifraId] ?? null;
+    }
+
+    selecionarVersao(cifraId: string, versaoId: string | null, musicaId: string) {
+        this.versoesSelecionadas.update(v => ({ ...v, [cifraId]: versaoId }));
+        // Reseta delta pois o tom base pode ser diferente entre versões
+        this.deltasTom.update(m => ({ ...m, [musicaId]: 0 }));
+        this.deltasInicializados.delete(musicaId);
+    }
+
+    formatarDataVersao(iso: string): string {
+        return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: '2-digit' });
     }
 
     mudarTom(musicaId: string, delta: number) {

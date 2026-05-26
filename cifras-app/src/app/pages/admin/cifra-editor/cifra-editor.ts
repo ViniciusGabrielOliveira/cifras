@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
-import { Cifra, LinhaCifra, Secao, TipoSecao } from '../../../models/cifra.model';
+import { Cifra, LinhaCifra, Secao, TipoSecao, MotivoVersao } from '../../../models/cifra.model';
 import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
+import { CifraPrModalComponent, FluxoPR, ResultadoPRModal } from '../../../components/cifra-pr-modal/cifra-pr-modal';
 import { CifraService } from '../../../services/cifra.service';
 import { AcordesService } from '../../../services/acordes.service';
 import { ConfigService } from '../../../services/config.service';
@@ -25,7 +26,7 @@ const CIFRA_VAZIA: Cifra = {
 @Component({
   selector: 'app-cifra-editor',
   standalone: true,
-  imports: [CommonModule, FormsModule, DragDropModule, LinhaEditorComponent, AppSelectComponent],
+  imports: [CommonModule, FormsModule, DragDropModule, LinhaEditorComponent, AppSelectComponent, CifraPrModalComponent],
   templateUrl: './cifra-editor.html',
   styleUrl: './cifra-editor.scss',
 })
@@ -54,6 +55,12 @@ export class CifraEditorComponent implements OnInit {
   erroSalvar  = signal<string | null>(null);
   modoTexto   = signal(false);
   textoEditor = signal('');
+
+  // ── Modal PR ─────────────────────────────────────────────────────
+  modalPRAberto    = signal(false);
+  modalPRFluxo     = signal<FluxoPR>('nova_cifra');
+  modalPRSubmitting = signal(false);
+  private _cifraParaPR: Cifra | null = null;
 
   private _salvouNestaSessao = false;
   private _oldCifraId: string | null = null;
@@ -291,11 +298,26 @@ export class CifraEditorComponent implements OnInit {
 
     const uid     = this.auth.user()?.uid ?? '';
     const isAdmin = this.auth.hasRole('admin');
-    let cifraParaSalvar = c;
 
-    if (this.modoEditar()) {
-      if (this.userMode() && !isAdmin && (c.status !== 'privada' || c.donoUid !== uid)) {
-        // Cria cópia privada — verifica limite antes
+    if (this.userMode() && !isAdmin) {
+      if (!this.modoEditar()) {
+        // Nova cifra: pergunta se quer submeter como pública
+        this._cifraParaPR = { ...c, donoUid: uid };
+        this.modalPRFluxo.set('nova_cifra');
+        this.modalPRAberto.set(true);
+        return;
+      }
+
+      if (c.status === 'publica') {
+        // Editando cifra pública: abre fluxo de nova versão
+        this._cifraParaPR = c;
+        this.modalPRFluxo.set('nova_versao');
+        this.modalPRAberto.set(true);
+        return;
+      }
+
+      if (c.status !== 'privada' || c.donoUid !== uid) {
+        // Editando cifra de outro: cria cópia privada (comportamento legado)
         this.cifraService.countCifrasDoUser(uid).subscribe(count => {
           if (count >= 25) {
             this.erroSalvar.set('Limite de 25 músicas editadas atingido. Remova uma antes de editar outra.');
@@ -303,20 +325,67 @@ export class CifraEditorComponent implements OnInit {
             return;
           }
           this._oldCifraId = c.id;
-          const novoId     = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-          const privada    = { ...c, id: novoId, status: 'privada' as const, donoUid: uid };
+          const novoId = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+          const privada = { ...c, id: novoId, status: 'privada' as const, donoUid: uid };
           this.cifra.set(privada);
           this._executarSalvar(privada);
         });
         return;
       }
-    } else {
-      if (this.userMode() && !isAdmin) {
-        cifraParaSalvar = { ...c, status: 'privada', donoUid: uid || undefined };
-      }
     }
 
-    this._executarSalvar(cifraParaSalvar);
+    this._executarSalvar(c);
+  }
+
+  onResultadoPRModal(resultado: ResultadoPRModal) {
+    this.modalPRAberto.set(false);
+    const c = this._cifraParaPR;
+    if (!c) return;
+
+    if (resultado.acao === 'cancelar') return;
+
+    if (resultado.acao === 'salvar_privada') {
+      const uid = this.auth.user()?.uid ?? '';
+      const privada = { ...c, status: 'privada' as const, donoUid: uid };
+      this.cifra.set(privada);
+      this._executarSalvar(privada);
+      return;
+    }
+
+    // submeter_pr
+    const uid      = this.auth.user()?.uid ?? '';
+    const userName = this.auth.user()?.displayName ?? uid;
+    const cifraId  = this.modalPRFluxo() === 'nova_versao' ? c.id : null;
+    const { id: _id, listasIds: _l, ...dadosCifra } = c as any;
+
+    this.modalPRSubmitting.set(true);
+    this.cifraService.submeterPR(
+      dadosCifra,
+      cifraId,
+      uid,
+      userName,
+      resultado.motivo,
+      resultado.motivoCustom,
+    ).subscribe({
+      next: () => {
+        this.modalPRSubmitting.set(false);
+        this._cifraParaPR = null;
+        this.saved.set(true);
+        setTimeout(() => {
+          const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
+          if (retornoLista) {
+            this.router.navigate(['/minha-area/lista', retornoLista]);
+          } else {
+            this.router.navigate(['/minha-area']);
+          }
+        }, 800);
+      },
+      error: (err: Error) => {
+        this.modalPRSubmitting.set(false);
+        this.erroSalvar.set(err.message || 'Erro ao enviar solicitação.');
+        setTimeout(() => this.erroSalvar.set(null), 5000);
+      },
+    });
   }
 
   private _executarSalvar(cifraParaSalvar: Cifra) {

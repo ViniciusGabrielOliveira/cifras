@@ -83,11 +83,104 @@
   }
 }
 
-/* ── Filtros ───────────────────────────────────────────────────── */
+/* ── Filtros de tipo (Tudo / Título / Autor / Letra) ───────────── */
 .search-filters-row {
   display: flex;
   gap: 8px;
-  padding: 0 4px 12px 4px;
+  padding: 0 4px 10px 4px;
+}
+
+/* ── Filtros avançados (Partes da Missa / Categorias) ──────────── */
+.advanced-filters-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 4px 10px 4px;
+  flex-shrink: 0;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+
+  &:focus {
+    border-color: var(--color-acorde);
+    box-shadow: 0 0 0 2px rgba(124, 106, 253, 0.12);
+  }
+
+  option {
+    background: #1e2130;
+    color: var(--color-text);
+
+    &:disabled {
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+/* ── Pills de filtros selecionados ─────────────────────────────── */
+.filter-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 4px 10px 4px;
+  flex-shrink: 0;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 6px 3px 10px;
+  border-radius: 12px;
+  font-size: 0.73rem;
+  font-weight: 600;
+
+  &.pill-parte {
+    background: rgba(124, 106, 253, 0.15);
+    border: 1px solid rgba(124, 106, 253, 0.3);
+    color: var(--color-acorde);
+  }
+
+  &.pill-categoria {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    color: #4ade80;
+  }
+}
+
+.pill-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 0.6rem;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 0;
+  border-radius: 50%;
+  transition: opacity 0.15s, background 0.15s;
+
+  &:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .filter-btn {

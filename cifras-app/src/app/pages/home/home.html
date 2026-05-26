@@ -281,6 +281,22 @@
                         </div>
                     </div>
 
+                    @if (getVersoes(cifra.id).length > 0) {
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Versão</span>
+                        <select
+                            class="versao-select"
+                            [value]="getVersaoSelecionada(cifra.id) ?? ''"
+                            (change)="selecionarVersao(cifra.id, $any($event.target).value || null, musica.id)"
+                        >
+                            <option value="">Atual</option>
+                            @for (v of getVersoes(cifra.id); track v.id) {
+                                <option [value]="v.id">{{ formatarDataVersao(v.aprovadoEm) }}</option>
+                            }
+                        </select>
+                    </div>
+                    }
+
                     <div style="flex: 1"></div>
 
                     <a class="btn-edit" [routerLink]="['/editor', cifra.id]">
@@ -347,7 +363,8 @@
         <button class="modal-close-home" (click)="fecharModalAdicionarMusica()">✕</button>
     </div>
     <div class="modal-body-home">
-        <app-musica-search [modoEmbutido]="true" (musicaSelecionada)="onMusicaSelecionadaHome($event)"
+        <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true"
+            (musicaSelecionada)="onMusicaSelecionadaHome($event)"
             (cadastrarNova)="onCadastrarNovaHome($event)" />
     </div>
 </div>

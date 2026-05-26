@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, tap, map, shareReplay, BehaviorSubject } from 'rxjs';
-import { Cifra } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 const LS_PREFIX = 'cifras_mock_';
@@ -56,7 +56,9 @@ export class CifraMockRepository extends CifraRepository {
                 id: cifra.id,
                 titulo: cifra.titulo,
                 autor: cifra.artista,
-                letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' ')
+                letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
+                categorias: cifra.categorias ?? [],
+                partesMissa: cifra.partesMissa ?? [],
             };
             const idx = current.findIndex(x => x.id === cifra.id);
             if (idx >= 0) {
@@ -116,7 +118,9 @@ export class CifraMockRepository extends CifraRepository {
                         id: cifra.id,
                         titulo: cifra.titulo,
                         autor: cifra.artista,
-                        letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' ')
+                        letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
+                        categorias: cifra.categorias ?? [],
+                        partesMissa: cifra.partesMissa ?? [],
                     });
                 } catch {}
             }
@@ -171,4 +175,22 @@ export class CifraMockRepository extends CifraRepository {
     override countCifrasDoUser(uid: string): Observable<number> {
         return this.getCifrasDoUser(uid).pipe(map(list => list.length));
     }
+
+    override atualizarListasIds(_cifraId: string, _listaId: string, _op: 'add' | 'remove'): Observable<void> {
+        return of(undefined);
+    }
+
+    override criarPR(pr: Omit<CifraPR, 'id'>): Observable<CifraPR> {
+        return of({ ...pr, id: 'mock-pr-' + Date.now() });
+    }
+
+    override getPRsPendentes(): Observable<CifraPR[]> { return of([]); }
+    override getPRsDoUser(_uid: string): Observable<CifraPR[]> { return of([]); }
+    override getPR(_id: string): Observable<CifraPR | undefined> { return of(undefined); }
+
+    override resolverPR(_prId: string, _status: 'aprovado' | 'rejeitado', _reviewerUid: string, _nota?: string): Observable<void> {
+        return of(undefined);
+    }
+
+    override getVersoes(_cifraId: string): Observable<CifraVersao[]> { return of([]); }
 }

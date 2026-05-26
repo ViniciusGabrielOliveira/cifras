@@ -32,19 +32,58 @@
     <button class="filter-btn" [class.ativo]="filtroTipo() === 'letra'"  (click)="setFiltro('letra')"  tabindex="-1">Letra</button>
   </div>
 
+  <!-- ── Filtros Avançados (Partes da Missa / Categorias) ─────── -->
+  @if (mostrarFiltros()) {
+    <div class="advanced-filters-row">
+      <select class="filter-select" (change)="onSelecionarParte($event)" tabindex="-1">
+        <option value="">Parte da Missa</option>
+        @for (parte of config.partesMissa(); track parte.id) {
+          <option [value]="parte.id" [disabled]="filtrosPartes().includes(parte.id)">
+            {{ parte.label }}
+          </option>
+        }
+      </select>
+      <select class="filter-select" (change)="onSelecionarCategoria($event)" tabindex="-1">
+        <option value="">Categoria</option>
+        @for (cat of config.categorias(); track cat.id) {
+          <option [value]="cat.id" [disabled]="filtrosCategorias().includes(cat.id)">
+            {{ cat.label }}
+          </option>
+        }
+      </select>
+    </div>
+
+    @if (temFiltrosAtivos) {
+      <div class="filter-pills-row">
+        @for (id of filtrosPartes(); track id) {
+          <span class="filter-pill pill-parte">
+            {{ config.getLabelParte(id) }}
+            <button class="pill-remove" (mousedown)="removerParte(id)" tabindex="-1" [attr.aria-label]="'Remover ' + config.getLabelParte(id)">✕</button>
+          </span>
+        }
+        @for (id of filtrosCategorias(); track id) {
+          <span class="filter-pill pill-categoria">
+            {{ config.getLabelCategoria(id) }}
+            <button class="pill-remove" (mousedown)="removerCategoria(id)" tabindex="-1" [attr.aria-label]="'Remover ' + config.getLabelCategoria(id)">✕</button>
+          </span>
+        }
+      </div>
+    }
+  }
+
   <!-- ══════════════════════════════════════════════════════════ -->
   <!--  MODO EMBUTIDO                                             -->
   <!-- ══════════════════════════════════════════════════════════ -->
   @if (modoEmbutido()) {
 
     <!-- Dica inicial -->
-    @if (!buscou() && query().length < 2 && !buscandoCifraClub()) {
+    @if (!buscou() && query().length < 2 && !temFiltrosAtivos && !buscandoCifraClub()) {
       <div class="dica-embutida">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
              width="32" height="32" style="opacity:0.2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
         </svg>
-        <span>Digite ao menos 2 caracteres para buscar</span>
+        <span>Digite ao menos 2 caracteres ou selecione um filtro para buscar</span>
       </div>
       @if (mostrarCifraClub()) {
         <div class="hint-cifraclub">
@@ -63,15 +102,21 @@
       <div class="vazio-embutido">
         <div class="vazio-icon">🎵</div>
         <p class="vazio-texto">
-          Nenhuma música encontrada para <strong>"{{ query() }}"</strong>
+          @if (query()) {
+            Nenhuma música encontrada para <strong>"{{ query() }}"</strong>
+          } @else {
+            Nenhuma música encontrada para os filtros selecionados
+          }
         </p>
-        <p class="vazio-sub">Deseja cadastrar manualmente?</p>
-        <button class="btn-cadastrar-nova" (mousedown)="onCadastrarNova()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          Cadastrar "{{ query() }}"
-        </button>
+        @if (query()) {
+          <p class="vazio-sub">Deseja cadastrar manualmente?</p>
+          <button class="btn-cadastrar-nova" (mousedown)="onCadastrarNova()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            Cadastrar "{{ query() }}"
+          </button>
+        }
       </div>
     }
 

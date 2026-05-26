@@ -80,24 +80,40 @@ function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
 export class CifraBuscaService {
   private repo = inject(CifraRepository);
 
-  /** Busca músicas por query e filtro, retorna até `limit` resultados ordenados por relevância */
-  buscar(query: string, limit = 15, filtro: 'tudo' | 'titulo' | 'autor' | 'letra' = 'tudo'): Observable<ResultadoBusca[]> {
+  buscar(
+    query: string,
+    limit = 15,
+    filtro: 'tudo' | 'titulo' | 'autor' | 'letra' = 'tudo',
+    filtrosCategorias: string[] = [],
+    filtrosPartes: string[] = [],
+  ): Observable<ResultadoBusca[]> {
     const q = normalizar(query);
-    if (q.length < 2) return new Observable(obs => { obs.next([]); obs.complete(); });
+    const hasText    = q.length >= 2;
+    const hasCats    = filtrosCategorias.length > 0;
+    const hasPartes  = filtrosPartes.length > 0;
+
+    if (!hasText && !hasCats && !hasPartes) {
+      return new Observable(obs => { obs.next([]); obs.complete(); });
+    }
 
     return this.repo.getIndice().pipe(
       map(indice => {
         const resultados: ResultadoBusca[] = [];
 
         for (const item of indice) {
-          const match = calcularScore(item, q, filtro);
-          if (match) {
-            resultados.push({ ...item, ...match });
+          if (hasCats && !filtrosCategorias.some(c => item.categorias?.includes(c))) continue;
+          if (hasPartes && !filtrosPartes.some(p => item.partesMissa?.includes(p))) continue;
+
+          if (hasText) {
+            const match = calcularScore(item, q, filtro);
+            if (match) resultados.push({ ...item, ...match });
+          } else {
+            resultados.push({ ...item, score: 0, matchTipo: 'titulo' });
           }
         }
 
         return resultados
-          .sort((a, b) => b.score - a.score)
+          .sort((a, b) => b.score - a.score || a.titulo.localeCompare(b.titulo, 'pt'))
           .slice(0, limit);
       }),
     );

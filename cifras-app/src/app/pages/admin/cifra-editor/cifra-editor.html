@@ -2,6 +2,15 @@
   <div class="toast-erro">{{ erroSalvar() }}</div>
 }
 
+@if (modalPRAberto()) {
+  <app-cifra-pr-modal
+    [fluxo]="modalPRFluxo()"
+    [tituloCifra]="cifra()?.titulo ?? ''"
+    [submitting]="modalPRSubmitting()"
+    (resultado)="onResultadoPRModal($event)"
+  />
+}
+
 @if (loading()) {
   <div class="loading">
     <div class="spinner"></div><span>Carregando...</span>

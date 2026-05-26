@@ -4,9 +4,10 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Subject, debounceTime, distinctUntilChanged, switchMap, of, map, catchError } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, of, map, catchError, EMPTY } from 'rxjs';
 import { CifraBuscaService, ResultadoBusca } from '../../services/cifra-busca.service';
 import { CifraClubImportService, CifraClubSugestao } from '../../services/cifraclub-import.service';
+import { ConfigService } from '../../services/config.service';
 
 export type { CifraClubSugestao };
 
@@ -15,6 +16,13 @@ export interface MusicaSelecionada {
   nome: string;
   autor: string;
   trecho?: string;
+}
+
+interface SearchParams {
+  q: string;
+  f: string;
+  cats: string[];
+  partes: string[];
 }
 
 @Component({
@@ -27,11 +35,13 @@ export interface MusicaSelecionada {
 export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   private buscaService = inject(CifraBuscaService);
   private cifraClub    = inject(CifraClubImportService);
+  readonly config      = inject(ConfigService);
 
   // ── Inputs / Outputs ─────────────────────────────────────────────
   placeholder       = input('Buscar por título, trecho da letra ou autor...');
   modoEmbutido      = input(false);
   mostrarCifraClub  = input(false);
+  mostrarFiltros    = input(false);
 
   musicaSelecionada    = output<MusicaSelecionada>();
   cadastrarNova        = output<string>();
@@ -40,34 +50,42 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   @ViewChild('inputEl') inputEl!: ElementRef<HTMLInputElement>;
 
   // ── Estado: busca local ──────────────────────────────────────────
-  query      = signal('');
-  filtroTipo = signal<'tudo' | 'titulo' | 'autor' | 'letra'>('tudo');
-  resultados = signal<ResultadoBusca[]>([]);
-  aberto     = signal(false);
-  carregando = signal(false);
-  buscou     = signal(false);
-  itemFocado = signal(-1);
+  query              = signal('');
+  filtroTipo         = signal<'tudo' | 'titulo' | 'autor' | 'letra'>('tudo');
+  filtrosCategorias  = signal<string[]>([]);
+  filtrosPartes      = signal<string[]>([]);
+  resultados         = signal<ResultadoBusca[]>([]);
+  aberto             = signal(false);
+  carregando         = signal(false);
+  buscou             = signal(false);
+  itemFocado         = signal(-1);
 
   // ── Estado: Cifra Club ───────────────────────────────────────────
   sugestoesCifraClub = signal<CifraClubSugestao[]>([]);
   buscandoCifraClub  = signal(false);
 
   // ── Pipeline busca local ─────────────────────────────────────────
-  private searchParams$ = new Subject<{ q: string; f: string }>();
+  private searchParams$ = new Subject<SearchParams>();
   private sub = this.searchParams$
     .pipe(
       debounceTime(220),
-      distinctUntilChanged((a, b) => a.q === b.q && a.f === b.f),
-      switchMap(({ q, f }) => {
-        if (q.length < 2) {
+      distinctUntilChanged((a, b) =>
+        a.q === b.q && a.f === b.f &&
+        JSON.stringify(a.cats) === JSON.stringify(b.cats) &&
+        JSON.stringify(a.partes) === JSON.stringify(b.partes)
+      ),
+      switchMap(({ q, f, cats, partes }) => {
+        const hasText    = q.length >= 2;
+        const hasFilters = cats.length > 0 || partes.length > 0;
+        if (!hasText && !hasFilters) {
           this.resultados.set([]);
           this.carregando.set(false);
           this.buscou.set(false);
-          return of([]);
+          return EMPTY;
         }
         this.carregando.set(true);
         this.buscou.set(false);
-        return this.buscaService.buscar(q, 20, f as 'tudo' | 'titulo' | 'autor' | 'letra');
+        return this.buscaService.buscar(q, 20, f as 'tudo' | 'titulo' | 'autor' | 'letra', cats, partes);
       }),
     )
     .subscribe(res => {
@@ -109,11 +127,11 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   onInput(event: Event) {
     const val = (event.target as HTMLInputElement).value;
     this.query.set(val);
-    this.searchParams$.next({ q: val, f: this.filtroTipo() });
+    this._dispararBusca(val);
     if (this.mostrarCifraClub()) {
       this.ccQuery$.next(val);
     }
-    if (val.length < 2) {
+    if (val.length < 2 && !this.temFiltrosAtivos) {
       this.aberto.set(false);
       this.resultados.set([]);
       this.buscou.set(false);
@@ -123,10 +141,49 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
 
   setFiltro(tipo: 'tudo' | 'titulo' | 'autor' | 'letra') {
     this.filtroTipo.set(tipo);
-    this.searchParams$.next({ q: this.query(), f: tipo });
+    this._dispararBusca();
     if (!this.modoEmbutido()) {
       this.inputEl?.nativeElement.focus();
     }
+  }
+
+  onSelecionarParte(event: Event) {
+    const sel = event.target as HTMLSelectElement;
+    const id = sel.value;
+    if (id && !this.filtrosPartes().includes(id)) {
+      this.filtrosPartes.update(arr => [...arr, id]);
+      this._dispararBusca();
+    }
+    sel.value = '';
+  }
+
+  onSelecionarCategoria(event: Event) {
+    const sel = event.target as HTMLSelectElement;
+    const id = sel.value;
+    if (id && !this.filtrosCategorias().includes(id)) {
+      this.filtrosCategorias.update(arr => [...arr, id]);
+      this._dispararBusca();
+    }
+    sel.value = '';
+  }
+
+  removerParte(id: string) {
+    this.filtrosPartes.update(arr => arr.filter(x => x !== id));
+    this._dispararBusca();
+  }
+
+  removerCategoria(id: string) {
+    this.filtrosCategorias.update(arr => arr.filter(x => x !== id));
+    this._dispararBusca();
+  }
+
+  private _dispararBusca(q = this.query()) {
+    this.searchParams$.next({
+      q,
+      f: this.filtroTipo(),
+      cats: this.filtrosCategorias(),
+      partes: this.filtrosPartes(),
+    });
   }
 
   selecionar(item: ResultadoBusca) {
@@ -201,6 +258,10 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
 
   get estaCarregandoQualquer(): boolean {
     return this.carregando() || this.buscandoCifraClub();
+  }
+
+  get temFiltrosAtivos(): boolean {
+    return this.filtrosCategorias().length > 0 || this.filtrosPartes().length > 0;
   }
 
   badgeLabel(tipo: ResultadoBusca['matchTipo']): string {

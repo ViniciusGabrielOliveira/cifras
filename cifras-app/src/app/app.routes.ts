@@ -55,6 +55,12 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./pages/usuario/minha-lista/minha-lista').then(m => m.MinhaListaComponent),
     },
+    {
+        path: 'admin/prs',
+        canActivate: [authGuard, roleGuard('admin')],
+        loadComponent: () =>
+            import('./pages/admin/prs/prs').then(m => m.PrsComponent),
+    },
 
     // ── Área do Usuário ────────────────────────────────────────────
     {
