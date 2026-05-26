@@ -43,7 +43,7 @@
 
 ## Regras do Firestore
 
-- **R27** — Cifras com `status: 'publica'` são legíveis por todos (não bloqueados); cifras `privadas` só pelo `donoUid`
+- **R27** — Cifras com `status: 'publica'` são legíveis por todos (não bloqueados); cifras `privadas` ou `pendente_revisao` são legíveis pelo `donoUid` ou por participantes de listas onde a cifra está adicionada (campo `listasIds` no documento da cifra)
 - **R28** — Listas `privadas` só são legíveis pelo `donoUid` ou por participantes registrados no array `participantes`
 - **R29** — Participante `editor` pode fazer `update` na lista; `visualizador` só leitura
 - **R30** — Collection `acordes` é legível por todos; escrita restrita a `editor` ou superior
@@ -58,10 +58,25 @@
 
 ## Dados e Modelos
 
-- **R36** — `Cifra` possui campos: `id`, `titulo`, `artista`, `tom`, `instrumento`, `dificuldade`, `secoes`, `status?`, `donoUid?`, `categorias?`, `partesMissa?`
+- **R36** — `Cifra` possui campos: `id`, `titulo`, `artista`, `tom`, `instrumento`, `dificuldade`, `secoes`, `status?`, `donoUid?`, `categorias?`, `partesMissa?`, `listasIds?` (IDs das listas onde a cifra está adicionada, para controle de visibilidade)
 - **R37** — `Lista` possui campos: `id`, `titulo`, `categoria`, `musicas`, `tipo?` (`publica`|`privada`), `donoUid?`, `participantes?`, `tokenConvite?`
 - **R38** — `Participante` possui: `uid`, `nome`, `role` (`editor`|`visualizador`)
 - **R39** — Padrão de arquitetura: repositório (interface abstrata + implementação Firebase/Mock) → serviço → componente. Componentes nunca injetam repositórios diretamente
+
+## Sistema de Versionamento via Pull Requests
+
+- **R44** — Ao salvar uma cifra no modo `userMode`, se for cifra nova o editor oferece a opção de torná-la pública via PR; se aceitar, cria documento em `cifras_pr` com `status: 'pendente'`; se recusar, salva apenas como `privada`
+- **R45** — Ao salvar uma cifra existente no modo `userMode`, o editor detecta se há uma versão pública e pergunta se o usuário quer criar uma nova versão via PR, solicitando o motivo (enum: `simplificada`, `original_errada`, `tom_diferente`, `arranjo_diferente`, `letra_atualizada`, `outro_instrumento`, `outros`; campo livre quando `outros`)
+- **R46** — Admin aprova ou rejeita PRs no painel admin; ao aprovar uma cifra nova, ela é salva em `cifras` com `status: 'publica'`; ao aprovar uma nova versão, o conteúdo anterior é arquivado em `cifras/{id}/versoes/{vId}` e a cifra pública é atualizada
+- **R47** — Cifra pendente (`status: 'pendente_revisao'`) é visível apenas ao `donoUid` e a participantes de listas onde ela está adicionada; campo `listasIds: string[]` no documento controla isso via Firestore rules
+- **R48** — Viewer de cifra exibe seletor de versão quando há versões arquivadas em `cifras/{id}/versoes`
+- **R49** — Painel admin inclui aba de PRs pendentes com diff textual (formato texto plano) comparando versão atual vs submetida, e opções de aprovar/rejeitar com nota opcional
+- **R50** — `CifraPR` possui campos: `id`, `cifraId` (null se nova), `tipo` (`nova_cifra`|`nova_versao`), `dados` (snapshot completo da Cifra), `autorUid`, `autorNome`, `motivo`, `motivoCustom?`, `status` (`pendente`|`aprovado`|`rejeitado`), `criadoEm`, `resolvidoEm?`, `reviewerUid?`, `reviewerNota?`
+- **R51** — Ao adicionar/remover uma cifra de uma lista, o campo `listasIds` da cifra é atualizado com `arrayUnion`/`arrayRemove`
+
+## Busca de Músicas
+
+- **R52** — O componente `musica-search` suporta filtros multi-select de Partes da Missa e Categorias via selects com pills removíveis; filtros sozinhos (sem texto digitado) já retornam resultados; as opções vêm do `ConfigService`; o filtro avançado é habilitado via input `[mostrarFiltros]="true"` e está ativo na Home e na Minha Lista, mas não no modal do admin (que já conhece a parte de destino)
 
 ## Segurança e Boas Práticas
 

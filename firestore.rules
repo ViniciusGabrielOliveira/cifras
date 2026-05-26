@@ -43,33 +43,80 @@ service cloud.firestore {
         && lista.participantes.filter(p, p.uid == request.auth.uid && p.role == 'editor').size() > 0;
     }
 
+    // ── Helpers de visibilidade ──────────────────────────────────────
+    function cifraVisivelViaLista(cifra) {
+      // Verifica participação nas listas onde a cifra está adicionada (até 4 listas)
+      let lids = cifra.listasIds;
+      return lids != null && (
+        (lids.size() >= 1 && get(/databases/$(database)/documents/listas/$(lids[0])).data.participantesUids.hasAny([request.auth.uid]))
+        || (lids.size() >= 2 && get(/databases/$(database)/documents/listas/$(lids[1])).data.participantesUids.hasAny([request.auth.uid]))
+        || (lids.size() >= 3 && get(/databases/$(database)/documents/listas/$(lids[2])).data.participantesUids.hasAny([request.auth.uid]))
+        || (lids.size() >= 4 && get(/databases/$(database)/documents/listas/$(lids[3])).data.participantesUids.hasAny([request.auth.uid]))
+      );
+    }
+
     // ── Cifras ───────────────────────────────────────────────────────
     match /cifras/{docId} {
       allow read: if
+        // Admin sempre lê
+        isAdmin()
         // Cifra pública: qualquer não-bloqueado
-        ((!resource.data.keys().hasAll(['status']) || resource.data.status == 'publica')
+        || ((!resource.data.keys().hasAll(['status']) || resource.data.status == 'publica')
           && (!isAuthenticated() || isNotBlocked()))
-        // Cifra privada: somente o dono
-        || (resource.data.status == 'privada'
-          && isAuthenticated()
-          && resource.data.donoUid == request.auth.uid);
+        // Dono sempre lê sua própria
+        || (isAuthenticated() && resource.data.donoUid == request.auth.uid)
+        // Cifra privada/pendente: participante de uma lista que contém esta cifra
+        || (isAuthenticated() && isNotBlocked()
+          && (resource.data.status == 'privada' || resource.data.status == 'pendente_revisao')
+          && cifraVisivelViaLista(resource.data));
 
-      // Criar nova cifra privada
+      // Criar nova cifra (privada ou pendente_revisao)
       allow create: if isAdminOrEditor()
         || (isAuthenticated() && isNotBlocked()
-          && request.resource.data.status == 'privada'
-          && request.resource.data.donoUid == request.auth.uid);
+          && request.resource.data.donoUid == request.auth.uid
+          && request.resource.data.status in ['privada', 'pendente_revisao']);
 
-      // Editar cifra existente — membro só pode editar suas próprias privadas
+      // Editar cifra existente
       allow update: if isAdminOrEditor()
+        // Dono pode editar sua própria privada/pendente (sem mudar status para público diretamente)
         || (isAuthenticated() && isNotBlocked()
-          && resource.data.status == 'privada'
           && resource.data.donoUid == request.auth.uid
-          && request.resource.data.status == 'privada'
-          && request.resource.data.donoUid == request.auth.uid);
+          && request.resource.data.donoUid == request.auth.uid
+          && request.resource.data.status in ['privada', 'pendente_revisao']);
 
       allow delete: if isAdmin()
         || (isAuthenticated() && resource.data.donoUid == request.auth.uid);
+    }
+
+    // ── Versões de cifras (histórico aprovado) ───────────────────────
+    match /cifras/{docId}/versoes/{versaoId} {
+      allow read: if !isAuthenticated() || isNotBlocked();
+      allow write: if isAdmin();
+    }
+
+    // ── Pull Requests de cifras ──────────────────────────────────────
+    match /cifras_pr/{prId} {
+      allow read: if isAdmin()
+        // Autor sempre lê sua própria PR
+        || (isAuthenticated() && resource.data.autorUid == request.auth.uid)
+        // Participantes de listas onde a cifra está presente
+        || (isAuthenticated() && isNotBlocked()
+          && resource.data.cifraId != null
+          && cifraVisivelViaLista(get(/databases/$(database)/documents/cifras/$(resource.data.cifraId)).data));
+
+      allow create: if isAuthenticated() && isNotBlocked()
+        && request.resource.data.autorUid == request.auth.uid
+        && request.resource.data.status == 'pendente';
+
+      // Autor pode cancelar sua PR pendente; admin pode aprovar/rejeitar
+      allow update: if isAdmin()
+        || (isAuthenticated()
+          && resource.data.autorUid == request.auth.uid
+          && resource.data.status == 'pendente'
+          && request.resource.data.status == 'pendente');
+
+      allow delete: if isAdmin()
+        || (isAuthenticated() && resource.data.autorUid == request.auth.uid && resource.data.status == 'pendente');
     }
 
     // ── Índice de Cifras ─────────────────────────────────────────────

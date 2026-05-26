@@ -42,3 +42,8 @@ Thumbs.db
 
 # ─── Agent / AI ──────────────────────────────────────────
 .gemini/
+
+# ─── MCP catalog state ───────────────────────────────────
+cifras-mcp/catalogo.json
+
+ignore/
