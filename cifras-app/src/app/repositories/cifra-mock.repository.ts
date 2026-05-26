@@ -166,6 +166,12 @@ export class CifraMockRepository extends CifraRepository {
         );
     }
 
+    override getCifrasPorParteOrdenadas(parte: string): Observable<Cifra[]> {
+        return this.getCifrasPorParte(parte).pipe(
+            map(cifras => cifras.sort((a, b) => (b.nota ?? 0) - (a.nota ?? 0))),
+        );
+    }
+
     override getCifrasDoUser(uid: string): Observable<Cifra[]> {
         return this.getAllCifras().pipe(
             map(cifras => cifras.filter(c => c.donoUid === uid && c.status === 'privada')),
