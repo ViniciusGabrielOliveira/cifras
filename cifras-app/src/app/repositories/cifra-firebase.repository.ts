@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, from, of, map, catchError, throwError } from 'rxjs';
+import { Observable, from, of, map, catchError, throwError, switchMap } from 'rxjs';
 import { FIREBASE_APP } from '../firebase.providers';
 import {
   getFirestore,
@@ -16,6 +16,7 @@ import {
   onSnapshot,
   arrayUnion,
   arrayRemove,
+  writeBatch,
 } from 'firebase/firestore';
 import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
@@ -211,6 +212,37 @@ export class CifraFirebaseRepository extends CifraRepository {
     return from(addDoc(col, versao)).pipe(
       map(() => undefined),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao arquivar versão'))),
+    );
+  }
+
+  // Reconstrói cifras_indice com categorias e partesMissa de todas as cifras públicas.
+  // Usa writeBatch em lotes de 500 (limite do Firestore).
+  reindexarIndice(): Observable<{ total: number; atualizadas: number }> {
+    return from(getDocs(collection(this.firestore, 'cifras'))).pipe(
+      switchMap(async snap => {
+        const publicas = snap.docs
+          .map(d => ({ ...d.data(), id: d.id }) as Cifra)
+          .filter(c => !c.status || c.status === 'publica');
+
+        const BATCH_SIZE = 500;
+        for (let i = 0; i < publicas.length; i += BATCH_SIZE) {
+          const lote = publicas.slice(i, i + BATCH_SIZE);
+          const batch = writeBatch(this.firestore);
+          for (const cifra of lote) {
+            batch.set(doc(this.firestore, `cifras_indice/${cifra.id}`), {
+              id: cifra.id,
+              titulo: cifra.titulo,
+              autor: cifra.artista,
+              letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
+              categorias: cifra.categorias ?? [],
+              partesMissa: cifra.partesMissa ?? [],
+            });
+          }
+          await batch.commit();
+        }
+        return { total: publicas.length, atualizadas: publicas.length };
+      }),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao reindexar'))),
     );
   }
 }

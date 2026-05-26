@@ -162,6 +162,13 @@ export class CifraService {
     return this.repo.getVersoes(cifraId);
   }
 
+  reindexarIndice(): Observable<{ total: number; atualizadas: number }> {
+    if (this.repo instanceof CifraFirebaseRepository) {
+      return this.repo.reindexarIndice();
+    }
+    return of({ total: 0, atualizadas: 0 });
+  }
+
   private salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
     if (this.repo instanceof CifraFirebaseRepository) {
       return this.repo.salvarVersaoArquivada(cifraId, versao);

@@ -240,9 +240,11 @@ def salvar_firebase(musica: dict, dados_scrape: dict, cid: str):
     db = get_db()
     db.collection("cifras").document(cid).set(cifra_doc)
     db.collection("cifras_indice").document(cid).set({
-        "titulo": titulo,
-        "autor":  artista,
-        "letra":  letra_txt,
+        "titulo":      titulo,
+        "autor":       artista,
+        "letra":       letra_txt,
+        "categorias":  cifra_doc["categorias"],
+        "partesMissa": cifra_doc["partesMissa"],
     })
 
     # Atualiza cache local para evitar duplicatas dentro da mesma sessão

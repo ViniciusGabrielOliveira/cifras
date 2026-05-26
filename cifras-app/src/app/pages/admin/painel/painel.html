@@ -236,6 +236,32 @@
       </div>
     </section>
 
+    <!-- Índice de Busca -->
+    <section class="editor-section">
+      <div class="parte-header-row" style="margin-bottom: 0.5rem;">
+        <h2 class="section-titulo" style="margin: 0;">Índice de Busca</h2>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--color-text-muted); margin: 0 0 1rem; line-height: 1.5;">
+        Atualiza o índice de busca com as categorias e partes da missa de todas as cifras públicas.
+        Execute após cadastrar/editar cifras em lote ou quando os filtros de busca não retornarem resultados esperados.
+      </p>
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn-add-nesta-parte" [disabled]="reindexando()" (click)="reindexar()">
+          @if (reindexando()) {
+            <div class="spinner" style="width:14px;height:14px;border-width:2px;display:inline-block;vertical-align:middle;margin-right:6px"></div>
+            Reindexando...
+          } @else {
+            ↻ Reindexar Cifras
+          }
+        </button>
+        @if (resultadoReindex()) {
+          <span style="font-size: 0.8rem; color: #4ade80;">
+            ✓ {{ resultadoReindex()!.atualizadas }} cifras atualizadas
+          </span>
+        }
+      </div>
+    </section>
+
     <div class="editor-acoes">
       <button class="btn-cancelar" (click)="vista.set('dashboard')">Cancelar</button>
       <button class="btn-salvar" [disabled]="salvandoConfig()" (click)="salvarConfiguracoes()">

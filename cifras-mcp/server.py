@@ -624,9 +624,11 @@ async def _tool_importar() -> list[types.TextContent]:
             for l in s.get("linhas", [])
         )[:3000]
         db.collection("cifras_indice").document(cid).set({
-            "titulo": titulo,
-            "autor":  artista,
-            "letra":  letra_txt,
+            "titulo":      titulo,
+            "autor":       artista,
+            "letra":       letra_txt,
+            "categorias":  cifra.get("categorias", []),
+            "partesMissa": cifra.get("partesMissa", []),
         })
 
         pendente["status"]  = "importado"

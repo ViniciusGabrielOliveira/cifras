@@ -1,11 +1,11 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
 
 export interface ResultadoBusca extends CifraIndiceItem {
   score: number;
   matchTipo: 'titulo' | 'letra' | 'autor';
-  trechoMatch?: string;   // trecho da letra onde deu match, para exibir no dropdown
+  trechoMatch?: string;
 }
 
 /** Normaliza string para comparação: minúsculas + remove acentos */
@@ -13,7 +13,7 @@ function normalizar(s: string): string {
   return s
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .trim();
 }
 
@@ -32,7 +32,6 @@ function extrairTrecho(letra: string, query: string, maxLen = 60): string {
 /**
  * Calcula score de relevância para um item dado uma query.
  * Prioridade: título (100) > letra (30) > autor (10)
- * Bônus: match no início da palavra (+20), match exato (+50)
  */
 function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
   score: number;
@@ -44,33 +43,22 @@ function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
   const letraNorm  = normalizar(item.letra);
 
   if (filtro === 'tudo' || filtro === 'titulo') {
-      // Exact title match
-      if (tituloNorm === qNorm)
-        return { score: 200, matchTipo: 'titulo' };
-
-      // Title starts with query
-      if (tituloNorm.startsWith(qNorm))
-        return { score: 150, matchTipo: 'titulo' };
-
-      // Title contains query
-      if (tituloNorm.includes(qNorm)) {
-        const wordStart = /\s/.test(tituloNorm[tituloNorm.indexOf(qNorm) - 1] ?? ' ');
-        return { score: wordStart ? 130 : 100, matchTipo: 'titulo' };
-      }
+    if (tituloNorm === qNorm) return { score: 200, matchTipo: 'titulo' };
+    if (tituloNorm.startsWith(qNorm)) return { score: 150, matchTipo: 'titulo' };
+    if (tituloNorm.includes(qNorm)) {
+      const wordStart = /\s/.test(tituloNorm[tituloNorm.indexOf(qNorm) - 1] ?? ' ');
+      return { score: wordStart ? 130 : 100, matchTipo: 'titulo' };
+    }
   }
 
   if (filtro === 'tudo' || filtro === 'letra') {
-      // Letra contains query
-      if (letraNorm.includes(qNorm)) {
-        const trecho = extrairTrecho(item.letra, qNorm);
-        return { score: 30, matchTipo: 'letra', trechoMatch: trecho };
-      }
+    if (letraNorm.includes(qNorm)) {
+      return { score: 30, matchTipo: 'letra', trechoMatch: extrairTrecho(item.letra, qNorm) };
+    }
   }
 
   if (filtro === 'tudo' || filtro === 'autor') {
-      // Autor contains query
-      if (autorNorm.includes(qNorm))
-        return { score: 10, matchTipo: 'autor' };
+    if (autorNorm.includes(qNorm)) return { score: 10, matchTipo: 'autor' };
   }
 
   return null;
@@ -88,12 +76,12 @@ export class CifraBuscaService {
     filtrosPartes: string[] = [],
   ): Observable<ResultadoBusca[]> {
     const q = normalizar(query);
-    const hasText    = q.length >= 2;
-    const hasCats    = filtrosCategorias.length > 0;
-    const hasPartes  = filtrosPartes.length > 0;
+    const hasText   = q.length >= 2;
+    const hasCats   = filtrosCategorias.length > 0;
+    const hasPartes = filtrosPartes.length > 0;
 
     if (!hasText && !hasCats && !hasPartes) {
-      return new Observable(obs => { obs.next([]); obs.complete(); });
+      return of([]);
     }
 
     return this.repo.getIndice().pipe(

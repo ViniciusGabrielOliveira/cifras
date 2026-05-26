@@ -68,7 +68,9 @@ export class PainelComponent implements OnInit {
 
   configCatsEdit = signal<ConfigItem[]>([]);
   configPartesEdit = signal<ConfigItem[]>([]);
-  salvandoConfig = signal(false);
+  salvandoConfig  = signal(false);
+  reindexando     = signal(false);
+  resultadoReindex = signal<{ total: number; atualizadas: number } | null>(null);
 
   todasCifras       = signal<CifraIndiceItem[]>([]);
   filtroCifras      = signal('');
@@ -315,6 +317,24 @@ export class PainelComponent implements OnInit {
     this.notificacao.set({ msg: '✓ Configurações salvas!' });
     setTimeout(() => this.notificacao.set(null), 3000);
     this.vista.set('dashboard');
+  }
+
+  reindexar() {
+    this.reindexando.set(true);
+    this.resultadoReindex.set(null);
+    this.cifraService.reindexarIndice().subscribe({
+      next: resultado => {
+        this.resultadoReindex.set(resultado);
+        this.reindexando.set(false);
+        this.notificacao.set({ msg: `✓ ${resultado.atualizadas} cifras reindexadas com sucesso!` });
+        setTimeout(() => this.notificacao.set(null), 4000);
+      },
+      error: () => {
+        this.reindexando.set(false);
+        this.notificacao.set({ msg: 'Erro ao reindexar cifras. Tente novamente.', erro: true });
+        setTimeout(() => this.notificacao.set(null), 4000);
+      },
+    });
   }
 
   // ── Gerenciar Cifras ─────────────────────────────────────────────
