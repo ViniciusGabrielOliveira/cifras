@@ -57,9 +57,23 @@
 
     @if (isAdmin()) {
     <div class="form-group-meta">
-      <label class="meta-label">Data (opcional)</label>
-      <input class="meta-input" type="date" [value]="lista.data ?? ''" (change)="onDataChange($event)" />
+      <label class="meta-label">Quando aparece</label>
+      <div class="tipo-toggle">
+        <button class="tipo-btn" [class.ativo]="!lista.todosDias" (click)="onTodosDiasChange(false)">Intervalo</button>
+        <button class="tipo-btn" [class.ativo]="lista.todosDias" (click)="onTodosDiasChange(true)">Todos os dias</button>
+      </div>
     </div>
+
+    @if (!lista.todosDias) {
+    <div class="form-group-meta">
+      <label class="meta-label">De</label>
+      <input class="meta-input" type="date" [value]="lista.dataInicio ?? ''" (change)="onDataInicioChange($event)" />
+    </div>
+    <div class="form-group-meta">
+      <label class="meta-label">Até</label>
+      <input class="meta-input" type="date" [value]="lista.dataFim ?? ''" (change)="onDataFimChange($event)" />
+    </div>
+    }
 
     <!-- Categoria e Tipo ficam juntos ao quebrar linha -->
     <div class="meta-group-inline">

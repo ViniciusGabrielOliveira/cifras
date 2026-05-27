@@ -19,6 +19,14 @@ import {
 import { Lista, CategoriaLiturgica, ListasDoDiaResponse, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from './lista.repository.interface';
 
+function listaAparecePara(lista: Lista, data: string): boolean {
+  if (lista.todosDias) return true;
+  if (lista.dataInicio && lista.dataFim) return lista.dataInicio <= data && data <= lista.dataFim;
+  // backward compat com campo antigo
+  if (lista.data) return lista.data === data;
+  return false;
+}
+
 @Injectable()
 export class ListaFirebaseRepository extends ListaRepository {
   private app = inject(FIREBASE_APP);
@@ -34,12 +42,13 @@ export class ListaFirebaseRepository extends ListaRepository {
 
   override getListasDodia(data: string): Observable<ListasDoDiaResponse> {
     const listasCol = collection(this.firestore, 'listas');
-    const q = query(listasCol, where('tipo', '==', 'publica'), where('data', '==', data));
+    const q = query(listasCol, where('tipo', '==', 'publica'));
     return from(getDocs(q)).pipe(
-      map(snap => ({
-        listas: snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista),
-        assinaturaExpirada: false,
-      })),
+      map(snap => {
+        const todas = snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista);
+        const listas = todas.filter(l => listaAparecePara(l, data));
+        return { listas, assinaturaExpirada: false };
+      }),
       catchError(() => of({ listas: [], assinaturaExpirada: false })),
     );
   }

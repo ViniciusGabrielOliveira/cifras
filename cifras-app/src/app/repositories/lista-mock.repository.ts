@@ -6,6 +6,13 @@ import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 const LS_ALL_KEY = 'listas_mock_all';
 
+function listaAparecePara(lista: Lista, data: string): boolean {
+  if (lista.todosDias) return true;
+  if (lista.dataInicio && lista.dataFim) return lista.dataInicio <= data && data <= lista.dataFim;
+  if (lista.data) return lista.data === data;
+  return false;
+}
+
 // 384 músicas importadas de musicasparamissa.com.br
 const MOCK_LISTAS: Lista[] = [
   {
@@ -1465,7 +1472,7 @@ export class ListaMockRepository extends ListaRepository {
   }
 
   override getListasDodia(data: string): Observable<ListasDoDiaResponse> {
-    return this.enriquecerListas(this.listas.filter(l => l.data === data)).pipe(
+    return this.enriquecerListas(this.listas.filter(l => listaAparecePara(l, data))).pipe(
       map((listas: Lista[]) => {
         return {
           listas: listas,

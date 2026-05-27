@@ -25,7 +25,11 @@ export interface MusicaLista {
 export interface Lista {
     id: string;
     titulo: string;
+    /** @deprecated use dataInicio/dataFim */
     data?: string;
+    dataInicio?: string;
+    dataFim?: string;
+    todosDias?: boolean;
     categoria: CategoriaLiturgica;
     musicas: MusicaLista[];
     criadaEm: string;

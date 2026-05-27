@@ -59,7 +59,7 @@
 ## Dados e Modelos
 
 - **R36** — `Cifra` possui campos: `id`, `titulo`, `artista`, `tom`, `instrumento`, `dificuldade`, `secoes`, `status?`, `donoUid?`, `categorias?`, `partesMissa?`, `listasIds?` (IDs das listas onde a cifra está adicionada, para controle de visibilidade)
-- **R37** — `Lista` possui campos: `id`, `titulo`, `categoria`, `musicas`, `tipo?` (`publica`|`privada`), `donoUid?`, `participantes?`, `tokenConvite?`
+- **R37** — `Lista` possui campos: `id`, `titulo`, `categoria`, `musicas`, `tipo?` (`publica`|`privada`), `donoUid?`, `participantes?`, `tokenConvite?`, `todosDias?` (boolean — aparece em todos os dias), `dataInicio?` + `dataFim?` (intervalo de datas; aparece nos dias dentro do range); se `todosDias` for true ignora as datas; campo legado `data?` ainda é suportado para backwards compat
 - **R38** — `Participante` possui: `uid`, `nome`, `role` (`editor`|`visualizador`)
 - **R39** — Padrão de arquitetura: repositório (interface abstrata + implementação Firebase/Mock) → serviço → componente. Componentes nunca injetam repositórios diretamente
 

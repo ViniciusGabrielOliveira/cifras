@@ -141,7 +141,11 @@
                   <span class="lista-tipo-pill participando">participando</span>
                 }
               </div>
-              @if (lista.data) {
+              @if (lista.todosDias) {
+                <span class="lista-card-data">Todos os dias</span>
+              } @else if (lista.dataInicio) {
+                <span class="lista-card-data">{{ formatarData(lista.dataInicio) }} → {{ formatarData(lista.dataFim) }}</span>
+              } @else if (lista.data) {
                 <span class="lista-card-data">{{ formatarData(lista.data) }}</span>
               }
               <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>

@@ -233,9 +233,26 @@ export class MinhaListaComponent implements OnInit {
         this.atualizarCampo('titulo', val);
     }
 
-    onDataChange(event: Event) {
+    onTodosDiasChange(todos: boolean) {
+        const atual = this.lista();
+        if (!atual) return;
+        const atualizada: Lista = { ...atual, todosDias: todos || undefined };
+        if (todos) {
+            delete atualizada.dataInicio;
+            delete atualizada.dataFim;
+        }
+        this.lista.set(atualizada);
+        this.salvarLista(atualizada);
+    }
+
+    onDataInicioChange(event: Event) {
         const val = (event.target as HTMLInputElement).value;
-        this.atualizarCampo('data', val || undefined);
+        this.atualizarCampo('dataInicio', val || undefined);
+    }
+
+    onDataFimChange(event: Event) {
+        const val = (event.target as HTMLInputElement).value;
+        this.atualizarCampo('dataFim', val || undefined);
     }
 
     onCategoriaChange(categoria: string) {
