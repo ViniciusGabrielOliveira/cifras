@@ -7,6 +7,7 @@ import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
 import { CifraService } from '../../../services/cifra.service';
+import { CifraBuscaService } from '../../../services/cifra-busca.service';
 import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ConfigItem } from '../../../models/config.model';
@@ -42,6 +43,7 @@ export class PainelComponent implements OnInit {
   private route = inject(ActivatedRoute);
   readonly config = inject(ConfigService);
   private cifraService = inject(CifraService);
+  private buscaService = inject(CifraBuscaService);
 
   get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
   get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
@@ -75,13 +77,9 @@ export class PainelComponent implements OnInit {
   todasCifras       = signal<CifraIndiceItem[]>([]);
   filtroCifras      = signal('');
   cifrasFiltradas   = computed(() => {
-    const q = this.filtroCifras().toLowerCase().trim();
-    return q
-      ? this.todasCifras().filter(c =>
-          (c.titulo ?? '').toLowerCase().includes(q) ||
-          (c.autor ?? '').toLowerCase().includes(q) ||
-          (c.letra ?? '').toLowerCase().includes(q),
-        )
+    const q = this.filtroCifras().trim();
+    return q.length >= 2
+      ? this.buscaService.filtrar(this.todasCifras(), q)
       : this.todasCifras();
   });
   confirmandoRemocao = signal<string | null>(null);

@@ -119,6 +119,22 @@ export class CifraBuscaService {
   private repo = inject(CifraRepository);
   private indice$ = this.repo.getIndice().pipe(shareReplay(1));
 
+  /** Filtra uma lista já carregada — para uso em computed() síncronos. */
+  filtrar(
+    items: CifraIndiceItem[],
+    query: string,
+    filtro: 'tudo' | 'titulo' | 'autor' | 'letra' = 'tudo',
+  ): ResultadoBusca[] {
+    const q = normalizar(query);
+    if (q.length < 2) return items.map(i => ({ ...i, score: 0, matchTipo: 'titulo' as const }));
+    const resultados: ResultadoBusca[] = [];
+    for (const item of items) {
+      const match = calcularScore(item, q, filtro);
+      if (match) resultados.push({ ...item, ...match });
+    }
+    return resultados.sort((a, b) => b.score - a.score || (a.titulo ?? '').localeCompare(b.titulo ?? '', 'pt'));
+  }
+
   buscar(
     query: string,
     limit = 15,
