@@ -31,7 +31,11 @@ function extrairTrecho(letra: string, query: string, maxLen = 60): string {
 
 /**
  * Calcula score de relevância para um item dado uma query.
- * Prioridade: título (100) > letra (30) > autor (10)
+ *
+ * Token único: prioridade título (100-200) > letra (30) > autor (10).
+ * Multi-token: cada token deve bater em pelo menos um campo permitido
+ * (podem ser campos diferentes). Ex: "gloria eliana" → "gloria" no título
+ * e "eliana" no autor. Tokens com menos de 2 caracteres são ignorados.
  */
 function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
   score: number;
@@ -42,26 +46,72 @@ function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
   const autorNorm  = normalizar(item.autor ?? '');
   const letraNorm  = normalizar(item.letra ?? '');
 
-  if (filtro === 'tudo' || filtro === 'titulo') {
-    if (tituloNorm === qNorm) return { score: 200, matchTipo: 'titulo' };
-    if (tituloNorm.startsWith(qNorm)) return { score: 150, matchTipo: 'titulo' };
-    if (tituloNorm.includes(qNorm)) {
-      const wordStart = /\s/.test(tituloNorm[tituloNorm.indexOf(qNorm) - 1] ?? ' ');
-      return { score: wordStart ? 130 : 100, matchTipo: 'titulo' };
+  const tokens = qNorm.split(/\s+/).filter(t => t.length >= 2);
+  if (tokens.length === 0) return null;
+
+  // Token único — mantém o comportamento preciso original
+  if (tokens.length === 1) {
+    if (filtro === 'tudo' || filtro === 'titulo') {
+      if (tituloNorm === qNorm) return { score: 200, matchTipo: 'titulo' };
+      if (tituloNorm.startsWith(qNorm)) return { score: 150, matchTipo: 'titulo' };
+      if (tituloNorm.includes(qNorm)) {
+        const wordStart = /\s/.test(tituloNorm[tituloNorm.indexOf(qNorm) - 1] ?? ' ');
+        return { score: wordStart ? 130 : 100, matchTipo: 'titulo' };
+      }
     }
-  }
-
-  if (filtro === 'tudo' || filtro === 'letra') {
-    if (letraNorm.includes(qNorm)) {
-      return { score: 30, matchTipo: 'letra', trechoMatch: extrairTrecho(item.letra, qNorm) };
+    if (filtro === 'tudo' || filtro === 'letra') {
+      if (letraNorm.includes(qNorm)) {
+        return { score: 30, matchTipo: 'letra', trechoMatch: extrairTrecho(item.letra ?? '', qNorm) };
+      }
     }
+    if (filtro === 'tudo' || filtro === 'autor') {
+      if (autorNorm.includes(qNorm)) return { score: 10, matchTipo: 'autor' };
+    }
+    return null;
   }
 
-  if (filtro === 'tudo' || filtro === 'autor') {
-    if (autorNorm.includes(qNorm)) return { score: 10, matchTipo: 'autor' };
+  // Multi-token: cada token deve bater em pelo menos um campo permitido
+  let totalScore = 0;
+  let matchedTitulo = false;
+  let matchedAutor  = false;
+  let matchedLetra  = false;
+
+  for (const token of tokens) {
+    let tokenScore = 0;
+
+    if (filtro === 'tudo' || filtro === 'titulo') {
+      if (tituloNorm.includes(token)) {
+        const idx = tituloNorm.indexOf(token);
+        const wordStart = /\s/.test(tituloNorm[idx - 1] ?? ' ');
+        tokenScore = Math.max(tokenScore, wordStart ? 50 : 30);
+        matchedTitulo = true;
+      }
+    }
+    if (filtro === 'tudo' || filtro === 'autor') {
+      if (autorNorm.includes(token)) {
+        tokenScore = Math.max(tokenScore, 15);
+        matchedAutor = true;
+      }
+    }
+    if (filtro === 'tudo' || filtro === 'letra') {
+      if (letraNorm.includes(token)) {
+        tokenScore = Math.max(tokenScore, 10);
+        matchedLetra = true;
+      }
+    }
+
+    if (tokenScore === 0) return null; // token sem match → descarta
+    totalScore += tokenScore;
   }
 
-  return null;
+  const matchTipo: ResultadoBusca['matchTipo'] =
+    matchedTitulo ? 'titulo' : matchedAutor ? 'autor' : 'letra';
+  const trechoMatch =
+    matchedLetra && !matchedTitulo
+      ? extrairTrecho(item.letra ?? '', tokens[0])
+      : undefined;
+
+  return { score: totalScore, matchTipo, trechoMatch };
 }
 
 @Injectable({ providedIn: 'root' })
