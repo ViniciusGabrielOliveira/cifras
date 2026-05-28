@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, map, of } from 'rxjs';
+import { Observable, map, of, shareReplay } from 'rxjs';
 import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
 
 export interface ResultadoBusca extends CifraIndiceItem {
@@ -38,9 +38,9 @@ function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
   matchTipo: ResultadoBusca['matchTipo'];
   trechoMatch?: string;
 } | null {
-  const tituloNorm = normalizar(item.titulo);
-  const autorNorm  = normalizar(item.autor);
-  const letraNorm  = normalizar(item.letra);
+  const tituloNorm = normalizar(item.titulo ?? '');
+  const autorNorm  = normalizar(item.autor ?? '');
+  const letraNorm  = normalizar(item.letra ?? '');
 
   if (filtro === 'tudo' || filtro === 'titulo') {
     if (tituloNorm === qNorm) return { score: 200, matchTipo: 'titulo' };
@@ -67,6 +67,7 @@ function calcularScore(item: CifraIndiceItem, qNorm: string, filtro: string): {
 @Injectable({ providedIn: 'root' })
 export class CifraBuscaService {
   private repo = inject(CifraRepository);
+  private indice$ = this.repo.getIndice().pipe(shareReplay(1));
 
   buscar(
     query: string,
@@ -84,7 +85,7 @@ export class CifraBuscaService {
       return of([]);
     }
 
-    return this.repo.getIndice().pipe(
+    return this.indice$.pipe(
       map(indice => {
         const resultados: ResultadoBusca[] = [];
 
@@ -101,7 +102,7 @@ export class CifraBuscaService {
         }
 
         return resultados
-          .sort((a, b) => b.score - a.score || a.titulo.localeCompare(b.titulo, 'pt'))
+          .sort((a, b) => b.score - a.score || (a.titulo ?? '').localeCompare(b.titulo ?? '', 'pt'))
           .slice(0, limit);
       }),
     );

@@ -85,7 +85,9 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
         }
         this.carregando.set(true);
         this.buscou.set(false);
-        return this.buscaService.buscar(q, 20, f as 'tudo' | 'titulo' | 'autor' | 'letra', cats, partes);
+        return this.buscaService.buscar(q, 20, f as 'tudo' | 'titulo' | 'autor' | 'letra', cats, partes).pipe(
+          catchError(() => of([])),
+        );
       }),
     )
     .subscribe(res => {

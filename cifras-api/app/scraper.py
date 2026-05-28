@@ -118,16 +118,33 @@ def _idx_nota(nota: str) -> int:
 
 
 def _tom_from_lyrics(lyrics: str) -> str:
-    """Infere o tom verificando qual escala maior/menor abriga mais acordes da cifra.
+    """Infere o tom a partir dos primeiros acordes da parte cantada (ignora intro).
 
-    Para cada tonalidade em _TONS_VALIDOS calcula:
-      - pontos pela raiz de cada acorde que pertence à escala
-      - bônus quando o acorde tônico (raiz + qualidade) aparece na cifra
-    A tonalidade com maior pontuação é retornada.
+    Localiza a primeira linha de letra (não-acorde), começa a coletar
+    acordes a partir da linha anterior (os acordes da 1ª linha de letra),
+    e usa no máximo 30 acordes para a análise de escala.
     """
-    # Extrai pares (idx_cromático, is_minor) de todas as linhas de acorde
+    lines = lyrics.split('\n')
+
+    # Índice da primeira linha que NÃO é só acordes (= primeira linha de letra)
+    first_lyric_idx = len(lines)
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if not stripped:
+            continue
+        tokens = stripped.split()
+        if not all(_ACORDE_TOKEN_RE.match(t) for t in tokens):
+            first_lyric_idx = i
+            break
+
+    # Começa 1 linha antes da primeira letra para incluir os acordes que a cobrem
+    start_idx = max(0, first_lyric_idx - 1)
+
+    MAX_CHORDS = 30
     chord_data: list[tuple[int, bool]] = []
-    for line in lyrics.split('\n'):
+    for line in lines[start_idx:]:
+        if len(chord_data) >= MAX_CHORDS:
+            break
         tokens = line.strip().split()
         if len(tokens) < 2:
             continue

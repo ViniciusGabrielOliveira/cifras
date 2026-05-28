@@ -78,9 +78,9 @@ export class PainelComponent implements OnInit {
     const q = this.filtroCifras().toLowerCase().trim();
     return q
       ? this.todasCifras().filter(c =>
-          c.titulo.toLowerCase().includes(q) ||
-          c.autor.toLowerCase().includes(q) ||
-          c.letra.toLowerCase().includes(q),
+          (c.titulo ?? '').toLowerCase().includes(q) ||
+          (c.autor ?? '').toLowerCase().includes(q) ||
+          (c.letra ?? '').toLowerCase().includes(q),
         )
       : this.todasCifras();
   });
@@ -343,7 +343,7 @@ export class PainelComponent implements OnInit {
     this.filtroCifras.set('');
     this.confirmandoRemocao.set(null);
     this.cifraService.getIndice().subscribe(items => {
-      this.todasCifras.set(items.slice().sort((a, b) => a.titulo.localeCompare(b.titulo)));
+      this.todasCifras.set(items.slice().sort((a, b) => (a.titulo ?? '').localeCompare(b.titulo ?? '')));
     });
     this.vista.set('gerenciar-cifras');
   }
