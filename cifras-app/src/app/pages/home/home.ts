@@ -9,21 +9,18 @@ import { CifraService } from '../../services/cifra.service';
 import { ConfigService } from '../../services/config.service';
 import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
-import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
+import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
 import { LiveService } from '../../services/live.service';
 import { LiveEstado } from '../../models/live.model';
-import { transporCifra, calcularDelta } from '../../core/transposicao';
 
-let _idCounter = Date.now();
-function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 
 type SeletorAba = 'dia' | 'categoria' | 'minhas-listas';
 
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink, SecaoCifraComponent, MusicaSearchComponent],
+    imports: [CommonModule, FormsModule, RouterLink, CifraViewerComponent, MusicaSearchComponent],
     templateUrl: './home.html',
     styleUrl: './home.scss',
 })
@@ -113,24 +110,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     private scrollHandler?: EventListener;
     private lastSyncedMusicaId: string | null = null;
 
-    // ── Modal adicionar música ───────────────────────────────────────
-    modalAdicionarAberto = signal(false);
-    salvandoMusica = signal(false);
-    notificacaoHome = signal<string | null>(null);
+    // ── Modal busca rápida ───────────────────────────────────────────
+    modalBuscaAberto = signal(false);
     erroHome = signal<string | null>(null);
 
     // ── Accordion / Cifra ────────────────────────────────────────────
     acordeonAberto = signal<string | null>(null);
     cifrasCache = signal<Record<string, Cifra | null>>({});
-    // keyed by musica.id (not cifraId) para suportar mesmo cifra com tons diferentes
-    deltasTom = signal<Record<string, number>>({});
-    fontesSize = signal<Record<string, number>>({});
-    private deltasInicializados = new Set<string>();
 
     // ── Versões ──────────────────────────────────────────────────────
     // keyed by cifraId
     versoesCache = signal<Record<string, CifraVersao[]>>({});
-    versoesSelecionadas = signal<Record<string, string | null>>({});
 
     // ── Labels (template) ────────────────────────────────────────────
     get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
@@ -280,18 +270,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     private carregarCifra(musica: MusicaLista) {
-        const { cifraId, id: musicaId, tom: tomAlvo } = musica;
+        const { cifraId } = musica;
         const cache = this.cifrasCache();
-        if (cifraId in cache) {
-            if (tomAlvo && cache[cifraId]) this.inicializarDelta(musicaId, cache[cifraId]!.tom, tomAlvo);
-            return;
-        }
+        if (cifraId in cache) return;
         this.cifrasCache.update(c => ({ ...c, [cifraId]: null }));
         this.cifraService.getCifra(cifraId).subscribe(cifra => {
             this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
-            if (cifra && tomAlvo) this.inicializarDelta(musicaId, cifra.tom, tomAlvo);
         });
-        // Carrega versões arquivadas (fire-and-forget)
         if (!(cifraId in this.versoesCache())) {
             this.cifraService.getVersoes(cifraId).subscribe(versoes => {
                 if (versoes.length > 0) {
@@ -299,13 +284,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 }
             });
         }
-    }
-
-    private inicializarDelta(musicaId: string, tomOriginal: string, tomAlvo: string) {
-        if (this.deltasInicializados.has(musicaId)) return;
-        this.deltasInicializados.add(musicaId);
-        const delta = calcularDelta(tomOriginal, tomAlvo);
-        if (delta !== 0) this.deltasTom.update(m => ({ ...m, [musicaId]: delta }));
     }
 
     isCarregandoCifra(cifraId: string): boolean {
@@ -317,58 +295,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         return this.cifrasCache()[cifraId] ?? null;
     }
 
-    getCifraTransposta(cifra: Cifra, musicaId: string): Cifra {
-        const delta = this.deltasTom()[musicaId] ?? 0;
-        return transporCifra(this.aplicarVersao(cifra), delta);
-    }
-
-    private aplicarVersao(cifra: Cifra): Cifra {
-        const versaoId = this.versoesSelecionadas()[cifra.id];
-        if (!versaoId) return cifra;
-        const versao = (this.versoesCache()[cifra.id] ?? []).find(v => v.id === versaoId);
-        return versao ? { ...cifra, secoes: versao.secoes, tom: versao.tom } : cifra;
-    }
-
     getVersoes(cifraId: string): CifraVersao[] {
         return this.versoesCache()[cifraId] ?? [];
-    }
-
-    getVersaoSelecionada(cifraId: string): string | null {
-        return this.versoesSelecionadas()[cifraId] ?? null;
-    }
-
-    selecionarVersao(cifraId: string, versaoId: string | null, musicaId: string) {
-        this.versoesSelecionadas.update(v => ({ ...v, [cifraId]: versaoId }));
-        // Reseta delta pois o tom base pode ser diferente entre versões
-        this.deltasTom.update(m => ({ ...m, [musicaId]: 0 }));
-        this.deltasInicializados.delete(musicaId);
-    }
-
-    formatarDataVersao(iso: string): string {
-        return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: '2-digit' });
-    }
-
-    mudarTom(musicaId: string, delta: number) {
-        this.deltasTom.update(m => ({ ...m, [musicaId]: (m[musicaId] ?? 0) + delta }));
-    }
-
-    getDelta(musicaId: string): number {
-        return this.deltasTom()[musicaId] ?? 0;
-    }
-
-    restaurarTom(musicaId: string) {
-        this.deltasTom.update(m => ({ ...m, [musicaId]: 0 }));
-    }
-
-    getFonteSize(musicaId: string): number {
-        return this.fontesSize()[musicaId] ?? 15;
-    }
-
-    mudarFonte(musicaId: string, delta: number) {
-        this.fontesSize.update(m => {
-            const atual = m[musicaId] ?? 15;
-            return { ...m, [musicaId]: Math.min(24, Math.max(12, atual + delta)) };
-        });
     }
 
     // ─── Live mode ────────────────────────────────────────────────────
@@ -476,60 +404,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
     }
 
-    // ─── Adicionar música (editor) ───────────────────────────────────
+    // ─── Busca rápida ────────────────────────────────────────────────
 
-    abrirModalAdicionarMusica() { this.modalAdicionarAberto.set(true); }
-    fecharModalAdicionarMusica() { this.modalAdicionarAberto.set(false); }
+    abrirModalBusca()  { this.modalBuscaAberto.set(true); }
+    fecharModalBusca() { this.modalBuscaAberto.set(false); }
 
-    onMusicaSelecionadaHome(selecionada: MusicaSelecionada) {
-        const lista = this.listaAtual();
-        const parte = this.parteAtiva();
-        if (!lista || !parte) return;
-        const novaMusica: MusicaLista = {
-            id: newId('m'),
-            cifraId: selecionada.cifraId,
-            nome: selecionada.nome,
-            autor: selecionada.autor,
-            trecho: selecionada.trecho,
-            parte,
-            ordem: lista.musicas.filter(m => m.parte === parte).length,
-        };
-        const atualizada = { ...lista, musicas: [...lista.musicas, novaMusica] };
-        this.listaAtual.set(atualizada);
-        this.fecharModalAdicionarMusica();
-        this.salvandoMusica.set(true);
-        this.listaService.salvarLista(atualizada).subscribe({
-            next: () => {
-                this.salvandoMusica.set(false);
-                this.mostrarNotificacaoHome(`"${selecionada.nome}" adicionada!`);
-            },
-            error: () => {
-                this.salvandoMusica.set(false);
-                this.listaAtual.set(lista);
-            },
-        });
-    }
-
-    onCadastrarNovaHome(nomeBuscado: string) {
-        const lista = this.listaAtual();
-        if (lista) {
-            this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
-            this.listaService.vistaDraft = 'editar-lista';
-            this.listaService.parteParaAdicionarDraft = this.parteAtiva();
-        }
-        this.fecharModalAdicionarMusica();
-        this.router.navigate(['/minha-area/nova-musica'], {
-            queryParams: {
-                nome: nomeBuscado,
-                retornoLista: lista?.id,
-                parte: this.parteAtiva(),
-            },
-        });
-    }
-
-    private mostrarNotificacaoHome(msg: string) {
-        this.notificacaoHome.set(msg);
-        setTimeout(() => this.notificacaoHome.set(null), 3000);
+    onMusicaBuscada(selecionada: MusicaSelecionada) {
+        this.fecharModalBusca();
+        this.router.navigate(['/cifra', selecionada.cifraId]);
     }
 
     private mostrarErroHome(msg: string) {

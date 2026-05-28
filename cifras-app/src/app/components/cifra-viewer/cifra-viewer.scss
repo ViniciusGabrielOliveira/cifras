@@ -1,0 +1,121 @@
+.cifra-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.tom-btns {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-ctrl {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+  }
+}
+
+.tom-value {
+  min-width: 38px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-acorde);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  padding: 0 6px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.versao-select {
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  cursor: pointer;
+  outline: none;
+
+  &:focus { border-color: var(--color-acorde); }
+}
+
+.btn-restaurar {
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    border-color: var(--color-acorde);
+    color: var(--color-acorde);
+  }
+}
+
+.observacao-lista {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.btn-edit {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-acorde);
+  border: 1px solid rgba(124, 106, 253, 0.3);
+  background: var(--color-acorde-bg);
+  padding: 5px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &:hover { background: rgba(124, 106, 253, 0.2); }
+}
+
+.cifra-secoes {
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}

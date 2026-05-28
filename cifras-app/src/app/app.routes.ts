@@ -94,6 +94,12 @@ export const routes: Routes = [
             import('./pages/usuario/join/join').then(m => m.JoinComponent),
     },
 
+    // ── Cifra standalone ──────────────────────────────────────────
+    {
+        path: 'cifra/:id',
+        loadComponent: () => import('./pages/cifra/cifra').then(m => m.CifraPageComponent),
+    },
+
     // ── Fallback ───────────────────────────────────────────────────
     { path: '**', redirectTo: '' },
 ];

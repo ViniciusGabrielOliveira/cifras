@@ -1,0 +1,39 @@
+<div class="cifra-page">
+  <header class="cifra-page-header">
+    <button class="btn-voltar" (click)="voltar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Voltar
+    </button>
+
+    @if (cifra(); as c) {
+      <div class="cifra-page-info">
+        <h1 class="cifra-page-titulo">{{ c.titulo }}</h1>
+        @if (c.artista) {
+          <span class="cifra-page-artista">{{ c.artista }}</span>
+        }
+      </div>
+    }
+  </header>
+
+  @if (loading()) {
+    <div class="cifra-page-loading">
+      <div class="spinner"></div>
+      <span>Carregando...</span>
+    </div>
+  } @else if (erro()) {
+    <div class="cifra-page-erro">
+      <p>Música não encontrada.</p>
+      <button class="btn-voltar-inline" (click)="voltar()">Voltar</button>
+    </div>
+  } @else if (cifra(); as c) {
+    <div class="cifra-page-body">
+      <app-cifra-viewer
+        [cifra]="c"
+        [versoes]="versoes()"
+        [mostrarEditar]="auth.isLogado()"
+      />
+    </div>
+  }
+</div>

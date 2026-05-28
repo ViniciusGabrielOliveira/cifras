@@ -508,7 +508,7 @@
 }
 
 /* ── FAB Adicionar música ────────────────────────────────────────── */
-.fab-add-musica {
+.fab-busca {
     position: fixed;
     bottom: 2rem;
     right: 1.5rem;
@@ -531,18 +531,7 @@
         box-shadow: 0 6px 28px rgba(124, 106, 253, 0.65);
     }
 
-    &:active {
-        transform: scale(0.95);
-    }
-}
-
-.fab-spinner {
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
-    border-top-color: #fff;
-    border-radius: 50%;
-    animation: global-spin 0.7s linear infinite;
+    &:active { transform: scale(0.95); }
 }
 
 .tab {

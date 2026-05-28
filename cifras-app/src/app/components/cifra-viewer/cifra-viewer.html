@@ -1,0 +1,60 @@
+<div class="cifra-toolbar">
+  <div class="toolbar-group">
+    <span class="toolbar-label">Tom</span>
+    <div class="tom-btns">
+      <button class="btn-ctrl" (click)="mudarTom(-1)">−</button>
+      <span class="tom-value">{{ cifraExibida().tom }}</span>
+      <button class="btn-ctrl" (click)="mudarTom(+1)">+</button>
+    </div>
+    @if (delta() !== 0) {
+      <button class="btn-restaurar" (click)="restaurarTom()">Restaurar</button>
+    }
+    @if (observacao()) {
+      <span class="observacao-lista">{{ observacao() }}</span>
+    }
+  </div>
+
+  <div class="toolbar-group">
+    <span class="toolbar-label">Texto</span>
+    <div class="tom-btns">
+      <button class="btn-ctrl" (click)="mudarFonte(-1)">−</button>
+      <span class="tom-value" style="min-width:40px">{{ fonteSize() }}px</span>
+      <button class="btn-ctrl" (click)="mudarFonte(+1)">+</button>
+    </div>
+  </div>
+
+  @if (versoes().length > 0) {
+    <div class="toolbar-group">
+      <span class="toolbar-label">Versão</span>
+      <select
+        class="versao-select"
+        [value]="versaoSelecionada() ?? ''"
+        (change)="selecionarVersao($any($event.target).value || null)"
+      >
+        <option value="">Atual</option>
+        @for (v of versoes(); track v.id) {
+          <option [value]="v.id">{{ formatarDataVersao(v.aprovadoEm) }}</option>
+        }
+      </select>
+    </div>
+  }
+
+  <div style="flex:1"></div>
+
+  @if (mostrarEditar()) {
+    <a class="btn-edit" [routerLink]="['/admin/editar-cifra', cifra().id]">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" style="margin-right:4px;vertical-align:text-bottom">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+      </svg>
+      Editar cifra
+    </a>
+  }
+</div>
+
+<div class="cifra-secoes" [style.font-size.px]="fonteSize()">
+  @for (secao of cifraExibida().secoes; track $index) {
+    <app-secao-cifra [secao]="secao" />
+  }
+</div>
