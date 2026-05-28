@@ -96,12 +96,79 @@ _TONS_VALIDOS = {
 }
 
 _TOM_RE = re.compile(r'^[A-G][b#]?m?$')
+_ACORDE_TOKEN_RE = re.compile(r'^([A-G][#b]?)(?:m(?!aj)|maj|min|dim|aug|sus[24]?|add\d*|[679]|11|13|M)?(?:/[A-G][#b]?)?$')
+
+# Cromatismo: índice 0=C, 1=C#/Db, ..., 11=B
+_NOTAS = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
+_ENARM = {'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#','Cb':'B','Fb':'E','B#':'C','E#':'F'}
+
+# Semitons da escala maior e menor natural a partir da tônica
+_SEMI_MAIOR = frozenset([0, 2, 4, 5, 7, 9, 11])
+_SEMI_MENOR = frozenset([0, 2, 3, 5, 7, 8, 10])
 
 
 def _normalizar_tom(tom: str) -> str:
     """Valida o tom contra os tons suportados pelo sistema."""
     tom = tom.strip()
     return tom if tom in _TONS_VALIDOS else 'C'
+
+
+def _idx_nota(nota: str) -> int:
+    return _NOTAS.index(_ENARM.get(nota, nota))
+
+
+def _tom_from_lyrics(lyrics: str) -> str:
+    """Infere o tom verificando qual escala maior/menor abriga mais acordes da cifra.
+
+    Para cada tonalidade em _TONS_VALIDOS calcula:
+      - pontos pela raiz de cada acorde que pertence à escala
+      - bônus quando o acorde tônico (raiz + qualidade) aparece na cifra
+    A tonalidade com maior pontuação é retornada.
+    """
+    # Extrai pares (idx_cromático, is_minor) de todas as linhas de acorde
+    chord_data: list[tuple[int, bool]] = []
+    for line in lyrics.split('\n'):
+        tokens = line.strip().split()
+        if len(tokens) < 2:
+            continue
+        if not all(_ACORDE_TOKEN_RE.match(t) for t in tokens):
+            continue
+        for t in tokens:
+            m = re.match(r'^([A-G][#b]?)(m(?!aj))?', t)
+            if m:
+                try:
+                    chord_data.append((_idx_nota(m.group(1)), bool(m.group(2))))
+                except (ValueError, KeyError):
+                    pass
+
+    if not chord_data:
+        return 'C'
+
+    best_key, best_score = 'C', -1
+
+    for key in _TONS_VALIDOS:
+        is_minor_key = key.endswith('m')
+        tonica_str = key[:-1] if is_minor_key else key
+        try:
+            tonica_idx = _idx_nota(tonica_str)
+        except (ValueError, KeyError):
+            continue
+
+        escala = _SEMI_MENOR if is_minor_key else _SEMI_MAIOR
+        escala_idxs = frozenset((tonica_idx + s) % 12 for s in escala)
+
+        # 1 ponto por acorde com raiz na escala
+        score = sum(1 for (idx, _) in chord_data if idx in escala_idxs)
+
+        # Bônus: acorde tônico (raiz + qualidade) presente na cifra
+        bonus = sum(1 for (idx, is_m) in chord_data
+                    if idx == tonica_idx and is_m == is_minor_key)
+
+        final = score * 10 + bonus
+        if final > best_score:
+            best_score, best_key = final, key
+
+    return best_key
 
 
 def _tom_from_next_data(html: str) -> Optional[str]:
@@ -168,21 +235,7 @@ def _parse_page(html: str, source_url: str) -> dict:
         or ""
     )
 
-    tom_raw = (
-        _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')
-        or _tom_from_next_data(html)
-        or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
-        or _match(html, r'data-cifra-key="([A-G][b#]?m?)"')
-        or _match(html, r'data-key="([A-G][b#]?m?)"')
-        or _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')
-        or _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')
-        or _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')
-        or _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')
-        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')
-        or "C"
-    )
-    tom = _normalizar_tom(tom_raw)
-
+    # Extrai lyrics antes do tom para poder usá-los como fallback
     raw = (
         _match(html, r'<pre[^>]*id="pre_cifra"[^>]*>([\s\S]*?)</pre>')
         or _match(html, r'<div[^>]*id="cifra_v"[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)</pre>')
@@ -209,6 +262,21 @@ def _parse_page(html: str, source_url: str) -> dict:
         .replace("\r", "\n")
         .strip()
     )
+
+    tom_raw = (
+        _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')
+        or _tom_from_next_data(html)
+        or _match(source_url, r"[?&]tom=([A-G][b#]?m?)")
+        or _match(html, r'data-cifra-key="([A-G][b#]?m?)"')
+        or _match(html, r'data-key="([A-G][b#]?m?)"')
+        or _match(html, r'"cifraKey"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'"tom"\s*:\s*"([A-G][b#]?m?)"')
+        or _match(html, r'[?&]tom=([A-G][b#]?m?)["&\s]')
+        or _match(html, r'<a[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"[^>]*class="[^"]*\bactive\b')
+        or _match(html, r'<a[^>]*class="[^"]*\bactive\b[^"]*"[^>]*href="[^"]*[?&]tom=([A-G][b#]?m?)"')
+        or _tom_from_lyrics(lyrics)
+    )
+    tom = _normalizar_tom(tom_raw)
 
     return {
         "title":           title.strip(),
