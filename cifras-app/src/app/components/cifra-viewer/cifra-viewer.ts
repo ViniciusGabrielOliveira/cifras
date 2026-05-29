@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -18,7 +18,7 @@ function extrairYoutubeId(url: string): string | null {
   templateUrl: './cifra-viewer.html',
   styleUrl: './cifra-viewer.scss',
 })
-export class CifraViewerComponent {
+export class CifraViewerComponent implements OnDestroy {
   private sanitizer = inject(DomSanitizer);
 
   cifra        = input.required<Cifra>();
@@ -30,6 +30,11 @@ export class CifraViewerComponent {
   fonteSize          = signal(15);
   versaoSelecionada  = signal<string | null>(null);
   playerAberto       = signal(false);
+  scrollAtivo        = signal(false);
+  velocidade         = signal(3);
+
+  private _rafId?: number;
+  private _lastTime?: number;
 
   youtubeEmbedUrl = computed((): SafeResourceUrl | null => {
     const link = this.cifra().videoLink;
@@ -63,5 +68,56 @@ export class CifraViewerComponent {
 
   formatarDataVersao(iso: string): string {
     return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: '2-digit' });
+  }
+
+  toggleScroll() {
+    if (this.scrollAtivo()) {
+      this.pararScroll();
+    } else {
+      this.scrollAtivo.set(true);
+      this._lastTime = undefined;
+      this._rafId = requestAnimationFrame(t => this.loop(t));
+    }
+  }
+
+  private loop(timestamp: number) {
+    if (!this.scrollAtivo()) return;
+
+    if (this._lastTime !== undefined) {
+      const elapsed = timestamp - this._lastTime;
+      // velocidade 1–10 → ~20–200 px/s
+      window.scrollBy(0, (this.velocidade() * 20 * elapsed) / 1000);
+    }
+    this._lastTime = timestamp;
+
+    // Para automaticamente ao chegar no fim da página
+    const scrollBottom = window.scrollY + window.innerHeight;
+    if (scrollBottom >= document.body.scrollHeight - 4) {
+      this.pararScroll();
+      return;
+    }
+
+    this._rafId = requestAnimationFrame(t => this.loop(t));
+  }
+
+  private pararScroll() {
+    this.scrollAtivo.set(false);
+    if (this._rafId) cancelAnimationFrame(this._rafId);
+  }
+
+  mudarVelocidade(d: number) {
+    this.velocidade.update(v => Math.min(10, Math.max(1, v + d)));
+  }
+
+  onToqueCifra(event: Event) {
+    if (!this.scrollAtivo()) return;
+    const alvo = event.target as HTMLElement;
+    if (alvo.closest('button, a, select')) return;
+    event.preventDefault();
+    window.scrollBy({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+  }
+
+  ngOnDestroy() {
+    this.pararScroll();
   }
 }

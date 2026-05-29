@@ -39,6 +39,24 @@
     </div>
   }
 
+  <div class="toolbar-group">
+    <span class="toolbar-label">Rolagem</span>
+    <div class="tom-btns">
+      <button class="btn-ctrl" (click)="mudarVelocidade(-1)" [disabled]="velocidade() <= 1">−</button>
+      <span class="tom-value" style="min-width:28px">{{ velocidade() }}</span>
+      <button class="btn-ctrl" (click)="mudarVelocidade(+1)" [disabled]="velocidade() >= 10">+</button>
+    </div>
+    <button class="btn-scroll" [class.ativo]="scrollAtivo()" (click)="toggleScroll()">
+      @if (scrollAtivo()) {
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+        Pausar
+      } @else {
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        Rolar
+      }
+    </button>
+  </div>
+
   <div style="flex:1"></div>
 
   @if (youtubeEmbedUrl()) {
@@ -76,7 +94,11 @@
   </div>
 }
 
-<div class="cifra-secoes" [style.font-size.px]="fonteSize()">
+<div class="cifra-secoes"
+     [style.font-size.px]="fonteSize()"
+     [class.scroll-ativo]="scrollAtivo()"
+     (click)="onToqueCifra($event)"
+     (touchstart)="onToqueCifra($event)">
   @for (secao of cifraExibida().secoes; track $index) {
     <app-secao-cifra [secao]="secao" />
   }
