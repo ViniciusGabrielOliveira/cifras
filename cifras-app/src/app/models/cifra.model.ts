@@ -10,6 +10,7 @@ export interface AcordeLinha {
 export interface LinhaCifra {
   letra: string;
   acordes: AcordeLinha[];
+  rawChordsLine?: string; // texto original da linha de acordes (preserva parênteses/setas)
 }
 
 export interface Secao {

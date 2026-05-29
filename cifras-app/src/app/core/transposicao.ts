@@ -36,6 +36,18 @@ export function transporAcorde(acorde: string, delta: number): string {
     return `${transporNota(raiz, delta)}${mod}${baixo ? '/' + transporNota(baixo, delta) : ''}`;
 }
 
+function reconstruirRawChordsLine(raw: string, acordesOriginais: { posicao: number; acorde: string }[], delta: number): string {
+    // Substitui cada acorde no texto original da direita para a esquerda,
+    // preservando parênteses, setas e espaços ao redor dos acordes.
+    const sorted = [...acordesOriginais].sort((a, b) => b.posicao - a.posicao);
+    let result = raw;
+    for (const { posicao, acorde } of sorted) {
+        const transposto = transporAcorde(acorde, delta);
+        result = result.substring(0, posicao) + transposto + result.substring(posicao + acorde.length);
+    }
+    return result;
+}
+
 export function transporCifra(cifra: Cifra, delta: number): Cifra {
     if (delta === 0) return cifra;
     return {
@@ -45,13 +57,16 @@ export function transporCifra(cifra: Cifra, delta: number): Cifra {
             if (secao.tipo === 'tab') return secao;
             return {
                 ...secao,
-                linhas: secao.linhas.map(linha => ({
-                    ...linha,
-                    acordes: linha.acordes.map(({ posicao, acorde }) => ({
+                linhas: secao.linhas.map(linha => {
+                    const novosAcordes = linha.acordes.map(({ posicao, acorde }) => ({
                         posicao,
                         acorde: transporAcorde(acorde, delta),
-                    })),
-                })),
+                    }));
+                    const novoRaw = linha.rawChordsLine !== undefined
+                        ? reconstruirRawChordsLine(linha.rawChordsLine, linha.acordes, delta)
+                        : undefined;
+                    return { ...linha, acordes: novosAcordes, rawChordsLine: novoRaw };
+                }),
             };
         }),
     };

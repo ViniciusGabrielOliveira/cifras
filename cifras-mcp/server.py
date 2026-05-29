@@ -130,11 +130,27 @@ async def scrape_cifraclub(url: str) -> dict:
 
 # ── Parser de cifra (equivalente ao parseCifraTexto do TS) ────────────────────
 
-_ACORDE_RE = re.compile(r'^[A-G](?:#|b)?(?:m|maj|min|dim|aug|sus|add)?[0-9]?(?:/[A-G](?:#|b)?)?$')
+_ACORDE_RE = re.compile(r'^[A-G][#b]?[mMajdinugsb+°º#\d-]*(?:/[A-G][#b]?[mMajdinugsb+°º#\d-]*)?$')
+_HAS_PARENS_ARROWS = re.compile(r'[()]|-+>|[→➜⟶🡪]')
+_SETAS = re.compile(r'-+>|[→➜⟶🡪]')
+
+def _substituir_mesmo_tamanho(linha: str) -> str:
+    """Substitui () e setas por espaços do mesmo comprimento, preservando posições."""
+    resultado = re.sub(r'[()]', ' ', linha)
+    resultado = _SETAS.sub(lambda m: ' ' * len(m.group(0)), resultado)
+    return resultado
 
 def _eh_linha_acordes(linha: str) -> bool:
-    tokens = linha.strip().lstrip("(").rstrip(")").split()
-    return bool(tokens) and all(_ACORDE_RE.match(t) for t in tokens)
+    """Verifica se a linha é de acordes, suportando parênteses e setas."""
+    tinha_parens = bool(_HAS_PARENS_ARROWS.search(linha))
+    limpa = _substituir_mesmo_tamanho(linha).strip()
+    if not limpa:
+        return False
+    tokens = [t for t in limpa.split() if t]
+    if not tokens or not all(_ACORDE_RE.match(t) for t in tokens):
+        return False
+    # Evita falsos positivos (palavras como "Então", "Amém") sem parênteses/setas
+    return tinha_parens or len(tokens) >= 2
 
 def _inferir_tipo(nome: str) -> str:
     n = normalizar(nome)
@@ -147,7 +163,8 @@ def _inferir_tipo(nome: str) -> str:
     if "solo" in n: return "solo"
     return "outro"
 
-def _parse_acordes(acordes_str: str, letra: str) -> list[dict]:
+def _parse_acordes(acordes_str: str) -> list[dict]:
+    """Extrai acordes com posições originais preservadas (acordes_str com () trocados por espaços)."""
     return [
         {"acorde": m.group(0), "posicao": m.start()}
         for m in re.finditer(r'\S+', acordes_str)
@@ -155,13 +172,21 @@ def _parse_acordes(acordes_str: str, letra: str) -> list[dict]:
     ]
 
 def parse_cifra_texto(texto: str) -> list[dict]:
-    secoes, secao_atual, acordes_pend, tab_linhas = [], {"tipo":"verso","label":"Verso 1","linhas":[]}, None, []
+    secoes = []
+    secao_atual: dict = {"tipo":"verso","label":"Verso 1","linhas":[]}
+    acordes_pend: str | None = None   # string com () trocados por espaços (posições preservadas)
+    raw_pend: str | None = None       # texto original da linha de acordes (com parênteses)
+    tab_linhas: list[str] = []
 
     def flush():
-        nonlocal acordes_pend
+        nonlocal acordes_pend, raw_pend
         if acordes_pend is not None:
-            secao_atual["linhas"].append({"letra": "", "acordes": _parse_acordes(acordes_pend, "")})
+            linha_dict: dict = {"letra": "", "acordes": _parse_acordes(acordes_pend)}
+            if raw_pend:
+                linha_dict["rawChordsLine"] = raw_pend
+            secao_atual["linhas"].append(linha_dict)
             acordes_pend = None
+            raw_pend = None
 
     def push():
         nonlocal tab_linhas
@@ -192,13 +217,18 @@ def parse_cifra_texto(texto: str) -> list[dict]:
 
         if _eh_linha_acordes(linha):
             flush()
-            acordes_pend = linha.strip()
+            acordes_pend = _substituir_mesmo_tamanho(linha)
+            raw_pend = linha.rstrip() if _HAS_PARENS_ARROWS.search(linha) else None
             continue
 
         letra = linha.rstrip()
         if acordes_pend is not None:
-            secao_atual["linhas"].append({"letra": letra, "acordes": _parse_acordes(acordes_pend, letra)})
+            linha_dict = {"letra": letra, "acordes": _parse_acordes(acordes_pend)}
+            if raw_pend:
+                linha_dict["rawChordsLine"] = raw_pend
+            secao_atual["linhas"].append(linha_dict)
             acordes_pend = None
+            raw_pend = None
         else:
             secao_atual["linhas"].append({"letra": letra, "acordes": []})
 

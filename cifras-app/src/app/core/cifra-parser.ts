@@ -43,10 +43,20 @@ function isTabLine(linha: string): boolean {
   return /^[EBGDAe]\|/.test(linha.trim());
 }
 
+const HAS_PARENS_ARROWS = /[()]|-+>|[→➜⟶🡪]/;
+
 function extrairAcordesLinha(linha: string): string | null {
-  const stripped = linha.trim().replace(/^\((.+)\)$/, '$1').trim();
-  const tokens = stripped.split(/\s+/).filter(t => t.length > 0);
-  if (tokens.length > 0 && tokens.every(t => REGEX_ACORDE.test(t))) return stripped;
+  // Remove parênteses (ex: "D9 ( D4 D )") e setas (ex: "(F7) -> Bb7") antes
+  // de validar os tokens. Retorna a string com () e setas substituídos por
+  // espaços de mesmo comprimento para preservar as posições originais dos acordes.
+  const substituida = linha
+    .replace(/[()]/g, ' ')
+    .replace(/-+>/g, m => ' '.repeat(m.length))
+    .replace(/[→➜⟶🡪]/g, ' ');
+  const normalizada = substituida.trim();
+  if (!normalizada) return null;
+  const tokens = normalizada.split(/\s+/).filter(t => t.length > 0);
+  if (tokens.length > 0 && tokens.every(t => REGEX_ACORDE.test(t))) return substituida;
   return null;
 }
 
@@ -79,13 +89,17 @@ export function parseCifraTexto(texto: string): Secao[] {
   const secoes: Secao[] = [];
   let secaoAtual: Secao = { tipo: 'verso', label: 'Verso 1', linhas: [] };
   let acordesPendentes: string | null = null;
+  let rawPendente: string | null = null; // texto original da linha de acordes (com parênteses)
   // Linhas acumuladas para seções tab
   let tabLinhas: string[] = [];
 
   const flushAcordes = () => {
     if (acordesPendentes !== null) {
-      secaoAtual.linhas.push(parseLinhaCifra('', acordesPendentes));
+      const l = parseLinhaCifra('', acordesPendentes);
+      if (rawPendente) l.rawChordsLine = rawPendente;
+      secaoAtual.linhas.push(l);
       acordesPendentes = null;
+      rawPendente = null;
     }
   };
 
@@ -139,13 +153,17 @@ export function parseCifraTexto(texto: string): Secao[] {
     if (acordesLinha !== null) {
       flushAcordes();
       acordesPendentes = acordesLinha;
+      rawPendente = HAS_PARENS_ARROWS.test(linha) ? linha.trimEnd() : null;
       continue;
     }
 
     const letra = linha.trimEnd();
     if (acordesPendentes !== null) {
-      secaoAtual.linhas.push(parseLinhaCifra(letra, acordesPendentes));
+      const l = parseLinhaCifra(letra, acordesPendentes);
+      if (rawPendente) l.rawChordsLine = rawPendente;
+      secaoAtual.linhas.push(l);
       acordesPendentes = null;
+      rawPendente = null;
     } else {
       secaoAtual.linhas.push({ letra, acordes: [] });
     }
@@ -168,14 +186,18 @@ export function cifraToTexto(secoes: Secao[]): string {
     } else {
       for (const linha of secao.linhas) {
         if (linha.acordes.length > 0) {
-          const maxEnd = Math.max(...linha.acordes.map(a => a.posicao + a.acorde.length));
-          const buf = Array<string>(Math.max(maxEnd, 1)).fill(' ');
-          for (const a of linha.acordes) {
-            for (let i = 0; i < a.acorde.length; i++) {
-              buf[a.posicao + i] = a.acorde[i];
+          if (linha.rawChordsLine !== undefined) {
+            lines.push(linha.rawChordsLine);
+          } else {
+            const maxEnd = Math.max(...linha.acordes.map(a => a.posicao + a.acorde.length));
+            const buf = Array<string>(Math.max(maxEnd, 1)).fill(' ');
+            for (const a of linha.acordes) {
+              for (let i = 0; i < a.acorde.length; i++) {
+                buf[a.posicao + i] = a.acorde[i];
+              }
             }
+            lines.push(buf.join('').trimEnd());
           }
-          lines.push(buf.join('').trimEnd());
         }
         if (linha.letra) lines.push(linha.letra);
         else if (linha.acordes.length === 0) lines.push('');

@@ -55,3 +55,31 @@
     /* herda do pai — não usa rem */
     color: var(--color-text);
 }
+
+/* ── Linha de acordes com parênteses (rawChordsLine) ──────────── */
+.linha-raw-acordes {
+    display: block;
+    width: 100%;
+    white-space: pre;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5em;
+}
+
+.raw-espaco,
+.raw-paren {
+    white-space: pre;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color-text);
+}
+
+.linha-letra-abaixo {
+    display: block;
+    width: 100%;
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.6;
+    color: var(--color-text);
+}
