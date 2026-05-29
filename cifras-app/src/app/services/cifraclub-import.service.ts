@@ -2,6 +2,9 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, firstValueFrom } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Cifra } from '../models/cifra.model';
+import { parseCifraTexto, slugify } from '../core/cifra-parser';
+import { CifraService } from './cifra.service';
 
 export interface CifraClubSugestao {
   id: string;
@@ -21,7 +24,8 @@ export interface CifraClubImportResult {
 
 @Injectable({ providedIn: 'root' })
 export class CifraClubImportService {
-  private http = inject(HttpClient);
+  private http        = inject(HttpClient);
+  private cifraService = inject(CifraService);
 
   /** Resultado de um import pendente — consumido por nova-cifra ao abrir */
   pendingImport: CifraClubImportResult | null = null;
@@ -46,5 +50,31 @@ export class CifraClubImportService {
         params: { url: cifraUrl },
       })
     );
+  }
+
+  /** Scrapa, parseia e salva no Firebase. Retorna o cifraId gerado. */
+  async importarESalvar(sugestao: CifraClubSugestao): Promise<string> {
+    const result = await this.importarMusica(sugestao);
+    const titulo  = result.title  || sugestao.nome;
+    const artista = result.artist || sugestao.artista;
+    const id      = slugify(`${titulo} ${artista}`);
+    const secoes  = parseCifraTexto(result.lyricsWithChords);
+
+    const cifra: Cifra = {
+      id,
+      titulo,
+      artista,
+      tom:          result.tom || 'C',
+      instrumento:  'violao',
+      dificuldade:  'basico',
+      composicao:   '',
+      categorias:   [],
+      partesMissa:  [],
+      secoes,
+      sourceUrl:    result.sourceUrl,
+    };
+
+    await firstValueFrom(this.cifraService.salvarCifra(cifra));
+    return id;
   }
 }

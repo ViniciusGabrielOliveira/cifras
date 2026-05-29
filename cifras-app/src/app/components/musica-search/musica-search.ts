@@ -1,10 +1,10 @@
 import {
-  Component, inject, signal, output, input,
+  Component, inject, signal, computed, output, input,
   ElementRef, ViewChild, HostListener, OnDestroy, AfterViewInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Subject, debounceTime, distinctUntilChanged, switchMap, of, map, catchError, EMPTY } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, of, catchError, EMPTY } from 'rxjs';
 import { CifraBuscaService, ResultadoBusca } from '../../services/cifra-busca.service';
 import { CifraClubImportService, CifraClubSugestao } from '../../services/cifraclub-import.service';
 import { ConfigService } from '../../services/config.service';
@@ -18,11 +18,22 @@ export interface MusicaSelecionada {
   trecho?: string;
 }
 
+export interface ItemResultado extends ResultadoBusca {
+  fromWeb?: boolean;
+  webSugestao?: CifraClubSugestao;
+}
+
 interface SearchParams {
   q: string;
   f: string;
   cats: string[];
   partes: string[];
+}
+
+function norm(s: string): string {
+  return (s ?? '').toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]/g, '');
 }
 
 @Component({
@@ -38,31 +49,57 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   readonly config      = inject(ConfigService);
 
   // ── Inputs / Outputs ─────────────────────────────────────────────
-  placeholder       = input('Buscar por título, trecho da letra ou autor...');
-  modoEmbutido      = input(false);
-  mostrarCifraClub  = input(false);
-  mostrarFiltros    = input(false);
+  placeholder   = input('Buscar por título, trecho da letra ou autor...');
+  modoEmbutido  = input(false);
+  mostrarFiltros = input(false);
+  // Controle de acesso à busca web — true por padrão, pode ser restringido no futuro
+  mostrarCifraClub = input(true);
 
-  musicaSelecionada    = output<MusicaSelecionada>();
-  cadastrarNova        = output<string>();
-  cifraClubSelecionada = output<CifraClubSugestao>();
+  musicaSelecionada = output<MusicaSelecionada>();
+  cadastrarNova     = output<string>();
 
   @ViewChild('inputEl') inputEl!: ElementRef<HTMLInputElement>;
 
-  // ── Estado: busca local ──────────────────────────────────────────
-  query              = signal('');
-  filtroTipo         = signal<'tudo' | 'titulo' | 'autor' | 'letra'>('tudo');
-  filtrosCategorias  = signal<string[]>([]);
-  filtrosPartes      = signal<string[]>([]);
-  resultados         = signal<ResultadoBusca[]>([]);
-  aberto             = signal(false);
-  carregando         = signal(false);
-  buscou             = signal(false);
-  itemFocado         = signal(-1);
+  // ── Estado ───────────────────────────────────────────────────────
+  query             = signal('');
+  filtroTipo        = signal<'tudo' | 'titulo' | 'autor' | 'letra'>('tudo');
+  filtrosCategorias = signal<string[]>([]);
+  filtrosPartes     = signal<string[]>([]);
+  resultados        = signal<ResultadoBusca[]>([]);
+  aberto            = signal(false);
+  carregando        = signal(false);
+  buscou            = signal(false);
+  itemFocado        = signal(-1);
+  importando        = signal(false);
+  erroImport        = signal<string | null>(null);
 
-  // ── Estado: Cifra Club ───────────────────────────────────────────
   sugestoesCifraClub = signal<CifraClubSugestao[]>([]);
   buscandoCifraClub  = signal(false);
+
+  // ── Resultados mesclados (banco + web sem duplicatas) ────────────
+  resultadosMesclados = computed<ItemResultado[]>(() => {
+    const local = this.resultados();
+    const web   = this.mostrarCifraClub() ? this.sugestoesCifraClub() : [];
+
+    const localKeys = new Set(local.map(r => norm(r.titulo) + '|' + norm(r.autor)));
+    const localTitles = new Set(local.map(r => norm(r.titulo)));
+
+    const webNovos: ItemResultado[] = web
+      .filter(s =>
+        !localKeys.has(norm(s.nome) + '|' + norm(s.artista)) &&
+        !localTitles.has(norm(s.nome))
+      )
+      .map(s => ({
+        id:        `web-${s.id}`,
+        titulo:    s.nome,
+        autor:     s.artista,
+        matchTipo: 'titulo' as const,
+        fromWeb:   true,
+        webSugestao: s,
+      }));
+
+    return [...local, ...webNovos];
+  });
 
   // ── Pipeline busca local ─────────────────────────────────────────
   private searchParams$ = new Subject<SearchParams>();
@@ -98,7 +135,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
       this.itemFocado.set(-1);
     });
 
-  // ── Pipeline Cifra Club ──────────────────────────────────────────
+  // ── Pipeline busca web ───────────────────────────────────────────
   private ccQuery$ = new Subject<string>();
   private ccSub = this.ccQuery$
     .pipe(
@@ -112,13 +149,12 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
         }
         this.buscandoCifraClub.set(true);
         return this.cifraClub.buscarSugestoes(q).pipe(
-          map(res => res.slice(0, 6)),
           catchError(() => of([])),
         );
       }),
     )
     .subscribe(res => {
-      this.sugestoesCifraClub.set(res);
+      this.sugestoesCifraClub.set(res.slice(0, 6));
       this.buscandoCifraClub.set(false);
     });
 
@@ -129,10 +165,9 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   onInput(event: Event) {
     const val = (event.target as HTMLInputElement).value;
     this.query.set(val);
+    this.erroImport.set(null);
     this._dispararBusca(val);
-    if (this.mostrarCifraClub()) {
-      this.ccQuery$.next(val);
-    }
+    this.ccQuery$.next(val);
     if (val.length < 2 && !this.temFiltrosAtivos) {
       this.aberto.set(false);
       this.resultados.set([]);
@@ -144,9 +179,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   setFiltro(tipo: 'tudo' | 'titulo' | 'autor' | 'letra') {
     this.filtroTipo.set(tipo);
     this._dispararBusca();
-    if (!this.modoEmbutido()) {
-      this.inputEl?.nativeElement.focus();
-    }
+    if (!this.modoEmbutido()) this.inputEl?.nativeElement.focus();
   }
 
   onSelecionarParte(event: Event) {
@@ -188,7 +221,17 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
     });
   }
 
-  selecionar(item: ResultadoBusca) {
+  // ── Seleção unificada ────────────────────────────────────────────
+
+  selecionarItem(item: ItemResultado) {
+    if (item.fromWeb && item.webSugestao) {
+      this._importarESalvar(item.webSugestao);
+    } else {
+      this._selecionarLocal(item);
+    }
+  }
+
+  private _selecionarLocal(item: ResultadoBusca) {
     let t = item.trechoMatch;
     if (!t && item.letra) {
       const words = item.letra.split(' ');
@@ -204,9 +247,22 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
     this._limparTudo();
   }
 
-  selecionarCifraClub(sugestao: CifraClubSugestao) {
-    this.cifraClubSelecionada.emit(sugestao);
-    this._limparTudo();
+  private async _importarESalvar(sugestao: CifraClubSugestao) {
+    this.importando.set(true);
+    this.erroImport.set(null);
+    try {
+      const cifraId = await this.cifraClub.importarESalvar(sugestao);
+      this.musicaSelecionada.emit({
+        cifraId,
+        nome:  sugestao.nome,
+        autor: sugestao.artista,
+      });
+      this._limparTudo();
+    } catch {
+      this.erroImport.set('Não foi possível importar a música. Tente novamente.');
+    } finally {
+      this.importando.set(false);
+    }
   }
 
   onCadastrarNova() {
@@ -226,11 +282,12 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
     this.itemFocado.set(-1);
     this.sugestoesCifraClub.set([]);
     this.buscandoCifraClub.set(false);
+    this.erroImport.set(null);
   }
 
   @HostListener('keydown', ['$event'])
   onKeydown(e: KeyboardEvent) {
-    const res = this.resultados();
+    const res = this.resultadosMesclados();
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       this.itemFocado.update(i => Math.min(i + 1, res.length - 1));
@@ -241,7 +298,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
       const idx = this.itemFocado();
       if (idx >= 0 && res[idx]) {
         e.preventDefault();
-        this.selecionar(res[idx]);
+        this.selecionarItem(res[idx]);
       }
     } else if (e.key === 'Escape') {
       this.aberto.set(false);
@@ -249,13 +306,11 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   }
 
   fecharDropdown() {
-    if (!this.modoEmbutido()) {
-      setTimeout(() => this.aberto.set(false), 150);
-    }
+    if (!this.modoEmbutido()) setTimeout(() => this.aberto.set(false), 150);
   }
 
   get temResultados(): boolean {
-    return this.resultados().length > 0 || this.sugestoesCifraClub().length > 0;
+    return this.resultadosMesclados().length > 0;
   }
 
   get estaCarregandoQualquer(): boolean {

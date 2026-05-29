@@ -11,7 +11,8 @@ import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../../components/musica-search/musica-search';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
-import { CifraClubImportService, CifraClubSugestao } from '../../../services/cifraclub-import.service';
+// CifraClubImportService mantido para futura restrição de acesso
+import { CifraClubImportService } from '../../../services/cifraclub-import.service';
 
 let _idCounter = Date.now();
 function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
@@ -94,7 +95,6 @@ export class MinhaListaComponent implements OnInit {
     // Modal busca música
     modalBuscaAberto = signal(false);
     parteParaAdicionar = signal('entrada');
-    importandoCifraClub = signal(false);
 
     // Gerenciar partes (inline)
     editandoParteId = signal<string | null>(null);
@@ -318,27 +318,6 @@ export class MinhaListaComponent implements OnInit {
         }
     }
 
-    async onCifraClubSelecionada(sugestao: CifraClubSugestao) {
-        const lista = this.lista();
-        if (!lista) return;
-
-        this.listaService.listaDraft = JSON.parse(JSON.stringify(lista));
-        this.listaService.vistaDraft = 'editar-lista';
-        this.listaService.parteParaAdicionarDraft = this.parteParaAdicionar();
-
-        this.importandoCifraClub.set(true);
-        try {
-            const result = await this.cifraClub.importarMusica(sugestao);
-            this.cifraClub.pendingImport = result;
-            this.fecharModalBusca();
-            this.router.navigate(['/minha-area/nova-musica'], {
-                queryParams: { retornoLista: lista.id, parte: this.parteParaAdicionar() },
-            });
-        } catch {
-            this.importandoCifraClub.set(false);
-            this.mostrarErro('Não foi possível importar a música. Tente novamente.');
-        }
-    }
 
     removerMusica(musicaId: string) {
         const lista = this.lista();

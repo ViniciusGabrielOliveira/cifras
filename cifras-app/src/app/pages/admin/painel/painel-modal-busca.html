@@ -9,30 +9,22 @@
   </div>
 
   <div class="modal-body">
-    @if (importando()) {
-      <div class="modal-importando">
-        <div class="spinner"></div>
-        <span>Importando...</span>
+    @if (erro()) {
+      <div class="modal-erro-cc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        {{ erro() }}
+        <button class="btn-erro-fechar" (click)="limparErro.emit()">✕</button>
       </div>
-    } @else {
-      @if (erro()) {
-        <div class="modal-erro-cc">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-          {{ erro() }}
-          <button class="btn-erro-fechar" (click)="limparErro.emit()">✕</button>
-        </div>
-      }
-      <app-musica-search
-        placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
-        [modoEmbutido]="true"
-        [mostrarCifraClub]="true"
-        (musicaSelecionada)="musicaSelecionada.emit($event)"
-        (cadastrarNova)="cadastrarNova.emit($event)"
-        (cifraClubSelecionada)="cifraClubSelecionada.emit($event)"
-      />
     }
+    <app-musica-search
+      placeholder="Ex: Aleluia, Vem Senhor, Irmã Míria..."
+      [modoEmbutido]="true"
+      [mostrarCifraClub]="true"
+      (musicaSelecionada)="musicaSelecionada.emit($event)"
+      (cadastrarNova)="cadastrarNova.emit($event)"
+    />
   </div>
 </div>
