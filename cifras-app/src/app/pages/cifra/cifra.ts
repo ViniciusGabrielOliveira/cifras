@@ -1,6 +1,6 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute, RouterLink } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CifraService } from '../../services/cifra.service';
 import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
@@ -9,7 +9,7 @@ import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer
 @Component({
   selector: 'app-cifra-page',
   standalone: true,
-  imports: [CommonModule, RouterLink, CifraViewerComponent],
+  imports: [CommonModule, CifraViewerComponent],
   templateUrl: './cifra.html',
   styleUrl: './cifra.scss',
 })

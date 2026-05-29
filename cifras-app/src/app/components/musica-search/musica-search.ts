@@ -90,11 +90,13 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
         !localTitles.has(norm(s.nome))
       )
       .map(s => ({
-        id:        `web-${s.id}`,
-        titulo:    s.nome,
-        autor:     s.artista,
-        matchTipo: 'titulo' as const,
-        fromWeb:   true,
+        id:          `web-${s.id}`,
+        titulo:      s.nome,
+        autor:       s.artista,
+        letra:       '',
+        score:       0,
+        matchTipo:   'titulo' as const,
+        fromWeb:     true,
         webSugestao: s,
       }));
 
