@@ -244,10 +244,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.acordeonAberto.set(jaAberta ? null : musica.id);
 
         if (!jaAberta) {
-            this.carregarCifra(musica);
-            setTimeout(() => {
+            this.carregarCifra(musica, () => {
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 150);
+            });
         }
 
         if (this.modoControladorAtivo()) {
@@ -269,14 +268,23 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.toggleMusica(musica, cardEl ?? btn);
     }
 
-    private carregarCifra(musica: MusicaLista) {
+    private carregarCifra(musica: MusicaLista, onCarregado?: () => void) {
         const { cifraId } = musica;
         const cache = this.cifrasCache();
-        if (cifraId in cache) return;
+
+        if (cifraId in cache) {
+            // Cifra já está no cache — scroll após dois frames para o DOM estabilizar
+            if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
+            return;
+        }
+
         this.cifrasCache.update(c => ({ ...c, [cifraId]: null }));
         this.cifraService.getCifra(cifraId).subscribe(cifra => {
             this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
+            // Aguarda Angular atualizar o DOM antes de scrollar
+            if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
         });
+
         if (!(cifraId in this.versoesCache())) {
             this.cifraService.getVersoes(cifraId).subscribe(versoes => {
                 if (versoes.length > 0) {
@@ -336,11 +344,10 @@ export class HomeComponent implements OnInit, OnDestroy {
                                     this.parteAtiva.set(musica.parte);
                                 }
                                 this.acordeonAberto.set(idAberto);
-                                this.carregarCifra(musica);
-                                setTimeout(() => {
+                                this.carregarCifra(musica, () => {
                                     const el = document.querySelector(`[data-musica-id="${idAberto}"]`) as HTMLElement | null;
                                     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }, 150);
+                                });
                             }
                         } else {
                             this.acordeonAberto.set(null);
