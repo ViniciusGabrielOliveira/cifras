@@ -151,10 +151,10 @@ export class CifraViewerComponent implements OnDestroy {
 
     if (this._lastTime !== undefined) {
       const elapsed = timestamp - this._lastTime;
-      // velocidade 1–10 → 10–100 px/s; acumula frações para não perder sub-pixels
-      this._scrollAccum += (this.velocidade() * 10 * elapsed) / 1000;
-      const px = Math.floor(this._scrollAccum);
-      if (px >= 1) {
+      // velocidade 1–10 → 5–50 px/s; scroll em passos de 8px para suavidade visual
+      this._scrollAccum += (this.velocidade() * 5 * elapsed) / 1000;
+      const px = Math.floor(this._scrollAccum / 8) * 8;
+      if (px >= 8) {
         document.documentElement.scrollTop += px;
         this._scrollAccum -= px;
       }
