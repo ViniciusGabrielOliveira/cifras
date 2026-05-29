@@ -102,7 +102,7 @@
     <div class="tom-btns">
       <button class="btn-ctrl" (click)="mudarVelocidade(-1)" [disabled]="velocidade() <= 1">−</button>
       <span class="tom-value" style="min-width:28px">{{ velocidade() }}</span>
-      <button class="btn-ctrl" (click)="mudarVelocidade(+1)" [disabled]="velocidade() >= 10">+</button>
+      <button class="btn-ctrl" (click)="mudarVelocidade(+1)" [disabled]="velocidade() >= 20">+</button>
     </div>
     <button class="btn-scroll-round" [class.ativo]="scrollAtivo()" (click)="toggleScroll()">
       @if (scrollAtivo()) {

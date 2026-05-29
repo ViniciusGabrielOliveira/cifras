@@ -151,8 +151,8 @@ export class CifraViewerComponent implements OnDestroy {
 
     if (this._lastTime !== undefined) {
       const elapsed = timestamp - this._lastTime;
-      // velocidade 1–10 → 5–50 px/s; acumula frações para scroll suave em 1px
-      this._scrollAccum += (this.velocidade() * 5 * elapsed) / 1000;
+      // velocidade 1–20 → 2–40 px/s; acumula frações para scroll suave em 1px
+      this._scrollAccum += (this.velocidade() * 2 * elapsed) / 1000;
       const px = Math.floor(this._scrollAccum);
       if (px >= 1) {
         document.documentElement.scrollTop += px;
@@ -177,7 +177,7 @@ export class CifraViewerComponent implements OnDestroy {
   }
 
   mudarVelocidade(d: number) {
-    this.velocidade.update(v => Math.min(10, Math.max(1, v + d)));
+    this.velocidade.update(v => Math.min(20, Math.max(1, v + d)));
   }
 
   onToqueCifra(event: Event) {
