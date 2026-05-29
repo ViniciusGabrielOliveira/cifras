@@ -76,6 +76,8 @@ export class CifraViewerComponent implements OnDestroy {
     } else {
       this.scrollAtivo.set(true);
       this._lastTime = undefined;
+      // Desativa scroll-behavior: smooth durante o loop (evita acúmulo de animações)
+      document.documentElement.style.scrollBehavior = 'auto';
       this._rafId = requestAnimationFrame(t => this.loop(t));
     }
   }
@@ -85,14 +87,15 @@ export class CifraViewerComponent implements OnDestroy {
 
     if (this._lastTime !== undefined) {
       const elapsed = timestamp - this._lastTime;
-      // velocidade 1–10 → ~20–200 px/s
-      window.scrollBy(0, (this.velocidade() * 20 * elapsed) / 1000);
+      // velocidade 1–10 → ~20–200 px/s, scroll instantâneo
+      const el = document.documentElement;
+      el.scrollTop += (this.velocidade() * 20 * elapsed) / 1000;
     }
     this._lastTime = timestamp;
 
     // Para automaticamente ao chegar no fim da página
-    const scrollBottom = window.scrollY + window.innerHeight;
-    if (scrollBottom >= document.body.scrollHeight - 4) {
+    const el = document.documentElement;
+    if (el.scrollTop + el.clientHeight >= el.scrollHeight - 4) {
       this.pararScroll();
       return;
     }
@@ -102,6 +105,7 @@ export class CifraViewerComponent implements OnDestroy {
 
   private pararScroll() {
     this.scrollAtivo.set(false);
+    document.documentElement.style.scrollBehavior = '';
     if (this._rafId) cancelAnimationFrame(this._rafId);
   }
 
@@ -114,7 +118,7 @@ export class CifraViewerComponent implements OnDestroy {
     const alvo = event.target as HTMLElement;
     if (alvo.closest('button, a, select')) return;
     event.preventDefault();
-    window.scrollBy({ top: window.innerHeight * 0.7, behavior: 'smooth' });
+    document.documentElement.scrollTop += window.innerHeight * 0.7;
   }
 
   ngOnDestroy() {
