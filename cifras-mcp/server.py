@@ -142,15 +142,11 @@ def _substituir_mesmo_tamanho(linha: str) -> str:
 
 def _eh_linha_acordes(linha: str) -> bool:
     """Verifica se a linha é de acordes, suportando parênteses e setas."""
-    tinha_parens = bool(_HAS_PARENS_ARROWS.search(linha))
     limpa = _substituir_mesmo_tamanho(linha).strip()
     if not limpa:
         return False
     tokens = [t for t in limpa.split() if t]
-    if not tokens or not all(_ACORDE_RE.match(t) for t in tokens):
-        return False
-    # Evita falsos positivos (palavras como "Então", "Amém") sem parênteses/setas
-    return tinha_parens or len(tokens) >= 2
+    return bool(tokens) and all(_ACORDE_RE.match(t) for t in tokens)
 
 def _inferir_tipo(nome: str) -> str:
     n = normalizar(nome)
@@ -297,10 +293,10 @@ def _similaridade(a: str, b: str) -> float:
     return len(ta & tb) / len(ta) if ta else 0.0
 
 
-def _extrair_videos_yt(html: str) -> list[tuple[str, int, str]]:
+def _extrair_videos_yt(html: str) -> list[tuple[str, int, str, str]]:
     """
-    Extrai pares (título_vídeo, views, raw_text) do ytInitialData embedded na página.
-    Estratégia: acha cada viewCountText e busca o "runs"→"text" mais próximo antes dele.
+    Extrai (título_vídeo, views, raw_text, video_id) do ytInitialData embedded na página.
+    Estratégia: acha cada viewCountText e busca o "runs"→"text" e videoId mais próximos.
     Retorna até 8 candidatos.
     """
     title_positions = [
@@ -309,11 +305,15 @@ def _extrair_videos_yt(html: str) -> list[tuple[str, int, str]]:
             r'"title"\s*:\s*\{"runs"\s*:\s*\[\{"text"\s*:\s*"([^"]{3,120})"', html
         )
     ]
+    videoid_positions = [
+        (m.start(), m.group(1))
+        for m in re.finditer(r'"videoId"\s*:\s*"([A-Za-z0-9_-]{11})"', html)
+    ]
     view_matches = list(re.finditer(
         r'"viewCountText"\s*:\s*\{"simpleText"\s*:\s*"([^"]+)"', html
     ))
 
-    resultados: list[tuple[str, int, str]] = []
+    resultados: list[tuple[str, int, str, str]] = []
     for vm in view_matches[:8]:
         vraw = vm.group(1)
         views = _parse_yt_views(vraw)
@@ -326,40 +326,34 @@ def _extrair_videos_yt(html: str) -> list[tuple[str, int, str]]:
         _, vtitulo = max(anteriores, key=lambda x: x[0])
         if vm.start() - max(p for p, _ in anteriores) > 4_000:
             continue
-        resultados.append((vtitulo, views, vraw))
+        # videoId mais próximo ANTES deste viewCountText
+        vids_antes = [(pos, vid) for pos, vid in videoid_positions if pos < vm.start()]
+        video_id = max(vids_antes, key=lambda x: x[0])[1] if vids_antes else ""
+        resultados.append((vtitulo, views, vraw, video_id))
 
     return resultados
 
 
-async def _buscar_youtube_views(titulo: str, artista: str) -> tuple[int, str]:
+async def _buscar_youtube(titulo: str, artista: str) -> tuple[int, str, str]:
     """
-    Retorna (visualizações, texto_bruto) do vídeo do YouTube mais relevante
-    para a música buscada.
-
-    Estratégia:
-      1. Monta a query com título entre aspas para forçar correspondência exata.
-         • Artista específico: '"titulo" artista'
-         • Artista genérico/vazio: '"titulo" missa católica'
-      2. Extrai pares (título_vídeo, views) da página.
-      3. Pontua cada resultado: similaridade(query, titulo_video) × log(views).
-      4. Retorna o de maior pontuação.
+    Retorna (visualizações, texto_bruto, video_url) do vídeo mais relevante.
+    video_url é 'https://youtu.be/<id>' ou '' se não encontrado.
     """
     artista_norm = normalizar(artista)
     artista_especifico = artista and artista_norm not in _ARTISTAS_GENERICOS
 
-    # Duas tentativas: 1ª com título entre aspas (precisa), 2ª sem aspas (alcance)
     if artista_especifico:
         queries = [
-            (f'"{titulo}" {artista}', artista),
-            (f'{titulo} {artista}', artista),
+            f'"{titulo}" {artista}',
+            f'{titulo} {artista}',
         ]
     else:
         queries = [
-            (f'"{titulo}" missa católica', "missa católica"),
-            (f'{titulo} missa litúrgica', "missa litúrgica"),
+            f'"{titulo}" missa católica',
+            f'{titulo} missa litúrgica',
         ]
 
-    for query_str, contexto in queries:
+    for query_str in queries:
         url = f"https://www.youtube.com/results?search_query={urllib.parse.quote_plus(query_str)}"
 
         for ver in ["chrome131", "chrome124", "chrome120"]:
@@ -375,25 +369,28 @@ async def _buscar_youtube_views(titulo: str, artista: str) -> tuple[int, str]:
                 if not videos:
                     continue
 
-                # Filtra vídeos cujo título contenha ao menos 30 % dos tokens buscados
-                # → descarta vídeos não relacionados (ex: "Aleluia" de Handel)
                 relevantes = [
-                    (vw, vraw) for vt, vw, vraw in videos
+                    (vw, vraw, vid) for vt, vw, vraw, vid in videos
                     if _similaridade(titulo, vt) >= 0.3
                 ]
                 if relevantes:
-                    return max(relevantes, key=lambda x: x[0])
+                    vw, vraw, vid = max(relevantes, key=lambda x: x[0])
+                    return vw, vraw, f"https://youtu.be/{vid}" if vid else ""
 
-                # Fallback desta tentativa: primeiro resultado (mais relevante pelo YT)
-                _, first_views, first_raw = videos[0]
-                if first_views > 0:
-                    return first_views, first_raw
+                vt, vw, vraw, vid = videos[0]
+                if vw > 0:
+                    return vw, vraw, f"https://youtu.be/{vid}" if vid else ""
 
             except Exception:
                 continue
-        # se essa query não retornou nada, tenta a próxima
 
-    return 0, "não encontrado"
+    return 0, "não encontrado", ""
+
+
+async def _buscar_youtube_views(titulo: str, artista: str) -> tuple[int, str]:
+    """Retrocompatível: retorna apenas (views, raw_text)."""
+    views, raw, _ = await _buscar_youtube(titulo, artista)
+    return views, raw
 
 
 def _nota_popularidade(yt_views: int, cifraclub: bool) -> float:

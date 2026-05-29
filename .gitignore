@@ -44,7 +44,7 @@ Thumbs.db
 .gemini/
 
 # ─── MCP catalog state ───────────────────────────────────
-cifras-mcp/catalogo.json
+cifras-mcp/
 
 ignore/
 scripts/
