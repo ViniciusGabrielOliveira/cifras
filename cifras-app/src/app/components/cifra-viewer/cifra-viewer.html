@@ -39,27 +39,14 @@
     </div>
   }
 
-  <div class="toolbar-group toolbar-group--col">
-    <span class="toolbar-label">Rolagem</span>
-    <div class="toolbar-row">
-      <div class="tom-btns">
-        <button class="btn-ctrl" (click)="mudarVelocidade(-1)" [disabled]="velocidade() <= 1">−</button>
-        <span class="tom-value" style="min-width:28px">{{ velocidade() }}</span>
-        <button class="btn-ctrl" (click)="mudarVelocidade(+1)" [disabled]="velocidade() >= 10">+</button>
-      </div>
-      <button class="btn-scroll" [class.ativo]="scrollAtivo()" (click)="toggleScroll()">
-        @if (scrollAtivo()) {
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
-          Pausar
-        } @else {
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-          Rolar
-        }
-      </button>
-    </div>
-  </div>
-
   <div style="flex:1"></div>
+
+  <button class="btn-auto-scroll" [class.ativo]="painelAberto()" (click)="abrirPainel()">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/>
+    </svg>
+    Auto Rolagem
+  </button>
 
   @if (youtubeEmbedUrl()) {
     <button class="btn-player" (click)="playerAberto.set(!playerAberto())" [class.ativo]="playerAberto()">
@@ -105,3 +92,40 @@
     <app-secao-cifra [secao]="secao" />
   }
 </div>
+
+@if (painelAberto()) {
+  <div class="painel-scroll"
+       [style.left.px]="painelX()"
+       [style.top.px]="painelY()"
+       (mousedown)="iniciarArrasto($event)"
+       (touchstart)="iniciarArrastoTouch($event)">
+    <div class="painel-header">
+      <span class="painel-titulo">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/>
+        </svg>
+        Auto Rolagem
+      </span>
+      <button class="painel-fechar" (click)="fecharPainel()">✕</button>
+    </div>
+    <div class="painel-controles">
+      <div class="painel-velocidade">
+        <span class="toolbar-label">Velocidade</span>
+        <div class="tom-btns">
+          <button class="btn-ctrl" (click)="mudarVelocidade(-1)" [disabled]="velocidade() <= 1">−</button>
+          <span class="tom-value" style="min-width:28px">{{ velocidade() }}</span>
+          <button class="btn-ctrl" (click)="mudarVelocidade(+1)" [disabled]="velocidade() >= 10">+</button>
+        </div>
+      </div>
+      <button class="btn-scroll" [class.ativo]="scrollAtivo()" (click)="toggleScroll()">
+        @if (scrollAtivo()) {
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+          Pausar
+        } @else {
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          Iniciar
+        }
+      </button>
+    </div>
+  </div>
+}

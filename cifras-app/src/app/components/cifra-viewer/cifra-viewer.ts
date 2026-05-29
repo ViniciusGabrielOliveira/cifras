@@ -21,20 +21,34 @@ function extrairYoutubeId(url: string): string | null {
 export class CifraViewerComponent implements OnDestroy {
   private sanitizer = inject(DomSanitizer);
 
-  cifra        = input.required<Cifra>();
-  versoes      = input<CifraVersao[]>([]);
-  observacao   = input<string | undefined>(undefined);
+  cifra         = input.required<Cifra>();
+  versoes       = input<CifraVersao[]>([]);
+  observacao    = input<string | undefined>(undefined);
   mostrarEditar = input(false);
 
-  delta              = signal(0);
-  fonteSize          = signal(15);
-  versaoSelecionada  = signal<string | null>(null);
-  playerAberto       = signal(false);
-  scrollAtivo        = signal(false);
-  velocidade         = signal(3);
+  delta             = signal(0);
+  fonteSize         = signal(15);
+  versaoSelecionada = signal<string | null>(null);
+  playerAberto      = signal(false);
+  scrollAtivo       = signal(false);
+  velocidade        = signal(3);
+  painelAberto      = signal(false);
+  painelX           = signal(16);
+  painelY           = signal(80);
 
   private _rafId?: number;
   private _lastTime?: number;
+  private _arrastando = false;
+  private _offsetX = 0;
+  private _offsetY = 0;
+  private _onMouseMove = (e: MouseEvent) => this.moverPainel(e.clientX, e.clientY);
+  private _onMouseUp   = () => this.pararArrasto();
+  private _onTouchMove = (e: TouchEvent) => {
+    if (!this._arrastando) return;
+    e.preventDefault();
+    this.moverPainel(e.touches[0].clientX, e.touches[0].clientY);
+  };
+  private _onTouchEnd = () => this.pararArrasto();
 
   youtubeEmbedUrl = computed((): SafeResourceUrl | null => {
     const link = this.cifra().videoLink;
@@ -57,9 +71,9 @@ export class CifraViewerComponent implements OnDestroy {
     return versao ? { ...this.cifra(), secoes: versao.secoes, tom: versao.tom } : this.cifra();
   }
 
-  mudarTom(d: number)    { this.delta.update(v => v + d); }
-  restaurarTom()         { this.delta.set(0); }
-  mudarFonte(d: number)  { this.fonteSize.update(v => Math.min(24, Math.max(12, v + d))); }
+  mudarTom(d: number)   { this.delta.update(v => v + d); }
+  restaurarTom()        { this.delta.set(0); }
+  mudarFonte(d: number) { this.fonteSize.update(v => Math.min(24, Math.max(12, v + d))); }
 
   selecionarVersao(versaoId: string | null) {
     this.versaoSelecionada.set(versaoId);
@@ -70,13 +84,61 @@ export class CifraViewerComponent implements OnDestroy {
     return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: '2-digit' });
   }
 
+  // ── Painel flutuante ────────────────────────────────────────────
+
+  abrirPainel() {
+    this.painelAberto.set(true);
+  }
+
+  fecharPainel() {
+    this.pararScroll();
+    this.painelAberto.set(false);
+  }
+
+  iniciarArrasto(event: MouseEvent) {
+    const el = (event.currentTarget as HTMLElement);
+    this._arrastando = true;
+    this._offsetX = event.clientX - el.getBoundingClientRect().left;
+    this._offsetY = event.clientY - el.getBoundingClientRect().top;
+    document.addEventListener('mousemove', this._onMouseMove);
+    document.addEventListener('mouseup', this._onMouseUp);
+  }
+
+  iniciarArrastoTouch(event: TouchEvent) {
+    const el = (event.currentTarget as HTMLElement);
+    this._arrastando = true;
+    this._offsetX = event.touches[0].clientX - el.getBoundingClientRect().left;
+    this._offsetY = event.touches[0].clientY - el.getBoundingClientRect().top;
+    document.addEventListener('touchmove', this._onTouchMove, { passive: false });
+    document.addEventListener('touchend', this._onTouchEnd);
+  }
+
+  private moverPainel(clientX: number, clientY: number) {
+    if (!this._arrastando) return;
+    const panelW = 220;
+    const panelH = 110;
+    const newX = Math.max(0, Math.min(window.innerWidth - panelW, clientX - this._offsetX));
+    const newY = Math.max(0, Math.min(window.innerHeight - panelH, clientY - this._offsetY));
+    this.painelX.set(newX);
+    this.painelY.set(newY);
+  }
+
+  private pararArrasto() {
+    this._arrastando = false;
+    document.removeEventListener('mousemove', this._onMouseMove);
+    document.removeEventListener('mouseup', this._onMouseUp);
+    document.removeEventListener('touchmove', this._onTouchMove);
+    document.removeEventListener('touchend', this._onTouchEnd);
+  }
+
+  // ── Auto scroll ─────────────────────────────────────────────────
+
   toggleScroll() {
     if (this.scrollAtivo()) {
       this.pararScroll();
     } else {
       this.scrollAtivo.set(true);
       this._lastTime = undefined;
-      // Desativa scroll-behavior: smooth durante o loop (evita acúmulo de animações)
       document.documentElement.style.scrollBehavior = 'auto';
       this._rafId = requestAnimationFrame(t => this.loop(t));
     }
@@ -87,13 +149,11 @@ export class CifraViewerComponent implements OnDestroy {
 
     if (this._lastTime !== undefined) {
       const elapsed = timestamp - this._lastTime;
-      // velocidade 1–10 → ~20–200 px/s, scroll instantâneo
-      const el = document.documentElement;
-      el.scrollTop += (this.velocidade() * 20 * elapsed) / 1000;
+      // velocidade 1–10 → ~20–200 px/s
+      document.documentElement.scrollTop += (this.velocidade() * 20 * elapsed) / 1000;
     }
     this._lastTime = timestamp;
 
-    // Para automaticamente ao chegar no fim da página
     const el = document.documentElement;
     if (el.scrollTop + el.clientHeight >= el.scrollHeight - 4) {
       this.pararScroll();
@@ -118,10 +178,12 @@ export class CifraViewerComponent implements OnDestroy {
     const alvo = event.target as HTMLElement;
     if (alvo.closest('button, a, select')) return;
     event.preventDefault();
-    document.documentElement.scrollTop += window.innerHeight * 0.7;
+    // Volta 70% da tela para reler a parte que passou
+    document.documentElement.scrollTop -= window.innerHeight * 0.7;
   }
 
   ngOnDestroy() {
     this.pararScroll();
+    this.pararArrasto();
   }
 }
