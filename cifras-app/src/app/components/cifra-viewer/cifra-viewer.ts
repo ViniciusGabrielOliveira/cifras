@@ -38,6 +38,7 @@ export class CifraViewerComponent implements OnDestroy {
 
   private _rafId?: number;
   private _lastTime?: number;
+  private _scrollAccum = 0;
   private _arrastando = false;
   private _offsetX = 0;
   private _offsetY = 0;
@@ -139,6 +140,7 @@ export class CifraViewerComponent implements OnDestroy {
     } else {
       this.scrollAtivo.set(true);
       this._lastTime = undefined;
+      this._scrollAccum = 0;
       document.documentElement.style.scrollBehavior = 'auto';
       this._rafId = requestAnimationFrame(t => this.loop(t));
     }
@@ -149,8 +151,13 @@ export class CifraViewerComponent implements OnDestroy {
 
     if (this._lastTime !== undefined) {
       const elapsed = timestamp - this._lastTime;
-      // velocidade 1–10 → ~20–200 px/s
-      document.documentElement.scrollTop += (this.velocidade() * 20 * elapsed) / 1000;
+      // velocidade 1–10 → 30–300 px/s; acumula frações para não perder sub-pixels
+      this._scrollAccum += (this.velocidade() * 30 * elapsed) / 1000;
+      const px = Math.floor(this._scrollAccum);
+      if (px >= 1) {
+        document.documentElement.scrollTop += px;
+        this._scrollAccum -= px;
+      }
     }
     this._lastTime = timestamp;
 
