@@ -336,7 +336,7 @@ export class MinhaListaComponent implements OnInit {
             });
         } catch {
             this.importandoCifraClub.set(false);
-            this.mostrarErro('Não foi possível importar a música do Cifra Club. Tente novamente.');
+            this.mostrarErro('Não foi possível importar a música. Tente novamente.');
         }
     }
 

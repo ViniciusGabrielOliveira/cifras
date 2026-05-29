@@ -92,7 +92,7 @@
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Também busca sugestões no Cifra Club
+          Também busca sugestões na web
         </div>
       }
     }
@@ -169,7 +169,7 @@
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Importar do Cifra Club
+          Importar da web
         </span>
         @if (buscandoCifraClub()) {
           <div class="spinner cc-spinner"></div>
@@ -244,7 +244,7 @@
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Importar do Cifra Club
+          Importar da web
         </div>
         @for (s of sugestoesCifraClub(); track s.id) {
           <div class="dropdown-item cc-item" role="option" (mousedown)="selecionarCifraClub(s)">
