@@ -41,6 +41,15 @@
 
   <div style="flex:1"></div>
 
+  @if (youtubeEmbedUrl()) {
+    <button class="btn-player" (click)="playerAberto.set(!playerAberto())" [class.ativo]="playerAberto()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="5,3 19,12 5,21"/>
+      </svg>
+      {{ playerAberto() ? 'Fechar' : 'Vídeo' }}
+    </button>
+  }
+
   @if (mostrarEditar()) {
     <a class="btn-edit" [routerLink]="['/admin/editar-cifra', cifra().id]">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -52,6 +61,20 @@
     </a>
   }
 </div>
+
+@if (playerAberto() && youtubeEmbedUrl()) {
+  <div class="player-wrapper">
+    <div class="player-container">
+      <iframe
+        [src]="youtubeEmbedUrl()!"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        title="Vídeo da música"
+      ></iframe>
+    </div>
+  </div>
+}
 
 <div class="cifra-secoes" [style.font-size.px]="fonteSize()">
   @for (secao of cifraExibida().secoes; track $index) {

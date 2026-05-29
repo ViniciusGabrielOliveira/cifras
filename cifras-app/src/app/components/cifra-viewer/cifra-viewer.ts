@@ -1,9 +1,15 @@
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../secao-cifra/secao-cifra';
 import { transporCifra } from '../../core/transposicao';
+
+function extrairYoutubeId(url: string): string | null {
+  const m = url.match(/(?:youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
 
 @Component({
   selector: 'app-cifra-viewer',
@@ -13,6 +19,8 @@ import { transporCifra } from '../../core/transposicao';
   styleUrl: './cifra-viewer.scss',
 })
 export class CifraViewerComponent {
+  private sanitizer = inject(DomSanitizer);
+
   cifra        = input.required<Cifra>();
   versoes      = input<CifraVersao[]>([]);
   observacao   = input<string | undefined>(undefined);
@@ -21,6 +29,17 @@ export class CifraViewerComponent {
   delta              = signal(0);
   fonteSize          = signal(15);
   versaoSelecionada  = signal<string | null>(null);
+  playerAberto       = signal(false);
+
+  youtubeEmbedUrl = computed((): SafeResourceUrl | null => {
+    const link = this.cifra().videoLink;
+    if (!link) return null;
+    const id = extrairYoutubeId(link);
+    if (!id) return null;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://www.youtube.com/embed/${id}?rel=0`
+    );
+  });
 
   cifraExibida = computed(() => {
     const versaoId = this.versaoSelecionada();

@@ -78,6 +78,10 @@
 
 - **R52** — O componente `musica-search` suporta filtros multi-select de Partes da Missa e Categorias via selects com pills removíveis; filtros sozinhos (sem texto digitado) já retornam resultados; as opções vêm do `ConfigService`; o filtro avançado é habilitado via input `[mostrarFiltros]="true"` e está ativo na Home e na Minha Lista, mas não no modal do admin (que já conhece a parte de destino)
 
+## Player de Vídeo
+
+- **R53** — A página de detalhe da cifra exibe um player embutido do YouTube quando o campo `videoLink` estiver preenchido; o player usa `<iframe>` com `allow="autoplay"` e é responsivo (largura 100%, aspect-ratio 16/9); o vídeo não inicia automaticamente
+
 ## Segurança e Boas Práticas
 
 - **R43** — Lista pode ter campo `partes?: string[]` que define a ordem e seleção das partes da missa para aquela lista; se ausente, usa a ordem global do `ConfigService`; editor ou dono pode adicionar (a partir das partes do config global), remover (apenas partes sem música) e reordenar partes via drag-and-drop na tela `minha-lista`
