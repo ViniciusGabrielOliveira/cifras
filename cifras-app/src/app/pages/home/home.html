@@ -34,13 +34,6 @@
     </div>
 </header>
 
-@if (loading()) {
-<div class="loading-state">
-    <div class="spinner"></div>
-    <span>Carregando lista do dia...</span>
-</div>
-} @else {
-
 <!-- ── Seletor Repertório ────────────────────────────────────── -->
 <app-seletor-repertorio
     [autoSelecionar]="!listaIdParam"
@@ -48,6 +41,13 @@
     (listaSelecionada)="onListaSelecionada($event)"
     (semResultadoInicial)="onSemResultadoInicial()"
 />
+
+@if (loading()) {
+<div class="loading-state">
+    <div class="spinner"></div>
+    <span>Carregando lista do dia...</span>
+</div>
+} @else {
 
 <!-- ── Conteúdo Principal ─────────────────────────────────────── -->
 @if (listaAtual(); as lista) {
