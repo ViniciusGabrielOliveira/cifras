@@ -78,8 +78,6 @@
     <div class="drawer-listas">
         @if (carregandoMinhasListas()) {
         <div class="drawer-vazio"><span class="spinner-sm"></span></div>
-        } @else if (minhasListas().length === 0) {
-        <div class="drawer-vazio">Você não tem listas ainda.</div>
         } @else {
         @for (lista of minhasListas(); track lista.id) {
         <button class="lista-item lista-item-privada" [class.ativo]="listaAtual()?.id === lista.id"
@@ -93,6 +91,38 @@
             @if (lista.data) {
             <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
             }
+        </button>
+        }
+
+        @if (criandoRepertorio()) {
+        <div class="novo-repertorio-form">
+            <input
+                class="novo-repertorio-input"
+                type="text"
+                placeholder="Nome do repertório"
+                [ngModel]="novoTitulo()"
+                (ngModelChange)="novoTitulo.set($event)"
+                (keydown.enter)="confirmarNovoRepertorio()"
+                (keydown.escape)="cancelarNovoRepertorio()"
+                autofocus
+            />
+            <div class="novo-repertorio-acoes">
+                <button class="btn-novo-cancelar" (click)="cancelarNovoRepertorio()" [disabled]="salvando()">
+                    Cancelar
+                </button>
+                <button class="btn-novo-confirmar" (click)="confirmarNovoRepertorio()" [disabled]="!novoTitulo().trim() || salvando()">
+                    @if (salvando()) { <span class="spinner-sm"></span> } @else { Criar }
+                </button>
+            </div>
+        </div>
+        } @else {
+        <button class="lista-item lista-item-novo" (click)="iniciarNovoRepertorio()">
+            <span class="lista-item-novo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                    <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+            </span>
+            <span class="lista-item-titulo">Novo repertório</span>
         </button>
         }
         }

@@ -1,6 +1,7 @@
 import { Component, inject, signal, input, output, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lista } from '../../models/lista.model';
+import { FormsModule } from '@angular/forms';
+import { Lista, TipoLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { ConfigService } from '../../services/config.service';
 import { AuthService } from '../../services/auth.service';
@@ -10,7 +11,7 @@ type SeletorAba = 'dia' | 'categoria' | 'minhas-listas';
 @Component({
     selector: 'app-seletor-repertorio',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, FormsModule],
     templateUrl: './seletor-repertorio.html',
     styleUrl: './seletor-repertorio.scss',
 })
@@ -35,6 +36,9 @@ export class SeletorRepertorioComponent implements OnInit {
     readonly minhasListas         = signal<Lista[]>([]);
     readonly carregandoMinhasListas = signal(false);
     readonly carregandoFiltro     = signal(false);
+    readonly criandoRepertorio    = signal(false);
+    readonly novoTitulo           = signal('');
+    readonly salvando             = signal(false);
 
     get CATEGORIAS_LABELS() { return this.configService.categoriasLabels(); }
     get categories() { return this.configService.categoriasIds().filter(id => id !== 'sem-categoria'); }
@@ -78,6 +82,46 @@ export class SeletorRepertorioComponent implements OnInit {
     selecionar(lista: Lista) {
         this.fechar();
         this.listaSelecionada.emit(lista);
+    }
+
+    iniciarNovoRepertorio() {
+        this.novoTitulo.set('');
+        this.criandoRepertorio.set(true);
+    }
+
+    cancelarNovoRepertorio() {
+        this.criandoRepertorio.set(false);
+    }
+
+    confirmarNovoRepertorio() {
+        const titulo = this.novoTitulo().trim();
+        if (!titulo || this.salvando()) return;
+
+        const uid = this.auth.user()?.uid!;
+        const agora = new Date().toISOString();
+        const lista: Lista = {
+            id: '',
+            titulo,
+            categoria: 'tempo-comum',
+            musicas: [],
+            tipo: 'privada' as TipoLista,
+            donoUid: uid,
+            donoNome: this.auth.displayName?.() || undefined,
+            participantes: [],
+            criadaEm: agora,
+            atualizadaEm: agora,
+        };
+
+        this.salvando.set(true);
+        this.listaService.salvarLista(lista).subscribe({
+            next: (listaCriada) => {
+                this.salvando.set(false);
+                this.criandoRepertorio.set(false);
+                this.minhasListas.update(l => [listaCriada, ...l]);
+                this.selecionar(listaCriada);
+            },
+            error: () => this.salvando.set(false),
+        });
     }
 
     formatarData(iso?: string): string {
