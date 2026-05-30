@@ -131,6 +131,97 @@
     text-transform: capitalize;
 }
 
+.container-action {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn-editar-lista {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 0.6rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+    }
+}
+
+/* ── Parte autocomplete ───────────────────────────────────────────── */
+.parte-autocomplete-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.parte-autocomplete-input {
+    width: 100%;
+    padding: 9px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--color-acorde);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.88rem;
+    outline: none;
+    box-sizing: border-box;
+
+    &::placeholder { color: var(--color-text-muted); }
+}
+
+.parte-autocomplete-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #1a1d27;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.parte-opcao {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 0.88rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.12s;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background: var(--color-surface); }
+}
+
+.parte-opcao-criar {
+    color: var(--color-acorde);
+    font-weight: 600;
+}
+
+.parte-vazio {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
 /* ── Tabs ─────────────────────────────────────────────────────────── */
 .tabs-wrapper {
     overflow-x: auto;
@@ -179,6 +270,39 @@
     }
 }
 
+.tab-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    margin-left: 6px;
+    opacity: 0.6;
+    transition: opacity 0.15s, background 0.15s;
+    vertical-align: middle;
+
+    &:hover {
+        opacity: 1;
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+    }
+}
+
+.tab-add {
+    padding: 8px 12px;
+    color: var(--color-text-muted);
+    border-style: dashed;
+
+    &:hover, &.ativo {
+        color: var(--color-acorde);
+        border-color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+        box-shadow: none;
+    }
+}
+
 .tab {
     padding: 8px 18px;
     border-radius: 50px;
@@ -204,6 +328,44 @@
     }
 }
 
+/* ── Card Adicionar Música ───────────────────────────────────────── */
+.musica-add-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px dashed var(--color-border);
+    border-radius: 14px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+        border-style: solid;
+
+        .musica-add-icon { color: var(--color-acorde); }
+    }
+}
+
+.musica-add-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px dashed currentColor;
+    flex-shrink: 0;
+}
+
 /* ── Músicas (Accordion) ─────────────────────────────────────────── */
 .musicas-lista {
     display: flex;
@@ -223,11 +385,17 @@
     }
 }
 
+.musica-header-row {
+    display: flex;
+    align-items: stretch;
+}
+
 .musica-header {
     display: flex;
     align-items: center;
     gap: 14px;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     padding: 16px 18px;
     background: var(--color-surface);
     border: none;
@@ -236,9 +404,58 @@
     text-align: left;
     transition: background 0.15s;
 
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+}
+
+.btn-remover-musica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    flex-shrink: 0;
+    border: none;
+    border-left: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+
     &:hover {
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(239, 68, 68, 0.08);
+        color: #ef4444;
     }
+}
+
+.musica-remover-confirm {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--color-border);
+    background: rgba(239, 68, 68, 0.06);
+}
+
+.btn-remover-sim {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-remover-nao {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
 }
 
 .musica-index {

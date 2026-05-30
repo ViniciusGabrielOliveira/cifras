@@ -8,11 +8,9 @@
 
     <!-- Abas Meus Repertórios / Dia / Categoria -->
     <div class="drawer-abas">
-        @if (auth.isLogado()) {
         <button [class.ativo]="abaAtiva() === 'minhas-listas'" (click)="mudarAba('minhas-listas')">
             👤 Meus repertórios
         </button>
-        }
         <div class="btn-dia-wrapper">
             <button [class.ativo]="abaAtiva() === 'dia'" (click)="onDataInputChange()">
                 @if (dataSelecionada()) {
@@ -76,7 +74,16 @@
     <!-- Aba: Meus Repertórios -->
     @if (abaAtiva() === 'minhas-listas') {
     <div class="drawer-listas">
-        @if (carregandoMinhasListas()) {
+        @if (!auth.isLogado()) {
+        <div class="login-prompt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <p>Entre na sua conta para ver e gerenciar seus repertórios.</p>
+            <a class="btn-login-prompt" routerLink="/admin" (click)="fechar()">Entrar</a>
+        </div>
+        } @else if (carregandoMinhasListas()) {
         <div class="drawer-vazio"><span class="spinner-sm"></span></div>
         } @else {
         @for (lista of minhasListas(); track lista.id) {

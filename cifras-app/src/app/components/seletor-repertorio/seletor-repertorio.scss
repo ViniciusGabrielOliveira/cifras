@@ -213,6 +213,39 @@
     background: rgba(124, 106, 253, 0.03);
 }
 
+.login-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 32px 20px;
+    text-align: center;
+    color: var(--color-text-muted);
+
+    svg { opacity: 0.4; }
+
+    p {
+        margin: 0;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+}
+
+.btn-login-prompt {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 20px;
+    background: var(--color-acorde);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.15s;
+
+    &:hover { background: var(--color-acorde-hover); }
+}
+
 .lista-item-novo {
     flex-direction: row;
     align-items: center;

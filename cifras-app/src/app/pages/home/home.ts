@@ -2,7 +2,7 @@ import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild } fro
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Lista, MusicaLista } from '../../models/lista.model';
+import { Lista, MusicaLista, ParteLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { CifraService } from '../../services/cifra.service';
 import { ConfigService } from '../../services/config.service';
@@ -11,13 +11,14 @@ import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
 import { SeletorRepertorioComponent } from '../../components/seletor-repertorio/seletor-repertorio';
+import { EditarListaSheetComponent } from '../../components/editar-lista-sheet/editar-lista-sheet';
 import { LiveService } from '../../services/live.service';
 import { LiveEstado } from '../../models/live.model';
 
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, RouterLink, CifraViewerComponent, MusicaSearchComponent, SeletorRepertorioComponent],
+    imports: [CommonModule, RouterLink, CifraViewerComponent, MusicaSearchComponent, SeletorRepertorioComponent, EditarListaSheetComponent],
     templateUrl: './home.html',
     styleUrl: './home.scss',
 })
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     readonly auth = inject(AuthService);
 
     @ViewChild(SeletorRepertorioComponent) seletorRef!: SeletorRepertorioComponent;
+    @ViewChild(EditarListaSheetComponent) editarRef!: EditarListaSheetComponent;
 
     readonly listaIdParam = this.route.snapshot.queryParamMap.get('listaId');
 
@@ -42,12 +44,41 @@ export class HomeComponent implements OnInit, OnDestroy {
     partesDisponiveis = computed<string[]>(() => {
         const l = this.listaAtual();
         if (!l) return [];
-        const usadas = new Set(l.musicas.map(m => m.parte));
         if (l.partes) {
-            return l.partes.filter(p => usadas.has(p.id)).map(p => p.id);
+            // Listas com partes customizadas: mostra todas, mesmo sem música
+            return l.partes.map(p => p.id);
         }
+        const usadas = new Set(l.musicas.map(m => m.parte));
         return this.config.partesIds().filter(p => usadas.has(p));
     });
+
+    readonly partesParaAdicionar = computed<{ id: string; label: string }[]>(() => {
+        const lista = this.listaAtual();
+        if (!lista) return [];
+        const emUso = new Set(lista.partes?.map(p => p.id) ?? lista.musicas.map(m => m.parte));
+        return this.config.partesIds()
+            .filter(id => !emUso.has(id))
+            .map(id => ({ id, label: this.config.partesLabels()[id] ?? id }));
+    });
+
+    readonly opcoesFiltradas = computed(() => {
+        const busca = this.buscaParte().toLowerCase().trim();
+        if (!busca) return this.partesParaAdicionar();
+        return this.partesParaAdicionar().filter(p => p.label.toLowerCase().includes(busca));
+    });
+
+    readonly mostrarCriarParte = computed(() => {
+        const busca = this.buscaParte().trim();
+        if (!busca) return false;
+        return !this.partesParaAdicionar().some(p => p.label.toLowerCase() === busca.toLowerCase());
+    });
+
+    adicionandoParte           = signal(false);
+    buscaParte                 = signal('');
+    adicionarMusicaAberto      = signal(false);
+    parteParaAdicionarMusica   = signal('');
+    confirmandoRemoverMusica   = signal<string | null>(null);
+
     parteAtiva = signal<string | null>(null);
 
     parteLabel(parteId: string): string {
@@ -65,6 +96,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
 
     // ── Permissão de edição na lista atual ──────────────────────────
+    readonly isAdmin = computed(() => this.auth.hasRole('admin'));
+
     readonly isEditorDaListaAtual = computed(() => {
         const uid = this.auth.user()?.uid;
         const lista = this.listaAtual();
@@ -72,6 +105,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (lista.donoUid === uid) return true;
         return (lista.participantes ?? []).some(p => p.uid === uid && p.role === 'editor');
     });
+
+    readonly canEdit = computed(() => this.isEditorDaListaAtual() || this.isAdmin());
 
     // ── Live mode: quem pode ver os toggles ──────────────────────────
     readonly isParticipanteOuDonoListaAtual = computed(() => {
@@ -134,6 +169,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     // ── Seletor ───────────────────────────────────────────────────────
 
     abrirSeletor() { this.seletorRef.abrir(); }
+    abrirEdicao()  { this.editarRef.abrir(); }
+
+    onListaEditada(lista: Lista) { this.listaAtual.set(lista); }
 
     onListaSelecionada(lista: Lista) {
         this.selecionarLista(lista);
@@ -165,6 +203,118 @@ export class HomeComponent implements OnInit, OnDestroy {
     selecionarParte(parte: string) {
         this.parteAtiva.set(parte);
         this.acordeonAberto.set(null);
+    }
+
+    toggleAdicionarParte() {
+        const novo = !this.adicionandoParte();
+        this.adicionandoParte.set(novo);
+        this.buscaParte.set('');
+        if (novo) setTimeout(() => {
+            (document.querySelector('.parte-autocomplete-input') as HTMLInputElement)?.focus();
+        }, 30);
+    }
+
+    addParte(parteId: string) {
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const partesAtuais: ParteLista[] = lista.partes
+            ?? [...new Set(lista.musicas.map(m => m.parte))].map(id => ({ id }));
+        if (partesAtuais.some(p => p.id === parteId)) return;
+        const atualizada = { ...lista, partes: [...partesAtuais, { id: parteId }] };
+        this.listaAtual.set(atualizada);
+        this.parteAtiva.set(parteId);
+        this.adicionandoParte.set(false);
+        this.buscaParte.set('');
+        this.salvarListaAtual(atualizada);
+    }
+
+    addPartePersonalizada(label: string) {
+        const lista = this.listaAtual();
+        if (!lista || !label.trim()) return;
+        const id = `parte-${Date.now()}`;
+        const partesAtuais: ParteLista[] = lista.partes
+            ?? [...new Set(lista.musicas.map(m => m.parte))].map(id => ({ id }));
+        const atualizada = { ...lista, partes: [...partesAtuais, { id, label: label.trim() }] };
+        this.listaAtual.set(atualizada);
+        this.parteAtiva.set(id);
+        this.adicionandoParte.set(false);
+        this.buscaParte.set('');
+        this.salvarListaAtual(atualizada);
+    }
+
+    parteVazia(parteId: string): boolean {
+        return !(this.listaAtual()?.musicas.some(m => m.parte === parteId) ?? false);
+    }
+
+    removeParte(parteId: string) {
+        const lista = this.listaAtual();
+        if (!lista?.partes || lista.musicas.some(m => m.parte === parteId)) return;
+        const atualizada = { ...lista, partes: lista.partes.filter(p => p.id !== parteId) };
+        this.listaAtual.set(atualizada);
+        if (this.parteAtiva() === parteId) {
+            this.parteAtiva.set(atualizada.partes[0]?.id ?? null);
+        }
+        this.salvarListaAtual(atualizada);
+    }
+
+    onParteBuscaEnter() {
+        const opcoes = this.opcoesFiltradas();
+        if (opcoes.length > 0) {
+            this.addParte(opcoes[0].id);
+        } else {
+            const busca = this.buscaParte().trim();
+            if (busca) this.addPartePersonalizada(busca);
+        }
+    }
+
+    // ─── Adicionar música ────────────────────────────────────────────
+
+    abrirAdicionarMusica(parte: string | null) {
+        if (!parte) return;
+        this.parteParaAdicionarMusica.set(parte);
+        this.adicionarMusicaAberto.set(true);
+    }
+
+    fecharAdicionarMusica() { this.adicionarMusicaAberto.set(false); }
+
+    onMusicaAdicionada(selecionada: MusicaSelecionada) {
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const parte = this.parteParaAdicionarMusica();
+        const novaMusica: MusicaLista = {
+            id: `m-${Date.now()}`,
+            cifraId: selecionada.cifraId,
+            nome: selecionada.nome,
+            autor: selecionada.autor,
+            trecho: selecionada.trecho,
+            parte,
+            ordem: lista.musicas.filter(m => m.parte === parte).length,
+        };
+        const atualizada = { ...lista, musicas: [...lista.musicas, novaMusica] };
+        this.listaAtual.set(atualizada);
+        this.fecharAdicionarMusica();
+        this.salvarListaAtual(atualizada);
+    }
+
+    removerMusica(musicaId: string) {
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const atualizada = {
+            ...lista,
+            musicas: lista.musicas
+                .filter(m => m.id !== musicaId)
+                .map((m, i) => ({ ...m, ordem: i })),
+        };
+        this.listaAtual.set(atualizada);
+        this.confirmandoRemoverMusica.set(null);
+        if (this.acordeonAberto() === musicaId) this.acordeonAberto.set(null);
+        this.salvarListaAtual(atualizada);
+    }
+
+    private salvarListaAtual(lista: Lista) {
+        this.listaService.salvarLista(lista).subscribe({
+            next: salva => this.listaAtual.set(salva),
+        });
     }
 
     // ─── Accordion ──────────────────────────────────────────────────

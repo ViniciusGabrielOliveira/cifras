@@ -1,6 +1,7 @@
 import { Component, inject, signal, input, output, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { Lista, TipoLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { ConfigService } from '../../services/config.service';
@@ -11,7 +12,7 @@ type SeletorAba = 'dia' | 'categoria' | 'minhas-listas';
 @Component({
     selector: 'app-seletor-repertorio',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, RouterLink],
     templateUrl: './seletor-repertorio.html',
     styleUrl: './seletor-repertorio.scss',
 })
