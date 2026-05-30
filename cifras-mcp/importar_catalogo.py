@@ -44,6 +44,7 @@ from server import (
     slugify,
     get_db,
 )
+import cache
 
 # ── Configurações ─────────────────────────────────────────────────────────────
 
@@ -173,27 +174,9 @@ async def melhor_resultado(titulo: str, artista: str) -> tuple[dict | None, str]
 
 # ── Firebase: checagem de duplicata ───────────────────────────────────────────
 
-_indice_cache: dict | None = None  # evita N leituras do Firestore
-
-
-def _carregar_indice() -> dict:
-    global _indice_cache
-    if _indice_cache is None:
-        _indice_cache = {}
-        try:
-            for doc in get_db().collection("cifras_indice").stream():
-                d = doc.to_dict()
-                chave = (normalizar(d.get("titulo", "")), normalizar(d.get("autor", "")))
-                _indice_cache[chave] = doc.id
-        except Exception as e:
-            print(f"[aviso] Não foi possível carregar índice Firebase: {e}")
-    return _indice_cache
-
-
 def checar_duplicata(titulo: str, artista: str) -> str | None:
-    """Retorna o cifra_id se já existe no Firebase, senão None."""
-    chave = (normalizar(titulo), normalizar(artista))
-    return _carregar_indice().get(chave)
+    """Retorna o cifra_id se já existe no cache local, senão None."""
+    return cache.checar(titulo, artista)
 
 
 # ── Firebase: salvar cifra ────────────────────────────────────────────────────
@@ -246,9 +229,7 @@ def salvar_firebase(musica: dict, dados_scrape: dict, cid: str):
         "categorias":  cifra_doc["categorias"],
         "partesMissa": cifra_doc["partesMissa"],
     })
-
-    # Atualiza cache local para evitar duplicatas dentro da mesma sessão
-    _carregar_indice()[(normalizar(titulo), normalizar(artista))] = cid
+    cache.registrar(db, cid, titulo, artista, cifra_doc["partesMissa"])
 
 
 # ── Processamento de uma música ───────────────────────────────────────────────
@@ -391,6 +372,7 @@ async def main():
         return
 
     print(f"Processando {total_fila} músicas  (concorrência={conc})\n")
+    cache.sync(get_db())
     sem     = asyncio.Semaphore(conc)
     total_g = len(prog["musicas"])
     idx_map = {id(m): i + 1 for i, m in enumerate(

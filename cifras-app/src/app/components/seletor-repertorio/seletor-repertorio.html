@@ -1,0 +1,102 @@
+@if (aberto()) {
+<div class="drawer-overlay" (click)="fechar()"></div>
+<div class="drawer">
+    <div class="drawer-header">
+        <span class="drawer-titulo">Escolher Repertório</span>
+        <button class="drawer-close" (click)="fechar()">✕</button>
+    </div>
+
+    <!-- Abas Meus Repertórios / Dia / Categoria -->
+    <div class="drawer-abas">
+        @if (auth.isLogado()) {
+        <button [class.ativo]="abaAtiva() === 'minhas-listas'" (click)="mudarAba('minhas-listas')">
+            👤 Meus repertórios
+        </button>
+        }
+        <div class="btn-dia-wrapper">
+            <button [class.ativo]="abaAtiva() === 'dia'" (click)="onDataInputChange()">
+                @if (dataSelecionada()) {
+                📅 {{ formatarData(dataSelecionada()) }}
+                } @else {
+                📅 Por Dia
+                }
+            </button>
+            <input #inputData type="date" lang="pt-BR" class="input-data-hidden" [value]="dataSelecionada()" />
+        </div>
+        <button [class.ativo]="abaAtiva() === 'categoria'" (click)="mudarAba('categoria')">
+            🏷️ Por Categoria
+        </button>
+    </div>
+
+    <!-- Aba: Dia -->
+    @if (abaAtiva() === 'dia') {
+    <div class="drawer-listas">
+        @if (carregandoFiltro()) {
+        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
+        } @else if (listasDoFiltro().length === 0) {
+        <div class="drawer-vazio">Nenhuma lista para este dia</div>
+        } @else {
+        @for (lista of listasDoFiltro(); track lista.id) {
+        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionar(lista)">
+            <span class="lista-item-titulo">{{ lista.titulo }}</span>
+            <span class="lista-item-qtd">{{ lista.musicas.length }} músicas</span>
+        </button>
+        }
+        }
+    </div>
+    }
+
+    <!-- Aba: Categoria -->
+    @if (abaAtiva() === 'categoria') {
+    <div class="drawer-cats">
+        @for (cat of categories; track cat) {
+        <button class="cat-btn" [class.ativo]="catSelecionada() === cat" (click)="onCatChange(cat)">
+            {{ CATEGORIAS_LABELS[cat] }}
+        </button>
+        }
+    </div>
+    <div class="drawer-listas">
+        @if (carregandoFiltro()) {
+        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
+        } @else if (listasDoFiltro().length === 0) {
+        <div class="drawer-vazio">Nenhuma lista nesta categoria</div>
+        } @else {
+        @for (lista of listasDoFiltro(); track lista.id) {
+        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionar(lista)">
+            <span class="lista-item-titulo">{{ lista.titulo }}</span>
+            @if (lista.data) {
+            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
+            }
+        </button>
+        }
+        }
+    </div>
+    }
+
+    <!-- Aba: Meus Repertórios -->
+    @if (abaAtiva() === 'minhas-listas') {
+    <div class="drawer-listas">
+        @if (carregandoMinhasListas()) {
+        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
+        } @else if (minhasListas().length === 0) {
+        <div class="drawer-vazio">Você não tem listas ainda.</div>
+        } @else {
+        @for (lista of minhasListas(); track lista.id) {
+        <button class="lista-item lista-item-privada" [class.ativo]="listaAtual()?.id === lista.id"
+            (click)="selecionar(lista)">
+            <div class="lista-item-row">
+                <span class="lista-item-titulo">{{ lista.titulo }}</span>
+                @if (lista.donoUid !== auth.user()?.uid) {
+                <span class="lista-participando-badge">participando</span>
+                }
+            </div>
+            @if (lista.data) {
+            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
+            }
+        </button>
+        }
+        }
+    </div>
+    }
+</div>
+}

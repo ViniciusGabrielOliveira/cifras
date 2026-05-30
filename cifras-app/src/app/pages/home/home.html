@@ -41,136 +41,13 @@
 </div>
 } @else {
 
-<!-- ── Seletor de Lista ──────────────────────────────────────── -->
-<div class="seletor-bar">
-    <button class="seletor-trigger" (click)="abrirSeletor()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-            <rect x="3" y="4" width="18" height="18" rx="2" />
-            <line x1="16" y1="2" x2="16" y2="6" />
-            <line x1="8" y1="2" x2="8" y2="6" />
-            <line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-        @if (listaAtual()) {
-        <span>{{ listaAtual()!.titulo }}</span>
-        @if (listaAtual()!.data) {
-        <span class="seletor-data">{{ formatarData(listaAtual()!.data) }}</span>
-        }
-        } @else {
-        <span>Selecionar lista</span>
-        }
-        <svg class="seletor-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14"
-            height="14">
-            <polyline points="6 9 12 15 18 9" />
-        </svg>
-    </button>
-    <button class="btn-abrir-seletor" (click)="abrirSeletor()">Escolher lista</button>
-</div>
-
-<!-- ── Drawer Seletor ────────────────────────────────────────── -->
-@if (seletorAberta()) {
-<div class="drawer-overlay" (click)="fecharSeletor()"></div>
-<div class="drawer">
-    <div class="drawer-header">
-        <span class="drawer-titulo">Escolher Lista</span>
-        <button class="drawer-close" (click)="fecharSeletor()">✕</button>
-    </div>
-
-    <!-- Abas Dia / Categoria / Minhas Listas -->
-    <div class="drawer-abas">
-        <div class="btn-dia-wrapper">
-            <button [class.ativo]="abaAtiva() === 'dia'" (click)="onDataInputChange()">
-                @if (dataSelecionada()) {
-                📅 {{ formatarData(dataSelecionada()) }}
-                } @else {
-                📅 Por Dia
-                }
-            </button>
-            <input #inputData type="date" lang="pt-BR" class="input-data-hidden" [value]="dataSelecionada()" />
-        </div>
-        <button [class.ativo]="abaAtiva() === 'categoria'" (click)="mudarAba('categoria')">
-            🏷️ Por Categoria
-        </button>
-        @if (auth.isLogado()) {
-        <button [class.ativo]="abaAtiva() === 'minhas-listas'" (click)="mudarAba('minhas-listas')">
-            👤 Minhas Listas
-        </button>
-        }
-    </div>
-
-    <!-- Aba: Dia -->
-    @if (abaAtiva() === 'dia') {
-    <div class="drawer-listas">
-        @if (carregandoFiltro()) {
-        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
-        } @else if (listasDoFiltro().length === 0) {
-        <div class="drawer-vazio">Nenhuma lista para este dia</div>
-        } @else {
-        @for (lista of listasDoFiltro(); track lista.id) {
-        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
-            <span class="lista-item-titulo">{{ lista.titulo }}</span>
-            <span class="lista-item-qtd">{{ lista.musicas.length }} músicas</span>
-        </button>
-        }
-        }
-    </div>
-    }
-
-    <!-- Aba: Categoria -->
-    @if (abaAtiva() === 'categoria') {
-    <div class="drawer-cats">
-        @for (cat of categories; track cat) {
-        <button class="cat-btn" [class.ativo]="catSelecionada() === cat" (click)="onCatChange(cat)">
-            {{ CATEGORIAS_LABELS[cat] }}
-        </button>
-        }
-    </div>
-    <div class="drawer-listas">
-        @if (carregandoFiltro()) {
-        <div class="drawer-vazio"><span class="spinner-sm"></span></div>
-        } @else if (listasDoFiltro().length === 0) {
-        <div class="drawer-vazio">Nenhuma lista nesta categoria</div>
-        } @else {
-        @for (lista of listasDoFiltro(); track lista.id) {
-        <button class="lista-item" [class.ativo]="listaAtual()?.id === lista.id" (click)="selecionarLista(lista)">
-            <span class="lista-item-titulo">{{ lista.titulo }}</span>
-            @if (lista.data) {
-            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
-            }
-        </button>
-        }
-        }
-    </div>
-    }
-
-    <!-- Aba: Minhas Listas -->
-    @if (abaAtiva() === 'minhas-listas') {
-    <div class="drawer-listas">
-        @if (carregandoMinhasListas()) {
-        <div class="drawer-vazio">
-            <span class="spinner-sm"></span>
-        </div>
-        } @else if (minhasListas().length === 0) {
-        <div class="drawer-vazio">Você não tem listas ainda.</div>
-        } @else {
-        @for (lista of minhasListas(); track lista.id) {
-        <button class="lista-item lista-item-privada" [class.ativo]="listaAtual()?.id === lista.id"
-            (click)="selecionarLista(lista)">
-            <div class="lista-item-row">
-                <span class="lista-item-titulo">{{ lista.titulo }}</span>
-                @if (lista.donoUid !== auth.user()?.uid) {
-                <span class="lista-participando-badge">participando</span>
-                }
-            </div>
-            @if (lista.data) {
-            <span class="lista-item-data">{{ formatarData(lista.data) }}</span>
-            }
-        </button>
-        }
-        }
-    </div>
-    }
-</div>
-}
+<!-- ── Seletor Repertório ────────────────────────────────────── -->
+<app-seletor-repertorio
+    [autoSelecionar]="!listaIdParam"
+    [listaAtual]="listaAtual()"
+    (listaSelecionada)="onListaSelecionada($event)"
+    (semResultadoInicial)="onSemResultadoInicial()"
+/>
 
 <!-- ── Conteúdo Principal ─────────────────────────────────────── -->
 @if (listaAtual(); as lista) {
@@ -178,11 +55,14 @@
 
     <!-- Titulo da Lista -->
     <div class="lista-header">
-        <div class="lista-cat-badge">{{ CATEGORIAS_LABELS[lista.categoria] }}</div>
-        <h1 class="lista-titulo">{{ lista.titulo }}</h1>
-        @if (lista.data) {
-        <p class="lista-data">{{ formatarData(lista.data) }}</p>
-        }
+        <div class="container-title">
+            <div class="lista-cat-badge">{{ CATEGORIAS_LABELS[lista.categoria] }}</div>
+            <h1 class="lista-titulo">{{ lista.titulo }}</h1>
+            @if (lista.data) {
+            <p class="lista-data">{{ formatarData(lista.data) }}</p>
+            }
+        </div>
+        <button class="btn-abrir-seletor" (click)="abrirSeletor()">Outros repertórios</button>
     </div>
 
     <!-- Live Bar -->
@@ -253,12 +133,8 @@
                     <span>Carregando cifra...</span>
                 </div>
                 } @else if (getCifraDoCache(musica.cifraId); as cifra) {
-                <app-cifra-viewer
-                    [cifra]="cifra"
-                    [versoes]="getVersoes(cifra.id)"
-                    [observacao]="musica.observacao"
-                    [mostrarEditar]="auth.isLogado()"
-                />
+                <app-cifra-viewer [cifra]="cifra" [versoes]="getVersoes(cifra.id)" [observacao]="musica.observacao"
+                    [mostrarEditar]="auth.isLogado()" />
                 } @else {
                 <div class="cifra-nao-encontrada">
                     Cifra não encontrada para "{{ musica.nome }}"
@@ -283,7 +159,8 @@
 @if (!modalBuscaAberto()) {
 <button class="fab-busca" (click)="abrirModalBusca()" title="Buscar música">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
     </svg>
 </button>
 }
@@ -297,11 +174,8 @@
         <button class="modal-close-home" (click)="fecharModalBusca()">✕</button>
     </div>
     <div class="modal-body-home">
-        <app-musica-search
-            [modoEmbutido]="true"
-            [mostrarFiltros]="true"
-            (musicaSelecionada)="onMusicaBuscada($event)"
-        />
+        <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true"
+            (musicaSelecionada)="onMusicaBuscada($event)" />
     </div>
 </div>
 }

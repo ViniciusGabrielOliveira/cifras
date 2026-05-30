@@ -33,6 +33,8 @@ import mcp.types as types
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
 
+import cache
+
 # ── Caminhos ──────────────────────────────────────────────────────────────────
 
 BASE_DIR        = Path(__file__).parent
@@ -587,15 +589,10 @@ def _tool_checar(args: dict) -> list[types.TextContent]:
             if not a_norm or normalizar(e["artista"]) == a_norm:
                 achados.append(f"[catálogo] {e['titulo']} — {e['artista']} (status: {e['status']})")
 
-    # Firebase
-    try:
-        for doc in get_db().collection("cifras_indice").stream():
-            d = doc.to_dict()
-            if normalizar(d.get("titulo", "")) == t_norm:
-                if not a_norm or normalizar(d.get("autor", "")) == a_norm:
-                    achados.append(f"[firebase] {d.get('titulo')} — {d.get('autor')} (id: {doc.id})")
-    except Exception as e:
-        achados.append(f"[erro firebase] {e}")
+    # Cache local (SQLite) — sem consulta ao Firebase
+    cid = cache.checar(titulo, artista)
+    if cid:
+        achados.append(f"[firebase] id: {cid}")
 
     if not achados:
         return [types.TextContent(type="text", text="Não encontrado. Pode adicionar ao catálogo.")]
@@ -616,18 +613,16 @@ async def _tool_importar() -> list[types.TextContent]:
         cid     = slugify(f"{titulo} {artista}")
         secoes  = parse_cifra_texto(dados["lyrics"])
 
-        # Verificar duplicata no Firebase por título+artista
-        db = get_db()
-        for doc in db.collection("cifras_indice").stream():
-            d = doc.to_dict()
-            if (normalizar(d.get("titulo","")) == normalizar(titulo) and
-                normalizar(d.get("autor",""))  == normalizar(artista)):
-                pendente["status"]  = "duplicata"
-                pendente["cifraId"] = doc.id
-                salvar_catalogo(cat)
-                return [types.TextContent(type="text", text=
-                    f"Duplicata: '{titulo}' já existe no Firebase como '{doc.id}'. Marcado."
-                )]
+        # Verificar duplicata no cache local (SQLite) — zero consulta Firebase
+        db  = get_db()
+        dup = cache.checar(titulo, artista)
+        if dup:
+            pendente["status"]  = "duplicata"
+            pendente["cifraId"] = dup
+            salvar_catalogo(cat)
+            return [types.TextContent(type="text", text=
+                f"Duplicata: '{titulo}' já existe no Firebase como '{dup}'. Marcado."
+            )]
 
         cifra = {
             "id":         cid,
@@ -657,6 +652,7 @@ async def _tool_importar() -> list[types.TextContent]:
             "categorias":  cifra.get("categorias", []),
             "partesMissa": cifra.get("partesMissa", []),
         })
+        cache.registrar(db, cid, titulo, artista, cifra.get("partesMissa", []))
 
         pendente["status"]  = "importado"
         pendente["cifraId"] = cid
@@ -766,6 +762,7 @@ def _tool_resumo() -> list[types.TextContent]:
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 async def main():
+    cache.sync(get_db())
     async with stdio_server() as (read, write):
         await server.run(read, write, server.create_initialization_options())
 

@@ -1,6 +1,5 @@
-import { Component, inject, signal, computed, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Lista, MusicaLista } from '../../models/lista.model';
@@ -11,16 +10,14 @@ import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
+import { SeletorRepertorioComponent } from '../../components/seletor-repertorio/seletor-repertorio';
 import { LiveService } from '../../services/live.service';
 import { LiveEstado } from '../../models/live.model';
-
-
-type SeletorAba = 'dia' | 'categoria' | 'minhas-listas';
 
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink, CifraViewerComponent, MusicaSearchComponent],
+    imports: [CommonModule, RouterLink, CifraViewerComponent, MusicaSearchComponent, SeletorRepertorioComponent],
     templateUrl: './home.html',
     styleUrl: './home.scss',
 })
@@ -33,17 +30,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     readonly config = inject(ConfigService);
     readonly auth = inject(AuthService);
 
-    @ViewChild('inputData') inputData!: ElementRef<HTMLInputElement>;
+    @ViewChild(SeletorRepertorioComponent) seletorRef!: SeletorRepertorioComponent;
 
-    // ── Seletor de lista ─────────────────────────────────────────────
-    seletorAberta = signal(false);
-    abaAtiva = signal<SeletorAba>('dia');
-    dataSelecionada = signal(new Date().toISOString().split('T')[0]);
-    catSelecionada = signal('tempo-comum');
-    listasDoFiltro = signal<Lista[]>([]);
-    minhasListas = signal<Lista[]>([]);
-    carregandoMinhasListas = signal(false);
-    carregandoFiltro = signal(false);
+    readonly listaIdParam = this.route.snapshot.queryParamMap.get('listaId');
 
     // ── Lista atual ──────────────────────────────────────────────────
     listaAtual = signal<Lista | null>(null);
@@ -119,7 +108,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     cifrasCache = signal<Record<string, Cifra | null>>({});
 
     // ── Versões ──────────────────────────────────────────────────────
-    // keyed by cifraId
     versoesCache = signal<Record<string, CifraVersao[]>>({});
 
     // ── Labels (template) ────────────────────────────────────────────
@@ -128,19 +116,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     get categories() { return this.config.categoriasIds().filter(id => id !== 'sem-categoria'); }
 
     ngOnInit(): void {
-        const listaId = this.route.snapshot.queryParamMap.get('listaId');
-        if (listaId) {
+        if (this.listaIdParam) {
             this.router.navigate([], { queryParams: {}, replaceUrl: true });
-            this.listaService.getLista(listaId).subscribe(lista => {
-                if (lista) {
-                    this.selecionarLista(lista);
-                    this.abaAtiva.set('minhas-listas');
-                }
+            this.listaService.getLista(this.listaIdParam).subscribe(lista => {
+                if (lista) this.selecionarLista(lista);
                 this.loading.set(false);
             });
-        } else {
-            this.carregarListasPorData(this.dataSelecionada());
         }
+        // else: SeletorRepertorioComponent carrega hoje e emite via (listaSelecionada)
     }
 
     ngOnDestroy() {
@@ -148,72 +131,20 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.removerScrollHandler();
     }
 
-    // ─── Seletor ──────────────────────────────────────────────────────
+    // ── Seletor ───────────────────────────────────────────────────────
 
-    abrirSeletor() { this.seletorAberta.set(true); }
-    fecharSeletor() { this.seletorAberta.set(false); }
+    abrirSeletor() { this.seletorRef.abrir(); }
 
-    mudarAba(aba: SeletorAba) {
-        this.abaAtiva.set(aba);
-        if (aba === 'dia') {
-            this.carregarListasPorData(this.dataSelecionada());
-        } else if (aba === 'categoria') {
-            this.carregarListasPorCategoria(this.catSelecionada());
-        } else if (aba === 'minhas-listas') {
-            this.carregarMinhasListas();
-        }
+    onListaSelecionada(lista: Lista) {
+        this.selecionarLista(lista);
+        this.loading.set(false);
     }
 
-    onDataInputChange() {
-        const input = this.inputData.nativeElement;
-        input.addEventListener('change', (e: Event) => {
-            const val = (e.target as HTMLInputElement).value;
-            if (val) {
-                this.dataSelecionada.set(val);
-                this.abaAtiva.set('dia');
-                this.carregarListasPorData(val);
-            }
-        }, { once: true });
-        try { input.showPicker(); } catch { input.click(); }
-    }
-
-    onCatChange(cat: string) {
-        this.catSelecionada.set(cat);
-        this.carregarListasPorCategoria(cat);
-    }
-
-    private carregarListasPorData(data: string) {
-        this.carregandoFiltro.set(true);
-        this.listaService.getListasDodia(data).subscribe(listas => {
-            this.listasDoFiltro.set(listas);
-            if (!this.listaAtual() && listas.length > 0) {
-                this.selecionarLista(listas[0]);
-            }
-            this.loading.set(false);
-            this.carregandoFiltro.set(false);
-        });
-    }
-
-    private carregarListasPorCategoria(cat: string) {
-        this.carregandoFiltro.set(true);
-        this.listaService.getListasPorCategoria(cat).subscribe(listas => {
-            this.listasDoFiltro.set(listas);
-            this.carregandoFiltro.set(false);
-        });
-    }
-
-    private carregarMinhasListas() {
-        const uid = this.auth.user()?.uid;
-        if (!uid) return;
-        this.carregandoMinhasListas.set(true);
-        this.listaService.getTodasMinhasListas(uid).subscribe(listas => {
-            this.minhasListas.set(listas);
-            this.carregandoMinhasListas.set(false);
-        });
+    onSemResultadoInicial() {
+        this.loading.set(false);
     }
 
     selecionarLista(lista: Lista) {
-        // Desligar live ao trocar de lista
         if (this.modoLiveAtivo()) {
             this.liveSub?.unsubscribe();
             this.liveSub = undefined;
@@ -227,7 +158,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.acordeonAberto.set(null);
         const partes = this.config.partesIds().filter(p => lista.musicas.some(m => m.parte === p));
         this.parteAtiva.set(partes[0] ?? null);
-        this.fecharSeletor();
     }
 
     // ─── Tabs ─────────────────────────────────────────────────────────
@@ -273,7 +203,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         const cache = this.cifrasCache();
 
         if (cifraId in cache) {
-            // Cifra já está no cache — scroll após dois frames para o DOM estabilizar
             if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
             return;
         }
@@ -281,7 +210,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.cifrasCache.update(c => ({ ...c, [cifraId]: null }));
         this.cifraService.getCifra(cifraId).subscribe(cifra => {
             this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
-            // Aguarda Angular atualizar o DOM antes de scrollar
             if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
         });
 
@@ -339,7 +267,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                         if (idAberto) {
                             const musica = this.listaAtual()?.musicas.find(m => m.id === idAberto);
                             if (musica) {
-                                // Mudar parte se necessário
                                 if (this.parteAtiva() !== musica.parte) {
                                     this.parteAtiva.set(musica.parte);
                                 }
