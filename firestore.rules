@@ -127,11 +127,13 @@ service cloud.firestore {
 
     // ── Cifras Customizadas (edições do usuário sobre cifras públicas) ─
     match /cifras_custom/{docId} {
-      allow read, write: if isAuthenticated()
+      // Qualquer autenticado pode ler — conteúdo de cifra, sem dado pessoal
+      allow read: if isAuthenticated() && isNotBlocked();
+      // Só o próprio dono escreve/atualiza
+      allow write: if isAuthenticated()
         && isNotBlocked()
         && (resource == null || resource.data.uid == request.auth.uid)
         && request.resource.data.uid == request.auth.uid;
-      allow read: if isAdmin();
       allow delete: if isAdmin()
         || (isAuthenticated() && resource.data.uid == request.auth.uid);
     }

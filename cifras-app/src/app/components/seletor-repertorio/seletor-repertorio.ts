@@ -103,12 +103,12 @@ export class SeletorRepertorioComponent implements OnInit {
         const lista: Lista = {
             id: '',
             titulo,
-            categoria: 'tempo-comum',
             musicas: [],
             tipo: 'privada' as TipoLista,
             donoUid: uid,
             donoNome: this.auth.displayName?.() || undefined,
             participantes: [],
+            partes: [{ id: `parte-${Date.now()}`, label: 'Início' }],
             criadaEm: agora,
             atualizadaEm: agora,
         };

@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, tap, map, shareReplay, BehaviorSubject } from 'rxjs';
-import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraCustom, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 const LS_PREFIX = 'cifras_mock_';
@@ -199,4 +199,7 @@ export class CifraMockRepository extends CifraRepository {
     }
 
     override getVersoes(_cifraId: string): Observable<CifraVersao[]> { return of([]); }
+
+    override salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom> { return of(custom); }
+    override getCifraCustom(_uid: string, _cifraId: string): Observable<CifraCustom | undefined> { return of(undefined); }
 }

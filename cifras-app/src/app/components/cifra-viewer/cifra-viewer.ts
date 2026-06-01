@@ -5,6 +5,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../secao-cifra/secao-cifra';
 import { transporCifra } from '../../core/transposicao';
+import { AuthService } from '../../services/auth.service';
 
 function extrairYoutubeId(url: string): string | null {
   const m = url.match(/(?:youtu\.be\/|[?&]v=)([A-Za-z0-9_-]{11})/);
@@ -20,6 +21,7 @@ function extrairYoutubeId(url: string): string | null {
 })
 export class CifraViewerComponent implements OnDestroy {
   private sanitizer = inject(DomSanitizer);
+  readonly auth     = inject(AuthService);
 
   cifra         = input.required<Cifra>();
   versoes       = input<CifraVersao[]>([]);

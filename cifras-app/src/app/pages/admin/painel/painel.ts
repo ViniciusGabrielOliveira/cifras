@@ -89,7 +89,7 @@ export class PainelComponent implements OnInit {
   listasFiltradas = computed(() => {
     const q = this.filtroTexto().toLowerCase();
     return q
-      ? this.listas().filter(l => l.titulo.toLowerCase().includes(q) || l.categoria.includes(q))
+      ? this.listas().filter(l => l.titulo.toLowerCase().includes(q) || (l.categoria ?? '').includes(q))
       : this.listas();
   });
 

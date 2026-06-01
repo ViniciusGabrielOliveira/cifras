@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, switchMap, tap, of } from 'rxjs';
-import { Cifra, CifraPR, CifraVersao, MotivoVersao } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraCustom, CifraVersao, MotivoVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
 import { CifraFirebaseRepository } from '../repositories/cifra-firebase.repository';
 import { AcordesService } from './acordes.service';
@@ -84,10 +84,10 @@ export class CifraService {
       dados: cifra,
       autorUid,
       autorNome,
-      motivo,
-      motivoCustom,
       status: 'pendente',
       criadoEm: new Date().toISOString(),
+      ...(motivo       !== undefined ? { motivo }       : {}),
+      ...(motivoCustom !== undefined ? { motivoCustom } : {}),
     };
     return this.repo.criarPR(pr);
   }
@@ -160,6 +160,14 @@ export class CifraService {
 
   getVersoes(cifraId: string): Observable<CifraVersao[]> {
     return this.repo.getVersoes(cifraId);
+  }
+
+  salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom> {
+    return this.repo.salvarCifraCustom(custom);
+  }
+
+  getCifraCustom(uid: string, cifraId: string): Observable<CifraCustom | undefined> {
+    return this.repo.getCifraCustom(uid, cifraId);
   }
 
   reindexarIndice(): Observable<{ total: number; atualizadas: number }> {

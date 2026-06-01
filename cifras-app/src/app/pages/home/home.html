@@ -35,7 +35,7 @@
 </header>
 
 <!-- ── Seletor Repertório ────────────────────────────────────── -->
-<app-seletor-repertorio [autoSelecionar]="!listaIdParam" [listaAtual]="listaAtual()"
+<app-seletor-repertorio [autoSelecionar]="autoSelecionarComponente()" [listaAtual]="listaAtual()"
     (listaSelecionada)="onListaSelecionada($event)" (semResultadoInicial)="onSemResultadoInicial()" />
 
 <!-- ── Editar Lista ──────────────────────────────────────────── -->
@@ -55,7 +55,9 @@
     <!-- Titulo da Lista -->
     <div class="lista-header">
         <div class="container-title">
+            @if (lista.categoria) {
             <div class="lista-cat-badge">{{ CATEGORIAS_LABELS[lista.categoria] }}</div>
+            }
             <h1 class="lista-titulo">{{ lista.titulo }}</h1>
             @if (lista.data) {
             <p class="lista-data">{{ formatarData(lista.data) }}</p>
@@ -103,15 +105,48 @@
 
     <!-- Tabs Partes da Missa -->
     <div class="tabs-wrapper">
-        <div class="tabs" role="tablist">
+        <div class="tabs" role="tablist"
+            cdkDropList cdkDropListOrientation="horizontal"
+            (cdkDropListDropped)="onTabDropped($event)">
             @for (parte of partesDisponiveis(); track parte) {
-            <button class="tab" role="tab" [class.ativo]="parteAtiva() === parte" (click)="selecionarParte(parte)"
-                [attr.aria-selected]="parteAtiva() === parte">
-                {{ parteLabel(parte) }}
-                @if (canEdit() && parteVazia(parte)) {
-                <span class="tab-remove" (click)="$event.stopPropagation(); removeParte(parte)" title="Remover parte">✕</span>
+            <div class="tab-item" cdkDrag
+                [cdkDragDisabled]="!canEdit() || editandoTab() === parte">
+                <div *cdkDragPlaceholder class="tab-drag-placeholder"></div>
+                @if (editandoTab() === parte) {
+                <input class="tab-edit-input"
+                    [value]="editandoTabLabel()"
+                    (input)="editandoTabLabel.set($any($event.target).value)"
+                    (keydown.enter)="confirmarEditarTab()"
+                    (keydown.escape)="cancelarEditarTab()"
+                    (blur)="confirmarEditarTab()"
+                    autofocus
+                />
+                } @else {
+                <div class="tab" role="tab"
+                    [class.ativo]="parteAtiva() === parte"
+                    [attr.aria-selected]="parteAtiva() === parte">
+                    @if (canEdit()) {
+                    <span class="tab-drag-handle" cdkDragHandle title="Arrastar">
+                        <svg viewBox="0 0 10 16" fill="currentColor" width="8" height="14">
+                            <circle cx="2.5" cy="2" r="1.5"/><circle cx="7.5" cy="2" r="1.5"/>
+                            <circle cx="2.5" cy="8" r="1.5"/><circle cx="7.5" cy="8" r="1.5"/>
+                            <circle cx="2.5" cy="14" r="1.5"/><circle cx="7.5" cy="14" r="1.5"/>
+                        </svg>
+                    </span>
+                    }
+                    <button class="tab-label" (click)="selecionarParte(parte)">{{ parteLabel(parte) }}</button>
+                    @if (canEdit()) {
+                    <div class="tab-menu-wrap" (click)="$event.stopPropagation()">
+                        <button class="tab-menu-btn" (click)="toggleTabMenu(parte, $any($event.currentTarget))" title="Opções">
+                            <svg viewBox="0 0 4 18" fill="currentColor" width="4" height="14">
+                                <circle cx="2" cy="2" r="2"/><circle cx="2" cy="9" r="2"/><circle cx="2" cy="16" r="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    }
+                </div>
                 }
-            </button>
+            </div>
             }
             @if (canEdit() && partesParaAdicionar().length > 0) {
             <button class="tab tab-add" [class.ativo]="adicionandoParte()" (click)="toggleAdicionarParte()" title="Adicionar parte">
@@ -122,6 +157,20 @@
             }
         </div>
     </div>
+
+    @if (tabMenuAberto() && tabMenuPos()) {
+    <div class="tab-menu-dropdown"
+        [style.top.px]="tabMenuPos()!.top"
+        [style.right.px]="tabMenuPos()!.right"
+        (click)="$event.stopPropagation()">
+        <button class="tab-menu-item" (click)="iniciarEditarTab(tabMenuAberto()!)">Editar</button>
+        <button class="tab-menu-item tab-menu-item-danger"
+            (click)="removeParte(tabMenuAberto()!)"
+            [disabled]="!parteVazia(tabMenuAberto()!)">
+            Remover
+        </button>
+    </div>
+    }
 
     @if (canEdit() && adicionandoParte()) {
     <div class="parte-autocomplete-wrapper">
@@ -198,7 +247,7 @@
                     <div class="spinner"></div>
                     <span>Carregando cifra...</span>
                 </div>
-                } @else if (getCifraDoCache(musica.cifraId); as cifra) {
+                } @else if (getCifraEfetiva(musica.cifraId); as cifra) {
                 <app-cifra-viewer [cifra]="cifra" [versoes]="getVersoes(cifra.id)" [observacao]="musica.observacao"
                     [mostrarEditar]="auth.isLogado()" />
                 } @else {

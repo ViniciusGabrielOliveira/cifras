@@ -1,13 +1,14 @@
-import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription, forkJoin, of } from 'rxjs';
+import { DragDropModule, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Lista, MusicaLista, ParteLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { CifraService } from '../../services/cifra.service';
 import { ConfigService } from '../../services/config.service';
 import { AuthService } from '../../services/auth.service';
-import { Cifra, CifraVersao } from '../../models/cifra.model';
+import { Cifra, CifraCustom, CifraVersao } from '../../models/cifra.model';
 import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer';
 import { MusicaSearchComponent, MusicaSelecionada } from '../../components/musica-search/musica-search';
 import { SeletorRepertorioComponent } from '../../components/seletor-repertorio/seletor-repertorio';
@@ -18,7 +19,7 @@ import { LiveEstado } from '../../models/live.model';
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, RouterLink, CifraViewerComponent, MusicaSearchComponent, SeletorRepertorioComponent, EditarListaSheetComponent],
+    imports: [CommonModule, RouterLink, DragDropModule, CifraViewerComponent, MusicaSearchComponent, SeletorRepertorioComponent, EditarListaSheetComponent],
     templateUrl: './home.html',
     styleUrl: './home.scss',
 })
@@ -36,9 +37,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     readonly listaIdParam = this.route.snapshot.queryParamMap.get('listaId');
 
+    private static readonly STORAGE_KEY = 'cifras-ultima-lista';
+
     // ── Lista atual ──────────────────────────────────────────────────
     listaAtual = signal<Lista | null>(null);
     loading = signal(true);
+    readonly autoSelecionarComponente = signal(true);
 
     // ── Tabs partes da missa ─────────────────────────────────────────
     partesDisponiveis = computed<string[]>(() => {
@@ -78,6 +82,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     adicionarMusicaAberto      = signal(false);
     parteParaAdicionarMusica   = signal('');
     confirmandoRemoverMusica   = signal<string | null>(null);
+
+    tabMenuAberto  = signal<string | null>(null);
+    tabMenuPos     = signal<{ top: number; right: number } | null>(null);
+    editandoTab    = signal<string | null>(null);
+    editandoTabLabel = signal('');
 
     parteAtiva = signal<string | null>(null);
 
@@ -140,7 +149,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // ── Accordion / Cifra ────────────────────────────────────────────
     acordeonAberto = signal<string | null>(null);
-    cifrasCache = signal<Record<string, Cifra | null>>({});
+    cifrasCache  = signal<Record<string, Cifra | null>>({});
+    customCache  = signal<Record<string, CifraCustom | null>>({});  // chave: `${uid}_${cifraId}`
 
     // ── Versões ──────────────────────────────────────────────────────
     versoesCache = signal<Record<string, CifraVersao[]>>({});
@@ -151,11 +161,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     get categories() { return this.config.categoriasIds().filter(id => id !== 'sem-categoria'); }
 
     ngOnInit(): void {
-        if (this.listaIdParam) {
-            this.router.navigate([], { queryParams: {}, replaceUrl: true });
-            this.listaService.getLista(this.listaIdParam).subscribe(lista => {
-                if (lista) this.selecionarLista(lista);
-                this.loading.set(false);
+        const idParaCarregar = this.listaIdParam
+            ?? localStorage.getItem(HomeComponent.STORAGE_KEY);
+
+        if (idParaCarregar) {
+            this.autoSelecionarComponente.set(false);
+            if (this.listaIdParam) {
+                this.router.navigate([], { queryParams: {}, replaceUrl: true });
+            }
+            this.listaService.getLista(idParaCarregar).subscribe(lista => {
+                if (lista) {
+                    this.selecionarLista(lista);
+                    this.loading.set(false);
+                } else {
+                    localStorage.removeItem(HomeComponent.STORAGE_KEY);
+                    this.autoSelecionarComponente.set(true);
+                    // componente já está carregando e vai emitir normalmente
+                }
             });
         }
         // else: SeletorRepertorioComponent carrega hoje e emite via (listaSelecionada)
@@ -183,6 +205,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     selecionarLista(lista: Lista) {
+        localStorage.setItem(HomeComponent.STORAGE_KEY, lista.id);
         if (this.modoLiveAtivo()) {
             this.liveSub?.unsubscribe();
             this.liveSub = undefined;
@@ -194,8 +217,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
         this.listaAtual.set(lista);
         this.acordeonAberto.set(null);
-        const partes = this.config.partesIds().filter(p => lista.musicas.some(m => m.parte === p));
-        this.parteAtiva.set(partes[0] ?? null);
+        if (lista.partes && lista.partes.length > 0) {
+            this.parteAtiva.set(lista.partes[0].id);
+        } else {
+            const partes = this.config.partesIds().filter(p => lista.musicas.some(m => m.parte === p));
+            this.parteAtiva.set(partes[0] ?? null);
+        }
     }
 
     // ─── Tabs ─────────────────────────────────────────────────────────
@@ -247,6 +274,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     removeParte(parteId: string) {
+        this.tabMenuAberto.set(null); this.tabMenuPos.set(null);
         const lista = this.listaAtual();
         if (!lista?.partes || lista.musicas.some(m => m.parte === parteId)) return;
         const atualizada = { ...lista, partes: lista.partes.filter(p => p.id !== parteId) };
@@ -254,6 +282,64 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (this.parteAtiva() === parteId) {
             this.parteAtiva.set(atualizada.partes[0]?.id ?? null);
         }
+        this.salvarListaAtual(atualizada);
+    }
+
+    // ─── Tab menu / edição / drag ────────────────────────────────────
+
+    @HostListener('document:click')
+    fecharTabMenu() { this.tabMenuAberto.set(null); this.tabMenuPos.set(null); }
+
+    toggleTabMenu(parteId: string, btn: HTMLElement) {
+        if (this.tabMenuAberto() === parteId) {
+            this.tabMenuAberto.set(null);
+            this.tabMenuPos.set(null);
+        } else {
+            const rect = btn.getBoundingClientRect();
+            this.tabMenuAberto.set(parteId);
+            this.tabMenuPos.set({ top: rect.bottom + 6, right: window.innerWidth - rect.right });
+        }
+    }
+
+    iniciarEditarTab(parteId: string) {
+        this.tabMenuAberto.set(null); this.tabMenuPos.set(null);
+        this.editandoTabLabel.set(this.parteLabel(parteId));
+        this.editandoTab.set(parteId);
+        setTimeout(() => (document.querySelector('.tab-edit-input') as HTMLInputElement)?.focus(), 30);
+    }
+
+    confirmarEditarTab() {
+        const parteId = this.editandoTab();
+        const novoLabel = this.editandoTabLabel().trim();
+        this.editandoTab.set(null);
+        if (!parteId || !novoLabel) return;
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const partesAtuais: ParteLista[] = lista.partes
+            ?? this.partesDisponiveis().map(id => ({ id }));
+        const atualizada: Lista = {
+            ...lista,
+            partes: partesAtuais.map(p => p.id === parteId ? { ...p, label: novoLabel } : p),
+        };
+        this.listaAtual.set(atualizada);
+        this.salvarListaAtual(atualizada);
+    }
+
+    cancelarEditarTab() {
+        this.editandoTab.set(null);
+        this.editandoTabLabel.set('');
+    }
+
+    onTabDropped(event: CdkDragDrop<string[]>) {
+        if (event.previousIndex === event.currentIndex) return;
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const partesAtuais: ParteLista[] = lista.partes
+            ?? this.partesDisponiveis().map(id => ({ id }));
+        const partes = [...partesAtuais];
+        moveItemInArray(partes, event.previousIndex, event.currentIndex);
+        const atualizada: Lista = { ...lista, partes };
+        this.listaAtual.set(atualizada);
         this.salvarListaAtual(atualizada);
     }
 
@@ -363,6 +449,14 @@ export class HomeComponent implements OnInit, OnDestroy {
             if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
         });
 
+        const listaId = this.listaAtual()?.id;
+        if (listaId) {
+            const cacheKey = `${listaId}_${cifraId}`;
+            if (!(cacheKey in this.customCache())) {
+                this.carregarMelhorCustom(listaId, cifraId);
+            }
+        }
+
         if (!(cifraId in this.versoesCache())) {
             this.cifraService.getVersoes(cifraId).subscribe(versoes => {
                 if (versoes.length > 0) {
@@ -379,6 +473,39 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     getCifraDoCache(cifraId: string): Cifra | null {
         return this.cifrasCache()[cifraId] ?? null;
+    }
+
+    private carregarMelhorCustom(listaId: string, cifraId: string) {
+        const lista = this.listaAtual();
+        const editorUids = new Set<string>();
+        if (lista?.donoUid) editorUids.add(lista.donoUid);
+        lista?.participantes
+            ?.filter(p => p.role === 'editor')
+            .forEach(p => editorUids.add(p.uid));
+
+        if (editorUids.size === 0) return;
+
+        const cacheKey = `${listaId}_${cifraId}`;
+        this.customCache.update(c => ({ ...c, [cacheKey]: null }));
+
+        forkJoin(
+            Array.from(editorUids).map(uid =>
+                this.cifraService.getCifraCustom(uid, cifraId)
+            )
+        ).subscribe(customs => {
+            const melhor = customs
+                .filter((c): c is CifraCustom => c != null)
+                .sort((a, b) => b.atualizadoEm.localeCompare(a.atualizadoEm))[0] ?? null;
+            this.customCache.update(c => ({ ...c, [cacheKey]: melhor }));
+        });
+    }
+
+    getCifraEfetiva(cifraId: string): Cifra | null {
+        const cifra = this.cifrasCache()[cifraId] ?? null;
+        if (!cifra) return null;
+        const listaId = this.listaAtual()?.id;
+        const custom = listaId ? this.customCache()[`${listaId}_${cifraId}`] : null;
+        return custom ? { ...cifra, secoes: custom.secoes } : cifra;
     }
 
     getVersoes(cifraId: string): CifraVersao[] {

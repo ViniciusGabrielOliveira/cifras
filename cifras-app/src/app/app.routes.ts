@@ -99,6 +99,11 @@ export const routes: Routes = [
         path: 'cifra/:id',
         loadComponent: () => import('./pages/cifra/cifra').then(m => m.CifraPageComponent),
     },
+    {
+        path: 'cifra/:id/editar',
+        canActivate: [authGuard, roleGuard('membro')],
+        loadComponent: () => import('./pages/cifra-editar/cifra-editar').then(m => m.CifraEditarComponent),
+    },
 
     // ── Fallback ───────────────────────────────────────────────────
     { path: '**', redirectTo: '' },

@@ -91,7 +91,9 @@
       @for (lista of minhasListas(); track lista.id) {
         <div class="lista-card" (click)="abrirLista(lista.id)">
           <div class="lista-card-main">
+            @if (lista.categoria) {
             <span class="lista-cat-pill">{{ categoriasLabels[lista.categoria] ?? lista.categoria }}</span>
+            }
             <h3 class="lista-card-titulo">{{ lista.titulo }}</h3>
             <p class="lista-card-qtd">{{ lista.musicas.length }} música(s)</p>
           </div>

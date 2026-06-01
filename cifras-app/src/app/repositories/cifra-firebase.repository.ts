@@ -18,7 +18,7 @@ import {
   arrayRemove,
   writeBatch,
 } from 'firebase/firestore';
-import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraCustom, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
 @Injectable()
@@ -153,9 +153,13 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   override criarPR(pr: Omit<CifraPR, 'id'>): Observable<CifraPR> {
     const col = collection(this.firestore, 'cifras_pr');
+    console.log('[criarPR] dados enviados:', JSON.parse(JSON.stringify(pr, (_, v) => v === undefined ? '__UNDEFINED__' : v)));
     return from(addDoc(col, pr)).pipe(
       map(ref => ({ ...pr, id: ref.id })),
-      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao criar solicitação'))),
+      catchError(err => {
+        console.error('[criarPR] erro raw:', err, 'code:', (err as any)?.code, 'message:', (err as any)?.message);
+        return throwError(() => this.tratarErro(err, 'Erro ao criar solicitação'));
+      }),
     );
   }
 
@@ -204,6 +208,24 @@ export class CifraFirebaseRepository extends CifraRepository {
     return from(getDocs(col)).pipe(
       map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as CifraVersao)),
       catchError(() => of([])),
+    );
+  }
+
+  // ── Versões customizadas do usuário ─────────────────────────────
+
+  override salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom> {
+    const ref = doc(this.firestore, `cifras_custom/${custom.id}`);
+    return from(setDoc(ref, custom)).pipe(
+      map(() => custom),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar versão'))),
+    );
+  }
+
+  override getCifraCustom(uid: string, cifraId: string): Observable<CifraCustom | undefined> {
+    const ref = doc(this.firestore, `cifras_custom/${uid}_${cifraId}`);
+    return from(getDoc(ref)).pipe(
+      map(snap => snap.exists() ? snap.data() as CifraCustom : undefined),
+      catchError(() => of(undefined)),
     );
   }
 

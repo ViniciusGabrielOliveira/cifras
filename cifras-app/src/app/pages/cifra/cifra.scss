@@ -91,3 +91,20 @@
   max-width: 860px;
   margin: 0 auto;
 }
+
+.cifra-custom-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(124, 106, 253, 0.08);
+  border-bottom: 1px solid rgba(124, 106, 253, 0.2);
+  font-size: 0.75rem;
+  color: var(--color-acorde);
+  font-weight: 500;
+
+  &::before {
+    content: '✎';
+    font-size: 0.85rem;
+  }
+}

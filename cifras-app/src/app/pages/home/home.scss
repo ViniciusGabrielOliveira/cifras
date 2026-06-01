@@ -90,9 +90,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 1rem 1rem;
     border-bottom: 1px solid var(--color-border);
-    margin-bottom: 1.5rem;
     align-items: center;
 }
 
@@ -176,7 +175,9 @@
     outline: none;
     box-sizing: border-box;
 
-    &::placeholder { color: var(--color-text-muted); }
+    &::placeholder {
+        color: var(--color-text-muted);
+    }
 }
 
 .parte-autocomplete-dropdown {
@@ -189,7 +190,7 @@
     border-radius: 10px;
     overflow: hidden;
     z-index: 50;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     max-height: 220px;
     overflow-y: auto;
 }
@@ -207,8 +208,13 @@
     cursor: pointer;
     transition: background 0.12s;
 
-    &:last-child { border-bottom: none; }
-    &:hover { background: var(--color-surface); }
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background: var(--color-surface);
+    }
 }
 
 .parte-opcao-criar {
@@ -270,50 +276,24 @@
     }
 }
 
-.tab-remove {
+.tab-item {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    font-size: 0.6rem;
-    margin-left: 6px;
-    opacity: 0.6;
-    transition: opacity 0.15s, background 0.15s;
-    vertical-align: middle;
-
-    &:hover {
-        opacity: 1;
-        background: rgba(239, 68, 68, 0.2);
-        color: #ef4444;
-    }
-}
-
-.tab-add {
-    padding: 8px 12px;
-    color: var(--color-text-muted);
-    border-style: dashed;
-
-    &:hover, &.ativo {
-        color: var(--color-acorde);
-        border-color: var(--color-acorde);
-        background: var(--color-acorde-bg);
-        box-shadow: none;
-    }
 }
 
 .tab {
-    padding: 8px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
     border-radius: 50px;
     border: 1px solid var(--color-border);
     background: transparent;
     color: var(--color-text-muted);
     font-size: 0.85rem;
     font-weight: 600;
-    cursor: pointer;
     white-space: nowrap;
     transition: all 0.2s;
+    cursor: default;
 
     &:hover {
         color: var(--color-text);
@@ -326,6 +306,159 @@
         color: #fff;
         box-shadow: 0 4px 14px rgba(124, 106, 253, 0.4);
     }
+}
+
+.tab-label {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    padding: 2px 2px;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.tab-drag-handle {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    opacity: 0.35;
+    padding: 2px 1px;
+    touch-action: none;
+    flex-shrink: 0;
+
+    .tab.ativo & {
+        opacity: 0.6;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.tab-menu-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tab-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: inherit;
+    opacity: 0.45;
+    cursor: pointer;
+    padding: 2px 3px;
+    border-radius: 4px;
+    transition: opacity 0.15s, background 0.15s;
+    flex-shrink: 0;
+
+    &:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.tab-menu-dropdown {
+    position: fixed;
+    background: #1a1d27;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    z-index: 200;
+    min-width: 120px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.tab-menu-item {
+    display: block;
+    width: 100%;
+    padding: 9px 14px;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.12s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+}
+
+.tab-menu-item-danger {
+    color: #ef4444;
+}
+
+.tab-drag-placeholder {
+    display: inline-flex;
+    height: 34px;
+    width: 80px;
+    border: 1.5px dashed rgba(124, 106, 253, 0.5);
+    border-radius: 50px;
+    background: rgba(124, 106, 253, 0.05);
+}
+
+.tab-edit-input {
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1.5px solid var(--color-acorde);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    outline: none;
+    width: 120px;
+
+    &::placeholder {
+        color: var(--color-text-muted);
+    }
+}
+
+.tab-add {
+    padding: 8px 12px;
+    color: var(--color-text-muted);
+    border-style: dashed;
+    cursor: pointer;
+
+    &:hover,
+    &.ativo {
+        color: var(--color-acorde);
+        border-color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+        box-shadow: none;
+    }
+}
+
+/* CDK drag global styles */
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+.cdk-drag-animating {
+    transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 /* ── Card Adicionar Música ───────────────────────────────────────── */
@@ -351,7 +484,9 @@
         background: var(--color-acorde-bg);
         border-style: solid;
 
-        .musica-add-icon { color: var(--color-acorde); }
+        .musica-add-icon {
+            color: var(--color-acorde);
+        }
     }
 }
 
@@ -404,7 +539,9 @@
     text-align: left;
     transition: background 0.15s;
 
-    &:hover { background: rgba(255, 255, 255, 0.04); }
+    &:hover {
+        background: rgba(255, 255, 255, 0.04);
+    }
 }
 
 .btn-remover-musica {
@@ -671,7 +808,7 @@
 /* ── Live Bar ────────────────────────────────────────────────────── */
 .live-bar {
     max-width: 860px;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     padding: 0.6rem 1.5rem;
     display: flex;
     align-items: center;

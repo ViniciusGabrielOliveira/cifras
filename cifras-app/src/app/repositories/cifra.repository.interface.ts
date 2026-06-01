@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Cifra, CifraPR, CifraVersao } from '../models/cifra.model';
+import { Cifra, CifraPR, CifraCustom, CifraVersao } from '../models/cifra.model';
 
 export interface CifraIndiceItem {
   id: string;
@@ -32,4 +32,7 @@ export abstract class CifraRepository {
   abstract resolverPR(prId: string, status: 'aprovado' | 'rejeitado', reviewerUid: string, nota?: string): Observable<void>;
   // Versões aprovadas
   abstract getVersoes(cifraId: string): Observable<CifraVersao[]>;
+  // Versões customizadas do usuário
+  abstract salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom>;
+  abstract getCifraCustom(uid: string, cifraId: string): Observable<CifraCustom | undefined>;
 }

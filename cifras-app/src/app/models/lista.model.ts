@@ -30,7 +30,7 @@ export interface Lista {
     dataInicio?: string;
     dataFim?: string;
     todosDias?: boolean;
-    categoria: CategoriaLiturgica;
+    categoria?: CategoriaLiturgica;
     musicas: MusicaLista[];
     criadaEm: string;
     atualizadaEm: string;

@@ -79,7 +79,7 @@
     <div class="meta-group-inline">
       <div class="form-group-meta cat-field">
         <label class="meta-label">Categoria</label>
-        <app-select [options]="categoriasOptions()" [value]="lista.categoria"
+        <app-select [options]="categoriasOptions()" [value]="lista.categoria ?? ''"
           (valueChange)="onCategoriaChange($event)" />
       </div>
       <div class="form-group-meta">

@@ -1,9 +1,9 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CifraService } from '../../services/cifra.service';
 import { AuthService } from '../../services/auth.service';
-import { Cifra, CifraVersao } from '../../models/cifra.model';
+import { Cifra, CifraCustom, CifraVersao } from '../../models/cifra.model';
 import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer';
 
 @Component({
@@ -19,10 +19,18 @@ export class CifraPageComponent implements OnInit {
   private router       = inject(Router);
   readonly auth        = inject(AuthService);
 
-  cifra   = signal<Cifra | null>(null);
-  versoes = signal<CifraVersao[]>([]);
-  loading = signal(true);
-  erro    = signal(false);
+  cifra        = signal<Cifra | null>(null);
+  cifraCustom  = signal<CifraCustom | null>(null);
+  versoes      = signal<CifraVersao[]>([]);
+  loading      = signal(true);
+  erro         = signal(false);
+
+  cifraEfetiva = computed(() => {
+    const c = this.cifra();
+    if (!c) return null;
+    const custom = this.cifraCustom();
+    return custom ? { ...c, secoes: custom.secoes } : c;
+  });
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -35,6 +43,13 @@ export class CifraPageComponent implements OnInit {
     });
 
     this.cifraService.getVersoes(id).subscribe(v => this.versoes.set(v));
+
+    const uid = this.auth.user()?.uid;
+    if (uid) {
+      this.cifraService.getCifraCustom(uid, id).subscribe(custom => {
+        this.cifraCustom.set(custom ?? null);
+      });
+    }
   }
 
   voltar() {

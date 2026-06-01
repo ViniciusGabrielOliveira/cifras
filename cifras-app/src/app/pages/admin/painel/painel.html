@@ -131,7 +131,9 @@
           <div class="lista-card">
             <div class="lista-card-main" (click)="editarLista(lista)" style="cursor:pointer">
               <div class="lista-card-badges">
+                @if (lista.categoria) {
                 <span class="lista-cat-pill">{{ CATEGORIAS_LABELS[lista.categoria] }}</span>
+                }
                 @if (lista.tipo === 'privada') {
                   <span class="lista-tipo-pill privada">privada</span>
                 } @else {

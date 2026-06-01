@@ -27,8 +27,11 @@
       <p>Música não encontrada.</p>
       <button class="btn-voltar-inline" (click)="voltar()">Voltar</button>
     </div>
-  } @else if (cifra(); as c) {
+  } @else if (cifraEfetiva(); as c) {
     <div class="cifra-page-body">
+      @if (cifraCustom()) {
+        <div class="cifra-custom-badge">Você está vendo sua versão editada</div>
+      }
       <app-cifra-viewer
         [cifra]="c"
         [versoes]="versoes()"
