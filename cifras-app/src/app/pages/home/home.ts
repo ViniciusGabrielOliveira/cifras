@@ -405,6 +405,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private salvarListaAtual(lista: Lista) {
         this.listaService.salvarLista(lista).subscribe({
             next: salva => this.listaAtual.set(salva),
+            error: (err: Error) => this.mostrarErroHome(err.message || 'Erro ao salvar lista.'),
         });
     }
 

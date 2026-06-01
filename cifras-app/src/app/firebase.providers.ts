@@ -1,5 +1,6 @@
 import { InjectionToken, makeEnvironmentProviders } from '@angular/core';
 import { FirebaseApp, FirebaseOptions, initializeApp, getApp } from 'firebase/app';
+import { initializeFirestore } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
@@ -9,7 +10,11 @@ export function provideFirebase(config: FirebaseOptions) {
   return makeEnvironmentProviders([
     {
       provide: FIREBASE_APP,
-      useFactory: () => initializeApp(config),
+      useFactory: () => {
+        const app = initializeApp(config);
+        initializeFirestore(app, { ignoreUndefinedProperties: true });
+        return app;
+      },
     },
   ]);
 }
