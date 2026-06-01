@@ -380,11 +380,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.listaAtual.set(atualizada);
         this.fecharAdicionarMusica();
         this.salvarListaAtual(atualizada);
+        this.cifraService.atualizarListasIds(selecionada.cifraId, lista.id, 'add').subscribe();
     }
 
     removerMusica(musicaId: string) {
         const lista = this.listaAtual();
         if (!lista) return;
+        const musicaRemovida = lista.musicas.find(m => m.id === musicaId);
         const atualizada = {
             ...lista,
             musicas: lista.musicas
@@ -395,6 +397,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.confirmandoRemoverMusica.set(null);
         if (this.acordeonAberto() === musicaId) this.acordeonAberto.set(null);
         this.salvarListaAtual(atualizada);
+        if (musicaRemovida) {
+            this.cifraService.atualizarListasIds(musicaRemovida.cifraId, lista.id, 'remove').subscribe();
+        }
     }
 
     private salvarListaAtual(lista: Lista) {
