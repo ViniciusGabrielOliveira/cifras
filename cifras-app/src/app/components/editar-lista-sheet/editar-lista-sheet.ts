@@ -46,7 +46,13 @@ export class EditarListaSheetComponent {
         return `${document.baseURI.replace(/\/$/, '')}/join/${token}`;
     }
 
-    abrir() { this.aberto.set(true); }
+    abrir() {
+        this.aberto.set(true);
+        const lista = this.lista();
+        if (lista && this.isDono() && lista.tipo !== 'publica' && !lista.tokenConvite) {
+            this.salvar({ tokenConvite: crypto.randomUUID() });
+        }
+    }
     fechar() {
         this.aberto.set(false);
         this.confirmandoRemover.set(null);

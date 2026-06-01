@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Cifra } from '../models/cifra.model';
 import { parseCifraTexto, slugify } from '../core/cifra-parser';
 import { CifraService } from './cifra.service';
+import { AuthService } from './auth.service';
 
 export interface CifraClubSugestao {
   id: string;
@@ -26,6 +27,7 @@ export interface CifraClubImportResult {
 export class CifraClubImportService {
   private http        = inject(HttpClient);
   private cifraService = inject(CifraService);
+  private auth        = inject(AuthService);
 
   /** Resultado de um import pendente — consumido por nova-cifra ao abrir */
   pendingImport: CifraClubImportResult | null = null;
@@ -60,6 +62,7 @@ export class CifraClubImportService {
     const id      = slugify(`${titulo} ${artista}`);
     const secoes  = parseCifraTexto(result.lyricsWithChords);
 
+    const uid = this.auth.user()?.uid;
     const cifra: Cifra = {
       id,
       titulo,
@@ -72,6 +75,8 @@ export class CifraClubImportService {
       partesMissa:  [],
       secoes,
       sourceUrl:    result.sourceUrl,
+      status:       'privada',
+      donoUid:      uid,
     };
 
     await firstValueFrom(this.cifraService.salvarCifra(cifra));
