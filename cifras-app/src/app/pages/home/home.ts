@@ -372,7 +372,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             cifraId: selecionada.cifraId,
             nome: selecionada.nome,
             autor: selecionada.autor,
-            trecho: selecionada.trecho,
+            ...(selecionada.trecho !== undefined && { trecho: selecionada.trecho }),
             parte,
             ordem: lista.musicas.filter(m => m.parte === parte).length,
         };

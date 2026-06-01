@@ -286,7 +286,7 @@ export class MinhaListaComponent implements OnInit {
             cifraId: selecionada.cifraId,
             nome: selecionada.nome,
             autor: selecionada.autor,
-            trecho: selecionada.trecho,
+            ...(selecionada.trecho !== undefined && { trecho: selecionada.trecho }),
             parte: this.parteParaAdicionar(),
             ordem: lista.musicas.filter(m => m.parte === this.parteParaAdicionar()).length,
         };
