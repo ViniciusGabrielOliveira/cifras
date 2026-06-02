@@ -1,10 +1,10 @@
-import { Component, computed, inject, input, signal, OnDestroy } from '@angular/core';
+import { Component, computed, effect, inject, input, output, signal, untracked, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../secao-cifra/secao-cifra';
-import { transporCifra } from '../../core/transposicao';
+import { calcularDelta, transporCifra } from '../../core/transposicao';
 import { AuthService } from '../../services/auth.service';
 
 function extrairYoutubeId(url: string): string | null {
@@ -27,8 +27,23 @@ export class CifraViewerComponent implements OnDestroy {
   versoes       = input<CifraVersao[]>([]);
   observacao    = input<string | undefined>(undefined);
   mostrarEditar = input(false);
+  tomSalvo      = input<string | undefined>(undefined);
 
-  delta             = signal(0);
+  readonly tomAlterado = output<string>();
+
+  delta = signal(0);
+
+  private _initDelta = effect(() => {
+    const salvo = this.tomSalvo();
+    untracked(() => {
+      const cifra = this.cifra();
+      if (!salvo || salvo === cifra.tom) {
+        this.delta.set(0);
+      } else {
+        this.delta.set(calcularDelta(cifra.tom, salvo));
+      }
+    });
+  });
   fonteSize         = signal(15);
   versaoSelecionada = signal<string | null>(null);
   playerAberto      = signal(false);
@@ -74,8 +89,15 @@ export class CifraViewerComponent implements OnDestroy {
     return versao ? { ...this.cifra(), secoes: versao.secoes, tom: versao.tom } : this.cifra();
   }
 
-  mudarTom(d: number)   { this.delta.update(v => v + d); }
-  restaurarTom()        { this.delta.set(0); }
+  mudarTom(d: number) {
+    this.delta.update(v => v + d);
+    this.tomAlterado.emit(this.cifraExibida().tom);
+  }
+
+  restaurarTom() {
+    this.delta.set(0);
+    this.tomAlterado.emit(this.cifraExibida().tom);
+  }
   mudarFonte(d: number) { this.fonteSize.update(v => Math.min(24, Math.max(12, v + d))); }
 
   selecionarVersao(versaoId: string | null) {

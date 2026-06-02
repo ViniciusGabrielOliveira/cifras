@@ -22,6 +22,8 @@ export abstract class CifraRepository {
   // Cifras privadas do usuário
   abstract getCifrasDoUser(uid: string): Observable<Cifra[]>;
   abstract countCifrasDoUser(uid: string): Observable<number>;
+  // Todas as cifras privadas (admin)
+  abstract getCifrasPrivadas(): Observable<Cifra[]>;
   // Controle de visibilidade via listas
   abstract atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void>;
   // Cópia da cifra dentro da lista (acesso garantido a participantes)

@@ -54,6 +54,10 @@ export class CifraService {
     return this.repo.getIndice();
   }
 
+  getCifrasPrivadas(): Observable<Cifra[]> {
+    return this.repo.getCifrasPrivadas();
+  }
+
   getCifrasDoUser(uid: string): Observable<Cifra[]> {
     return this.repo.getCifrasDoUser(uid);
   }

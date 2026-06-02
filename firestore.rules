@@ -70,11 +70,16 @@ service cloud.firestore {
           && (resource.data.status == 'privada' || resource.data.status == 'pendente_revisao')
           && cifraVisivelViaLista(resource.data));
 
-      // Criar nova cifra (privada ou pendente_revisao)
+      // Criar nova cifra
       allow create: if isAdminOrEditor()
+        // Cifra privada/pendente do próprio usuário
         || (isAuthenticated() && isNotBlocked()
           && request.resource.data.donoUid == request.auth.uid
-          && request.resource.data.status in ['privada', 'pendente_revisao']);
+          && request.resource.data.status in ['privada', 'pendente_revisao'])
+        // Import do CifraClub: entra pública (sourceUrl obrigatório)
+        || (isAuthenticated() && isNotBlocked()
+          && request.resource.data.keys().hasAll(['sourceUrl'])
+          && (!request.resource.data.keys().hasAll(['status']) || request.resource.data.status == 'publica'));
 
       // Editar cifra existente
       allow update: if isAdminOrEditor()
@@ -122,7 +127,11 @@ service cloud.firestore {
     // ── Índice de Cifras ─────────────────────────────────────────────
     match /cifras_indice/{docId} {
       allow read: if !isAuthenticated() || isNotBlocked();
-      allow write: if isAdminOrEditor();
+      allow write: if isAdminOrEditor()
+        // Usuário comum pode indexar cifras importadas (sourceUrl obrigatório)
+        || (isAuthenticated() && isNotBlocked()
+          && exists(/databases/$(database)/documents/cifras/$(docId))
+          && get(/databases/$(database)/documents/cifras/$(docId)).data.keys().hasAll(['sourceUrl']));
     }
 
     // ── Cifras Customizadas (edições do usuário sobre cifras públicas) ─

@@ -662,6 +662,68 @@
     }
 }
 
+// ── Tom + Observação (editor) ─────────────────────────────────────
+
+.musica-meta-edit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(255,255,255,0.02);
+    flex-wrap: wrap;
+}
+
+.meta-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &--obs { flex: 1; min-width: 200px; }
+}
+
+.meta-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.meta-select {
+    padding: 4px 8px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: var(--color-text);
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.15s;
+
+    &:focus { outline: none; border-color: var(--color-acorde); }
+
+    option { background: #1a1c24; }
+}
+
+.meta-input {
+    flex: 1;
+    padding: 4px 10px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    font-family: inherit;
+    transition: border-color 0.15s;
+
+    &::placeholder { color: var(--color-text-muted); }
+    &:focus { outline: none; border-color: var(--color-acorde); }
+}
+
+// ─────────────────────────────────────────────────────────────────
+
 .cifra-loading {
     display: flex;
     align-items: center;

@@ -1,7 +1,7 @@
 import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import { Subscription, forkJoin, of } from 'rxjs';
+import { Subscription, Subject, forkJoin, of, debounceTime, switchMap } from 'rxjs';
 import { DragDropModule, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Lista, MusicaLista, ParteLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
@@ -45,15 +45,26 @@ export class HomeComponent implements OnInit, OnDestroy {
     readonly autoSelecionarComponente = signal(true);
 
     // ── Tabs partes da missa ─────────────────────────────────────────
+    private _parteIdsRef: string[] = [];
     partesDisponiveis = computed<string[]>(() => {
         const l = this.listaAtual();
-        if (!l) return [];
-        if (l.partes) {
-            // Listas com partes customizadas: mostra todas, mesmo sem música
-            return l.partes.map(p => p.id);
+        let ids: string[];
+        if (!l) {
+            ids = [];
+        } else if (l.partes) {
+            ids = l.partes.map(p => p.id);
+        } else {
+            const usadas = new Set(l.musicas.map(m => m.parte));
+            ids = this.config.partesIds().filter(p => usadas.has(p));
         }
-        const usadas = new Set(l.musicas.map(m => m.parte));
-        return this.config.partesIds().filter(p => usadas.has(p));
+        // Retorna a mesma referência se os IDs não mudaram.
+        // Sem isso, @for re-cria o DOM inteiro a cada mudança em listaAtual,
+        // mesmo quando as partes são idênticas (NG0956).
+        if (ids.length === this._parteIdsRef.length && ids.every((id, i) => id === this._parteIdsRef[i])) {
+            return this._parteIdsRef;
+        }
+        this._parteIdsRef = ids;
+        return ids;
     });
 
     readonly partesParaAdicionar = computed<{ id: string; label: string }[]>(() => {
@@ -158,12 +169,24 @@ export class HomeComponent implements OnInit, OnDestroy {
     // ── Versões ──────────────────────────────────────────────────────
     versoesCache = signal<Record<string, CifraVersao[]>>({});
 
+    private _obsTimers = new Map<string, ReturnType<typeof setTimeout>>();
+    private tomSave$ = new Subject<Lista>();
+    private tomSaveSub?: Subscription;
+
     // ── Labels (template) ────────────────────────────────────────────
     get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
     get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
     get categories() { return this.config.categoriasIds().filter(id => id !== 'sem-categoria'); }
 
     ngOnInit(): void {
+        this.tomSaveSub = this.tomSave$.pipe(
+            debounceTime(500),
+            switchMap(lista => this.listaService.salvarLista(lista)),
+        ).subscribe({
+            next: salva => this.listaAtual.set(salva),
+            error: (err: Error) => this.mostrarErroHome(err.message || 'Erro ao salvar tom.'),
+        });
+
         const idParaCarregar = this.listaIdParam
             ?? localStorage.getItem(HomeComponent.STORAGE_KEY);
 
@@ -189,6 +212,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.liveSub?.unsubscribe();
         this.listaSub?.unsubscribe();
         this.removerScrollHandler();
+        this._obsTimers.forEach(t => clearTimeout(t));
+        this.tomSaveSub?.unsubscribe();
     }
 
     // ── Seletor ───────────────────────────────────────────────────────
@@ -416,6 +441,34 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (musicaRemovida) {
             this.cifraService.atualizarListasIds(musicaRemovida.cifraId, lista.id, 'remove').subscribe();
         }
+    }
+
+    // ── Tom e Observação por música ───────────────────────────────────
+
+    atualizarTomMusica(musicaId: string, tom: string) {
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const tomNovo = tom || undefined;
+        const atualizada = {
+            ...lista,
+            musicas: lista.musicas.map(m => m.id === musicaId ? { ...m, tom: tomNovo } : m),
+        };
+        this.tomSave$.next(atualizada);
+    }
+
+    atualizarObservacaoMusica(musicaId: string, obs: string) {
+        const lista = this.listaAtual();
+        if (!lista) return;
+        const atualizada = {
+            ...lista,
+            musicas: lista.musicas.map(m => m.id === musicaId ? { ...m, observacao: obs || undefined } : m),
+        };
+        this.listaAtual.set(atualizada);
+        clearTimeout(this._obsTimers.get(musicaId));
+        this._obsTimers.set(musicaId, setTimeout(() => {
+            this.salvarListaAtual(this.listaAtual()!);
+            this._obsTimers.delete(musicaId);
+        }, 800));
     }
 
     private salvarListaAtual(lista: Lista) {

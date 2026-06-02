@@ -127,6 +127,17 @@ export class CifraFirebaseRepository extends CifraRepository {
     );
   }
 
+  override getCifrasPrivadas(): Observable<Cifra[]> {
+    const q = query(
+      collection(this.firestore, 'cifras'),
+      where('status', '==', 'privada'),
+    );
+    return from(getDocs(q)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Cifra)),
+      catchError(() => of([])),
+    );
+  }
+
   private tratarErro(err: unknown, fallback: string): Error {
     const code = (err as any)?.code ?? '';
     if (code === 'permission-denied') return new Error('Sem permissão para realizar esta operação.');

@@ -1,0 +1,106 @@
+@if (notificacao()) { <div class="toast toast--ok">{{ notificacao() }}</div> }
+@if (erroMsg())     { <div class="toast toast--erro">{{ erroMsg() }}</div> }
+
+<!-- ── Header ───────────────────────────────────────────────────── -->
+<header class="admin-header">
+  <div class="admin-header-inner">
+    <div class="header-left">
+      <a routerLink="/admin/painel" class="back-link">← Voltar ao painel</a>
+      <span class="admin-titulo">Músicas Privadas</span>
+    </div>
+    <div class="header-right">
+      <span class="user-name">{{ auth.displayName() }}</span>
+      <button class="btn-sair" (click)="sair()">Sair</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Conteúdo ─────────────────────────────────────────────────── -->
+<div class="cp-page">
+
+  <div class="cp-toolbar">
+    <div class="cp-toolbar__info">
+      @if (!carregando()) {
+        <span class="cp-count">
+          {{ cifrasFiltradas().length }}
+          @if (busca()) { de {{ cifras().length }} }
+          músicas privadas
+        </span>
+      }
+    </div>
+    <input
+      class="cp-busca"
+      type="search"
+      placeholder="Buscar por título, artista ou uid..."
+      [ngModel]="busca()"
+      (ngModelChange)="busca.set($event)"
+    />
+  </div>
+
+  @if (carregando()) {
+    <div class="cp-empty">
+      <div class="spinner"></div>
+      <span>Carregando...</span>
+    </div>
+  } @else if (cifras().length === 0) {
+    <p class="cp-empty">Nenhuma música privada encontrada.</p>
+  } @else if (cifrasFiltradas().length === 0) {
+    <p class="cp-empty">Nenhum resultado para "{{ busca() }}".</p>
+  } @else {
+    <div class="cp-table-wrap">
+      <table class="cp-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Artista</th>
+            <th>Dono (uid)</th>
+            <th>Origem</th>
+            <th class="th-right">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cifra of cifrasFiltradas(); track cifra.id) {
+          <tr [class.row--busy]="processando() === cifra.id">
+            <td class="td-titulo">{{ cifra.titulo }}</td>
+            <td class="td-artista">{{ cifra.artista }}</td>
+            <td class="td-uid">
+              <code [title]="cifra.donoUid ?? ''">…{{ uidCurto(cifra.donoUid) }}</code>
+            </td>
+            <td class="td-origem">
+              @if (cifra.sourceUrl) {
+                <a [href]="cifra.sourceUrl" target="_blank" rel="noopener" class="origem-link">
+                  CifraClub ↗
+                </a>
+              } @else {
+                <span class="origem-manual">Manual</span>
+              }
+            </td>
+            <td class="td-acoes">
+              @if (confirmando() === cifra.id) {
+                <div class="confirm-row">
+                  <span class="confirm-txt">Remover?</span>
+                  <button class="btn-danger" (click)="deletar(cifra)" [disabled]="!!processando()">Sim</button>
+                  <button class="btn-ghost" (click)="cancelarDeletar()">Não</button>
+                </div>
+              } @else {
+                <div class="acoes-row">
+                  <button class="btn-primary" (click)="publicar(cifra)" [disabled]="!!processando()">
+                    Publicar
+                  </button>
+                  <button class="btn-ghost" (click)="editar(cifra.id)" [disabled]="!!processando()">
+                    Editar
+                  </button>
+                  <button class="btn-ghost btn-del" (click)="confirmarDeletar(cifra.id)" [disabled]="!!processando()">
+                    ✕
+                  </button>
+                </div>
+              }
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+</div>

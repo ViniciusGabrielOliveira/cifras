@@ -242,14 +242,31 @@
             <!-- Corpo expandido: Cifra -->
             @if (acordeonAberto() === musica.id) {
             <div class="musica-corpo">
+
+                <!-- Observação (editores) -->
+                @if (canEdit()) {
+                <div class="musica-meta-edit">
+                    <div class="meta-field meta-field--obs">
+                        <label class="meta-label">Observação</label>
+                        <input class="meta-input" type="text"
+                            placeholder="ex: capotraste na 1ª casa..."
+                            [value]="musica.observacao ?? ''"
+                            (input)="atualizarObservacaoMusica(musica.id, $any($event.target).value)" />
+                    </div>
+                </div>
+                }
+
                 @if (isCarregandoCifra(musica.cifraId)) {
                 <div class="cifra-loading">
                     <div class="spinner"></div>
                     <span>Carregando cifra...</span>
                 </div>
                 } @else if (getCifraEfetiva(musica.cifraId); as cifra) {
-                <app-cifra-viewer [cifra]="cifra" [versoes]="getVersoes(cifra.id)" [observacao]="musica.observacao"
-                    [mostrarEditar]="auth.isLogado()" />
+                <app-cifra-viewer [cifra]="cifra" [versoes]="getVersoes(musica.cifraId)"
+                    [observacao]="canEdit() ? undefined : musica.observacao"
+                    [mostrarEditar]="auth.isLogado()"
+                    [tomSalvo]="musica.tom"
+                    (tomAlterado)="atualizarTomMusica(musica.id, $event)" />
                 } @else {
                 <div class="cifra-nao-encontrada">
                     Cifra não encontrada para "{{ musica.nome }}"

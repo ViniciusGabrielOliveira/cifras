@@ -61,6 +61,12 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./pages/admin/prs/prs').then(m => m.PrsComponent),
     },
+    {
+        path: 'admin/cifras-privadas',
+        canActivate: [authGuard, roleGuard('admin')],
+        loadComponent: () =>
+            import('./pages/admin/cifras-privadas/cifras-privadas').then(m => m.CifrasPrivadasComponent),
+    },
 
     // ── Área do Usuário ────────────────────────────────────────────
     {

@@ -184,6 +184,7 @@ export class CifraMockRepository extends CifraRepository {
 
     override salvarCifraEmLista(_listaId: string, _cifra: any): Observable<void> { return of(undefined); }
     override getCifraEmLista(_listaId: string, _cifraId: string): Observable<any> { return of(undefined); }
+    override getCifrasPrivadas(): Observable<any[]> { return of([]); }
 
     override atualizarListasIds(_cifraId: string, _listaId: string, _op: 'add' | 'remove'): Observable<void> {
         return of(undefined);
