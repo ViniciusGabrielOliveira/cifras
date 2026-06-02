@@ -90,8 +90,8 @@ export function parseCifraTexto(texto: string): Secao[] {
   let secaoAtual: Secao = { tipo: 'verso', label: 'Verso 1', linhas: [] };
   let acordesPendentes: string | null = null;
   let rawPendente: string | null = null; // texto original da linha de acordes (com parênteses)
-  // Linhas acumuladas para seções tab
   let tabLinhas: string[] = [];
+  let vimpTabLinhas = false; // se já vimos pelo menos uma linha real de tablatura na seção atual
 
   const flushAcordes = () => {
     if (acordesPendentes !== null) {
@@ -111,6 +111,7 @@ export function parseCifraTexto(texto: string): Secao[] {
     } else if (secaoAtual.linhas.length > 0) {
       secoes.push(secaoAtual);
     }
+    vimpTabLinhas = false;
   };
 
   for (const linha of texto.split('\n')) {
@@ -122,6 +123,7 @@ export function parseCifraTexto(texto: string): Secao[] {
       const tipo = inferirTipo(nome);
       secaoAtual = { tipo, label: nome, linhas: [] };
       tabLinhas = [];
+      vimpTabLinhas = false;
       if (tipo !== 'tab') {
         const resto = secaoMatch[2].trim();
         if (resto) {
@@ -132,10 +134,27 @@ export function parseCifraTexto(texto: string): Secao[] {
       continue;
     }
 
-    // Seção tab: acumula todas as linhas como texto bruto
+    // Seção tab: acumula linhas de tablatura
     if (secaoAtual.tipo === 'tab') {
-      tabLinhas.push(linha);
-      continue;
+      if (isTabLine(linha)) {
+        tabLinhas.push(linha);
+        vimpTabLinhas = true;
+        continue;
+      }
+      if (!linha.trim()) {
+        tabLinhas.push(linha);
+        continue;
+      }
+      // Linha não-vazia e não-tab após tablatura real → encerra a seção tab
+      if (vimpTabLinhas) {
+        pushSecaoAtual();
+        secaoAtual = { tipo: 'outro', label: '', linhas: [] };
+        // fall through para processar esta linha normalmente
+      } else {
+        // Ainda não vimos tab real (ex: "Parte 1 de 3", acordes antes das cordas)
+        tabLinhas.push(linha);
+        continue;
+      }
     }
 
     // Se a linha é tablatura mas não estamos numa seção tab, abre uma seção tab automática
@@ -144,6 +163,7 @@ export function parseCifraTexto(texto: string): Secao[] {
       pushSecaoAtual();
       secaoAtual = { tipo: 'tab', label: 'Tab', linhas: [] };
       tabLinhas = [linha];
+      vimpTabLinhas = true;
       continue;
     }
 
