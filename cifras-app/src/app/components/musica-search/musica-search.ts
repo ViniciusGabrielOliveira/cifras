@@ -8,6 +8,7 @@ import { Subject, debounceTime, distinctUntilChanged, switchMap, of, catchError,
 import { CifraBuscaService, ResultadoBusca } from '../../services/cifra-busca.service';
 import { CifraClubImportService, CifraClubSugestao } from '../../services/cifraclub-import.service';
 import { ConfigService } from '../../services/config.service';
+import { Cifra } from '../../models/cifra.model';
 
 export type { CifraClubSugestao };
 
@@ -16,6 +17,7 @@ export interface MusicaSelecionada {
   nome: string;
   autor: string;
   trecho?: string;
+  cifra?: Cifra; // disponível quando importada do CifraClub
 }
 
 export interface ItemResultado extends ResultadoBusca {
@@ -253,11 +255,12 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
     this.importando.set(true);
     this.erroImport.set(null);
     try {
-      const cifraId = await this.cifraClub.importarESalvar(sugestao);
+      const cifra = await this.cifraClub.importarESalvar(sugestao);
       this.musicaSelecionada.emit({
-        cifraId,
-        nome:  sugestao.nome,
-        autor: sugestao.artista,
+        cifraId: cifra.id,
+        nome:    sugestao.nome,
+        autor:   sugestao.artista,
+        cifra,
       });
       this._limparTudo();
     } catch {

@@ -1492,6 +1492,10 @@ export class ListaMockRepository extends ListaRepository {
     );
   }
 
+  override escutarLista(id: string): Observable<Lista | undefined> {
+    return this.getLista(id);
+  }
+
   override salvarLista(lista: Lista): Observable<Lista> {
     const idx = this.listas.findIndex(l => l.id === lista.id);
     const updated = { ...lista, atualizadaEm: new Date().toISOString() };

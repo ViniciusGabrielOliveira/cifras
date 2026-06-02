@@ -54,8 +54,8 @@ export class CifraClubImportService {
     );
   }
 
-  /** Scrapa, parseia e salva no Firebase. Retorna o cifraId gerado. */
-  async importarESalvar(sugestao: CifraClubSugestao): Promise<string> {
+  /** Scrapa, parseia e salva no Firebase. Retorna a Cifra salva. */
+  async importarESalvar(sugestao: CifraClubSugestao): Promise<Cifra> {
     const result = await this.importarMusica(sugestao);
     const titulo  = result.title  || sugestao.nome;
     const artista = result.artist || sugestao.artista;
@@ -80,6 +80,6 @@ export class CifraClubImportService {
     };
 
     await firstValueFrom(this.cifraService.salvarCifra(cifra));
-    return id;
+    return cifra;
   }
 }

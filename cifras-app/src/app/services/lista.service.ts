@@ -32,6 +32,10 @@ export class ListaService {
         return this.repo.getLista(id);
     }
 
+    escutarLista(id: string): Observable<Lista | undefined> {
+        return this.repo.escutarLista(id);
+    }
+
     salvarLista(lista: Lista): Observable<Lista> {
         return this.repo.salvarLista(lista);
     }

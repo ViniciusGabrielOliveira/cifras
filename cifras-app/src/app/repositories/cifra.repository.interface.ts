@@ -24,6 +24,9 @@ export abstract class CifraRepository {
   abstract countCifrasDoUser(uid: string): Observable<number>;
   // Controle de visibilidade via listas
   abstract atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void>;
+  // Cópia da cifra dentro da lista (acesso garantido a participantes)
+  abstract salvarCifraEmLista(listaId: string, cifra: Cifra): Observable<void>;
+  abstract getCifraEmLista(listaId: string, cifraId: string): Observable<Cifra | undefined>;
   // Pull Requests
   abstract criarPR(pr: Omit<CifraPR, 'id'>): Observable<CifraPR>;
   abstract getPRsPendentes(): Observable<CifraPR[]>;

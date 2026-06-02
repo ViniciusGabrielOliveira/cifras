@@ -62,6 +62,16 @@ export class CifraService {
     return this.repo.countCifrasDoUser(uid);
   }
 
+  // ── Cifra local da lista ─────────────────────────────────────────
+
+  salvarCifraEmLista(listaId: string, cifra: Cifra): Observable<void> {
+    return this.repo.salvarCifraEmLista(listaId, cifra);
+  }
+
+  getCifraEmLista(listaId: string, cifraId: string): Observable<Cifra | undefined> {
+    return this.repo.getCifraEmLista(listaId, cifraId);
+  }
+
   // ── Controle de visibilidade via listas ──────────────────────────
 
   atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void> {

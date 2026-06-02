@@ -140,8 +140,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     liveEstado = signal<LiveEstado | null>(null);
 
     private liveSub?: Subscription;
+    private listaSub?: Subscription;
     private scrollHandler?: EventListener;
     private lastSyncedMusicaId: string | null = null;
+    private salvandoLista = false;
 
     // ── Modal busca rápida ───────────────────────────────────────────
     modalBuscaAberto = signal(false);
@@ -149,7 +151,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // ── Accordion / Cifra ────────────────────────────────────────────
     acordeonAberto = signal<string | null>(null);
-    cifrasCache  = signal<Record<string, Cifra | null>>({});
+    // null = carregando, false = falhou/não encontrado, Cifra = carregado
+    cifrasCache  = signal<Record<string, Cifra | null | false>>({});
     customCache  = signal<Record<string, CifraCustom | null>>({});  // chave: `${uid}_${cifraId}`
 
     // ── Versões ──────────────────────────────────────────────────────
@@ -176,7 +179,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 } else {
                     localStorage.removeItem(HomeComponent.STORAGE_KEY);
                     this.autoSelecionarComponente.set(true);
-                    // componente já está carregando e vai emitir normalmente
                 }
             });
         }
@@ -185,6 +187,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         this.liveSub?.unsubscribe();
+        this.listaSub?.unsubscribe();
         this.removerScrollHandler();
     }
 
@@ -215,13 +218,23 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.removerScrollHandler();
             this.lastSyncedMusicaId = null;
         }
-        this.listaAtual.set(lista);
+        this.listaSub?.unsubscribe();
         this.acordeonAberto.set(null);
+        this.cifrasCache.set({});
+        this.listaAtual.set(lista);
         if (lista.partes && lista.partes.length > 0) {
             this.parteAtiva.set(lista.partes[0].id);
         } else {
             const partes = this.config.partesIds().filter(p => lista.musicas.some(m => m.parte === p));
             this.parteAtiva.set(partes[0] ?? null);
+        }
+        if (lista.tipo === 'privada' && lista.id) {
+            this.listaSub = this.listaService.escutarLista(lista.id).subscribe(nova => {
+                if (!nova || this.salvandoLista) return;
+                const atual = this.listaAtual();
+                if (!atual || nova.atualizadaEm === atual.atualizadaEm) return;
+                this.listaAtual.set(nova);
+            });
         }
     }
 
@@ -381,6 +394,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.fecharAdicionarMusica();
         this.salvarListaAtual(atualizada);
         this.cifraService.atualizarListasIds(selecionada.cifraId, lista.id, 'add').subscribe();
+        if (selecionada.cifra && lista.tipo === 'privada') {
+            this.cifraService.salvarCifraEmLista(lista.id, selecionada.cifra).subscribe();
+        }
     }
 
     removerMusica(musicaId: string) {
@@ -403,9 +419,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     private salvarListaAtual(lista: Lista) {
+        this.salvandoLista = true;
         this.listaService.salvarLista(lista).subscribe({
-            next: salva => this.listaAtual.set(salva),
-            error: (err: Error) => this.mostrarErroHome(err.message || 'Erro ao salvar lista.'),
+            next: salva => {
+                this.salvandoLista = false;
+                this.listaAtual.set(salva);
+            },
+            error: (err: Error) => {
+                this.salvandoLista = false;
+                this.mostrarErroHome(err.message || 'Erro ao salvar lista.');
+            },
         });
     }
 
@@ -450,12 +473,33 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
 
         this.cifrasCache.update(c => ({ ...c, [cifraId]: null }));
-        this.cifraService.getCifra(cifraId).subscribe(cifra => {
-            this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? null }));
-            if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
-        });
 
-        const listaId = this.listaAtual()?.id;
+        const lista = this.listaAtual();
+        const listaId = lista?.id;
+
+        const carregarPrincipal = () => {
+            this.cifraService.getCifra(cifraId).subscribe(cifra => {
+                this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra ?? false }));
+                if (cifra && listaId && lista?.tipo === 'privada') {
+                    this.cifraService.salvarCifraEmLista(listaId, cifra).subscribe();
+                }
+                if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
+            });
+        };
+
+        if (listaId && lista?.tipo === 'privada') {
+            this.cifraService.getCifraEmLista(listaId, cifraId).subscribe(cifra => {
+                if (cifra) {
+                    this.cifrasCache.update(c => ({ ...c, [cifraId]: cifra }));
+                    if (onCarregado) requestAnimationFrame(() => requestAnimationFrame(onCarregado));
+                } else {
+                    carregarPrincipal();
+                }
+            });
+        } else {
+            carregarPrincipal();
+        }
+
         if (listaId) {
             const cacheKey = `${listaId}_${cifraId}`;
             if (!(cacheKey in this.customCache())) {
@@ -478,7 +522,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     getCifraDoCache(cifraId: string): Cifra | null {
-        return this.cifrasCache()[cifraId] ?? null;
+        const val = this.cifrasCache()[cifraId];
+        return val != null && val !== false ? val as Cifra : null;
     }
 
     private carregarMelhorCustom(listaId: string, cifraId: string) {
@@ -507,7 +552,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     getCifraEfetiva(cifraId: string): Cifra | null {
-        const cifra = this.cifrasCache()[cifraId] ?? null;
+        const val = this.cifrasCache()[cifraId];
+        const cifra = (val != null && val !== false) ? val as Cifra : null;
         if (!cifra) return null;
         const listaId = this.listaAtual()?.id;
         const custom = listaId ? this.customCache()[`${listaId}_${cifraId}`] : null;

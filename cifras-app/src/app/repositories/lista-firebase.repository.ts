@@ -9,6 +9,7 @@ import {
   getDocs,
   deleteDoc,
   updateDoc,
+  onSnapshot,
   arrayUnion,
   arrayRemove,
   collection,
@@ -74,9 +75,17 @@ export class ListaFirebaseRepository extends ListaRepository {
     if (lista.id) {
       const listaRef = doc(this.firestore, `listas/${lista.id}`);
       const now = new Date().toISOString();
-      const data = this.omitirUndefined({ ...lista, atualizadaEm: now });
-      return from(setDoc(listaRef, data)).pipe(
-        map(() => data),
+      // Exclui campos de membership gerenciados por operações dedicadas.
+      // Usar updateDoc evita sobrescrever participantesUids/participantes
+      // que podem ter sido atualizados por outro usuário (ex: join via token).
+      const {
+        participantes: _p, participantesUids: _pu, controladoresUids: _cu,
+        donoUid: _du, donoNome: _dn, criadaEm: _ce, id: _id,
+        ...campos
+      } = lista;
+      const data = this.omitirUndefined({ ...campos, atualizadaEm: now });
+      return from(updateDoc(listaRef, data)).pipe(
+        map(() => ({ ...lista, atualizadaEm: now })),
         catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar lista'))),
       );
     }
@@ -89,6 +98,18 @@ export class ListaFirebaseRepository extends ListaRepository {
       map(ref => ({ ...data, id: ref.id } as Lista)),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao criar lista'))),
     );
+  }
+
+  override escutarLista(id: string): Observable<Lista | undefined> {
+    const listaRef = doc(this.firestore, `listas/${id}`);
+    return new Observable(subscriber => {
+      const unsub = onSnapshot(
+        listaRef,
+        snap => subscriber.next(snap.exists() ? { ...snap.data(), id: snap.id } as Lista : undefined),
+        err => subscriber.error(err),
+      );
+      return () => unsub();
+    });
   }
 
   private omitirUndefined<T extends object>(obj: T): T {

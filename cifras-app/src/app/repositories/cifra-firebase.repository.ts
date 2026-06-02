@@ -138,6 +138,24 @@ export class CifraFirebaseRepository extends CifraRepository {
     return this.getCifrasDoUser(uid).pipe(map(list => list.length));
   }
 
+  // ── Cifra local da lista (cópia para acesso de participantes) ────
+
+  override salvarCifraEmLista(listaId: string, cifra: Cifra): Observable<void> {
+    const ref = doc(this.firestore, `listas/${listaId}/cifras/${cifra.id}`);
+    return from(setDoc(ref, cifra)).pipe(
+      map(() => undefined),
+      catchError(() => of(undefined)),
+    );
+  }
+
+  override getCifraEmLista(listaId: string, cifraId: string): Observable<Cifra | undefined> {
+    const ref = doc(this.firestore, `listas/${listaId}/cifras/${cifraId}`);
+    return from(getDoc(ref)).pipe(
+      map(snap => snap.exists() ? { ...snap.data(), id: snap.id } as Cifra : undefined),
+      catchError(() => of(undefined)),
+    );
+  }
+
   // ── Controle de visibilidade via listas ─────────────────────────
 
   override atualizarListasIds(cifraId: string, listaId: string, operacao: 'add' | 'remove'): Observable<void> {

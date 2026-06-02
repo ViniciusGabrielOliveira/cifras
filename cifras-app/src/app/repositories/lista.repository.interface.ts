@@ -6,6 +6,7 @@ export abstract class ListaRepository {
     abstract getListasDodia(data: string): Observable<ListasDoDiaResponse>;
     abstract getListasPorCategoria(cat: CategoriaLiturgica): Observable<Lista[]>;
     abstract getLista(id: string): Observable<Lista | undefined>;
+    abstract escutarLista(id: string): Observable<Lista | undefined>;
     abstract salvarLista(lista: Lista): Observable<Lista>;
     abstract excluirLista(id: string): Observable<void>;
     // Listas privadas do usuário

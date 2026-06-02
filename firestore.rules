@@ -187,6 +187,26 @@ service cloud.firestore {
           && isListaOwner(resource.data));
     }
 
+    // ── Cifras locais da lista (cópia para acesso de participantes) ──
+    match /listas/{listaId}/cifras/{docId} {
+      allow read: if isAdmin()
+        || (isAuthenticated() && isNotBlocked()
+          && (
+            get(/databases/$(database)/documents/listas/$(listaId)).data.donoUid == request.auth.uid
+            || get(/databases/$(database)/documents/listas/$(listaId)).data.get('participantesUids', []).hasAny([request.auth.uid])
+            || get(/databases/$(database)/documents/listas/$(listaId)).data.get('tokenConvite', null) != null
+          )
+        );
+
+      allow write: if isAdmin()
+        || (isAuthenticated() && isNotBlocked()
+          && (
+            get(/databases/$(database)/documents/listas/$(listaId)).data.donoUid == request.auth.uid
+            || isListaEditor(get(/databases/$(database)/documents/listas/$(listaId)).data)
+          )
+        );
+    }
+
     // ── Live state (subcoleção de listas) ────────────────────────────
     match /listas/{listaId}/live/{docId} {
       allow read: if isAuthenticated()
