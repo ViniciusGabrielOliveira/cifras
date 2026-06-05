@@ -33,7 +33,7 @@ jobs:
         run: npm install
         working-directory: cifras-app
 
-      - name: Generate environment.prod.ts
+      - name: Generate environment files
         run: |
           cat > src/environments/environment.prod.ts << 'EOF'
           export const environment = {
@@ -51,6 +51,9 @@ jobs:
             },
           };
           EOF
+          # Stub necessário para TypeScript resolver o import durante a compilação.
+          # O fileReplacements do angular.json substitui este arquivo pelo .prod.ts no build.
+          cp src/environments/environment.prod.ts src/environments/environment.ts
         working-directory: cifras-app
 
       - name: Build
