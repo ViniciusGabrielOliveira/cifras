@@ -1,8 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, switchMap, tap, of } from 'rxjs';
+import { Observable, switchMap, tap } from 'rxjs';
 import { Cifra, CifraPR, CifraCustom, CifraVersao, MotivoVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from '../repositories/cifra.repository.interface';
-import { CifraFirebaseRepository } from '../repositories/cifra-firebase.repository';
 import { AcordesService } from './acordes.service';
 
 /**
@@ -185,17 +184,11 @@ export class CifraService {
   }
 
   reindexarIndice(): Observable<{ total: number; atualizadas: number }> {
-    if (this.repo instanceof CifraFirebaseRepository) {
-      return this.repo.reindexarIndice();
-    }
-    return of({ total: 0, atualizadas: 0 });
+    return this.repo.reindexarIndice();
   }
 
   private salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
-    if (this.repo instanceof CifraFirebaseRepository) {
-      return this.repo.salvarVersaoArquivada(cifraId, versao);
-    }
-    return of(undefined);
+    return this.repo.salvarVersaoArquivada(cifraId, versao);
   }
 
   private gerarSlug(titulo: string, artista: string): string {

@@ -203,7 +203,10 @@ export class CifraMockRepository extends CifraRepository {
     }
 
     override getVersoes(_cifraId: string): Observable<CifraVersao[]> { return of([]); }
+    override salvarVersaoArquivada(_cifraId: string, _versao: Omit<CifraVersao, 'id'>): Observable<void> { return of(undefined); }
 
     override salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom> { return of(custom); }
     override getCifraCustom(_uid: string, _cifraId: string): Observable<CifraCustom | undefined> { return of(undefined); }
+
+    override reindexarIndice(): Observable<{ total: number; atualizadas: number }> { return of({ total: 0, atualizadas: 0 }); }
 }

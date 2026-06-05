@@ -1,4 +1,5 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
@@ -44,6 +45,7 @@ export class PainelComponent implements OnInit {
   readonly config = inject(ConfigService);
   private cifraService = inject(CifraService);
   private buscaService = inject(CifraBuscaService);
+  private destroyRef = inject(DestroyRef);
 
   get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
   get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
@@ -151,18 +153,24 @@ export class PainelComponent implements OnInit {
   carregarListas() {
     const uid = this.auth.user()?.uid;
     if (this.auth.isAdmin()) {
-      this.listaService.getListas().subscribe(ls => {
-        this.listas.set(ls);
-        this.carregando.set(false);
-      });
+      this.listaService.getListas()
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(ls => {
+          this.listas.set(ls);
+          this.carregando.set(false);
+        });
     } else if (uid) {
-      this.listaService.getTodasMinhasListas(uid).subscribe(ls => {
-        this.listas.set(ls);
-        this.carregando.set(false);
-      });
-      this.cifraService.countCifrasDoUser(uid).subscribe(count => {
-        this.totalMusicasCustom.set(count);
-      });
+      this.listaService.getTodasMinhasListas(uid)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(ls => {
+          this.listas.set(ls);
+          this.carregando.set(false);
+        });
+      this.cifraService.countCifrasDoUser(uid)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(count => {
+          this.totalMusicasCustom.set(count);
+        });
     }
   }
 
@@ -204,7 +212,8 @@ export class PainelComponent implements OnInit {
   criarLista() {
     const titulo = this.novaListaTitulo().trim();
     if (!titulo) return;
-    const uid = this.auth.user()?.uid!;
+    const uid = this.auth.user()?.uid;
+    if (!uid) return;
     const token = newId('tok');
     const lista: Lista = {
       id: '',
@@ -235,11 +244,7 @@ export class PainelComponent implements OnInit {
   }
 
   editarLista(lista: Lista) {
-    if (this.auth.isAdmin()) {
-      this.router.navigate(['/admin/lista', lista.id]);
-    } else {
-      this.router.navigate(['/minha-area/lista', lista.id]);
-    }
+    this.router.navigate(['/'], { queryParams: { listaId: lista.id } });
   }
 
   confirmarExcluir(id: string) { this.confirmando.set(id); }
@@ -340,9 +345,11 @@ export class PainelComponent implements OnInit {
   abrirGerenciarCifras() {
     this.filtroCifras.set('');
     this.confirmandoRemocao.set(null);
-    this.cifraService.getIndice().subscribe(items => {
-      this.todasCifras.set(items.slice().sort((a, b) => (a.titulo ?? '').localeCompare(b.titulo ?? '')));
-    });
+    this.cifraService.getIndice()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(items => {
+        this.todasCifras.set(items.slice().sort((a, b) => (a.titulo ?? '').localeCompare(b.titulo ?? '')));
+      });
     this.vista.set('gerenciar-cifras');
   }
 

@@ -37,7 +37,10 @@ export abstract class CifraRepository {
   abstract resolverPR(prId: string, status: 'aprovado' | 'rejeitado', reviewerUid: string, nota?: string): Observable<void>;
   // Versões aprovadas
   abstract getVersoes(cifraId: string): Observable<CifraVersao[]>;
+  abstract salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void>;
   // Versões customizadas do usuário
   abstract salvarCifraCustom(custom: CifraCustom): Observable<CifraCustom>;
   abstract getCifraCustom(uid: string, cifraId: string): Observable<CifraCustom | undefined>;
+  // Administração
+  abstract reindexarIndice(): Observable<{ total: number; atualizadas: number }>;
 }

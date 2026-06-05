@@ -1,4 +1,5 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -38,6 +39,7 @@ export class CifraEditorComponent implements OnInit {
   private config       = inject(ConfigService);
   private auth         = inject(AuthService);
   private cifraClub    = inject(CifraClubImportService);
+  private destroyRef   = inject(DestroyRef);
 
   // ─── Modo ────────────────────────────────────────────────────────────────────
 
@@ -96,15 +98,17 @@ export class CifraEditorComponent implements OnInit {
     if (id) {
       // Modo editar: carrega do servidor
       this.loading.set(true);
-      this.cifraService.getCifra(id).subscribe(c => {
-        if (c) {
-          this.cifra.set(JSON.parse(JSON.stringify(c)));
-        } else {
-          this.notFound.set(true);
-          setTimeout(() => this.voltar(), 3000);
-        }
-        this.loading.set(false);
-      });
+      this.cifraService.getCifra(id)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(c => {
+          if (c) {
+            this.cifra.set(JSON.parse(JSON.stringify(c)));
+          } else {
+            this.notFound.set(true);
+            setTimeout(() => this.voltar(), 3000);
+          }
+          this.loading.set(false);
+        });
     } else {
       // Modo criar: verifica import pendente do CifraClub
       const pending = this.cifraClub.pendingImport;
@@ -318,7 +322,9 @@ export class CifraEditorComponent implements OnInit {
 
       if (c.status !== 'privada' || c.donoUid !== uid) {
         // Editando cifra de outro: cria cópia privada (comportamento legado)
-        this.cifraService.countCifrasDoUser(uid).subscribe(count => {
+        this.cifraService.countCifrasDoUser(uid)
+          .pipe(takeUntilDestroyed(this.destroyRef))
+          .subscribe(count => {
           if (count >= 25) {
             this.erroSalvar.set('Limite de 25 músicas editadas atingido. Remova uma antes de editar outra.');
             setTimeout(() => this.erroSalvar.set(null), 5000);

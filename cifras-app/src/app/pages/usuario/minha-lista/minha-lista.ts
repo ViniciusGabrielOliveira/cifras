@@ -1,4 +1,5 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -32,6 +33,7 @@ export class MinhaListaComponent implements OnInit {
     readonly auth = inject(AuthService);
     private config = inject(ConfigService);
     private cifraClub = inject(CifraClubImportService);
+    private destroyRef = inject(DestroyRef);
 
     get PARTES_LABELS() { return this.config.partesLabels(); }
     get PARTES_ORDER() { return this.config.partesIds(); }
@@ -136,10 +138,12 @@ export class MinhaListaComponent implements OnInit {
         }
 
         // Carregar cifras existentes para badge "cifra removida"
-        this.cifraService.getIndice().subscribe(items => {
-            this.cifrasExistentes.set(new Set(items.map(i => i.id)));
-            this.cifrasAutorMap.set(new Map(items.map(i => [i.id, i.autor])));
-        });
+        this.cifraService.getIndice()
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(items => {
+                this.cifrasExistentes.set(new Set(items.map(i => i.id)));
+                this.cifrasAutorMap.set(new Map(items.map(i => [i.id, i.autor])));
+            });
 
         const replaceCifraId = this.route.snapshot.queryParamMap.get('replaceCifraId');
         const newCifraId     = this.route.snapshot.queryParamMap.get('newCifraId');

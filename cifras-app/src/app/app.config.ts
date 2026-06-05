@@ -1,8 +1,11 @@
 import { ApplicationConfig, LOCALE_ID, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localePtBR from '@angular/common/locales/pt';
 
 import { provideFirebase } from './firebase.providers';
+import { environment } from '../environments/environment';
 
 import { routes } from './app.routes';
 import { CifraRepository } from './repositories/cifra.repository.interface';
@@ -16,15 +19,7 @@ import { AuthFirebaseRepository } from './repositories/auth-firebase.repository'
 import { ConfigRepository } from './repositories/config.repository.interface';
 import { ConfigFirebaseRepository } from './repositories/config-firebase.repository';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDihm0_8iGOEY7QL0V145K-U1eOU-6XXcE',
-  authDomain: 'cifras-9c3b7.firebaseapp.com',
-  projectId: 'cifras-9c3b7',
-  storageBucket: 'cifras-9c3b7.firebasestorage.app',
-  messagingSenderId: '91417786166',
-  appId: '1:91417786166:web:87722215ac7f5e8506e597',
-  measurementId: 'G-RL1TFP1R06',
-};
+registerLocaleData(localePtBR);
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -37,7 +32,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
 
     // ── Firebase ────────────────────────────────────────────────────
-    provideFirebase(firebaseConfig),
+    provideFirebase(environment.firebaseConfig),
 
     // ── Repositories ───────────────────────────────────────────────
     { provide: CifraRepository, useClass: CifraFirebaseRepository },

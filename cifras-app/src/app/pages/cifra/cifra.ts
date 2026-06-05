@@ -1,4 +1,5 @@
-import { Component, inject, signal, computed, OnInit } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CifraService } from '../../services/cifra.service';
@@ -18,6 +19,7 @@ export class CifraPageComponent implements OnInit {
   private route        = inject(ActivatedRoute);
   private router       = inject(Router);
   readonly auth        = inject(AuthService);
+  private destroyRef   = inject(DestroyRef);
 
   cifra        = signal<Cifra | null>(null);
   cifraCustom  = signal<CifraCustom | null>(null);
@@ -36,19 +38,25 @@ export class CifraPageComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) { this.router.navigate(['/']); return; }
 
-    this.cifraService.getCifra(id).subscribe(c => {
-      this.cifra.set(c ?? null);
-      this.erro.set(!c);
-      this.loading.set(false);
-    });
+    this.cifraService.getCifra(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(c => {
+        this.cifra.set(c ?? null);
+        this.erro.set(!c);
+        this.loading.set(false);
+      });
 
-    this.cifraService.getVersoes(id).subscribe(v => this.versoes.set(v));
+    this.cifraService.getVersoes(id)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(v => this.versoes.set(v));
 
     const uid = this.auth.user()?.uid;
     if (uid) {
-      this.cifraService.getCifraCustom(uid, id).subscribe(custom => {
-        this.cifraCustom.set(custom ?? null);
-      });
+      this.cifraService.getCifraCustom(uid, id)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe(custom => {
+          this.cifraCustom.set(custom ?? null);
+        });
     }
   }
 

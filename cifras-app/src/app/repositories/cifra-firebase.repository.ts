@@ -182,13 +182,9 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   override criarPR(pr: Omit<CifraPR, 'id'>): Observable<CifraPR> {
     const col = collection(this.firestore, 'cifras_pr');
-    console.log('[criarPR] dados enviados:', JSON.parse(JSON.stringify(pr, (_, v) => v === undefined ? '__UNDEFINED__' : v)));
     return from(addDoc(col, pr)).pipe(
       map(ref => ({ ...pr, id: ref.id })),
-      catchError(err => {
-        console.error('[criarPR] erro raw:', err, 'code:', (err as any)?.code, 'message:', (err as any)?.message);
-        return throwError(() => this.tratarErro(err, 'Erro ao criar solicitação'));
-      }),
+      catchError(err => throwError(() => this.tratarErro(err, 'Erro ao criar solicitação'))),
     );
   }
 
@@ -258,7 +254,7 @@ export class CifraFirebaseRepository extends CifraRepository {
     );
   }
 
-  salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
+  override salvarVersaoArquivada(cifraId: string, versao: Omit<CifraVersao, 'id'>): Observable<void> {
     const col = collection(this.firestore, `cifras/${cifraId}/versoes`);
     return from(addDoc(col, versao)).pipe(
       map(() => undefined),
@@ -268,7 +264,7 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   // Reconstrói cifras_indice com categorias e partesMissa de todas as cifras públicas.
   // Usa writeBatch em lotes de 500 (limite do Firestore).
-  reindexarIndice(): Observable<{ total: number; atualizadas: number }> {
+  override reindexarIndice(): Observable<{ total: number; atualizadas: number }> {
     return from(getDocs(collection(this.firestore, 'cifras'))).pipe(
       switchMap(async snap => {
         const publicas = snap.docs
