@@ -1,5 +1,6 @@
-@if (notificacao()) { <div class="toast toast--ok">{{ notificacao() }}</div> }
-@if (erroMsg())     { <div class="toast toast--erro">{{ erroMsg() }}</div> }
+@if (notif.notificacao(); as n) {
+  <div [class]="'toast ' + (n.erro ? 'toast--erro' : 'toast--ok')">{{ n.msg }}</div>
+}
 
 <!-- ── Header ───────────────────────────────────────────────────── -->
 <header class="admin-header">

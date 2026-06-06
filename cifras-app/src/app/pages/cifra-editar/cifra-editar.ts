@@ -1,5 +1,4 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { CifraService } from '../../services/cifra.service';
@@ -7,11 +6,12 @@ import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraCustom } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
 import { parseCifraTexto, cifraToTexto } from '../../core/cifra-parser';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-cifra-editar',
   standalone: true,
-  imports: [CommonModule, SecaoCifraComponent],
+  imports: [SecaoCifraComponent],
   templateUrl: './cifra-editar.html',
   styleUrl: './cifra-editar.scss',
 })
@@ -20,6 +20,7 @@ export class CifraEditarComponent implements OnInit {
   readonly auth        = inject(AuthService);
   private route        = inject(ActivatedRoute);
   private router       = inject(Router);
+  readonly notif       = inject(NotificationService);
 
   cifra             = signal<Cifra | null>(null);
   cifraCustomBase   = signal<CifraCustom | null>(null);
@@ -29,7 +30,6 @@ export class CifraEditarComponent implements OnInit {
   modoPreview = signal(false);
   salvando    = signal(false);
   prEnviado   = signal(false);
-  erroSalvar  = signal('');
 
   secoesPreview = computed(() => parseCifraTexto(this.textoCifra()));
 
@@ -108,7 +108,6 @@ export class CifraEditarComponent implements OnInit {
     };
 
     this.salvando.set(true);
-    this.erroSalvar.set('');
 
     this.cifraService.salvarCifraCustom(custom).pipe(
       switchMap(() => this.cifraService.submeterPR(
@@ -126,7 +125,7 @@ export class CifraEditarComponent implements OnInit {
       error: (err) => {
         console.error('[cifra-editar] erro ao salvar:', err);
         this.salvando.set(false);
-        this.erroSalvar.set('Erro ao salvar. Tente novamente.');
+        this.notif.mostrarErro('Erro ao salvar. Tente novamente.');
       },
     });
   }

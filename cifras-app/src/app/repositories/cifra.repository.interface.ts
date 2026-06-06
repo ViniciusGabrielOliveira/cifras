@@ -16,6 +16,7 @@ export abstract class CifraRepository {
   abstract deleteCifra(id: string): Observable<void>;
   abstract getAllCifras(): Observable<Cifra[]>;
   abstract getIndice(): Observable<CifraIndiceItem[]>;
+  abstract getIndiceUmaVez(): Observable<CifraIndiceItem[]>;
   abstract getCifrasPorCategoria(categoria: string): Observable<Cifra[]>;
   abstract getCifrasPorParte(parte: string): Observable<Cifra[]>;
   abstract getCifrasPorParteOrdenadas(parte: string): Observable<Cifra[]>;

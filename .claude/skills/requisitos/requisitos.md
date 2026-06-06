@@ -82,6 +82,11 @@
 
 - **R53** — A página de detalhe da cifra exibe um player embutido do YouTube quando o campo `videoLink` estiver preenchido; o player usa `<iframe>` com `allow="autoplay"` e é responsivo (largura 100%, aspect-ratio 16/9); o vídeo não inicia automaticamente
 
+## Arquitetura de Componentes
+
+- **R54** — Componentes de página complexos (`HomeComponent`, `CifraEditorComponent`, `MinhaListaComponent`) são decompostos em componentes filhos focados; cada filho recebe dados via `@Input` e emite eventos via `@Output`, sem injetar repositórios diretamente (ver R39)
+- **R55** — O componente `app-toggle` (`components/toggle`) é o padrão para toggles; usa `[class.checked]` no track em vez do seletor CSS `input:checked +` (que quebra com property binding do Angular); aceita inputs `checked`, `label`, `title` e `color` (CSS custom property `--toggle-color`)
+
 ## Segurança e Boas Práticas
 
 - **R43** — Lista pode ter campo `partes?: string[]` que define a ordem e seleção das partes da missa para aquela lista; se ausente, usa a ordem global do `ConfigService`; editor ou dono pode adicionar (a partir das partes do config global), remover (apenas partes sem música) e reordenar partes via drag-and-drop na tela `minha-lista`
@@ -89,3 +94,4 @@
 - **R40** — `environment.prod.ts` nunca deve ser commitado (contém API key)
 - **R41** — `service-account.json` e `*-firebase-adminsdk-*.json` estão no `.gitignore` e nunca devem ser commitados
 - **R42** — Nunca rodar `npm run build`, `ng build` ou `npm test` automaticamente — deixar para o usuário executar
+- **R56** — O projeto usa `@angular-eslint/schematics` (v21) com regras adicionais: `no-console` (warn, permite warn/error), `@typescript-eslint/no-explicit-any` (warn), e `no-restricted-syntax` para detectar `instanceof` em repositórios

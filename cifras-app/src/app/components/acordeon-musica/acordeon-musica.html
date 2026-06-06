@@ -1,0 +1,86 @@
+<div class="musicas-lista" role="tabpanel">
+    @for (musica of musicas(); track musica.id; let idx = $index) {
+    <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id" [attr.data-musica-id]="musica.id">
+
+        <div class="musica-header-row">
+            <button class="musica-header" (click)="toggleMusicaFromBtn(musica, $any($event.currentTarget))"
+                [attr.aria-expanded]="acordeonAberto() === musica.id">
+                <span class="musica-index">{{ idx + 1 }}</span>
+                <div class="musica-info">
+                    <span class="musica-nome">{{ musica.nome }}</span>
+                    <span class="musica-autor">{{ musica.autor }}</span>
+                </div>
+                @if (modoLiveAtivo() && liveEstado()?.musicaAbertaId === musica.id) {
+                <span class="musica-live-badge"><span class="live-dot"></span>ao vivo</span>
+                }
+                <svg class="musica-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </button>
+            @if (canEdit()) {
+            @if (confirmandoRemoverMusica() === musica.id) {
+            <div class="musica-remover-confirm">
+                <button class="btn-remover-sim" (click)="onRemoverMusica(musica.id)">Remover</button>
+                <button class="btn-remover-nao" (click)="confirmandoRemoverMusica.set(null)">✕</button>
+            </div>
+            } @else {
+            <button class="btn-remover-musica" (click)="confirmandoRemoverMusica.set(musica.id)" title="Remover música">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                    <path d="M10 11v6M14 11v6"/>
+                    <path d="M9 6V4h6v2"/>
+                </svg>
+            </button>
+            }
+            }
+        </div>
+
+        @if (acordeonAberto() === musica.id) {
+        <div class="musica-corpo">
+
+            @if (canEdit()) {
+            <div class="musica-meta-edit">
+                <div class="meta-field meta-field--obs">
+                    <label class="meta-label">Observação
+                      <input class="meta-input" type="text"
+                        placeholder="ex: capotraste na 1ª casa..."
+                        [value]="musica.observacao ?? ''"
+                        (input)="onObservacaoAlterada(musica.id, $any($event.target).value)" />
+                    </label>
+                </div>
+            </div>
+            }
+
+            @if (isCarregandoCifra(musica.cifraId)) {
+            <div class="cifra-loading">
+                <div class="spinner"></div>
+                <span>Carregando cifra...</span>
+            </div>
+            } @else if (getCifraEfetiva(musica.cifraId); as cifra) {
+            <app-cifra-viewer [cifra]="cifra" [versoes]="getVersoes(musica.cifraId)"
+                [observacao]="canEdit() ? undefined : musica.observacao"
+                [mostrarEditar]="auth.isLogado()"
+                [tomSalvo]="musica.tom"
+                (tomAlterado)="onTomAlterado(musica.id, $event)" />
+            } @else {
+            <div class="cifra-nao-encontrada">
+                Cifra não encontrada para "{{ musica.nome }}"
+            </div>
+            }
+        </div>
+        }
+    </div>
+    }
+
+    @if (canEdit()) {
+    <button class="musica-add-card" (click)="adicionarMusicaClick.emit()">
+        <span class="musica-add-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+        </span>
+        <span>Adicionar música</span>
+    </button>
+    }
+</div>

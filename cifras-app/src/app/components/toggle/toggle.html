@@ -1,0 +1,9 @@
+<label class="toggle-switch" [title]="title()">
+    <input type="checkbox" [checked]="checked()" (change)="changed.emit()">
+    <span class="toggle-track" [class.checked]="checked()" [style.--toggle-color]="color() || null">
+        <span class="toggle-thumb"></span>
+    </span>
+    @if (label()) {
+        <span class="toggle-label">{{ label() }}</span>
+    }
+</label>

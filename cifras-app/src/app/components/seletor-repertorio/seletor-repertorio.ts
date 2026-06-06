@@ -98,7 +98,7 @@ export class SeletorRepertorioComponent implements OnInit {
         const titulo = this.novoTitulo().trim();
         if (!titulo || this.salvando()) return;
 
-        const uid = this.auth.user()?.uid!;
+        const uid = this.auth.user()!.uid;
         const agora = new Date().toISOString();
         const lista: Lista = {
             id: '',

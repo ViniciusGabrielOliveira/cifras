@@ -1,0 +1,55 @@
+<div class="lista-metadados">
+  <div class="metadados-row">
+
+    <div class="form-group-meta titulo-field">
+      <label class="meta-label">Título
+        <input class="meta-input meta-input-titulo" type="text" [value]="lista.titulo" (blur)="onTituloBlur($event)"
+          placeholder="Título da lista" />
+      </label>
+    </div>
+
+    @if (isAdmin) {
+    <div class="form-group-meta">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label class="meta-label">Quando aparece</label>
+      <div class="tipo-toggle">
+        <button class="tipo-btn" [class.ativo]="!lista.todosDias" (click)="onTodosDiasChange(false)">Intervalo</button>
+        <button class="tipo-btn" [class.ativo]="lista.todosDias" (click)="onTodosDiasChange(true)">Todos os dias</button>
+      </div>
+    </div>
+
+    @if (!lista.todosDias) {
+    <div class="form-group-meta">
+      <label class="meta-label">De
+        <input class="meta-input" type="date" [value]="lista.dataInicio ?? ''" (change)="onDataInicioChange($event)" />
+      </label>
+    </div>
+    <div class="form-group-meta">
+      <label class="meta-label">Até
+        <input class="meta-input" type="date" [value]="lista.dataFim ?? ''" (change)="onDataFimChange($event)" />
+      </label>
+    </div>
+    }
+
+    <div class="meta-group-inline">
+      <div class="form-group-meta cat-field">
+        <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+        <label class="meta-label">Categoria</label>
+        <app-select [options]="categoriasOptions()" [value]="lista.categoria ?? ''"
+          (valueChange)="onCategoriaChange($event)" />
+      </div>
+      <div class="form-group-meta">
+        <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+        <label class="meta-label">Tipo</label>
+        <div class="tipo-toggle">
+          <button class="tipo-btn" [class.ativo]="lista.tipo !== 'publica'"
+            (click)="onTipoChange('privada')">Privada</button>
+          <button class="tipo-btn" [class.ativo]="lista.tipo === 'publica'"
+            (click)="onTipoChange('publica')">Pública</button>
+        </div>
+      </div>
+    </div>
+    }
+
+  </div>
+</div>

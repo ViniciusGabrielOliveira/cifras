@@ -58,8 +58,8 @@
         <button class="btn-voltar-cifra" (click)="voltar()">Ver cifra</button>
       </div>
     }
-    @if (erroSalvar()) {
-      <div class="erro-banner">{{ erroSalvar() }}</div>
+    @if (notif.notificacao(); as n) {
+      <div class="erro-banner">{{ n.msg }}</div>
     }
 
     <!-- ── Editor / Prévia ────────────────────────────────────────── -->

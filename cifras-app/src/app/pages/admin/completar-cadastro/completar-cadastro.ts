@@ -1,5 +1,4 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
@@ -7,7 +6,7 @@ import { AuthService } from '../../../services/auth.service';
 @Component({
     selector: 'app-completar-cadastro',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [FormsModule],
     templateUrl: './completar-cadastro.html',
     styleUrl: '../login/login.scss',
 })

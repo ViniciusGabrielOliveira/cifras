@@ -1,15 +1,15 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Cifra } from '../../../models/cifra.model';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
     selector: 'app-cifras-privadas',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink],
+    imports: [FormsModule, RouterLink],
     templateUrl: './cifras-privadas.html',
     styleUrl: './cifras-privadas.scss',
 })
@@ -17,14 +17,13 @@ export class CifrasPrivadasComponent implements OnInit {
     private cifraService = inject(CifraService);
     private router       = inject(Router);
     readonly auth        = inject(AuthService);
+    readonly notif       = inject(NotificationService);
 
     readonly cifras      = signal<Cifra[]>([]);
     readonly carregando  = signal(true);
     readonly busca       = signal('');
     readonly confirmando = signal<string | null>(null);
     readonly processando = signal<string | null>(null);
-    readonly notificacao = signal<string | null>(null);
-    readonly erroMsg     = signal<string | null>(null);
 
     readonly cifrasFiltradas = computed(() => {
         const q = this.busca().toLowerCase().trim();
@@ -91,13 +90,6 @@ export class CifrasPrivadasComponent implements OnInit {
         return uid ? uid.slice(-8) : '—';
     }
 
-    private mostrarOk(msg: string) {
-        this.notificacao.set(msg);
-        setTimeout(() => this.notificacao.set(null), 3000);
-    }
-
-    private mostrarErro(msg: string) {
-        this.erroMsg.set(msg);
-        setTimeout(() => this.erroMsg.set(null), 5000);
-    }
+    private mostrarOk(msg: string) { this.notif.mostrar(msg); }
+    private mostrarErro(msg: string) { this.notif.mostrarErro(msg); }
 }

@@ -1,14 +1,11 @@
-import { Component, Input, signal, computed, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, signal, computed } from '@angular/core';
 import { Cifra } from '../../models/cifra.model';
 import { transporCifra } from '../../core/transposicao';
-
-const NOTAS_DISPLAY = ['A', 'A#/Bb', 'B', 'C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab'];
 
 @Component({
   selector: 'app-controle-tom',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <div class="controle-tom">
       <span class="label-tom">Tom</span>

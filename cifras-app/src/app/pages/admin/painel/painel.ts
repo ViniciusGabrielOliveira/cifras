@@ -1,6 +1,5 @@
 import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Lista, MusicaLista, TipoLista } from '../../../models/lista.model';
@@ -13,27 +12,17 @@ import { CifraIndiceItem } from '../../../repositories/cifra.repository.interfac
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ConfigItem } from '../../../models/config.model';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
+import { slugify } from '../../../utils/string.utils';
+import { newId } from '../../../utils/id.utils';
+import { formatarDataCurta } from '../../../utils/date.utils';
+import { NotificationService } from '../../../services/notification.service';
 
 type VistaAdmin = 'dashboard' | 'configuracoes' | 'gerenciar-cifras';
-
-function slugify(text: string): string {
-  return text
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
-let _idCounter = Date.now();
-function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
 
 @Component({
   selector: 'app-painel',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, DragDropModule, AppSelectComponent],
+  imports: [FormsModule, RouterLink, DragDropModule, AppSelectComponent],
   templateUrl: './painel.html',
   styleUrl: './painel.scss',
 })
@@ -46,10 +35,9 @@ export class PainelComponent implements OnInit {
   private cifraService = inject(CifraService);
   private buscaService = inject(CifraBuscaService);
   private destroyRef = inject(DestroyRef);
+  readonly notif = inject(NotificationService);
 
-  get PARTES_MISSA_LABELS() { return this.config.partesLabels(); }
-  get CATEGORIAS_LABELS() { return this.config.categoriasLabels(); }
-  get categorias() { return this.config.categoriasIds(); }
+  readonly CATEGORIAS_LABELS = this.config.categoriasLabels;
   readonly categoriasOptions = computed(() =>
     this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
   );
@@ -67,8 +55,6 @@ export class PainelComponent implements OnInit {
   totalMusicasCustom = signal(0);
   readonly LIMITE_MUSICAS = 25;
   readonly podeAdicionarMusica = computed(() => this.totalMusicasCustom() < this.LIMITE_MUSICAS);
-
-  erroMsg = signal<string | null>(null);
 
   configCatsEdit = signal<ConfigItem[]>([]);
   configPartesEdit = signal<ConfigItem[]>([]);
@@ -95,8 +81,6 @@ export class PainelComponent implements OnInit {
       : this.listas();
   });
 
-  notificacao = signal<{ msg: string; erro?: boolean } | null>(null);
-
   ngOnInit() {
     this.carregarListas();
 
@@ -113,16 +97,16 @@ export class PainelComponent implements OnInit {
     }
 
     if (nomeCifra) {
-      this.notificacao.set({ msg: `✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!` });
-      setTimeout(() => this.notificacao.set(null), 4000);
+      this.notif.mostrar(`✓ Música "${nomeCifra}" ${edicaoCifra ? 'editada' : 'cadastrada'} com sucesso!`, 4000);
     }
 
     // Retorno de nova-cifra com rascunho de lista → adiciona música, salva e redireciona
-    if ((nomeCifra || restaurarRascunho) && this.listaService.listaDraft) {
-      const draft = this.listaService.listaDraft as Lista;
+    const draftState = this.listaService.getDraft();
+    if ((nomeCifra || restaurarRascunho) && draftState) {
+      let draft = draftState.lista;
 
       if (nomeCifra && cifraAdicionada && !edicaoCifra) {
-        const parte = (this.listaService.parteParaAdicionarDraft as string) || 'entrada';
+        const parte = draftState.parte || 'entrada';
         const novaMusica: MusicaLista = {
           id: newId('m'),
           cifraId: cifraAdicionada,
@@ -131,12 +115,10 @@ export class PainelComponent implements OnInit {
           parte,
           ordem: draft.musicas.filter(m => m.parte === parte).length,
         };
-        draft.musicas.push(novaMusica);
+        draft = { ...draft, musicas: [...draft.musicas, novaMusica] };
       }
 
-      this.listaService.listaDraft = null;
-      this.listaService.vistaDraft = null;
-      this.listaService.parteParaAdicionarDraft = null;
+      this.listaService.clearDraft();
 
       this.listaService.salvarLista(draft).subscribe({
         next: () => this.router.navigate(['/admin/lista', draft.id], { replaceUrl: true }),
@@ -193,10 +175,7 @@ export class PainelComponent implements OnInit {
       };
       this.listaService.salvarLista(nova).subscribe({
         next: lista => this.router.navigate(['/admin/lista', lista.id]),
-        error: () => {
-          this.notificacao.set({ msg: 'Erro ao criar lista. Tente novamente.', erro: true });
-          setTimeout(() => this.notificacao.set(null), 4000);
-        },
+        error: () => this.notif.mostrarErro('Erro ao criar lista. Tente novamente.', 4000),
       });
     } else {
       this.novaListaTitulo.set('');
@@ -238,7 +217,7 @@ export class PainelComponent implements OnInit {
       },
       error: (err: Error) => {
         this.salvandoLista.set(false);
-        this.mostrarErro(err.message || 'Erro ao criar lista.');
+        this.notif.mostrarErro(err.message || 'Erro ao criar lista.');
       },
     });
   }
@@ -255,11 +234,6 @@ export class PainelComponent implements OnInit {
       this.confirmando.set(null);
       this.listas.update(ls => ls.filter(l => l.id !== id));
     });
-  }
-
-  mostrarErro(msg: string) {
-    this.erroMsg.set(msg);
-    setTimeout(() => this.erroMsg.set(null), 5000);
   }
 
   // ── Configurações ─────────────────────────────────────────────────
@@ -317,8 +291,7 @@ export class PainelComponent implements OnInit {
       this.config.salvarPartesMissa(this.configPartesEdit()),
     ]);
     this.salvandoConfig.set(false);
-    this.notificacao.set({ msg: '✓ Configurações salvas!' });
-    setTimeout(() => this.notificacao.set(null), 3000);
+    this.notif.mostrar('✓ Configurações salvas!');
     this.vista.set('dashboard');
   }
 
@@ -329,13 +302,11 @@ export class PainelComponent implements OnInit {
       next: resultado => {
         this.resultadoReindex.set(resultado);
         this.reindexando.set(false);
-        this.notificacao.set({ msg: `✓ ${resultado.atualizadas} cifras reindexadas com sucesso!` });
-        setTimeout(() => this.notificacao.set(null), 4000);
+        this.notif.mostrar(`✓ ${resultado.atualizadas} cifras reindexadas com sucesso!`, 4000);
       },
       error: () => {
         this.reindexando.set(false);
-        this.notificacao.set({ msg: 'Erro ao reindexar cifras. Tente novamente.', erro: true });
-        setTimeout(() => this.notificacao.set(null), 4000);
+        this.notif.mostrarErro('Erro ao reindexar cifras. Tente novamente.', 4000);
       },
     });
   }
@@ -373,13 +344,7 @@ export class PainelComponent implements OnInit {
 
   // ── Utils ─────────────────────────────────────────────────────────
 
-  formatarData(iso?: string): string {
-    if (!iso) return '—';
-    const [y, m, d] = iso.split('-').map(Number);
-    return new Date(y, m - 1, d).toLocaleDateString('pt-BR', {
-      day: '2-digit', month: '2-digit', year: 'numeric',
-    });
-  }
+  readonly formatarData = formatarDataCurta;
 
   trackById(_: number, item: { id: string }) { return item.id; }
 }

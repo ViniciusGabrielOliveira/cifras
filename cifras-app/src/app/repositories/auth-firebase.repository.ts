@@ -27,10 +27,15 @@ import {
 } from 'firebase/firestore';
 import { AuthRepository } from './auth.repository.interface';
 import {
-  AppUser, AuthProvider as AppAuthProvider, ConviteGrupo, Grupo, GrupoMembro, UserRole,
+  AppUser, AuthProvider as AppAuthProvider, ConviteGrupo, Grupo, GrupoMembro, UserRole, ROLE_HIERARCHY,
 } from '../models/user.model';
 
 // ── Helpers ──────────────────────────────────────────────────────────
+
+function validarRole(raw: unknown): UserRole {
+  if (typeof raw === 'string' && raw in ROLE_HIERARCHY) return raw as UserRole;
+  return 'visitante';
+}
 
 function gerarCodigo(): string {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -142,7 +147,7 @@ export class AuthFirebaseRepository extends AuthRepository {
   getRole(uid: string): Observable<UserRole> {
     const userRef = doc(this.firestore, `users/${uid}`);
     return from(getDoc(userRef)).pipe(
-      map(snap => (snap.exists() ? (snap.data() as any).role ?? 'visitante' : 'visitante')),
+      map(snap => snap.exists() ? validarRole(snap.data()?.['role']) : 'visitante'),
       catchError(() => of('visitante' as UserRole)),
     );
   }
@@ -151,7 +156,10 @@ export class AuthFirebaseRepository extends AuthRepository {
     const userRef = doc(this.firestore, `users/${uid}`);
     return from(updateDoc(userRef, { ...dados, ultimoLogin: new Date().toISOString() })).pipe(
       switchMap(() => from(getDoc(userRef))),
-      map(snap => snap.data() as AppUser),
+      map(snap => {
+        const data = snap.data() as AppUser & { role: unknown };
+        return { ...data, role: validarRole(data.role) } as AppUser;
+      }),
     );
   }
 
@@ -194,14 +202,13 @@ export class AuthFirebaseRepository extends AuthRepository {
           role,
           entradaEm: new Date().toISOString(),
         };
-        grupo.membros.push(membro);
-        grupo.atualizadoEm = new Date().toISOString();
+        const membros = [...grupo.membros, membro];
+        const atualizadoEm = new Date().toISOString();
 
         const grupoRef = doc(this.firestore, `grupos/${grupoId}`);
-        return from(updateDoc(grupoRef, {
-          membros: grupo.membros,
-          atualizadoEm: grupo.atualizadoEm,
-        })).pipe(map(() => grupo));
+        return from(updateDoc(grupoRef, { membros, atualizadoEm })).pipe(
+          map(() => ({ ...grupo, membros, atualizadoEm }))
+        );
       }),
     );
   }
@@ -210,14 +217,13 @@ export class AuthFirebaseRepository extends AuthRepository {
     return this.getGrupo(grupoId).pipe(
       switchMap(grupo => {
         if (!grupo) return throwError(() => new Error('Grupo não encontrado'));
-        grupo.membros = grupo.membros.filter(m => m.uid !== uid);
-        grupo.atualizadoEm = new Date().toISOString();
+        const membros = grupo.membros.filter(m => m.uid !== uid);
+        const atualizadoEm = new Date().toISOString();
 
         const grupoRef = doc(this.firestore, `grupos/${grupoId}`);
-        return from(updateDoc(grupoRef, {
-          membros: grupo.membros,
-          atualizadoEm: grupo.atualizadoEm,
-        })).pipe(map(() => grupo));
+        return from(updateDoc(grupoRef, { membros, atualizadoEm })).pipe(
+          map(() => ({ ...grupo, membros, atualizadoEm }))
+        );
       }),
     );
   }
@@ -226,15 +232,14 @@ export class AuthFirebaseRepository extends AuthRepository {
     return this.getGrupo(grupoId).pipe(
       switchMap(grupo => {
         if (!grupo) return throwError(() => new Error('Grupo não encontrado'));
-        if (!grupo.listasCompartilhadas.includes(listaId)) {
-          grupo.listasCompartilhadas.push(listaId);
-          grupo.atualizadoEm = new Date().toISOString();
-        }
+        const listasCompartilhadas = grupo.listasCompartilhadas.includes(listaId)
+          ? grupo.listasCompartilhadas
+          : [...grupo.listasCompartilhadas, listaId];
+        const atualizadoEm = new Date().toISOString();
         const grupoRef = doc(this.firestore, `grupos/${grupoId}`);
-        return from(updateDoc(grupoRef, {
-          listasCompartilhadas: grupo.listasCompartilhadas,
-          atualizadoEm: grupo.atualizadoEm,
-        })).pipe(map(() => grupo));
+        return from(updateDoc(grupoRef, { listasCompartilhadas, atualizadoEm })).pipe(
+          map(() => ({ ...grupo, listasCompartilhadas, atualizadoEm }))
+        );
       }),
     );
   }
@@ -321,10 +326,9 @@ export class AuthFirebaseRepository extends AuthRepository {
     const snap = await getDoc(userRef);
 
     if (snap.exists()) {
-      const data = snap.data() as AppUser;
-      // Atualiza último login (fire-and-forget, não bloqueia)
+      const data = snap.data() as AppUser & { role: unknown };
       updateDoc(userRef, { ultimoLogin: new Date().toISOString() }).catch(() => {});
-      return { ...data, uid: fbUser.uid, ultimoLogin: new Date().toISOString() };
+      return { ...data, role: validarRole(data.role), uid: fbUser.uid, ultimoLogin: new Date().toISOString() };
     }
 
     // Primeiro login — cria documento

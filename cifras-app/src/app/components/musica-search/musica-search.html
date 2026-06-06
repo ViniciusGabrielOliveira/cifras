@@ -146,6 +146,7 @@
             [attr.aria-selected]="itemFocado() === idx"
             (mousedown)="selecionarItem(item)"
             (mouseover)="itemFocado.set(idx)"
+            (focus)="itemFocado.set(idx)"
           >
             <div class="item-main">
               <span class="item-titulo">{{ item.titulo }}</span>
@@ -204,8 +205,10 @@
           [class.focado]="itemFocado() === idx"
           [class.cc-item]="item.fromWeb"
           role="option"
+          [attr.aria-selected]="itemFocado() === idx"
           (mousedown)="selecionarItem(item)"
           (mouseover)="itemFocado.set(idx)"
+          (focus)="itemFocado.set(idx)"
         >
           <div class="item-main">
             <span class="item-titulo">{{ item.titulo }}</span>

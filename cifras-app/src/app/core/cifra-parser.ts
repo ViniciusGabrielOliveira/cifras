@@ -1,5 +1,6 @@
 import { Secao, LinhaCifra, AcordeLinha, TipoSecao } from '../models/cifra.model';
 import { REGEX_ACORDE } from './transposicao';
+export { slugify } from '../utils/string.utils';
 
 export const TONS = [
   'C',
@@ -29,21 +30,18 @@ export const TONS = [
   'Bm',
 ];
 
-export function slugify(titulo: string): string {
-  return titulo
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80);
-}
 
 function isTabLine(linha: string): boolean {
   return /^[EBGDAe]\|/.test(linha.trim());
 }
 
-const HAS_PARENS_ARROWS = /[()]|-+>|[→➜⟶🡪]/;
+const HAS_PARENS_ARROWS = /[()]|-+>|[→➜⟶🡪]/u;
+
+// Regex estrito para DETECTAR se um token é um acorde (não usado na transposição).
+// Segue a gramática: Raiz [qualidade] [extensão] [alterações]* [/baixo]
+// Rejeita palavras que começam com nota mas não são acordes (ex: "Alegria", "Banda").
+const REGEX_CHORD_DETECT =
+  /^[A-G][#b]?(?:m(?:aj\d*)?|min\d*|dim\d*|aug\d*|sus[24]?|add\d+|M|\+|°|ø)?(?:\d{1,2})?(?:(?:sus[24]?|add\d+|b\d+|#\d+))*(?:\/[A-G][#b]?)?$/;
 
 function extrairAcordesLinha(linha: string): string | null {
   // Remove parênteses (ex: "D9 ( D4 D )") e setas (ex: "(F7) -> Bb7") antes
@@ -52,11 +50,11 @@ function extrairAcordesLinha(linha: string): string | null {
   const substituida = linha
     .replace(/[()]/g, ' ')
     .replace(/-+>/g, m => ' '.repeat(m.length))
-    .replace(/[→➜⟶🡪]/g, ' ');
+    .replace(/[→➜⟶🡪]/gu, ' ');
   const normalizada = substituida.trim();
   if (!normalizada) return null;
   const tokens = normalizada.split(/\s+/).filter(t => t.length > 0);
-  if (tokens.length > 0 && tokens.every(t => REGEX_ACORDE.test(t))) return substituida;
+  if (tokens.length > 0 && tokens.every(t => REGEX_CHORD_DETECT.test(t))) return substituida;
   return null;
 }
 

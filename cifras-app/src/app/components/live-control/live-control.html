@@ -1,0 +1,28 @@
+@if (mostrar()) {
+<div class="live-bar">
+    @if (modoLiveAtivo()) {
+    <span class="live-indicator">
+        <span class="live-dot"></span>
+        @if (modoControladorAtivo()) { Controlando } @else { Ao vivo }
+    </span>
+    }
+    <div class="live-toggles">
+        <app-toggle
+            [checked]="modoLiveAtivo()"
+            label="Live"
+            title="Seguir o que o controlador está mostrando"
+            color="#ef4444"
+            (changed)="toggleLive()"
+        />
+        @if (isControlador()) {
+        <app-toggle
+            [checked]="modoControladorAtivo()"
+            label="Controlador"
+            title="Controlar o que os outros veem"
+            color="#ff6b35"
+            (changed)="toggleControlador()"
+        />
+        }
+    </div>
+</div>
+}

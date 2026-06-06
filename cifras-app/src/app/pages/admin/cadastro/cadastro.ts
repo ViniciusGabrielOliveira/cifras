@@ -1,5 +1,4 @@
 import { Component, signal, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
@@ -7,7 +6,7 @@ import { AuthService } from '../../../services/auth.service';
 @Component({
     selector: 'app-cadastro',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink],
+    imports: [FormsModule, RouterLink],
     templateUrl: './cadastro.html',
     styleUrl: './cadastro.scss',
 })

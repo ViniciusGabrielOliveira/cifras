@@ -1,4 +1,5 @@
 @if (aberto()) {
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
 <div class="drawer-overlay" (click)="fechar()"></div>
 <div class="drawer">
     <div class="drawer-header">
@@ -111,7 +112,6 @@
                 (ngModelChange)="novoTitulo.set($event)"
                 (keydown.enter)="confirmarNovoRepertorio()"
                 (keydown.escape)="cancelarNovoRepertorio()"
-                autofocus
             />
             <div class="novo-repertorio-acoes">
                 <button class="btn-novo-cancelar" (click)="cancelarNovoRepertorio()" [disabled]="salvando()">

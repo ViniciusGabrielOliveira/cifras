@@ -1,5 +1,5 @@
-import { Injectable, computed, signal } from '@angular/core';
-import { Observable, tap, map } from 'rxjs';
+import { Injectable, computed, signal, inject } from '@angular/core';
+import { Observable, tap } from 'rxjs';
 import { AuthRepository } from '../repositories/auth.repository.interface';
 import { AppUser, AuthProvider, AuthState, ConviteGrupo, Grupo, UserRole, ROLE_HIERARCHY } from '../models/user.model';
 
@@ -21,7 +21,9 @@ export class AuthService {
   readonly displayName = computed(() => this.state().user?.displayName ?? '');
   readonly photoURL = computed(() => this.state().user?.photoURL);
 
-  constructor(private repo: AuthRepository) {
+  private repo = inject(AuthRepository);
+
+  constructor() {
     this.inicializarAuthState();
   }
 

@@ -1,8 +1,5 @@
-@if (notificacao()) {
-  <div class="toast-ok">{{ notificacao() }}</div>
-}
-@if (erroMsg()) {
-  <div class="toast-erro">{{ erroMsg() }}</div>
+@if (notif.notificacao(); as n) {
+  <div [class]="n.erro ? 'toast-erro' : 'toast-ok'">{{ n.msg }}</div>
 }
 
 <div class="prs-page">
@@ -18,7 +15,7 @@
     } @else {
       <ul class="prs-items">
         @for (pr of prs(); track pr.id) {
-          <li class="prs-item" (click)="abrirPR(pr)">
+          <li class="prs-item" (click)="abrirPR(pr)" (keydown.enter)="abrirPR(pr)" tabindex="0" role="button">
             <div class="prs-item__badge prs-item__badge--{{ pr.tipo }}">
               {{ pr.tipo === 'nova_cifra' ? 'Nova' : 'Versão' }}
             </div>
@@ -76,13 +73,14 @@
       <!-- Ações -->
       <div class="pr-detalhe__acoes">
         <div class="pr-detalhe__nota">
-          <label>Nota (opcional):</label>
-          <input
-            type="text"
-            placeholder="Comentário ao autor..."
-            [value]="notaRejeicao()"
-            (input)="notaRejeicao.set($any($event.target).value)"
-          />
+          <label>Nota (opcional):
+            <input
+              type="text"
+              placeholder="Comentário ao autor..."
+              [value]="notaRejeicao()"
+              (input)="notaRejeicao.set($any($event.target).value)"
+            />
+          </label>
         </div>
         <div class="pr-detalhe__botoes">
           <button class="btn btn--danger" (click)="rejeitar()" [disabled]="resolvendo()">

@@ -1,0 +1,285 @@
+.musicas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.musica-card {
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+
+    &.expandida {
+        border-color: var(--color-acorde);
+        box-shadow: 0 0 0 1px var(--color-acorde), 0 8px 24px rgba(124, 106, 253, 0.15);
+    }
+}
+
+.musica-header-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.musica-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+    padding: 16px 18px;
+    background: var(--color-surface);
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+
+    &:hover { background: rgba(255, 255, 255, 0.04); }
+}
+
+.btn-remover-musica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    flex-shrink: 0;
+    border: none;
+    border-left: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        background: rgba(239, 68, 68, 0.08);
+        color: #ef4444;
+    }
+}
+
+.musica-remover-confirm {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--color-border);
+    background: rgba(239, 68, 68, 0.06);
+}
+
+.btn-remover-sim {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-remover-nao {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.musica-index {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-acorde-bg);
+    color: var(--color-acorde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.musica-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.musica-nome {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.musica-autor {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+.musica-chevron {
+    width: 18px;
+    height: 18px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+
+    .expandida & { transform: rotate(180deg); }
+}
+
+.musica-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #ef4444;
+    flex-shrink: 0;
+    padding: 2px 7px;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ef4444;
+    animation: livePulse 1.1s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.65); }
+}
+
+/* ── Corpo expandido ─────────────────────────────────────────────── */
+.musica-corpo {
+    border-top: 1px solid var(--color-border);
+    padding: 0;
+    animation: expandir 0.25s ease;
+}
+
+@keyframes expandir {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.musica-meta-edit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.02);
+    flex-wrap: wrap;
+}
+
+.meta-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &--obs { flex: 1; min-width: 200px; }
+}
+
+.meta-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.meta-input {
+    flex: 1;
+    padding: 4px 10px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    font-family: inherit;
+    transition: border-color 0.15s;
+
+    &::placeholder { color: var(--color-text-muted); }
+    &:focus        { outline: none; border-color: var(--color-acorde); }
+}
+
+/* ── Carregamento / not found ────────────────────────────────────── */
+.cifra-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 18px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.cifra-nao-encontrada {
+    padding: 20px 18px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Adicionar música ────────────────────────────────────────────── */
+.musica-add-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px dashed var(--color-border);
+    border-radius: 14px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+
+    &:hover {
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        background: var(--color-acorde-bg);
+        border-style: solid;
+
+        .musica-add-icon { color: var(--color-acorde); }
+    }
+}
+
+.musica-add-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px dashed currentColor;
+    flex-shrink: 0;
+}

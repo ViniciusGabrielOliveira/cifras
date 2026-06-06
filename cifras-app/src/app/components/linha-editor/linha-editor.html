@@ -60,11 +60,14 @@
             <div class="chars-row">
                 @for (char of letrasArr; track $index) {
                 <span class="char-pick" [class.selected]="newChordPos() === $index"
-                    [class.has-chord]="acordes().some(a => a.posicao === $index)" (click)="selectPosition($index)">{{
+                    [class.has-chord]="acordes().some(a => a.posicao === $index)"
+                    (click)="selectPosition($index)" (keydown.enter)="selectPosition($index)"
+                    tabindex="0" role="option" [attr.aria-selected]="newChordPos() === $index">{{
                     char === ' ' ? '·' : char }}</span>
                 }
                 <span class="char-pick char-end" [class.selected]="newChordPos() === letrasArr.length"
-                    (click)="selectPosition(letrasArr.length)">&#9166;</span>
+                    (click)="selectPosition(letrasArr.length)" (keydown.enter)="selectPosition(letrasArr.length)"
+                    tabindex="0" role="option" [attr.aria-selected]="newChordPos() === letrasArr.length">&#9166;</span>
             </div>
         </div>
         } @else {
@@ -75,9 +78,10 @@
 
         <!-- Nome do acorde -->
         <div class="chord-name-input">
-            <label>Acorde:</label>
-            <input [value]="newChordName()" (input)="newChordName.set($any($event.target).value); chordError.set(false)"
-                placeholder="Ex: Am7, D/F#" (keydown.enter)="confirmAddChord()" autofocus [class.invalid]="chordError()" />
+            <label>Acorde:
+              <input [value]="newChordName()" (input)="newChordName.set($any($event.target).value); chordError.set(false)"
+                placeholder="Ex: Am7, D/F#" (keydown.enter)="confirmAddChord()" [class.invalid]="chordError()" />
+            </label>
             <button class="btn-confirm" (click)="confirmAddChord()">OK</button>
             <button class="btn-cancel" (click)="cancelAddChord()">Cancelar</button>
         </div>

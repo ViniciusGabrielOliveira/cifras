@@ -1,8 +1,5 @@
-@if (notificacao()) {
-<div class="toast-notificacao">{{ notificacao() }}</div>
-}
-@if (erroMsg()) {
-<div class="toast-erro">{{ erroMsg() }}</div>
+@if (notif.notificacao(); as n) {
+  <div [class]="n.erro ? 'toast-erro' : 'toast-notificacao'">{{ n.msg }}</div>
 }
 
 <header class="area-header">
@@ -36,308 +33,33 @@
 </header>
 
 @if (carregando()) {
-<div class="loading-page">
-  <span class="spinner"></span>
-</div>
+<div class="loading-page"><span class="spinner"></span></div>
 } @else if (notFound()) {
-<div class="not-found">
-  <p>Lista não encontrada. Redirecionando...</p>
-</div>
+<div class="not-found"><p>Lista não encontrada. Redirecionando...</p></div>
 } @else if (lista(); as lista) {
 
 @if (isEditor()) {
-<div class="lista-metadados">
-  <div class="metadados-row">
-
-    <div class="form-group-meta titulo-field">
-      <label class="meta-label">Título</label>
-      <input class="meta-input meta-input-titulo" type="text" [value]="lista.titulo" (blur)="onTituloBlur($event)"
-        placeholder="Título da lista" />
-    </div>
-
-    @if (isAdmin()) {
-    <div class="form-group-meta">
-      <label class="meta-label">Quando aparece</label>
-      <div class="tipo-toggle">
-        <button class="tipo-btn" [class.ativo]="!lista.todosDias" (click)="onTodosDiasChange(false)">Intervalo</button>
-        <button class="tipo-btn" [class.ativo]="lista.todosDias" (click)="onTodosDiasChange(true)">Todos os dias</button>
-      </div>
-    </div>
-
-    @if (!lista.todosDias) {
-    <div class="form-group-meta">
-      <label class="meta-label">De</label>
-      <input class="meta-input" type="date" [value]="lista.dataInicio ?? ''" (change)="onDataInicioChange($event)" />
-    </div>
-    <div class="form-group-meta">
-      <label class="meta-label">Até</label>
-      <input class="meta-input" type="date" [value]="lista.dataFim ?? ''" (change)="onDataFimChange($event)" />
-    </div>
-    }
-
-    <!-- Categoria e Tipo ficam juntos ao quebrar linha -->
-    <div class="meta-group-inline">
-      <div class="form-group-meta cat-field">
-        <label class="meta-label">Categoria</label>
-        <app-select [options]="categoriasOptions()" [value]="lista.categoria ?? ''"
-          (valueChange)="onCategoriaChange($event)" />
-      </div>
-      <div class="form-group-meta">
-        <label class="meta-label">Tipo</label>
-        <div class="tipo-toggle">
-          <button class="tipo-btn" [class.ativo]="lista.tipo !== 'publica'"
-            (click)="onTipoChange('privada')">Privada</button>
-          <button class="tipo-btn" [class.ativo]="lista.tipo === 'publica'"
-            (click)="onTipoChange('publica')">Pública</button>
-        </div>
-      </div>
-    </div>
-    }
-
-  </div>
-</div>
+<app-lista-metadata [lista]="lista" [isAdmin]="isAdmin()" (listaChanged)="onMetadataListaChanged($event)" />
 }
 
 <div class="lista-page">
-
-  <!-- ── Metadados da lista ──────────────────────────────────── -->
-
-
-  <!-- ── Aviso de limite ────────────────────────────────────────── -->
-  @if (!podeAdicionarMusica()) {
-  <span class="aviso-limite">Limite de {{ LIMITE_MUSICAS }} músicas personalizadas atingido</span>
-  }
-
-  <!-- ── Seções por parte da missa ──────────────────────────────── -->
-  <div cdkDropList [cdkDropListDisabled]="!isEditor()" (cdkDropListDropped)="onPartesReorder($event)">
-    @for (parte of partesOrdem(); track parte.id) {
-    <div class="parte-section" cdkDrag [cdkDragDisabled]="!isEditor()">
-
-      <div class="parte-header">
-        @if (isEditor()) {
-        <span class="drag-handle-parte" cdkDragHandle>
-          <svg width="10" height="14" viewBox="0 0 10 14" fill="currentColor">
-            <circle cx="3" cy="2.5" r="1.3" />
-            <circle cx="7" cy="2.5" r="1.3" />
-            <circle cx="3" cy="7" r="1.3" />
-            <circle cx="7" cy="7" r="1.3" />
-            <circle cx="3" cy="11.5" r="1.3" />
-            <circle cx="7" cy="11.5" r="1.3" />
-          </svg>
-        </span>
-        }
-
-        @if (isEditor() && editandoParteId() === parte.id) {
-        <input class="parte-label-input" [value]="editandoParteLabel()"
-          (input)="editandoParteLabel.set($any($event.target).value)" (keydown.enter)="salvarLabelParte(parte.id)"
-          (keydown.escape)="cancelarEdicaoParte()" (blur)="salvarLabelParte(parte.id)" />
-        } @else {
-        <h2 class="parte-titulo">{{ parteLabel(parte) }}</h2>
-        }
-
-        <div class="parte-acoes">
-          @if (isEditor()) {
-          <button class="btn-parte-acao" title="Renomear" (click)="iniciarEdicaoParte(parte)">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-            </svg>
-          </button>
-          @if (musicasDaParte(parte.id).length === 0) {
-          <button class="btn-parte-acao btn-parte-remover" title="Remover parte" (click)="removeParte(parte.id)">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="3 6 5 6 21 6" />
-              <path d="M19 6l-1 14H6L5 6" />
-              <path d="M10 11v6" />
-              <path d="M14 11v6" />
-            </svg>
-          </button>
-          }
-          <button class="btn-add-musica" [disabled]="!podeAdicionarMusica()" (click)="abrirModalBusca(parte.id)">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-            Adicionar
-          </button>
-          }
-        </div>
-      </div>
-
-      @if (musicasDaParte(parte.id).length === 0) {
-      <p class="parte-empty">Nenhuma música</p>
-      } @else {
-      <div class="musicas-lista" cdkDropList [cdkDropListDisabled]="!isEditor()"
-        (cdkDropListDropped)="onMusicasReorder($event, parte.id)">
-        @for (musica of musicasDaParte(parte.id); track musica.id) {
-        <div class="musica-item" cdkDrag [cdkDragDisabled]="!isEditor()">
-          @if (isEditor()) {
-          <span class="drag-handle-musica" cdkDragHandle>
-            <svg width="8" height="12" viewBox="0 0 8 12" fill="currentColor">
-              <circle cx="2" cy="2" r="1.2" />
-              <circle cx="6" cy="2" r="1.2" />
-              <circle cx="2" cy="6" r="1.2" />
-              <circle cx="6" cy="6" r="1.2" />
-              <circle cx="2" cy="10" r="1.2" />
-              <circle cx="6" cy="10" r="1.2" />
-            </svg>
-          </span>
-          }
-          <div class="musica-info">
-            <div class="musica-info-top">
-              <span class="musica-nome" [class.musica-removida]="!cifraExiste(musica.cifraId, musica.privada)">{{ musica.nome }}</span>
-              @if (autorDaCifra(musica)) {
-                <span class="musica-autor">{{ autorDaCifra(musica) }}</span>
-              }
-              @if (musica.privada) {
-              <span class="musica-privada-badge">privada</span>
-              }
-              @if (!cifraExiste(musica.cifraId, musica.privada)) {
-              <span class="musica-removida-badge">cifra removida</span>
-              }
-            </div>
-            @if (isEditor()) {
-            <div class="musica-extra-row">
-              <app-select size="sm" class="input-tom-musica" [options]="tonsOptions" placeholder="Tom"
-                [value]="musica.tom ?? ''" (valueChange)="atualizarMusicaCampo(musica.id, 'tom', $event)" />
-              <input class="input-obs-musica" type="text" placeholder="Observação (ex: capotraste na 1ª casa)"
-                [value]="musica.observacao ?? ''"
-                (change)="atualizarMusicaCampo(musica.id, 'observacao', $any($event.target).value)" />
-            </div>
-            } @else if (musica.tom || musica.observacao) {
-            <div class="musica-tom-obs">
-              @if (musica.tom) { <span class="tom-badge">{{ musica.tom }}</span> }
-              @if (musica.observacao) { <span class="obs-text">{{ musica.observacao }}</span> }
-            </div>
-            }
-          </div>
-          @if (isEditor()) {
-          <div class="musica-actions">
-            <button class="btn-action" title="Editar cifra" (click)="editarMusica(musica)"
-              [disabled]="!cifraExiste(musica.cifraId, musica.privada)">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-              </svg>
-            </button>
-            @if (confirmandoRemoverMusica() === musica.id) {
-            <div class="confirm-inline">
-              <span>Remover?</span>
-              <button class="btn-sim" (click)="removerMusica(musica.id)">Sim</button>
-              <button class="btn-nao" (click)="confirmandoRemoverMusica.set(null)">Não</button>
-            </div>
-            } @else {
-            <button class="btn-action btn-danger" title="Remover" (click)="confirmandoRemoverMusica.set(musica.id)">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-            }
-          </div>
-          }
-        </div>
-        }
-      </div>
-      }
-    </div>
-    }
-  </div>
-
-  @if (isEditor() && partesDisponiveis().length > 0) {
-  <div class="adicionar-parte-bar">
-    @for (parteId of partesDisponiveis(); track parteId) {
-    <button class="chip-parte-add" (click)="addParte(parteId)">
-      + {{ PARTES_LABELS[parteId] ?? parteId }}
-    </button>
-    }
-  </div>
-  }
-
+  <app-musicas-lista
+    [lista]="lista"
+    [adminContext]="adminContext"
+    [isEditor]="isEditor()"
+    [isDono]="isDono()"
+    [podeAdicionarMusica]="podeAdicionarMusica()"
+    [limiteMusicas]="LIMITE_MUSICAS"
+    (listaChange)="onMusicasListaChange($event)"
+    (salvandoChange)="onSalvandoChange($event)" />
 </div>
 
-<!-- ── Modal busca de música ──────────────────────────────────── -->
-@if (modalBuscaAberto()) {
-<div class="modal-backdrop" (click)="fecharModalBusca()"></div>
-<div class="modal-busca" role="dialog" aria-modal="true">
-  <div class="modal-header">
-    <div class="modal-titulo-group">
-      <span class="modal-titulo">Adicionar música</span>
-      <span class="modal-parte-badge">{{ PARTES_LABELS[parteParaAdicionar()] ?? parteParaAdicionar() }}</span>
-    </div>
-    <button class="modal-close" (click)="fecharModalBusca()">✕</button>
-  </div>
-  <div class="modal-body">
-    <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true"
-      [mostrarCifraClub]="true"
-      (musicaSelecionada)="onMusicaSelecionada($event)"
-      (cadastrarNova)="onCadastrarNova($event)" />
-  </div>
-</div>
-}
-
-<!-- ── Painel participantes ──────────────────────────────────── -->
 @if (painelParticipantes()) {
-<div class="modal-overlay" (click)="fecharPainelParticipantes()">
-  <div class="modal-content modal-participantes" (click)="$event.stopPropagation()">
-    <div class="modal-header">
-      <h3>Participantes</h3>
-      <button class="btn-fechar-modal" (click)="fecharPainelParticipantes()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-    </div>
-
-    <div class="invite-section">
-      <label class="invite-label">Link de convite</label>
-      <div class="invite-row">
-        <input class="invite-input" type="text" readonly [value]="linkConvite()" />
-        <button class="btn-copiar" (click)="copiarLink()">
-          @if (linkCopiado()) { Copiado! } @else { Copiar }
-        </button>
-      </div>
-      <p class="invite-hint">Qualquer pessoa com este link pode entrar como visualizador.</p>
-    </div>
-
-    @if ((lista.participantes ?? []).length === 0) {
-    <p class="participantes-empty">Nenhum participante ainda.</p>
-    } @else {
-    <div class="participantes-lista">
-      @for (p of lista.participantes; track p.uid) {
-      <div class="participante-item">
-        <span class="participante-nome">{{ p.nome }}</span>
-        <div class="participante-actions">
-          <app-select size="sm" class="role-select" [options]="roleOptions" [value]="p.role"
-            (valueChange)="onRoleChange(p.uid, $event)" />
-          <label class="controlador-toggle" title="Pode controlar o modo live na visualização">
-            <input type="checkbox" [checked]="(lista.controladoresUids ?? []).includes(p.uid)"
-              (change)="toggleControladoresUid(p.uid)">
-            <span class="ctrl-chip" [class.ctrl-chip-ativo]="(lista.controladoresUids ?? []).includes(p.uid)">
-              ctrl
-            </span>
-          </label>
-          @if (confirmandoRemover() === p.uid) {
-          <div class="confirm-inline">
-            <button class="btn-sim" (click)="removerParticipante(p.uid)">Remover</button>
-            <button class="btn-nao" (click)="cancelarRemoverParticipante()">Cancelar</button>
-          </div>
-          } @else {
-          <button class="btn-action btn-danger" (click)="confirmarRemoverParticipante(p.uid)" title="Remover">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
-          }
-        </div>
-      </div>
-      }
-    </div>
-    }
-  </div>
-</div>
+<app-participantes-lista
+  [lista]="lista"
+  [isDono]="isDono()"
+  (fechar)="fecharPainelParticipantes()"
+  (listaAtualizada)="onParticipantesListaAtualizada($event)" />
 }
 
 }

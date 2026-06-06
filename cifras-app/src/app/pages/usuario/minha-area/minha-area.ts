@@ -1,5 +1,4 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Lista, TipoLista } from '../../../models/lista.model';
@@ -8,14 +7,13 @@ import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
-
-let _idCounter = Date.now();
-function newId(prefix: string) { return `${prefix}-${++_idCounter}`; }
+import { newId } from '../../../utils/id.utils';
+import { NotificationService } from '../../../services/notification.service';
 
 @Component({
     selector: 'app-minha-area',
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterLink, AppSelectComponent],
+    imports: [FormsModule, RouterLink, AppSelectComponent],
     templateUrl: './minha-area.html',
     styleUrl: './minha-area.scss',
 })
@@ -25,6 +23,7 @@ export class MinhaAreaComponent implements OnInit {
     readonly auth = inject(AuthService);
     private router = inject(Router);
     readonly config = inject(ConfigService);
+    readonly notif = inject(NotificationService);
 
     get categorias() { return this.config.categoriasIds(); }
     get categoriasLabels() { return this.config.categoriasLabels(); }
@@ -43,9 +42,6 @@ export class MinhaAreaComponent implements OnInit {
     salvandoLista = signal(false);
 
     confirmandoExclusao = signal<string | null>(null);
-
-    notificacao = signal<string | null>(null);
-    erroMsg = signal<string | null>(null);
 
     readonly LIMITE_MUSICAS = 25;
     readonly podeAdicionarMusica = computed(() => this.totalMusicasCustom() < this.LIMITE_MUSICAS);
@@ -88,7 +84,7 @@ export class MinhaAreaComponent implements OnInit {
         const titulo = this.novaListaTitulo().trim();
         if (!titulo) return;
 
-        const uid = this.auth.user()?.uid!;
+        const uid = this.auth.user()!.uid;
         const token = newId('tok');
         const lista: Lista = {
             id: '',
@@ -139,15 +135,8 @@ export class MinhaAreaComponent implements OnInit {
         this.router.navigate(['/minha-area/lista', id]);
     }
 
-    mostrarNotificacao(msg: string) {
-        this.notificacao.set(msg);
-        setTimeout(() => this.notificacao.set(null), 3000);
-    }
-
-    mostrarErro(msg: string) {
-        this.erroMsg.set(msg);
-        setTimeout(() => this.erroMsg.set(null), 5000);
-    }
+    mostrarNotificacao(msg: string) { this.notif.mostrar(msg); }
+    mostrarErro(msg: string) { this.notif.mostrarErro(msg); }
 
     trackById(_: number, item: { id: string }) { return item.id; }
 }

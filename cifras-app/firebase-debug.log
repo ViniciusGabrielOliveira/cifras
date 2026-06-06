@@ -1,0 +1,277 @@
+[debug] [2026-06-06T18:54:00.801Z] ----------------------------------------------------------------------
+[debug] [2026-06-06T18:54:00.805Z] Command:       /home/vini/.nvm/versions/node/v22.22.1/bin/node /home/vini/.nvm/versions/node/v22.22.1/bin/firebase emulators:start --project demo-cifras
+[debug] [2026-06-06T18:54:00.805Z] CLI Version:   15.18.0
+[debug] [2026-06-06T18:54:00.806Z] Platform:      linux
+[debug] [2026-06-06T18:54:00.806Z] Node Version:  v22.22.1
+[debug] [2026-06-06T18:54:00.806Z] Time:          Sat Jun 06 2026 15:54:00 GMT-0300 (Brasilia Standard Time)
+[debug] [2026-06-06T18:54:00.807Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-06T18:54:02.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-06T18:54:02.358Z] > authorizing via signed-in user (viniciusgabriel.oliveira@gmail.com)
+[debug] [2026-06-06T18:54:02.435Z] openjdk version "21.0.11" 2026-04-21
+
+[debug] [2026-06-06T18:54:02.437Z] OpenJDK Runtime Environment (build 21.0.11+10)
+OpenJDK 64-Bit Server VM (build 21.0.11+10, mixed mode, sharing)
+
+[debug] [2026-06-06T18:54:02.449Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, extensions"}}
+[info] i  emulators: Detected demo project ID "demo-cifras", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail. {"metadata":{"emulator":{"name":"hub"},"message":"Detected demo project ID \"demo-cifras\", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail."}}
+[debug] [2026-06-06T18:54:02.464Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.464Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.464Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.464Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.464Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-06-06T18:54:02.475Z] Write emulator hub locator at /tmp/hub-demo-cifras.json
+[debug] [2026-06-06T18:54:02.484Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-06-06T18:54:02.486Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.486Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.486Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-06-06T18:54:02.487Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4001},{"address":"::1","family":"IPv6","port":4001}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2026-06-06T18:54:02.567Z] defaultcredentials: writing to file /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json
+[debug] [2026-06-06T18:54:02.569Z] Setting GAC to /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json"}}
+[info] i  firestore: downloading cloud-firestore-emulator-v1.21.0.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.21.0.jar..."}}
+[debug] [2026-06-06T18:54:02.600Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.21.0.jar 
+[debug] [2026-06-06T18:54:03.276Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.21.0.jar 200
+[debug] [2026-06-06T18:54:03.276Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.21.0.jar [stream]
+[debug] [2026-06-06T18:54:49.377Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-06-06T18:54:49.378Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-06-06T18:54:49.378Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/vini/.cache/firebase/emulators/cloud-firestore-emulator-v1.21.0.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--database-edition","standard","--project_id","demo-cifras","--rules","/home/vini/vini/cifras/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","database-edition","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/vini/.cache/firebase/emulators/cloud-firestore-emulator-v1.21.0.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--database-edition\",\"standard\",\"--project_id\",\"demo-cifras\",\"--rules\",\"/home/vini/vini/cifras/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"database-edition\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2026-06-06T18:54:51.555Z] Jun 06, 2026 3:54:51 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 06, 2026 3:54:51 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-06-06T18:54:51.639Z] 
+API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"\nAPI endpoint: http://"}}
+[debug] [2026-06-06T18:54:51.639Z] 127.0.0.1:8080
+Database Edition: STANDARD
+Database Mode: CLOUD_FIRESTORE
+
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nDatabase Edition: STANDARD\nDatabase Mode: CLOUD_FIRESTORE\n\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator was started in standard edition. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator was started in standard edition."}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[info] i  ui: downloading ui-v1.15.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.15.0.zip..."}}
+[debug] [2026-06-06T18:55:05.302Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 
+[debug] [2026-06-06T18:55:05.726Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 200
+[debug] [2026-06-06T18:55:05.726Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip [stream]
+[debug] [2026-06-06T18:55:06.864Z] Data is 3538469
+[debug] [2026-06-06T18:55:06.865Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:06.865Z] [unzip] Processing entry: client/
+[debug] [2026-06-06T18:55:06.865Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/
+[debug] [2026-06-06T18:55:06.865Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2026-06-06T18:55:06.866Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2026-06-06T18:55:06.866Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.866Z] [unzip] Writing file: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/favicon-16x16.png
+[debug] [2026-06-06T18:55:06.867Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2026-06-06T18:55:06.867Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2026-06-06T18:55:06.867Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.867Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/safari-pinned-tab.svg
+[debug] [2026-06-06T18:55:06.875Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2026-06-06T18:55:06.875Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2026-06-06T18:55:06.875Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.875Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/favicon.ico
+[debug] [2026-06-06T18:55:06.877Z] [unzip] Entry: client/index.html (compressed_size=1364 bytes, uncompressed_size=3071 bytes)
+[debug] [2026-06-06T18:55:06.877Z] [unzip] Processing entry: client/index.html
+[debug] [2026-06-06T18:55:06.878Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.878Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/index.html
+[debug] [2026-06-06T18:55:06.879Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2026-06-06T18:55:06.879Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2026-06-06T18:55:06.879Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.879Z] [unzip] Writing file: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-192x192.png
+[debug] [2026-06-06T18:55:06.879Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2026-06-06T18:55:06.879Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2026-06-06T18:55:06.880Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.880Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/apple-touch-icon.png
+[debug] [2026-06-06T18:55:06.881Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2026-06-06T18:55:06.881Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2026-06-06T18:55:06.881Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.881Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-512x512.png
+[debug] [2026-06-06T18:55:06.882Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2026-06-06T18:55:06.883Z] [unzip] Processing entry: client/manifest.json
+[debug] [2026-06-06T18:55:06.883Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.883Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/manifest.json
+[debug] [2026-06-06T18:55:06.884Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2026-06-06T18:55:06.884Z] [unzip] Processing entry: client/robots.txt
+[debug] [2026-06-06T18:55:06.884Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.884Z] [unzip] Writing file: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/robots.txt
+[debug] [2026-06-06T18:55:06.885Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2026-06-06T18:55:06.885Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2026-06-06T18:55:06.885Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:06.885Z] [unzip] Writing file: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/mstile-150x150.png
+[debug] [2026-06-06T18:55:06.885Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:06.885Z] [unzip] Processing entry: client/assets/
+[debug] [2026-06-06T18:55:06.885Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/
+[debug] [2026-06-06T18:55:06.886Z] [unzip] Entry: client/assets/index-BX-A56oj.js (compressed_size=582089 bytes, uncompressed_size=2092775 bytes)
+[debug] [2026-06-06T18:55:06.886Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js
+[debug] [2026-06-06T18:55:06.886Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-06-06T18:55:06.886Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js
+[debug] [2026-06-06T18:55:06.913Z] [unzip] Entry: client/assets/index-CjB9C900.css (compressed_size=35979 bytes, uncompressed_size=298654 bytes)
+[debug] [2026-06-06T18:55:06.913Z] [unzip] Processing entry: client/assets/index-CjB9C900.css
+[debug] [2026-06-06T18:55:06.913Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-06-06T18:55:06.914Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-CjB9C900.css
+[debug] [2026-06-06T18:55:06.916Z] [unzip] Entry: client/assets/index-BX-A56oj.js.map (compressed_size=2362482 bytes, uncompressed_size=10036679 bytes)
+[debug] [2026-06-06T18:55:06.916Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js.map
+[debug] [2026-06-06T18:55:06.916Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2026-06-06T18:55:06.916Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js.map
+[debug] [2026-06-06T18:55:06.984Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:06.984Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2026-06-06T18:55:06.984Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/
+[debug] [2026-06-06T18:55:06.985Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2026-06-06T18:55:06.985Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2026-06-06T18:55:06.985Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions
+[debug] [2026-06-06T18:55:06.985Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/default-extension.png
+[debug] [2026-06-06T18:55:06.986Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:06.987Z] [unzip] Processing entry: client/assets/img/
+[debug] [2026-06-06T18:55:06.987Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/
+[debug] [2026-06-06T18:55:06.987Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2026-06-06T18:55:06.987Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2026-06-06T18:55:06.987Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/img
+[debug] [2026-06-06T18:55:06.987Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/database.png
+[debug] [2026-06-06T18:55:06.989Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:06.989Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2026-06-06T18:55:06.989Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/
+[debug] [2026-06-06T18:55:06.989Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2026-06-06T18:55:06.989Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2026-06-06T18:55:06.989Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.990Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2026-06-06T18:55:06.991Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2026-06-06T18:55:06.991Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2026-06-06T18:55:06.991Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.991Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2026-06-06T18:55:06.992Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2026-06-06T18:55:06.992Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2026-06-06T18:55:06.992Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.992Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2026-06-06T18:55:06.993Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2026-06-06T18:55:06.993Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2026-06-06T18:55:06.993Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.993Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2026-06-06T18:55:06.994Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2026-06-06T18:55:06.994Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2026-06-06T18:55:06.994Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.995Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2026-06-06T18:55:06.996Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2026-06-06T18:55:06.996Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2026-06-06T18:55:06.996Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.996Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_github.svg
+[debug] [2026-06-06T18:55:06.997Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2026-06-06T18:55:06.997Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2026-06-06T18:55:06.997Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.997Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2026-06-06T18:55:06.998Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2026-06-06T18:55:06.998Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2026-06-06T18:55:06.998Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.998Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2026-06-06T18:55:06.998Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2026-06-06T18:55:06.999Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2026-06-06T18:55:06.999Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:06.999Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2026-06-06T18:55:06.999Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2026-06-06T18:55:06.999Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2026-06-06T18:55:07.000Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:07.000Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2026-06-06T18:55:07.000Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2026-06-06T18:55:07.001Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2026-06-06T18:55:07.001Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:07.001Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_email.svg
+[debug] [2026-06-06T18:55:07.001Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2026-06-06T18:55:07.001Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2026-06-06T18:55:07.001Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:07.002Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_google.svg
+[debug] [2026-06-06T18:55:07.003Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2026-06-06T18:55:07.003Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2026-06-06T18:55:07.003Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2026-06-06T18:55:07.003Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2026-06-06T18:55:07.004Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2026-06-06T18:55:07.005Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2026-06-06T18:55:07.005Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:07.005Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/browserconfig.xml
+[debug] [2026-06-06T18:55:07.006Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2026-06-06T18:55:07.006Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2026-06-06T18:55:07.006Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2026-06-06T18:55:07.006Z] [unzip] Writing file: /home/vini/.cache/firebase/emulators/ui-v1.15.0/client/favicon-32x32.png
+[debug] [2026-06-06T18:55:07.007Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-06-06T18:55:07.007Z] [unzip] Processing entry: server/
+[debug] [2026-06-06T18:55:07.007Z] [unzip] mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/server/
+[debug] [2026-06-06T18:55:07.007Z] [unzip] Entry: server/server.mjs.map (compressed_size=217845 bytes, uncompressed_size=944978 bytes)
+[debug] [2026-06-06T18:55:07.007Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2026-06-06T18:55:07.007Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2026-06-06T18:55:07.007Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs.map
+[debug] [2026-06-06T18:55:07.013Z] [unzip] Entry: server/server.mjs (compressed_size=276407 bytes, uncompressed_size=933701 bytes)
+[debug] [2026-06-06T18:55:07.013Z] [unzip] Processing entry: server/server.mjs
+[debug] [2026-06-06T18:55:07.013Z] [unzip] else mkdir: /home/vini/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2026-06-06T18:55:07.014Z] [unzip] deflating: /home/vini/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs
+[debug] [2026-06-06T18:55:07.023Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/home/vini/vini/cifras/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/vini/vini/cifras/functions\" for Cloud Functions..."}}
+[debug] [2026-06-06T18:55:07.029Z] Validating nodejs source
+[debug] [2026-06-06T18:55:07.891Z] > [functions] package.json contents: {
+  "name": "cifras-functions",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "firebase deploy --only functions"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.9.0",
+    "firebase-functions": "^7.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "22"
+  }
+}
+[debug] [2026-06-06T18:55:07.891Z] Building nodejs source
+[debug] [2026-06-06T18:55:07.892Z] Failed to find version of module node: reached end of search path /home/vini/vini/cifras/functions/node_modules
+[info] ✔  functions: Using node@22 from host. 
+[debug] [2026-06-06T18:55:07.896Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-06-06T18:55:07.901Z] Found firebase-functions binary at '/home/vini/vini/cifras/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8663
+
+[debug] [2026-06-06T18:55:08.555Z] Got response from /__/functions.yaml {"endpoints":{"importCifraClubSong":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"importCifraClubSong"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-06-06T18:55:12.611Z] defaultcredentials: writing to file /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json
+[debug] [2026-06-06T18:55:12.613Z] Setting GAC to /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/vini/.config/firebase/viniciusgabriel_oliveira_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: importCifraClubSong. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: importCifraClubSong."}}
+[info] ✔  functions[us-central1-importCifraClubSong]: http function initialized (http://127.0.0.1:5001/demo-cifras/us-central1/importCifraClubSong). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/demo-cifras/us-central1/importCifraClubSong)."}}
+[debug] [2026-06-06T18:55:12.652Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase SQL Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4001/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4001/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4001/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4001/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4001/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-06-06T18:55:42.495Z] Jun 06, 2026 3:55:42 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 06, 2026 3:55:42 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2026-06-06T18:55:54.865Z] Jun 06, 2026 3:55:54 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 06, 2026 3:55:54 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}

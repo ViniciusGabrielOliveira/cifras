@@ -9,6 +9,7 @@ import {
   updateDoc,
   deleteDoc,
   getDocs,
+  getCountFromServer,
   addDoc,
   collection,
   query,
@@ -20,6 +21,7 @@ import {
 } from 'firebase/firestore';
 import { Cifra, CifraPR, CifraCustom, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
+import { isFirebaseError } from '../utils/firebase.utils';
 
 @Injectable()
 export class CifraFirebaseRepository extends CifraRepository {
@@ -56,6 +58,14 @@ export class CifraFirebaseRepository extends CifraRepository {
       );
       return () => unsubscribe();
     });
+  }
+
+  override getIndiceUmaVez(): Observable<CifraIndiceItem[]> {
+    const indiceCol = collection(this.firestore, 'cifras_indice');
+    return from(getDocs(indiceCol)).pipe(
+      map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as CifraIndiceItem)),
+      catchError(() => of([])),
+    );
   }
 
   // ── Escrita ─────────────────────────────────────────────────────
@@ -139,14 +149,18 @@ export class CifraFirebaseRepository extends CifraRepository {
   }
 
   private tratarErro(err: unknown, fallback: string): Error {
-    const code = (err as any)?.code ?? '';
+    const code = isFirebaseError(err) ? err.code : '';
     if (code === 'permission-denied') return new Error('Sem permissão para realizar esta operação.');
     if (code === 'unavailable') return new Error('Sem conexão com o servidor. Verifique sua internet.');
     return new Error(fallback + '. Tente novamente.');
   }
 
   override countCifrasDoUser(uid: string): Observable<number> {
-    return this.getCifrasDoUser(uid).pipe(map(list => list.length));
+    const q = query(collection(this.firestore, 'cifras'), where('donoUid', '==', uid));
+    return from(getCountFromServer(q)).pipe(
+      map(snap => snap.data().count),
+      catchError(() => of(0)),
+    );
   }
 
   // ── Cifra local da lista (cópia para acesso de participantes) ────

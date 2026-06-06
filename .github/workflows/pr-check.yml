@@ -1,0 +1,41 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: cifras-app/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: cifras-app
+
+      - name: Generate stub environment
+        run: |
+          cp src/environments/environment.ts src/environments/environment.prod.ts
+        working-directory: cifras-app
+
+      - name: Build
+        run: npx ng build --configuration=production
+        working-directory: cifras-app
+
+      - name: Test
+        run: npx ng test --watch=false
+        working-directory: cifras-app

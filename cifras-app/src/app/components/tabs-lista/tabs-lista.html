@@ -1,0 +1,95 @@
+<div class="tabs-wrapper">
+    <div class="tabs" role="tablist"
+        cdkDropList cdkDropListOrientation="horizontal"
+        (cdkDropListDropped)="onTabDropped($event)">
+        @for (parte of partesDisponiveis(); track parte) {
+        <div class="tab-item" cdkDrag
+            [cdkDragDisabled]="!canEdit() || editandoTab() === parte">
+            <div *cdkDragPlaceholder class="tab-drag-placeholder"></div>
+            @if (editandoTab() === parte) {
+            <input #tabEditInput class="tab-edit-input"
+                [value]="editandoTabLabel()"
+                (input)="editandoTabLabel.set($any($event.target).value)"
+                (keydown.enter)="confirmarEditarTab()"
+                (keydown.escape)="cancelarEditarTab()"
+                (blur)="confirmarEditarTab()"
+            />
+            } @else {
+            <div class="tab" role="tab"
+                [class.ativo]="parteAtiva() === parte"
+                [attr.aria-selected]="parteAtiva() === parte">
+                @if (canEdit()) {
+                <span class="tab-drag-handle" cdkDragHandle title="Arrastar">
+                    <svg viewBox="0 0 10 16" fill="currentColor" width="8" height="14">
+                        <circle cx="2.5" cy="2" r="1.5"/><circle cx="7.5" cy="2" r="1.5"/>
+                        <circle cx="2.5" cy="8" r="1.5"/><circle cx="7.5" cy="8" r="1.5"/>
+                        <circle cx="2.5" cy="14" r="1.5"/><circle cx="7.5" cy="14" r="1.5"/>
+                    </svg>
+                </span>
+                }
+                <button class="tab-label" (click)="selecionarParte(parte)">{{ parteLabel(parte) }}</button>
+                @if (canEdit()) {
+                <div class="tab-menu-wrap" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()" tabindex="-1">
+                    <button class="tab-menu-btn" (click)="toggleTabMenu(parte, $any($event.currentTarget))" title="Opções">
+                        <svg viewBox="0 0 4 18" fill="currentColor" width="4" height="14">
+                            <circle cx="2" cy="2" r="2"/><circle cx="2" cy="9" r="2"/><circle cx="2" cy="16" r="2"/>
+                        </svg>
+                    </button>
+                </div>
+                }
+            </div>
+            }
+        </div>
+        }
+        @if (canEdit() && partesParaAdicionar().length > 0) {
+        <button class="tab tab-add" [class.ativo]="adicionandoParte()" (click)="toggleAdicionarParte()" title="Adicionar parte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+        </button>
+        }
+    </div>
+</div>
+
+@if (tabMenuAberto() && tabMenuPos()) {
+<div class="tab-menu-dropdown"
+    [style.top.px]="tabMenuPos()!.top"
+    [style.right.px]="tabMenuPos()!.right"
+    (click)="$event.stopPropagation()"
+    (keydown)="$event.stopPropagation()"
+    tabindex="-1">
+    <button class="tab-menu-item" (click)="iniciarEditarTab(tabMenuAberto()!)">Editar</button>
+    <button class="tab-menu-item tab-menu-item-danger"
+        (click)="removeParte(tabMenuAberto()!)"
+        [disabled]="!parteVazia(tabMenuAberto()!)">
+        Remover
+    </button>
+</div>
+}
+
+@if (canEdit() && adicionandoParte()) {
+<div class="parte-autocomplete-wrapper">
+    <input
+        #autocompleteInput class="parte-autocomplete-input"
+        type="text"
+        placeholder="Nome da parte..."
+        [value]="buscaParte()"
+        (input)="buscaParte.set($any($event.target).value)"
+        (keydown.enter)="onParteBuscaEnter()"
+        (keydown.escape)="adicionandoParte.set(false)"
+    />
+    <div class="parte-autocomplete-dropdown">
+        @for (opcao of opcoesFiltradas(); track opcao.id) {
+        <button class="parte-opcao" (click)="addParte(opcao.id)">{{ opcao.label }}</button>
+        }
+        @if (mostrarCriarParte()) {
+        <button class="parte-opcao parte-opcao-criar" (click)="addPartePersonalizada(buscaParte().trim())">
+            Criar "{{ buscaParte().trim() }}"
+        </button>
+        }
+        @if (opcoesFiltradas().length === 0 && !mostrarCriarParte() && !buscaParte().trim()) {
+        <div class="parte-vazio">Todas as partes já foram adicionadas</div>
+        }
+    </div>
+</div>
+}

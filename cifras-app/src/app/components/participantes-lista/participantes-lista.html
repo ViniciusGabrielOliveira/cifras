@@ -1,0 +1,62 @@
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+<div class="modal-overlay" (click)="fechar.emit()">
+  <div class="modal-content modal-participantes" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()" tabindex="-1">
+    <div class="modal-header">
+      <h3>Participantes</h3>
+      <button class="btn-fechar-modal" (click)="fechar.emit()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="invite-section">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label class="invite-label">Link de convite</label>
+      <div class="invite-row">
+        <input class="invite-input" type="text" readonly [value]="linkConvite" />
+        <button class="btn-copiar" (click)="copiarLink()">
+          @if (linkCopiado()) { Copiado! } @else { Copiar }
+        </button>
+      </div>
+      <p class="invite-hint">Qualquer pessoa com este link pode entrar como visualizador.</p>
+    </div>
+
+    @if ((lista.participantes ?? []).length === 0) {
+    <p class="participantes-empty">Nenhum participante ainda.</p>
+    } @else {
+    <div class="participantes-lista">
+      @for (p of lista.participantes; track p.uid) {
+      <div class="participante-item">
+        <span class="participante-nome">{{ p.nome }}</span>
+        <div class="participante-actions">
+          <app-select size="sm" class="role-select" [options]="roleOptions" [value]="p.role"
+            (valueChange)="onRoleChange(p.uid, $event)" />
+          <label class="controlador-toggle" title="Pode controlar o modo live na visualização">
+            <input type="checkbox" [checked]="(lista.controladoresUids ?? []).includes(p.uid)"
+              (change)="toggleControladoresUid(p.uid)">
+            <span class="ctrl-chip" [class.ctrl-chip-ativo]="(lista.controladoresUids ?? []).includes(p.uid)">
+              ctrl
+            </span>
+          </label>
+          @if (confirmandoRemover() === p.uid) {
+          <div class="confirm-inline">
+            <button class="btn-sim" (click)="removerParticipante(p.uid)">Remover</button>
+            <button class="btn-nao" (click)="cancelarRemoverParticipante()">Cancelar</button>
+          </div>
+          } @else {
+          <button class="btn-action btn-danger" (click)="confirmarRemoverParticipante(p.uid)" title="Remover">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          }
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>

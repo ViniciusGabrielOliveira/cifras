@@ -1,4 +1,5 @@
 @if (aberto() && lista(); as lista) {
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
 <div class="sheet-overlay" (click)="fechar()"></div>
 <div class="sheet">
 
@@ -16,9 +17,10 @@
 
         <!-- Título -->
         <div class="campo-grupo">
-            <label class="campo-label">Título</label>
-            <input class="campo-input campo-input-titulo" type="text" [value]="lista.titulo"
+            <label class="campo-label">Título
+              <input class="campo-input campo-input-titulo" type="text" [value]="lista.titulo"
                 (blur)="onTituloBlur($event)" placeholder="Título do repertório" />
+            </label>
         </div>
 
         <!-- Participantes (só se for dono e privada) -->

@@ -31,7 +31,7 @@ export interface SelectOption {
 export class AppSelectComponent {
     opts: SelectOption[] = [];
 
-    @Input() set options(v: Array<string | SelectOption>) {
+    @Input() set options(v: (string | SelectOption)[]) {
         this.opts = v.map(o => typeof o === 'string' ? { value: o, label: o } : o);
     }
 

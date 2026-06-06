@@ -1,0 +1,113 @@
+.section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.meta-panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width { grid-column: 1 / -1; }
+}
+
+.pills-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 2px;
+}
+
+.pill-toggle {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.15s;
+
+    &:hover {
+        border-color: rgba(124, 106, 253, 0.4);
+        color: var(--color-text);
+    }
+
+    &.active {
+        background: var(--color-acorde-bg);
+        border-color: var(--color-acorde);
+        color: var(--color-acorde);
+        font-weight: 600;
+    }
+}
+
+.meta-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    input {
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        color: var(--color-text);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        outline: none;
+        transition: border-color 0.15s;
+
+        &:focus {
+            border-color: var(--color-acorde);
+        }
+    }
+
+    &.erro input {
+        border-color: #f87171;
+    }
+}
+
+.campo-erro {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #f87171;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.id-preview {
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+
+    code {
+        font-family: 'Fira Code', monospace;
+    }
+}

@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, tap, map, shareReplay, BehaviorSubject } from 'rxjs';
+import { Observable, of, tap, map, BehaviorSubject, take } from 'rxjs';
 import { Cifra, CifraPR, CifraCustom, CifraVersao } from '../models/cifra.model';
 import { CifraRepository, CifraIndiceItem } from './cifra.repository.interface';
 
@@ -105,6 +105,10 @@ export class CifraMockRepository extends CifraRepository {
             });
         }
         return this.indiceSubject.asObservable();
+    }
+
+    override getIndiceUmaVez(): Observable<CifraIndiceItem[]> {
+        return this.getIndice().pipe(take(1));
     }
 
     private carregarIndiceLocal(): CifraIndiceItem[] {

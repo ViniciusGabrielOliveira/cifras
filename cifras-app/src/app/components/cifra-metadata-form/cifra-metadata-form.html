@@ -1,0 +1,92 @@
+<section class="meta-panel">
+  <h2 class="section-title">@if (modoEditar) { Informações } @else { Informações da Música }</h2>
+  <div class="meta-grid">
+
+    <div class="meta-field" [class.erro]="!modoEditar && erroTitulo">
+      <label>
+        Título @if (!modoEditar) { * }
+        @if (!modoEditar && erroTitulo) {
+          <span class="campo-erro">Campo obrigatório</span>
+        }
+        <input
+          type="text"
+          [value]="cifra.titulo"
+          placeholder="Ex: Aleluia Festivo"
+          (input)="updateMeta('titulo', $any($event.target).value)"
+        />
+      </label>
+      @if (!modoEditar) {
+        <span class="id-preview"><code>ID: {{ idGerado }}</code></span>
+      }
+    </div>
+
+    <div class="meta-field">
+      <label>Artista / Intérprete
+        <input
+          type="text"
+          [value]="cifra.artista"
+          placeholder="Ex: Padre Zezinho"
+          (input)="updateMeta('artista', $any($event.target).value)"
+        />
+      </label>
+    </div>
+
+    <div class="meta-field">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label>Tom @if (modoEditar) { base }</label>
+      <app-select [options]="tonsOptions" [value]="cifra.tom" (valueChange)="updateMeta('tom', $event)" />
+    </div>
+
+    <div class="meta-field">
+      <label>Composição / Letra
+        <input
+          type="text"
+          [value]="cifra.composicao"
+          placeholder="Ex: Frei Seraphim"
+          (input)="updateMeta('composicao', $any($event.target).value)"
+        />
+      </label>
+    </div>
+
+    <div class="meta-field">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label>Instrumento</label>
+      <app-select [options]="instrumentoOptions" [value]="cifra.instrumento" (valueChange)="updateMeta('instrumento', $event)" />
+    </div>
+
+    <div class="meta-field">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label>Dificuldade</label>
+      <app-select [options]="dificuldadeOptions" [value]="cifra.dificuldade" (valueChange)="updateMeta('dificuldade', $event)" />
+    </div>
+
+    <div class="meta-field full-width">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label>Categorias Litúrgicas</label>
+      <div class="pills-selector">
+        @for (cat of categorias; track cat.id) {
+          <button type="button" class="pill-toggle"
+            [class.active]="cifra.categorias?.includes(cat.id)"
+            (click)="toggleCategoria(cat.id)">
+            {{ cat.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="meta-field full-width">
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
+      <label>Partes da Missa</label>
+      <div class="pills-selector">
+        @for (parte of partesMissa; track parte.id) {
+          <button type="button" class="pill-toggle"
+            [class.active]="cifra.partesMissa?.includes(parte.id)"
+            (click)="toggleParte(parte.id)">
+            {{ parte.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

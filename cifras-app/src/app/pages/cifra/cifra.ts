@@ -1,7 +1,7 @@
 import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { CifraService } from '../../services/cifra.service';
 import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraCustom, CifraVersao } from '../../models/cifra.model';
@@ -10,7 +10,7 @@ import { CifraViewerComponent } from '../../components/cifra-viewer/cifra-viewer
 @Component({
   selector: 'app-cifra-page',
   standalone: true,
-  imports: [CommonModule, CifraViewerComponent],
+  imports: [CifraViewerComponent],
   templateUrl: './cifra.html',
   styleUrl: './cifra.scss',
 })
@@ -18,6 +18,7 @@ export class CifraPageComponent implements OnInit {
   private cifraService = inject(CifraService);
   private route        = inject(ActivatedRoute);
   private router       = inject(Router);
+  private location     = inject(Location);
   readonly auth        = inject(AuthService);
   private destroyRef   = inject(DestroyRef);
 
@@ -61,10 +62,6 @@ export class CifraPageComponent implements OnInit {
   }
 
   voltar() {
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      this.router.navigate(['/']);
-    }
+    this.location.back();
   }
 }

@@ -3,15 +3,43 @@ import { Observable, forkJoin, map, tap } from 'rxjs';
 import { Lista, CategoriaLiturgica, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from '../repositories/lista.repository.interface';
 
+export interface ListaDraftState {
+    lista: Lista;
+    vista: 'nova-lista' | 'editar-lista';
+    parte: string | null;
+}
+
+const DRAFT_KEY  = 'cifras__lista_draft';
+const VISTA_KEY  = 'cifras__lista_draft_vista';
+const PARTE_KEY  = 'cifras__lista_draft_parte';
+
 @Injectable({ providedIn: 'root' })
 export class ListaService {
     private repo = inject(ListaRepository);
 
     readonly assinaturaExpirada = signal(false);
 
-    listaDraft: Lista | null = null;
-    vistaDraft: 'nova-lista' | 'editar-lista' | null = null;
-    parteParaAdicionarDraft: string | null = null;
+    // ── Draft (estado temporário entre rotas) ────────────────────────
+
+    setDraft(lista: Lista, vista: 'nova-lista' | 'editar-lista', parte?: string | null): void {
+        sessionStorage.setItem(DRAFT_KEY, JSON.stringify(lista));
+        sessionStorage.setItem(VISTA_KEY, vista);
+        if (parte) sessionStorage.setItem(PARTE_KEY, parte);
+        else sessionStorage.removeItem(PARTE_KEY);
+    }
+
+    getDraft(): ListaDraftState | null {
+        const raw  = sessionStorage.getItem(DRAFT_KEY);
+        const vista = sessionStorage.getItem(VISTA_KEY) as 'nova-lista' | 'editar-lista' | null;
+        if (!raw || !vista) return null;
+        return { lista: JSON.parse(raw) as Lista, vista, parte: sessionStorage.getItem(PARTE_KEY) };
+    }
+
+    clearDraft(): void {
+        sessionStorage.removeItem(DRAFT_KEY);
+        sessionStorage.removeItem(VISTA_KEY);
+        sessionStorage.removeItem(PARTE_KEY);
+    }
 
     getListas(): Observable<Lista[]> {
         return this.repo.getListas();

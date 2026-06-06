@@ -5,7 +5,6 @@ import {
   getFirestore,
   doc,
   getDoc,
-  setDoc,
   getDocs,
   deleteDoc,
   updateDoc,
@@ -19,6 +18,7 @@ import {
 } from 'firebase/firestore';
 import { Lista, CategoriaLiturgica, ListasDoDiaResponse, Participante, RoleParticipante } from '../models/lista.model';
 import { ListaRepository } from './lista.repository.interface';
+import { isFirebaseError } from '../utils/firebase.utils';
 
 function listaAparecePara(lista: Lista, data: string): boolean {
   if (lista.todosDias) return true;
@@ -216,11 +216,12 @@ export class ListaFirebaseRepository extends ListaRepository {
   }
 
   private tratarErro(err: unknown, fallback: string): Error {
+    const code = isFirebaseError(err) ? err.code : '';
     if (err instanceof Error) {
-      if (err.message.includes('permission') || (err as any).code === 'permission-denied') {
+      if (err.message.includes('permission') || code === 'permission-denied') {
         return new Error('Sem permissão para realizar esta operação.');
       }
-      if (err.message.includes('network') || (err as any).code === 'unavailable') {
+      if (err.message.includes('network') || code === 'unavailable') {
         return new Error('Sem conexão com o servidor. Verifique sua internet.');
       }
     }

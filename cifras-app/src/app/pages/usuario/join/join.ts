@@ -1,6 +1,5 @@
 import { Component, inject, signal, computed, OnInit, Injector } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 import { filter, take, switchMap } from 'rxjs';
 import { Lista, Participante } from '../../../models/lista.model';
@@ -12,7 +11,7 @@ type Estado = 'carregando' | 'convite' | 'entrando' | 'sucesso' | 'ja-membro' | 
 @Component({
     selector: 'app-join',
     standalone: true,
-    imports: [CommonModule, RouterLink],
+    imports: [RouterLink],
     templateUrl: './join.html',
     styleUrl: './join.scss',
 })

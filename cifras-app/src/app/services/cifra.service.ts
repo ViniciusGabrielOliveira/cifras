@@ -53,6 +53,10 @@ export class CifraService {
     return this.repo.getIndice();
   }
 
+  getIndiceUmaVez(): Observable<CifraIndiceItem[]> {
+    return this.repo.getIndiceUmaVez();
+  }
+
   getCifrasPrivadas(): Observable<Cifra[]> {
     return this.repo.getCifrasPrivadas();
   }

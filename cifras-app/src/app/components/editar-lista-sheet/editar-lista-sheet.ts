@@ -1,5 +1,6 @@
-import { Component, inject, signal, input, output, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, signal, input, output, computed, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { timer } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Lista, RoleParticipante, TipoLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
@@ -10,7 +11,7 @@ import { AppSelectComponent, SelectOption } from '../app-select/app-select';
 @Component({
     selector: 'app-editar-lista-sheet',
     standalone: true,
-    imports: [CommonModule, FormsModule, AppSelectComponent],
+    imports: [FormsModule, AppSelectComponent],
     templateUrl: './editar-lista-sheet.html',
     styleUrl: './editar-lista-sheet.scss',
 })
@@ -18,6 +19,7 @@ export class EditarListaSheetComponent {
     private listaService = inject(ListaService);
     readonly auth = inject(AuthService);
     private config = inject(ConfigService);
+    private destroyRef = inject(DestroyRef);
 
     readonly lista = input<Lista | null>(null);
     readonly listaSalva = output<Lista>();
@@ -87,10 +89,12 @@ export class EditarListaSheetComponent {
     // ── Participantes ─────────────────────────────────────────────────
 
     copiarLink() {
-        navigator.clipboard.writeText(this.linkConvite).then(() => {
-            this.linkCopiado.set(true);
-            setTimeout(() => this.linkCopiado.set(false), 2000);
-        });
+        navigator.clipboard.writeText(this.linkConvite)
+            .then(() => {
+                this.linkCopiado.set(true);
+                timer(2000).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.linkCopiado.set(false));
+            })
+            .catch(() => {});
     }
 
     onRoleChange(uid: string, role: string) {

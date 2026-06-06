@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, throwError, delay, tap } from 'rxjs';
+import { BehaviorSubject, Observable, of, throwError, delay } from 'rxjs';
 import { AuthRepository } from './auth.repository.interface';
-import { AppUser, AuthProvider, ConviteGrupo, ConviteStatus, Grupo, GrupoMembro, UserRole } from '../models/user.model';
+import { AppUser, AuthProvider, ConviteGrupo, Grupo, GrupoMembro, UserRole } from '../models/user.model';
 
 // ── Dados mock ───────────────────────────────────────────────────────
 const MOCK_USERS: Record<string, { senha: string; user: AppUser }> = {

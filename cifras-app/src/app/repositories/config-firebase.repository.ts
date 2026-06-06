@@ -34,13 +34,13 @@ export class ConfigFirebaseRepository extends ConfigRepository {
 
   override saveCategorias(items: ConfigItem[]): Observable<void> {
     return from(setDoc(doc(this.firestore, 'config/categorias_liturgicas'), { items })).pipe(
-      catchError(err => throwError(() => new Error('Erro ao salvar categorias. Tente novamente.'))),
+      catchError(_err => throwError(() => new Error('Erro ao salvar categorias. Tente novamente.'))),
     );
   }
 
   override savePartesMissa(items: ConfigItem[]): Observable<void> {
     return from(setDoc(doc(this.firestore, 'config/partes_missa'), { items })).pipe(
-      catchError(err => throwError(() => new Error('Erro ao salvar partes da missa. Tente novamente.'))),
+      catchError(_err => throwError(() => new Error('Erro ao salvar partes da missa. Tente novamente.'))),
     );
   }
 }

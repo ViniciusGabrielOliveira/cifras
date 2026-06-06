@@ -10,7 +10,8 @@ export const routes: Routes = [
     },
     {
         path: 'repertorio',
-        loadComponent: () => import('./pages/home/home').then(m => m.HomeComponent),
+        redirectTo: '',
+        pathMatch: 'full',
     },
 
     // ── Admin ──────────────────────────────────────────────────────

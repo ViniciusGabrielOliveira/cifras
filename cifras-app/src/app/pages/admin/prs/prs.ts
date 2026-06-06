@@ -1,11 +1,11 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CifraPR, Cifra, Secao, MOTIVOS_VERSAO } from '../../../models/cifra.model';
 import { CifraService } from '../../../services/cifra.service';
 import { AuthService } from '../../../services/auth.service';
 import { cifraToTexto } from '../../../core/cifra-parser';
+import { NotificationService } from '../../../services/notification.service';
 
 interface LinhasDiff {
   tipo: 'igual' | 'removida' | 'adicionada';
@@ -15,7 +15,7 @@ interface LinhasDiff {
 @Component({
   selector: 'app-prs',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './prs.html',
   styleUrl: './prs.scss',
 })
@@ -23,6 +23,7 @@ export class PrsComponent implements OnInit {
   private cifraService = inject(CifraService);
   private auth = inject(AuthService);
   private router = inject(Router);
+  readonly notif = inject(NotificationService);
 
   readonly prs = signal<CifraPR[]>([]);
   readonly carregando = signal(true);
@@ -31,8 +32,6 @@ export class PrsComponent implements OnInit {
   readonly diff = signal<LinhasDiff[]>([]);
   readonly notaRejeicao = signal('');
   readonly resolvendo = signal(false);
-  readonly erroMsg = signal<string | null>(null);
-  readonly notificacao = signal<string | null>(null);
 
   readonly motivoLabel = computed(() => {
     const pr = this.prSelecionada();
@@ -85,12 +84,11 @@ export class PrsComponent implements OnInit {
         this.prs.update(list => list.filter(p => p.id !== pr.id));
         this.fecharPR();
         this.resolvendo.set(false);
-        this.mostrarNotificacao('Cifra aprovada e publicada!');
+        this.notif.mostrar('Cifra aprovada e publicada!');
       },
       error: (err: Error) => {
         this.resolvendo.set(false);
-        this.erroMsg.set(err.message || 'Erro ao aprovar.');
-        setTimeout(() => this.erroMsg.set(null), 5000);
+        this.notif.mostrarErro(err.message || 'Erro ao aprovar.');
       },
     });
   }
@@ -105,12 +103,11 @@ export class PrsComponent implements OnInit {
         this.prs.update(list => list.filter(p => p.id !== pr.id));
         this.fecharPR();
         this.resolvendo.set(false);
-        this.mostrarNotificacao('PR rejeitada.');
+        this.notif.mostrar('PR rejeitada.');
       },
       error: (err: Error) => {
         this.resolvendo.set(false);
-        this.erroMsg.set(err.message || 'Erro ao rejeitar.');
-        setTimeout(() => this.erroMsg.set(null), 5000);
+        this.notif.mostrarErro(err.message || 'Erro ao rejeitar.');
       },
     });
   }
@@ -157,11 +154,6 @@ export class PrsComponent implements OnInit {
       }
     }
     return resultado;
-  }
-
-  private mostrarNotificacao(msg: string) {
-    this.notificacao.set(msg);
-    setTimeout(() => this.notificacao.set(null), 3000);
   }
 
   formatarData(iso: string): string {

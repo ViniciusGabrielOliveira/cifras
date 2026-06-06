@@ -1,5 +1,4 @@
 import { Component, computed, effect, inject, input, output, signal, untracked, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
@@ -15,7 +14,7 @@ function extrairYoutubeId(url: string): string | null {
 @Component({
   selector: 'app-cifra-viewer',
   standalone: true,
-  imports: [CommonModule, RouterLink, SecaoCifraComponent],
+  imports: [RouterLink, SecaoCifraComponent],
   templateUrl: './cifra-viewer.html',
   styleUrl: './cifra-viewer.scss',
 })

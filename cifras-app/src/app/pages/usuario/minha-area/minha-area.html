@@ -1,8 +1,5 @@
-@if (notificacao()) {
-  <div class="toast-notificacao">{{ notificacao() }}</div>
-}
-@if (erroMsg()) {
-  <div class="toast-erro">{{ erroMsg() }}</div>
+@if (notif.notificacao(); as n) {
+  <div [class]="n.erro ? 'toast-erro' : 'toast-notificacao'">{{ n.msg }}</div>
 }
 
 <header class="area-header">
@@ -47,18 +44,19 @@
     <div class="nova-lista-form">
       <h3 class="form-titulo">Nova Lista</h3>
       <div class="form-campo">
-        <label>Título</label>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="Ex: Missa de domingo"
-          [ngModel]="novaListaTitulo()"
-          (ngModelChange)="novaListaTitulo.set($event)"
-          (keyup.enter)="criarLista()"
-          autofocus
-        />
+        <label>Título
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Ex: Missa de domingo"
+            [ngModel]="novaListaTitulo()"
+            (ngModelChange)="novaListaTitulo.set($event)"
+            (keyup.enter)="criarLista()"
+          />
+        </label>
       </div>
       <div class="form-campo">
+        <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
         <label>Categoria</label>
         <app-select class="form-select"
           [options]="categoriasOptions()"
@@ -89,7 +87,7 @@
   } @else {
     <div class="listas-grid">
       @for (lista of minhasListas(); track lista.id) {
-        <div class="lista-card" (click)="abrirLista(lista.id)">
+        <div class="lista-card" (click)="abrirLista(lista.id)" (keydown.enter)="abrirLista(lista.id)" tabindex="0" role="button">
           <div class="lista-card-main">
             @if (lista.categoria) {
             <span class="lista-cat-pill">{{ categoriasLabels[lista.categoria] ?? lista.categoria }}</span>
@@ -99,7 +97,7 @@
           </div>
           <div class="lista-card-side">
             @if (confirmandoExclusao() === lista.id) {
-              <div class="card-confirm" (click)="$event.stopPropagation()">
+              <div class="card-confirm" (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()" tabindex="-1">
                 <span class="confirm-label">Excluir?</span>
                 <button class="btn-confirm-sim" (click)="excluirLista(lista.id)">Sim</button>
                 <button class="btn-confirm-nao" (click)="cancelarExcluir()">Não</button>

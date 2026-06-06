@@ -1,21 +1,17 @@
-import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef, ViewChild } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
-import { Cifra, LinhaCifra, Secao, TipoSecao, MotivoVersao } from '../../../models/cifra.model';
-import { LinhaEditorComponent } from '../../../components/linha-editor/linha-editor';
-import { AppSelectComponent } from '../../../components/app-select/app-select';
+import { Cifra } from '../../../models/cifra.model';
 import { CifraPrModalComponent, FluxoPR, ResultadoPRModal } from '../../../components/cifra-pr-modal/cifra-pr-modal';
+import { CifraMetadataFormComponent } from '../../../components/cifra-metadata-form/cifra-metadata-form';
+import { SecoesCifraEditorComponent } from '../../../components/secoes-cifra-editor/secoes-cifra-editor';
 import { CifraService } from '../../../services/cifra.service';
 import { AcordesService } from '../../../services/acordes.service';
-import { ConfigService } from '../../../services/config.service';
 import { AuthService } from '../../../services/auth.service';
 import { CifraClubImportService } from '../../../services/cifraclub-import.service';
-import { parseCifraTexto, cifraToTexto, slugify, TONS } from '../../../core/cifra-parser';
-
-const TIPOS: TipoSecao[] = ['intro', 'verso', 'pre-refrao', 'refrao', 'ponte', 'outro', 'solo', 'tab'];
+import { parseCifraTexto, slugify, TONS } from '../../../core/cifra-parser';
+import { NotificationService } from '../../../services/notification.service';
+import { ConfirmDialogService } from '../../../services/confirm-dialog.service';
 
 const CIFRA_VAZIA: Cifra = {
   id: '', titulo: '', artista: '', tom: 'C',
@@ -27,7 +23,7 @@ const CIFRA_VAZIA: Cifra = {
 @Component({
   selector: 'app-cifra-editor',
   standalone: true,
-  imports: [CommonModule, FormsModule, DragDropModule, LinhaEditorComponent, AppSelectComponent, CifraPrModalComponent],
+  imports: [CifraPrModalComponent, CifraMetadataFormComponent, SecoesCifraEditorComponent],
   templateUrl: './cifra-editor.html',
   styleUrl: './cifra-editor.scss',
 })
@@ -36,17 +32,16 @@ export class CifraEditorComponent implements OnInit {
   private router       = inject(Router);
   private cifraService = inject(CifraService);
   private acordesService = inject(AcordesService);
-  private config       = inject(ConfigService);
   private auth         = inject(AuthService);
   private cifraClub    = inject(CifraClubImportService);
   private destroyRef   = inject(DestroyRef);
+  readonly notif       = inject(NotificationService);
+  private confirmDialog = inject(ConfirmDialogService);
 
-  // ─── Modo ────────────────────────────────────────────────────────────────────
+  @ViewChild(SecoesCifraEditorComponent) secoesEditor!: SecoesCifraEditorComponent;
 
   readonly userMode   = computed(() => !!this.route.snapshot.data['userMode']);
   readonly modoEditar = computed(() => !!this.route.snapshot.paramMap.get('id'));
-
-  // ─── Estado ──────────────────────────────────────────────────────────────────
 
   cifra       = signal<Cifra | null>(null);
   loading     = signal(false);
@@ -54,11 +49,7 @@ export class CifraEditorComponent implements OnInit {
   saving      = signal(false);
   saved       = signal(false);
   erroTitulo  = signal(false);
-  erroSalvar  = signal<string | null>(null);
-  modoTexto   = signal(false);
-  textoEditor = signal('');
 
-  // ── Modal PR ─────────────────────────────────────────────────────
   modalPRAberto    = signal(false);
   modalPRFluxo     = signal<FluxoPR>('nova_cifra');
   modalPRSubmitting = signal(false);
@@ -67,36 +58,10 @@ export class CifraEditorComponent implements OnInit {
   private _salvouNestaSessao = false;
   private _oldCifraId: string | null = null;
 
-  // ─── Opções ──────────────────────────────────────────────────────────────────
-
-  readonly categorias        = this.config.categorias;
-  readonly partesMissa       = this.config.partesMissa;
-  readonly tonsOptions       = TONS;
-  readonly tiposSecaoOptions = TIPOS;
-  readonly instrumentoOptions = [
-    { value: 'violao',   label: 'Violão' },
-    { value: 'guitarra', label: 'Guitarra' },
-    { value: 'cavaco',   label: 'Cavaquinho' },
-    { value: 'ukulele',  label: 'Ukulele' },
-  ];
-  readonly dificuldadeOptions = [
-    { value: 'iniciante',    label: 'Iniciante' },
-    { value: 'basico',       label: 'Básico' },
-    { value: 'intermediario', label: 'Intermediário' },
-    { value: 'avancado',     label: 'Avançado' },
-  ];
-
-  get idGerado(): string {
-    return this.cifra()?.id || '(preencha o título)';
-  }
-
-  // ─── Inicialização ───────────────────────────────────────────────────────────
-
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
-      // Modo editar: carrega do servidor
       this.loading.set(true);
       this.cifraService.getCifra(id)
         .pipe(takeUntilDestroyed(this.destroyRef))
@@ -110,7 +75,6 @@ export class CifraEditorComponent implements OnInit {
           this.loading.set(false);
         });
     } else {
-      // Modo criar: verifica import pendente do CifraClub
       const pending = this.cifraClub.pendingImport;
       if (pending) {
         this.cifraClub.pendingImport = null;
@@ -130,10 +94,8 @@ export class CifraEditorComponent implements OnInit {
     }
   }
 
-  // ─── Navegação ───────────────────────────────────────────────────────────────
-
-  voltar() {
-    if (!this.modoEditar() && !confirm('Descartar a nova música?')) return;
+  async voltar() {
+    if (!this.modoEditar() && !await this.confirmDialog.confirmar('Descartar a nova música?')) return;
 
     if (this.userMode()) {
       const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
@@ -174,124 +136,12 @@ export class CifraEditorComponent implements OnInit {
     }
   }
 
-  // ─── Metadados ───────────────────────────────────────────────────────────────
-
-  updateMeta(field: keyof Cifra, value: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const updated = { ...c, [field]: value };
-      if (field === 'titulo' && !this.modoEditar()) updated.id = slugify(value);
-      return updated;
-    });
-    if (field === 'titulo') this.erroTitulo.set(false);
+  onCifraMetadataChange(updated: Cifra) {
+    this.cifra.set(updated);
+    if (this.erroTitulo()) this.erroTitulo.set(false);
   }
-
-  toggleCategoria(id: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const cats = c.categorias ?? [];
-      return { ...c, categorias: cats.includes(id) ? cats.filter(x => x !== id) : [...cats, id] };
-    });
-  }
-
-  toggleParte(id: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const partes = c.partesMissa ?? [];
-      return { ...c, partesMissa: partes.includes(id) ? partes.filter(x => x !== id) : [...partes, id] };
-    });
-  }
-
-  // ─── Seções ──────────────────────────────────────────────────────────────────
-
-  addSecao() {
-    const nova: Secao = { tipo: 'verso', label: 'Nova Seção', linhas: [{ letra: '', acordes: [] }] };
-    this.cifra.update(c => c ? { ...c, secoes: [...c.secoes, nova] } : c);
-  }
-
-  removeSecao(idx: number) {
-    this.cifra.update(c => c ? { ...c, secoes: c.secoes.filter((_, i) => i !== idx) } : c);
-  }
-
-  updateSecaoLabel(idx: number, label: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      secoes[idx] = { ...secoes[idx], label };
-      return { ...c, secoes };
-    });
-  }
-
-  onSecaoTipoChange(idx: number, value: string) {
-    this.updateSecaoTipo(idx, value as TipoSecao);
-  }
-
-  updateSecaoTipo(idx: number, tipo: TipoSecao) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      const secao  = secoes[idx];
-      if (tipo === 'tab') {
-        secoes[idx] = { ...secao, tipo, linhas: [], tabText: secao.linhas.map(l => l.letra).join('\n') };
-      } else if (secao.tipo === 'tab') {
-        secoes[idx] = { ...secao, tipo, linhas: (secao.tabText ?? '').split('\n').map(l => ({ letra: l, acordes: [] })), tabText: undefined };
-      } else {
-        secoes[idx] = { ...secao, tipo };
-      }
-      return { ...c, secoes };
-    });
-  }
-
-  updateTabText(idx: number, tabText: string) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      secoes[idx] = { ...secoes[idx], tabText };
-      return { ...c, secoes };
-    });
-  }
-
-  // ─── Linhas ──────────────────────────────────────────────────────────────────
-
-  addLinha(secaoIdx: number) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas: [...secoes[secaoIdx].linhas, { letra: '', acordes: [] }] };
-      return { ...c, secoes };
-    });
-  }
-
-  removeLinha(secaoIdx: number, linhaIdx: number) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas: secoes[secaoIdx].linhas.filter((_, i) => i !== linhaIdx) };
-      return { ...c, secoes };
-    });
-  }
-
-  updateLinha(secaoIdx: number, linhaIdx: number, linha: LinhaCifra) {
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      const linhas = [...secoes[secaoIdx].linhas];
-      linhas[linhaIdx] = linha;
-      secoes[secaoIdx] = { ...secoes[secaoIdx], linhas };
-      return { ...c, secoes };
-    });
-  }
-
-  // ─── Salvar ──────────────────────────────────────────────────────────────────
 
   salvar() {
-    if (this.modoTexto()) {
-      const texto = this.textoEditor();
-      if (texto.trim()) {
-        this.cifra.update(c => c ? { ...c, secoes: parseCifraTexto(texto) } : c);
-      }
-    }
-
     const c = this.cifra();
     if (!c) return;
 
@@ -300,39 +150,38 @@ export class CifraEditorComponent implements OnInit {
       return;
     }
 
+    const secoes = this.secoesEditor?.getSecoesAtuais() ?? c.secoes;
+    const cifraFinal = { ...c, secoes };
+
     const uid     = this.auth.user()?.uid ?? '';
     const isAdmin = this.auth.hasRole('admin');
 
     if (this.userMode() && !isAdmin) {
       if (!this.modoEditar()) {
-        // Nova cifra: pergunta se quer submeter como pública
-        this._cifraParaPR = { ...c, donoUid: uid };
+        this._cifraParaPR = { ...cifraFinal, donoUid: uid };
         this.modalPRFluxo.set('nova_cifra');
         this.modalPRAberto.set(true);
         return;
       }
 
-      if (c.status === 'publica') {
-        // Editando cifra pública: abre fluxo de nova versão
-        this._cifraParaPR = c;
+      if (cifraFinal.status === 'publica') {
+        this._cifraParaPR = cifraFinal;
         this.modalPRFluxo.set('nova_versao');
         this.modalPRAberto.set(true);
         return;
       }
 
-      if (c.status !== 'privada' || c.donoUid !== uid) {
-        // Editando cifra de outro: cria cópia privada (comportamento legado)
+      if (cifraFinal.status !== 'privada' || cifraFinal.donoUid !== uid) {
         this.cifraService.countCifrasDoUser(uid)
           .pipe(takeUntilDestroyed(this.destroyRef))
           .subscribe(count => {
           if (count >= 25) {
-            this.erroSalvar.set('Limite de 25 músicas editadas atingido. Remova uma antes de editar outra.');
-            setTimeout(() => this.erroSalvar.set(null), 5000);
+            this.notif.mostrarErro('Limite de 25 músicas editadas atingido. Remova uma antes de editar outra.');
             return;
           }
-          this._oldCifraId = c.id;
+          this._oldCifraId = cifraFinal.id;
           const novoId = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-          const privada = { ...c, id: novoId, status: 'privada' as const, donoUid: uid };
+          const privada = { ...cifraFinal, id: novoId, status: 'privada' as const, donoUid: uid };
           this.cifra.set(privada);
           this._executarSalvar(privada);
         });
@@ -340,7 +189,7 @@ export class CifraEditorComponent implements OnInit {
       }
     }
 
-    this._executarSalvar(c);
+    this._executarSalvar(cifraFinal);
   }
 
   onResultadoPRModal(resultado: ResultadoPRModal) {
@@ -358,7 +207,6 @@ export class CifraEditorComponent implements OnInit {
       return;
     }
 
-    // submeter_pr
     const uid      = this.auth.user()?.uid ?? '';
     const userName = this.auth.user()?.displayName ?? uid;
     const cifraId  = this.modalPRFluxo() === 'nova_versao' ? c.id : null;
@@ -366,12 +214,7 @@ export class CifraEditorComponent implements OnInit {
 
     this.modalPRSubmitting.set(true);
     this.cifraService.submeterPR(
-      dadosCifra,
-      cifraId,
-      uid,
-      userName,
-      resultado.motivo,
-      resultado.motivoCustom,
+      dadosCifra, cifraId, uid, userName, resultado.motivo, resultado.motivoCustom,
     ).subscribe({
       next: () => {
         this.modalPRSubmitting.set(false);
@@ -379,17 +222,13 @@ export class CifraEditorComponent implements OnInit {
         this.saved.set(true);
         setTimeout(() => {
           const retornoLista = this.route.snapshot.queryParamMap.get('retornoLista');
-          if (retornoLista) {
-            this.router.navigate(['/minha-area/lista', retornoLista]);
-          } else {
-            this.router.navigate(['/minha-area']);
-          }
+          if (retornoLista) this.router.navigate(['/minha-area/lista', retornoLista]);
+          else this.router.navigate(['/minha-area']);
         }, 800);
       },
       error: (err: Error) => {
         this.modalPRSubmitting.set(false);
-        this.erroSalvar.set(err.message || 'Erro ao enviar solicitação.');
-        setTimeout(() => this.erroSalvar.set(null), 5000);
+        this.notif.mostrarErro(err.message || 'Erro ao enviar solicitação.');
       },
     });
   }
@@ -425,114 +264,21 @@ export class CifraEditorComponent implements OnInit {
       },
       error: (err: Error) => {
         this.saving.set(false);
-        this.erroSalvar.set(err.message || 'Erro ao salvar. Tente novamente.');
-        setTimeout(() => this.erroSalvar.set(null), 5000);
+        this.notif.mostrarErro(err.message || 'Erro ao salvar. Tente novamente.');
       },
     });
   }
 
-  resetarOriginal() {
+  async resetarOriginal() {
     const c = this.cifra();
     if (!c) return;
-    if (!confirm('Descartar todas as edições e recarregar do servidor?')) return;
+    if (!await this.confirmDialog.confirmar('Descartar todas as edições e recarregar do servidor?')) return;
     this.cifraService.getCifra(c.id).subscribe(original => {
-      if (original) this.cifra.set(JSON.parse(JSON.stringify(original)));
+      if (original) {
+        const deep = JSON.parse(JSON.stringify(original));
+        this.cifra.set(deep);
+        this.secoesEditor?.reset(deep.secoes);
+      }
     });
-  }
-
-  // ─── Modo texto / visual ─────────────────────────────────────────────────────
-
-  entrarModoTexto() {
-    const c = this.cifra();
-    if (c) this.textoEditor.set(cifraToTexto(c.secoes));
-    this.modoTexto.set(true);
-  }
-
-  entrarModoVisual() {
-    const texto = this.textoEditor();
-    if (texto.trim()) {
-      this.cifra.update(c => c ? { ...c, secoes: parseCifraTexto(texto) } : c);
-    }
-    this.modoTexto.set(false);
-  }
-
-  // ─── Seleção / Copiar / Colar ────────────────────────────────────────────────
-
-  selecionadas = signal<Set<string>>(new Set());
-  clipboard    = signal<LinhaCifra[] | null>(null);
-  temSelecao   = computed(() => this.selecionadas().size > 0);
-
-  linhaKey(si: number, li: number) { return `${si}-${li}`; }
-
-  isSelected(si: number, li: number) {
-    return this.selecionadas().has(this.linhaKey(si, li));
-  }
-
-  toggleSelecao(si: number, li: number) {
-    this.selecionadas.update(s => {
-      const n = new Set(s);
-      const k = this.linhaKey(si, li);
-      n.has(k) ? n.delete(k) : n.add(k);
-      return n;
-    });
-  }
-
-  limparSelecao() { this.selecionadas.set(new Set()); }
-
-  private _linhasSelecionadas(): LinhaCifra[] {
-    const c = this.cifra();
-    if (!c) return [];
-    const keys = this.selecionadas();
-    const out: LinhaCifra[] = [];
-    c.secoes.forEach((s, si) => s.linhas.forEach((l, li) => {
-      if (keys.has(this.linhaKey(si, li))) out.push(JSON.parse(JSON.stringify(l)));
-    }));
-    return out;
-  }
-
-  copiarSelecionadas() {
-    this.clipboard.set(this._linhasSelecionadas());
-    this.selecionadas.set(new Set());
-  }
-
-  recortarSelecionadas() {
-    this.clipboard.set(this._linhasSelecionadas());
-    const keys = this.selecionadas();
-    this.cifra.update(c => {
-      if (!c) return c;
-      return { ...c, secoes: c.secoes.map((s, si) => ({
-        ...s, linhas: s.linhas.filter((_, li) => !keys.has(this.linhaKey(si, li))),
-      }))};
-    });
-    this.selecionadas.set(new Set());
-  }
-
-  colarEm(si: number, li: number) {
-    const linhas = this.clipboard();
-    if (!linhas?.length) return;
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = [...c.secoes];
-      const novas  = [...secoes[si].linhas];
-      novas.splice(li, 0, ...linhas.map(l => JSON.parse(JSON.stringify(l))));
-      secoes[si] = { ...secoes[si], linhas: novas };
-      return { ...c, secoes };
-    });
-  }
-
-  // ─── Drag & Drop de linhas ───────────────────────────────────────────────────
-
-  onLinhasDrop(event: CdkDragDrop<number>) {
-    if (event.previousContainer === event.container && event.previousIndex === event.currentIndex) return;
-    const fromSi = event.previousContainer.data;
-    const toSi   = event.container.data;
-    this.cifra.update(c => {
-      if (!c) return c;
-      const secoes = c.secoes.map(s => ({ ...s, linhas: [...s.linhas] }));
-      const [linha] = secoes[fromSi].linhas.splice(event.previousIndex, 1);
-      secoes[toSi].linhas.splice(event.currentIndex, 0, linha);
-      return { ...c, secoes };
-    });
-    this.selecionadas.set(new Set());
   }
 }
