@@ -1,27 +1,19 @@
-/* O :host é inline dentro do .seg-acorde */
-:host {
-  display: inline-block;
-}
+:host { display: inline-block; }
 
 .acorde-chip {
   position: relative;
   display: inline-block;
-  color: var(--color-acorde);
-  font-weight: 700;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
   font-size: 0.82em;
-  /* em → herda font-size do pai */
   line-height: 1.5;
   cursor: pointer;
   white-space: nowrap;
   padding: 0 1px;
   border-radius: 3px;
-  transition: color 0.15s, background 0.15s;
+  transition: color var(--transition-fast), background var(--transition-fast);
   user-select: none;
-
-  &:hover {
-    color: var(--color-acorde-hover);
-    background: var(--color-acorde-bg);
-  }
+  &:hover { color: var(--color-primary-hover, #5a52e8); background: rgba(var(--color-primary-rgb), 0.08); }
 }
 
 .popup-wrapper {
@@ -32,35 +24,34 @@
 }
 
 .diagrama-indisponivel {
-  background: var(--color-bg);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  padding: var(--sp-3) 20px;
   min-width: 80px;
   text-align: center;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: 1.1rem;
-  color: var(--color-acorde);
+  color: var(--color-primary);
 }
 
 .diagrama-loading {
-  background: var(--color-bg);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: var(--radius-md);
+  padding: var(--sp-6);
   min-width: 148px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--shadow-modal);
 }
 
 .spinner-mini {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 20px; height: 20px;
   border: 2px solid var(--color-border);
-  border-top-color: var(--color-acorde);
-  border-radius: 50%;
-  animation: global-spin 0.7s linear infinite;
+  border-top-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  animation: ds-spin 0.7s linear infinite;
 }

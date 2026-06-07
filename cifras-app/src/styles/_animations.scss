@@ -1,0 +1,38 @@
+// ─── Animações — Cifras Design System ────────────────────────────────────────
+// Todas as animações reutilizáveis do sistema.
+// Regra: motion a serviço de feedback, não de decoração.
+
+@keyframes ds-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ds-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes ds-slide-up {
+  from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes ds-slide-up-sheet {
+  from { opacity: 0; transform: translateY(48px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ds-scale-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes ds-modal-in {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 24px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+// ── Classes de animação ────────────────────────────────────────────────────────
+
+.anim-fade-in       { animation: ds-fade-in       var(--transition-base) ease; }
+.anim-slide-up      { animation: ds-slide-up-sheet var(--transition-slow) var(--ease-spring); }
+.anim-scale-in      { animation: ds-scale-in       var(--transition-slow) var(--ease-spring); }

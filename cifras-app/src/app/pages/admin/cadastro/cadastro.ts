@@ -20,7 +20,7 @@ export class CadastroComponent {
     }
 
     private rotaPosLogin(): string {
-        return this.returnUrl || (this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area');
+        return this.returnUrl || '/';
     }
 
     nome = signal('');

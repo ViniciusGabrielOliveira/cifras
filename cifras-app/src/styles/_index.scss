@@ -1,0 +1,9 @@
+// ─── Design System — Entry Point ──────────────────────────────────────────────
+// Importar este arquivo em styles.scss.
+// A ordem importa: tokens → tipografia → animações → componentes → utilidades.
+
+@forward 'tokens';
+@forward 'typography';
+@forward 'animations';
+@forward 'components';
+@forward 'utilities';

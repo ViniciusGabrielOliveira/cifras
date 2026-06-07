@@ -7,3 +7,4 @@ export * from './confirm-dialog.service';
 export * from './lista.service';
 export * from './live.service';
 export * from './notification.service';
+export * from './theme.service';

@@ -5,13 +5,15 @@ import { CifraService } from '../../services/cifra.service';
 import { AuthService } from '../../services/auth.service';
 import { Cifra, CifraCustom } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../../components/secao-cifra/secao-cifra';
+import { AppButtonComponent } from '../../components/app-button/app-button';
+import { AppSegmentedControlComponent } from '../../components/app-segmented-control/app-segmented-control';
 import { parseCifraTexto, cifraToTexto } from '../../core/cifra-parser';
 import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-cifra-editar',
   standalone: true,
-  imports: [SecaoCifraComponent],
+  imports: [SecaoCifraComponent, AppButtonComponent, AppSegmentedControlComponent],
   templateUrl: './cifra-editar.html',
   styleUrl: './cifra-editar.scss',
 })

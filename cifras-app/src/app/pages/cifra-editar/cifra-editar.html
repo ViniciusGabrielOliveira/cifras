@@ -2,90 +2,79 @@
 
   <!-- ── Header ─────────────────────────────────────────────────── -->
   <header class="editor-header">
-    <button class="btn-voltar" (click)="voltar()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18">
-        <polyline points="15 18 9 12 15 6"/>
+    <app-button variant="ghost" size="sm" (click)="voltar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15">
+        <polyline points="15 18 9 12 15 6" />
       </svg>
       Voltar
-    </button>
+    </app-button>
 
-    @if (cifra(); as c) {
-      <div class="editor-info">
-        <h1 class="editor-titulo">{{ c.titulo }}</h1>
-        @if (c.artista) {
-          <span class="editor-artista">{{ c.artista }}</span>
-        }
-      </div>
-    }
+
 
     <div class="editor-acoes">
-      <div class="modo-toggle">
-        <button class="modo-btn" [class.ativo]="!modoPreview()" (click)="modoPreview.set(false)">
-          Texto
-        </button>
-        <button class="modo-btn" [class.ativo]="modoPreview()" (click)="modoPreview.set(true)">
-          Prévia
-        </button>
-      </div>
+      <app-segmented-control [options]="['Texto', 'Prévia']" [value]="modoPreview() ? 'Prévia' : 'Texto'"
+        (changed)="modoPreview.set($event === 'Prévia')" />
       @if (!prEnviado()) {
-        <button class="btn-salvar" (click)="salvar()" [disabled]="salvando()">
-          @if (salvando()) { Enviando... } @else { Salvar }
-        </button>
+      <app-button size="sm" [loading]="salvando()" (click)="salvar()">
+        Salvar
+      </app-button>
       }
     </div>
   </header>
 
+  @if (cifra(); as c) {
+  <div class="editor-info">
+    <h1 class="editor-titulo">{{ c.titulo }}</h1>
+    @if (c.artista) {
+    <span class="editor-artista">{{ c.artista }}</span>
+    }
+  </div>
+  }
+
   <!-- ── States ──────────────────────────────────────────────────── -->
   @if (loading()) {
-    <div class="editor-estado">
-      <div class="spinner"></div>
-      <span>Carregando...</span>
-    </div>
+  <div class="editor-estado">
+    <div class="spinner"></div>
+    <span>Carregando...</span>
+  </div>
   } @else if (erro()) {
-    <div class="editor-estado">
-      <p>Música não encontrada.</p>
-      <button class="btn-voltar-inline" (click)="voltar()">Voltar</button>
-    </div>
+  <div class="editor-estado">
+    <p>Música não encontrada.</p>
+    <app-button variant="ghost" (click)="voltar()">Voltar</app-button>
+  </div>
   } @else {
 
-    <!-- ── Banner de sucesso ──────────────────────────────────────── -->
-    @if (prEnviado()) {
-      <div class="sucesso-banner">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
-        Versão salva e enviada para revisão. O admin irá avaliar em breve.
-        <button class="btn-voltar-cifra" (click)="voltar()">Ver cifra</button>
-      </div>
-    }
-    @if (notif.notificacao(); as n) {
-      <div class="erro-banner">{{ n.msg }}</div>
-    }
+  <!-- ── Banner de sucesso ──────────────────────────────────────── -->
+  @if (prEnviado()) {
+  <div class="sucesso-banner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+    Versão salva e enviada para revisão. O admin irá avaliar em breve.
+    <app-button variant="link" size="sm" (click)="voltar()">Ver cifra</app-button>
+  </div>
+  }
+  @if (notif.notificacao(); as n) {
+  <div class="erro-banner">{{ n.msg }}</div>
+  }
 
-    <!-- ── Editor / Prévia ────────────────────────────────────────── -->
-    @if (!modoPreview()) {
-      <div class="editor-wrap">
-        <p class="editor-dica">
-          Use <code>[Nome da Seção]</code> para delimitar seções. Coloque os acordes na linha acima da letra.
-        </p>
-        <textarea
-          class="editor-textarea"
-          [value]="textoCifra()"
-          (input)="textoCifra.set($any($event.target).value)"
-          spellcheck="false"
-          autocorrect="off"
-          autocapitalize="off"
-          autocomplete="off"
-          placeholder="[Verso 1]&#10;G     C     D&#10;Letra da música aqui..."
-        ></textarea>
-      </div>
-    } @else {
-      <div class="editor-preview cifra-secoes">
-        @for (secao of secoesPreview(); track $index) {
-          <app-secao-cifra [secao]="secao" />
-        }
-      </div>
+  <!-- ── Editor / Prévia ────────────────────────────────────────── -->
+  @if (!modoPreview()) {
+  <div class="editor-wrap">
+    <p class="editor-dica">
+      Use <code>[Nome da Seção]</code> para delimitar seções. Coloque os acordes na linha acima da letra.
+    </p>
+    <textarea class="editor-textarea" [value]="textoCifra()" (input)="textoCifra.set($any($event.target).value)"
+      spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off"
+      placeholder="[Verso 1]&#10;G     C     D&#10;Letra da música aqui..."></textarea>
+  </div>
+  } @else {
+  <div class="editor-preview cifra-secoes">
+    @for (secao of secoesPreview(); track $index) {
+    <app-secao-cifra [secao]="secao" />
     }
+  </div>
+  }
   }
 
 

@@ -1,8 +1,8 @@
 .pr-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  background: var(--color-overlay);
+  z-index: var(--z-modal-bg);
 }
 
 .pr-modal {
@@ -10,73 +10,81 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 101;
-  background: var(--surface, #fff);
-  border-radius: 12px;
-  padding: 2rem;
+  z-index: var(--z-modal);
+  background: var(--color-surface-modal);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
   width: min(480px, 90vw);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-modal);
 
   &__titulo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 0.75rem;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-1);
+    margin: 0 0 var(--sp-3);
   }
 
   &__descricao {
-    color: var(--text-secondary, #555);
-    margin: 0 0 1.5rem;
+    color: var(--color-text-2);
+    margin: 0 0 var(--sp-6);
     line-height: 1.5;
+    font-size: var(--font-size-sm);
   }
 
   &__acoes {
     display: flex;
     justify-content: flex-end;
-    gap: 0.75rem;
+    gap: var(--sp-3);
     flex-wrap: wrap;
   }
 
   &__motivos {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-4);
   }
 
   &__motivo-btn {
     text-align: left;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    border: 1.5px solid var(--border, #ddd);
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--color-border);
     background: transparent;
+    color: var(--color-text-1);
     cursor: pointer;
-    font-size: 0.95rem;
-    transition: border-color 0.15s, background 0.15s;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family);
+    transition: border-color var(--transition-fast), background var(--transition-fast);
 
     &--ativo {
-      border-color: var(--primary, #1a73e8);
-      background: var(--primary-light, #e8f0fe);
-      font-weight: 500;
+      border-color: var(--color-primary);
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      font-weight: var(--font-weight-medium);
     }
 
-    &:hover:not(&--ativo) {
-      border-color: var(--primary, #1a73e8);
-    }
+    &:hover:not(&--ativo) { border-color: var(--color-primary); }
   }
 
   &__motivo-texto {
     width: 100%;
-    border: 1.5px solid var(--border, #ddd);
-    border-radius: 8px;
-    padding: 0.6rem 0.75rem;
-    font-size: 0.95rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--sp-2) var(--sp-3);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family);
+    color: var(--color-text-1);
+    background: var(--color-surface-2);
     resize: vertical;
-    margin-bottom: 1rem;
+    margin-bottom: var(--sp-4);
     box-sizing: border-box;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
 
     &:focus {
       outline: none;
-      border-color: var(--primary, #1a73e8);
+      border-color: var(--color-primary);
+      background: var(--color-surface);
     }
   }
 }

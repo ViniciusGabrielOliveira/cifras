@@ -24,7 +24,7 @@ export class CompletarCadastroComponent implements OnInit {
     }
 
     private rotaPosLogin(): string {
-        return this.returnUrl || (this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area');
+        return this.returnUrl || '/';
     }
 
     ngOnInit() {

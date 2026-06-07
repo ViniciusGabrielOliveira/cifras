@@ -1,0 +1,10 @@
+<div class="segmented">
+  @for (opt of options(); track opt) {
+    <button
+      class="segmented__btn"
+      [class.segmented__btn--active]="opt === value()"
+      type="button"
+      (click)="changed.emit(opt)"
+    >{{ opt }}</button>
+  }
+</div>

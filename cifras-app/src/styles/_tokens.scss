@@ -1,0 +1,154 @@
+// ─── Design Tokens — Cifras Design System ────────────────────────────────────
+// Fonte de verdade para todas as variáveis de estilo.
+// Importar via styles/_index.scss. Nunca hardcode valores fora daqui.
+
+:root {
+  // ── Cores principais ─────────────────────────────────────────────────────
+  --color-primary:     #6C63FF;
+  --color-primary-hover: #5a52e8;
+  --color-primary-light: #EDE9FE;   // chip bg, tints
+
+  // Aliases mantidos para compatibilidade com componentes existentes
+  --color-acorde:      #6C63FF;
+  --color-acorde-hover: #5a52e8;
+  --color-acorde-bg:   rgba(108, 99, 255, 0.10);
+
+  // ── Acentos ──────────────────────────────────────────────────────────────
+  --color-accent-1:    #FF6B35;   // laranja — progress, tags
+  --color-accent-2:    #38B2AC;   // teal   — progress, tags
+  --color-accent-3:    #F6AD55;   // amarelo — progress, tags
+  --color-success:     #22C55E;
+  --color-danger:      #EF4444;
+
+  // ── Superfícies ──────────────────────────────────────────────────────────
+  --color-bg:          #FAFAFA;
+  --color-surface:     #FFFFFF;
+  --color-surface-2:   #F5F5FF;   // inputs, hover suave
+  --color-border:      rgba(108, 99, 255, 0.12);
+
+  // ── Texto ────────────────────────────────────────────────────────────────
+  --color-text:        #1A1A2E;
+  --color-text-1:      #1A1A2E;
+  --color-text-2:      #6B7280;
+  --color-text-muted:  #6B7280;
+  --color-text-inv:    #FFFFFF;
+
+  // ── Chip / badge ─────────────────────────────────────────────────────────
+  --color-chip-bg:     #EDE9FE;
+
+  // ── Gradiente hero ───────────────────────────────────────────────────────
+  --gradient-hero:     linear-gradient(135deg, #6C63FF 0%, #8B83FF 100%);
+
+  // ── Instrumentos (diagrama de violão) ────────────────────────────────────
+  --color-frets:       rgba(0, 0, 0, 0.12);
+  --color-strings:     rgba(0, 0, 0, 0.25);
+  --color-nut:         #c9a14a;
+
+  // ── Border Radius ────────────────────────────────────────────────────────
+  --radius-sm:         8px;
+  --radius-md:         12px;
+  --radius-lg:         16px;
+  --radius-xl:         20px;
+  --radius-pill:       9999px;
+
+  // ── Sombras ──────────────────────────────────────────────────────────────
+  --shadow-card:       0 4px 20px rgba(108, 99, 255, 0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 8px 32px rgba(108, 99, 255, 0.14), 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-btn:        0 6px 20px rgba(108, 99, 255, 0.35);
+  --shadow-btn-hover:  0 10px 28px rgba(108, 99, 255, 0.45);
+  --shadow-nav:        0 -4px 24px rgba(0,0,0,0.06);
+  --shadow-modal:      0 24px 64px rgba(0,0,0,0.18), 0 4px 16px rgba(108,99,255,0.08);
+  --shadow-fab:        0 4px 20px rgba(108, 99, 255, 0.50);
+
+  // ── Espaçamento (escala 4px) ─────────────────────────────────────────────
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+
+  // ── Tipografia ───────────────────────────────────────────────────────────
+  --font-family:       'Poppins', 'Inter', -apple-system, sans-serif;
+  --font-size-xs:      12px;
+  --font-size-sm:      14px;
+  --font-size-md:      16px;
+  --font-size-lg:      18px;
+  --font-size-xl:      22px;
+  --font-size-2xl:     24px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:    700;
+  --font-weight-heavy:   800;
+
+  // ── Motion ───────────────────────────────────────────────────────────────
+  --transition-fast:   120ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   300ms ease;
+  --ease-spring:       cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  // ── RGB para rgba() inline ────────────────────────────────────────────────
+  --color-primary-rgb: 108, 99, 255;
+  --color-danger-rgb:  239, 68, 68;
+  --color-success-rgb: 34, 197, 94;
+  --color-bg-rgb:      250, 250, 250;
+
+  // ── Semânticos: danger / success backgrounds ──────────────────────────────
+  --color-danger-bg:   rgba(239, 68, 68, 0.10);
+  --color-success-bg:  rgba(34, 197, 94, 0.10);
+
+  // ── Superfície de modais / drawers ────────────────────────────────────────
+  --color-surface-modal: #FFFFFF;
+  --color-overlay:       rgba(0, 0, 0, 0.40);
+
+  // ── Diff (página de PRs) ──────────────────────────────────────────────────
+  --color-diff-add:    #e6ffec;
+  --color-diff-add-text: #1a7f37;
+  --color-diff-remove: #ffebe9;
+  --color-diff-remove-text: #cf222e;
+
+  // ── Z-index scale ─────────────────────────────────────────────────────────
+  --z-fab:       100;
+  --z-header:    200;
+  --z-dropdown:  300;
+  --z-modal-bg:  500;
+  --z-modal:     501;
+  --z-toast:    1100;
+}
+
+// ─── Dark Mode Overrides ──────────────────────────────────────────────────────
+
+[data-theme="dark"] {
+  --color-bg:            #0f1117;
+  --color-bg-rgb:        15, 17, 23;
+  --color-surface:       #1a1d27;
+  --color-surface-2:     rgba(255, 255, 255, 0.04);
+  --color-surface-modal: #1e2130;
+  --color-border:        rgba(255, 255, 255, 0.08);
+  --color-text:          #e8eaf0;
+  --color-text-1:        #e8eaf0;
+  --color-text-2:        #6b7280;
+  --color-text-muted:    #6b7280;
+  --color-chip-bg:       rgba(108, 99, 255, 0.15);
+  --color-primary-light: rgba(108, 99, 255, 0.12);
+  --color-acorde-bg:     rgba(108, 99, 255, 0.12);
+  --color-danger-bg:     rgba(239, 68, 68, 0.14);
+  --color-success-bg:    rgba(34, 197, 94, 0.14);
+  --color-overlay:       rgba(0, 0, 0, 0.65);
+  --color-frets:         rgba(255, 255, 255, 0.12);
+  --color-strings:       rgba(255, 255, 255, 0.25);
+
+  --shadow-card:         0 4px 20px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.2);
+  --shadow-card-hover:   0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-modal:        0 24px 64px rgba(0,0,0,0.6), 0 4px 16px rgba(108,99,255,0.10);
+
+  --color-diff-add:      rgba(34, 197, 94, 0.12);
+  --color-diff-add-text: #4ade80;
+  --color-diff-remove:   rgba(239, 68, 68, 0.12);
+  --color-diff-remove-text: #f87171;
+}

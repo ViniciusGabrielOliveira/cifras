@@ -1,5 +1,5 @@
 @if (notif.notificacao(); as n) {
-  <div class="toast-home" [class.toast-home-erro]="n.erro">{{ n.msg }}</div>
+<div class="toast-home" [class.toast-home-erro]="n.erro">{{ n.msg }}</div>
 }
 
 <header class="app-header">
@@ -12,6 +12,20 @@
             </svg>
             <span class="brand-name">Cifras da Missa</span>
         </div>
+        <button class="btn-theme-toggle" (click)="theme.toggle()"
+            [title]="theme.isDark() ? 'Modo claro' : 'Modo escuro'">
+            @if (theme.isDark()) {
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <circle cx="12" cy="12" r="5" />
+                <path
+                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+            } @else {
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            }
+        </button>
         @if (!auth.loading()) {
         @if (auth.isLogado()) {
         <a class="header-admin-link" routerLink="/admin/painel">
@@ -58,19 +72,40 @@
             @if (lista.categoria) {
             <div class="lista-cat-badge">{{ CATEGORIAS_LABELS()[lista.categoria] }}</div>
             }
-            <h1 class="lista-titulo">{{ lista.titulo }}</h1>
+            <div class="titulo-wrapper">
+                @if (editandoTitulo()) {
+                <input class="titulo-inline-input" type="text" #tituloInputEl
+                    [value]="novoTitulo()"
+                    (input)="novoTitulo.set($any($event.target).value)"
+                    (blur)="confirmarEdicaoTitulo()"
+                    (keydown.enter)="confirmarEdicaoTitulo()"
+                    (keydown.escape)="cancelarEdicaoTitulo()" />
+                } @else {
+                <h1 class="lista-titulo">{{ lista.titulo }}</h1>
+                @if (isEditorDaListaAtual()) {
+                <button class="btn-editar-titulo" (click)="iniciarEdicaoTitulo()" title="Editar título">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                    </svg>
+                </button>
+                }
+                }
+            </div>
             @if (lista.data) {
             <p class="lista-data">{{ formatarData(lista.data) }}</p>
             }
         </div>
         <div class="container-action">
-            @if (isEditorDaListaAtual()) {
-            <button class="btn-editar-lista" (click)="abrirEdicao()" title="Editar repertório">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
-                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            @if (isParticipanteOuDonoListaAtual()) {
+            <button class="btn-compartilhar" (click)="abrirEdicao()" title="Compartilhar repertório">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
                 </svg>
-                Editar
             </button>
             }
             <button class="btn-abrir-seletor" (click)="abrirSeletor()">Outros repertórios</button>
@@ -78,39 +113,19 @@
     </div>
 
     <!-- Live Bar -->
-    <app-live-control
-        #liveCtrl
-        [listaId]="lista.id"
-        [mostrar]="isParticipanteOuDonoListaAtual()"
-        [isControlador]="isControladorListaAtual()"
-        [parteAtiva]="parteAtiva()"
-        (liveSync)="onLiveSync($event)"
-    />
+    <app-live-control #liveCtrl [listaId]="lista.id" [mostrar]="isParticipanteOuDonoListaAtual()"
+        [isControlador]="isControladorListaAtual()" [parteAtiva]="parteAtiva()" (liveSync)="onLiveSync($event)" />
 
     <!-- Tabs Partes da Missa -->
-    <app-tabs-lista
-        [lista]="lista"
-        [parteAtiva]="parteAtiva()"
-        [canEdit]="canEdit()"
-        (parteChange)="onParteChange($event)"
-        (listaChange)="onTabsListaChange($event)"
-    />
+    <app-tabs-lista [lista]="lista" [parteAtiva]="parteAtiva()" [canEdit]="canEdit()"
+        (parteChange)="onParteChange($event)" (listaChange)="onTabsListaChange($event)" />
 
     <!-- Músicas da Parte Selecionada -->
-    <app-acordeon-musica
-        #acordeon
-        [lista]="lista"
-        [musicas]="musicasDaParte()"
-        [canEdit]="canEdit()"
-        [modoLiveAtivo]="liveCtrl.modoLiveAtivo()"
-        [modoControladorAtivo]="liveCtrl.modoControladorAtivo()"
-        [liveEstado]="liveCtrl.liveEstado()"
-        (tomAlterado)="onTomAlterado($event)"
-        (observacaoAlterada)="onObservacaoAlterada($event)"
-        (musicaRemovida)="onMusicaRemovida($event)"
-        (musicaAbertaChanged)="onMusicaAbertaChanged($event)"
-        (adicionarMusicaClick)="abrirAdicionarMusica()"
-    />
+    <app-acordeon-musica class="acordeon" #acordeon [lista]="lista" [musicas]="musicasDaParte()" [canEdit]="canEdit()"
+        [modoLiveAtivo]="liveCtrl.modoLiveAtivo()" [modoControladorAtivo]="liveCtrl.modoControladorAtivo()"
+        [liveEstado]="liveCtrl.liveEstado()" (tomAlterado)="onTomAlterado($event)"
+        (observacaoAlterada)="onObservacaoAlterada($event)" (musicaRemovida)="onMusicaRemovida($event)"
+        (musicaAbertaChanged)="onMusicaAbertaChanged($event)" (adicionarMusicaClick)="abrirAdicionarMusica()" />
 
 </main>
 
@@ -158,11 +173,8 @@
         <button class="modal-close-home" (click)="fecharAdicionarMusica()">✕</button>
     </div>
     <div class="modal-body-home">
-        <app-musica-search
-            [modoEmbutido]="true"
-            [mostrarFiltros]="true"
-            (musicaSelecionada)="onMusicaAdicionada($event)"
-        />
+        <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true"
+            (musicaSelecionada)="onMusicaAdicionada($event)" />
     </div>
 </div>
 }

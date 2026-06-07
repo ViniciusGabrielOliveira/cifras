@@ -1,98 +1,68 @@
 .diagrama-card {
-    background: var(--color-bg) !important;
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 12px;
-    min-width: 148px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  min-width: 148px;
+  box-shadow: var(--shadow-modal) !important;
 }
 
-.diagrama-header {
-    margin-bottom: 8px;
-}
+.diagrama-header { margin-bottom: var(--sp-2); }
 
 .diagrama-nome {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-acorde);
-    text-align: center;
-    margin-bottom: 6px;
+  display: block;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 6px;
 }
 
-.diagrama-tabs {
-    display: flex;
-    gap: 4px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+.diagrama-tabs { display: flex; gap: var(--sp-1); justify-content: center; flex-wrap: wrap; }
 
 .tab-btn {
-    font-size: 0.65rem;
-    padding: 2px 7px;
-    border-radius: 20px;
-    border: 1px solid var(--color-border);
-    background: transparent;
-    color: var(--color-text-muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-
-    &.active {
-        background: var(--color-acorde);
-        color: #fff;
-        border-color: var(--color-acorde);
-    }
-
-    &:hover:not(.active) {
-        border-color: var(--color-acorde);
-        color: var(--color-acorde);
-    }
+  font-size: var(--font-size-xs);
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-2);
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  &.active { background: var(--color-primary); color: var(--color-text-inv); border-color: var(--color-primary); }
+  &:hover:not(.active) { border-color: var(--color-primary); color: var(--color-primary); }
 }
 
-.svg-wrap {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
+.svg-wrap { position: relative; display: flex; justify-content: center; }
 
 .casa-base {
-    position: absolute;
-    left: 2px;
-    top: 24px;
-    font-size: 0.65rem;
-    color: var(--color-text-muted);
-    font-weight: 600;
+  position: absolute;
+  left: 2px; top: 24px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-2);
+  font-weight: var(--font-weight-semibold);
 }
 
 .sinais-topo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    gap: 0;
-    width: 100%;
-    justify-content: flex-start;
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  gap: 0;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .sinal {
-    display: inline-block;
-    width: 20px;
-    text-align: center;
-    font-size: 0.7rem;
-    height: 12px;
-    line-height: 12px;
-
-    &.x {
-        color: #e55;
-    }
-
-    &.o {
-        color: var(--color-text-muted);
-    }
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  height: 12px;
+  line-height: 12px;
+  &.x { color: var(--color-danger); }
+  &.o { color: var(--color-text-2); }
 }
 
-svg {
-    display: block;
-    margin-top: 0;
-}
+svg { display: block; margin-top: 0; }

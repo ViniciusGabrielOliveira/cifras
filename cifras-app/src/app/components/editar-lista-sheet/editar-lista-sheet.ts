@@ -1,24 +1,21 @@
 import { Component, inject, signal, input, output, computed, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { timer } from 'rxjs';
-import { FormsModule } from '@angular/forms';
-import { Lista, RoleParticipante, TipoLista } from '../../models/lista.model';
+import { Lista, RoleParticipante } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { AuthService } from '../../services/auth.service';
-import { ConfigService } from '../../services/config.service';
 import { AppSelectComponent, SelectOption } from '../app-select/app-select';
 
 @Component({
     selector: 'app-editar-lista-sheet',
     standalone: true,
-    imports: [FormsModule, AppSelectComponent],
+    imports: [AppSelectComponent],
     templateUrl: './editar-lista-sheet.html',
     styleUrl: './editar-lista-sheet.scss',
 })
 export class EditarListaSheetComponent {
     private listaService = inject(ListaService);
     readonly auth = inject(AuthService);
-    private config = inject(ConfigService);
     private destroyRef = inject(DestroyRef);
 
     readonly lista = input<Lista | null>(null);
@@ -29,9 +26,6 @@ export class EditarListaSheetComponent {
     readonly linkCopiado = signal(false);
     readonly confirmandoRemover = signal<string | null>(null);
 
-    readonly categoriasOptions = computed<SelectOption[]>(() =>
-        this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
-    );
     readonly roleOptions: SelectOption[] = [
         { value: 'visualizador', label: 'Visualizador' },
         { value: 'editor',       label: 'Editor' },
@@ -40,6 +34,14 @@ export class EditarListaSheetComponent {
     readonly isDono = computed(() => {
         const uid = this.auth.user()?.uid;
         return !!uid && uid === this.lista()?.donoUid;
+    });
+
+    readonly isEditor = computed(() => {
+        const uid = this.auth.user()?.uid;
+        const lista = this.lista();
+        if (!uid || !lista) return false;
+        if (lista.donoUid === uid) return true;
+        return (lista.participantes ?? []).some(p => p.uid === uid && p.role === 'editor');
     });
 
     get linkConvite(): string {
@@ -58,32 +60,6 @@ export class EditarListaSheetComponent {
     fechar() {
         this.aberto.set(false);
         this.confirmandoRemover.set(null);
-    }
-
-    // ── Campos ────────────────────────────────────────────────────────
-
-    onTituloBlur(event: Event) {
-        const val = (event.target as HTMLInputElement).value.trim();
-        if (!val || val === this.lista()?.titulo) return;
-        this.salvar({ titulo: val });
-    }
-
-    onDataInicioChange(event: Event) {
-        const val = (event.target as HTMLInputElement).value || undefined;
-        this.salvar({ dataInicio: val });
-    }
-
-    onDataFimChange(event: Event) {
-        const val = (event.target as HTMLInputElement).value || undefined;
-        this.salvar({ dataFim: val });
-    }
-
-    onCategoriaChange(categoria: string) {
-        this.salvar({ categoria });
-    }
-
-    onTipoChange(tipo: TipoLista) {
-        this.salvar({ tipo });
     }
 
     // ── Participantes ─────────────────────────────────────────────────

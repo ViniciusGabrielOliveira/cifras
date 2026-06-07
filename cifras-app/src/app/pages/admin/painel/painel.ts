@@ -16,6 +16,7 @@ import { slugify } from '../../../utils/string.utils';
 import { newId } from '../../../utils/id.utils';
 import { formatarDataCurta } from '../../../utils/date.utils';
 import { NotificationService } from '../../../services/notification.service';
+import { ThemeService } from '../../../services/theme.service';
 
 type VistaAdmin = 'dashboard' | 'configuracoes' | 'gerenciar-cifras';
 
@@ -36,6 +37,7 @@ export class PainelComponent implements OnInit {
   private buscaService = inject(CifraBuscaService);
   private destroyRef = inject(DestroyRef);
   readonly notif = inject(NotificationService);
+  readonly theme = inject(ThemeService);
 
   readonly CATEGORIAS_LABELS = this.config.categoriasLabels;
   readonly categoriasOptions = computed(() =>

@@ -9,6 +9,7 @@ import { ConfigService } from '../../../services/config.service';
 import { AppSelectComponent } from '../../../components/app-select/app-select';
 import { newId } from '../../../utils/id.utils';
 import { NotificationService } from '../../../services/notification.service';
+import { ThemeService } from '../../../services/theme.service';
 
 @Component({
     selector: 'app-minha-area',
@@ -24,6 +25,7 @@ export class MinhaAreaComponent implements OnInit {
     private router = inject(Router);
     readonly config = inject(ConfigService);
     readonly notif = inject(NotificationService);
+    readonly theme = inject(ThemeService);
 
     get categorias() { return this.config.categoriasIds(); }
     get categoriasLabels() { return this.config.categoriasLabels(); }

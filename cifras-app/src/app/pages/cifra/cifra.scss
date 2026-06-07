@@ -6,13 +6,13 @@
 .cifra-page-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-header);
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0 1.5rem;
+  gap: var(--sp-4);
+  padding: 0 var(--sp-6);
   height: 56px;
-  background: rgba(15, 17, 23, 0.92);
+  background: rgba(var(--color-bg-rgb), 0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -20,23 +20,21 @@
 .btn-voltar {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: var(--sp-2) - 2px;
+  padding: 6px var(--sp-3);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--color-text-muted);
-  font-size: 0.82rem;
-  font-weight: 600;
+  color: var(--color-text-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family);
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
   flex-shrink: 0;
 
-  &:hover {
-    color: var(--color-text);
-    border-color: var(--color-text-muted);
-  }
+  &:hover { color: var(--color-text-1); border-color: var(--color-text-2); }
 }
 
 .cifra-page-info {
@@ -47,9 +45,9 @@
 }
 
 .cifra-page-titulo {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-1);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -57,8 +55,8 @@
 }
 
 .cifra-page-artista {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-2);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -70,21 +68,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 4rem 1.5rem;
-  color: var(--color-text-muted);
+  gap: var(--sp-3);
+  padding: var(--sp-10) var(--sp-6);
+  color: var(--color-text-2);
 }
 
 .btn-voltar-inline {
-  padding: 8px 20px;
+  padding: var(--sp-2) var(--sp-5);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
+  font-family: var(--font-family);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
 
-  &:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+  &:hover { color: var(--color-text-1); border-color: var(--color-text-2); }
 }
 
 .cifra-page-body {
@@ -95,16 +94,13 @@
 .cifra-custom-badge {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 18px;
-  background: rgba(124, 106, 253, 0.08);
-  border-bottom: 1px solid rgba(124, 106, 253, 0.2);
-  font-size: 0.75rem;
-  color: var(--color-acorde);
-  font-weight: 500;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-5) - 3px;
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.20);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
 
-  &::before {
-    content: '✎';
-    font-size: 0.85rem;
-  }
+  &::before { content: '✎'; font-size: var(--font-size-sm); }
 }

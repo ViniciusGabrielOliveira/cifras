@@ -1,61 +1,53 @@
 .cifra-toolbar {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--sp-4);
   flex-wrap: wrap;
-  padding: 12px 18px;
-  background: rgba(0, 0, 0, 0.2);
+  padding: var(--sp-3) 18px;
+  background: var(--color-surface-2);
   border-bottom: 1px solid var(--color-border);
 }
 
-.toolbar-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+.toolbar-group { display: flex; align-items: center; gap: var(--sp-2); }
 
 .toolbar-label {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
 }
 
 .tom-btns {
   display: flex;
   align-items: center;
-  background: var(--color-bg);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .btn-ctrl {
-  width: 32px;
-  height: 32px;
+  width: 32px; height: 32px;
   border: none;
   background: transparent;
-  color: var(--color-text);
+  color: var(--color-text-1);
   font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s, color 0.15s;
-
-  &:hover {
-    background: var(--color-acorde-bg);
-    color: var(--color-acorde);
-  }
+  font-family: var(--font-family);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  &:hover { background: rgba(var(--color-primary-rgb), 0.08); color: var(--color-primary); }
 }
 
 .tom-value {
   min-width: 38px;
   text-align: center;
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: var(--color-acorde);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
   padding: 0 6px;
@@ -65,193 +57,159 @@
 
 .versao-select {
   height: 32px;
-  padding: 0 8px;
-  border-radius: 8px;
+  padding: 0 var(--sp-2);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-size: 0.82rem;
+  background: var(--color-surface);
+  color: var(--color-text-1);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family);
   cursor: pointer;
   outline: none;
-
-  &:focus { border-color: var(--color-acorde); }
+  &:focus { border-color: var(--color-primary); }
 }
 
 .btn-restaurar {
-  font-size: 0.7rem;
+  font-size: var(--font-size-xs);
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--color-border);
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
   cursor: pointer;
-  transition: all 0.15s;
-
-  &:hover {
-    border-color: var(--color-acorde);
-    color: var(--color-acorde);
-  }
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
+  &:hover { border-color: var(--color-primary); color: var(--color-primary); }
 }
 
-.observacao-lista {
-  font-size: 0.72rem;
-  color: var(--color-text-muted);
-  font-style: italic;
-}
+.observacao-lista { font-size: var(--font-size-xs); color: var(--color-text-2); font-style: italic; }
 
 .btn-edit {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--color-acorde);
-  border: 1px solid rgba(124, 106, 253, 0.3);
-  background: var(--color-acorde-bg);
-  padding: 5px 12px;
-  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.30);
+  background: rgba(var(--color-primary-rgb), 0.08);
+  padding: 5px var(--sp-3);
+  border-radius: var(--radius-sm);
   text-decoration: none;
-  transition: all 0.15s;
+  transition: all var(--transition-fast);
   white-space: nowrap;
-
-  &:hover { background: rgba(124, 106, 253, 0.2); }
+  &:hover { background: rgba(var(--color-primary-rgb), 0.18); }
 }
 
 .btn-auto-scroll {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 5px var(--sp-3);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
   cursor: pointer;
-  transition: all 0.15s;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
   white-space: nowrap;
-
-  &:hover, &.ativo {
-    border-color: var(--color-acorde);
-    color: var(--color-acorde);
-    background: var(--color-acorde-bg);
-  }
+  &:hover, &.ativo { border-color: var(--color-primary); color: var(--color-primary); background: rgba(var(--color-primary-rgb), 0.08); }
 }
 
-/* ── Painel flutuante ─────────────────────────────────────────── */
 .painel-scroll {
   position: fixed;
-  z-index: 1000;
+  z-index: var(--z-fab);
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  background: rgba(36, 32, 60, 0.97);
-  border: 1px solid rgba(124, 106, 253, 0.4);
-  border-radius: 40px;
+  gap: var(--sp-2);
+  padding: var(--sp-2) 10px;
+  background: var(--color-surface-modal);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.40);
+  border-radius: var(--radius-pill);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 106, 253, 0.1);
+  box-shadow: var(--shadow-modal);
   user-select: none;
   touch-action: none;
   cursor: grab;
-
   &:active { cursor: grabbing; }
 }
 
 .btn-scroll-round {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
+  width: 34px; height: 34px;
+  border-radius: var(--radius-pill);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-acorde-bg);
-  color: var(--color-acorde);
+  background: rgba(var(--color-primary-rgb), 0.08);
+  color: var(--color-primary);
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background var(--transition-fast);
   flex-shrink: 0;
-
-  &:hover { background: rgba(124, 106, 253, 0.3); }
-  &.ativo {
-    background: var(--color-acorde);
-    color: #fff;
-  }
+  &:hover { background: rgba(var(--color-primary-rgb), 0.20); }
+  &.ativo { background: var(--color-primary); color: var(--color-text-inv); }
 }
 
 .painel-fechar {
   background: none;
   border: none;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
+  color: var(--color-text-2);
+  font-size: var(--font-size-xs);
   cursor: pointer;
-  padding: 4px;
-  border-radius: 50%;
+  padding: var(--sp-1);
+  border-radius: var(--radius-pill);
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.15s;
+  transition: color var(--transition-fast);
   flex-shrink: 0;
-
-  &:hover { color: var(--color-text); }
+  &:hover { color: var(--color-text-1); }
 }
 
 .btn-scroll {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 5px var(--sp-3);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-2);
   cursor: pointer;
-  transition: all 0.15s;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
   white-space: nowrap;
-
-  &:hover {
-    border-color: var(--color-acorde);
-    color: var(--color-acorde);
-  }
-
-  &.ativo {
-    background: var(--color-acorde-bg);
-    border-color: var(--color-acorde);
-    color: var(--color-acorde);
-  }
+  &:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  &.ativo { background: rgba(var(--color-primary-rgb), 0.08); border-color: var(--color-primary); color: var(--color-primary); }
 }
 
-.cifra-secoes.scroll-ativo {
-  cursor: pointer;
-  user-select: none;
-}
+.cifra-secoes.scroll-ativo { cursor: pointer; user-select: none; }
 
 .btn-player {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 80, 80, 0.35);
-  background: rgba(255, 80, 80, 0.08);
-  color: #ff6b6b;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 5px var(--sp-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(var(--color-danger-rgb), 0.35);
+  background: rgba(var(--color-danger-rgb), 0.08);
+  color: var(--color-danger);
   cursor: pointer;
-  transition: all 0.15s;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
   white-space: nowrap;
-
-  &:hover, &.ativo {
-    background: rgba(255, 80, 80, 0.18);
-    border-color: rgba(255, 80, 80, 0.6);
-  }
+  &:hover, &.ativo { background: rgba(var(--color-danger-rgb), 0.18); border-color: rgba(var(--color-danger-rgb), 0.60); }
 }
 
 .player-wrapper {
-  padding: 12px 18px;
+  padding: var(--sp-3) 18px;
   border-bottom: 1px solid var(--color-border);
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--color-surface-2);
 }
 
 .player-container {
@@ -259,19 +217,17 @@
   width: 100%;
   max-width: 480px;
   aspect-ratio: 16 / 9;
-
   iframe {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
   }
 }
 
 .cifra-secoes {
-  padding: 16px 18px;
+  padding: var(--sp-4) 18px;
   font-size: 15px;
   line-height: 1.6;
   font-family: 'Nunito', sans-serif;

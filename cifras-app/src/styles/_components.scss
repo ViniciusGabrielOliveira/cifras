@@ -1,0 +1,271 @@
+// ─── Componentes base — Cifras Design System ─────────────────────────────────
+// Classes reutilizáveis em todos os componentes do projeto.
+
+// ── Botões ────────────────────────────────────────────────────────────────────
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+
+  &:active { transform: scale(0.97); }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.btn-primary {
+  @extend .btn;
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: var(--color-text-inv);
+  box-shadow: var(--shadow-btn);
+
+  &:hover {
+    background: var(--color-primary-hover);
+    box-shadow: var(--shadow-btn-hover);
+    transform: translateY(-1px);
+  }
+  &:active { transform: translateY(0); }
+}
+
+.btn-secondary {
+  @extend .btn;
+  padding: 11px 24px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+
+  &:hover { background: darken(#EDE9FE, 4%); }
+}
+
+.btn-ghost {
+  @extend .btn;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--color-text-2);
+  border: 1.5px solid var(--color-border);
+
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+  }
+}
+
+.btn-sm {
+  padding: 7px 16px !important;
+  font-size: var(--font-size-xs) !important;
+}
+
+.btn-icon {
+  @extend .btn;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-2);
+  border-radius: var(--radius-pill);
+
+  &:hover { background: var(--color-primary-light); color: var(--color-primary); }
+}
+
+// ── Cards ─────────────────────────────────────────────────────────────────────
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+
+  &:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+  }
+}
+
+.card-hero {
+  background: var(--gradient-hero);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  color: var(--color-text-inv);
+  box-shadow: var(--shadow-btn);
+
+  h1, h2, h3, h4 { color: var(--color-text-inv); }
+}
+
+// ── Inputs / Selects ──────────────────────────────────────────────────────────
+
+.ds-input {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-1);
+  background: var(--color-surface-2);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 12px var(--sp-4);
+  outline: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+
+  &::placeholder { color: var(--color-text-2); }
+
+  &:focus {
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.10);
+  }
+}
+
+// ── Chips / Badges ────────────────────────────────────────────────────────────
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  background: var(--color-chip-bg);
+  color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.chip-accent-1 { background: rgba(255,107,53,0.12); color: var(--color-accent-1); }
+.chip-accent-2 { background: rgba(56,178,172,0.12); color: var(--color-accent-2); }
+.chip-accent-3 { background: rgba(246,173,85,0.12); color: var(--color-accent-3); }
+.chip-success  { background: rgba(34,197,94,0.12);  color: var(--color-success); }
+.chip-danger   { background: rgba(239,68,68,0.12);  color: var(--color-danger); }
+
+// ── FAB ───────────────────────────────────────────────────────────────────────
+
+.fab {
+  position: fixed;
+  bottom: var(--sp-8);
+  right: var(--sp-6);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  border: none;
+  color: var(--color-text-inv);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-fab);
+  z-index: 100;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: var(--shadow-btn-hover);
+  }
+  &:active { transform: scale(0.95); }
+}
+
+// ── Modais / Sheets ───────────────────────────────────────────────────────────
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(4px);
+  z-index: 500;
+  animation: ds-fade-in var(--transition-slow) ease;
+}
+
+.modal-sheet {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: var(--shadow-modal);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    padding: var(--sp-5) var(--sp-6);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body { flex: 1; padding: var(--sp-5) var(--sp-6); overflow-y: auto; }
+  &__footer { padding: var(--sp-4) var(--sp-6); border-top: 1px solid var(--color-border); }
+}
+
+// ── Seção de página ───────────────────────────────────────────────────────────
+
+.page-section {
+  margin-bottom: var(--sp-6);
+
+  &__title {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-1);
+    margin-bottom: var(--sp-3);
+  }
+}
+
+// ── Empty state ───────────────────────────────────────────────────────────────
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--sp-10) var(--sp-6);
+  gap: var(--sp-3);
+  color: var(--color-text-2);
+
+  &__icon  { font-size: 3rem; }
+  &__title { font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-text-1); }
+  &__desc  { font-size: var(--font-size-sm); max-width: 320px; line-height: 1.6; }
+}
+
+// ── Spinner ───────────────────────────────────────────────────────────────────
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: ds-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+
+.toast {
+  position: fixed;
+  bottom: var(--sp-8);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: var(--color-text-inv);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: 12px var(--sp-6);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-btn);
+  z-index: 1100;
+  white-space: nowrap;
+  animation: ds-slide-up var(--transition-slow) var(--ease-spring);
+
+  &--success { background: var(--color-success); box-shadow: 0 8px 32px rgba(34,197,94,0.35); }
+  &--danger  { background: var(--color-danger);  box-shadow: 0 8px 32px rgba(239,68,68,0.35); }
+}

@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription, Subject, debounceTime, switchMap } from 'rxjs';
 import { Lista, MusicaLista } from '../../models/lista.model';
@@ -14,6 +14,7 @@ import { TabsListaComponent } from '../../components/tabs-lista/tabs-lista';
 import { AcordeonMusicaComponent } from '../../components/acordeon-musica/acordeon-musica';
 import { formatarDataLonga } from '../../utils/date.utils';
 import { NotificationService } from '../../services/notification.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
     selector: 'app-home',
@@ -35,11 +36,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     readonly config = inject(ConfigService);
     readonly auth = inject(AuthService);
     readonly notif = inject(NotificationService);
+    readonly theme = inject(ThemeService);
 
     @ViewChild(SeletorRepertorioComponent) seletorRef!: SeletorRepertorioComponent;
     @ViewChild(EditarListaSheetComponent) editarRef!: EditarListaSheetComponent;
     @ViewChild(LiveControlComponent) liveCtrl!: LiveControlComponent;
     @ViewChild(AcordeonMusicaComponent) acordeon!: AcordeonMusicaComponent;
+    @ViewChild('tituloInputEl') tituloInputEl?: ElementRef<HTMLInputElement>;
 
     readonly listaIdParam = this.route.snapshot.queryParamMap.get('listaId');
 
@@ -52,6 +55,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     parteAtiva = signal<string | null>(null);
 
     readonly isAdmin = computed(() => this.auth.hasRole('admin'));
+
+    readonly isDonoListaAtual = computed(() => {
+        const uid = this.auth.user()?.uid;
+        const lista = this.listaAtual();
+        return !!uid && !!lista && lista.donoUid === uid && lista.tipo === 'privada';
+    });
 
     readonly isEditorDaListaAtual = computed(() => {
         const uid = this.auth.user()?.uid;
@@ -86,8 +95,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         return l.musicas.filter(m => m.parte === p).sort((a, b) => a.ordem - b.ordem);
     });
 
-    modalBuscaAberto     = signal(false);
+    modalBuscaAberto      = signal(false);
     adicionarMusicaAberto = signal(false);
+    editandoTitulo        = signal(false);
+    novoTitulo            = signal('');
 
     private listaSub?: Subscription;
     private salvandoLista = false;
@@ -130,10 +141,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // ── Seletor ────────────────────────────────────────────────────────
 
-    abrirSeletor() { this.seletorRef.abrir(); }
-    abrirEdicao()  { this.editarRef.abrir(); }
+    abrirSeletor()  { this.seletorRef.abrir(); }
+    abrirEdicao()   { this.editarRef.abrir(); }
 
     onListaEditada(lista: Lista) { this.listaAtual.set(lista); }
+
+    iniciarEdicaoTitulo() {
+        this.novoTitulo.set(this.listaAtual()?.titulo ?? '');
+        this.editandoTitulo.set(true);
+        setTimeout(() => this.tituloInputEl?.nativeElement.focus(), 0);
+    }
+
+    cancelarEdicaoTitulo() {
+        this.editandoTitulo.set(false);
+    }
+
+    confirmarEdicaoTitulo() {
+        const val = this.novoTitulo().trim();
+        const lista = this.listaAtual();
+        this.editandoTitulo.set(false);
+        if (!val || !lista || val === lista.titulo) return;
+        const atualizada = { ...lista, titulo: val };
+        this.listaAtual.set(atualizada);
+        this.salvarListaAtual(atualizada);
+    }
 
     onListaSelecionada(lista: Lista) {
         this.selecionarLista(lista);

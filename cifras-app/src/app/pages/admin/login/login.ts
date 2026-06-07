@@ -33,7 +33,7 @@ export class LoginComponent {
     }
 
     private rotaPosLogin(): string {
-        return this.auth.hasRole('editor') ? '/admin/painel' : '/minha-area';
+        return '/';
     }
 
     entrar() {

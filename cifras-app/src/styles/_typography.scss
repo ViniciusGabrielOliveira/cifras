@@ -1,0 +1,46 @@
+// ─── Typography ───────────────────────────────────────────────────────────────
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--color-text-1);
+  line-height: 1.25;
+  margin: 0;
+}
+
+h1 { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); }
+h2 { font-size: var(--font-size-xl);  font-weight: var(--font-weight-bold); }
+h3 { font-size: var(--font-size-lg);  font-weight: var(--font-weight-semibold); }
+h4 { font-size: var(--font-size-md);  font-weight: var(--font-weight-semibold); }
+
+p  { margin: 0; }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover { color: var(--color-primary-hover); }
+}
+
+// ── Classes utilitárias de texto ──────────────────────────────────────────────
+
+.text-title   { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-text-1); }
+.text-section { font-size: var(--font-size-lg);  font-weight: var(--font-weight-semibold); color: var(--color-text-1); }
+.text-body    { font-size: var(--font-size-sm);  font-weight: var(--font-weight-regular); color: var(--color-text-1); }
+.text-label   { font-size: var(--font-size-sm);  font-weight: var(--font-weight-medium); color: var(--color-text-2); }
+.text-caption { font-size: var(--font-size-xs);  font-weight: var(--font-weight-regular); color: var(--color-text-2); }
+.text-muted   { color: var(--color-text-2); }
+.text-primary { color: var(--color-primary); }
+.text-inv     { color: var(--color-text-inv); }

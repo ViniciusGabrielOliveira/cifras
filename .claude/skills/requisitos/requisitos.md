@@ -3,7 +3,7 @@
 ## Autenticação e Roles
 
 - **R01** — Roles disponíveis: `admin`, `editor`, `convidado`, `membro`, `visitante` (hierarquia: admin > editor > convidado > membro > visitante)
-- **R02** — Após login/cadastro, usuários `admin` e `editor` são redirecionados para `/admin/painel`; usuários `convidado` e `membro` são redirecionados para `/minha-area`
+- **R02** — Após login/cadastro, todos os usuários são redirecionados para a home (`/`), independente do role. Exceção: se o usuário estava no fluxo de convite (`/join/:token`), após login/cadastro ele é redirecionado para a home com a lista convidada já selecionada
 - **R03** — O guard `roleGuard('membro')` bloqueia visitantes não autenticados; `roleGuard('editor')` bloqueia membros comuns
 - **R04** — Usuários bloqueados (`role: 'blocked'`) não podem ler cifras nem listas públicas
 
