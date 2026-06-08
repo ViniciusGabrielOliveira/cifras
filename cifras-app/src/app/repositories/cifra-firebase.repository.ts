@@ -72,19 +72,26 @@ export class CifraFirebaseRepository extends CifraRepository {
 
   override updateCifra(cifra: Cifra): Observable<Cifra> {
     const cifraRef = doc(this.firestore, `cifras/${cifra.id}`);
-    const indiceItem: CifraIndiceItem = {
-      id: cifra.id,
-      titulo: cifra.titulo,
-      autor: cifra.artista,
-      letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
-      categorias: cifra.categorias ?? [],
-      partesMissa: cifra.partesMissa ?? [],
-    };
-    const ops: Promise<any>[] = [setDoc(cifraRef, cifra)];
+    const cifraSave$ = from(setDoc(cifraRef, cifra));
+
     if (!cifra.status || cifra.status === 'publica') {
-      ops.push(setDoc(doc(this.firestore, `cifras_indice/${cifra.id}`), indiceItem));
+      const indiceItem: CifraIndiceItem = {
+        id: cifra.id,
+        titulo: cifra.titulo,
+        autor: cifra.artista,
+        letra: cifra.secoes.flatMap(s => s.linhas.map(l => l.letra)).join(' '),
+        categorias: cifra.categorias ?? [],
+        partesMissa: cifra.partesMissa ?? [],
+      };
+      const indiceRef = doc(this.firestore, `cifras_indice/${cifra.id}`);
+      return cifraSave$.pipe(
+        switchMap(() => from(setDoc(indiceRef, indiceItem))),
+        map(() => cifra),
+        catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar cifra'))),
+      );
     }
-    return from(Promise.all(ops)).pipe(
+
+    return cifraSave$.pipe(
       map(() => cifra),
       catchError(err => throwError(() => this.tratarErro(err, 'Erro ao salvar cifra'))),
     );
