@@ -143,7 +143,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   private ccQuery$ = new Subject<string>();
   private ccSub = this.ccQuery$
     .pipe(
-      debounceTime(350),
+      debounceTime(1500),
       distinctUntilChanged(),
       switchMap(q => {
         if (q.length < 2 || !this.mostrarCifraClub()) {

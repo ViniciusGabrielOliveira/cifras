@@ -1,10 +1,21 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, firstValueFrom } from 'rxjs';
+import { Observable, firstValueFrom, map } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Cifra } from '../models/cifra.model';
 import { parseCifraTexto, slugify } from '../core/cifra-parser';
 import { CifraService } from './cifra.service';
+
+const SOLR_URL = 'https://solr.sscdn.co/cc/c7/';
+
+interface SolrDoc {
+  id_song?: string | number;
+  url?: string;
+  txt?: string;
+  art?: string;
+  dns?: string;
+  tipo?: string;
+}
 
 export interface CifraClubSugestao {
   id: string;
@@ -35,11 +46,23 @@ export class CifraClubImportService {
   }
 
   buscarSugestoes(termo: string): Observable<CifraClubSugestao[]> {
-    const url = `${environment.cifrasApiUrl}/buscar`;
-    return this.http.get<CifraClubSugestao[]>(url, {
-      headers: this.headers,
-      params: { q: termo.trim() },
-    });
+    return this.http.get<{ response: { docs: SolrDoc[] } }>(SOLR_URL, {
+      params: { q: termo.trim(), limit: '30' },
+    }).pipe(
+      map(data =>
+        (data?.response?.docs ?? [])
+          .filter((d): d is SolrDoc & { dns: string; url: string } =>
+            d.tipo === '2' && !!d.dns && !!d.url
+          )
+          .map(d => ({
+            id:      String(d.id_song ?? d.url),
+            nome:    d.txt ?? '',
+            artista: d.art ?? '',
+            dns:     d.dns,
+            url:     d.url,
+          }))
+      ),
+    );
   }
 
   async importarMusica(sugestao: CifraClubSugestao): Promise<CifraClubImportResult> {
