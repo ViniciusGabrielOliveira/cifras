@@ -1,8 +1,8 @@
-import { Component, inject, signal, computed, OnInit, DestroyRef } from '@angular/core';
+import { Component, inject, signal, computed, OnInit, DestroyRef, ViewChild } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
-import { Lista, MusicaLista, TipoLista } from '../../../models/lista.model';
+import { Lista, MusicaLista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { AuthService } from '../../../services/auth.service';
 import { ConfigService } from '../../../services/config.service';
@@ -11,7 +11,7 @@ import { CifraBuscaService } from '../../../services/cifra-busca.service';
 import { CifraIndiceItem } from '../../../repositories/cifra.repository.interface';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ConfigItem } from '../../../models/config.model';
-import { AppSelectComponent } from '../../../components/app-select/app-select';
+import { SeletorRepertorioComponent } from '../../../components/seletor-repertorio/seletor-repertorio';
 import { slugify } from '../../../utils/string.utils';
 import { newId } from '../../../utils/id.utils';
 import { formatarDataCurta } from '../../../utils/date.utils';
@@ -23,11 +23,12 @@ type VistaAdmin = 'dashboard' | 'configuracoes' | 'gerenciar-cifras';
 @Component({
   selector: 'app-painel',
   standalone: true,
-  imports: [FormsModule, RouterLink, DragDropModule, AppSelectComponent],
+  imports: [FormsModule, RouterLink, DragDropModule, SeletorRepertorioComponent],
   templateUrl: './painel.html',
   styleUrl: './painel.scss',
 })
 export class PainelComponent implements OnInit {
+  @ViewChild(SeletorRepertorioComponent) seletorRef!: SeletorRepertorioComponent;
   private listaService = inject(ListaService);
   readonly auth = inject(AuthService);
   private router = inject(Router);
@@ -40,19 +41,11 @@ export class PainelComponent implements OnInit {
   readonly theme = inject(ThemeService);
 
   readonly CATEGORIAS_LABELS = this.config.categoriasLabels;
-  readonly categoriasOptions = computed(() =>
-    this.config.categoriasIds().map(id => ({ value: id, label: this.config.categoriasLabels()[id] ?? id }))
-  );
 
   vista = signal<VistaAdmin>('dashboard');
   listas = signal<Lista[]>([]);
   confirmando = signal<string | null>(null);
   carregando = signal(true);
-
-  criandoLista = signal(false);
-  novaListaTitulo = signal('');
-  novaListaCategoria = signal('tempo-comum');
-  salvandoLista = signal(false);
 
   totalMusicasCustom = signal(0);
   readonly LIMITE_MUSICAS = 25;
@@ -162,67 +155,15 @@ export class PainelComponent implements OnInit {
     this.auth.logout().subscribe(() => this.router.navigate(['/admin']));
   }
 
+  // ── Seletor ───────────────────────────────────────────────────────
+
+  abrirSeletor() { this.seletorRef.abrir(); }
+
+  onListaSelecionada(lista: Lista) {
+    this.router.navigate(['/'], { queryParams: { listaId: lista.id } });
+  }
+
   // ── Dashboard ─────────────────────────────────────────────────────
-
-  novaLista() {
-    if (this.auth.isAdmin()) {
-      const agora = new Date().toISOString();
-      const nova: Lista = {
-        id: newId('lista'),
-        titulo: 'Nova Lista',
-        categoria: 'tempo-comum',
-        musicas: [],
-        criadaEm: agora,
-        atualizadaEm: agora,
-      };
-      this.listaService.salvarLista(nova).subscribe({
-        next: lista => this.router.navigate(['/admin/lista', lista.id]),
-        error: () => this.notif.mostrarErro('Erro ao criar lista. Tente novamente.', 4000),
-      });
-    } else {
-      this.novaListaTitulo.set('');
-      this.novaListaCategoria.set('tempo-comum');
-      this.criandoLista.set(true);
-    }
-  }
-
-  cancelarCriacaoLista() {
-    this.criandoLista.set(false);
-  }
-
-  criarLista() {
-    const titulo = this.novaListaTitulo().trim();
-    if (!titulo) return;
-    const uid = this.auth.user()?.uid;
-    if (!uid) return;
-    const token = newId('tok');
-    const lista: Lista = {
-      id: '',
-      titulo,
-      categoria: this.novaListaCategoria(),
-      musicas: [],
-      tipo: 'privada' as TipoLista,
-      donoUid: uid,
-      donoNome: this.auth.displayName() || undefined,
-      participantes: [],
-      tokenConvite: token,
-      criadaEm: new Date().toISOString(),
-      atualizadaEm: new Date().toISOString(),
-    };
-    this.salvandoLista.set(true);
-    this.listaService.salvarLista(lista).subscribe({
-      next: salva => {
-        this.salvandoLista.set(false);
-        this.criandoLista.set(false);
-        this.listas.update(ls => [...ls, salva]);
-        this.router.navigate(['/minha-area/lista', salva.id]);
-      },
-      error: (err: Error) => {
-        this.salvandoLista.set(false);
-        this.notif.mostrarErro(err.message || 'Erro ao criar lista.');
-      },
-    });
-  }
 
   editarLista(lista: Lista) {
     this.router.navigate(['/'], { queryParams: { listaId: lista.id } });

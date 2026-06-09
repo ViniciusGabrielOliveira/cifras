@@ -1,3 +1,6 @@
+<!-- Seletor de Repertório -->
+<app-seletor-repertorio [autoSelecionar]="false" (listaSelecionada)="onListaSelecionada($event)" />
+
 <!-- Toast de notificação -->
 @if (notif.notificacao(); as n) {
   <div class="toast-notificacao" [class.toast-erro]="n.erro">
@@ -61,12 +64,7 @@
             </svg>
           </a>
         }
-        <button class="btn-nova-lista" (click)="novaLista()" title="Nova Lista">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
-          <span class="btn-nova-lista-label">Nova Lista</span>
-        </button>
+        <button class="btn-nova-lista" (click)="abrirSeletor()">Outros repertórios</button>
       </div>
     </div>
 
@@ -79,39 +77,6 @@
         @if (!podeAdicionarMusica()) {
           <span class="counter-aviso">Limite atingido</span>
         }
-      </div>
-    }
-
-    @if (criandoLista()) {
-      <div class="nova-lista-form">
-        <h3 class="form-titulo">Nova Lista</h3>
-        <div class="form-campo">
-          <label>Título
-            <input
-              type="text"
-              class="form-input"
-              placeholder="Ex: Missa de domingo"
-              [ngModel]="novaListaTitulo()"
-              (ngModelChange)="novaListaTitulo.set($event)"
-              (keyup.enter)="criarLista()"
-            />
-          </label>
-        </div>
-        <div class="form-campo">
-          <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
-          <label>Categoria</label>
-          <app-select class="form-select"
-            [options]="categoriasOptions()"
-            [value]="novaListaCategoria()"
-            (valueChange)="novaListaCategoria.set($event)" />
-        </div>
-        <div class="form-actions">
-          <button class="btn-cancelar" (click)="cancelarCriacaoLista()">Cancelar</button>
-          <button class="btn-salvar" [disabled]="!novaListaTitulo().trim() || salvandoLista()" (click)="criarLista()">
-            @if (salvandoLista()) { <span class="spinner-sm"></span> }
-            Criar Lista
-          </button>
-        </div>
       </div>
     }
 
@@ -133,7 +98,7 @@
     } @else if (listasFiltradas().length === 0) {
       <div class="empty-dash">
         <p>Nenhuma lista encontrada.</p>
-        <button class="btn-nova-lista" (click)="novaLista()">Criar primeira lista</button>
+        <button class="btn-nova-lista" (click)="abrirSeletor()">Outros repertórios</button>
       </div>
     } @else {
       <div class="listas-grid">
