@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // ─── Componentes base — Cifras Design System ─────────────────────────────────
 // Classes reutilizáveis em todos os componentes do projeto.
 
@@ -44,7 +46,7 @@
   background: var(--color-primary-light);
   color: var(--color-primary);
 
-  &:hover { background: darken(#EDE9FE, 4%); }
+  &:hover { background: color.adjust(#EDE9FE, $lightness: -4%); }
 }
 
 .btn-ghost {

@@ -76,8 +76,9 @@ service cloud.firestore {
         || (isAuthenticated() && isNotBlocked()
           && request.resource.data.donoUid == request.auth.uid
           && request.resource.data.status in ['privada', 'pendente_revisao'])
-        // Import do CifraClub: entra pública (sourceUrl obrigatório)
-        || (isAuthenticated() && isNotBlocked()
+        // Import do CifraClub: entra pública (sourceUrl obrigatório, donoUid obrigatório)
+        || (isAuthenticated()
+          && request.resource.data.donoUid == request.auth.uid
           && request.resource.data.keys().hasAll(['sourceUrl'])
           && (!request.resource.data.keys().hasAll(['status']) || request.resource.data.status == 'publica'));
 
@@ -129,7 +130,7 @@ service cloud.firestore {
       allow read: if !isAuthenticated() || isNotBlocked();
       allow write: if isAdminOrEditor()
         // Usuário comum pode indexar cifras importadas (sourceUrl obrigatório)
-        || (isAuthenticated() && isNotBlocked()
+        || (isAuthenticated()
           && exists(/databases/$(database)/documents/cifras/$(docId))
           && get(/databases/$(database)/documents/cifras/$(docId)).data.keys().hasAll(['sourceUrl']));
     }

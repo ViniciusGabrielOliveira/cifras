@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { Cifra } from '../models/cifra.model';
 import { parseCifraTexto, slugify } from '../core/cifra-parser';
 import { CifraService } from './cifra.service';
+import { AuthService } from './auth.service';
 
 const SOLR_URL = 'https://solr.sscdn.co/cc/c7/';
 
@@ -35,8 +36,9 @@ export interface CifraClubImportResult {
 
 @Injectable({ providedIn: 'root' })
 export class CifraClubImportService {
-  private http        = inject(HttpClient);
+  private http         = inject(HttpClient);
   private cifraService = inject(CifraService);
+  private authService  = inject(AuthService);
 
   /** Resultado de um import pendente — consumido por nova-cifra ao abrir */
   pendingImport: CifraClubImportResult | null = null;
@@ -78,10 +80,14 @@ export class CifraClubImportService {
   /** Scrapa, parseia e salva no Firebase. Retorna a Cifra salva. */
   async importarESalvar(sugestao: CifraClubSugestao): Promise<Cifra> {
     const result = await this.importarMusica(sugestao);
+
     const titulo  = result.title  || sugestao.nome;
     const artista = result.artist || sugestao.artista;
     const id      = slugify(`${titulo} ${artista}`);
     const secoes  = parseCifraTexto(result.lyricsWithChords);
+
+    const currentUser = this.authService.user();
+    if (!currentUser) throw new Error('Usuário não autenticado');
 
     const cifra: Cifra = {
       id,
@@ -95,7 +101,11 @@ export class CifraClubImportService {
       partesMissa:  [],
       secoes,
       sourceUrl:    result.sourceUrl,
+      donoUid:      currentUser.uid,
     };
+
+    const existente = await firstValueFrom(this.cifraService.getCifra(id));
+    if (existente) return existente;
 
     await firstValueFrom(this.cifraService.salvarCifra(cifra));
     return cifra;
