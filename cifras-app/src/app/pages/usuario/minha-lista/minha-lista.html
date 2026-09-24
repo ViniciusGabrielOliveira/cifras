@@ -14,6 +14,7 @@
     <span class="lista-titulo-header">{{ lista()!.titulo }}</span>
     }
     <div class="header-actions">
+      @if (lista(); as atual) { <a class="btn-participantes" routerLink="/projecao" [queryParams]="{ lista: atual.id }">Projetar</a> }
       @if (salvando()) {
       <span class="salvando-badge">salvando...</span>
       }

@@ -41,6 +41,7 @@
     <div class="dash-top">
       <h1 class="dash-titulo">@if (auth.isAdmin()) { Listas Cadastradas } @else { Minhas Listas }</h1>
       <div class="dash-actions">
+        <a class="btn-nova-lista" routerLink="/minha-area/projecoes">Listas de projeção</a>
         @if (auth.isAdmin()) {
           <button class="btn-dash-icon" (click)="abrirConfiguracoes()" title="Configurações">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

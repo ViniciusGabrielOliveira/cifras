@@ -1,0 +1,20 @@
+<main class="listas-page">
+  <nav><a routerLink="/">← Home</a><a routerLink="/admin/painel">Minha área</a></nav>
+  <header><div><span class="eyebrow">SEU REPERTÓRIO NO TELÃO</span><h1>Repertórios para projeção</h1><p>As mesmas listas das cifras, prontas para tocar ou projetar.</p></div><a class="primary" routerLink="/projecao">Abrir projeção</a></header>
+  <form (ngSubmit)="criar()" class="create-form">
+    <label for="nova-lista">Nova lista</label>
+    <div><input id="nova-lista" name="titulo" [(ngModel)]="titulo" maxlength="120" placeholder="Ex.: Missa de domingo" required [disabled]="ocupado()"><button class="primary" [disabled]="ocupado() || !titulo.trim()">Criar lista</button></div>
+  </form>
+  @if (legadas().length) { <div class="create-form"><p>Você tem {{ legadas().length }} listas da versão anterior. Importe para abri-las também nas cifras.</p><button (click)="migrar()" [disabled]="ocupado()">Importar listas antigas</button></div> }
+  @if (erro()) { <p class="error" role="alert">{{ erro() }} <button (click)="carregar()">Tentar novamente</button></p> }
+  @if (carregando()) { <p role="status">Carregando suas listas…</p> }
+  @else {
+    <section class="list-grid" aria-label="Suas listas de projeção">
+      @for (lista of listas(); track lista.id) {
+        <article><span class="eyebrow">{{ lista.musicas.length }} MÚSICAS</span><h2>{{ lista.titulo }}</h2><p>Atualizada em {{ lista.atualizadaEm | date:'dd/MM/yyyy' }}</p><footer><a class="primary" routerLink="/projecao" [queryParams]="{ lista: lista.id }">Projetar</a><a routerLink="/" [queryParams]="{ listaId: lista.id }">Abrir cifras</a>@if (service.podeExcluir(lista)) { <button [disabled]="ocupado()" (click)="excluir(lista)" [attr.aria-label]="'Excluir ' + lista.titulo">Excluir</button> }</footer></article>
+      } @empty {
+        @if (!erro()) { <div class="empty"><h2>Nenhum repertório disponível</h2><p>Crie sua primeira lista acima e adicione músicas do acervo.</p></div> }
+      }
+    </section>
+  }
+</main>

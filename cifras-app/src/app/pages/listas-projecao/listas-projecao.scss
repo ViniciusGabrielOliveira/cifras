@@ -1,0 +1,18 @@
+:host { display: block; min-height: 100dvh; background: var(--color-bg); color: var(--color-text); }
+.listas-page { max-width: 1100px; margin: auto; padding: 32px 24px; }
+nav, header, footer, .create-form > div { display: flex; align-items: center; gap: 16px; }
+nav { justify-content: space-between; margin-bottom: 48px; }
+header { justify-content: space-between; flex-wrap: wrap; margin-bottom: 32px; }
+h1 { font-size: clamp(26px, 4vw, 40px); margin: 8px 0; } h2 { overflow-wrap: anywhere; }
+p { color: var(--color-text-muted); } .eyebrow { font-size: 12px; font-weight: 600; color: var(--color-primary); letter-spacing: .08em; }
+a { color: var(--color-primary); text-decoration: none; }
+button, .primary, input { font: inherit; border-radius: var(--radius-sm); padding: 12px 16px; border: 1px solid var(--color-border); }
+button { cursor: pointer; background: var(--color-surface); color: var(--color-text); } button:disabled { opacity: .5; cursor: default; }
+.primary { background: var(--color-primary); color: var(--color-text-inv); text-align: center; }
+.create-form { padding: 24px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); margin-bottom: 32px; }
+label { display: block; margin-bottom: 12px; font-weight: 600; } input { flex: 1; min-width: 0; background: var(--color-bg); color: var(--color-text); }
+.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 20px; }
+article, .empty { padding: 24px; border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); }
+footer { justify-content: space-between; flex-wrap: wrap; margin-top: 24px; } .empty { grid-column: 1 / -1; text-align: center; padding: 64px 24px; }
+.error { color: var(--color-danger); } :focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+@media(max-width: 600px) { .listas-page { padding: 24px 16px; } .create-form > div { flex-direction: column; align-items: stretch; } nav { margin-bottom: 32px; } }

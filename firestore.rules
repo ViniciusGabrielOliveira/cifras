@@ -244,6 +244,42 @@ service cloud.firestore {
       allow write: if isAdminOrEditor();
     }
 
+    // Preferência visual do usuário: não altera listas nem músicas.
+    match /users/{uid}/preferencias/projecao {
+      allow read: if isNotBlocked() && request.auth.uid == uid;
+      allow create, update: if isNotBlocked() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['fundo', 'cor', 'tamanho', 'caixa', 'negrito', 'entrelinhas', 'espacoParagrafo', 'alinhamento'])
+        && request.resource.data.fundo is string
+        && request.resource.data.fundo.matches('^#[0-9a-fA-F]{6}$')
+        && request.resource.data.cor is string
+        && request.resource.data.cor.matches('^#[0-9a-fA-F]{6}$')
+        && request.resource.data.tamanho is number
+        && request.resource.data.tamanho >= 2 && request.resource.data.tamanho <= 12
+        && request.resource.data.caixa in ['original', 'uppercase', 'lowercase']
+        && request.resource.data.negrito is bool
+        && request.resource.data.entrelinhas is number
+        && request.resource.data.entrelinhas >= 1 && request.resource.data.entrelinhas <= 2.5
+        && request.resource.data.espacoParagrafo is number
+        && request.resource.data.espacoParagrafo >= 0 && request.resource.data.espacoParagrafo <= 2
+        && request.resource.data.alinhamento in ['left', 'center', 'right', 'justify'];
+    }
+
+    // Listas de projeção são privadas e independentes dos repertórios.
+    match /users/{uid}/listasProjecao/{listaId} {
+      allow read, delete: if isNotBlocked() && request.auth.uid == uid;
+      allow update: if isNotBlocked() && request.auth.uid == uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['listaMigradaId'])
+        && request.resource.data.listaMigradaId is string;
+      allow create, update: if isNotBlocked() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['titulo', 'musicas', 'atualizadaEm'])
+        && request.resource.data.titulo is string
+        && request.resource.data.titulo.size() > 0
+        && request.resource.data.titulo.size() <= 120
+        && request.resource.data.musicas is list
+        && request.resource.data.musicas.size() <= 200
+        && request.resource.data.atualizadaEm is string;
+    }
+
     // ── Users ────────────────────────────────────────────────────────
     match /users/{uid} {
       allow read: if isAuthenticated();

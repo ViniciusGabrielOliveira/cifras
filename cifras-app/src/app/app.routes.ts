@@ -3,6 +3,21 @@ import { authGuard } from './guards/auth.guard';
 import { roleGuard } from './guards/role.guard';
 
 export const routes: Routes = [
+    {
+        path: 'projecao/tela',
+        loadComponent: () => import('./pages/tela-projecao/tela-projecao').then(m => m.TelaProjecao),
+    },
+    {
+        path: 'projecao',
+        canActivate: [authGuard, roleGuard('membro')],
+        canDeactivate: [(component: { podeSair: () => boolean | Promise<boolean> }) => component.podeSair()],
+        loadComponent: () => import('./pages/projecao/projecao').then(m => m.Projecao),
+    },
+    {
+        path: 'minha-area/projecoes',
+        canActivate: [authGuard, roleGuard('membro')],
+        loadComponent: () => import('./pages/listas-projecao/listas-projecao').then(m => m.ListasProjecao),
+    },
     // ── Home ─────────────────────────────────────────────────────────
     {
         path: '',

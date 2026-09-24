@@ -1,0 +1,5 @@
+<div class="slide" [style.background-color]="layout().fundo" [style.color]="layout().cor">
+  <div class="texto" [style.font-size]="layout().tamanho + 'cqmin'" [style.font-weight]="layout().negrito ? 700 : 400" [style.text-transform]="layout().caixa === 'original' ? 'none' : layout().caixa" [style.line-height]="layout().entrelinhas" [style.text-align]="layout().alinhamento" [style.gap]="layout().espacoParagrafo + 'em'">
+    @for (paragrafo of paragrafos(); track $index) { <p>{{ paragrafo }}</p> }
+  </div>
+</div>

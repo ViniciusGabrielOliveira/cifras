@@ -1,0 +1,59 @@
+<div class="workspace" [class.sidebar-hidden]="!lateral()">
+  <main class="operator">
+    <header class="toolbar"><div><span class="eyebrow">PROJEÇÃO</span><h1>{{ atual()?.nome || 'Prepare sua projeção' }}</h1></div><div class="actions">@if (listaBase().id) { <a class="cifras-link" routerLink="/" [queryParams]="{ listaId: listaBase().id }">Abrir cifras</a> }<button (click)="editorLayout.set(!editorLayout())" [attr.aria-expanded]="editorLayout()" aria-controls="editor-layout">Aa Layout</button><button (click)="abrirTelao()">↗ Abrir telão</button><button (click)="lateral.set(!lateral())" [attr.aria-expanded]="lateral()" aria-controls="fila">☰ Músicas</button></div></header>
+    @if (erro()) { <p role="alert" class="error">{{ erro() }}</p> }
+    @if (editorLayout()) {
+      <section id="editor-layout" class="layout-editor" aria-labelledby="layout-titulo">
+        <div class="layout-heading"><div><h2 id="layout-titulo">Layout da projeção</h2><p>Um padrão para todas as músicas. As letras cadastradas permanecem iguais.</p></div><span>{{ layoutAlterado() ? 'Ajustes não salvos' : 'Padrão de projeção' }}</span></div>
+        @if (carregandoLayout()) { <p role="status">Carregando seu layout…</p> }
+        <fieldset [disabled]="carregandoLayout()">
+          <legend class="sr-only">Formatação do telão</legend>
+          <label>Cor de fundo<input type="color" [ngModel]="layout().fundo" (ngModelChange)="atualizarLayout('fundo', $event)"></label>
+          <label>Cor da letra<input type="color" [ngModel]="layout().cor" (ngModelChange)="atualizarLayout('cor', $event)"></label>
+          <label>Tamanho da letra · {{ layout().tamanho }}%<input type="range" min="2" max="12" step="0.5" [ngModel]="layout().tamanho" (ngModelChange)="atualizarLayout('tamanho', +$event)"><small>Proporcional à área de projeção</small></label>
+          <label>Maiúsculas / minúsculas<select [ngModel]="layout().caixa" (ngModelChange)="atualizarLayout('caixa', $event)"><option value="original">Como no original</option><option value="uppercase">MAIÚSCULAS</option><option value="lowercase">minúsculas</option></select></label>
+          <label>Alinhamento<select [ngModel]="layout().alinhamento" (ngModelChange)="atualizarLayout('alinhamento', $event)"><option value="left">À esquerda</option><option value="center">Centralizado</option><option value="right">À direita</option><option value="justify">Justificado</option></select></label>
+          <label>Espaçamento entre linhas · {{ layout().entrelinhas }}<input type="range" min="1" max="2.5" step="0.1" [ngModel]="layout().entrelinhas" (ngModelChange)="atualizarLayout('entrelinhas', +$event)"></label>
+          <label>Espaçamento de parágrafos · {{ layout().espacoParagrafo }}<input type="range" min="0" max="2" step="0.1" [ngModel]="layout().espacoParagrafo" (ngModelChange)="atualizarLayout('espacoParagrafo', +$event)"><small>Espaço adicional entre as linhas da letra</small></label>
+          <button class="bold-toggle" [class.active]="layout().negrito" [attr.aria-pressed]="layout().negrito" (click)="atualizarLayout('negrito', !layout().negrito)"><strong>N</strong> Negrito</button>
+        </fieldset>
+        <div class="layout-footer"><button (click)="restaurarLayout()" [disabled]="carregandoLayout()">Restaurar padrão</button><button class="primary" (click)="salvarLayout()" [disabled]="carregandoLayout() || salvandoLayout()">{{ salvandoLayout() ? 'Salvando…' : 'Salvar como meu padrão' }}</button></div>
+        @if (erroLayout()) { <p role="alert" class="error">{{ erroLayout() }} <button (click)="carregarLayout()" [disabled]="carregandoLayout() || salvandoLayout()">Recarregar padrão</button></p> }
+        @if (avisoLayout()) { <p role="status" class="notice">{{ avisoLayout() }}</p> }
+      </section>
+    }
+    <section class="preview" aria-label="Prévia do telão">
+      <app-projecao-slide [letra]="letra() || (editorLayout() && !atual() && !apagada() ? 'Uma nova canção\nPara celebrar e cantar' : '')" [layout]="layout()" />
+      @if (!letra() && !(editorLayout() && !atual() && !apagada())) { <div class="preview-empty">@if (carregando()) { Carregando letra… } @else if (apagada()) { Telão apagado } @else { Selecione uma música para começar }<small>A janela do telão exibe somente as letras.</small></div> }
+    </section>
+    <nav class="playback" aria-label="Controles de projeção"><button (click)="irSlide(slide() - 1)" [disabled]="slide() === 0 || !slides().length" aria-label="Trecho anterior">←</button><span>{{ slides().length ? slide() + 1 : 0 }} / {{ slides().length }}</span><button (click)="irSlide(slide() + 1)" [disabled]="slide() >= slides().length - 1" aria-label="Próximo trecho">→</button><button (click)="alternarApagada()" [attr.aria-pressed]="apagada()">{{ apagada() ? 'Exibir letras' : 'Apagar telão' }}</button></nav>
+    <section class="slides" aria-label="Trechos da música">
+      @for (trecho of slides(); track $index; let i = $index) { <button class="slide-card" [class.active]="slide() === i" [attr.aria-pressed]="slide() === i" (click)="irSlide(i)"><span>{{ i + 1 }}</span><p>{{ trecho }}</p></button> }
+    </section>
+  </main>
+  <aside id="fila" class="sidebar" [hidden]="!lateral()">
+    <header><span class="eyebrow">ORDEM DE PROJEÇÃO</span><label class="sr-only" for="titulo">Nome da lista</label><input id="titulo" [disabled]="!podeEditar() || carregando()" [(ngModel)]="titulo" (ngModelChange)="alterada.set(true)" maxlength="120"><div class="save-row"><span>{{ musicas().length }} músicas{{ alterada() ? ' · Não salvo' : '' }}</span><button (click)="salvar()" [disabled]="!podeEditar() || salvando() || carregando() || !titulo.trim()">{{ salvando() ? 'Salvando…' : 'Salvar' }}</button></div></header>
+    @if (!podeEditar()) { <p class="notice">Você pode projetar este repertório, mas não editá-lo.</p> }
+    <div class="queue" cdkDropList [cdkDropListDisabled]="!podeEditar()" [cdkDropListData]="musicas()" (cdkDropListDropped)="reordenar($event)">
+      @for (musica of musicas(); track musica.id; let i = $index) {
+        <article class="song-card" cdkDrag [cdkDragDisabled]="!podeEditar()" [class.active]="selecionada() === musica.id">
+          <button class="drag-handle" cdkDragHandle aria-label="Arrastar música para reordenar" title="Arraste para reordenar">⠿</button>
+          <button class="song-title" (click)="selecionar(musica)" [attr.aria-pressed]="selecionada() === musica.id"><small>{{ i + 1 }}</small><strong>{{ musica.nome }}</strong><span>{{ musica.autor }}</span></button>
+          <div class="song-actions"><button (click)="mover(i, i - 1)" [disabled]="!podeEditar() || i === 0" [attr.aria-label]="'Mover ' + musica.nome + ' para cima'">↑</button><button (click)="mover(i, i + 1)" [disabled]="!podeEditar() || i === musicas().length - 1" [attr.aria-label]="'Mover ' + musica.nome + ' para baixo'">↓</button><button [disabled]="!podeEditar()" (click)="remover(musica.id)" [attr.aria-label]="'Remover ' + musica.nome">×</button></div>
+        </article>
+      } @empty { <div class="empty"><span class="empty-icon">♫</span><h2>Nenhuma música na projeção</h2><p>Selecione uma lista salva ou use o botão + para adicionar músicas.</p></div> }
+    </div>
+    <footer class="sidebar-footer"><a routerLink="/" title="Voltar para home" aria-label="Voltar para home">⌂</a><button (click)="abrirModal('listas')" title="Selecionar lista salva" aria-label="Selecionar lista salva">☷</button><button class="primary" [disabled]="!podeEditar() || carregando()" (click)="abrirModal('musicas')" title="Adicionar músicas" aria-label="Adicionar músicas">+</button></footer>
+  </aside>
+</div>
+<dialog #modal aria-labelledby="modal-titulo"><header><h2 id="modal-titulo">{{ modoModal() === 'musicas' ? 'Adicionar músicas' : 'Selecionar lista' }}</h2><button (click)="modal.close()" aria-label="Fechar modal">×</button></header>
+  @if (erro()) { <p role="alert" class="error">{{ erro() }}</p> }
+  <p class="notice" role="status">{{ aviso() }}</p>
+  @if (modoModal() === 'musicas') { <app-musica-search [modoEmbutido]="true" [mostrarFiltros]="true" [mostrarCifraClub]="true" [mostrarCadastro]="false" (musicaSelecionada)="adicionar($event)" /> }
+  @else {
+    <a class="manage-link" routerLink="/minha-area/projecoes" (click)="modal.close()">Gerenciar repertórios →</a>
+    @if (carregandoListas()) { <p role="status">Carregando listas…</p> }
+    @else { @for (lista of listas(); track lista.id) { <button class="list-option" (click)="escolherLista(lista)"><strong>{{ lista.titulo }}</strong><span>{{ lista.musicas.length }} músicas</span></button> } @empty { @if (!erro()) { <p class="empty">Nenhum repertório disponível. Adicione músicas e salve sua primeira lista.</p> } } }
+  }
+</dialog>
+@if (aviso()) { <div class="status-message" role="status">{{ aviso() }}</div> }

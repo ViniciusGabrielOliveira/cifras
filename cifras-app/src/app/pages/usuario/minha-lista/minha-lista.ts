@@ -1,5 +1,5 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 import { Lista } from '../../../models/lista.model';
 import { ListaService } from '../../../services/lista.service';
 import { CifraService } from '../../../services/cifra.service';
@@ -14,7 +14,7 @@ import { TONS } from '../../../core/cifra-parser';
 @Component({
     selector: 'app-minha-lista',
     standalone: true,
-    imports: [ParticipantesListaComponent, ListaMetadataComponent, MusicasListaComponent],
+    imports: [RouterLink, ParticipantesListaComponent, ListaMetadataComponent, MusicasListaComponent],
     templateUrl: './minha-lista.html',
     styleUrl: './minha-lista.scss',
 })

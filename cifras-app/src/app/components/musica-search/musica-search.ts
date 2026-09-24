@@ -56,6 +56,7 @@ export class MusicaSearchComponent implements OnDestroy, AfterViewInit {
   mostrarFiltros = input(false);
   // Controle de acesso à busca web — true por padrão, pode ser restringido no futuro
   mostrarCifraClub = input(true);
+  mostrarCadastro = input(true);
 
   musicaSelecionada = output<MusicaSelecionada>();
   cadastrarNova     = output<string>();
