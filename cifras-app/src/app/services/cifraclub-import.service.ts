@@ -70,23 +70,12 @@ export class CifraClubImportService {
 
   async importarMusica(sugestao: CifraClubSugestao): Promise<CifraClubImportResult> {
     const cifraUrl = `https://www.cifraclub.com.br/${sugestao.dns}/${sugestao.url}/`;
-    console.info('[CifraImport:v2] Solicitando importação', { url: cifraUrl });
-    const result = await firstValueFrom(
+    return firstValueFrom(
       this.http.get<CifraClubImportResult>(`${environment.cifrasApiUrl}/importar`, {
         headers: this.headers,
         params: { url: cifraUrl },
       })
     );
-    console.info('[CifraImport:v2] Resposta da API', {
-      url: result.sourceUrl,
-      marcacaoHtml: result.chordLines !== undefined,
-      linhasTexto: result.lyricsWithChords.split('\n').length,
-      linhasMarcadas: result.chordLines?.length,
-      totalAcordes: result.chordLines?.reduce((total, linha) => total + linha.length, 0),
-      nomes: [...new Set(result.chordLines?.flat().map(a => a.acorde) ?? [])],
-    });
-    if (!result.chordLines) console.warn('[CifraImport:v2] API sem marcação HTML; usando reconhecimento por texto');
-    return result;
   }
 
   /** Scrapa, parseia e salva no Firebase. Retorna a Cifra salva. */
@@ -97,14 +86,6 @@ export class CifraClubImportService {
     const artista = result.artist || sugestao.artista;
     const id      = slugify(`${titulo} ${artista}`);
     const secoes  = parseCifraTexto(result.lyricsWithChords, result.chordLines);
-
-    console.groupCollapsed('[CifraImport:v2] Resultado do parser');
-    console.table(secoes.flatMap(secao => secao.linhas.map((linha, indice) => ({
-      secao: secao.label, linha: indice + 1,
-      acordes: linha.acordes.map(a => `${a.acorde}@${a.posicao}`).join(' '),
-      texto: linha.letra.slice(0, 100), raw: linha.rawChordsLine,
-    }))));
-    console.groupEnd();
 
     const currentUser = this.authService.user();
     if (!currentUser) throw new Error('Usuário não autenticado');
@@ -125,17 +106,9 @@ export class CifraClubImportService {
     };
 
     const existente = await firstValueFrom(this.cifraService.getCifra(id));
-    if (existente) {
-      console.warn('[CifraImport:v2] Reutilizando cifra existente; importação nova não foi salva', {
-        id, sourceUrl: existente.sourceUrl,
-        acordesImportados: secoes.flatMap(s => s.linhas).flatMap(l => l.acordes).map(a => a.acorde),
-        acordesSalvos: existente.secoes.flatMap(s => s.linhas).flatMap(l => l.acordes).map(a => a.acorde),
-      });
-      return existente;
-    }
+    if (existente) return existente;
 
     await firstValueFrom(this.cifraService.salvarCifra(cifra));
-    console.info('[CifraImport:v2] Cifra salva', { id });
     return cifra;
   }
 }
