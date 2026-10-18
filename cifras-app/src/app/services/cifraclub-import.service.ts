@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, firstValueFrom, map } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { Cifra } from '../models/cifra.model';
+import { AcordeLinha, Cifra } from '../models/cifra.model';
 import { parseCifraTexto, slugify } from '../core/cifra-parser';
 import { CifraService } from './cifra.service';
 import { AuthService } from './auth.service';
@@ -31,6 +31,7 @@ export interface CifraClubImportResult {
   artist: string;
   tom: string;
   lyricsWithChords: string;
+  chordLines?: AcordeLinha[][];
   sourceUrl: string;
 }
 
@@ -84,7 +85,7 @@ export class CifraClubImportService {
     const titulo  = result.title  || sugestao.nome;
     const artista = result.artist || sugestao.artista;
     const id      = slugify(`${titulo} ${artista}`);
-    const secoes  = parseCifraTexto(result.lyricsWithChords);
+    const secoes  = parseCifraTexto(result.lyricsWithChords, result.chordLines);
 
     const currentUser = this.authService.user();
     if (!currentUser) throw new Error('Usuário não autenticado');

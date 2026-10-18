@@ -85,7 +85,7 @@ export class CifraEditorComponent implements OnInit {
           titulo:  pending.title  || '',
           artista: pending.artist || '',
           tom,
-          secoes: parseCifraTexto(pending.lyricsWithChords),
+          secoes: parseCifraTexto(pending.lyricsWithChords, pending.chordLines),
         });
         return;
       }

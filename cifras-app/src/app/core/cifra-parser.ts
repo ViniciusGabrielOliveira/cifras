@@ -83,19 +83,23 @@ function parseLinhaCifra(letra: string, acordesLinha: string): LinhaCifra {
   return { letra, acordes: acordes.filter(a => !seen.has(a.posicao) && seen.add(a.posicao)) };
 }
 
-export function parseCifraTexto(texto: string): Secao[] {
+export function parseCifraTexto(texto: string, chordLines?: AcordeLinha[][]): Secao[] {
   const secoes: Secao[] = [];
   let secaoAtual: Secao = { tipo: 'verso', label: 'Verso 1', linhas: [] };
   let acordesPendentes: string | null = null;
+  let acordesMarcados: AcordeLinha[] | null = null;
   let rawPendente: string | null = null; // texto original da linha de acordes (com parênteses)
   let tabLinhas: string[] = [];
   let vimpTabLinhas = false; // se já vimos pelo menos uma linha real de tablatura na seção atual
 
   const flushAcordes = () => {
     if (acordesPendentes !== null) {
-      const l = parseLinhaCifra('', acordesPendentes);
+      const l: LinhaCifra = acordesMarcados !== null
+        ? { letra: '', acordes: acordesMarcados }
+        : parseLinhaCifra('', acordesPendentes);
       if (rawPendente) l.rawChordsLine = rawPendente;
       secaoAtual.linhas.push(l);
+      acordesMarcados = null;
       acordesPendentes = null;
       rawPendente = null;
     }
@@ -112,7 +116,8 @@ export function parseCifraTexto(texto: string): Secao[] {
     vimpTabLinhas = false;
   };
 
-  for (const linha of texto.split('\n')) {
+  for (const [indice, linha] of texto.split('\n').entries()) {
+    const marcados = chordLines?.[indice];
     const secaoMatch = linha.trim().match(/^\[(.+?)\]\s*(.*)/);
     if (secaoMatch) {
       flushAcordes();
@@ -125,8 +130,17 @@ export function parseCifraTexto(texto: string): Secao[] {
       if (tipo !== 'tab') {
         const resto = secaoMatch[2].trim();
         if (resto) {
-          const acordes = extrairAcordesLinha(resto);
-          if (acordes) acordesPendentes = acordes;
+          const acordes = marcados !== undefined
+            ? (marcados.length ? resto : null)
+            : extrairAcordesLinha(resto);
+          if (acordes) {
+            acordesPendentes = acordes;
+            if (marcados !== undefined) {
+              const inicio = linha.indexOf(']') + 1;
+              const offset = inicio + linha.slice(inicio).search(/\S/);
+              acordesMarcados = marcados.map(a => ({ ...a, posicao: a.posicao - offset }));
+            }
+          }
         }
       }
       continue;
@@ -167,19 +181,25 @@ export function parseCifraTexto(texto: string): Secao[] {
 
     if (!linha.trim()) { flushAcordes(); continue; }
 
-    const acordesLinha = extrairAcordesLinha(linha);
+    const acordesLinha = marcados !== undefined
+      ? (marcados.length ? linha : null)
+      : extrairAcordesLinha(linha);
     if (acordesLinha !== null) {
       flushAcordes();
       acordesPendentes = acordesLinha;
+      acordesMarcados = marcados ?? null;
       rawPendente = HAS_PARENS_ARROWS.test(linha) ? linha.trimEnd() : null;
       continue;
     }
 
     const letra = linha.trimEnd();
     if (acordesPendentes !== null) {
-      const l = parseLinhaCifra(letra, acordesPendentes);
+      const l: LinhaCifra = acordesMarcados !== null
+        ? { letra, acordes: acordesMarcados }
+        : parseLinhaCifra(letra, acordesPendentes);
       if (rawPendente) l.rawChordsLine = rawPendente;
       secaoAtual.linhas.push(l);
+      acordesMarcados = null;
       acordesPendentes = null;
       rawPendente = null;
     } else {

@@ -9,6 +9,7 @@ Lógica de fetch e parse do Cifra Club.
 import re
 import json
 import httpx
+from html.parser import HTMLParser
 from curl_cffi.requests import AsyncSession
 from typing import Optional
 
@@ -238,6 +239,46 @@ def _find_specific_key(obj, key: str):
     return None
 
 
+class _CifraHTMLParser(HTMLParser):
+    """Preserva texto e posições; a marcação do site é a fonte dos acordes."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.text = ""
+        self.chords = []
+        self.active_chord = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "br":
+            self.text += "\n"
+        elif tag == "b":
+            self.active_chord = (len(self.text), attrs.get("data-chord-name"))
+
+    def handle_endtag(self, tag):
+        if tag == "b" and self.active_chord is not None:
+            start, name = self.active_chord
+            visible = self.text[start:]
+            name = (name or visible).strip()
+            if name:
+                self.chords.append((start, name))
+            self.active_chord = None
+
+    def handle_data(self, data):
+        self.text += data.replace("\r\n", "\n").replace("\r", "\n").replace("\xa0", " ")
+
+    def result(self):
+        # Não remove espaços: eles definem a coluna de cada acorde.
+        lines = self.text.split("\n")
+        chords_by_line = [[] for _ in lines]
+        for offset, name in self.chords:
+            prefix = self.text[:offset]
+            line = prefix.count("\n")
+            column = len(prefix.rsplit("\n", 1)[-1].encode("utf-16-le")) // 2
+            chords_by_line[line].append({"acorde": name, "posicao": column})
+        return self.text, chords_by_line
+
+
 def _parse_page(html: str, source_url: str) -> dict:
     title = (
         _match(html, r'<h1[^>]*itemprop="name"[^>]*>([^<]+)</h1>')
@@ -254,31 +295,16 @@ def _parse_page(html: str, source_url: str) -> dict:
 
     # Extrai lyrics antes do tom para poder usá-los como fallback
     raw = (
-        _match(html, r'<pre[^>]*id="pre_cifra"[^>]*>([\s\S]*?)</pre>')
-        or _match(html, r'<div[^>]*id="cifra_v"[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)</pre>')
-        or _match(html, r'<div[^>]*class="[^"]*cifra_cont[^"]*"[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)</pre>')
-        or _match(html, r"<pre[^>]*>([\s\S]*?)</pre>")
+        _match(html, r'<pre[^>]*id="pre_cifra"[^>]*>([\s\S]*?)</pre>', strip=False)
+        or _match(html, r'<div[^>]*id="cifra_v"[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)</pre>', strip=False)
+        or _match(html, r'<div[^>]*class="[^"]*cifra_cont[^"]*"[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)</pre>', strip=False)
+        or _match(html, r"<pre[^>]*>([\s\S]*?)</pre>", strip=False)
         or ""
     )
 
-    lyrics = (
-        raw
-        .replace("<b>", "").replace("</b>", "")
-        .replace("<B>", "").replace("</B>", "")
-    )
-    lyrics = re.sub(r"<[^>]+>", "", lyrics)
-    lyrics = (
-        lyrics
-        .replace("&amp;", "&")
-        .replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&quot;", '"')
-        .replace("&#39;", "'")
-        .replace("&nbsp;", " ")
-        .replace("\r\n", "\n")
-        .replace("\r", "\n")
-        .strip()
-    )
+    parser = _CifraHTMLParser()
+    parser.feed(raw)
+    lyrics, chord_lines = parser.result()
 
     tom_raw = (
         _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')
@@ -300,10 +326,13 @@ def _parse_page(html: str, source_url: str) -> dict:
         "artist":          artist.strip(),
         "tom":             tom.strip(),
         "lyricsWithChords": lyrics,
+        "chordLines":       chord_lines,
         "sourceUrl":       source_url,
     }
 
 
-def _match(text: str, pattern: str) -> Optional[str]:
+def _match(text: str, pattern: str, *, strip: bool = True) -> Optional[str]:
     m = re.search(pattern, text)
-    return m.group(1).strip() if m else None
+    if m is None:
+        return None
+    return m.group(1).strip() if strip else m.group(1)
