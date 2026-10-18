@@ -19,12 +19,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Request, Security
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security.api_key import APIKeyHeader
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
-from app.chords_db import CHORDS_DB
+from app.chord_generator import ensure_chord
 from app.scraper import buscar_sugestoes, importar_cifra
 
 # ── Firebase ──────────────────────────────────────────────────────────────────
@@ -174,7 +174,7 @@ async def importar(
 
 
 class AcordesSyncRequest(BaseModel):
-    acordes: list[str]
+    acordes: list[str] = Field(min_length=1, max_length=100)
 
 
 @app.post(
@@ -188,29 +188,18 @@ async def sync_acordes(
     body: AcordesSyncRequest,
     _key: str = Security(_require_key),
 ):
-    """
-    Recebe uma lista de nomes de acordes, verifica quais ainda não existem
-    no Firestore e cadastra os que estão na base estática.
-    """
-    nomes = list(dict.fromkeys(body.acordes))  # deduplica mantendo ordem
+    """Completa ambos os instrumentos uma vez por versão do gerador."""
+    nomes = list(dict.fromkeys(n.strip() for n in body.acordes))
+    if any(not n or len(n) > 80 or "_" in n or any(ord(c) < 32 for c in n) for n in nomes):
+        raise HTTPException(status_code=422, detail="Nome de acorde inválido")
 
     def _sync():
         db = get_db()
-        adicionados, ja_existiam, sem_dados = [], [], []
-
-        for nome in nomes:
-            doc_id = nome.replace("/", "_")
-            ref = db.collection("acordes").document(doc_id)
-            if ref.get().exists:
-                ja_existiam.append(nome)
-                continue
-            if nome in CHORDS_DB:
-                ref.set({"variacoes": CHORDS_DB[nome]})
-                adicionados.append(nome)
-            else:
-                sem_dados.append(nome)
-
-        return {"adicionados": adicionados, "ja_existiam": ja_existiam, "sem_dados": sem_dados}
+        resultados = {nome: ensure_chord(db, nome) for nome in nomes}
+        return {
+            "acordes": resultados,
+            "sem_dados": [n for n, d in resultados.items() if d.get("geracao", {}).get("status") == "revisao"],
+        }
 
     try:
         return await asyncio.to_thread(_sync)

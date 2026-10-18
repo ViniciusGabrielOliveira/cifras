@@ -52,8 +52,14 @@ export class AcordeLabelComponent implements OnChanges, OnDestroy {
 
     this.busca?.unsubscribe();
     if (this.instrumento === 'cavaco') {
-      this.variacoes.set(gerarDiagramasCavaco(this.acorde));
-      this.carregando.set(false);
+      this.variacoes.set(this.acordesService.getVariacoes(this.acorde, 'cavaco').length
+        ? this.acordesService.getVariacoes(this.acorde, 'cavaco') : gerarDiagramasCavaco(this.acorde));
+      this.carregando.set(this.variacoes().length === 0);
+      this.busca = this.acordesService.preCarregarAcordes([this.acorde]).subscribe(() => {
+        const salvas = this.acordesService.getVariacoes(this.acorde, 'cavaco');
+        if (salvas.length) this.variacoes.set(salvas);
+        this.carregando.set(false);
+      });
       return;
     }
     // Já está no cache → exibe imediatamente

@@ -8,6 +8,8 @@ export interface DiagramaAcorde {
     variacao: string;
     casaBase: number;
     pestana?: number;
+    pestanaInicio?: number;
+    pestanaFim?: number;
     dedos: Dedo[];
     cordasMutadas: number[];
     cordasSoltas: number[];

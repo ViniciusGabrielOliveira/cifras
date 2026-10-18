@@ -4,6 +4,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Cifra, CifraVersao } from '../../models/cifra.model';
 import { SecaoCifraComponent } from '../secao-cifra/secao-cifra';
 import { calcularDelta, transporCifra } from '../../core/transposicao';
+import { AcordesService } from '../../services/acordes.service';
 import { AuthService } from '../../services/auth.service';
 
 function extrairYoutubeId(url: string): string | null {
@@ -19,6 +20,7 @@ function extrairYoutubeId(url: string): string | null {
   styleUrl: './cifra-viewer.scss',
 })
 export class CifraViewerComponent implements OnDestroy {
+  private acordesService = inject(AcordesService);
   private sanitizer = inject(DomSanitizer);
   readonly auth     = inject(AuthService);
 
@@ -33,6 +35,12 @@ export class CifraViewerComponent implements OnDestroy {
   instrumentoSelecionado = signal<'violao' | 'cavaco' | null>(null);
   instrumentoDiagrama = computed(() => this.instrumentoSelecionado()
     ?? (this.cifra().instrumento === 'cavaco' ? 'cavaco' : 'violao'));
+
+  private sincronizarDiagramas = effect(onCleanup => {
+    const cifra = this.cifraExibida();
+    const timer = setTimeout(() => this.acordesService.syncAcordes(cifra), 300);
+    onCleanup(() => clearTimeout(timer));
+  });
 
   delta = signal(0);
 

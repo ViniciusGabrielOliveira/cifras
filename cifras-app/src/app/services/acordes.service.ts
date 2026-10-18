@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of, tap, map } from 'rxjs';
+import { Observable, of, tap, map, switchMap, catchError, shareReplay, finalize, forkJoin } from 'rxjs';
 import { DiagramaAcorde } from '../models/diagrama.model';
 import { Cifra } from '../models/cifra.model';
 import { AcordeRepository } from '../repositories/acorde.repository.interface';
@@ -10,6 +10,9 @@ import { environment } from '../../environments/environment';
 export class AcordesService {
   private repo = inject(AcordeRepository);
   private http = inject(HttpClient);
+  private cavacoCache = new Map<string, DiagramaAcorde[]>();
+  private verificados = new Set<string>();
+  private emAndamento = new Map<string, Observable<void>>();
   private cache = new Map<string, DiagramaAcorde[]>();
 
   /**
@@ -17,26 +20,43 @@ export class AcordesService {
    * Acordes que já estão no cache são ignorados.
    */
   preCarregarAcordes(nomes: string[]): Observable<void> {
-    const faltantes = nomes.filter(n => !this.cache.has(n));
-    if (faltantes.length === 0) {
-      return of(undefined);
+    const faltantes = [...new Set(nomes)].filter(n => n && !this.verificados.has(n)).sort();
+    if (!faltantes.length) return of(undefined);
+    if (faltantes.length > 100) {
+      const lotes = Array.from({ length: Math.ceil(faltantes.length / 100) }, (_, i) =>
+        this.preCarregarAcordes(faltantes.slice(i * 100, (i + 1) * 100)));
+      return forkJoin(lotes).pipe(map(() => undefined));
     }
-    
-    return this.repo.getAcordes(faltantes).pipe(
-      tap(acordesMap => {
-        Object.entries(acordesMap).forEach(([nome, diags]) => {
-          this.cache.set(nome, diags);
-        });
-      }),
-      map(() => undefined)
+    const key = JSON.stringify(faltantes);
+    const pendente = this.emAndamento.get(key);
+    if (pendente) return pendente;
+    const tarefa = this.repo.getAcordes(faltantes).pipe(
+      tap(mapa => Object.entries(mapa).forEach(([nome, ds]) => this.cache.set(nome, ds))),
+      switchMap(() => this.http.post<{ acordes: Record<string, { variacoes: DiagramaAcorde[]; variacoesCavaco: DiagramaAcorde[] }> }>(
+        `${environment.cifrasApiUrl}/acordes/sync`,
+        { acordes: faltantes },
+        { headers: new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey }) },
+      )),
+      tap(resposta => Object.entries(resposta.acordes).forEach(([nome, data]) => {
+        this.cache.set(nome, data.variacoes ?? []);
+        this.cavacoCache.set(nome, data.variacoesCavaco ?? []);
+        this.verificados.add(nome);
+      })),
+      map(() => undefined),
+      // Falhas de rede não removem desenhos que já vieram do Firestore.
+      catchError(() => of(undefined)),
+      finalize(() => this.emAndamento.delete(key)),
+      shareReplay({ bufferSize: 1, refCount: false }),
     );
+    this.emAndamento.set(key, tarefa);
+    return tarefa;
   }
 
   /**
    * Retorna as variações de um acorde de forma síncrona, a partir do cache.
    */
-  getVariacoes(acorde: string): DiagramaAcorde[] {
-    return this.cache.get(acorde) ?? [];
+  getVariacoes(acorde: string, instrumento: 'violao' | 'cavaco' = 'violao'): DiagramaAcorde[] {
+    return (instrumento === 'cavaco' ? this.cavacoCache : this.cache).get(acorde) ?? [];
   }
 
   /**
@@ -54,10 +74,6 @@ export class AcordesService {
     }
     if (nomes.size === 0) return;
 
-    this.http.post(
-      `${environment.cifrasApiUrl}/acordes/sync`,
-      { acordes: [...nomes] },
-      { headers: new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey }) },
-    ).subscribe({ error: () => {} });
+    this.preCarregarAcordes([...nomes]).subscribe();
   }
 }

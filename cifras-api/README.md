@@ -117,3 +117,33 @@ cifras-api/
 ├── requirements.txt
 └── README.md
 ```
+
+
+## Diagramas automáticos (violão e cavaquinho)
+
+Ao abrir uma cifra ou mudar o tom, o viewer solicita `POST /acordes/sync` com os
+nomes únicos dos acordes (até 100 por lote). A API interpreta a harmonia e busca
+posições em E–A–D–G–B–E e D–G–B–D. Notas, baixo, extensão de mão e quantidade de
+dedos são verificados. O resultado fica persistido na coleção `acordes`:
+
+- `variacoes`: desenhos de violão, compatível com a estrutura anterior.
+- `variacoesCavaco`: desenhos de cavaquinho.
+- `geradorVersao`: evita repetir escritas já concluídas nesta versão.
+- `geracao.status`: `completo` ou `revisao`.
+- `geracao.instrumentosPendentes`: instrumentos que não puderam ser resolvidos.
+
+As transações preservam variações existentes e evitam duplicar posições. Símbolos
+não suportados são mantidos para revisão, sem criar desenhos por aproximação.
+A geração sob demanda usa a API existente, sem processo MCP ou agente conectado.
+Acordes em revisão podem ser consultados por `geracao.status == "revisao"`.
+
+Para preencher a base existente (preview por padrão):
+
+```bash
+.venv/bin/python scripts/backfill_chords.py --credentials ../service-account.json --report /tmp/chords-preview.json
+# Adicione --apply para persistir; o relatório informa antes/depois por acorde.
+```
+
+Preenchimento inicial aplicado em 18/10/2026: 29 acordes existentes, com 186
+desenhos de violão e 156 de cavaquinho; nenhum desses acordes ficou em revisão.
+Fonte: execução de `scripts/backfill_chords.py --apply` e leitura do Firestore.

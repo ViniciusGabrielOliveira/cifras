@@ -74,9 +74,9 @@
             <!-- Pestana -->
             @if (d.pestana) {
               <rect
-                [attr.x]="marginLeft + 1"
+                [attr.x]="marginLeft + (numeroCordas - (d.pestanaInicio ?? numeroCordas)) * cellW - 6"
                 [attr.y]="(d.pestana - d.casaBase) * cellH + marginTop + 2"
-                [attr.width]="(numeroCordas - 1) * cellW - 2"
+                [attr.width]="((d.pestanaInicio ?? numeroCordas) - (d.pestanaFim ?? 1)) * cellW + 12"
                 [attr.height]="cellH - 4"
                 fill="var(--color-acorde)"
                 rx="8"
