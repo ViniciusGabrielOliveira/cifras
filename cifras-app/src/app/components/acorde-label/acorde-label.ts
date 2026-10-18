@@ -1,48 +1,25 @@
 import {
-  Component, Input, signal, inject, ElementRef,
+  Component, Input, signal, inject, ElementRef, OnChanges, OnDestroy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DiagramaViolaoComponent } from '../diagrama-violao/diagrama-violao';
 import { AcordesService } from '../../services/acordes.service';
+import { Subscription } from 'rxjs';
+import { gerarDiagramasCavaco } from '../../core/cavaquinho';
 import { DiagramaAcorde } from '../../models/diagrama.model';
 
 @Component({
   selector: 'app-acorde-label',
   standalone: true,
   imports: [CommonModule, DiagramaViolaoComponent],
-  template: `
-    <span
-      class="acorde-chip"
-      (mouseenter)="onMouseEnter()"
-      (mouseleave)="onMouseLeave()"
-    >
-      {{ acorde }}
-
-      @if (showPopup()) {
-        <div
-          class="popup-wrapper"
-          [style.top.px]="popupTop"
-          [style.left.px]="popupLeft"
-          (mouseenter)="onMouseEnter()"
-          (mouseleave)="showPopup.set(false)"
-        >
-          @if (carregando()) {
-            <div class="diagrama-loading">
-              <span class="spinner-mini"></span>
-            </div>
-          } @else if (variacoes().length > 0) {
-            <app-diagrama-violao [variacoes]="variacoes()" [nome]="acorde" />
-          } @else {
-            <div class="diagrama-indisponivel">{{ acorde }}</div>
-          }
-        </div>
-      }
-    </span>
-  `,
+  templateUrl: './acorde-label.html',
   styleUrl: './acorde-label.scss',
 })
-export class AcordeLabelComponent {
+export class AcordeLabelComponent implements OnChanges, OnDestroy {
   @Input() acorde = '';
+  @Input() instrumento: 'violao' | 'cavaco' = 'violao';
+  private busca?: Subscription;
+  private fecharTimer?: ReturnType<typeof setTimeout>;
 
   showPopup = signal(false);
   carregando = signal(false);
@@ -55,6 +32,7 @@ export class AcordeLabelComponent {
   popupLeft = 0;
 
   onMouseEnter() {
+    clearTimeout(this.fecharTimer);
     this.showPopup.set(true);
     const rect = this.el.nativeElement.getBoundingClientRect();
     
@@ -72,16 +50,24 @@ export class AcordeLabelComponent {
     
     this.popupLeft = Math.max(16, calcLeft);
 
+    this.busca?.unsubscribe();
+    if (this.instrumento === 'cavaco') {
+      this.variacoes.set(gerarDiagramasCavaco(this.acorde));
+      this.carregando.set(false);
+      return;
+    }
     // Já está no cache → exibe imediatamente
     const cached = this.acordesService.getVariacoes(this.acorde);
     if (cached.length > 0) {
       this.variacoes.set(cached);
+      this.carregando.set(false);
       return;
     }
 
     // Não está no cache → busca just-in-time
     this.carregando.set(true);
-    this.acordesService.preCarregarAcordes([this.acorde]).subscribe({
+    this.variacoes.set([]);
+    this.busca = this.acordesService.preCarregarAcordes([this.acorde]).subscribe({
       next: () => {
         this.variacoes.set(this.acordesService.getVariacoes(this.acorde));
         this.carregando.set(false);
@@ -90,7 +76,20 @@ export class AcordeLabelComponent {
     });
   }
 
+  ngOnChanges() {
+    this.busca?.unsubscribe();
+    clearTimeout(this.fecharTimer);
+    this.showPopup.set(false);
+    this.variacoes.set([]);
+    this.carregando.set(false);
+  }
+
+  ngOnDestroy() {
+    this.busca?.unsubscribe();
+    clearTimeout(this.fecharTimer);
+  }
+
   onMouseLeave() {
-    setTimeout(() => this.showPopup.set(false), 150);
+    this.fecharTimer = setTimeout(() => this.showPopup.set(false), 150);
   }
 }

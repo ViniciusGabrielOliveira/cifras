@@ -59,6 +59,7 @@ function computarRawSegmentos(raw: string, acordes: AcordeLinha[]): RawSegmento[
   styleUrl: './linha-cifra.scss',
 })
 export class LinhaCifraComponent {
+  @Input() instrumento: 'violao' | 'cavaco' = 'violao';
   @Input() linha!: LinhaCifra;
 
   get segmentos() {

@@ -30,6 +30,10 @@ export class CifraViewerComponent implements OnDestroy {
 
   readonly tomAlterado = output<string>();
 
+  instrumentoSelecionado = signal<'violao' | 'cavaco' | null>(null);
+  instrumentoDiagrama = computed(() => this.instrumentoSelecionado()
+    ?? (this.cifra().instrumento === 'cavaco' ? 'cavaco' : 'violao'));
+
   delta = signal(0);
 
   private _initDelta = effect(() => {
@@ -206,7 +210,7 @@ export class CifraViewerComponent implements OnDestroy {
   onToqueCifra(event: Event) {
     if (!this.scrollAtivo()) return;
     const alvo = event.target as HTMLElement;
-    if (alvo.closest('button, a, select')) return;
+    if (alvo.closest('button, a, select, [role="button"]')) return;
     event.preventDefault();
     // Volta 70% da tela para reler a parte que passou
     document.documentElement.scrollTop -= window.innerHeight * 0.7;

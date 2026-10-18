@@ -11,7 +11,7 @@
           @for (seg of rawSegmentos; track $index) {
             @if (seg.kind === 'acorde') {
               @if (seg.prefix) { <span class="raw-paren">{{ seg.prefix }}</span> }
-              <app-acorde-label [acorde]="seg.acorde" />
+              <app-acorde-label [acorde]="seg.acorde" [instrumento]="instrumento" />
               @if (seg.suffix) { <span class="raw-paren">{{ seg.suffix }}</span> }
             } @else {
               <span class="raw-espaco">{{ seg.texto }}</span>
@@ -28,7 +28,7 @@
           <span class="segmento">
             <span class="seg-acorde">
               @if (seg.acorde) {
-                <app-acorde-label [acorde]="seg.acorde" />
+                <app-acorde-label [acorde]="seg.acorde" [instrumento]="instrumento" />
               }
             </span>
             <span class="seg-texto">{{ seg.texto }}</span>

@@ -23,6 +23,15 @@
     </div>
   </div>
 
+  <div class="toolbar-group">
+    <label class="toolbar-label" for="instrumento-{{ cifra().id }}">Instrumento</label>
+    <select class="versao-select" id="instrumento-{{ cifra().id }}" [value]="instrumentoDiagrama()"
+      (change)="instrumentoSelecionado.set($any($event.target).value)">
+      <option value="violao">Violão</option>
+      <option value="cavaco">Cavaquinho</option>
+    </select>
+  </div>
+
   @if (versoes().length > 0) {
   <div class="toolbar-group">
     <span class="toolbar-label">Versão</span>
@@ -90,7 +99,7 @@
 <div class="cifra-secoes" [style.font-size.px]="fonteSize()" [class.scroll-ativo]="scrollAtivo()"
   (click)="onToqueCifra($event)" (touchstart)="onToqueCifra($event)">
   @for (secao of cifraExibida().secoes; track $index) {
-  <app-secao-cifra [secao]="secao" />
+  <app-secao-cifra [secao]="secao" [instrumento]="instrumentoDiagrama()" />
   }
 </div>
 

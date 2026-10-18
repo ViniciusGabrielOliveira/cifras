@@ -1,1 +1,101 @@
-<p>diagrama-violao works!</p>
+<div class="diagrama-card">
+      <div class="diagrama-header">
+        <span class="diagrama-nome">{{ nome }}</span>
+        @if (numeroCordas === 4) { <span class="afinacao">Cavaquinho · Ré Sol Si Ré</span> }
+        @if (variacoes.length > 1) {
+          <div class="diagrama-tabs">
+            @for (v of variacoes; track v.variacao; let i = $index) {
+              <button
+                class="tab-btn"
+                [class.active]="selectedIdx() === i"
+                (click)="selectedIdx.set(i)"
+              >{{ v.variacao }}</button>
+            }
+          </div>
+        }
+      </div>
+
+      @if (diagrama(); as d) {
+        <div class="svg-wrap" [style.width.px]="svgW">
+          @if (d.casaBase > 1) {
+            <span class="casa-base">{{ d.casaBase }}ª</span>
+          }
+
+          <!-- Sinais acima (X e O) -->
+          <div class="sinais-topo" [style.padding-left.px]="marginLeft - cellW / 2">
+            @for (c of cordas; track c) {
+              <span class="sinal" [class.x]="cordasMutadasSet()(c)" [class.o]="cordasSoltasSet()(c)">
+                {{ cordasMutadasSet()(c) ? '✕' : cordasSoltasSet()(c) ? '○' : '' }}
+              </span>
+            }
+          </div>
+
+          <svg role="img" [attr.aria-label]="nome + ' — ' + numeroCordas + ' cordas'"
+            [attr.viewBox]="'0 0 ' + svgW + ' ' + svgH"
+            [attr.width]="svgW"
+            [attr.height]="svgH"
+          >
+            <!-- Linhas horizontais (casas) -->
+            @for (row of rows; track row) {
+              <line
+                [attr.x1]="marginLeft"
+                [attr.y1]="row * cellH + marginTop"
+                [attr.x2]="marginLeft + (numeroCordas - 1) * cellW"
+                [attr.y2]="row * cellH + marginTop"
+                stroke="var(--color-frets)"
+                stroke-width="1"
+              />
+            }
+
+            <!-- Cabeça do braço (linha mais grossa) -->
+            @if (d.casaBase === 1) {
+              <rect
+                [attr.x]="marginLeft"
+                [attr.y]="marginTop - 5"
+                [attr.width]="(numeroCordas - 1) * cellW"
+                height="5"
+                fill="var(--color-nut)"
+                rx="1"
+              />
+            }
+
+            <!-- Cordas verticais -->
+            @for (col of cols; track col) {
+              <line
+                [attr.x1]="col * cellW + marginLeft"
+                [attr.y1]="marginTop"
+                [attr.x2]="col * cellW + marginLeft"
+                [attr.y2]="5 * cellH + marginTop"
+                stroke="var(--color-strings)"
+                [attr.stroke-width]="1 + (numeroCordas - 1 - col) * 0.15"
+              />
+            }
+
+            <!-- Pestana -->
+            @if (d.pestana) {
+              <rect
+                [attr.x]="marginLeft + 1"
+                [attr.y]="(d.pestana - d.casaBase) * cellH + marginTop + 2"
+                [attr.width]="(numeroCordas - 1) * cellW - 2"
+                [attr.height]="cellH - 4"
+                fill="var(--color-acorde)"
+                rx="8"
+                opacity="0.9"
+              />
+            }
+
+            <!-- Bolinhas dos dedos -->
+            @for (dedo of d.dedos; track dedo.corda + '-' + dedo.casa) {
+              @if (!d.pestana || dedo.casa !== d.pestana || dedo.corda !== 1) {
+                <circle
+                  [attr.cx]="(numeroCordas - dedo.corda) * cellW + marginLeft"
+                  [attr.cy]="(dedo.casa - d.casaBase + 0.5) * cellH + marginTop"
+                  r="7"
+                  fill="var(--color-acorde)"
+                />
+              }
+            }
+          </svg>
+        </div>
+      }
+    </div>

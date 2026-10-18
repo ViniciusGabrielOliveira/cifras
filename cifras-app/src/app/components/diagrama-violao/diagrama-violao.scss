@@ -35,7 +35,7 @@
   &:hover:not(.active) { border-color: var(--color-primary); color: var(--color-primary); }
 }
 
-.svg-wrap { position: relative; display: flex; justify-content: center; }
+.svg-wrap { position: relative; display: flex; justify-content: center; margin: 0 auto; }
 
 .casa-base {
   position: absolute;
@@ -66,3 +66,5 @@
 }
 
 svg { display: block; margin-top: 0; }
+
+.afinacao { display: block; text-align: center; font-size: 0.7rem; color: var(--color-text-2); margin-bottom: 6px; }

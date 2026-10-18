@@ -45,6 +45,7 @@ function parsearTabLinha(linha: string): TabLinha {
   styleUrl: './secao-cifra.scss',
 })
 export class SecaoCifraComponent {
+  @Input() instrumento: 'violao' | 'cavaco' = 'violao';
   @Input() secao!: Secao;
 
   get icon(): string {

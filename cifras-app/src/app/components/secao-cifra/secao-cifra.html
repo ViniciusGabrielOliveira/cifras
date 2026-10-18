@@ -27,7 +27,7 @@
     <!-- ── Seção normal ───────────────────────────────────────────── -->
     <div class="secao-body">
       @for (linha of secao.linhas; track $index) {
-        <app-linha-cifra [linha]="linha" />
+        <app-linha-cifra [linha]="linha" [instrumento]="instrumento" />
       }
     </div>
   }

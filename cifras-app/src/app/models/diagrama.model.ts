@@ -1,6 +1,6 @@
 export interface Dedo {
-    corda: number; // 1=Mi grave ... 6=Mi agudo
-    casa: number;  // 0=solta, 1-5=casas
+    corda: number; // 1=corda mais aguda; 4=cavaco grave, 6=violão grave
+    casa: number;  // número absoluto da casa no braço
 }
 
 export interface DiagramaAcorde {

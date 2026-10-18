@@ -1,1 +1,33 @@
-<p>acorde-label works!</p>
+<span
+      class="acorde-chip" tabindex="0" role="button"
+      [attr.aria-label]="'Ver acorde ' + acorde + ' no ' + (instrumento === 'cavaco' ? 'cavaquinho' : 'violão')"
+      [attr.aria-expanded]="showPopup()"
+      (focus)="onMouseEnter()" (blur)="onMouseLeave()"
+      (click)="onMouseEnter()" (keydown.enter)="onMouseEnter()"
+      (keydown.space)="$event.preventDefault(); onMouseEnter()"
+      (keydown.escape)="showPopup.set(false)"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+    >
+      {{ acorde }}
+
+      @if (showPopup()) {
+        <div
+          class="popup-wrapper"
+          [style.top.px]="popupTop"
+          [style.left.px]="popupLeft"
+          (mouseenter)="onMouseEnter()"
+          (mouseleave)="showPopup.set(false)"
+        >
+          @if (carregando()) {
+            <div class="diagrama-loading">
+              <span class="spinner-mini"></span>
+            </div>
+          } @else if (variacoes().length > 0) {
+            <app-diagrama-violao [variacoes]="variacoes()" [nome]="acorde" [numeroCordas]="instrumento === 'cavaco' ? 4 : 6" />
+          } @else {
+            <div class="diagrama-indisponivel">Diagrama indisponível para {{ acorde }}</div>
+          }
+        </div>
+      }
+    </span>
