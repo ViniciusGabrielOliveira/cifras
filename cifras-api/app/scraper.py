@@ -8,6 +8,7 @@ Lógica de fetch e parse do Cifra Club.
 
 import re
 import json
+import logging
 import httpx
 from html.parser import HTMLParser
 from curl_cffi.requests import AsyncSession
@@ -305,6 +306,11 @@ def _parse_page(html: str, source_url: str) -> dict:
     parser = _CifraHTMLParser()
     parser.feed(raw)
     lyrics, chord_lines = parser.result()
+    logging.getLogger("uvicorn.error").info(
+        "CifraImport:v2 url=%s lines=%d chord_tags=%d chords=%s",
+        source_url, len(chord_lines), len(parser.chords),
+        sorted({name for _, name in parser.chords}),
+    )
 
     tom_raw = (
         _match(html, r'id="cifra_tom"[^>]*>[\s\S]*?<a[^>]*>\s*([A-G][b#]?m?)\s*</a>')

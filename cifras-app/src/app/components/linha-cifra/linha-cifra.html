@@ -1,1 +1,39 @@
-<p>linha-cifra works!</p>
+<div class="linha-wrap"
+      [class.sem-acordes]="!linha.acordes.length"
+      [class.so-acordes]="!linha.letra && linha.acordes.length > 0">
+
+      @if (linha.acordes.length === 0) {
+        <span class="seg-texto">{{ linha.letra || '&nbsp;' }}</span>
+
+      } @else if (linha.rawChordsLine) {
+        <!-- Linha com parênteses: exibe o texto bruto com acordes coloridos -->
+        <div class="linha-raw-acordes">
+          @for (seg of rawSegmentos; track $index) {
+            @if (seg.kind === 'acorde') {
+              @if (seg.prefix) { <span class="raw-paren">{{ seg.prefix }}</span> }
+              <app-acorde-label [acorde]="seg.acorde" />
+              @if (seg.suffix) { <span class="raw-paren">{{ seg.suffix }}</span> }
+            } @else {
+              <span class="raw-espaco">{{ seg.texto }}</span>
+            }
+          }
+        </div>
+        @if (linha.letra) {
+          <div class="linha-letra-abaixo">{{ linha.letra }}</div>
+        }
+
+      } @else {
+        <!-- Segmentos: cada um tem acorde + texto alinhados em coluna -->
+        @for (seg of segmentos; track $index) {
+          <span class="segmento">
+            <span class="seg-acorde">
+              @if (seg.acorde) {
+                <app-acorde-label [acorde]="seg.acorde" />
+              }
+            </span>
+            <span class="seg-texto">{{ seg.texto }}</span>
+          </span>
+        }
+      }
+
+    </div>

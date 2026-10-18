@@ -54,10 +54,17 @@ export class AcordesService {
     }
     if (nomes.size === 0) return;
 
-    this.http.post(
+    console.info('[AcordesSync] Solicitando diagramas', { acordes: [...nomes] });
+    this.http.post<{ adicionados: string[]; ja_existiam: string[]; sem_dados: string[] }>(
       `${environment.cifrasApiUrl}/acordes/sync`,
       { acordes: [...nomes] },
       { headers: new HttpHeaders({ 'X-API-Key': environment.cifrasApiKey }) },
-    ).subscribe({ error: () => {} });
+    ).subscribe({
+      next: resultado => {
+        console.info('[AcordesSync] Resultado', resultado);
+        if (resultado.sem_dados.length) console.warn('[AcordesSync] Acordes sem diagrama cadastrado (continuam sendo acordes na cifra)', resultado.sem_dados);
+      },
+      error: erro => console.warn('[AcordesSync] Falha ao sincronizar diagramas', { status: erro.status }),
+    });
   }
 }

@@ -135,3 +135,20 @@ describe('cifraToTexto', () => {
     expect(secoes2[0].linhas[0].acordes[0].acorde).toBe(secoes[0].linhas[0].acordes[0].acorde);
   });
 });
+
+
+describe('acordes complexos importados', () => {
+  it('preserva alterações e posições ao converter para texto e voltar', () => {
+    const texto = '[Intro]\nGM7  C7(9-)  F7M  DM7\nGm7\nLUA VAI\n  Gb7(5-)    F7M\nILUMINAR OS PENSAMENTOS DELA';
+    const secoes = parseCifraTexto(texto);
+    const nomes = secoes.flatMap(s => s.linhas).flatMap(l => l.acordes).map(a => a.acorde);
+    expect(nomes).toEqual(['GM7', 'C7(9-)', 'F7M', 'DM7', 'Gm7', 'Gb7(5-)', 'F7M']);
+    expect(parseCifraTexto(cifraToTexto(secoes))).toEqual(secoes);
+  });
+
+  it('usa a marcação HTML para acordes e mantém letras sem marcação como texto', () => {
+    const secoes = parseCifraTexto('C7(9/#11)\nA', [[{ acorde: 'C7(9/#11)', posicao: 0 }], []]);
+    expect(secoes[0].linhas[0].acordes).toEqual([{ acorde: 'C7(9/#11)', posicao: 0 }]);
+    expect(secoes[0].linhas[0].letra).toBe('A');
+  });
+});

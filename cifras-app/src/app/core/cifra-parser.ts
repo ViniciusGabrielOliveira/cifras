@@ -1,5 +1,4 @@
 import { Secao, LinhaCifra, AcordeLinha, TipoSecao } from '../models/cifra.model';
-import { REGEX_ACORDE } from './transposicao';
 export { slugify } from '../utils/string.utils';
 
 export const TONS = [
@@ -41,14 +40,15 @@ const HAS_PARENS_ARROWS = /[()]|-+>|[→➜⟶🡪]/u;
 // Segue a gramática: Raiz [qualidade] [extensão] [alterações]* [/baixo]
 // Rejeita palavras que começam com nota mas não são acordes (ex: "Alegria", "Banda").
 const REGEX_CHORD_DETECT =
-  /^[A-G][#b]?(?:m(?:aj\d*)?|min\d*|dim\d*|aug\d*|sus[24]?|add\d+|M|\+|°|ø)?(?:\d{1,2})?(?:(?:sus[24]?|add\d+|b\d+|#\d+))*(?:\/[A-G][#b]?)?$/;
+  /^[A-G][#b]?(?:m(?:aj\d*)?|min\d*|dim\d*|aug\d*|sus[24]?|add\d+|M|\+|°|ø)?(?:\d{1,2}M?)?(?:(?:sus[24]?|add\d+|b\d+|#\d+))*(?:\([0-9#b+,/−-]+\))?(?:\/(?:[A-G][#b]?|\d{1,2}))?$/;
 
 function extrairAcordesLinha(linha: string): string | null {
-  // Remove parênteses (ex: "D9 ( D4 D )") e setas (ex: "(F7) -> Bb7") antes
-  // de validar os tokens. Retorna a string com () e setas substituídos por
-  // espaços de mesmo comprimento para preservar as posições originais dos acordes.
+  // Mantém alterações internas (C7(9-)); remove apenas delimitadores externos.
   const substituida = linha
-    .replace(/[()]/g, ' ')
+    .replace(/\S+/g, token => {
+      if (REGEX_CHORD_DETECT.test(token)) return token;
+      return token.replace(/^\(+|\)+$/g, m => ' '.repeat(m.length));
+    })
     .replace(/-+>/g, m => ' '.repeat(m.length))
     .replace(/[→➜⟶🡪]/gu, ' ');
   const normalizada = substituida.trim();
@@ -75,7 +75,7 @@ function parseLinhaCifra(letra: string, acordesLinha: string): LinhaCifra {
   const regex = /\S+/g;
   let match: RegExpExecArray | null;
   while ((match = regex.exec(acordesLinha)) !== null) {
-    if (REGEX_ACORDE.test(match[0])) {
+    if (REGEX_CHORD_DETECT.test(match[0])) {
       acordes.push({ acorde: match[0], posicao: match.index });
     }
   }
