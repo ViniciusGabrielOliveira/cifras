@@ -132,6 +132,7 @@
 
     <!-- Músicas da Parte Selecionada -->
     <app-acordeon-musica class="acordeon" #acordeon [lista]="lista" [musicas]="musicasDaParte()" [canEdit]="canEdit()"
+        [reordenando]="salvandoOrdem()" (musicasReordenadas)="onMusicasReordenadas($event)"
         [modoLiveAtivo]="liveCtrl.modoLiveAtivo()" [modoControladorAtivo]="liveCtrl.modoControladorAtivo()"
         [liveEstado]="liveCtrl.liveEstado()" (tomAlterado)="onTomAlterado($event)"
         (observacaoAlterada)="onObservacaoAlterada($event)" (musicaRemovida)="onMusicaRemovida($event)"

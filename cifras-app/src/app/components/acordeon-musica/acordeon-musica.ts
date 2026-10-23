@@ -1,4 +1,5 @@
 import { Component, inject, input, output, signal } from '@angular/core';
+import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
 import { forkJoin } from 'rxjs';
 import { Lista, MusicaLista } from '../../models/lista.model';
 
@@ -12,7 +13,7 @@ import { LiveEstado } from '../../models/live.model';
 @Component({
     selector: 'app-acordeon-musica',
     standalone: true,
-    imports: [CifraViewerComponent],
+    imports: [CifraViewerComponent, DragDropModule],
     templateUrl: './acordeon-musica.html',
     styleUrl: './acordeon-musica.scss',
 })
@@ -23,6 +24,7 @@ export class AcordeonMusicaComponent {
     readonly lista        = input.required<Lista | null>();
     readonly musicas      = input<MusicaLista[]>([]);
     readonly canEdit      = input(false);
+    readonly reordenando = input(false);
     readonly modoLiveAtivo       = input(false);
     readonly modoControladorAtivo = input(false);
     readonly liveEstado   = input<LiveEstado | null>(null);
@@ -30,6 +32,7 @@ export class AcordeonMusicaComponent {
     readonly tomAlterado    = output<{ musicaId: string; tom: string }>();
     readonly observacaoAlterada = output<{ musicaId: string; obs: string }>();
     readonly musicaRemovida = output<string>();
+    readonly musicasReordenadas = output<Lista>();
     readonly musicaAbertaChanged = output<{ musicaId: string | null; parteId: string | null }>();
     readonly adicionarMusicaClick = output<void>();
 
@@ -40,6 +43,25 @@ export class AcordeonMusicaComponent {
     confirmandoRemoverMusica = signal<string | null>(null);
 
     private _obsTimers = new Map<string, ReturnType<typeof setTimeout>>();
+
+    onReorder(event: CdkDragDrop<MusicaLista[]>) {
+        this.moverMusica(event.previousIndex, event.currentIndex);
+    }
+
+    moverMusica(de: number, para: number) {
+        if (!this.canEdit() || this.reordenando() || de === para) return;
+        const lista = this.lista();
+        const musicas = [...this.musicas()];
+        if (!lista || de < 0 || para < 0 || de >= musicas.length || para >= musicas.length) return;
+        const parte = musicas[de].parte;
+        if (musicas.some(m => m.parte !== parte)) return;
+        moveItemInArray(musicas, de, para);
+        const ordens = new Map(musicas.map((m, ordem) => [m.id, ordem]));
+        this.musicasReordenadas.emit({
+            ...lista,
+            musicas: lista.musicas.map(m => ordens.has(m.id) ? { ...m, ordem: ordens.get(m.id)! } : m),
+        });
+    }
 
     // Abre/fecha pelo controlador externo (live mode sync)
     sincronizarAberto(musicaId: string | null) {

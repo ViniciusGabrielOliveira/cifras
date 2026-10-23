@@ -1,8 +1,24 @@
-<div class="musicas-lista" role="tabpanel">
+<div class="musicas-lista" role="tabpanel" cdkDropList [cdkDropListData]="musicas()"
+    [cdkDropListDisabled]="!canEdit() || reordenando()" (cdkDropListDropped)="onReorder($event)">
     @for (musica of musicas(); track musica.id; let idx = $index) {
-    <div class="musica-card" [class.expandida]="acordeonAberto() === musica.id" [attr.data-musica-id]="musica.id">
+    <div class="musica-card" cdkDrag cdkDragLockAxis="y" [cdkDragData]="musica"
+        [cdkDragDisabled]="!canEdit() || reordenando()" [class.expandida]="acordeonAberto() === musica.id" [attr.data-musica-id]="musica.id">
 
         <div class="musica-header-row">
+            @if (canEdit()) {
+            <button type="button" class="musica-drag-handle" cdkDragHandle [disabled]="reordenando()"
+                [attr.aria-label]="'Reordenar ' + musica.nome + '. Use as setas para cima ou para baixo.'"
+                title="Arrastar para reordenar ou usar ↑ e ↓"
+                (click)="$event.stopPropagation()"
+                (keydown.arrowup)="moverMusica(idx, idx - 1); $event.preventDefault()"
+                (keydown.arrowdown)="moverMusica(idx, idx + 1); $event.preventDefault()">
+                <svg width="12" height="20" viewBox="0 0 12 20" fill="currentColor" aria-hidden="true">
+                    <circle cx="3" cy="4" r="1.5"/><circle cx="9" cy="4" r="1.5"/>
+                    <circle cx="3" cy="10" r="1.5"/><circle cx="9" cy="10" r="1.5"/>
+                    <circle cx="3" cy="16" r="1.5"/><circle cx="9" cy="16" r="1.5"/>
+                </svg>
+            </button>
+            }
             <button class="musica-header" (click)="toggleMusicaFromBtn(musica, $any($event.currentTarget))"
                 [attr.aria-expanded]="acordeonAberto() === musica.id">
                 <span class="musica-index">{{ idx + 1 }}</span>

@@ -317,3 +317,31 @@
   border: 1.5px dashed currentColor;
   flex-shrink: 0;
 }
+.musica-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-2);
+  cursor: grab;
+  touch-action: none;
+  &:active { cursor: grabbing; }
+  &:focus-visible { outline: 2px solid var(--color-primary); outline-offset: -3px; }
+  &:disabled { cursor: wait; opacity: .5; }
+}
+.musica-card.cdk-drag-preview {
+  display: block;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card-hover);
+  padding: 0;
+}
+.musica-card.cdk-drag-placeholder { opacity: .2; }
+.musica-card.cdk-drag-animating,
+.musicas-lista.cdk-drop-list-dragging .musica-card:not(.cdk-drag-placeholder) {
+  transition: transform 180ms ease;
+}

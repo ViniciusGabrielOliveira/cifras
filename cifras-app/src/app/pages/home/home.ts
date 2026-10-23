@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     readonly autoSelecionarComponente = signal(!this.listaIdParam);
 
     parteAtiva = signal<string | null>(null);
+    readonly salvandoOrdem = signal(false);
 
     readonly isAdmin = computed(() => this.auth.hasRole('admin'));
 
@@ -227,6 +228,31 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     onParteChange(parte: string) {
         this.parteAtiva.set(parte);
+    }
+
+    onMusicasReordenadas(lista: Lista) {
+        const anterior = this.listaAtual();
+        if (!this.canEdit() || this.salvandoOrdem() || anterior?.id !== lista.id) return;
+        this.salvandoOrdem.set(true);
+        this.salvandoLista = true;
+        this.listaAtual.set(lista);
+        this.listaService.salvarLista(lista).subscribe({
+            next: salva => {
+                this.listaAtual.update(atual => atual?.id === salva.id ? { ...atual, atualizadaEm: salva.atualizadaEm } : atual);
+                this.salvandoOrdem.set(false);
+                this.salvandoLista = false;
+            },
+            error: (err: Error) => {
+                const ordens = new Map(anterior.musicas.map(m => [m.id, m.ordem]));
+                this.listaAtual.update(atual => atual?.id === anterior.id ? {
+                    ...atual,
+                    musicas: atual.musicas.map(m => ordens.has(m.id) ? { ...m, ordem: ordens.get(m.id)! } : m),
+                } : atual);
+                this.salvandoOrdem.set(false);
+                this.salvandoLista = false;
+                this.notif.mostrarErro(err.message || 'Erro ao salvar a ordem das músicas.');
+            },
+        });
     }
 
     onTabsListaChange(lista: Lista) {
