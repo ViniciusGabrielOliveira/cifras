@@ -5,6 +5,8 @@ export interface Liturgia {
 }
 
 export interface DiaLiturgico {
+  /** Weekday readings may be used on memorials without proper readings. */
+  feriaId?: string;
   id: string;
   nome: string;
   tempo: string;

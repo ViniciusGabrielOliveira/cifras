@@ -1,5 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { Observable, forkJoin, map } from 'rxjs';
+import { Observable, forkJoin, map, switchMap } from 'rxjs';
 import { Lista, CategoriaLiturgica, Participante, RoleParticipante } from '../models/lista.model';
 import { LiturgiaService } from './liturgia.service';
 import { listasElegiveis } from '../core/liturgia';
@@ -53,8 +53,10 @@ export class ListaService {
     }
 
     getListasDodia(data: string): Observable<Lista[]> {
-        return forkJoin([this.repo.getListasPublicas(), this.liturgia.dia(data)]).pipe(
-            map(([listas, dia]) => listasElegiveis(listas, data, dia)),
+        return this.liturgia.dia(data).pipe(
+            switchMap(dia => this.repo.getListasCandidatas(data, [dia.id, dia.tempo, ...(dia.feriaId ? [dia.feriaId] : [])]).pipe(
+                map(listas => listasElegiveis(listas, data, dia)),
+            )),
         );
     }
 

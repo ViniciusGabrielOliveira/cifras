@@ -3,6 +3,7 @@ import { Lista, CategoriaLiturgica, ListasDoDiaResponse, Participante, RoleParti
 
 export abstract class ListaRepository {
     abstract getListasPublicas(): Observable<Lista[]>;
+    getListasCandidatas(_data: string, _liturgias: string[]): Observable<Lista[]> { return this.getListasPublicas(); }
     abstract getListas(): Observable<Lista[]>;
     abstract getListasDodia(data: string): Observable<ListasDoDiaResponse>;
     abstract getListasPorCategoria(cat: CategoriaLiturgica): Observable<Lista[]>;

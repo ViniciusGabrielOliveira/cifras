@@ -50,4 +50,16 @@ describe('sugestões litúrgicas', () => {
     expect(escolherSugestao([lista('a')], 'a')?.id).toBe('a');
     expect(escolherSugestao([])).toBeUndefined();
   });
+  it('separa repertórios feriais de anos pares e ímpares', () => {
+    const listas = [lista('impar', { liturgiasIds: [dia.id], ciclosFeriales: ['I'] }), lista('par', { liturgiasIds: [dia.id], ciclosFeriales: ['II'] })];
+    expect(ids(listasElegiveis(listas, '2026-10-23', dia))).toEqual(['par']);
+    expect(ids(listasElegiveis(listas, '2027-10-23', dia))).toEqual(['impar']);
+  });
+  it('prefere a memória exata e usa os repertórios feriais quando ela não tem lista própria', () => {
+    const memoria = { ...dia, id: 'saint', feriaId: 'ordinary_time_29_friday' };
+    const ferial = lista('ferial', { liturgiasIds: [memoria.feriaId] });
+    expect(ids(listasElegiveis([ferial], '2026-10-23', memoria))).toEqual(['ferial']);
+    expect(ids(listasElegiveis([ferial, lista('memoria', { liturgiasIds: ['saint'] })], '2026-10-23', memoria))).toEqual(['memoria']);
+  });
+
 });

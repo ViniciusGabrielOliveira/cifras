@@ -34,6 +34,8 @@ export interface Lista {
     /** Stable calendar IDs; a list can serve several liturgies. */
     liturgiasIds?: string[];
     ciclosLiturgicos?: ('A' | 'B' | 'C')[];
+    /** I = odd civil years, II = even civil years (Ordinary Time weekdays). */
+    ciclosFeriales?: ('I' | 'II')[];
     /** Explicit admin recommendations for individual civil dates. */
     datasLiturgicas?: string[];
     musicas: MusicaLista[];

@@ -9,7 +9,8 @@ export function dataLiturgicaHoje(agora = new Date()): string {
 }
 
 export function listasElegiveis(listas: Lista[], data: string, dia: DiaLiturgico | null): Lista[] {
-  const publicas = listas.filter(l => l.tipo !== 'privada' && l.musicas.length > 0);
+  const cicloFerial = Number(data.slice(0, 4)) % 2 ? 'I' : 'II';
+  const publicas = listas.filter(l => l.tipo !== 'privada' && l.musicas.length > 0 && (!l.ciclosFeriales?.length || l.ciclosFeriales.includes(cicloFerial)));
   const marcadas = publicas.filter(l => l.datasLiturgicas?.includes(data));
   if (marcadas.length) return marcadas;
   // Restrict dated lists to their validity window, including lists linked to a liturgy.
@@ -24,6 +25,8 @@ export function listasElegiveis(listas: Lista[], data: string, dia: DiaLiturgico
     return ciclo.length ? ciclo : celebracao;
   }
   if (dia.propria) return [];
+  const feriais = vinculadas.filter(l => !!dia.feriaId && l.liturgiasIds?.includes(dia.feriaId));
+  if (feriais.length) return feriais;
   const tempo = vinculadas.filter(l => l.liturgiasIds?.includes(dia.tempo));
   if (tempo.length) return tempo;
   // Existing categorized lists continue working; unclassified "every day" lists

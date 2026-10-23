@@ -70,5 +70,9 @@
       <label><input type="checkbox" [checked]="lista.ciclosLiturgicos?.includes(ciclo) ?? false" (change)="toggleCiclo(ciclo)"> {{ ciclo }}</label>
     }
   </fieldset>
+  <fieldset><legend>Dias de semana do Tempo Comum · sem seleção = todos</legend>
+    <label><input type="checkbox" [checked]="lista.ciclosFeriales?.includes('I') ?? false" (change)="toggleCicloFerial('I')"> Ano ímpar (I)</label>
+    <label><input type="checkbox" [checked]="lista.ciclosFeriales?.includes('II') ?? false" (change)="toggleCicloFerial('II')"> Ano par (II)</label>
+  </fieldset>
 </section>
 }

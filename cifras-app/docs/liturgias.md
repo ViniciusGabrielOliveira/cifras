@@ -47,3 +47,13 @@ Validação: `node --test scripts/liturgical-calendar.test.cjs`; testes Angular 
 - Build de produção: aprovado. A primeira tentativa não conseguiu baixar Google Fonts por restrição de rede; a repetição com rede concluiu.
 - Avisos do build: pacote inicial de 689,32 kB acima da meta de 500 kB; `painel.scss` com 20,12 kB acima da meta de 20 kB. Ambos abaixo dos limites de erro configurados; não foram alterados os limites para ocultar avisos.
 - `git diff --check`: sem erros de whitespace.
+
+## Ampliação para repertórios externos — 2026-10-23
+
+A importação de sugestões de `musicasparamissa.com.br`, solicitada pelo administrador, usa apenas referências a cifras públicas existentes. Títulos, origem, partes da celebração, ciclos e pendências ficam registrados no lote local `ignore/mpm-liturgias-2026-10-23`.
+
+`ciclosFeriales` distingue I (anos ímpares) de II (anos pares), para os dias da semana do Tempo Comum. Memórias podem recorrer ao repertório da féria correspondente (`feriaId`) quando não há repertório da memória; festas e solenidades não recebem esse vínculo ferial automático. Missas de vigília diferentes da missa do dia são cadastradas como celebrações selecionáveis separadas.
+
+A home consulta somente listas vinculadas à celebração/féria/tempo e programações por datas, deduplicando os resultados; não baixa o catálogo inteiro para escolher o repertório do dia. Os quatro índices correspondentes estão em `firestore.indexes.json`, já criados em produção. Consultas públicas verificadas via REST sem credenciais, para validar também as regras de acesso.
+
+Validação desta ampliação: build de produção aprovado, 128 testes Angular aprovados e 3 verificações do calendário aprovadas. Permanecem os mesmos avisos de orçamento do build.

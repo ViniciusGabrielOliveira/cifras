@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable, from, map, switchMap, catchError, throwError, of } from 'rxjs';
+import { Observable, from, forkJoin, map, switchMap, catchError, throwError, of } from 'rxjs';
 import { FIREBASE_APP } from '../firebase.providers';
 import {
   getFirestore,
@@ -37,6 +37,22 @@ export class ListaFirebaseRepository extends ListaRepository {
     // Query only public lists: fetching the entire collection is forbidden for visitors.
     const q = query(collection(this.firestore, 'listas'), where('tipo', '==', 'publica'));
     return from(getDocs(q)).pipe(map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista)));
+  }
+
+  override getListasCandidatas(data: string, liturgias: string[]): Observable<Lista[]> {
+    const col = collection(this.firestore, 'listas');
+    const publica = where('tipo', '==', 'publica');
+    const filtros = [
+      where('liturgiasIds', 'array-contains-any', [...new Set(liturgias)]),
+      where('datasLiturgicas', 'array-contains', data),
+      where('todosDias', '==', true),
+      where('data', '==', data),
+      where('dataInicio', '<=', data),
+      where('dataFim', '>=', data),
+    ];
+    return forkJoin(filtros.map(filtro => from(getDocs(query(col, publica, filtro))))).pipe(
+      map(snaps => [...new Map(snaps.flatMap(snap => snap.docs.map(d => [d.id, { ...d.data(), id: d.id } as Lista] as const))).values()]),
+    );
   }
 
   override getListas(): Observable<Lista[]> {

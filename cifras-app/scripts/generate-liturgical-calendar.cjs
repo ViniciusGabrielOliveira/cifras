@@ -30,10 +30,18 @@ async function main() {
     for (const [date, events] of Object.entries(raw)) {
       days[date] = events.map(event => {
         const id = event.id;
+        const weekday = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'][event.calendar.dayOfWeek];
+        const seasonKey = event.seasons.at(-1);
+        const feriaId = ['MEMORIAL', 'OPTIONAL_MEMORIAL'].includes(event.rank) && weekday !== 'sunday' && event.calendar.weekOfSeason > 0 && ['ORDINARY_TIME', 'ADVENT', 'LENT', 'EASTER_TIME'].includes(seasonKey)
+          ? `${seasonKey.toLowerCase()}_${event.calendar.weekOfSeason}_${weekday}` : undefined;
+        if (feriaId && !catalog.has(feriaId)) {
+          const diaNome = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'][event.calendar.dayOfWeek];
+          catalog.set(feriaId, { id: feriaId, nome: `${diaNome} da ${event.calendar.weekOfSeason}ª semana · ${labels[seasons[seasonKey]]}`, grupo: 'Dias da semana' });
+        }
         const nome = id === 'thursday_of_the_lords_supper' ? 'Quinta-feira Santa — Missa da Ceia do Senhor' : event.name || id;
         const grupo = event.rank === 'SUNDAY' ? 'Domingos' : event.rank === 'WEEKDAY' && !own.has(id) ? 'Dias da semana' : 'Celebrações';
         catalog.set(id, { id, nome, grupo });
-        return { id, nome, tempo: seasons[event.seasons.at(-1)] || 'tempo-comum', cor: event.colorNames?.join(' / ') || '', ciclo: event.cycles.sundayCycle.slice(-1), propria: own.has(id), grau: event.rankName || '', opcional: event.isOptional };
+        return { id, nome, ...(feriaId ? { feriaId } : {}), tempo: seasons[event.seasons.at(-1)] || 'tempo-comum', cor: event.colorNames?.join(' / ') || '', ciclo: event.cycles.sundayCycle.slice(-1), propria: own.has(id), grau: event.rankName || '', opcional: event.isOptional };
       });
       if (events[0].id === 'holy_thursday') {
         days[date].sort((a, b) => Number(b.id === 'thursday_of_the_lords_supper') - Number(a.id === 'thursday_of_the_lords_supper'));

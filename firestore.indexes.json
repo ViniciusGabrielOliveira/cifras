@@ -1,0 +1,61 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "listas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "tipo",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "liturgiasIds",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "tipo",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "datasLiturgicas",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "tipo",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "dataInicio",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "tipo",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "dataFim",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -45,6 +45,11 @@ export class ListaMetadataComponent implements OnInit {
     this.listaChanged.emit({ ...this.lista, liturgiasIds: (this.lista.liturgiasIds ?? []).filter(l => l !== id) });
   }
 
+  toggleCicloFerial(ciclo: 'I' | 'II') {
+    const atuais = this.lista.ciclosFeriales ?? [];
+    this.listaChanged.emit({ ...this.lista, ciclosFeriales: atuais.includes(ciclo) ? atuais.filter(c => c !== ciclo) : [...atuais, ciclo] });
+  }
+
   toggleCiclo(ciclo: 'A' | 'B' | 'C') {
     const atuais = this.lista.ciclosLiturgicos ?? [];
     this.listaChanged.emit({ ...this.lista, ciclosLiturgicos: atuais.includes(ciclo) ? atuais.filter(c => c !== ciclo) : [...atuais, ciclo] });
