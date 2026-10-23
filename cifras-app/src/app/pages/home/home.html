@@ -51,10 +51,29 @@
 
 <!-- ── Seletor Repertório ────────────────────────────────────── -->
 <app-seletor-repertorio [autoSelecionar]="autoSelecionarComponente()" [listaAtual]="listaAtual()"
-    (listaSelecionada)="onListaSelecionada($event)" (semResultadoInicial)="onSemResultadoInicial()" />
+    (listaSelecionada)="onListaSelecionada($event)" (semResultadoInicial)="onSemResultadoInicial()"
+    (diaConsultado)="onDiaConsultado($event)" (erroInicial)="onErroSugestoes($event)" />
 
 <!-- ── Editar Lista ──────────────────────────────────────────── -->
 <app-editar-lista-sheet [lista]="listaAtual()" (listaSalva)="onListaEditada($event)" />
+
+<section class="liturgia-hoje" aria-label="Liturgia de hoje">
+    <span>{{ formatarData(hoje) }}</span>
+    @if (liturgiaHoje(); as dia) {
+        <h2>{{ dia.nome }}</h2>
+        <p>{{ dia.cor }} · Ciclo {{ dia.ciclo }}</p>
+    }
+    @if (erroSugestoes()) { <p role="alert">{{ erroSugestoes() }}</p> }
+    <div class="liturgia-acoes">
+        @if (mostrandoSugestao() && sugestoesHoje().length > 1) {
+            <button (click)="seletorRef.outraSugestao()">Outra sugestão</button>
+        }
+        @if (!mostrandoSugestao() || erroSugestoes()) {
+            <button (click)="voltarSugestaoHoje()" [disabled]="loading()">Sugestões de hoje</button>
+        }
+        @if (isAdmin()) { <a routerLink="/admin/liturgias">Organizar liturgias</a> }
+    </div>
+</section>
 
 @if (loading()) {
 <div class="loading-state">
@@ -134,7 +153,7 @@
 <div class="empty-state">
     <div class="empty-icon">🎵</div>
     <h2>Nenhuma lista encontrada</h2>
-    <p>Não há lista de músicas para hoje.<br>Use o seletor acima para encontrar listas por data ou categoria.</p>
+    <p>Ainda não há repertório cadastrado para esta liturgia.<br><button class="btn-abrir-seletor" (click)="abrirSeletor()">Buscar outros repertórios</button></p>
 </div>
 }
 

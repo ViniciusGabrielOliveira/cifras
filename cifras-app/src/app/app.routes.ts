@@ -72,6 +72,12 @@ export const routes: Routes = [
             import('./pages/usuario/minha-lista/minha-lista').then(m => m.MinhaListaComponent),
     },
     {
+        path: 'admin/liturgias',
+        title: 'Liturgias e repertórios',
+        canActivate: [authGuard, roleGuard('admin')],
+        loadComponent: () => import('./pages/admin/liturgias/liturgias.component').then(m => m.LiturgiasComponent),
+    },
+    {
         path: 'admin/prs',
         canActivate: [authGuard, roleGuard('admin')],
         loadComponent: () =>

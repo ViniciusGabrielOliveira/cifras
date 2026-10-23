@@ -49,3 +49,9 @@ cifras-mcp/
 ignore/
 scripts/
 REFATORACAO.md
+
+# Version the reproducible liturgical-calendar generator only.
+!cifras-app/scripts/
+cifras-app/scripts/*
+!cifras-app/scripts/generate-liturgical-calendar.cjs
+!cifras-app/scripts/liturgical-calendar.test.cjs

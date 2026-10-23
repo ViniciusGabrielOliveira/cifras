@@ -1,0 +1,85 @@
+<header><a routerLink="/admin/painel">← Painel Admin</a><h1>Liturgias e repertórios</h1></header>
+<main>
+  @if (erro()) { <p class="aviso" role="alert">{{ erro() }}</p> }
+  @if (mensagem()) { <p role="status">{{ mensagem() }}</p> }
+  <section class="calendario">
+    <h2>Calendário litúrgico</h2>
+    <p>Calendário do Brasil · 2025 a 2035</p>
+    <label>Consultar data <input type="date" [value]="data()" min="2025-01-01" max="2035-12-31" (change)="consultarData($any($event.target).value)"></label>
+    @if (consultando()) { <p role="status">Consultando calendário...</p> }
+    @if (dia(); as hoje) {
+      <h3>{{ hoje.nome }}</h3>
+      <p>{{ hoje.cor }} · Ciclo {{ hoje.ciclo }} · {{ hoje.grau }}</p>
+      <button (click)="selecionada.set(hoje.id)">Repertórios desta liturgia</button>
+      <details>
+        <summary>Ajustar celebração desta data</summary>
+        <p>Escolha uma celebração opcional ou própria da comunidade. O ajuste será usado na página inicial.</p>
+        <label>Liturgia
+          <select [ngModel]="ajusteId()" (ngModelChange)="ajusteId.set($event)">
+            <option value="">Calendário brasileiro (automático)</option>
+            @for (opcao of opcoes(); track opcao.id) { <option [value]="opcao.id">{{ opcao.nome }}</option> }
+            @for (local of config().locais; track local.id) { <option [value]="local.id">{{ local.nome }}</option> }
+          </select>
+        </label>
+        <label>Cor <select [ngModel]="corLocal()" (ngModelChange)="corLocal.set($event)">
+          @for (cor of cores; track cor) { <option [value]="cor">{{ cor }}</option> }
+        </select></label>
+        <button [disabled]="salvando() || consultando()" (click)="salvarAjuste()">Salvar ajuste</button>
+      </details>
+      <details>
+        <summary>Escolher sugestões só para esta data</summary>
+        <p>Estas listas têm prioridade sobre os vínculos de celebração e tempo litúrgico.</p>
+        @for (lista of listas(); track lista.id) {
+          <label class="check"><input type="checkbox" [checked]="lista.datasLiturgicas?.includes(data()) ?? false" [disabled]="salvando()" (change)="vincularData(lista, $any($event.target).checked)">{{ lista.titulo }}</label>
+        } @empty { <p>Nenhuma lista pública cadastrada.</p> }
+      </details>
+    }
+  </section>
+
+  <div class="filtros">
+    <label>Buscar liturgia <input type="search" placeholder="Pentecostes, Quaresma..." [ngModel]="busca()" (ngModelChange)="busca.set($event)"></label>
+    <label>Grupo <select [ngModel]="grupo()" (ngModelChange)="grupo.set($event)">
+      <option value="">Todos</option>
+      @for (item of grupos; track item) { <option [value]="item">{{ item }}</option> }
+    </select></label>
+    <label class="check"><input type="checkbox" [ngModel]="semRepertorio()" (ngModelChange)="semRepertorio.set($event)">Sem repertório</label>
+  </div>
+  <details class="local">
+    <summary>Adicionar celebração local</summary>
+    <label>Nome <input [ngModel]="nomeLocal()" (ngModelChange)="nomeLocal.set($event)" placeholder="Padroeiro da comunidade"></label>
+    <button [disabled]="salvando() || !nomeLocal().trim()" (click)="criarLocal()">Adicionar celebração</button>
+  </details>
+  @if (carregando()) { <p role="status">Carregando liturgias...</p> }
+  <div class="conteudo">
+    <nav aria-label="Liturgias">
+      @for (liturgia of filtradas(); track liturgia.id) {
+        <button [class.ativo]="selecionada() === liturgia.id" (click)="selecionada.set(liturgia.id)">
+          <span>{{ liturgia.nome }}<small>{{ liturgia.grupo }}</small></span>
+          <span class="contador" title="Listas com músicas">{{ quantidade(liturgia.id) }}</span>
+        </button>
+      } @empty { @if (!carregando()) { <p>Nenhuma liturgia encontrada.</p> } }
+    </nav>
+    <section class="repertorios">
+      @if (atual(); as liturgia) {
+        <h2>{{ liturgia.nome }}</h2>
+        <p>Vincule uma ou mais listas. O app sugere uma lista inteira, preservando a ordem das músicas.</p>
+        <button class="principal" [disabled]="salvando()" (click)="criarLista()">+ Criar lista neste repertório</button>
+        <label>Vincular lista existente
+          <select [ngModel]="listaId()" (ngModelChange)="listaId.set($event)">
+            <option value="">Selecione uma lista pública</option>
+            @for (lista of disponiveis(); track lista.id) { <option [value]="lista.id">{{ lista.titulo }}</option> }
+          </select>
+        </label>
+        <button [disabled]="salvando() || !listaId()" (click)="vincular()">Vincular lista</button>
+        @for (lista of vinculadas(); track lista.id) {
+          <article>
+            <a [routerLink]="['/admin/lista', lista.id]" [queryParams]="{ retorno: 'liturgias' }">{{ lista.titulo }}</a>
+            <p>{{ lista.musicas.length }} música(s) @if (!lista.musicas.length) { · Adicione músicas para aparecer nas sugestões }</p>
+            <p>Ciclos: {{ lista.ciclosLiturgicos?.join(', ') || 'A, B e C' }}</p>
+            <button [disabled]="salvando()" (click)="desvincular(lista)">Desvincular desta liturgia</button>
+          </article>
+        } @empty { <p class="aviso">Esta liturgia ainda não tem listas vinculadas.</p> }
+      } @else { <p>Escolha uma liturgia para organizar as sugestões.</p> }
+    </section>
+  </div>
+</main>

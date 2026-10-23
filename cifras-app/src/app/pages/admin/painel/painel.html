@@ -43,6 +43,7 @@
       <div class="dash-actions">
         <a class="btn-nova-lista" routerLink="/minha-area/projecoes">Listas de projeção</a>
         @if (auth.isAdmin()) {
+          <a class="btn-nova-lista" routerLink="/admin/liturgias">Liturgias e repertórios</a>
           <button class="btn-dash-icon" (click)="abrirConfiguracoes()" title="Configurações">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="3"/>

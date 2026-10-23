@@ -33,6 +33,12 @@ export class ListaFirebaseRepository extends ListaRepository {
   private app = inject(FIREBASE_APP);
   private firestore = getFirestore(this.app);
 
+  override getListasPublicas(): Observable<Lista[]> {
+    // Query only public lists: fetching the entire collection is forbidden for visitors.
+    const q = query(collection(this.firestore, 'listas'), where('tipo', '==', 'publica'));
+    return from(getDocs(q)).pipe(map(snap => snap.docs.map(d => ({ ...d.data(), id: d.id }) as Lista)));
+  }
+
   override getListas(): Observable<Lista[]> {
     const listasCol = collection(this.firestore, 'listas');
     return from(getDocs(listasCol)).pipe(

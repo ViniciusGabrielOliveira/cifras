@@ -53,3 +53,22 @@
 
   </div>
 </div>
+
+@if (isAdmin) {
+<section class="liturgia-metadata" aria-label="Vínculos litúrgicos">
+  <h2>Sugestões litúrgicas</h2>
+  <p>Selecione as liturgias em que esta lista pode ser sugerida. A lista precisa ser pública para aparecer na home. Sem restrição de datas, os vínculos se repetem a cada ano.</p>
+  @if (erroLiturgias()) { <p role="alert">Não foi possível carregar o catálogo de liturgias.</p> }
+  <app-select [options]="liturgiasOptions()" value="" (valueChange)="adicionarLiturgia($event)" />
+  <div class="liturgias-vinculadas">
+    @for (id of lista.liturgiasIds ?? []; track id) {
+      <button type="button" (click)="removerLiturgia(id)" [attr.aria-label]="'Desvincular ' + nomeLiturgia(id)">{{ nomeLiturgia(id) }} ×</button>
+    }
+  </div>
+  <fieldset><legend>Ciclos dominicais · sem seleção = todos</legend>
+    @for (ciclo of ciclos; track ciclo) {
+      <label><input type="checkbox" [checked]="lista.ciclosLiturgicos?.includes(ciclo) ?? false" (change)="toggleCiclo(ciclo)"> {{ ciclo }}</label>
+    }
+  </fieldset>
+</section>
+}

@@ -142,6 +142,7 @@ export class MinhaListaComponent implements OnInit {
     onParticipantesListaAtualizada(atualizada: Lista) { this.lista.set(atualizada); }
 
     voltar() {
-        this.router.navigate([this.adminContext ? '/admin/painel' : '/minha-area']);
+        const destino = this.adminContext && this.route.snapshot.queryParamMap.get('retorno') === 'liturgias' ? '/admin/liturgias' : this.adminContext ? '/admin/painel' : '/minha-area';
+        this.router.navigate([destino]);
     }
 }

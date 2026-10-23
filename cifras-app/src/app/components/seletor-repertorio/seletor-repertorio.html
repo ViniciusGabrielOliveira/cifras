@@ -27,9 +27,11 @@
         </button>
     </div>
 
+    @if (erroFiltro()) { <p class="drawer-vazio" role="alert">{{ erroFiltro() }}</p> }
     <!-- Aba: Dia -->
     @if (abaAtiva() === 'dia') {
     <div class="drawer-listas">
+        @if (liturgiaDoFiltro(); as dia) { <p class="drawer-vazio">{{ dia.nome }} · Ciclo {{ dia.ciclo }}</p> }
         @if (carregandoFiltro()) {
         <div class="drawer-vazio"><span class="spinner-sm"></span></div>
         } @else if (listasDoFiltro().length === 0) {

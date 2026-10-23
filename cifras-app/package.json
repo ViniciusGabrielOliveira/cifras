@@ -12,7 +12,8 @@
     "emulators": "firebase emulators:start --project demo-cifras",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "calendar:generate": "node scripts/generate-liturgical-calendar.cjs"
   },
   "private": true,
   "packageManager": "npm@10.9.4",
@@ -33,6 +34,7 @@
     "@angular/cli": "^21.2.1",
     "@angular/compiler-cli": "^21.2.0",
     "@eslint/js": "^10.0.1",
+    "@romcal/calendar.brazil": "3.0.0-dev.140",
     "angular-eslint": "21.4.0",
     "cypress": "^14.0.0",
     "eslint": "^10.3.0",
@@ -41,6 +43,7 @@
     "happy-dom": "^20.10.1",
     "jsdom": "^29.1.1",
     "prettier": "^3.8.1",
+    "romcal": "3.0.0-dev.140",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.59.2",
     "vitest": "^4.1.8"

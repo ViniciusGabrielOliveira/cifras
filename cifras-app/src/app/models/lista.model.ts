@@ -31,6 +31,11 @@ export interface Lista {
     dataFim?: string;
     todosDias?: boolean;
     categoria?: CategoriaLiturgica;
+    /** Stable calendar IDs; a list can serve several liturgies. */
+    liturgiasIds?: string[];
+    ciclosLiturgicos?: ('A' | 'B' | 'C')[];
+    /** Explicit admin recommendations for individual civil dates. */
+    datasLiturgicas?: string[];
     musicas: MusicaLista[];
     criadaEm: string;
     atualizadaEm: string;

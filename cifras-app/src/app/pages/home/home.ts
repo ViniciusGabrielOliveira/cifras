@@ -1,6 +1,8 @@
 import { Component, inject, signal, computed, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Subscription, Subject, debounceTime, switchMap } from 'rxjs';
+import { DiaLiturgico } from '../../models/liturgia.model';
+import { dataLiturgicaHoje } from '../../core/liturgia';
 import { Lista, MusicaLista } from '../../models/lista.model';
 import { ListaService } from '../../services/lista.service';
 import { CifraService } from '../../services/cifra.service';
@@ -46,11 +48,15 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     readonly listaIdParam = this.route.snapshot.queryParamMap.get('listaId');
 
-    private static readonly STORAGE_KEY = 'cifras-ultima-lista';
+    readonly hoje = dataLiturgicaHoje();
+    readonly liturgiaHoje = signal<DiaLiturgico | null>(null);
+    readonly sugestoesHoje = signal<Lista[]>([]);
+    readonly erroSugestoes = signal('');
+    readonly mostrandoSugestao = computed(() => this.sugestoesHoje().some(l => l.id === this.listaAtual()?.id));
 
     listaAtual    = signal<Lista | null>(null);
     loading       = signal(true);
-    readonly autoSelecionarComponente = signal(true);
+    readonly autoSelecionarComponente = signal(!this.listaIdParam);
 
     parteAtiva = signal<string | null>(null);
 
@@ -117,19 +123,22 @@ export class HomeComponent implements OnInit, OnDestroy {
             error: (err: Error) => this.notif.mostrarErro(err.message || 'Erro ao salvar tom.'),
         });
 
-        const idParaCarregar = this.listaIdParam ?? localStorage.getItem(HomeComponent.STORAGE_KEY);
+        const idParaCarregar = this.listaIdParam;
         if (idParaCarregar) {
             this.autoSelecionarComponente.set(false);
             if (this.listaIdParam) this.router.navigate([], { queryParams: {}, replaceUrl: true });
-            this.listaService.getLista(idParaCarregar).subscribe(lista => {
+            this.listaService.getLista(idParaCarregar).subscribe({ next: lista => {
                 if (lista) {
                     this.selecionarLista(lista);
                     this.loading.set(false);
                 } else {
-                    localStorage.removeItem(HomeComponent.STORAGE_KEY);
                     this.autoSelecionarComponente.set(true);
+                    queueMicrotask(() => this.seletorRef.carregarDiaInicial());
                 }
-            });
+            }, error: () => {
+                this.autoSelecionarComponente.set(true);
+                queueMicrotask(() => this.seletorRef.carregarDiaInicial());
+            } });
         }
     }
 
@@ -171,10 +180,31 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.loading.set(false);
     }
 
-    onSemResultadoInicial() { this.loading.set(false); }
+    onSemResultadoInicial() {
+        this.listaSub?.unsubscribe();
+        this.listaAtual.set(null);
+        this.parteAtiva.set(null);
+        this.loading.set(false);
+    }
+
+    onDiaConsultado(evento: { data: string; dia: DiaLiturgico; listas: Lista[] }) {
+        this.liturgiaHoje.set(evento.dia);
+        this.sugestoesHoje.set(evento.listas);
+        this.erroSugestoes.set('');
+    }
+
+    onErroSugestoes(mensagem: string) {
+        this.erroSugestoes.set(mensagem);
+        this.loading.set(false);
+    }
+
+    voltarSugestaoHoje() {
+        this.loading.set(true);
+        this.autoSelecionarComponente.set(true);
+        this.seletorRef.carregarDiaInicial();
+    }
 
     selecionarLista(lista: Lista) {
-        localStorage.setItem(HomeComponent.STORAGE_KEY, lista.id);
         this.listaSub?.unsubscribe();
         this.listaAtual.set(lista);
         if (lista.partes && lista.partes.length > 0) {

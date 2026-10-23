@@ -1,4 +1,8 @@
 import { Component, inject, signal, input, output, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { LiturgiaService } from '../../services/liturgia.service';
+import { DiaLiturgico } from '../../models/liturgia.model';
+import { dataLiturgicaHoje, escolherSugestao } from '../../core/liturgia';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -18,6 +22,7 @@ type SeletorAba = 'dia' | 'categoria' | 'minhas-listas';
 })
 export class SeletorRepertorioComponent implements OnInit {
     private listaService = inject(ListaService);
+    private liturgiaService = inject(LiturgiaService);
     private configService = inject(ConfigService);
     readonly auth = inject(AuthService);
 
@@ -28,10 +33,16 @@ export class SeletorRepertorioComponent implements OnInit {
 
     readonly listaSelecionada    = output<Lista>();
     readonly semResultadoInicial = output<void>();
+    readonly diaConsultado = output<{ data: string; dia: DiaLiturgico; listas: Lista[] }>();
+    readonly erroInicial = output<string>();
+    readonly erroFiltro = signal('');
+    readonly liturgiaDoFiltro = signal<DiaLiturgico | null>(null);
+    private listasHoje: Lista[] = [];
+    private pedido = 0;
 
     readonly aberto               = signal(false);
     readonly abaAtiva             = signal<SeletorAba>('dia');
-    readonly dataSelecionada      = signal(new Date().toISOString().split('T')[0]);
+    readonly dataSelecionada      = signal(dataLiturgicaHoje());
     readonly catSelecionada       = signal('tempo-comum');
     readonly listasDoFiltro       = signal<Lista[]>([]);
     readonly minhasListas         = signal<Lista[]>([]);
@@ -63,6 +74,8 @@ export class SeletorRepertorioComponent implements OnInit {
     }
 
     onDataInputChange() {
+        this.abaAtiva.set('dia');
+        this.carregarListasPorData(this.dataSelecionada());
         const input = this.inputData.nativeElement;
         input.addEventListener('change', (e: Event) => {
             const val = (e.target as HTMLInputElement).value;
@@ -133,22 +146,60 @@ export class SeletorRepertorioComponent implements OnInit {
         });
     }
 
+    carregarDiaInicial() { this.carregarListasPorData(dataLiturgicaHoje(), true); }
+
+    outraSugestao() {
+        const lista = this.sugestaoEstavel(this.listasHoje, true);
+        if (lista) this.selecionar(lista);
+    }
+
+    private sugestaoEstavel(listas: Lista[], trocar = false): Lista | undefined {
+        const chave = `cifras-sugestao-${dataLiturgicaHoje()}`;
+        let anterior: string | null = null;
+        try { anterior = localStorage.getItem(chave); } catch { /* Storage may be disabled. */ }
+        const lista = (!trocar ? listas.find(l => l.id === anterior) : undefined)
+            ?? escolherSugestao(listas, trocar ? this.listaAtual()?.id : undefined);
+        if (lista) {
+            try { localStorage.setItem(chave, lista.id); } catch { /* Keep the selection in memory. */ }
+        }
+        return lista;
+    }
+
     private carregarListasPorData(data: string, inicial = false) {
+        const pedido = ++this.pedido;
         this.carregandoFiltro.set(true);
-        this.listaService.getListasDodia(data).subscribe(listas => {
-            this.listasDoFiltro.set(listas);
-            if (inicial && this.autoSelecionar()) {
-                if (!this.listaAtual() && listas.length > 0) {
-                    this.listaSelecionada.emit(listas[0]);
-                } else if (!this.listaAtual()) {
-                    this.semResultadoInicial.emit();
+        this.erroFiltro.set('');
+        this.liturgiaDoFiltro.set(null);
+        forkJoin([this.listaService.getListasDodia(data), this.liturgiaService.dia(data)]).subscribe({
+            next: ([listas, dia]) => {
+                if (pedido !== this.pedido) return;
+                this.listasDoFiltro.set(listas);
+                this.liturgiaDoFiltro.set(dia);
+                if (inicial) {
+                    this.listasHoje = listas;
+                    this.diaConsultado.emit({ data, dia, listas });
+                    if (this.autoSelecionar()) {
+                        const lista = this.sugestaoEstavel(listas);
+                        if (lista) this.listaSelecionada.emit(lista);
+                        else this.semResultadoInicial.emit();
+                    }
                 }
-            }
-            this.carregandoFiltro.set(false);
+                this.carregandoFiltro.set(false);
+            },
+            error: () => {
+                if (pedido !== this.pedido) return;
+                const mensagem = 'Não foi possível carregar as sugestões. Confira a conexão e escolha uma data de 2025 a 2035.';
+                this.listasDoFiltro.set([]);
+                this.erroFiltro.set(mensagem);
+                this.carregandoFiltro.set(false);
+                if (inicial && this.autoSelecionar()) this.erroInicial.emit(mensagem);
+            },
         });
     }
 
     private carregarListasPorCategoria(cat: string) {
+        ++this.pedido;
+        this.erroFiltro.set('');
         this.carregandoFiltro.set(true);
         this.listaService.getListasPorCategoria(cat).subscribe(listas => {
             this.listasDoFiltro.set(listas);

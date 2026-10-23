@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { Lista, CategoriaLiturgica, ListasDoDiaResponse, Participante, RoleParticipante } from '../models/lista.model';
 
 export abstract class ListaRepository {
+    abstract getListasPublicas(): Observable<Lista[]>;
     abstract getListas(): Observable<Lista[]>;
     abstract getListasDodia(data: string): Observable<ListasDoDiaResponse>;
     abstract getListasPorCategoria(cat: CategoriaLiturgica): Observable<Lista[]>;

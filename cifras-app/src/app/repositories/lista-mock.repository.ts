@@ -1467,6 +1467,10 @@ export class ListaMockRepository extends ListaRepository {
     );
   }
 
+  override getListasPublicas(): Observable<Lista[]> {
+    return this.enriquecerListas(this.listas.filter(l => l.tipo !== 'privada'));
+  }
+
   override getListas(): Observable<Lista[]> {
     return this.enriquecerListas([...this.listas]);
   }
@@ -1498,7 +1502,7 @@ export class ListaMockRepository extends ListaRepository {
 
   override salvarLista(lista: Lista): Observable<Lista> {
     const idx = this.listas.findIndex(l => l.id === lista.id);
-    const updated = { ...lista, atualizadaEm: new Date().toISOString() };
+    const updated = { ...lista, id: lista.id || crypto.randomUUID(), atualizadaEm: new Date().toISOString() };
     if (idx >= 0) {
       this.listas[idx] = updated;
     } else {

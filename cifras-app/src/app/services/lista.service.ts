@@ -1,6 +1,8 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { Observable, forkJoin, map, tap } from 'rxjs';
+import { Observable, forkJoin, map } from 'rxjs';
 import { Lista, CategoriaLiturgica, Participante, RoleParticipante } from '../models/lista.model';
+import { LiturgiaService } from './liturgia.service';
+import { listasElegiveis } from '../core/liturgia';
 import { ListaRepository } from '../repositories/lista.repository.interface';
 
 export interface ListaDraftState {
@@ -16,6 +18,7 @@ const PARTE_KEY  = 'cifras__lista_draft_parte';
 @Injectable({ providedIn: 'root' })
 export class ListaService {
     private repo = inject(ListaRepository);
+    private liturgia = inject(LiturgiaService);
 
     readonly assinaturaExpirada = signal(false);
 
@@ -45,10 +48,13 @@ export class ListaService {
         return this.repo.getListas();
     }
 
+    getListasPublicas(): Observable<Lista[]> {
+        return this.repo.getListasPublicas();
+    }
+
     getListasDodia(data: string): Observable<Lista[]> {
-        return this.repo.getListasDodia(data).pipe(
-            tap(res => this.assinaturaExpirada.set(res.assinaturaExpirada)),
-            map(res => res.listas),
+        return forkJoin([this.repo.getListasPublicas(), this.liturgia.dia(data)]).pipe(
+            map(([listas, dia]) => listasElegiveis(listas, data, dia)),
         );
     }
 
