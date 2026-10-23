@@ -427,11 +427,3 @@
     min-height: 0;
   }
 }
-
-.liturgia-hoje { max-width: 1100px; margin: 20px auto; padding: 18px 24px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; color: var(--color-text-1); }
-.liturgia-hoje span, .liturgia-hoje p { color: var(--color-text-2); font-size: .85rem; }
-.liturgia-hoje h2 { font-size: 1.15rem; margin: 8px 0; }
-.liturgia-acoes { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
-.liturgia-acoes button { padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-surface-2); color: var(--color-text-1); cursor: pointer; }
-.liturgia-acoes a { color: var(--color-primary); font-size: .85rem; }
-@media (max-width: 700px) { .liturgia-hoje { margin: 16px; padding: 16px; } }
